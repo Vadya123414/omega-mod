@@ -1,0 +1,62 @@
+generic_historical = {
+	name = "generic historical plan"
+	desc = ""
+
+	allowed = {
+
+		
+	}
+	enable = {
+		
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		HON_railways
+		HON_another_capital
+		HON_economic_plan
+		HON_ferms
+		HON_cofee
+		HON_population
+		HON_civilian_way
+		HON_civ1
+		HON_civ2	
+		HON_race
+		HON_start_ind
+		HON_new_cource
+		HON_democratic_path
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

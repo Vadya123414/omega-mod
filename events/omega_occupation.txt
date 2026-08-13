@@ -1,0 +1,16 @@
+﻿add_namespace = obuchenie
+
+country_event = {
+	id = obuchenie.1
+	title = obuchenie.1.t
+	desc = obuchenie.1.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.1.a
+
+	}
+}
+

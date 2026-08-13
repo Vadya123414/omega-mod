@@ -1,0 +1,277 @@
+ideas = {
+	country = {
+	
+	##Mongol econmi
+	
+		MON_industry = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_second_five_year_plan
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		production_factory_max_efficiency_factor = 0.15
+		industrial_capacity_factory = 0.10	
+		consumer_goods_factor = 0.10
+		production_factory_efficiency_gain_factor = -0.15
+		production_speed_industrial_complex_factor = 0.05
+		global_building_slots_factor = 0.40
+			}
+			}
+			
+			MON_industry_2 = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_third_five_year_plan
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		industrial_capacity_factory = 0.10	
+		consumer_goods_factor = 0.15
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = -0.10
+		production_speed_industrial_complex_factor = 0.05
+		global_building_slots_factor = 0.25
+			}
+			}
+			
+			
+##right			
+			MON_industry_3 = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_third_five_year_plan_civilian
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		industrial_capacity_factory = 0.10	
+		consumer_goods_factor = 0.13
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = -0.10
+		production_speed_industrial_complex_factor = 0.05
+		global_building_slots_factor = 0.30
+			}
+			}
+			
+			
+			MON_industry_4 = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_third_five_year_plan_civilian
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		industrial_capacity_factory = 0.10	
+		consumer_goods_factor = 0.13
+		production_factory_max_efficiency_factor = 0.10
+		production_factory_efficiency_gain_factor = -0.10
+		production_speed_industrial_complex_factor = 0.05
+		line_change_production_efficiency_factor = 0.10
+		global_building_slots_factor = 0.35
+			}
+			}
+			
+		##left
+		
+			MON_industry_3_l = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_third_five_year_plan_military
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		industrial_capacity_factory = 0.10	
+		consumer_goods_factor = 0.15
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = -0.10
+		production_speed_industrial_complex_factor = 0.00
+		production_speed_arms_factory_factor = 0.10
+		global_building_slots_factor = 0.30
+			}
+			}
+		
+			MON_industry_4_l = {	
+			allowed = {
+				always = no
+			}
+
+			picture = SOV_third_five_year_plan_military
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			
+			
+			removal_cost = -1
+	
+			modifier = {
+		industrial_capacity_factory = 0.12	
+		consumer_goods_factor = 0.15
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = -0.05
+		production_speed_industrial_complex_factor = 0.00
+		production_speed_arms_factory_factor = 0.10
+		production_factory_start_efficiency_factor = 0.05
+		global_building_slots_factor = 0.35
+			}
+			}
+			
+	##Political tree		
+	
+	MON_situation1 = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+                neutrality_drift = 0.05
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.05
+			} 
+		}
+		
+	MON_situation_SOV = {
+			picture =  trotskyite_plot
+			allowed = {
+				
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+                communism_drift = 0.05
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.10
+			} 
+		}
+		
+	MON_situation_MON = {
+			picture = generic_morale_bonus
+			allowed = {
+				
+			}
+		
+			removal_cost = -1
+			
+			modifier = {
+                communism_drift = 0.06
+				neutrality_drift = 0.02
+				stability_factor = 0.20
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.02
+			} 
+		}
+		
+		Chi_works = {
+		allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+			    production_factory_efficiency_gain_factor = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		MON_air_prodaction = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_bonus
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.20 reliability = -0.15 instant = yes
+				}
+				
+			}
+		}
+		
+		MON_air_ass = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+			
+			modifier = {
+			    air_agility_factor = 0.10
+				air_range_factor = 0.10
+			}
+		}
+		
+	}
+}

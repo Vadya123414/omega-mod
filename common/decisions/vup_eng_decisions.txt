@@ -1,0 +1,1449 @@
+
+ENG_cum = {
+	ENG_GAY_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_americas
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				687 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 687
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		687 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_YAM_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_americas
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				689 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 689
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		689 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+	
+	ENG_Malta_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_middle_east
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				116 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 116
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		116 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_Kipr_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_middle_east
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				183 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 183
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		183 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_Arab_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_middle_east
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				656 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				765 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				658 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				659 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 656
+				state = 765
+				state = 658
+				state = 659
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		656 = {
+					
+				add_core_of  = ENG
+			}
+		765 = {
+					
+				add_core_of  = ENG
+			}
+		658 = {
+					
+				add_core_of  = ENG
+			}
+		659 = {
+					
+				add_core_of  = ENG
+			}
+			
+		}
+	}
+
+	ENG_IOR_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_middle_east
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				455 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 455
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		455 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_IZR_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_the_middle_east
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				454 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 454
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 5000
+		add_stability = 0.01
+		add_war_support = 0.01
+		
+		454 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_Micro_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_asia
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				643 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				639 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				725 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				636 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 643
+				state = 639
+				state = 725
+				state = 636
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		643 = {
+					
+				add_core_of  = ENG
+			}
+		639 = {
+					
+				add_core_of  = ENG
+			}
+			
+		725 = {
+					
+				add_core_of  = ENG
+			}
+		636 = {
+					
+				add_core_of  = ENG
+			}
+			
+		}
+	}
+
+	ENG_SHR_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_asia
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				733 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				422 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 733
+				state = 422
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		422 = {
+					
+				add_core_of  = ENG
+			}
+		733 = {
+					
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+
+	
+
+	ENG_MAL_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_asia
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				336 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				333 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 333
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = MAL
+				}	
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+
+	ENG_Egypt_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				452 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				552 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				447 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				907 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				456 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				457 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				446 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				453 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 452
+				state = 552
+				state = 447
+				state = 907
+				state = 456
+				state = 457
+				state = 446
+				state = 453
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = EGY
+				}	
+				add_core_of  = ENG
+			}
+		}
+	}
+
+	ENG_SUD_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				767 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				551 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				883 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				886 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				549 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				887 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				885 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				884 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 767
+				state = 551
+				state = 883
+				state = 886
+				state = 549
+				state = 887
+				state = 885
+				state = 884
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = SUD
+				}	
+				add_core_of  = ENG
+			}
+		}
+	}
+	
+	ENG_East_AFR_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				548 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				904 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				547 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				903 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				905 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				546 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				770 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				771 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				981 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				545 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				542 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 548
+				state = 547
+				state = 904
+				state = 903
+				state = 905
+				state = 546
+				state = 770
+				state = 771
+				state = 981
+				state = 545
+				state = 542
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = SUD
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = UGA
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = KEN
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = TZN
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZAM
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = MLW
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZIM
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = BOT
+				}	
+				add_core_of  = ENG
+			}
+		}
+	}
+	
+	ENG_SOM_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				269 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 269
+				
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 10000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = SOM
+				}	
+				add_core_of  = ENG
+			}
+			
+			
+		}
+	}
+
+	ENG_NGA_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				558 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				900 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				902 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				901 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 558
+				state = 900
+				state = 902
+				state = 901
+		
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		every_state = {
+				limit = {
+					is_core_of = NGA
+				}	
+				add_core_of  = ENG
+			}
+		}
+	}
+	
+	ENG_GHA_cum = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+
+	
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_self_government_for_africa
+		}
+
+		available = {
+			is_subject = no
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				274 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				700 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				701 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				
+				
+				
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 274
+				state = 700
+				state = 701
+
+		
+			}
+		}
+
+
+		cost = 25
+
+		ai_will_do = {
+			base = 10
+			
+		}
+
+		complete_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_manpower = 50000
+		add_stability = 0.01
+		add_war_support = 0.01
+		274 = {
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+				add_resource = {
+					type = chromium
+					amount = 13
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+		every_state = {
+				limit = {
+					is_core_of = GHA
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIE
+				}	
+				add_core_of  = ENG
+			}
+			every_state = {
+				limit = {
+					is_core_of = GAM
+				}	
+				add_core_of  = ENG
+			}
+		}
+	}
+	
+	
+}
+
+ENG_annex = {
+    
+	ENG_ALL_DOMINION = {
+		icon = eng_ally_imperialist_coup
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+			has_completed_focus = ENG_imperial_conference
+		}
+
+		
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		CAN = {add_ideas = {Free_dominion}}	
+		SAF = {add_ideas = {Free_dominion}}	
+		NZL = {add_ideas = {Free_dominion}}
+		RAJ = {add_ideas = {Free_dominion}}
+		AST = {add_ideas = {Free_dominion}}	
+		}
+	}
+	
+	
+
+	ENG_annex_RAJ = {
+	
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+		    date > 1940.1.1
+			RAJ = { is_ai = yes }
+			any_other_country = {
+				original_tag = RAJ
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = RAJ
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			
+RAJ = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = RAJ transfer_troops = yes }
+			}
+            annex_country = { target = RAJ }
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}				
+		}
+	}
+	ENG_annex_CAN = {
+	
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+		    CAN = { has_government = democratic}
+		    date > 1940.1.1
+			CAN = { is_ai = yes }
+			any_other_country = {
+				original_tag = CAN
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = CAN
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		    
+				
+        CAN = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = CAN transfer_troops = yes }
+			}	
+        annex_country = { target = CAN }
+			every_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+	ENG_annex_SAF = {
+	
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+		    SAF = { has_government = democratic}
+		    date > 1940.1.1
+			SAF = { is_ai = yes }
+			any_other_country = {
+				original_tag = SAF
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = SAF
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+				
+			SAF = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = SAF transfer_troops = yes }
+			}	
+        annex_country = { target = SAF }
+			every_state = {
+				limit = {
+					is_core_of = SAF
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+
+	ENG_annex_AST = {
+	
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+		    AST = { has_government = democratic}
+		    date > 1940.1.1
+			AST = { is_ai = yes }
+			any_other_country = {
+				original_tag = AST
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = AST
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		   
+				
+
+AST = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = AST transfer_troops = yes }
+			}	
+         annex_country = { target = AST }
+			every_state = {
+				limit = {
+					is_core_of = AST
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+		
+	}
+	
+	ENG_annex_NZL = {
+	
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		visible = {
+		    NOT = { has_completed_focus = ENG_a_change_in_course }
+		} 
+
+		available = {
+		    NZL = { has_government = democratic}
+		    date > 1940.1.1
+			NZL = { is_ai = yes }
+			any_other_country = {
+				original_tag = NZL
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = NZL
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+				
+
+ NZL = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = NZL transfer_troops = yes }
+			}
+        annex_country = { target = NZL }
+			every_state = {
+				limit = {
+					is_core_of = NZL
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+	
+	
+	ENG_annex_MAL = {
+	    cost = 100
+		icon = category_eng_appeal_to_imperial_loyalists
+
+		available = {
+		    MAL = { has_government = democratic}
+			MAL = { is_ai = yes }
+			any_other_country = {
+				original_tag = MAL
+				exists = yes
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = MAL
+				}
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = MAL }
+			every_state = {
+				limit = {
+					is_core_of = MAL
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+}

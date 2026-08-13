@@ -1,0 +1,341 @@
+﻿###########################
+# Ireland Events
+###########################
+
+add_namespace = irish
+
+
+# Declai North Irish
+country_event = {
+	id = irish.7
+	title = irish.7.t
+	desc = irish.7.d
+	picture = GFX_report_event_german_troops_paris
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.7.a
+
+		ai_chance = {
+			factor = 10
+		}
+
+		IRE = { country_event = { id = irish.8 days = 1 } }
+		effect_tooltip = {
+		    
+			IRE = { transfer_state = 119 }
+            119 = {
+                remove_core_of = ENG
+            }
+			119 = { add_core_of = IRE }
+		}
+	}
+
+	option = {
+		name = irish.7.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+		IRE = {
+			country_event = { id = irish.9 days = 1 }
+
+		}
+		    effect_tooltip = {
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+				expire = 0
+			}
+			}
+	}
+}
+
+
+# Britain accept
+country_event = {
+	id = irish.8
+	title = irish.8.t
+	desc = irish.8.d
+	picture = GFX_report_event_german_troops_paris
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.8.a
+			IRE = { transfer_state = 119 }
+            119 = {
+                remove_core_of = ENG
+            }
+			119 = { add_core_of = IRE }		
+			
+		hidden_effect = {
+		
+		}
+	}
+}
+
+
+# England refuse our deal
+country_event = {
+	id = irish.9
+	title = irish.9.t
+	desc = irish.9.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.9.a
+		create_wargoal = {
+				target = ENG
+				type = annex_everything
+				expire = 0
+			}
+	}
+}
+
+
+
+
+
+# Deal with british empire
+country_event = {
+	id = irish.1
+	title = irish.1.t
+	desc = irish.1.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.1.a
+
+		ai_chance = {
+			factor = 10
+		}
+
+		IRE = { country_event = { id = irish.2 days = 1 } }
+		effect_tooltip = {
+		    ENG = {add_offsite_building = { type = industrial_complex level = 3 }}
+			IRE = { transfer_state = 119 }
+            119 = {
+                remove_core_of = ENG
+            }
+			119 = { add_core_of = IRE }
+		}
+	}
+
+	option = {
+		name = irish.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+		IRE = {
+			country_event = { id = irish.3 days = 1 }
+
+		}
+		    effect_tooltip = {
+			add_political_power = 50
+			}
+	}
+}
+
+
+# Britain accept
+country_event = {
+	id = irish.2
+	title = irish.2.t
+	desc = irish.2.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.2.a
+			ENG = {add_offsite_building = { type = industrial_complex level = 3 }}
+			IRE = { transfer_state = 119 }
+            119 = {
+                remove_core_of = ENG
+            }
+			119 = { add_core_of = IRE }		
+			
+		hidden_effect = {
+		
+		}
+	}
+}
+
+# England refuse our deal
+country_event = {
+	id = irish.3
+	title = irish.3.t
+	desc = irish.3.d
+	picture = GFX_report_event_polish_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.3.a
+		add_political_power = -50
+		ENG = {add_political_power = 50}
+	}
+}
+
+
+
+# Buy Nigeria
+country_event = {
+	id = irish.4
+	title = irish.4.t
+	desc = irish.4.d
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.4.a
+
+		ai_chance = {
+			factor = 10
+		}
+
+		IRE = { country_event = { id = irish.5 days = 1 } }
+		effect_tooltip = {
+		   ENG = {add_offsite_building = { type = industrial_complex level = 2 }}
+			IRE = { transfer_state = 558 }
+			IRE = { transfer_state = 900 }
+			IRE = { transfer_state = 902 }
+			IRE = { transfer_state = 901 }
+		}
+	}
+
+	option = {
+		name = irish.4.b
+		ai_chance = {
+			factor = 1
+		}
+		IRE = {
+			country_event = { id = irish.6 days = 1 }
+
+		}
+		    effect_tooltip = {
+			}
+	}
+}
+
+
+# Britain accept buy
+country_event = {
+	id = irish.5
+	title = irish.5.t
+	desc = irish.5.d
+    picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.5.a
+			ENG = {add_offsite_building = { type = industrial_complex level = 2 }}
+			IRE = { transfer_state = 558 }
+			IRE = { transfer_state = 900 }
+			IRE = { transfer_state = 902 }
+			IRE = { transfer_state = 901 }	
+
+		hidden_effect = {
+		
+		}
+	}
+}
+
+# England refuse our deal
+country_event = {
+	id = irish.6
+	title = irish.6.t
+	desc = irish.6.d
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.6.a
+	}
+}
+
+
+# IRE DOminion
+country_event = {
+	id = irish.11
+	title = irish.11.t
+	desc = irish.11.d
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.11.a
+
+		ai_chance = {
+			factor = 10
+		}
+		
+		IRE = {add_ideas = IRE_british_dominion}
+		if = {
+			limit = {ENG = {has_government = fascism}}
+			ENG = { 
+					set_autonomy = {
+						target = IRE
+						autonomy_state = autonomy_satellite
+					}
+				}
+				}
+			else = {
+			ENG = { 
+					set_autonomy = {
+						target = IRE
+						autonomy_state = autonomy_dominion
+					}
+				}
+			}
+		
+		
+	}
+
+	option = {
+		name = irish.11.b
+		ai_chance = {
+			factor = 1
+		}
+		IRE = {
+			country_event = { id = irish.10 days = 1 }
+
+		}
+		    effect_tooltip = {
+			}
+	}
+}
+
+
+
+
+# England refuse our deal
+country_event = {
+	id = irish.10
+	title = irish.10.t
+	desc = irish.10.d
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	option = {
+		name = irish.10.a
+	}
+}

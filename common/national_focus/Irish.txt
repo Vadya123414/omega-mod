@@ -1,0 +1,1574 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+	id = ireland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IRE
+		}
+	}
+	default = no
+	focus = {
+		id = IRE_rise_politic
+		icon = GFX_focus_generic_the_giant_wakes
+		mutually_exclusive = { focus = IRE_sabotage }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 19
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = IRE_Vibori
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = IRE_rise_politic }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_rise_politic
+		available = {
+		 date > 1937.01.01
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_popularity = {
+    ideology = democratic
+    popularity = 0.1
+}
+		}
+	}
+	
+	
+#With together ENG	
+	focus = {
+		id = IRE_Continue_ENG
+		icon =  GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = IRE_Vibori }
+		cost = 10
+		mutually_exclusive = { focus = IRE_LIVE_ENG }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Vibori
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+ENG = {
+				add_opinion_modifier = { target = IRE modifier = HOL_caved_to_the_british_eng }
+			}
+		}
+	}
+
+
+focus = {
+		id = IRE_deal_with_england
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = IRE_Continue_ENG }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Continue_ENG
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			ENG = {
+			country_event = {
+				id = irish.1
+			}
+			}
+		}
+	}
+	
+	
+focus = {
+		id = IRE_new_dominion
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = IRE_deal_with_england }
+		cost = 10
+		mutually_exclusive = { focus = IRE_Neutral focus = IRE_independet}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_deal_with_england
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+		
+		 ENG = {
+			country_event = {
+				id = irish.11
+			}
+			}
+
+		
+		}
+	}
+
+
+
+#Neutral
+
+focus = {
+		id = IRE_Neutral
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		mutually_exclusive = { focus = IRE_new_dominion focus = IRE_independet}
+		prerequisite = { focus = IRE_deal_with_england focus = IRE_FREE_Nation}
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Vibori
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 4
+		
+		completion_reward = {
+			set_rule = { can_join_factions = no }
+			set_rule = { can_send_volunteers = yes }
+			add_stability = 0.3
+			add_ideas = Ire_voluntrooper
+			add_ideas = IRE_Neutral_republic
+			remove_ideas = IRE_fascit_move
+		}
+	}
+
+	
+	
+#Live allies	
+	
+	focus = {
+		id = IRE_LIVE_ENG
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		prerequisite = { focus = IRE_Vibori }
+		cost = 10
+		mutually_exclusive = { focus = IRE_Continue_ENG }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Vibori
+		available = {
+		 data > 1.1.1937
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+		
+	focus = {
+		id = IRE_FREE_Nation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = IRE_LIVE_ENG }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_LIVE_ENG
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+			
+			
+	focus = {
+		id = IRE_independet
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = IRE_FREE_Nation }
+		cost = 10
+		mutually_exclusive = { focus = IRE_Neutral focus = IRE_Neutral}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_FREE_Nation
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = IRE_independents_republic
+			add_stability = 0.1
+		}
+	}
+	
+#End political tree
+
+focus = {
+		id = IRE_Allies
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = IRE_independet focus = IRE_new_dominion}
+		cost = 5
+		mutually_exclusive = { focus = IRE_join_commintern focus = IRE_Neutral}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Vibori
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 6
+		
+		completion_reward = {
+			ENG = { add_to_faction = IRE }
+			add_war_support = 0.15
+		}
+	}
+	
+focus = {
+		id = IRE_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = IRE_Allies }
+		x = -1
+		y = 1
+		relative_position_id = IRE_Allies
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_research_slot = 1
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	
+
+	
+focus = {
+		id = IRE_nuck
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = IRE_secret_weapons }
+		x = 0
+		y = 1
+		relative_position_id = IRE_secret_weapons
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = IRE_cpecial_projects
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	
+	
+focus = {
+		id = IRE_integrate_fasci_move
+		icon = GFX_focus_SWE_revoke_militia_law
+		prerequisite = { focus = IRE_Allies }
+		x = 1
+		y = 1
+		relative_position_id = IRE_Allies
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			remove_ideas = IRE_fascit_move
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	
+focus = {
+		id = IRE_crepost
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = IRE_integrate_fasci_move }
+		x = 0
+		y = 1
+		relative_position_id = IRE_integrate_fasci_move
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			113 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 11293
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 3359
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3359
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7377
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7377
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11293
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+	}	
+	
+#Industry tree		
+
+	focus = {
+		id = IRE_industry
+		icon = GFX_focus_generic_steel
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 0
+		
+		completion_reward = {
+			113 = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_investors
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		prerequisite = { focus = IRE_industry }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_industry
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 7
+		y = 1
+		
+		completion_reward = {
+		    unlock_decision_tooltip = IRE_trade_sistem
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = IRE_trade_with_BEN
+		icon = GFX_focus_generic_influence_benelux
+		prerequisite = { focus = IRE_investors }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_investors
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		HOL = { 
+				has_opinion	= {
+					target = ROOT
+					value > 49
+				}
+			}
+		BEL = { 
+				has_opinion	= {
+					target = ROOT
+					value > 49
+				}
+			}
+		LUX = { 
+				has_opinion	= {
+					target = ROOT
+					value > 49
+				}
+			}
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+		    custom_effect_tooltip = IRE_trade_bel_tt
+		}
+	}
+	
+	focus = {
+		id = IRE_new_treders
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = IRE_trade_with_BEN }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_trade_with_BEN
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		    add_stability = 0.1
+			add_ideas = IRE_new_traders_idea
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_industry_up
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = IRE_industry }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_industry
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+		    add_research_slot = 1
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = IRE_industry }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_industry
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+		    navy_experience = 50
+			113 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_infra
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = IRE_industry }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_industry
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			134 = { set_state_category = megalopolis }
+			113 = { set_state_category = megalopolis }
+			135 = { set_state_category = megalopolis }
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = IRE_civilian
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = IRE_infra }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_infra
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			135 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_military_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = IRE_infra }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_infra
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+			
+			
+	focus = {
+		id = IRE_kredit
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = IRE_infra }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_infra
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 4
+		y = 2
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = IRE_credit
+				days = 720
+			}	
+		}
+	}
+	
+	focus = {
+		id = IRE_Investory
+		icon = GFX_focus_generic_industry_2
+		prerequisite = {focus = IRE_civilian  focus = IRE_military_factory focus = IRE_kredit}
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_military_factory
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = IRE_Industry
+		}
+	}
+
+
+	focus = {
+		id = IRE_rise_north_ireland
+		icon = GFX_focus_SWE_refuge_from_war
+		prerequisite = { focus = IRE_Investory }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Investory
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		119 = { is_controlled_by = IRE }
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			119 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = IRE_deportation
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = IRE_rise_north_ireland }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_rise_north_ireland
+		mutually_exclusive = { focus = IRE_assimilation }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		119 = { is_controlled_by = IRE }
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			119 = {
+				add_manpower = -432000
+				add_extra_state_shared_building_slots = 3	
+			}
+		}
+	}
+
+
+focus = {
+		id = IRE_assimilation
+		icon = GFX_goal_continuous_increase_nu
+		prerequisite = { focus = IRE_rise_north_ireland }
+		mutually_exclusive = { focus = IRE_deportation }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_rise_north_ireland
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		119 = { is_controlled_by = IRE }
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.1	
+			119 = {
+				add_manpower = 1000000
+
+			}
+		}
+	}
+
+focus = {
+		id = IRE_buy_nigeria
+		icon = GFX_goal_tfv_saf_secure_interests_in_africa
+		prerequisite = { focus = IRE_Investory }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_Investory
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			ENG = {
+			country_event = {
+				id = irish.4
+			}
+			}
+		}
+	}
+	
+focus = {
+		id = IRE_nigeria_assimilation
+		icon = GFX_focus_generic_africa_factory
+		prerequisite = { focus = IRE_buy_nigeria }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_buy_nigeria
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		    unlock_decision_tooltip = IRE_assumilation_nigeria
+			add_timed_idea = {
+				idea = IRE_assimilation_NIG
+				days = 365
+			}
+		}
+	}
+	
+
+
+#Alternative
+focus = {
+		id = IRE_sabotage
+		icon =  GFX_focus_generic_strike_at_democracy2
+		prerequisite = { }
+		cost = 5
+		mutually_exclusive = { focus = IRE_rise_politic }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_rise_politic
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 13
+		y = 0
+		
+		completion_reward = {
+		add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = IRE_Soviet_sup
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+		prerequisite = { focus = IRE_sabotage }
+		cost = 10
+		mutually_exclusive = { focus = IRE_German_sup }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_sabotage
+		
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = IRE_SOV
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_German_sup
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = IRE_sabotage }
+		mutually_exclusive = { focus = IRE_Soviet_sup }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_sabotage
+		
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		    add_timed_idea = {
+				idea = IRE_fas
+				days = 720
+			}
+		}
+	}
+	
+		focus = {
+		id = IRE_referendum
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		prerequisite = { focus = IRE_German_sup  focus = IRE_Soviet_sup }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_sabotage
+		
+		available = {
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			if = {
+			limit = {IRE = {has_completed_focus = IRE_Soviet_sup}}
+			set_politics = { ruling_party = communism elections_allowed = no }
+				}
+			if = {
+			limit = {IRE = {has_completed_focus = IRE_German_sup}}
+			set_politics = { ruling_party = fascism elections_allowed = no }
+				}
+		    add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+		}
+	}
+
+
+		focus = {
+		id = IRE_collective
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = { focus =  IRE_referendum}
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_referendum
+		
+		available = {
+		has_completed_focus  = IRE_Soviet_sup 
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+		   add_ideas = IRE_sollectivizm
+		}
+	}
+	
+	focus = {
+		id = IRE_corparation
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = {focus =  IRE_referendum}
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_referendum
+		
+		available = {
+		has_completed_focus =  IRE_German_sup
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		    add_ideas = IRE_coorporation
+		}
+	}
+	
+	focus = {
+		id = IRE_reconstraction_nation
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = {focus =  IRE_corparation focus =  IRE_collective}
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_referendum
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+		   remove_ideas = IRE_fascit_move
+		   add_stability = 0.20
+		   add_war_support = 0.10
+		}
+	}
+	
+	focus = {
+		id = IRE_new_course
+		icon = GFX_focus_eng_global_defense
+		prerequisite = {focus =  IRE_reconstraction_nation }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_reconstraction_nation
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		    add_political_power = 120
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+			limit = {IRE = {has_completed_focus = IRE_Soviet_sup}}
+			add_country_leader_trait = staunch_stalinist 
+				}
+			if = {
+			limit = {IRE = {has_completed_focus = IRE_German_sup}}
+			add_country_leader_trait = national_integralist
+				}
+			
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_join_commintern
+		icon = GFX_focus_SOV_socialism_in_one_country
+		prerequisite = {focus =  IRE_new_course focus =  IRE_independet}
+		mutually_exclusive = {focus = IRE_Allies focus = IRE_join_axis}
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_new_course
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 2
+		
+		completion_reward = {
+		    SOV = { country_event = { id = generic.2 hours = 4 random_hours = 2 } }
+		}
+	}
+	
+	focus = {
+		id = IRE_SOV_experts
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = {focus =  IRE_join_commintern }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_join_commintern
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+		add_research_slot = 1
+			add_timed_idea = {
+				idea = IRE_soviet_experts
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_SOV_economist
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = {focus =  IRE_join_commintern }
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_join_commintern
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		    add_political_power = -100
+			add_ideas = IRE_soviet_eco_experts
+		}
+	}
+	
+	focus = {
+		id = IRE_SOV_new_peoples
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = {focus =  IRE_SOV_experts focus =  IRE_SOV_economist}
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_SOV_experts
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		add_manpower = 50000
+		    every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					
+				}
+				add_manpower = 10000
+				add_extra_state_shared_building_slots = 1	
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = IRE_join_axis
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = {focus =  IRE_new_course focus =  IRE_independet}
+		mutually_exclusive = {focus = IRE_Allies focus = IRE_join_commintern}
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_new_course
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 2
+		
+		completion_reward = {
+		    GER = { country_event = { id = generic.2 hours = 4 random_hours = 2 } }
+		}
+	}
+
+	focus = {
+		id = IRE_GER_experts
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = {focus =  IRE_join_axis }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_join_axis
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+		    add_ideas = IRE_german_experts
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IRE_GER_trade_economic
+		icon = GFX_focus_generic_german_trade
+		prerequisite = {focus =  IRE_join_axis }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_join_axis
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		    add_ideas = IRE_trade_axis
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 3 }
+		}
+	}
+	
+	focus = {
+		id = IRE_war_LIB
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {focus =  IRE_GER_trade_economic }
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_GER_trade_economic
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		    annex_country = { target = LIB }
+			every_state = {
+				limit = {
+					is_core_of = LIB
+					is_controlled_by = IRE
+					}
+				set_compliance = 50
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_declare_ENG
+		icon = GFX_focus_ARG_cut_ties_with_britain
+		prerequisite = {focus =  IRE_GER_experts focus =  IRE_SOV_economist focus =  IRE_SOV_experts focus =  IRE_GER_trade_economic}
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_new_course
+		
+		available = {
+
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 5
+		
+		completion_reward = {
+		    ENG = {
+			country_event = {
+				id = irish.7
+			}
+			}
+		}
+	}
+
+#Army focus tree
+
+		focus = {
+		id = IRE_army
+		icon =  GFX_focus_secret_rearmament
+		prerequisite = { }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_rise_politic
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 21
+		y = 0
+		
+		completion_reward = {
+		army_experience = 50
+		
+		}
+	}
+	
+	focus = {
+		id = IRE_new_weapons
+		icon =  GFX_focus_generic_combined_arms
+		prerequisite = { focus = IRE_army}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_army
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+		add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.1
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = RAJ_the_bangalore_torpedo
+				bonus = 1.0
+				uses = 2
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = IRE_new_doctrins
+		icon =  GFX_goal_generic_army_doctrines
+		prerequisite = { focus = IRE_army}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_army
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_new_armors
+		icon =  GFX_goal_continuous_armor_production
+		prerequisite = { focus = IRE_new_weapons}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_new_weapons
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = IRE_special_force
+		icon =  GFX_focus_ETH_peacekeeping_forces
+		prerequisite = { focus = IRE_new_doctrins}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_new_doctrins
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		add_ideas = IRE_cpecial_arm
+		}
+	}
+	
+	focus = {
+		id = IRE_army_organization
+		icon =  GFX_focus_chi_army_reform
+		prerequisite = { focus = IRE_new_armors focus = IRE_special_force}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = IRE_army
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 4
+		
+		completion_reward = {
+		army_experience = 200
+		remove_ideas = IRE_demobilization
+		add_manpower = 100000
+		add_command_power = 50
+		}
+	}
+
+}

@@ -1,0 +1,75 @@
+IRE_annex = {
+
+
+	IRE_trade_sistem = {
+
+		icon = GFX_decision_ger_mefo_bills
+
+		available = {
+		always = no
+		}
+		activation = {
+			IRE = {has_completed_focus = IRE_investors}
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 1
+		days_mission_timeout = 365
+
+		timeout_effect = {
+		if = {
+			limit = {IRE = {has_completed_focus = IRE_trade_with_BEN}}
+			add_offsite_building = { type = industrial_complex level = 2 }
+				}
+		else = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		}
+		add_political_power = 25
+		
+		}
+		
+		complete_effect = {
+		
+		}
+	}
+
+
+	IRE_assumilation_nigeria = {	
+	
+		icon = generic_army_support
+
+		available = {
+		   has_completed_focus = IRE_nigeria_assimilation
+		   NOT = { has_idea = IRE_assimilation_NIG }
+		}
+
+		
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+				    902 = {
+						add_core_of = IRE
+					}
+					901 = {
+						add_core_of = IRE
+					}
+					558 = {
+						add_core_of = IRE
+					}
+					900 = {
+						add_core_of = IRE
+					}
+					
+		}
+		ai_will_do = {
+			factor = 200
+			
+		}
+	}
+
+	
+
+}

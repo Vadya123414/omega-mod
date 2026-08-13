@@ -1,0 +1,1631 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+	id = honduras
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HON
+		}
+	}
+	default = no
+	
+	focus = {
+		id = HON_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+		
+		x = 3
+		y = 0
+		
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					
+				}	
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_another_capital
+		icon = GFX_goal_generic_trade
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+		
+		x = 5
+		y = 0
+		
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	
+	focus = {
+		id = HON_economic_plan
+		icon = GFX_goal_generic_construction
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_another_capital focus = HON_railways }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_railways
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_timed_idea = {idea = HON_ind_plan days = 720}
+		}
+	}
+	
+	focus = {
+		id = HON_ferms
+		icon = GFX_focus_ARG_yacimientos_petroliferos_fiscales
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_economic_plan }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_economic_plan
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_cofee
+		icon = GFX_focus_BRA_cafe_com_leite_politics
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_ferms }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_ferms
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {
+		id = HON_population
+		icon = GFX_focus_SWE_form_rfsu
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_cofee }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_cofee
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_pop
+		}
+	}
+	
+	focus = {
+		id = HON_civilian_way
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_economic_plan }
+		mutually_exclusive = { focus = HON_military_way focus = HON_dockyard_way}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_economic_plan
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_civilian
+		}
+	}
+	focus = {
+		id = HON_civ1
+		icon = GFX_focus_generic_industry_1
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_civilian_way }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_civilian_way
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HON_civ2
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_civ1 }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_civ1
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = HON_military_way
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_economic_plan }
+		mutually_exclusive = { focus = HON_civilian_way focus = HON_dockyard_way}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_economic_plan
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_mil
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = HON_mil1
+		icon = GFX_focus_generic_reorient_production
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_military_way focus = HON_dockyard_way}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_military_way
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HON_mil2
+		icon = GFX_focus_generic_tank_production
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_mil1 }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_mil1
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = HON_dockyard_way
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_economic_plan }
+		mutually_exclusive = { focus = HON_civilian_way focus = HON_military_way}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_economic_plan
+		available_if_capitulated = yes
+		
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_doc
+		}
+	}
+	
+	focus = {
+		id = HON_doc1
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_military_way focus = HON_dockyard_way}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_dockyard_way
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_doc2
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_doc1 }
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_doc1
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_research
+		icon = GFX_focus_research2
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = HON_doc2 focus = HON_mil2 focus = HON_civ2}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = HON_mil2
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_research_slot = 2
+		}
+	}
+	
+	focus = {
+		id = HON_race
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 18
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 70
+		}
+	}
+	
+	focus = {
+		id = HON_start_ind
+		icon = GFX_goal_generic_construction
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 20
+		y = 0
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+		focus = {
+		id = HON_new_cource
+		icon =  GFX_focus_ICE_hrafninn_flygur
+		prerequisite = { focus = HON_race }
+		prerequisite = { focus = HON_start_ind }
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_race
+		available = {
+		
+		}
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+		
+	focus = {
+		id = HON_comi
+		icon = GFX_goal_support_communism
+		cost = 10
+		mutually_exclusive = {focus = HON_democratic_path focus = HON_fasicm}
+		prerequisite = { focus = HON_new_cource }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_new_cource
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = HON_USA_vlianie
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_comi_groups
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10
+		prerequisite = { focus = HON_comi }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_comi
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_ideas = HON_com_groups
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_SOV_alliance
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 5
+		prerequisite = { focus = HON_comi }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_comi
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 2
+		
+		completion_reward = {
+			SOV  = { country_event = generic.2 }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_SOV_ind
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10
+		prerequisite = { focus = HON_SOV_alliance }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_SOV_alliance
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					
+				}	
+				add_extra_state_shared_building_slots = 2
+				
+			}
+		}
+	}
+	focus = {
+		id = HON_SOV_bolscivizm
+		icon = GFX_focus_SOV_the_supreme_soviet
+		cost = 10
+		prerequisite = { focus = HON_SOV_ind }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_SOV_ind
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+			add_ideas = HON_commi
+		}
+	}
+	
+	focus = {
+		id = HON_SOV_red_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 10
+		prerequisite = { focus = HON_SOV_ind }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_SOV_ind
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_red_army
+		}
+	}
+	
+	
+	focus = {
+		id = HON_democratic_path
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10
+		prerequisite = { focus = HON_new_cource }
+		mutually_exclusive = {focus = HON_comi focus = HON_fasicm}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_new_cource
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+	
+	focus = {
+		id = HON_usa_groups
+		icon = GFX_focus_ARG_american_allyship
+		cost = 5
+		prerequisite = { focus = HON_democratic_path }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_democratic_path
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+			limit = {USA = {has_government = fascism}}
+			USA = { 
+					set_autonomy = {
+						target = HON
+						autonomy_state = autonomy_satellite
+					}
+				}
+				}
+			else = {
+			USA = { 
+					set_autonomy = {
+						target = HON
+						autonomy_state = autonomy_dominion
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_order
+		icon = GFX_focus_generic_workers
+		cost = 5
+		prerequisite = { focus = HON_usa_groups }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_usa_groups
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.2
+			add_manpower = 250000
+		}
+	}
+	
+	focus = {
+		id = HON_USA_eco
+		icon = GFX_focus_generic_befriend_usa
+		cost = 10
+		prerequisite = { focus = HON_order }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_order
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+			USA = {add_offsite_building = { type = industrial_complex level = 2 }}
+		}
+	}
+	focus = {
+		id = HON_FRA_eco
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10
+		prerequisite = { focus = HON_order }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_order
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+			FRA = {add_offsite_building = { type = industrial_complex level = 2 }}
+		}
+	}
+	
+	focus = {
+		id = HON_ENG_eco
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10
+		prerequisite = { focus = HON_order }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_order	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+			ENG = {add_offsite_building = { type = industrial_complex level = 2 }}
+		}
+	}
+	
+	focus = {
+		id = HON_USA_money
+		icon = GFX_focus_generic_american_investments
+		cost = 5
+		prerequisite = { focus = HON_ENG_eco focus = HON_USA_eco focus = HON_FRA_eco}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_eco	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_USA_money
+		}
+	}
+	
+	focus = {
+		id = HON_new_farics
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		prerequisite = { focus = HON_ENG_eco focus = HON_USA_eco focus = HON_FRA_eco}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_eco	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_new_resource
+		icon = GFX_focus_generic_mining_industry
+		cost = 5
+		prerequisite = { focus = HON_ENG_eco focus = HON_USA_eco focus = HON_FRA_eco}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_eco	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			304 = {
+				add_resource = {
+					type = oil
+					amount = 21
+				}
+			}
+			313 = {
+				add_resource = {
+					type = steel
+					amount = 21
+				}
+			}
+			312 = {
+				add_resource = {
+					type = chromium
+					amount = 18
+				}
+				add_resource = {
+					type = tungsten
+					amount = 17
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = HON_alliance
+		icon = GFX_focus_ARG_join_the_allies
+		cost = 10
+		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_money	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_ali
+			add_research_slot = 1
+		}
+	}
+	
+		focus = {
+		id = HON_air_plance
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_money	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			add_ideas = RUS_USA_coop
+		}
+	}
+	
+		focus = {
+		id = HON_ships	
+		icon = GFX_focus_SWE_italian_destroyers
+		cost = 10
+		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_USA_money	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			create_equipment_variant = {
+					name = "America Class"
+					type = ship_hull_heavy_2
+					name_group = HON_BB_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes 
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_shbb
+						front_1_custom_slot = ship_anti_air_1
+						front_2_custom_slot = ship_airplane_launcher_1
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = ship_secondaries_2
+						mid_3_custom_slot = ship_secondaries_2
+						
+					}
+				}
+			add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HON"
+						version_name = "America Class"
+					}
+					name = "Panama"
+					requested_factories = 1
+					progress = 0.9
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HON"
+						version_name = "America Class"
+					}
+					name = "Panama"
+					requested_factories = 1
+					progress = 0.9
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HON"
+						version_name = "America Class"
+					}
+					name = "Panama"
+					requested_factories = 1
+					progress = 0.9
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HON"
+						version_name = "America Class"
+					}
+					name = "Panama"
+					requested_factories = 1
+					progress = 0.9
+					amount = 1
+				}
+		}
+	}
+	
+	
+	focus = {
+		id = HON_fasicm
+		icon = GFX_focus_generic_fascist_propaganda
+		cost = 10
+		prerequisite = { focus = HON_new_cource }
+		mutually_exclusive = {focus = HON_democratic_path focus = HON_comi}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_new_cource
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = HON_USA_vlianie
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_fasi_groups
+		icon = GFX_focus_ITA_generic_fascist_workers
+		cost = 10
+		prerequisite = { focus = HON_fasicm }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_fasicm
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+			add_ideas = HON_fas_groups
+		}
+	}
+	
+	
+	
+	
+	focus = {
+		id = HON_GER_allience
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5
+		prerequisite = { focus = HON_fasicm }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_fasicm
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			GER  = { country_event = generic.2 }
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+		}
+	}
+
+	focus = {
+		id = HON_GER_ind
+		icon = GFX_focus_ICE_state_corporatism
+		cost = 10
+		prerequisite = { focus = HON_GER_allience }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_GER_allience
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+	
+	focus = {
+		id = HON_GER_uni
+		icon = GFX_focus_ARG_accept_german_advisors
+		cost = 10
+		prerequisite = { focus = HON_GER_ind }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_GER_ind
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			add_ideas = HON_fas
+			set_cosmetic_tag = HON_reich
+		}
+	}
+	
+	focus = {
+		id = HON_fas_arm
+		icon = GFX_focus_generic_spread_fascism
+		cost = 10
+		prerequisite = { focus = HON_GER_ind }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_GER_ind
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = HON_fas_army
+		}
+	}
+	
+#Expansions
+
+focus = {
+		id = HON_end_USA	
+		icon = GFX_focus_ARG_anti_american_propaganda
+		cost = 15
+		prerequisite = {  focus = HON_SOV_bolscivizm focus = HON_GER_uni}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_alliance	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_ideas = HON_Expansion
+			add_named_threat = { threat = 10  }
+		}
+	}	
+	
+	focus = {
+		id = HON_attack_MEX	
+		icon = GFX_focus_attack_mexico
+		cost = 5
+		prerequisite = {  focus = HON_end_USA }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_end_USA	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_collaboration = {
+				target = MEX
+				value = 1
+			}
+			create_wargoal = {
+				target = MEX
+				type = annex_everything
+				expire = 0
+			}
+			every_state = {
+				limit = {
+					is_fully_controlled_by = MEX
+					is_core_of = MEX
+				}	
+				add_claim_by  = HON
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_attack_USA
+		icon = GFX_focus_ARG_the_american_push
+		cost = 5
+		prerequisite = {  focus = HON_attack_MEX }
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = HON_attack_MEX	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			create_wargoal = {
+				target = USA
+				type = annex_everything
+				expire = 0
+			}
+			every_state = {
+				limit = {
+					is_fully_controlled_by = USA
+					is_core_of = USA
+				}	
+				add_claim_by  = HON
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = HON_attack_COL	
+		icon = GFX_focus_generic_attack_colombia
+		cost = 5
+		prerequisite = {  focus = HON_end_USA }
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_end_USA	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_collaboration = {
+				target = COL
+				value = 1
+			}
+			create_wargoal = {
+				target = COL
+				type = annex_everything
+				expire = 0
+			}
+			every_state = {
+				limit = {
+					is_fully_controlled_by = COL
+					is_core_of = COL
+				}	
+				add_claim_by  = HON
+			}
+			add_collaboration = {
+				target = VEN
+				value = 1
+			}
+			create_wargoal = {
+				target = VEN
+				type = annex_everything
+				expire = 0
+			}
+			every_state = {
+				limit = {
+					is_fully_controlled_by = VEN
+					is_core_of = VEN
+				}	
+				add_claim_by  = HON
+			}
+			add_collaboration = {
+				target = ECU
+				value = 1
+			}
+			create_wargoal = {
+				target = ECU
+				type = annex_everything
+				expire = 0
+			}
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ECU
+					is_core_of = ECU
+				}	
+				add_claim_by  = HON
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_attack_south_ame	
+		icon = GFX_focus_generic_south_america
+		cost = 5
+		prerequisite = {  focus = HON_attack_COL }
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = HON_attack_COL	
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			create_wargoal = {
+				target = BRA
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = PRU
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = BOL
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = CHL
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = ARG
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = PAR
+				type = annex_everything
+				expire = 0
+			}
+			create_wargoal = {
+				target = URG
+				type = annex_everything
+				expire = 0
+			}
+		}
+	}
+	
+	focus = {
+		id = HON_our_americs	
+		icon = GFX_focus_BRA_north_and_south_america
+		cost = 1
+		prerequisite = {  focus = HON_attack_south_ame focus = HON_attack_USA}
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = HON_end_USA	
+		available = {
+			361 = { is_controlled_by = HON }
+			277 = { is_controlled_by = HON }
+			685 = { is_controlled_by = HON }
+			500 = { is_controlled_by = HON }
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+		
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			add_stability = 0.5
+			add_war_support = 0.5
+			every_state = {
+				limit = {
+					OR = {
+					is_core_of = USA
+					is_core_of = MEX
+					is_core_of = BRA
+					is_core_of = CAN
+					is_core_of = PRU
+					is_core_of = BOL
+					is_core_of = ARG
+					is_core_of = VEN
+					is_core_of = PAR
+					is_core_of = CHL
+					is_core_of = ARG
+					is_core_of = ECU
+					}
+				}	
+				add_core_of = HON
+			}
+		}
+	}
+	
+}

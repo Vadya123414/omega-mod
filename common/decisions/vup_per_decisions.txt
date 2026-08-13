@@ -1,0 +1,153 @@
+PER_annex = {
+	PER_steel = {
+	cost = 25
+		##icon = generic_army_support
+         icon = steel
+		available = {
+
+		}
+
+		
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		266 = {
+				add_resource = {
+					type = steel
+					amount = 46
+				}
+			}
+		
+		420 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+			416 = {
+				add_resource = {
+					type = chromium
+					amount = 23
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			
+		}
+		}
+		
+	Hist_game = {
+
+		icon = generic_army_support
+
+		available = {
+		date > 1945.2.1
+		}
+		activation = {
+			GER = {has_country_flag = VUP_Hist_version}
+
+			}
+		visible = {
+			GER = {has_country_flag = VUP_Hist_version}
+
+			}
+			
+		
+		fire_only_once = yes
+		
+		is_good = yes
+		days_mission_timeout = 1
+
+		timeout_effect = {
+		COL = {
+		set_cosmetic_tag = COL_neutral_game
+		set_global_flag = COL_neutral_game
+		add_ideas = BAN_BAN
+		add_ideas = free_trade
+		annex_country = { target = CUB }
+		annex_country = { target = BHU }
+		annex_country = { target = NEP }
+		annex_country = { target = ECU }
+		annex_country = { target = HON }
+		annex_country = { target = PRU }
+		annex_country = { target = BOL }
+		annex_country = { target = CHL }
+		annex_country = { target = ARG }
+		annex_country = { target = BRA }
+		annex_country = { target = URG }
+		annex_country = { target = PAR }
+		annex_country = { target = TIB }
+		annex_country = { target = SAU }
+		annex_country = { target = AFG }
+		annex_country = { target = SWI }
+		
+			every_state = {
+				limit = {
+					is_core_of = ECU
+					is_controlled_by = ECU
+					}
+				set_compliance = 100
+			}
+			}
+			COL = {
+		    transfer_state = 273
+            transfer_state = 552
+			transfer_state = 767
+            transfer_state = 775
+			transfer_state = 515
+            transfer_state = 514
+			transfer_state = 782
+            transfer_state = 786
+			transfer_state = 515
+            transfer_state = 514
+              }
+			 ENG = {
+		    transfer_state = 178
+            transfer_state = 689
+			transfer_state = 697
+            transfer_state = 702
+		
+              }
+			  ITA = {
+		    transfer_state = 846	
+              }
+			  POR = {
+			add_ideas = BAN_BAN
+			add_ideas = free_trade
+			  }
+			  SWE = {
+			add_ideas = BAN_BAN
+			add_ideas = free_trade
+			  }
+		}
+		
+		complete_effect = {
+		COL = {
+		add_ideas = BAN_BAN
+		add_ideas = free_trade
+		annex_country = { target = ECU }
+		annex_country = { target = HON }
+		annex_country = { target = PRU }
+		annex_country = { target = BOL }
+		annex_country = { target = CHL }
+		annex_country = { target = ARG }
+		annex_country = { target = BRA }
+		annex_country = { target = URG }
+		annex_country = { target = PAR }
+			every_state = {
+				limit = {
+					is_core_of = ECU
+					is_controlled_by = ECU
+					}
+				set_compliance = 100
+			}
+			}
+		}
+	
+	}
+
+
+}

@@ -1,0 +1,111 @@
+﻿###########################
+# MONland Events
+###########################
+
+add_namespace = Mongol
+
+# Deal with SOV
+country_event = {
+	id = Mongol.1
+	title = Mongol.1.t
+	desc = Mongol.1.d
+	picture = GFX_news_event_stalin_meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = Mongol.1.a
+
+		ai_chance = {
+			factor = 10
+		}
+
+		MON = { country_event = { id = Mongol.2 days = 1 } }
+		effect_tooltip = {
+			MON = { transfer_state = 564 }
+			MON = { transfer_state = 566 }
+			MON = { transfer_state = 563 }
+            564 = {
+                remove_core_of = SOV
+            }
+			566 = {
+                remove_core_of = SOV
+            }
+			563 = {
+                remove_core_of = SOV
+            }
+			564 = { add_core_of = MON }
+			566 = { add_core_of = MON }
+			563 = { add_core_of = MON }
+		}
+	}
+
+	option = {
+		name = Mongol.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_faction_with = GER
+			}
+		}
+		MON = {
+			country_event = { id = Mongol.3 days = 1 }
+
+		}
+		    effect_tooltip = {
+			add_political_power = 50
+			}
+	}
+}
+
+
+# Britain accept
+country_event = {
+	id = Mongol.2
+	title = Mongol.2.t
+	desc = Mongol.2.d
+	picture = GFX_news_event_stalin_meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = Mongol.2.a
+			MON = { transfer_state = 564 }
+			MON = { transfer_state = 566 }
+			MON = { transfer_state = 563 }
+            564 = {
+                remove_core_of = SOV
+            }
+			566 = {
+                remove_core_of = SOV
+            }
+			563 = {
+                remove_core_of = SOV
+            }
+			564 = { add_core_of = MON }
+			566 = { add_core_of = MON }
+			563 = { add_core_of = MON }
+
+		hidden_effect = {
+		
+		}
+	}
+}
+
+# SOVland refuse our deal
+country_event = {
+	id = Mongol.3
+	title = Mongol.3.t
+	desc = Mongol.3.d
+	picture = GFX_news_event_stalin_meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = Mongol.3.a
+
+	}
+}
+
+

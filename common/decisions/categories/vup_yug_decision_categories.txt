@@ -1,0 +1,17 @@
+YUG_annex = {
+	
+	icon = military_operation
+	
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = YUG
+		
+	}
+	
+	visible = {
+		
+	}
+	
+}
+

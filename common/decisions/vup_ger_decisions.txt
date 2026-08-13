@@ -1,0 +1,308 @@
+GER_annex = {
+		
+		
+		GER_stupid_AI = {
+
+		icon = GFX_decision_ger_mefo_bills
+
+		available = {
+		always = no
+		}
+		activation = {
+			GER = {has_completed_focus = GER_remilitarize_the_rhineland}
+			GER = { is_ai = yes }
+			date > 1939.1.1 
+			date < 1940.1.1 
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 1
+		days_mission_timeout = 7
+
+		timeout_effect = {
+		add_collaboration = {
+				target = FRA
+				value = 0.3
+			
+		}
+		add_collaboration = {
+				target = POL
+				value = 0.3
+			}
+		
+		
+		complete_effect = {
+		
+		}
+	}
+	}
+	
+	GER_annex_HUN = {
+	
+		icon = generic_army_support
+
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+		    HUN = { is_ai = yes
+			is_subject = no
+			exists = yes }
+			date > 1940.1.1
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HUN
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		    HUN = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+					set_autonomy = {
+						target = HUN
+						autonomy_state = autonomy_reichsprotectorate
+					}
+				}			
+		}
+	}
+	
+	GER_HUN_SLO = {
+	
+		icon = generic_army_support
+
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+			any_other_country = {
+				original_tag = HUN
+				exists = yes
+			}
+			any_other_country = {
+				original_tag = SLO
+				exists = yes
+			}
+                        
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = SLO
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			HUN = { 
+			annex_country = { target = SLO }
+            70 = {add_core_of = HUN}
+            71 = {add_core_of = HUN}
+            73 = {add_core_of = HUN}			
+		}
+	}
+	}
+
+	GER_annex_ROM = {
+	
+		icon = generic_army_support
+
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+		    ROM = { is_ai = yes
+			is_subject = no
+			exists = yes }
+			date > 1940.1.1
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		    ROM = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+					set_autonomy = {
+						target = ROM
+						autonomy_state = autonomy_reichsprotectorate
+					}
+				}			
+		}
+	}
+
+	GER_annex_BUL = {
+	
+		icon = generic_army_support
+		
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+		    BUL = { is_ai = yes
+			is_subject = no
+			exists = yes }
+			date > 1940.1.1
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = BUL
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		    BUL = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+					set_autonomy = {
+						target = BUL
+						autonomy_state = autonomy_reichsprotectorate
+					}
+				}			
+		}
+	}
+	
+
+	
+	GER_ITA = {
+	
+		icon = generic_army_support
+
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+			NOT = {
+				2 = { is_controlled_by = ITA }
+			}
+			any_other_country = {
+				original_tag = ITA
+				exists = yes
+			}
+                       
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ITA
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		    ITA = { add_ideas = german_occupation}
+				
+            GER = { 
+			 transfer_state = 39
+			 transfer_state = 850
+			 
+			 
+			}	
+			39 = {set_compliance = 100}
+			 850 = { set_compliance = 100} 
+  			
+		}
+	}
+	
+	GER_annex_IRQ = {
+	
+		icon = generic_army_support
+
+		visible = {
+		    has_country_flag = VUP_Hist_version
+		}
+         
+		available = {
+		    
+			any_other_country = {
+				original_tag = IRQ
+				exists = yes
+			}
+			OR = { 
+			446 = { is_controlled_by = ITA }
+			446 = { is_controlled_by = GER }
+			}
+			
+			OR = { 
+			907 = { is_controlled_by = ITA }
+			907 = { is_controlled_by = GER }
+			}
+			
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = IRQ
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = IRQ }
+			every_state = {
+				limit = {
+					is_core_of = IRQ
+					is_controlled_by = GER
+					}
+				set_compliance = 100
+			}				
+		}
+	}
+	
+	
+
+	
+	
+}

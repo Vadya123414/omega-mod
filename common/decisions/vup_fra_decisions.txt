@@ -1,0 +1,100 @@
+FRA_annex = {
+
+	FRA_steel = {
+	cost = 25
+		##icon = generic_army_support
+         icon = steel
+		available = {
+		    has_capitulated = yes
+			date > 1939.1.1 
+		}
+
+		
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		660 = {
+				add_resource = {
+					type = steel
+					amount = 70
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			
+		}
+	}
+	
+	FRA_evakuation = {
+		icon = generic_army_support
+		available = {
+		    has_capitulated = yes
+			date > 1939.1.1 
+            
+		}
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+		set_capital = { state = 660 }
+		add_equipment_to_stockpile = {
+				type = convoy
+				amount = 500
+			}
+		660 = {add_core_of = FRA}
+		772 = {add_core_of = FRA}
+		539 = {add_core_of = FRA}
+		773	 = {add_core_of = FRA}
+		774 = {add_core_of = FRA}
+		776 = {add_core_of = FRA}
+		777 = {add_core_of = FRA}
+		778 = {add_core_of = FRA}
+		779 = {add_core_of = FRA}
+		780 = {add_core_of = FRA}
+		889 = {add_core_of = FRA}
+		556 = {add_core_of = FRA}
+		898 = {add_core_of = FRA}
+		272 = {add_core_of = FRA}
+		}
+		ai_will_do = {
+			factor = 200
+			
+		}
+	}
+	
+	
+
+	
+	
+	
+	FRA_Revolt = {
+	
+		icon = GFX_decision_SWI_guisan_speech
+
+		available = {
+			has_capitulated = yes
+		}
+
+		
+
+		fire_only_once = yes
+		days_remove    = -1
+		
+		
+		complete_effect = {
+		    add_offsite_building = { type = industrial_complex level = 10 }
+			add_offsite_building = { type = arms_factory level = 15 }
+		    add_stability = 0.1
+			
+		}
+		ai_will_do = {
+			factor = 200
+			
+		}
+	}
+	
+}
+
