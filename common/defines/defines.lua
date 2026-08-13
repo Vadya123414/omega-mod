@@ -1,4 +1,4 @@
-NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.3, 0.2, 0.1, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
+NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.2, 0.1, 0.05, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60;
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
 

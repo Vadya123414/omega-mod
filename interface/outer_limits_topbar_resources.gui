@@ -24,7 +24,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_tiled_window_transparent"
 		}
 		clipping = yes
-		position = { x = 970 y = 2 }
+		position = { x = 1025 y = 2 }
 		moveable = yes
 
 		iconType = {
