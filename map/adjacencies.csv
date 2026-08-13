@@ -251,6 +251,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 13401;13396;sea;436;-1;-1;-1;-1;;Aceh-Islands
 1428;13395;sea;812;-1;-1;-1;-1;;Padang-Islands
 -1;-1;;-1;-1;-1;-1;-1;-1 
+13228;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+10094;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+7153;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
 #Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment
 
 

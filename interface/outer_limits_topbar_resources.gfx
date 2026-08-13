@@ -1,0 +1,49 @@
+spriteTypes = {
+
+spriteType = {
+		name = "GFX_OL_TBR_fuel"
+		texturefile = "gfx//interface//topbar//fuel_icon.dds"
+		legacy_lazy_load = no
+	}
+
+spriteType = {
+		name = "GFX_OL_TBR_transparent_bg"
+		texturefile = "gfx//interface//OL_TBR_transparent_bg.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg"
+		texturefile = "gfx//interface//OL_TBR_resource_bg.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_0"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_0.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_1"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_1.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_2"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_2.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_3"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_3.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_4"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_4.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_5"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_5.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_6"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_6.png"
+	}
+spriteType = {
+		name = "GFX_OL_TBR_resource_bg_7"
+		texturefile = "gfx//interface//OL_TBR_resource_bg_7.png"
+	}
+}

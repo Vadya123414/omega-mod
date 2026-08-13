@@ -11,4 +11,4 @@ tags={
 }
 name="Omega mod"
 supported_version="1.19.2.0"
-remote_file_id="omega"
+remote_file_id="omega" 

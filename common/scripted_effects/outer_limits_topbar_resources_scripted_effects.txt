@@ -1,0 +1,826 @@
+
+# 36 + (x * 72)
+@pos_bg_1_x = 36
+@pos_bg_2_x = 108
+@pos_bg_3_x = 180
+@pos_bg_4_x = 252
+@pos_bg_5_x = 324
+@pos_bg_6_x = 396
+@pos_bg_7_x = 468
+
+# 36 + (x * 72) + 3
+@pos_icon_1_x = 39
+@pos_icon_2_x = 111
+@pos_icon_3_x = 183
+@pos_icon_4_x = 255
+@pos_icon_5_x = 327
+@pos_icon_6_x = 399
+@pos_icon_7_x = 471
+
+# 36 + (x * 72) + 30
+@pos_value_1_x = 66
+@pos_value_2_x = 138
+@pos_value_3_x = 210
+@pos_value_4_x = 282
+@pos_value_5_x = 354
+@pos_value_6_x = 426
+@pos_value_7_x = 498
+
+@pos_bg_X_y = 3
+@pos_icon_X_y = 5
+@pos_value_X_y = 8
+
+
+OL_TBR_update_gui = {
+
+	# fuel ratio
+	if = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = { TBR_fuel_ratio = fuel_k }
+		divide_variable = { TBR_fuel_ratio = max_fuel_k }
+	}
+
+	# topbar enabled
+	if = {
+		limit = {
+			has_country_flag = OL_tbr_enabled
+			is_ai = no
+		}
+		set_variable = { TBR_oil_bg_x = @pos_bg_1_x }
+		set_variable = { TBR_oil_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_oil_icon_x = @pos_icon_1_x }
+		set_variable = { TBR_oil_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_oil_value_x = @pos_value_1_x }
+		set_variable = { TBR_oil_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_aluminium_bg_x = @pos_bg_2_x }
+		set_variable = { TBR_aluminium_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_aluminium_icon_x = @pos_icon_2_x }
+		set_variable = { TBR_aluminium_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_aluminium_value_x = @pos_value_2_x }
+		set_variable = { TBR_aluminium_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_rubber_bg_x = @pos_bg_3_x }
+		set_variable = { TBR_rubber_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_rubber_icon_x = @pos_icon_3_x }
+		set_variable = { TBR_rubber_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_rubber_value_x = @pos_value_3_x }
+		set_variable = { TBR_rubber_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_tungsten_bg_x = @pos_bg_4_x }
+		set_variable = { TBR_tungsten_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_tungsten_icon_x = @pos_icon_4_x }
+		set_variable = { TBR_tungsten_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_tungsten_value_x = @pos_value_4_x }
+		set_variable = { TBR_tungsten_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_steel_bg_x = @pos_bg_5_x }
+		set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_steel_icon_x = @pos_icon_5_x }
+		set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_steel_value_x = @pos_value_5_x }
+		set_variable = { TBR_steel_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_chromium_bg_x = @pos_bg_6_x }
+		set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_chromium_icon_x = @pos_icon_6_x }
+		set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_chromium_value_x = @pos_value_6_x }
+		set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+
+		set_variable = { TBR_coal_bg_x = @pos_bg_7_x }
+		set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_coal_icon_x = @pos_icon_7_x }
+		set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_coal_value_x = @pos_value_7_x }
+		set_variable = { TBR_coal_value_y = @pos_value_X_y }
+
+		# GUI Update
+		add_to_variable = { TBR_update = 1 }
+	}
+
+	# topbar deficit / import
+	else_if = {
+		limit = {
+			has_country_flag = OL_tbr_deficit
+			is_ai = no
+		}
+
+		# oil
+		# pos 1
+		set_variable = { TBR_oil_bg_x = @pos_bg_1_x }
+		set_variable = { TBR_oil_bg_y = @pos_bg_X_y }
+		set_variable = { TBR_oil_icon_x = @pos_icon_1_x }
+		set_variable = { TBR_oil_icon_y = @pos_icon_X_y }
+		set_variable = { TBR_oil_value_x = @pos_value_1_x }
+		set_variable = { TBR_oil_value_y = @pos_value_X_y }
+
+		# aluminium
+		# pos 1 or 2
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_aluminium_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_aluminium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_aluminium_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_aluminium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_aluminium_value_x = @pos_value_1_x }
+			set_variable = { TBR_aluminium_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_aluminium_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_aluminium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_aluminium_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_aluminium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_aluminium_value_x = @pos_value_2_x }
+			set_variable = { TBR_aluminium_value_y = @pos_value_X_y }
+		}
+
+		# rubber
+		# pos 1 or 2 or 3
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 2
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_rubber_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_rubber_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_rubber_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_rubber_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_rubber_value_x = @pos_value_1_x }
+			set_variable = { TBR_rubber_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_rubber_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_rubber_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_rubber_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_rubber_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_rubber_value_x = @pos_value_2_x }
+			set_variable = { TBR_rubber_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_rubber_bg_x = @pos_bg_3_x }
+			set_variable = { TBR_rubber_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_rubber_icon_x = @pos_icon_3_x }
+			set_variable = { TBR_rubber_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_rubber_value_x = @pos_value_3_x }
+			set_variable = { TBR_rubber_value_y = @pos_value_X_y }
+		}
+
+		# tungsten
+		# pos 1 or 2 or 3 or 4
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_tungsten_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_tungsten_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_tungsten_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_tungsten_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_tungsten_value_x = @pos_value_1_x }
+			set_variable = { TBR_tungsten_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 2
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_tungsten_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_tungsten_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_tungsten_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_tungsten_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_tungsten_value_x = @pos_value_2_x }
+			set_variable = { TBR_tungsten_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_tungsten_bg_x = @pos_bg_3_x }
+			set_variable = { TBR_tungsten_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_tungsten_icon_x = @pos_icon_3_x }
+			set_variable = { TBR_tungsten_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_tungsten_value_x = @pos_value_3_x }
+			set_variable = { TBR_tungsten_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_tungsten_bg_x = @pos_bg_4_x }
+			set_variable = { TBR_tungsten_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_tungsten_icon_x = @pos_icon_4_x }
+			set_variable = { TBR_tungsten_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_tungsten_value_x = @pos_value_4_x }
+			set_variable = { TBR_tungsten_value_y = @pos_value_X_y }
+		}
+
+		# steel
+		# pos 1 or 2 or 3 or 4 or 5
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 4
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_steel_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_steel_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_steel_value_x = @pos_value_1_x }
+			set_variable = { TBR_steel_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_steel_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_steel_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_steel_value_x = @pos_value_2_x }
+			set_variable = { TBR_steel_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 2
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_steel_bg_x = @pos_bg_3_x }
+			set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_steel_icon_x = @pos_icon_3_x }
+			set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_steel_value_x = @pos_value_3_x }
+			set_variable = { TBR_steel_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_steel_bg_x = @pos_bg_4_x }
+			set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_steel_icon_x = @pos_icon_4_x }
+			set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_steel_value_x = @pos_value_4_x }
+			set_variable = { TBR_steel_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_steel_bg_x = @pos_bg_5_x }
+			set_variable = { TBR_steel_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_steel_icon_x = @pos_icon_5_x }
+			set_variable = { TBR_steel_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_steel_value_x = @pos_value_5_x }
+			set_variable = { TBR_steel_value_y = @pos_value_X_y }
+		}
+
+		# chromium
+		# pos 1 or 2 or 3 or 4 or 5 or 6
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 5
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_chromium_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_1_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 4
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_chromium_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_2_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_chromium_bg_x = @pos_bg_3_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_3_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_3_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 2
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_chromium_bg_x = @pos_bg_4_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_4_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_4_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_chromium_bg_x = @pos_bg_5_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_5_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_5_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_chromium_bg_x = @pos_bg_6_x }
+			set_variable = { TBR_chromium_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_chromium_icon_x = @pos_icon_6_x }
+			set_variable = { TBR_chromium_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_chromium_value_x = @pos_value_6_x }
+			set_variable = { TBR_chromium_value_y = @pos_value_X_y }
+		}
+
+		# coal
+		# pos 1 or 2 or 3 or 4 or 5 or 6 or 7
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 6
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_1_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_1_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_1_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 5
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_2_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_2_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_2_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 4
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_3_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_3_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_3_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_4_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_4_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_4_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 2
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_5_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_5_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_5_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 1
+					NOT = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+					NOT = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+					NOT = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+					NOT = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+					NOT = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+					NOT = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+			}
+			set_variable = { TBR_coal_bg_x = @pos_bg_6_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_6_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_6_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+		else = {
+			set_variable = { TBR_coal_bg_x = @pos_bg_7_x }
+			set_variable = { TBR_coal_bg_y = @pos_bg_X_y }
+			set_variable = { TBR_coal_icon_x = @pos_icon_7_x }
+			set_variable = { TBR_coal_icon_y = @pos_icon_X_y }
+			set_variable = { TBR_coal_value_x = @pos_value_7_x }
+			set_variable = { TBR_coal_value_y = @pos_value_X_y }
+		}
+
+		# GUI Update
+		add_to_variable = { TBR_update = 1 }
+	}
+}

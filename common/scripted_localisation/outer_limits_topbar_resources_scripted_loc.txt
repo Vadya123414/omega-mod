@@ -1,0 +1,962 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+
+# toggle butten text
+defined_text = {
+	name = outer_limits_topbar_resource_toggle_button_text
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_enabled }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_text_enabled
+	}
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_deficit }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_text_deficit
+	}
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_disabled }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_text_disabled
+	}
+	text = {
+		localization_key = outer_limits_topbar_resource_toggle_button_text_enabled
+	}
+}
+
+# toggle butten tooltip
+defined_text = {
+	name = outer_limits_topbar_resource_toggle_button_tt
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_enabled }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_tt_enabled
+	}
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_deficit }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_tt_deficit
+	}
+	text = {
+		trigger = {
+			ROOT = { has_country_flag = OL_tbr_disabled }
+		}
+		localization_key = outer_limits_topbar_resource_toggle_button_tt_disabled
+	}
+	text = {
+		localization_key = outer_limits_topbar_resource_toggle_button_tt_enabled
+	}
+}
+
+
+# background size
+defined_text = {
+	name = outer_limits_topbar_resources_bg	
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 6
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_6"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 5
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_5"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 4
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_4"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 3
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_3"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 2
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_2"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 1
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_1"
+	}
+	text = {
+		trigger = {
+			has_country_flag = OL_tbr_deficit
+			count_triggers = {
+				amount = 0
+				OR = {
+					fuel_ratio < 0.5
+					check_variable = { resource_imported@oil > 0 }
+				}
+				OR = {
+					check_variable = { resource@aluminium < 0 }
+					check_variable = { resource_imported@aluminium > 0 }
+				}
+				OR = {
+					check_variable = { resource@rubber < 0 }
+					check_variable = { resource_imported@rubber > 0 }
+				}
+				OR = {
+					check_variable = { resource@tungsten < 0 }
+					check_variable = { resource_imported@tungsten > 0 }
+				}
+				OR = {
+					check_variable = { resource@steel < 0 }
+					check_variable = { resource_imported@steel > 0 }
+				}
+				OR = {
+					check_variable = { resource@chromium < 0 }
+					check_variable = { resource_imported@chromium > 0 }
+				}
+				OR = {
+					check_variable = { resource@coal < 0 }
+					check_variable = { resource_imported@coal > 0 }
+				}
+			}
+		}
+		localization_key = "GFX_OL_TBR_resource_bg_0"
+	}
+	text = {
+		localization_key = "GFX_OL_TBR_resource_bg_7"
+	}
+}
+
+# oil icon
+defined_text = {
+	name = TBR_oil_icon
+	text = {
+		trigger = {
+			ROOT = {
+				fuel_ratio < 0.5
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# oil color
+defined_text = {
+	name = OL_tbr_text_oil
+	text = {
+		trigger = {
+			ROOT = {
+				fuel_ratio < 0.5
+			}
+		}
+		localization_key = OL_tbr_text_oil_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@oil > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_oil_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				fuel_ratio > 0.5
+			}
+		}
+		localization_key = OL_tbr_text_oil_green
+	}
+	text = {
+		localization_key = OL_tbr_text_oil_black
+	}
+}
+
+# aluminium icon
+defined_text = {
+	name = TBR_aluminium_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@aluminium < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# aluminium color
+defined_text = {
+	name = OL_tbr_text_aluminium
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@aluminium < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_aluminium_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@aluminium > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_aluminium_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@aluminium > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_aluminium_green
+	}
+	text = {
+		localization_key = OL_tbr_text_aluminium_black
+	}
+}
+
+# rubber icon
+defined_text = {
+	name = TBR_rubber_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@rubber < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# rubber color
+defined_text = {
+	name = OL_tbr_text_rubber
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@rubber < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_rubber_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@rubber > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_rubber_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@rubber > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_rubber_green
+	}
+	text = {
+		localization_key = OL_tbr_text_rubber_black
+	}
+}
+
+# tungsten icon
+defined_text = {
+	name = TBR_tungsten_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@tungsten < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# tungsten color
+defined_text = {
+	name = OL_tbr_text_tungsten
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@tungsten < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_tungsten_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@tungsten > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_tungsten_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@tungsten > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_tungsten_green
+	}
+	text = {
+		localization_key = OL_tbr_text_tungsten_black
+	}
+}
+
+# steel icon
+defined_text = {
+	name = TBR_steel_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@steel < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# steel color
+defined_text = {
+	name = OL_tbr_text_steel
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@steel < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_steel_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@steel > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_steel_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@steel > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_steel_green
+	}
+	text = {
+		localization_key = OL_tbr_text_steel_black
+	}
+}
+
+# chromium icon
+defined_text = {
+	name = TBR_chromium_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@chromium < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# chromium color
+defined_text = {
+	name = OL_tbr_text_chromium
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@chromium < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_chromium_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@chromium > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_chromium_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@chromium > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_chromium_green
+	}
+	text = {
+		localization_key = OL_tbr_text_chromium_black
+	}
+}
+
+# coal icon
+defined_text = {
+	name = TBR_coal_icon
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@coal < 0 }
+			}
+		}
+		localization_key = "GFX_missing_resources_strip"
+	}
+	text = {
+		localization_key = "GFX_resources_strip"
+	}
+}
+
+# coal color
+defined_text = {
+	name = OL_tbr_text_coal
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@coal < 0 }
+			}
+		}
+		localization_key = OL_tbr_text_coal_red
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@coal > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_coal_yellow
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@coal > 0 }
+			}
+		}
+		localization_key = OL_tbr_text_coal_green
+	}
+	text = {
+		localization_key = OL_tbr_text_coal_black
+	}
+}
+
+
+# oil tooltip
+defined_text = {
+	name = OL_tbr_tt_oil
+	text = {
+		localization_key = OL_tbr_tt_oil_text
+	}
+}
+
+# aluminium tooltip
+defined_text = {
+	name = OL_tbr_tt_aluminium
+	text = {
+		localization_key = OL_tbr_tt_aluminium_text
+	}
+}
+
+# rubber tooltip
+defined_text = {
+	name = OL_tbr_tt_rubber
+	text = {
+		localization_key = OL_tbr_tt_rubber_text
+	}
+}
+
+# tungsten tooltip
+defined_text = {
+	name = OL_tbr_tt_tungsten
+	text = {
+		localization_key = OL_tbr_tt_tungsten_text
+	}
+}
+
+# steel tooltip
+defined_text = {
+	name = OL_tbr_tt_steel
+	text = {
+		localization_key = OL_tbr_tt_steel_text
+	}
+}
+
+# chromium tooltip
+defined_text = {
+	name = OL_tbr_tt_chromium
+	text = {
+		localization_key = OL_tbr_tt_chromium_text
+	}
+}
+
+# coal tooltip
+defined_text = {
+	name = OL_tbr_tt_coal
+	text = {
+		localization_key = OL_tbr_tt_coal_text
+	}
+}
+
+
+
+# oil imported
+defined_text = {
+	name = OL_tbr_tt_oil_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@oil > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_oil_import_text
+	}
+}
+
+# aluminium imported
+defined_text = {
+	name = OL_tbr_tt_aluminium_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@aluminium > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_aluminium_import_text
+	}
+}
+
+# rubber imported
+defined_text = {
+	name = OL_tbr_tt_rubber_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@rubber > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_rubber_import_text
+	}
+}
+
+# tungsten imported
+defined_text = {
+	name = OL_tbr_tt_tungsten_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@tungsten > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_tungsten_import_text
+	}
+}
+
+# steel imported
+defined_text = {
+	name = OL_tbr_tt_steel_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@steel > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_steel_import_text
+	}
+}
+
+# chromium imported
+defined_text = {
+	name = OL_tbr_tt_chromium_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@chromium > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_chromium_import_text
+	}
+}
+
+# coal imported
+defined_text = {
+	name = OL_tbr_tt_coal_import
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource_imported@coal > 0 }
+			}
+		}
+		localization_key = OL_tbr_tt_coal_import_text
+	}
+}
+
+
+
+
+# oil fuel
+defined_text = {
+	name = OL_tbr_tt_oil_fuel
+	text = {
+		localization_key = OL_tbr_tt_oil_fuel_text
+	}
+}
+
+# aluminium lack
+defined_text = {
+	name = OL_tbr_tt_aluminium_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@aluminium < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+# rubber lack
+defined_text = {
+	name = OL_tbr_tt_rubber_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@rubber < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+# tungsten lack
+defined_text = {
+	name = OL_tbr_tt_tungsten_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@tungsten < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+# steel lack
+defined_text = {
+	name = OL_tbr_tt_steel_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@steel < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+# chromium lack
+defined_text = {
+	name = OL_tbr_tt_chromium_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@chromium < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+# coal lack
+defined_text = {
+	name = OL_tbr_tt_coal_lack
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = { resource@coal < -4 }
+			}
+		}
+		localization_key = OL_tbr_lack_of_resource
+	}
+}
+
+
+# oil desc
+defined_text = {
+	name = OL_tbr_tt_oil_desc
+	text = {
+		localization_key = OL_tbr_tt_oil_desc_text
+	}
+}
+
+# aluminium desc
+defined_text = {
+	name = OL_tbr_tt_aluminium_desc
+	text = {
+		localization_key = OL_tbr_tt_aluminium_desc_text
+	}
+}
+
+# rubber desc
+defined_text = {
+	name = OL_tbr_tt_rubber_desc
+	text = {
+		localization_key = OL_tbr_tt_rubber_desc_text
+	}
+}
+
+# tungsten desc
+defined_text = {
+	name = OL_tbr_tt_tungsten_desc
+	text = {
+		localization_key = OL_tbr_tt_tungsten_desc_text
+	}
+}
+
+# steel desc
+defined_text = {
+	name = OL_tbr_tt_steel_desc
+	text = {
+		localization_key = OL_tbr_tt_steel_desc_text
+	}
+}
+
+# chromium desc
+defined_text = {
+	name = OL_tbr_tt_chromium_desc
+	text = {
+		localization_key = OL_tbr_tt_chromium_desc_text
+	}
+}
+
+# coal desc
+defined_text = {
+	name = OL_tbr_tt_coal_desc
+	text = {
+		localization_key = OL_tbr_tt_coal_desc_text
+	}
+}

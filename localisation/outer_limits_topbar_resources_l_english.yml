@@ -1,0 +1,87 @@
+﻿l_english:
+
+ outer_limits_topbar_resource_toggle_button_text: "[outer_limits_topbar_resource_toggle_button_text]"
+ outer_limits_topbar_resource_toggle_button_text_enabled: "Enabled"
+ outer_limits_topbar_resource_toggle_button_text_deficit: "Deficit / Import"
+ outer_limits_topbar_resource_toggle_button_text_disabled: "Disabled"
+
+ outer_limits_topbar_resource_toggle_button_tt: "[outer_limits_topbar_resource_toggle_button_tt]"
+ outer_limits_topbar_resource_toggle_button_tt_enabled: "Topbar Resources always visible"
+ outer_limits_topbar_resource_toggle_button_tt_deficit: "Topbar Resources only visible if Resource Deficit or Resource Import"
+ outer_limits_topbar_resource_toggle_button_tt_disabled: "Topbar Resources always hidden"
+
+
+
+ OL_tbr_lack_of_resource: "\n\n£GFX_warning_icon_l $MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$"
+
+ OL_tbr_text_oil_red: "[?resource@oil|0R]"
+ OL_tbr_text_oil_yellow: "[?resource@oil|0Y]"
+ OL_tbr_text_oil_green: "[?resource@oil|0G]"
+ OL_tbr_text_oil_black: "[?resource@oil|0]"
+
+ OL_tbr_tt_oil: "[OL_tbr_tt_oil][OL_tbr_tt_oil_import][OL_tbr_tt_oil_fuel][OL_tbr_tt_oil_desc]"
+ OL_tbr_tt_oil_text: "£[TBR_oil_icon]|1 $PRODUCTION_MATERIALS_OIL$: [OL_tbr_text_oil]"
+ OL_tbr_tt_oil_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@oil|0]"
+ OL_tbr_tt_oil_fuel_text: "\n\n£GFX_OL_TBR_fuel  $FUEL$: [?fuel_k|0] / [?max_fuel_k|0] ([?TBR_fuel_ratio|0%])"
+ OL_tbr_tt_oil_desc_text: "\n\n£GFX_occupation_resources_icon §g$oil_desc$§!\n\n£GFX_fuel_texticon §g$FUEL_DESC$§!"
+
+ OL_tbr_text_aluminium_red: "[?resource@aluminium|0R]"
+ OL_tbr_text_aluminium_yellow: "[?resource@aluminium|0Y]"
+ OL_tbr_text_aluminium_green: "[?resource@aluminium|0G]"
+ OL_tbr_text_aluminium_black: "[?resource@aluminium|0]"
+
+ OL_tbr_tt_aluminium: "[OL_tbr_tt_aluminium][OL_tbr_tt_aluminium_import][OL_tbr_tt_aluminium_lack][OL_tbr_tt_aluminium_desc]"
+ OL_tbr_tt_aluminium_text: "£[TBR_aluminium_icon]|2 $PRODUCTION_MATERIALS_ALUMINIUM$: [OL_tbr_text_aluminium]"
+ OL_tbr_tt_aluminium_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@aluminium|0]"
+ OL_tbr_tt_aluminium_desc_text: "\n\n£GFX_occupation_resources_icon §g$aluminium_desc$§!"
+
+ OL_tbr_text_rubber_red: "[?resource@rubber|0R]"
+ OL_tbr_text_rubber_yellow: "[?resource@rubber|0Y]"
+ OL_tbr_text_rubber_green: "[?resource@rubber|0G]"
+ OL_tbr_text_rubber_black: "[?resource@rubber|0]"
+
+ OL_tbr_tt_rubber: "[OL_tbr_tt_rubber][OL_tbr_tt_rubber_import][OL_tbr_tt_rubber_lack][OL_tbr_tt_rubber_desc]"
+ OL_tbr_tt_rubber_text: "£[TBR_rubber_icon]|3 $PRODUCTION_MATERIALS_RUBBER$: [OL_tbr_text_rubber]"
+ OL_tbr_tt_rubber_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@rubber|0]"
+ OL_tbr_tt_rubber_desc_text: "\n\n£GFX_occupation_resources_icon §g$rubber_desc$§!"
+
+ OL_tbr_text_tungsten_red: "[?resource@tungsten|0R]"
+ OL_tbr_text_tungsten_yellow: "[?resource@tungsten|0Y]"
+ OL_tbr_text_tungsten_green: "[?resource@tungsten|0G]"
+ OL_tbr_text_tungsten_black: "[?resource@tungsten|0]"
+
+ OL_tbr_tt_tungsten: "[OL_tbr_tt_tungsten][OL_tbr_tt_tungsten_import][OL_tbr_tt_tungsten_lack][OL_tbr_tt_tungsten_desc]"
+ OL_tbr_tt_tungsten_text: "£[TBR_tungsten_icon]|4 $PRODUCTION_MATERIALS_TUNGSTEN$: [OL_tbr_text_tungsten]"
+ OL_tbr_tt_tungsten_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@tungsten|0]"
+ OL_tbr_tt_tungsten_desc_text: "\n\n£GFX_occupation_resources_icon §g$tungsten_desc$§!"
+
+ OL_tbr_text_steel_red: "[?resource@steel|0R]"
+ OL_tbr_text_steel_yellow: "[?resource@steel|0Y]"
+ OL_tbr_text_steel_green: "[?resource@steel|0G]"
+ OL_tbr_text_steel_black: "[?resource@steel|0]"
+
+ OL_tbr_tt_steel: "[OL_tbr_tt_steel][OL_tbr_tt_steel_import][OL_tbr_tt_steel_lack][OL_tbr_tt_steel_desc]"
+ OL_tbr_tt_steel_text: "£[TBR_steel_icon]|5 $PRODUCTION_MATERIALS_STEEL$: [OL_tbr_text_steel]"
+ OL_tbr_tt_steel_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@steel|0]"
+ OL_tbr_tt_steel_desc_text: "\n\n£GFX_occupation_resources_icon §g$steel_desc$§!"
+
+ OL_tbr_text_chromium_red: "[?resource@chromium|0R]"
+ OL_tbr_text_chromium_yellow: "[?resource@chromium|0Y]"
+ OL_tbr_text_chromium_green: "[?resource@chromium|0G]"
+ OL_tbr_text_chromium_black: "[?resource@chromium|0]"
+
+ OL_tbr_tt_chromium: "[OL_tbr_tt_chromium][OL_tbr_tt_chromium_import][OL_tbr_tt_chromium_lack][OL_tbr_tt_chromium_desc]"
+ OL_tbr_tt_chromium_text: "£[TBR_chromium_icon]|6 $PRODUCTION_MATERIALS_CHROMIUM$: [OL_tbr_text_chromium]"
+ OL_tbr_tt_chromium_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@chromium|0]"
+ OL_tbr_tt_chromium_desc_text: "\n\n£GFX_occupation_resources_icon §g$chromium_desc$§!"
+
+ OL_tbr_text_coal_red: "[?resource@coal|0R]"
+ OL_tbr_text_coal_yellow: "[?resource@coal|0Y]"
+ OL_tbr_text_coal_green: "[?resource@coal|0G]"
+ OL_tbr_text_coal_black: "[?resource@coal|0]"
+
+ OL_tbr_tt_coal: "[OL_tbr_tt_coal][OL_tbr_tt_coal_import][OL_tbr_tt_coal_lack][OL_tbr_tt_coal_desc]"
+ OL_tbr_tt_coal_text: "£[TBR_coal_icon]|7 $PRODUCTION_MATERIALS_COAL$: [OL_tbr_text_coal]"
+ OL_tbr_tt_coal_import_text: "\n$TRADEVIEW_RES_IMPORTED$ [?resource_imported@coal|0]"
+ OL_tbr_tt_coal_desc_text: "\n\n£GFX_occupation_resources_icon §g$coal_desc$§!"
+

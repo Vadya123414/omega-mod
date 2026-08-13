@@ -17,17 +17,3 @@ ENG_cum = {
 	}
 }
 
-ENG_annex = {
-	
-	icon = eng_appeal_to_imperial_loyalists
-
-	allowed = {
-		
-			original_tag = ENG
-			
-		
-	}
-	visible = {
-	}
-}
-

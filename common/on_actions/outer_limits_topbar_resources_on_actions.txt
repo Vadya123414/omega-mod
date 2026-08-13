@@ -1,0 +1,30 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+
+			#log mod active
+			set_global_flag = Outer_Limits_TBR_active
+			log = "Outer Limits Topbar Resources active, updated for 1.19.0"
+
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_country_flag = OL_tbr_deficit
+				OL_TBR_update_gui = yes
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				OL_TBR_update_gui = yes
+			}
+		}
+	}
+}

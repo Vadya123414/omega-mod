@@ -1,0 +1,857 @@
+scripted_gui = {
+
+	outer_limits_topbar_resource_toggle_container = {
+		window_name = "outer_limits_topbar_resource_toggle_container"
+		context_type = player_context
+		parent_window_token = trade_tab
+
+		visible = {
+			#always = yes
+			is_ai = no
+		}
+
+		effects = {
+			outer_limits_topbar_resource_toggle_button_click = {
+				# if enabled set to deficit
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					clr_country_flag = OL_tbr_enabled
+					set_country_flag = OL_tbr_deficit
+					OL_TBR_update_gui = yes
+				}
+				# if deficit set to disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					clr_country_flag = OL_tbr_deficit
+					set_country_flag = OL_tbr_disabled
+				}
+				# if disabled set to enabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					clr_country_flag = OL_tbr_disabled
+					set_country_flag = OL_tbr_deficit
+					OL_TBR_update_gui = yes
+				}
+				# fallback / gamestart
+				else = {
+					set_country_flag = OL_tbr_deficit
+					OL_TBR_update_gui = yes
+				}
+			}
+		}
+	}
+
+	outer_limits_topbar_resources_main_container = {
+		window_name = "outer_limits_topbar_resources_main_container"
+		context_type = player_context
+		parent_window_token = top_bar
+
+		visible = {
+			# enabled
+			if = {
+				limit = {
+					has_country_flag = OL_tbr_enabled
+				}
+				#always = yes
+				is_ai = no
+			}
+			# deficit / import
+			else_if = {
+				limit = {
+					has_country_flag = OL_tbr_deficit
+				}
+				#always = yes
+				is_ai = no
+			}
+			# disabled
+			else_if = {
+				limit = {
+					has_country_flag = OL_tbr_disabled
+				}
+				always = no
+			}
+			# fallback / gamestart
+			else = {
+				#always = yes
+				is_ai = no
+			}
+		}
+
+		triggers = {
+
+			oil_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			oil_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			oil_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						fuel_ratio < 0.5
+						check_variable = { resource_imported@oil > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			aluminium_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			aluminium_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			aluminium_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@aluminium < 0 }
+						check_variable = { resource_imported@aluminium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			rubber_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			rubber_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			rubber_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@rubber < 0 }
+						check_variable = { resource_imported@rubber > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			tungsten_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			tungsten_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			tungsten_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@tungsten < 0 }
+						check_variable = { resource_imported@tungsten > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			steel_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			steel_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			steel_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@steel < 0 }
+						check_variable = { resource_imported@steel > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			chromium_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			chromium_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			chromium_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@chromium < 0 }
+						check_variable = { resource_imported@chromium > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			coal_bg_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@coal < 0 }
+						check_variable = { resource_imported@coal > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			coal_icon_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@coal < 0 }
+						check_variable = { resource_imported@coal > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+			coal_value_visible = {
+				# enabled
+				if = {
+					limit = {
+						has_country_flag = OL_tbr_enabled
+					}
+					always = yes
+				}
+				# deficit / import
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_deficit
+					}
+					OR = {
+						check_variable = { resource@coal < 0 }
+						check_variable = { resource_imported@coal > 0 }
+					}
+				}
+				# disabled
+				else_if = {
+					limit = {
+						has_country_flag = OL_tbr_disabled
+					}
+					always = no
+				}
+				# fallback / gamestart
+				else = {
+					always = yes
+				}
+			}
+
+		}
+
+		properties = {
+			outer_limits_topbar_resources_bg = {
+				image = "[outer_limits_topbar_resources_bg]"
+			}
+
+			oil_bg = {
+				x = TBR_oil_bg_x
+				y = TBR_oil_bg_y
+			}
+			oil_icon = {
+				image = "[TBR_oil_icon]"
+				frame = 1
+				x = TBR_oil_icon_x
+				y = TBR_oil_icon_y
+			}
+			oil_value = {
+				x = TBR_oil_value_x
+				y = TBR_oil_value_y
+			}
+
+			aluminium_bg = {
+				x = TBR_aluminium_bg_x
+				y = TBR_aluminium_bg_y
+			}
+			aluminium_icon = {
+				image = "[TBR_aluminium_icon]"
+				frame = 2
+				x = TBR_aluminium_icon_x
+				y = TBR_aluminium_icon_y
+			}
+			aluminium_value = {
+				x = TBR_aluminium_value_x
+				y = TBR_aluminium_value_y
+			}
+
+			rubber_bg = {
+				x = TBR_rubber_bg_x
+				y = TBR_rubber_bg_y
+			}
+			rubber_icon = {
+				image = "[TBR_rubber_icon]"
+				frame = 3
+				x = TBR_rubber_icon_x
+				y = TBR_rubber_icon_y
+			}
+			rubber_value = {
+				x = TBR_rubber_value_x
+				y = TBR_rubber_value_y
+			}
+
+			tungsten_bg = {
+				x = TBR_tungsten_bg_x
+				y = TBR_tungsten_bg_y
+			}
+			tungsten_icon = {
+				image = "[TBR_tungsten_icon]"
+				frame = 4
+				x = TBR_tungsten_icon_x
+				y = TBR_tungsten_icon_y
+			}
+			tungsten_value = {
+				x = TBR_tungsten_value_x
+				y = TBR_tungsten_value_y
+			}
+
+			steel_bg = {
+				x = TBR_steel_bg_x
+				y = TBR_steel_bg_y
+			}
+			steel_icon = {
+				image = "[TBR_steel_icon]"
+				frame = 5
+				x = TBR_steel_icon_x
+				y = TBR_steel_icon_y
+			}
+			steel_value = {
+				x = TBR_steel_value_x
+				y = TBR_steel_value_y
+			}
+
+			chromium_bg = {
+				x = TBR_chromium_bg_x
+				y = TBR_chromium_bg_y
+			}
+			chromium_icon = {
+				image = "[TBR_chromium_icon]"
+				frame = 6
+				x = TBR_chromium_icon_x
+				y = TBR_chromium_icon_y
+			}
+			chromium_value = {
+				x = TBR_chromium_value_x
+				y = TBR_chromium_value_y
+			}
+
+			coal_bg = {
+				x = TBR_coal_bg_x
+				y = TBR_coal_bg_y
+			}
+			coal_icon = {
+				image = "[TBR_coal_icon]"
+				frame = 7
+				x = TBR_coal_icon_x
+				y = TBR_coal_icon_y
+			}
+			coal_value = {
+				x = TBR_coal_value_x
+				y = TBR_coal_value_y
+			}
+		}
+
+		# only one GUI update per day or if toogle butten is used
+		# because variables are updated on_daily or if toogle butten is used
+		dirty = TBR_update 
+	}
+
+}
