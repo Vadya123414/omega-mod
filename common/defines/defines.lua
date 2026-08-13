@@ -22,6 +22,8 @@ NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модиф�
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0.0-- Кол-во мин в рег
+NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- скорость минирования
 
 --Производство
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10;
@@ -49,3 +51,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)
+
+NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
+NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
+
