@@ -1,4 +1,4 @@
-NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.25, 0.1, 0.04, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
+NDefines.NGame.GAME_SPEED_SECONDS = { 1000, 0.3, 0.2, 0.1, 0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60;
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
 
@@ -48,4 +48,8 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)\
+NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0,	-- Value used to overall balance of the speed of planting naval mines
+NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0,-- Value used to overall balance of the speed of planting naval mines
+NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0,-- Speed of planting naval mines can not be lower than this
+
