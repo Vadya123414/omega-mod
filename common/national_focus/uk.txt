@@ -6026,43 +6026,63 @@ default = no
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
 			}
-			CAN = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = CAN
-			    transfer_troops = yes
-			}
-			hidden_effect = {
-			every_state = {
+			if = {
 				limit = {
-					is_core_of = CAN
-					is_controlled_by = ENG
-				}
-				set_compliance = 100
-			}
-			}
-			SAF = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
-			}
-			annex_country = {
-			    target = SAF
-			    transfer_troops = yes
-			}
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = SAF
-						NOT = { state = 275 }
-						is_controlled_by = ENG
+					CAN = {
+						is_subject_of = ENG
 					}
-					set_compliance = 100
+				}
+				CAN = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = CAN
+				    transfer_troops = yes
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = CAN
+							is_controlled_by = ENG
+						}
+						set_compliance = 100
+					}
 				}
 			}
+			if = {
+				limit = {
+					SAF = {
+						is_subject_of = ENG
+					}
+				}
+				SAF = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = SAF
+				    transfer_troops = yes
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = SAF
+							NOT = { state = 275 }
+							is_controlled_by = ENG
+						}
+						set_compliance = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					RAJ = {
+						is_subject_of = ENG
+					}
+				}
 				RAJ = {
 					every_unit_leader = {
 						set_nationality = ENG
@@ -6081,60 +6101,82 @@ default = no
 						set_compliance = 100
 					}
 				}
-			AST = {
-				every_unit_leader = {
-					set_nationality = ENG
-				}
 			}
-			annex_country = {
-			    target = AST
-			    transfer_troops = yes
-			}
-			hidden_effect = {
-			every_state = {
+			if = {
 				limit = {
-					is_core_of = AST
-					is_controlled_by = ENG
+					AST = {
+						is_subject_of = ENG
+					}
 				}
-				set_compliance = 100
-			}
-			}
-			NZL = {
-				every_unit_leader = {
-					set_nationality = ENG
+				AST = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = AST
+				    transfer_troops = yes
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = AST
+							is_controlled_by = ENG
+						}
+						set_compliance = 100
+					}
 				}
 			}
-			annex_country = {
-			    target = NZL
-			    transfer_troops = yes
-			}
-			hidden_effect = {
-			every_state = {
+			if = {
 				limit = {
-					is_core_of = NZL
-					is_controlled_by = ENG
+					NZL = {
+						is_subject_of = ENG
+					}
 				}
-				set_compliance = 100
-			}
-			}
-			MAL = {
-				every_unit_leader = {
-					set_nationality = ENG
+				NZL = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = NZL
+				    transfer_troops = yes
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = NZL
+							is_controlled_by = ENG
+						}
+						set_compliance = 100
+					}
 				}
 			}
-			annex_country = {
-			    target = MAL
-			    transfer_troops = yes
-			}
-			hidden_effect = {
-			every_state = {
+			if = {
 				limit = {
-					is_core_of = MAL
-					is_controlled_by = ENG
+					MAL = {
+						is_subject_of = ENG
+					}
 				}
-				set_compliance = 100
-			}
-			}
+				MAL = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = MAL
+				    transfer_troops = yes
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = MAL
+							is_controlled_by = ENG
+						}
+						set_compliance = 100
+					}
+				}
+			}		
 		}
 	}
 
