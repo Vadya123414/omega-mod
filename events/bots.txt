@@ -1,55 +1,55 @@
-add_namespace = bots_add_mastery
-
-country_event = {
-	id = bots_add_mastery.1
-	title = bots_add_mastery.1.t	
-	desc = bots_add_mastery.1.desc	#
-	picture = GFX_					# 
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	hidden = yes
-    trigger = {if = {date > 1936.12.29}}
-        immediate = { 
-            every_country = {
-                       limit = { is_ai = yes}
-            hidden_effect = {
-                set_grand_doctrine = new_battlefield_support
-                set_grand_doctrine = superior_firepower
-                set_grand_doctrine = new_convoy_raiding
-                set_grand_doctrine = special_forces_quality
-                set_sub_doctrine = large_unit_tactics
-                set_sub_doctrine = rapid_domination
-                set_sub_doctrine = siege_artillery
-                set_sub_doctrine = armored_spearhead
-                set_sub_doctrine = capital_hunters
-                set_sub_doctrine = torpedo_primacy
-                set_sub_doctrine = light_task_forces
-                set_sub_doctrine = line_of_battle
-                set_sub_doctrine = mountaineers_1 
-                set_sub_doctrine = rangers_2
-                            add_mastery = {
-                            amount = 200
-                            folder = land
-                        }
-                            add_mastery = {
-                            amount = 200
-                            folder = air
-                        }
-                            add_mastery = {
-                            amount = 200
-                            folder = sea
-                        }
-                    }
-         }
-    }
-    	option = { 
-		name = bots_add_mastery.1.a
-		ai_chance = {
-			
-		}
-		
-	}
-}
+#add_namespace = bots_add_mastery
+#
+#country_event = {
+#	id = bots_add_mastery.1
+#	title = bots_add_mastery.1.t	
+#	desc = bots_add_mastery.1.desc	#
+#	picture = GFX_					# 
+#	
+#	is_triggered_only = yes
+#
+#	fire_only_once = yes
+#	
+#	hidden = yes
+#    trigger = {if = {date > 1936.12.29}}
+#        immediate = { 
+#            every_country = {
+#                       limit = { is_ai = yes}
+#            hidden_effect = {
+ #               set_grand_doctrine = new_battlefield_support
+ #               set_grand_doctrine = superior_firepower
+ #               set_grand_doctrine = new_convoy_raiding
+ #               set_grand_doctrine = special_forces_quality
+ #               set_sub_doctrine = large_unit_tactics
+#                set_sub_doctrine = rapid_domination
+ #               set_sub_doctrine = siege_artillery
+ #               set_sub_doctrine = armored_spearhead
+ #               set_sub_doctrine = capital_hunters
+  #              set_sub_doctrine = torpedo_primacy
+  #              set_sub_doctrine = light_task_forces
+  #              set_sub_doctrine = line_of_battle
+  #              set_sub_doctrine = mountaineers_1 
+  ##              set_sub_doctrine = rangers_2
+  #                          add_mastery = {
+ #                           amount = 200
+  #                          folder = land
+  #                      }
+ #                           add_mastery = {
+ #                           amount = 200
+ #                           folder = air
+ #                       }
+ #                           add_mastery = {
+ #                           amount = 200
+ #                           folder = sea
+ #                       }
+ #                   }
+ ##        }
+ #   }
+##    	option = { 
+#		name = bots_add_mastery.1.a
+#		ai_chance = {
+#			
+#		}
+#		
+#	}
+#}
