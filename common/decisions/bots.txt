@@ -1,0 +1,41 @@
+political_actions = {
+    bots_1936_strategy = {
+		icon = oppression
+		available = {
+			is_ai = yes
+		}
+		visible = {
+			is_ai = yes
+		}
+    ai_will_do = {base = 1000}
+    cost = 0
+        complete_effect = {
+        		add_ai_strategy = {
+				type = building_target
+				id = industrial_complex
+				value = 9999
+                }
+        }
+    }
+bots_1937_strategy = {
+		icon = oppression
+		available = {
+            date > 1937.1.1
+			is_ai = yes
+		}
+		visible = {
+			is_ai = yes
+		}
+  ai_will_do = {base = 1000}
+    cost = 0
+            complete_effect = {
+        		add_ai_strategy = {
+				type = building_target
+				id = arms_factory
+				value = 9999
+                }
+        }
+    }
+
+
+}

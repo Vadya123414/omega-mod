@@ -1,0 +1,27 @@
+on_actions = {
+
+	on_startup = {
+                    effect = { 
+                                every_country = {
+                                                    limit = { is_ai = yes}
+                                                    add_ideas = smart_bots
+                                }
+
+                    }
+    }
+on_monthly = {
+    effect = { 
+                 every_country = {
+                                    limit = { is_ai = yes NOT = { has_idea = smart_bots}}
+                                    add_ideas = smart_bots
+                                }
+                every_country = {
+                                 limit = { is_ai = no has_idea = smart_bots}
+                                 remove_ideas = smart_bots
+                    }
+            }
+            }
+
+
+
+}

@@ -1,0 +1,24 @@
+ideas = {
+    hidden_ideas = { 
+		smart_bots = {
+			name = smart_bots
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 100
+                production_factory_start_efficiency_factor = 1
+                intel_network_gain_factor = 10
+			}
+
+			cancel = {
+					ai = no
+			}
+		}
+}
