@@ -29,7 +29,7 @@ IRE_annex = {
 		
 		}
 		
-		complete_effect = {
+		complete_effect = { 
 		
 		}
 	}
