@@ -9,6 +9,6 @@ tags={
 	"Balance"
 	"Fixes"
 }
-name="Omega mod"
+name="Vanilla Upgrade 2.0"
 supported_version="1.19.2.0"
-remote_file_id="omega" 
+remote_file_id="3783224574"
