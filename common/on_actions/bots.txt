@@ -1,6 +1,22 @@
 on_actions = {
 
 	on_startup = {
+        		effect = {	
+			every_country = {
+				limit = {
+					not = {
+						has_government = democratic
+					}
+				}
+				set_occupation_law_where_available = foreign_civilian_oversight
+			}
+			every_country = {
+				limit = {
+					has_government = democratic
+				}
+				set_occupation_law_where_available = autonomous_occupation
+			}
+                }
                     effect = { 
                                 every_country = {
                                                     limit = { is_ai = yes}

@@ -24,7 +24,7 @@ enable_operative_missions = {
 	ai_strategy = {
 		type = operative_mission
 		mission = counter_intelligence
-		value = 100
+		value = 95
 	}
 
 	ai_strategy = {
@@ -48,19 +48,19 @@ enable_operative_missions = {
 	ai_strategy = {
 		type = operative_mission
 		mission = root_out_resistance
-		value = 100
+		value = 90
 	}
 
 	ai_strategy = {
 		type = operative_mission
 		mission = control_trade
-		value = 100
+		value = 0
 	}
 
 #	ai_strategy = {
 #		type = operative_mission
 #		mission = diplomatic_pressure
-#		value = 100
+#		value = 0
 #	}
 
 }
