@@ -15,7 +15,7 @@ country_event = {
         immediate = { 
             every_country = {
                        limit = { is_ai = yes}
-            effect = {
+            hidden_effect = {
                 set_grand_doctrine = new_battlefield_support
                 set_grand_doctrine = superior_firepower
                 set_grand_doctrine = new_convoy_raiding
@@ -30,8 +30,6 @@ country_event = {
                 set_sub_doctrine = line_of_battle
                 set_sub_doctrine = mountaineers_1 
                 set_sub_doctrine = rangers_2
-                set_sub_doctrine =
-                set_sub_doctrine = 
                             add_mastery = {
                             amount = 200
                             folder = land

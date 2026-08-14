@@ -99,67 +99,10 @@ garrison_generic = {
 		
 		target_template = {
 			
-			support = { 
-				military_police = 1
-			}
+			support = { }
 			
 			regiments = {
-				cavalry = 25
-			}
-		}
-	}
-}
-
-suppression_generic = {
-	
-	role = suppression
-	blocked_for = {
-		SIA
-	}
-	upgrade_prio = {
-		base = 0.5
-
-		modifier = {
-			factor = 10
-			has_war = yes
-		}
-
-		modifier = {
-			factor = 50
-			tag = GER
-			OR = {
-				AND = {
-					has_completed_focus = GER_anschluss
-					NOT = { ai_has_role_template = garrison }
-				}
-
-				AND = {
-					any_country = {
-						is_justifying_wargoal_against = ROOT
-					}
-					NOT = { ai_has_role_template = garrison }
-				}
-			}
-		}
-	}
-
-	suppression_generic = {
-	
-		reinforce_prio = 0
-		custom_icon = 13
-	
-		upgrade_prio = {
-			base = 2
-		}
-		
-		target_template = {
-			
-			support = { 
-				military_police = 1
-			}
-
-			regiments = {
-				cavalry = 25
+				cavalry = 1
 			}
 		}
 	}
@@ -173,7 +116,7 @@ infantry_generic = {
 		base = 5
 	}
 	
-	infantry_early = {
+	infantry_late = {
 	
 		upgrade_prio = {
 			base = 1
@@ -189,16 +132,18 @@ infantry_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-				recon = 1 
+				rangers_support = 1 
+				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 			
 			regiments = {
-				infantry = 15
+				infantry = 20
 			}
+
 		}
 
 		target_min_match = 0.9
@@ -221,7 +166,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 3
+				field_guns = 3
 			}
 			
 			regiments = {
@@ -229,8 +174,6 @@ infantry_generic = {
 			}
 		}
 
-		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
-		target_min_match = 0.9
 	}
 }
 
@@ -253,10 +196,10 @@ mountaineers_generic = {
 	mountaineers_default = {
 	
 		upgrade_prio = {
-			base = 1
+			base = 10
 
 			modifier = {
-				factor = 1
+				factor = 10
 			}
 		}
 
@@ -266,17 +209,19 @@ mountaineers_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-				recon = 1 
+				rangers_support = 1 
+				super_heavy_artillery = 1
 
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 
 			regiments = {
-				mountaineers = 15
+				mountaineers = 20
 			}
+
 		}
 	}
 }
@@ -299,10 +244,10 @@ marines_generic = {
 	marine_default = {
 	
 		upgrade_prio = {
-			base = 1
+			base = 5
 
 			modifier = {
-				factor = 1
+				factor = 5
 			}
 		}
 
@@ -312,15 +257,16 @@ marines_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-				recon = 1 
+				rangers_support = 1 
+				super_heavy_artillery = 1
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 
 			regiments = {
-				marine = 15
+				marine = 20
 			}
 		}
 	}

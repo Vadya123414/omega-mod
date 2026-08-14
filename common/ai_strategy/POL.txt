@@ -80,32 +80,8 @@ POL_template_design = {
 
 	ai_strategy = {
 		type = template_prio
-		id = motorized
-		value = -10
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = cavalry
 		value = -100
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = 40
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = medium_armor
-		value = -10
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = -50
 	}
 
 	ai_strategy = {
