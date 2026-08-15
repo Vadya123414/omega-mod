@@ -201,7 +201,7 @@ buildings = {
 		dlc_allowed = { has_dlc = Gotterdammerung }
 		show_on_map = 1
 		has_destroyed_mesh = yes
-		base_cost = 20000
+		base_cost = 10000
 		disabled_in_dmz = yes
 		icon_frame = 23
 		value = 1
