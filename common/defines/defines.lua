@@ -14,7 +14,17 @@ NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость тре
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999;
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999;
 NDefines.NMilitary.MAX_AIR_EXPERIENCE  = 999;
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0;	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;
+NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Value at index J is the scaling applied to planning cap when HQ is J provinces behind the frontline
+NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
+NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
+NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
+--NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
+--NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0;									-- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
+--NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
+--NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- Same as PLANNING_CAP_NO_HQ_SCALING but for active abilities
+--NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- When capturing a general, try to find a province with at least that much VP to imprison them. The effective prison VP can be lower than that, if the capturing country doesn't have any province with at least this amount of VP
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войск
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
@@ -51,7 +61,12 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)
-
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
+NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
+		25,			-- pp cost if no available scientist
+		25,			-- pp cost if 1 available scientist
+		50,			-- pp cost if 2 available scientist
+		50			-- pp cost if more than 2 available scientist
+	}
 
