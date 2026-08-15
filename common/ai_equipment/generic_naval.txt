@@ -94,7 +94,7 @@ available_for = {  }
 	}
 
 	priority = {
-		factor = 1000
+		factor = 500
 		modifier = {
 			factor = 5
 			anti_submarine_strategy_required_trigger = yes

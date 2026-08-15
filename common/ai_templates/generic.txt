@@ -146,7 +146,9 @@ infantry_generic = {
 
 		}
 
-		target_min_match = 0.9
+		replace_at_match = 0.9
+		replace_with = modern_armor_default_ENG
+		target_min_match = 0.8
 	}
 
 	infantry_early = {
@@ -186,11 +188,8 @@ mountaineers_generic = {
 		base = 2
 
 		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = tech_mountaineers
-			}
-		}
+			factor = 5
+
 	}
 
 	mountaineers_default = {
@@ -234,7 +233,7 @@ marines_generic = {
 		base = 2
 
 		modifier = {
-			factor = 0
+			factor = 3
 			NOT = {
 				has_tech = marines
 			}

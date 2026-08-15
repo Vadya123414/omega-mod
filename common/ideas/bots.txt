@@ -13,7 +13,7 @@ ideas = {
 
 			modifier = {
                 mobilization_speed = 100
-                production_factory_efficiency_gain_factor = 100
+                line_change_production_efficiency_factor = 100
                 intel_network_gain_factor = 10
 			}
 

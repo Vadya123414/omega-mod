@@ -93,8 +93,8 @@ generic_training = {
         GER ITA JAP
     }
 
-    min_priority = 10
-    max_priority = 20
+    min_priority = 100
+    max_priority = 200
 }
 
 generic_naval_blockade = {
