@@ -868,9 +868,10 @@ add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
-	control_export
+	free_trade
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
+
 
 1939.1.1 = {
 

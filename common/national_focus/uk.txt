@@ -5979,18 +5979,18 @@ default = no
 		available = {
 			date > 1940.1.1
 			OR = {
-			CAN = {
-						is_subject_of = ENG
-			}
-			SAF = {
-						is_subject_of = ENG
-			}
-			AST = {
-						is_subject_of = ENG
-			}
-			NZL = {
-						is_subject_of = ENG
-			}
+				CAN = {
+					is_subject_of = ENG
+				}
+				SAF = {
+					is_subject_of = ENG
+				}
+				AST = {
+					is_subject_of = ENG
+				}
+				NZL = {
+					is_subject_of = ENG
+				}
 			}
 		}
 
@@ -6029,6 +6029,7 @@ default = no
 			if = {
 				limit = {
 					CAN = {
+						is_ai = yes
 						is_subject_of = ENG
 					}
 				}
@@ -6054,6 +6055,7 @@ default = no
 			if = {
 				limit = {
 					SAF = {
+						is_ai = yes
 						is_subject_of = ENG
 					}
 				}
@@ -6080,6 +6082,7 @@ default = no
 			if = {
 				limit = {
 					RAJ = {
+						is_ai = yes
 						is_subject_of = ENG
 					}
 				}
@@ -6105,6 +6108,7 @@ default = no
 			if = {
 				limit = {
 					AST = {
+						is_ai = yes
 						is_subject_of = ENG
 					}
 				}
@@ -6130,6 +6134,7 @@ default = no
 			if = {
 				limit = {
 					NZL = {
+						is_ai = yes
 						is_subject_of = ENG
 					}
 				}
@@ -6159,6 +6164,7 @@ default = no
 					}
 				}
 				MAL = {
+					is_ai = yes
 					every_unit_leader = {
 						set_nationality = ENG
 					}

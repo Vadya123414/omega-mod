@@ -298,7 +298,6 @@ clamp_variable = {
 add_ideas = {
 
 	# Laws
-	control_export
 	limited_conscription
 	partial_economic_mobilisation
 
