@@ -378,7 +378,7 @@ instant_effect = {
 				creator = "JAP"
 				version_name = "Kongo Class"
 			}
-			requested_factories = 5
+			requested_factories = 10
 			progress = 0.2
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
@@ -390,9 +390,9 @@ instant_effect = {
 				creator = "JAP" 
 				version_name = "Soryu Class"
 			}
-			requested_factories = 5
+			requested_factories = 10
 			progress = 0.66
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 		add_equipment_production = {				
@@ -402,7 +402,7 @@ instant_effect = {
 				version_name = "Zuiho Class"
 			}
 			name = "Zuiho"
-			requested_factories = 5
+			requested_factories = 10
 			progress = 0.15
 			amount = 1
 			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
@@ -414,7 +414,7 @@ instant_effect = {
 				version_name = "Zuiho Class"
 			}
 			name = "Shoho"
-			requested_factories = 5
+			requested_factories = 10
 			progress = 0.30
 			amount = 1
 			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
@@ -429,7 +429,7 @@ instant_effect = {
 			}
 			requested_factories = 10
 			progress = 0.2
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
 		}
 		# CL(CM) (x1): "Okinoshima"
@@ -690,7 +690,7 @@ instant_effect = {
 			}
 			requested_factories = 10
 			progress = 0.7
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		add_equipment_production = {				
@@ -701,7 +701,7 @@ instant_effect = {
 			}
 			requested_factories = 10
 			progress = 0.6
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		# SS (x2): "I-7" "I-8"

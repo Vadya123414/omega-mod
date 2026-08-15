@@ -142,17 +142,17 @@ air_wings = {
 ## STARTING PRODUCTION ##
 #########################
 instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = small_plane_airframe_1
-			creator = "USA" 
-			version_name = "P-35A"
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 50
-		industrial_manufacturer = mio:USA_north_american_aviation_organization
-	}
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = small_plane_airframe_1
+	#		creator = "USA" 
+	#		version_name = "P-35A"
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.15
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:USA_north_american_aviation_organization
+	#}
 
 }
 #####################

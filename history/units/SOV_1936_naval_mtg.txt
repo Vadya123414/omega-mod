@@ -176,9 +176,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Leningrad & Minsk Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -187,9 +187,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Leningrad & Minsk Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.60
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	#CA Kirov Class (Kirov)
@@ -199,7 +199,7 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Kirov Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.10
 		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
@@ -211,7 +211,7 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Kirov Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.10
 		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
@@ -225,9 +225,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series V Shchuka"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.80
-		amount = 6
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -236,9 +236,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series X Shchuka"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.80
-		amount = 12
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -247,9 +247,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series X Shchuka"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.80
-		amount = 12
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -258,9 +258,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series IX Srednyaya"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 5
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 }

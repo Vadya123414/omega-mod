@@ -143,27 +143,27 @@ air_wings = {
 instant_effect = {
 	
 
-	add_equipment_production = {
-		equipment = {
-			type = small_plane_airframe_0
-			creator = JAP 
-			version_name = "Ki-10"
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 50
-		industrial_manufacturer = mio:JAP_kawanishi_aircraft_company_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = cv_small_plane_naval_bomber_airframe_1
-			creator = JAP 
-			version_name = "B4Y"
-		}
-		requested_factories = 1
-		progress = 0.2
-		efficiency = 50
-		industrial_manufacturer = mio:JAP_yokosuka_organization
-	}
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = small_plane_airframe_0
+	#		creator = JAP 
+	#		version_name = "Ki-10"
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.15
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:JAP_kawanishi_aircraft_company_organization
+	#}
+#
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = cv_small_plane_naval_bomber_airframe_1
+	#		creator = JAP 
+	#		version_name = "B4Y"
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.2
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:JAP_yokosuka_organization
+	#}
 }

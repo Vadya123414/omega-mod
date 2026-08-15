@@ -168,26 +168,26 @@ air_wings = {
 	#########################
 instant_effect = {
 
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0
-			creator = "ENG" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 50
-		industrial_manufacturer = mio:ENG_supermarine_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = tac_bomber_equipment_0
-			creator = "ENG" 
-		}
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-		industrial_manufacturer = mio:ENG_de_havilland_organization
-	}
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = fighter_equipment_0
+	#		creator = "ENG" 
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.15
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:ENG_supermarine_organization
+	#}
+	#
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = tac_bomber_equipment_0
+	#		creator = "ENG" 
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.1
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:ENG_de_havilland_organization
+	#}
 }
 	#####################

@@ -154,9 +154,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Leningrad & Minsk Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -165,9 +165,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Leningrad & Minsk Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.60
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	# SS: Shchuka class (x29) ("Shch-125" "Shch-205" "Shch-206" "Shch-207" "Shch-310" "Shch-311" "Shch-126" "Shch-127" "Shch-128" "Shch-129" "Shch-130" "Shch-131" "Shch-132" "Shch-133" 
@@ -179,9 +179,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series IX Srednyaya"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.80
-		amount = 8
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -190,9 +190,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series IX Srednyaya"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.80
-		amount = 8
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -201,9 +201,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series IX Srednyaya"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 8
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 	add_equipment_production = {
@@ -212,9 +212,9 @@ instant_effect = {
 			creator = "SOV"
 			version_name = "Series IX Srednyaya"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 7
+		amount = 1
 		industrial_manufacturer = mio:SOV_rubin_design_bureau_organization
 	}
 }

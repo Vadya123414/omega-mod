@@ -415,9 +415,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "ENG" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.33
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:ENG_yarrow_shipbuilders_organization
 	}
 	add_equipment_production = {
@@ -425,9 +425,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "ENG" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.33
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:ENG_yarrow_shipbuilders_organization
 	}
 	add_equipment_production = {
@@ -435,9 +435,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "ENG" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.33
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:ENG_yarrow_shipbuilders_organization
 	}
 	add_equipment_production = {
@@ -445,9 +445,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "ENG" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.33
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:ENG_yarrow_shipbuilders_organization
 	}
 	add_equipment_production = {
@@ -455,7 +455,7 @@ instant_effect = {
 			type = destroyer_2
 			creator = "ENG" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.33
 		amount = 1
 		industrial_manufacturer = mio:ENG_yarrow_shipbuilders_organization
@@ -468,7 +468,7 @@ instant_effect = {
 			version_name = "S Class"
 			industrial_manufacturer = mio:ENG_john_brown_organization
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.50
 		amount = 1
 	}
@@ -478,7 +478,7 @@ instant_effect = {
 			creator = "ENG" 
 			version_name = "S Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.40
 		amount = 1
 		industrial_manufacturer = mio:ENG_john_brown_organization
@@ -490,7 +490,7 @@ instant_effect = {
 			creator = "ENG" 
 			version_name = "Amphion Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.95
 		amount = 1
 		industrial_manufacturer = mio:ENG_cammell_laird_organization
@@ -501,7 +501,7 @@ instant_effect = {
 			creator = "ENG" 
 			version_name = "Amphion Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.50
 		amount = 1
 		industrial_manufacturer = mio:ENG_cammell_laird_organization
@@ -512,7 +512,7 @@ instant_effect = {
 			creator = "ENG" 
 			version_name = "Amphion Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.15
 		amount = 1
 		industrial_manufacturer = mio:ENG_cammell_laird_organization

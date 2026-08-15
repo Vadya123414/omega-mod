@@ -947,7 +947,7 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "FRA"
 		}
-		requested_factories = 2
+		requested_factories = 3
 		progress = 0.1
 		efficiency = 50
 		industrial_manufacturer = mio:FRA_mas_organization
@@ -973,19 +973,26 @@ instant_effect = {
 		efficiency = 50
 		industrial_manufacturer = mio:FRA_schneider_organization
 	}
-
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_chassis_1
+			type = anti_air_equipment_1
 			creator = "FRA" 
-			version_name = "H-35"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+		industrial_manufacturer = mio:FRA_schneider_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_1
+			creator = "FRA" 
 		}
 		requested_factories = 1
 		progress = 0.4
 		efficiency = 50
-		industrial_manufacturer = mio:FRA_hotchkiss_organization
+		industrial_manufacturer = mio:FRA_alsthom_organization
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
@@ -996,5 +1003,5 @@ instant_effect = {
 		efficiency = 50
 		industrial_manufacturer = mio:FRA_somua_organization
 	}
-
+}
 ###################

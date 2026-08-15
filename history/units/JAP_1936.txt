@@ -687,7 +687,7 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = JAP
 		}
-		requested_factories = 3
+		requested_factories = 8
 		progress = 0.1
 		efficiency = 50
 		industrial_manufacturer = mio:JAP_kokura_arsenal_organization
@@ -698,7 +698,7 @@ instant_effect = {
 			type = support_equipment_1
 			creator = JAP
 		}
-		requested_factories = 1
+		requested_factories = 3
 		progress = 0.3
 		efficiency = 50
 		industrial_manufacturer = mio:JAP_nagoya_arsenal_organization
@@ -709,7 +709,7 @@ instant_effect = {
 			type = artillery_equipment_1
 			creator = JAP
 		}
-		requested_factories = 1
+		requested_factories = 3
 		progress = 0.4
 		efficiency = 50
 		industrial_manufacturer = mio:JAP_osaka_army_arsenal_artillery_organization
@@ -734,6 +734,7 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.6
 		efficiency = 50
+		industrial_manufacturer = mio:JAP_nippon_sharyo_organization
 	}
 
 }

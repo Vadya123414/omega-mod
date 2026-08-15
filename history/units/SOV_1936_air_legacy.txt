@@ -114,26 +114,26 @@ air_wings = {
 	#########################
 instant_effect = {
 
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_1
-			creator = "SOV" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 50
-		industrial_manufacturer = mio:SOV_mig_design_bureau_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = strat_bomber_equipment_1
-			creator = "SOV" 
-		}
-		requested_factories = 1
-		progress = 0.2
-		efficiency = 50
-		industrial_manufacturer = mio:SOV_tupolev_design_bureau_organization
-	}
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = fighter_equipment_1
+	#		creator = "SOV" 
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.15
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:SOV_mig_design_bureau_organization
+	#}
+#
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = strat_bomber_equipment_1
+	#		creator = "SOV" 
+	#	}
+	#	requested_factories = 1
+	#	progress = 0.2
+	#	efficiency = 50
+	#	industrial_manufacturer = mio:SOV_tupolev_design_bureau_organization
+	#}
 }
 	#####################

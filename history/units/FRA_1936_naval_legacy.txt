@@ -267,9 +267,9 @@ instant_effect = {
 			creator = "FRA" 
 			version_name = "Redoutable Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.90
-		amount = 4
+		amount = 1
 		industrial_manufacturer = mio:FRA_acf_organization
 	}
 	add_equipment_production = {
@@ -278,9 +278,9 @@ instant_effect = {
 			creator = "FRA" 
 			version_name = "Redoutable Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.85
-		amount = 3
+		amount = 1
 		industrial_manufacturer = mio:FRA_acf_organization
 	}
 	# SS: Minerve class (x4) ("Iris" "Minerve" "Vénus" "Junon")
@@ -289,9 +289,9 @@ instant_effect = {
 			type = submarine_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 4
+		amount = 1
 		industrial_manufacturer = mio:FRA_acf_organization
 	}
 	# DD: Le Fantasque class (x4) ("Le Malin" "L'Indomptable" "Le Fantasque" "Le Triomphant")
@@ -300,9 +300,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.70
-		amount = 4
+		amount = 1
 		industrial_manufacturer = mio:FRA_fcm_organization
 	}
 	# BC: Dunkerque (Comm. 16-Apr, 1937)	# REVISIT -- class vs. ship type vs. starting techs inconsistent
@@ -311,7 +311,7 @@ instant_effect = {
 			type = battle_cruiser_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.20
 		amount = 1
 		industrial_manufacturer = mio:FRA_acl_organization
@@ -322,9 +322,9 @@ instant_effect = {
 			type = light_cruiser_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.35
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:FRA_aeb_organization
 	}
 	add_equipment_production = {
@@ -332,7 +332,7 @@ instant_effect = {
 			type = light_cruiser_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.20
 		amount = 1
 		industrial_manufacturer = mio:FRA_aeb_organization
@@ -342,7 +342,7 @@ instant_effect = {
 			type = light_cruiser_2
 			creator = "FRA" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.15
 		amount = 1
 		industrial_manufacturer = mio:FRA_aeb_organization

@@ -86,9 +86,9 @@ instant_effect = {
 			type = submarine_2
 			creator = "GER" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.75
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	add_equipment_production = {
@@ -96,9 +96,9 @@ instant_effect = {
 			type = submarine_2
 			creator = "GER" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.65
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	add_equipment_production = {
@@ -106,9 +106,9 @@ instant_effect = {
 			type = submarine_2
 			creator = "GER" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.55
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	add_equipment_production = {
@@ -116,9 +116,9 @@ instant_effect = {
 			type = submarine_2
 			creator = "GER" 
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.45
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	# DD: 1934 class (x4) ("Z1" "Z2" "Z3" "Z4")
@@ -127,9 +127,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "GER"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.75
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	add_equipment_production = {
@@ -137,9 +137,9 @@ instant_effect = {
 			type = destroyer_2
 			creator = "GER"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.65
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:GER_blohm_und_voss_organization
 	}
 	# CA: "Graf Spee"
@@ -149,7 +149,7 @@ instant_effect = {
 			creator = "GER"
 			version_name = "Deutschland"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.95
 		amount = 1
 		industrial_manufacturer = mio:GER_germaniawerft_organization
@@ -160,7 +160,7 @@ instant_effect = {
 			type = battleship_2
 			creator = "GER"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.25
 		amount = 1
 		industrial_manufacturer = mio:GER_germaniawerft_organization
@@ -171,7 +171,7 @@ instant_effect = {
 			type = battleship_2
 			creator = "GER"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.1
 		amount = 1
 		industrial_manufacturer = mio:GER_germaniawerft_organization

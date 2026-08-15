@@ -361,7 +361,7 @@ instant_effect =
 				type = battleship_2
 				creator = "JAP"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.2
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
@@ -373,7 +373,7 @@ instant_effect =
 
 				creator = "JAP" 
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.66
 
 			amount = 1
@@ -386,7 +386,7 @@ instant_effect =
 
 				creator = "JAP" 
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.2
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
@@ -398,9 +398,9 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Fubuki Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.7
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
 		}		
 		add_equipment_production = {				
@@ -409,7 +409,7 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Fubuki Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.6
 			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
@@ -420,9 +420,9 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Fubuki Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.5
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
 		}		
 		add_equipment_production = {				
@@ -431,7 +431,7 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Fubuki Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.4
 			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
@@ -442,7 +442,7 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Fubuki Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.3
 			amount = 1
 			industrial_manufacturer = mio:JAP_maizuru_naval_arsenal_organization
@@ -453,9 +453,9 @@ instant_effect =
 				type = submarine_2
 				creator = "JAP" 
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.7
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		add_equipment_production = {				
@@ -463,9 +463,9 @@ instant_effect =
 				type = submarine_2
 				creator = "JAP" 
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.6
-			amount = 2
+			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		# SS (x2): "I-7" "I-8"
@@ -475,7 +475,7 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Kaidai III Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.7
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
@@ -486,7 +486,7 @@ instant_effect =
 				creator = "JAP" 
 				version_name = "Kaidai III Class"
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.6
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
@@ -497,7 +497,7 @@ instant_effect =
 				type = submarine_1
 				creator = "JAP" 
 			}
-			requested_factories = 1
+			requested_factories = 10
 			progress = 0.80
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization

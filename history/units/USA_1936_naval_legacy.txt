@@ -441,9 +441,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.80
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -452,9 +452,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.70
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -463,9 +463,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.60
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -474,9 +474,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.50
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -485,9 +485,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.40
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -496,9 +496,9 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.30
-		amount = 2
+		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
 	}
 	add_equipment_production = {
@@ -507,7 +507,7 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Farragut Class"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.20
 		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
@@ -518,7 +518,7 @@ instant_effect = {
 			type = submarine_2
 			creator = "USA"
 		}
-		requested_factories = 1
+		requested_factories = 10
 		progress = 0.50
 		amount = 1
 		industrial_manufacturer = mio:USA_electric_boat_company_organization
@@ -530,7 +530,7 @@ instant_effect = {
 			creator = "USA"
 			version_name = "Portland Class"
 		}
-		requested_factories = 2
+		requested_factories = 10
 		progress = 0.85
 		amount = 1
 		industrial_manufacturer = mio:USA_norfolk_naval_yard_organization
