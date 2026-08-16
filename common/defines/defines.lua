@@ -43,6 +43,18 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 
+NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ai will not start to train if equipment drops below this level
+NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ai will not train if equipment drops below this level
+NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ai will not start to train if supply ratio drops below this level
+NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ai will not train if supply ratio drops below this level
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95           -- ai will not train if at least this ratio of divisions in the army are fully trained
+NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ai halts all training when more than this share of its divisions are in active combat (reinforce instead)
+NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16, -- Per army, interval in hours between refresh of which provinces it considers make up potential encirclement points
+MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ai will not train a taskforce if fully trained ships are above this ratio
+AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999
+AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
+
+
 --Agency Upgrade
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 30						-- Number of days needed to create an intelligence agency
 NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 30						-- Number of days needed to upgrade an intelligence agency
