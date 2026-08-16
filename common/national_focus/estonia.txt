@@ -71,6 +71,35 @@ focus_tree = {
 		x = 34
 		y = 0
 
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = BALTIC_restore_workers_republic
+						has_completed_focus = EST_rally_the_nation
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
+		}
+
 		cost = 10
 
 		ai_will_do = {
@@ -94,6 +123,16 @@ focus_tree = {
 			add_stability = 0.1
 			activate_mission_tooltip = EST_vaps_uprising
 			activate_mission_tooltip = EST_vaps_crackdown
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes 
+			}
 		}
 	}
 
@@ -496,6 +535,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			is_in_faction = no
 			OR = {
 				LIT = { exists = yes }
@@ -695,6 +735,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			any_other_country = {
 				NOT = { has_war_with = ROOT }
 				is_faction_leader = yes
@@ -1124,6 +1165,35 @@ focus_tree = {
 
 		cost = 10
 
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = BALTIC_restore_workers_republic
+						has_completed_focus = EST_era_of_silence
+					}
+				}
+			}
+		}
+
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_rally_the_nation
+			}
+		}
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -1150,6 +1220,16 @@ focus_tree = {
 				activate_decision = EST_stomp_the_vaps
 			}
 			unlock_decision_category_tooltip = march_through_estonia
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes 
+			}
 		}
 	}
 
@@ -1358,11 +1438,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = EST_johan_pitka
-			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = EST_hjalmar_mae
-			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = EST_viktor_puskar
 		}
 	}
@@ -1569,7 +1648,7 @@ focus_tree = {
 			NOT = {
 				any_other_country = {
 					is_in_faction_with = GER
-					has_war_with = HUN	
+					has_war_with = ROOT	
 				}
 			}
 			GER = {
@@ -1804,6 +1883,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			FIN = {
 				exists = yes
 				has_government = fascism
@@ -1837,7 +1917,11 @@ focus_tree = {
 							FIN = { has_idea = FIN_the_lone_wolf }
 						}
 					}
-					create_faction = FINNO_ESTONIAN_SUPREMACY_LEAGUE
+					create_faction_from_template = {
+						template = faction_template_european_dominance
+						name = FINNO_ESTONIAN_SUPREMACY_LEAGUE
+						icon = GFX_faction_logo_generic_8
+					}
 				}
 			}
 			effect_tooltip = {
@@ -2204,9 +2288,8 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			is_subject = no
-			any_state = {
+			any_owned_state = {
 				is_core_of = FIN
-				is_owned_by = ROOT 
 			}
 		}
 
@@ -2260,21 +2343,18 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
-				all_state = {
-					OR = {
-						state = 148
-						state = 722
-						state = 213
-						state = 925
-						state = 924
-						state = 144
-						state = 923
-						state = 143
-						state = 666
-						state = 918
-						state = 917
-					}
-					is_owned_by = ROOT
+				AND = {
+					148 = { is_fully_controlled_by = ROOT }
+					722 = { is_fully_controlled_by = ROOT }
+					213 = { is_fully_controlled_by = ROOT }
+					925 = { is_fully_controlled_by = ROOT }
+					924 = { is_fully_controlled_by = ROOT }
+					144 = { is_fully_controlled_by = ROOT }
+					923 = { is_fully_controlled_by = ROOT }
+					143 = { is_fully_controlled_by = ROOT }
+					666 = { is_fully_controlled_by = ROOT }
+					918 = { is_fully_controlled_by = ROOT }
+					917 = { is_fully_controlled_by = ROOT }
 				}
 				SMI = {
 					is_subject_of = ROOT
@@ -2549,6 +2629,78 @@ focus_tree = {
 				}
 				transfer_state = 208
 			}
+			if = {
+				limit = {
+					918 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 918
+			}
+			if = {
+				limit = {
+					923 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 923
+			}
+			if = {
+				limit = {
+					924 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 924
+			}
+			if = {
+				limit = {
+					925 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 925
+			}
+			if = {
+				limit = {
+					917 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 917
+			}
+			if = {
+				limit = {
+					879 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 879
+			}
+			if = {
+				limit = {
+					880 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 880
+			}
+			if = {
+				limit = {
+					825 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 825
+			}
+			if = {
+				limit = {
+					824 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 824
+			}
+			if = {
+				limit = {
+					577 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 577
+			}
+			if = {
+				limit = {
+					399 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 399
+			}
+			if = {
+				limit = {
+					833 = { owner = { is_subject_of = ROOT } }
+				}
+				transfer_state = 833
+			}
 			143 = {
 				add_core_of = ROOT
 			}
@@ -2603,6 +2755,42 @@ focus_tree = {
 			208 = {
 				add_core_of = ROOT
 			}
+			918 = {
+				add_core_of = ROOT
+			}
+			923 = {
+				add_core_of = ROOT
+			}
+			924 = {
+				add_core_of = ROOT
+			}
+			925 = {
+				add_core_of = ROOT
+			}
+			917 = {
+				add_core_of = ROOT
+			}
+			879 = {
+				add_core_of = ROOT
+			}
+			880 = {
+				add_core_of = ROOT
+			}
+			825 = {
+				add_core_of = ROOT
+			}
+			824 = {
+				add_core_of = ROOT
+			}
+			577 = {
+				add_core_of = ROOT
+			}
+			399 = {
+				add_core_of = ROOT
+			}
+			833 = {
+				add_core_of = ROOT
+			}
 		}
 	}
 
@@ -2619,6 +2807,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
 		}
 
 		available = {
@@ -2861,6 +3061,30 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_era_of_silence
+			}
+		}
+
+		offset = {
+			x = -19
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = EST_rally_the_nation
+			}
 		}
 
 		available = {
