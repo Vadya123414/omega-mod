@@ -26,7 +26,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 55 y = 1500 }
+	continuous_focus_position = { x = 55 y = 1600 }
 
 
 ##    ##  #######      ######  ######## ######## ########     ########     ###     ######  ##    ## 
@@ -89,7 +89,7 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
+		completion_reward = {
 			if = {
 				limit = {
 					all_owned_state = {
@@ -1192,6 +1192,14 @@ focus_tree = {
 		relative_position_id = SOV_fourth_five_year_plan
 		cost = 10
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_war = no
+			}
+		}
+
 		allow_branch = {
 			has_government = communism
 		}
@@ -1199,6 +1207,15 @@ focus_tree = {
 		available = {
 			num_subjects > 0
 			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+		}
+
+		bypass = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				has_completed_focus = SOV_curtailment_of_the_collective_farms 
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -1886,13 +1903,116 @@ focus_tree = {
 		}
 
 		available = {
-
+			196 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			251 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			217 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
+			245 = {
+				is_controlled_by_ROOT_or_subject = yes
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = SOV_iosif_stalin
+						}	
+					}
+					set_province_name = {
+						id = 3555
+						name = SOV_stalingrad_hydro_station
+					}
+				}
+				ELSE = {
+					set_province_name = {
+						id = 3555
+						name = SOV_volgograd_hydro_station
+					}
+				}
+				set_province_name = {
+					id = 6275
+					name = SOV_kuybyshev_hydro_station
+				}
+				set_province_name = {
+					id = 737
+					name = SOV_kakhovka_dam
+				}
+				set_province_name = {
+					id = 3478
+					name = SOV_tsimlyanskoye_hydroelectric_station
+				}
+			}
+
 			add_ideas = SOV_transformation_of_nature
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			217 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3555
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			196 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 737
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			245 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3478
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			251 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6275
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
 		}
 	}
 
@@ -2047,6 +2167,30 @@ focus_tree = {
 			add_to_variable = { SOV_soviet_airforce_air_range_factor = 0.05 }
 			add_to_variable = { SOV_soviet_airforce_air_agility_factor = 0.05 }
 			custom_effect_tooltip = SOV_modernize_aircraft_facilities_ns_tt
+			
+			custom_effect_tooltip = SOV_modernize_aircraft_facilities_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						260 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					260 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 9448 # East of Voronezh
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -2104,6 +2248,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+
 			add_tech_bonus = {
 				name = SOV_found_the_jet_institute
 				bonus = 0.5
