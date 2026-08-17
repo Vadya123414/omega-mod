@@ -24,7 +24,7 @@ set_grand_doctrine_test = {
                 set_sub_doctrine = light_task_forces
                 set_sub_doctrine = line_of_battle
                 set_sub_doctrine = mountaineers_1 
-                set_sub_doctrine = rangers_2
+                #set_sub_doctrine = rangers_2
                 set_sub_doctrine = air_subdoctrine_dogfighting_mastery
                 set_sub_doctrine = air_subdoctrine_dive_bombers
                 set_sub_doctrine = air_subdoctrine_operational_air_support
@@ -40,6 +40,10 @@ set_grand_doctrine_test = {
                             add_mastery = {
                             amount = 200
                             folder = naval
+                        }
+                             add_mastery = {
+                            amount = 200
+                            folder = special_forces
                         }
                     }
 
