@@ -12,8 +12,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-                mobilization_speed = 100
-                production_factory_efficiency_gain_factor = 100
+                mobilization_speed = 10
+                production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 			}
 

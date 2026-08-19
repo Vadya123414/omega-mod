@@ -1,119 +1,73 @@
 political_actions = {
 
-set_grand_doctrine_test = {
+    set_grand_doctrine_test = {
 
-		icon = oppression
-		available = {
-        if = {date > 1937.1.1}
-			is_ai = yes
-		}
-		visible = {
-			is_ai = yes
-		}
-            complete_effect = {
-                set_grand_doctrine = new_battlefield_support
-                set_grand_doctrine = superior_firepower
-                set_grand_doctrine = new_convoy_raiding
-                set_grand_doctrine = special_forces_quality
-                set_sub_doctrine = large_unit_tactics
-                set_sub_doctrine = rapid_domination
-                set_sub_doctrine = siege_artillery
-                set_sub_doctrine = armored_spearhead
-                set_sub_doctrine = capital_hunters
-                set_sub_doctrine = torpedo_primacy
-                set_sub_doctrine = light_task_forces
-                set_sub_doctrine = line_of_battle
-                set_sub_doctrine = mountaineers_1 
-                #set_sub_doctrine = rangers_2
-                set_sub_doctrine = air_subdoctrine_dogfighting_mastery
-                set_sub_doctrine = air_subdoctrine_dive_bombers
-                set_sub_doctrine = air_subdoctrine_operational_air_support
-                set_sub_doctrine = air_subdoctrine_heavy_aircraft_focus
+    fire_only_once = yes
+            icon = oppression
+            available = {
+            if = {date > 1937.1.1}
+                is_ai = yes
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                    set_grand_doctrine = new_battlefield_support
+                    set_grand_doctrine = superior_firepower
+                    set_grand_doctrine = new_convoy_raiding
+                    set_grand_doctrine = special_forces_quality
+                    set_sub_doctrine = large_unit_tactics
+                    set_sub_doctrine = rapid_domination
+                    set_sub_doctrine = siege_artillery
+                    set_sub_doctrine = armored_spearhead
+                    set_sub_doctrine = capital_hunters
+                    set_sub_doctrine = torpedo_primacy
+                    set_sub_doctrine = light_task_forces
+                    set_sub_doctrine = line_of_battle
+                    set_sub_doctrine = mountaineers_1 
+                    #set_sub_doctrine = rangers_2
+                    set_sub_doctrine = air_subdoctrine_dogfighting_mastery
+                    set_sub_doctrine = air_subdoctrine_dive_bombers
+                    set_sub_doctrine = air_subdoctrine_operational_air_support
+                    set_sub_doctrine = air_subdoctrine_heavy_aircraft_focus
+                                add_mastery = {
+                                amount = 200
+                                folder = land
+                            }
                             add_mastery = {
-                            amount = 200
-                            folder = land
+                                amount = 200
+                                folder = air
+                            }
+                                add_mastery = {
+                                amount = 200
+                                folder = naval
+                            }
+                                add_mastery = {
+                                amount = 200
+                                folder = special_forces
+                            }
                         }
-                          add_mastery = {
-                            amount = 200
-                            folder = air
-                        }
-                            add_mastery = {
-                            amount = 200
-                            folder = naval
-                        }
-                             add_mastery = {
-                            amount = 200
-                            folder = special_forces
-                        }
-                    }
-
-}
+            ai_will_do = {base = 1000}
+    }
     bots_1936_strategy_industrial_complex_building = {
 
 		fire_only_once = yes
 
 		icon = oppression
 		available = {
-			is_ai = yes
+			alwayes = no
 		}
 		visible = {
-			is_ai = yes
+			alwayes = no
 		}
-    ai_will_do = {base = 1000}
-    cost = 0
+        ai_will_do = {base = 1000}
+        cost = 0
         complete_effect = {
         		add_ai_strategy = {
 				type = building_target
 				id = industrial_complex
-				value = 500
-                }
+				value = 100
+                                    }
         }
     }
-    bots_1936_strategy_industrial_complex_building_remove  = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-			date > 1936.9.1
-			is_ai = yes
-		}
-		visible = {
-			is_ai = yes
-		}
-    ai_will_do = {base = 1000}
-    cost = 0
-        complete_effect = {
-        		add_ai_strategy = {
-				type = building_target
-				id = industrial_complex
-				value = -500
-                }
-        }
-    }
-bots_1937_strategy_arms_factory = {
-
-	fire_only_once = yes
-
-		icon = oppression
-		
-		available = {
-            date > 1936.9.1
-			is_ai = yes
-		}
-		visible = {
-			is_ai = yes
-		}
-  ai_will_do = {base = 1000}
-    cost = 0
-            complete_effect = {
-        		add_ai_strategy = {
-				type = building_target
-				id = arms_factory
-				value = 900
-                }
-        }
-    }
-
-
 }

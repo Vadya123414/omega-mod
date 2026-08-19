@@ -320,41 +320,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 25
-
-			modifier = {
-				factor = 2
-				NOT = { tag = GER }
-			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 0
-				has_tech = dispersed_industry
-			}
-			
-			modifier = {
-				factor = 0
-				is_researching_technology = dispersed_industry
-			}
-						
-			modifier = {
-				factor = 5
-				date > "1937.1.1"
-			}
 		}
 		
 		categories = {
@@ -556,42 +521,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			
-			modifier = {
-				factor = 0.25
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 0.25
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 0.25
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 0
-				has_tech = concentrated_industry
-			}
-			
-			modifier = {
-				factor = 0
-				is_researching_technology = concentrated_industry
-			}
-
-			modifier = {
-				factor = 5
-				date > "1937.1.1"
-			}
+			factor = 0
 		}
 		
 		categories = {
@@ -629,12 +559,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
-						
-			modifier = {
-				factor = 10
-				date > "1937.1.1"
-			}
+			factor = 0
 		}
 		
 		categories = {
@@ -672,12 +597,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1939.1.1"
-			}			
+			factor = 0			
 		}
 		
 		categories = {
@@ -715,12 +635,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1941.1.1"
-			}
+			factor = 0
 		}
 		
 		categories = {
@@ -754,13 +669,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-			
-			
-			modifier = {
-				factor = 10
-				date > "1943.1.1"
-			}
+			factor = 0
 		}
 		
 		categories = {
@@ -802,70 +711,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				oil > 10
-			}
-			modifier = {
-				factor = 3
-				oil > 20
-			}	
-			modifier = {
-				factor = 4
-				oil > 30
-			}	
-			
-			modifier = {
-				factor = 2
-				num_of_military_factories > 10
-			}	
-			modifier = {
-				factor = 3
-				num_of_military_factories > 20
-			}	
-			modifier = {
-				factor = 4
-				num_of_military_factories > 30
-			}	
-			modifier = {
-				factor = 4
-				num_of_military_factories > 40
-			}	
-			modifier = {
-				factor = 4
-				num_of_military_factories > 50
-			}	
-
-			modifier = {
-				factor = 2
-				num_of_naval_factories > 10
-			}	
-			modifier = {
-				factor = 3
-				num_of_naval_factories > 20
-			}	
-			modifier = {
-				factor = 4
-				num_of_naval_factories > 30
-			}	
-			modifier = {
-				factor = 4
-				num_of_naval_factories > 40
-			}
-			modifier = {
-				factor = 4
-				num_of_naval_factories > 50
-			}
-			
-			modifier = {
-				factor = 0.2
-				date < "1937.1.1"
-			}
-			modifier = {
-				factor = 0.4
-				date < "1938.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -892,46 +738,17 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			modifier = {
-				tag = USA
-				factor = 0.5
-			}
-			modifier = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = JAP
+				}
 				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 0.25
-			}
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 10
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 20
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 30
-			}	
-
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 10
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 20
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 30
+				factor = 5
 			}
 		}
-		
 	}
 
 	fuel_refining2 = {
@@ -957,38 +774,17 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0	
 			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
-			modifier = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = JAP
+				}
 				has_war = yes
-				factor = 2
+				factor = 5
 			}
-			modifier = {
-				is_major = no
-				factor = 0.25
-			}
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 20
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 30
-			}	
-
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 20
-			}	
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 30
-			}			
-		}
-		
+		}	
 	}
 
 	fuel_refining3 = {
@@ -1013,28 +809,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0	
 			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
-			modifier = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = JAP
+				}
 				has_war = yes
-				factor = 2
+				factor = 5	
 			}
-			modifier = {
-				is_major = no
-				factor = 0.25
-			}
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 30
-			}	
-
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 30
-			}				
 		}		
 	}
 
@@ -1060,28 +844,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			modifier = {
-				tag = USA
-				factor = 0.5
-			}	
-			modifier = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = JAP
+				}
 				has_war = yes
-				factor = 2
+				factor = 5
 			}
-			modifier = {
-				is_major = no
-				factor = 0.25
-			}
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 30
-			}	
-
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 30
-			}				
 		}		
 	}
 
@@ -1103,28 +875,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			modifier = {
-				tag = USA
-				factor = 0.5
-			}
-			modifier = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = JAP
+				}
 				has_war = yes
-				factor = 2
+				factor = 5
 			}
-			modifier = {
-				is_major = no
-				factor = 0.25
-			}
-			modifier = {
-				factor = 1.5
-				num_of_military_factories > 40
-			}	
-
-			modifier = {
-				factor = 1.5
-				num_of_naval_factories > 40
-			}				
 		}		
 	}
 	
@@ -1170,28 +930,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-					tag = JAP
-				}
-				has_war = yes
-				factor = 5
-			}
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}			
+			factor = 0	
 		}
 		
 		ai_research_weights = {
@@ -1224,33 +963,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-					tag = JAP
-				}
-				has_war = yes
-				factor = 25
-			}
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}			
-			modifier = {
-				factor = 25
-				original_tag = GER	
-				date > "1937.1.1"	
-			}
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1284,33 +997,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-					tag = JAP
-				}
-				has_war = yes
-				factor = 25
-			}
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}	
-			modifier = {
-				original_tag = GER			
-				has_war = yes
-				factor = 3
-			}		
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1344,28 +1031,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-					tag = JAP
-				}
-				has_war = yes
-				factor = 25
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 10
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 20
-			}	
-			modifier = {
-				factor = 0.5
-				rubber > 30
-			}			
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1394,19 +1060,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}			
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1447,32 +1101,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-				}
-				has_war = yes
-				factor = 15
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 10
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 20
-			}	
-			modifier = {
-				factor = 0.5
-				rubber > 30
-			}			
-			modifier = {
-				factor = 25
-				original_tag = GER	
-				date > "1938.1.1"	
-			}
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1512,27 +1141,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-				}
-				has_war = yes
-				factor = 15
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 10
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 20
-			}	
-			modifier = {
-				factor = 0.5
-				rubber > 30
-			}			
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1572,27 +1181,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = ITA
-				}
-				has_war = yes
-				factor = 15
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 10
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 20
-			}	
-			modifier = {
-				factor = 0.5
-				rubber > 30
-			}			
+			factor = 0
 		}
 		
 		ai_research_weights = {
@@ -1627,19 +1216,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				factor = 0.5
-				rubber > 10
-			}
-			modifier = {
-				factor = 0.5
-				rubber > 20
-			}	
-			modifier = {
-				factor = 0.5
-				rubber > 30
-			}			
+			factor = 0
 		}
 		
 		ai_research_weights = {

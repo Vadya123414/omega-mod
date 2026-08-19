@@ -36,7 +36,7 @@ NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 --NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
 --NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
 
----AI
+---AI 
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
@@ -50,10 +50,25 @@ NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ пре�
 NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
+NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
+NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- к скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
 
-AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
-AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
+
+-- <start> construction prioritization
+NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_CIV_FACTORY = 0.80                                      -- base prio for civilian factories in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_MIL_FACTORY = 0.70                                       -- base prio for military factories in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 0.40 --vanila 1.1                                  -- base prio for supply buildings (supply hubs, ports) in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- base prio for railways in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- base prio for railway gun repairs in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- base prio for unspecified buildings (none of the categories above) in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- factor prio with this if occupied territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                             -- factor prio with this if owned non-core territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- factor prio with this if owned core territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                 -- factor prio with this if building is being repaired
+-- <end> construction prioritization
 
 
 --Agency Upgrade
