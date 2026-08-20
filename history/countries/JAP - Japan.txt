@@ -299,6 +299,7 @@ add_ideas = {
 
 	# Laws
 	limited_conscription
+	control_export
 	partial_economic_mobilisation
 
 	# National Spirits
