@@ -517,25 +517,7 @@ default_pp_spend_amount = {
 	ai_strategy = {
 		type = pp_spend_amount
 		id = decision
-		value = 10
-	}
-}
-not_waste_pp_before_spain = {
-	enable = {
-		and = {
-			not = {original_tag = usa original_tag = jap}
-			or = {
-				spr = { has_civil_war = no}
-				date < 1936.8.1
-				}
-			}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = pp_spend_amount
-		value = -1000
+		value = 80
 	}
 }
 default_major_SF_marines = {
