@@ -517,7 +517,7 @@ default_pp_spend_amount = {
 	ai_strategy = {
 		type = pp_spend_amount
 		id = decision
-		value = 80
+		value = 100
 	}
 }
 default_major_SF_marines = {
