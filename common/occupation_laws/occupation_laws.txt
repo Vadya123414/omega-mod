@@ -155,7 +155,7 @@ autonomous_occupation = {
 	}
 
 	ai_will_do = {
-		base = 200
+		base = 300
 
 		modifier = {
 			set_temp_variable = { resistance_limit = 30 }
@@ -186,7 +186,7 @@ foreign_civilian_oversight = {
 	ai_will_do = {
 		base = 120
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.05}
+			check_variable  = { resistance_target_without_law > 0.25}
 			add = 100
 		}
 	}
@@ -210,7 +210,7 @@ local_police_force_garrison = {
 	ai_will_do = {
 		base = 100
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.09}
+			check_variable  = { resistance_target_without_law > 0.3}
 			add = 200
 		}
 
@@ -265,7 +265,7 @@ liberate_workers_occupation = {
 	}
 
 	ai_will_do = {
-		base = 200
+		base = 1000
 	}
 }
 
@@ -297,7 +297,7 @@ military_governor_occupation = {
 		#	add = 150
 		#}
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.24}
+			check_variable  = { resistance_target_without_law > 0.5}
 			add = 400
 		}
 		
@@ -334,7 +334,7 @@ martial_law_occupation = {
 		base = 0
 
 		modifier = {
-			check_variable = { resistance_target_without_law > 0.44}
+			check_variable = { resistance_target_without_law > 0.6}
 
 			set_temp_variable = { resistance_limit = 40 }
 			set_temp_variable = { requirement_limit = 0.65 }
@@ -536,7 +536,7 @@ reconciliation = {
 	}
 
 	ai_will_do = {
-		base = 200
+		base = 1000
 	}
 }
 

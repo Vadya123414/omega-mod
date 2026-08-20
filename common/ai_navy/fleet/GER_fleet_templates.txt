@@ -1,0 +1,13 @@
+GER_raiding_fleet_2 = {
+	required_taskforces = {
+		GER_ConvoyRaiding_1 = 5
+	}	
+	optional_taskforces = {
+		GER_ConvoyRaiding_1 = 4
+	}
+}
+GER_minelaying_fleet_4 = {
+	optional_taskforces = {
+		GER_MineLaying_1 = 1
+	}
+}
