@@ -226,14 +226,13 @@ available_for = { }
 				fixed_ship_engine_slot = cruiser_ship_engine
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_torpedo
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
 				rear_1_custom_slot = ship_light_medium_battery
 			}
 		}
 
 		allowed_modules = {
-
 		}
 	}
 
@@ -262,8 +261,8 @@ available_for = { }
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
 				front_1_custom_slot = ship_light_medium_battery
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_torpedo
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
 				rear_1_custom_slot = ship_light_medium_battery
 			}
 		}
@@ -298,8 +297,8 @@ available_for = { }
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_secondaries
 				front_1_custom_slot = ship_light_medium_battery
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_torpedo
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
 				rear_1_custom_slot = ship_light_medium_battery
 				rear_2_custom_slot = ship_light_medium_battery
 			}
@@ -331,8 +330,8 @@ available_for = { }
 				fixed_ship_armor_slot = ship_armor_cruiser_2
 				fixed_ship_secondaries_slot = ship_dp_secondaries
 				front_1_custom_slot = ship_light_medium_battery
-				mid_1_custom_slot = ship_torpedo
-				mid_2_custom_slot = ship_torpedo
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
 				rear_1_custom_slot = ship_light_medium_battery
 				rear_2_custom_slot = ship_light_medium_battery
 			}

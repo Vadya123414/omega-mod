@@ -1,8 +1,8 @@
 bots_1936_strategy_industrial_complex_building = {
 		enable = {
-			or = {
-				has_war = yes
-				date < 1936.6.1
+			AND = {
+				not = { original_tag = USA}
+				date < 1936.10.1
 				}
 		}
 		abort_when_not_enabled = yes
@@ -13,19 +13,72 @@ bots_1936_strategy_industrial_complex_building = {
 	}
 
 }
-	bots_strategy_arms_factory_building ={
+	bots_strategy_arms_factory_building = {
 		enable = {
-			date > 1936.6.1
+			not = { original_tag = USA}
+			date > 1936.10.1
 		}
 	abort_when_not_enabled = no
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
+		value = 900
+	}
+}
+bots_usa_complex_building = {
+		enable = {
+			AND = {
+				original_tag = USA
+				dockyard < 70
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = dockyard
 		value = 1000
 	}
-
 }
-
+#bots_usa_complex_building = {
+#		enable = {
+#			AND = {
+#				is_coastal = yes
+#				original_tag = USA
+#				date < 1936.6.1
+#				}
+#		}
+#		abort_when_not_enabled = yes
+#		ai_strategy = {
+#		type = building_target
+#		id = infrastructure
+#		value = 1000
+#	}
+#}
+bots_usa_complex_building = {
+		enable = {
+			AND = {
+				original_tag = USA
+				dockyard > 70
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+}
+boost_div_upgrades = { 
+	enable = {
+		always = yes
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = 1000
+	}
+}
 default_air_production = {
 	enable = {
 		is_major = yes

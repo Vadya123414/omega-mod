@@ -1,4 +1,214 @@
-political_actions = {
+BOTS = {
+
+    startxp = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.7}
+            is_ai = yes
+            has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp2 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.14}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp3 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.21}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp4 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.28}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp5 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.2.7}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp6 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.2.14}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp7 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.2.21}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp8 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.2.28}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp9 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.3.7}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
+
+    startxp10 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.3.14}
+            is_ai = yes
+           has_war = no
+            has_civil_war = no
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 10
+        }
+    }
 
     set_grand_doctrine_test = {
 
@@ -9,13 +219,17 @@ political_actions = {
             icon = oppression
 
             available = {
-            if = {date > 1937.1.1}
                 is_ai = yes
+                 has_war = no
+                has_civil_war = no
             }
             visible = {
                 is_ai = yes
             }
                 complete_effect = {
+                    complete_special_project = {
+						project = sp:sp_land_super_heavy_howitzer
+					}
                     set_grand_doctrine = new_battlefield_support
                     set_grand_doctrine = superior_firepower
                     set_grand_doctrine = new_convoy_raiding
@@ -58,18 +272,25 @@ political_actions = {
 
 		icon = oppression
 		available = {
-           not = { or = {
-                has_idea = partial_economic_mobilisation
-                has_idea = war_economy
-                has_idea = tot_economic_mobilisation
-                has_idea = national_defense_state
-                has_idea = JAP_war_communism_idea
-                has_idea = totaler_krieg_economy
+            OR = {
+                original_tag = GER
+            NOT = { 
+                OR = {
+                    has_idea = partial_economic_mobilisation
+                    original_tag = USA
+                    has_idea = war_economy
+                    has_idea = tot_economic_mobilisation
+                    has_idea = national_defense_state
+                    has_idea = JAP_war_communism_idea
+                    has_idea = totaler_krieg_economy
+                    }
                 }
             }
-            is_ai = yes
-			SPR = { has_civil_war = yes }
-		}
+                AND = {
+                    is_ai = yes
+                    SPR = { has_civil_war = yes }
+                }
+            }
 		visible = {
             is_ai = yes
 		}

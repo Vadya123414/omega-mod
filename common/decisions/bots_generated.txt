@@ -1,0 +1,3582 @@
+BOTS = {
+
+    bots_afa_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = AFA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = AFA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Qafar Sefari"
+                disband = yes
+            }
+        }
+    }
+
+    bots_afg_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = AFG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = AFG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Royal Guard"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Militia"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Ferqhah"
+                disband = yes
+            }
+        }
+    }
+
+    bots_alb_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ALB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ALB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Këmbësori Pjesëtim"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ang_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ANG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ANG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_arg_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ARG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ARG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada Montaña"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ast_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = AST
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = AST
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armoured Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_aus_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = AUS
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = AUS
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanterie Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alpenjäger Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Schnelle Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bel_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BEL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BEL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Division d'Infanterie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division de Cavalerie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalerie Motorisée"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division Coloniale"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Chasseurs Ardennais"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cycliste Frontière"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Force Publique"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bhu_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BHU
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BHU
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bol_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BOL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BOL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bot_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BOT
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BOT
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bra_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BRA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BRA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Divisão de Infantaria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisão de Cavalaria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_bul_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = BUL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = BUL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pekhotna Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Konna Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tankov Polk"
+                disband = yes
+            }
+        }
+    }
+
+    bots_can_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CAN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CAN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "District Militia"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Militia"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armored-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_chi_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CHI
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CHI
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Juntuán Reformed"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Motuo Hua Bubing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_chl_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CHL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CHL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Regimiento Escolta Presidencial"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Regimiento de Carabineros"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cuerpo de Gendarmería de Prisiones"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cog_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = COG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = COG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Force Publique"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Troupes du Katanga"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Compagnie d'Artillerie et de Génie"
+                disband = yes
+            }
+        }
+    }
+
+    bots_col_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = COL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = COL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada del Ejército"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cos_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = COS
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = COS
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infantería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cri_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CRI
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CRI
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cro_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CRO
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CRO
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pesadijska Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alpine Odred"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Konjièka Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Bataljon Bornih Kola"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Hrvatsko domobranstvo"
+                disband = yes
+            }
+        }
+    }
+
+    bots_csa_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CSA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CSA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Volunteer Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Volunteer Cavalry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cub_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CUB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CUB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_cze_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = CZE
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = CZE
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pěší divize"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Horská divize"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Jezdecká brigáda"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Rychlá divize"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Finanční Stráž"
+                disband = yes
+            }
+        }
+    }
+
+    bots_den_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = DEN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = DEN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanteri Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binær Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kavaleri Brigade"
+                disband = yes
+            }
+        }
+    }
+
+    bots_dom_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = DOM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = DOM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_don_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = DON
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = DON
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Kavaleriyskaya Diviziya"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ecu_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ECU
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ECU
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_els_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ELS
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ELS
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_eng_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ENG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ENG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tank Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Motorised Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Colonial Garrison"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armoured Car Company"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division (ME)"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armour Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_eth_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ETH
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ETH
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Kebur Zabagna"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mountain Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mehal Sefari"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Chitet Sefari"
+                disband = yes
+            }
+        }
+    }
+
+    bots_fin_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = FIN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = FIN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Jalkaväkidivisioona"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Erillinen Prikaati"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Ratsuväkiprikaati"
+                disband = yes
+            }
+        }
+    }
+
+    bots_fra_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = FRA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = FRA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Division d'Infanterie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division Coloniale"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division d'Infanterie Motorisée"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division d'Infanterie Alpine"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division de Cavalerie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division Légère Mécanique"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigade de Chars de Combat"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigade Coloniale"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Division Forteresse"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigade Cuirassée"
+                disband = yes
+            }
+        }
+    }
+
+    bots_gdc_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GDC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GDC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ger_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GER
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GER
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanterie-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Panzer-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infanterie-Division (mot.)"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gebirgs-Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kavallerie-Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gebirgs-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Fallschirmjäger-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Leichte Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "SS-Regiment"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sicherungs-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "SS-Sturmbrigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Landsturmregiment"
+                disband = yes
+            }
+        }
+    }
+
+    bots_gre_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GRE
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GRE
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Trigonikó Pezikoú"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tetrágono Pezikoú"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Merarchía Ippikoú"
+                disband = yes
+            }
+        }
+    }
+
+    bots_gsm_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GSM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GSM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Juntuán Reformed"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_gua_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GUA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GUA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_gxc_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = GXC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = GXC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binary Infantry"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Triangular Infantry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_hai_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = HAI
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = HAI
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigade de Infanterie"
+                disband = yes
+            }
+        }
+    }
+
+    bots_hbc_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = HBC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = HBC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_hol_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = HOL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = HOL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanterie Divisie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Koloniaal Garnizoen"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mariniersdivisie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Lichte Divisie"
+                disband = yes
+            }
+        }
+    }
+
+    bots_hon_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = HON
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = HON
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_hun_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = HUN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = HUN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Gyalogdandár"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Huszár Dandár"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Motorizált Dandár"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Lovassági Társaság"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ice_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ICE
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ICE
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Ríkislögreglan"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ins_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = INS
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = INS
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanterie Divisie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "KNIL Koloniaal Garnizoen"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "KNIL Field Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "KNIL Garrison Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ire_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = IRE
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = IRE
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_irq_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = IRQ
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = IRQ
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Firqat Mushaa"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alfurqat Aljabalia"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Silah Alfursan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alfurqat Almasha"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ita_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ITA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ITA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Divisione di Fanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Alpina"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Camicie Nere"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Celere"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Reggimento di Cavalleria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Coloniale"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Ascari Libica"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Ascari Eritrea"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Ascari Somala"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Banda Indigena Irregolare"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Truppe Irregolari a Cavallo"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Banda Irregolare Libica"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Banda Irregolare Eritrea"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Banda Irregolare Somala"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Autotrasportabile"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Motorizzata"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Divisione Corazzata"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Raggruppamento Celere"
+                disband = yes
+            }
+        }
+    }
+
+    bots_jap_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = JAP
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = JAP
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Hohei Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Dokuritsu Konsei Ryodan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kihei Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Jidousha Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Rikusentai"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Chuton-chi Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Ginrinbutai"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kutei Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Chugata Hohei Shidan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Senshadan"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Azad Hind Infantry Corps"
+                disband = yes
+            }
+        }
+    }
+
+    bots_kal_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KAL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KAL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Morit Diviziin"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Khalimagiin Khaadyn Kharuuluud"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ken_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KEN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KEN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_khm_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KHM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KHM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_kor_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KOR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KOR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Daehanminguk Yuk-gun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binary Infantry"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Triangular Infantry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_kub_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KUB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KUB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Kavaleriyskaya Diviziya"
+                disband = yes
+            }
+        }
+    }
+
+    bots_kum_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KUM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KUM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Kumullik Militia"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Uyghur Regiment"
+                disband = yes
+            }
+        }
+    }
+
+    bots_kur_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = KUR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = KUR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Dabeşa siwarî"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Peyayên Kurd"
+                disband = yes
+            }
+        }
+    }
+
+    bots_lat_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = LAT
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = LAT
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Kajnieku Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Artilerijas Pulks"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Aizsargi"
+                disband = yes
+            }
+        }
+    }
+
+    bots_lib_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = LIB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = LIB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Brigade"
+                disband = yes
+            }
+        }
+    }
+
+    bots_lit_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = LIT
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = LIT
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pestininku Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Artilerija Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Valstybės Sienos Apsaugos Skyrius"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kavalerijos Brigados"
+                disband = yes
+            }
+        }
+    }
+
+    bots_lux_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = LUX
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = LUX
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Public Force"
+                disband = yes
+            }
+        }
+    }
+
+    bots_mal_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MAL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MAL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Malaya Infantry Brigade"
+                disband = yes
+            }
+        }
+    }
+
+    bots_man_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MAN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MAN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Huncheng Lu"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Bubing Shi"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qu Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Shi"
+                disband = yes
+            }
+        }
+    }
+
+    bots_men_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MEN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MEN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Morit Diviziin"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_mex_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MEX
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MEX
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada Agrarista"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_mon_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MON
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MON
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Morit Diviziin"
+                disband = yes
+            }
+        }
+    }
+
+    bots_mzb_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = MZB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = MZB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_nep_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = NEP
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = NEP
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Paidala Dibhijana"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Royal Nepalese Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_nic_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = NIC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = NIC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Brigada de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_nor_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = NOR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = NOR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanteridivisjon"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binærdivisjon"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Dragonregiment"
+                disband = yes
+            }
+        }
+    }
+
+    bots_nxm_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = NXM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = NXM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán Reformed"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_nzl_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = NZL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = NZL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "District Force"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armoured Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armored-Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_oma_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = OMA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = OMA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Alfurqat Almasha"
+                disband = yes
+            }
+        }
+    }
+
+    bots_pak_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PAK
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PAK
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armoured Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_pan_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PAN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PAN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_par_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PAR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PAR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_per_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PER
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PER
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Iranian Gendarmerie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mixed Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Group"
+                disband = yes
+            }
+        }
+    }
+
+    bots_phi_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PHI
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PHI
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Philippine Scouts Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_pol_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = POL
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = POL
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Dywizja Piechoty"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Dywizja Piechoty Górskiej"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brygada Kawalerii"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brygada Piechoty Górskiej"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brygada Motorowej"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Grupa Pancerna"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brygada Ochrony Pogranicza"
+                disband = yes
+            }
+        }
+    }
+
+    bots_por_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = POR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = POR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Divisão de Infantaria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Força de Caçadores"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada de Cavalaria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_prc_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PRC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PRC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Renmin Jundui"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Erjinzhi Juntuán"
+                disband = yes
+            }
+        }
+    }
+
+    bots_pru_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = PRU
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = PRU
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_raj_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = RAJ
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = RAJ
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "District Garrison"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armored-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Rajput Regiment"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Colonial Garrison"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armoured Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_rkh_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = RKH
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = RKH
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Vládní vojsko"
+                disband = yes
+            }
+        }
+    }
+
+    bots_rom_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ROM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ROM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Divizia de Infanterie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada de Munte"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada de Cavalerie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Regimentul de Blindate"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Blindata Brigada"
+                disband = yes
+            }
+        }
+    }
+
+    bots_rut_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = RUT
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = RUT
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Karpathian Sič"
+                disband = yes
+            }
+        }
+    }
+
+    bots_saf_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SAF
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SAF
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "District Force"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "District Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Armored-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Democratic Defense Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Nationalist Partisans"
+                disband = yes
+            }
+        }
+    }
+
+    bots_sau_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SAU
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SAU
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Alfurqat Almasha"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alfurqat Alfursan"
+                disband = yes
+            }
+        }
+    }
+
+    bots_shx_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SHX
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SHX
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_sia_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SIA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SIA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Royal Thai Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_sic_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SIC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SIC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_sik_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SIK
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SIK
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+        }
+    }
+
+    bots_slo_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SLO
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SLO
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pesi Divize"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mobilná Skupina"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Puska Brigáda"
+                disband = yes
+            }
+        }
+    }
+
+    bots_snd_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SND
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SND
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_sov_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SOV
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SOV
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Strelkovaya Diviziya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gornostrelkovaya Diviziya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Motostrelkovaya Diviziya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kavaleriyskaya Diviziya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "NKVD Pogranichnaya Diviziya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mekhanizirovaniy Korpus"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Vozdushno-Desantnaya Brigada"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Vozdushno-Desantnaya"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tankovaya Korpus"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Legko-Tankovaya Brigada"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tankovaya Brigada"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tyazolaya-Tankovaya Brigada"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kazachya Kavaleryskaya Diviziya"
+                disband = yes
+            }
+        }
+    }
+
+    bots_spa_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SPA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SPA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infantería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Fuerza Colonial"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada Legionario"
+                disband = yes
+            }
+        }
+    }
+
+    bots_spr_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SPR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SPR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infantería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada Montaña"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada de Infantería"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Brigada Internacionale"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "German Expatriates"
+                disband = yes
+            }
+        }
+    }
+
+    bots_swe_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SWE
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SWE
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Arméfördelning"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Kavalleribrigaden"
+                disband = yes
+            }
+            delete_units = {
+                division_template = " Pansarregemente"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Militärområde"
+                disband = yes
+            }
+        }
+    }
+
+    bots_swi_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = SWI
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = SWI
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infanterie-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gebirgs-Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gebirgsbrigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Grenzbrigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Leichte-Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gebirgsinfanterie"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Infanterie de montagne"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Fanteria di montagna"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Swiss Citizen Militia"
+                disband = yes
+            }
+        }
+    }
+
+    bots_tan_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = TAN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = TAN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Strelkovaya Polk"
+                disband = yes
+            }
+        }
+    }
+
+    bots_tib_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = TIB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = TIB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuan"
+                disband = yes
+            }
+        }
+    }
+
+    bots_tur_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = TUR
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = TUR
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Piyade Tümeni"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Dag Tugayi"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Bogazi Tugay"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Süvari Tümeni"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Zirhli Tümeni"
+                disband = yes
+            }
+        }
+    }
+
+    bots_urg_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = URG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = URG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+        }
+    }
+
+    bots_usa_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 } 
+            original_tag = USA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = USA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "National Guard Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Garrison Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Marine Brigade"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Mechanized Cavalry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_usb_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = USB
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = USB
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Local Defense Volunteers"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "State Defense Force"
+                disband = yes
+            }
+        }
+    }
+
+    bots_ven_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = VEN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = VEN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "División de Infanteria"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "División de Caballería"
+                disband = yes
+            }
+        }
+    }
+
+    bots_wla_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = WLA
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = WLA
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Cavalry Division"
+                disband = yes
+            }
+        }
+    }
+
+    bots_xic_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = XIC
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = XIC
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Sanjiao Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+        }
+    }
+
+    bots_xsm_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = XSM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = XSM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Qibing Jun"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Juntuán Reformed"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binary Infantry"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Triangular Infantry"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Triangular Cavalry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_yem_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = YEM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = YEM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Alfurqat Almasha"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Alfurqat Alfursan"
+                disband = yes
+            }
+        }
+    }
+
+    bots_yug_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = YUG
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = YUG
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Pesadijska Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Gorska Pesadija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Konjička Divizija"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Tenkovski Bataljon"
+                disband = yes
+            }
+        }
+    }
+
+    bots_yun_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = YUN
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = YUN
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Juntuán"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Binary Infantry"
+                disband = yes
+            }
+            delete_units = {
+                division_template = "Triangular Infantry"
+                disband = yes
+            }
+        }
+    }
+
+    bots_zim_templates = {
+        fire_only_once = yes
+        icon = oppression
+        available = {
+            if = { date > 1936.1.18 }
+            original_tag = ZIM
+            has_war = no
+            has_civil_war = no
+        }
+        visible = {
+            original_tag = ZIM
+            is_ai = yes
+        }
+        ai_will_do = { base = 1000 }
+        cost = 0
+        complete_effect = {
+            delete_units = {
+                division_template = "Infantry Division"
+                disband = yes
+            }
+        }
+    }
+
+}
