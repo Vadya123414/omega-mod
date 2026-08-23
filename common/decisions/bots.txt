@@ -21,196 +21,7 @@ BOTS = {
         }
     }
 
-    startxp2 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.1.14}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp3 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.1.21}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp4 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.1.28}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp5 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.2.7}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp6 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.2.14}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp7 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.2.21}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp8 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.2.28}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp9 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.3.7}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    startxp10 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            if = {date > 1936.3.14}
-            is_ai = yes
-           has_war = no
-            has_civil_war = no
-		}
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1000}
-        cost = 0
-        complete_effect = {
-            army_experience = 10
-        }
-    }
-
-    set_grand_doctrine_test = {
+    set_grand_doctrine_36= {
 
     fire_only_once = yes
 
@@ -225,6 +36,166 @@ BOTS = {
             }
             visible = {
                 is_ai = yes
+            }
+                complete_effect = {
+                    set_grand_doctrine = new_battlefield_support
+                    set_grand_doctrine = superior_firepower
+                    set_grand_doctrine = new_convoy_raiding
+                    set_sub_doctrine = capital_hunters
+                    set_sub_doctrine = torpedo_primacy
+                    set_sub_doctrine = light_task_forces
+                    set_sub_doctrine = line_of_battle
+                    set_sub_doctrine = air_subdoctrine_escort_fighter
+                    set_sub_doctrine = air_subdoctrine_flying_artillery
+                    set_sub_doctrine = air_subdoctrine_long_range_escort
+                    set_sub_doctrine = air_subdoctrine_deep_air_raids
+                            add_mastery = {
+                                amount = 200
+                                folder = air
+                            }
+                                add_mastery = {
+                                amount = 150
+                                folder = naval
+                            }
+
+                        }
+    }
+       set_sub_doctrine_37 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                if = {date > 1937.1.1}
+                is_ai = yes
+                has_civil_war = no
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                    set_sub_doctrine = large_unit_tactics
+
+                                add_mastery = {
+                                amount = 150
+                                track = infantry
+                            }
+                        }
+    }
+           set_sub_doctrine_38 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                if = {date > 1938.1.1}
+                is_ai = yes
+                has_civil_war = no
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                     set_sub_doctrine = rapid_domination
+                                add_mastery = {
+                                amount = 150
+                                track = operations
+                            }
+                        }
+    }
+          set_sub_doctrine_39 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                if = {date > 1939.1.1}
+                is_ai = yes
+                has_civil_war = no
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                  if = { limit = {is_major = yes}
+                    complete_special_project = {
+						project = sp:sp_land_super_heavy_howitzer
+					}
+                }
+                     set_sub_doctrine = field_engineering
+                                add_mastery = {
+                                amount = 150
+                                track = combat_support
+                            }
+                        }
+    }
+              set_spec_doctrine_40 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+               if = { date > 1940.1.1}
+                is_ai = yes
+                has_civil_war = no
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                     set_sub_doctrine = field_engineering
+                    set_grand_doctrine = special_forces_quality
+                        }
+    }
+        set_spec_doctrine_40 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+               if = { date > 1941.1.1}
+                is_ai = yes
+                has_civil_war = no
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                    set_sub_doctrine = mountaineers_1 
+                              add_mastery = {
+                                amount = 90
+                                folder = special_forces
+                            }
+                        }
+    }
+      set_grand_doctrine_test = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                always = no
+            }
+            visible = {
+               always = no
             }
                 complete_effect = {
                     set_grand_doctrine = new_battlefield_support
@@ -246,7 +217,7 @@ BOTS = {
                     set_sub_doctrine = air_subdoctrine_operational_air_support
                     set_sub_doctrine = air_subdoctrine_heavy_aircraft_focus
                                 add_mastery = {
-                                amount = 200
+                                amount = 150
                                 folder = land
                             }
                             add_mastery = {
@@ -254,11 +225,11 @@ BOTS = {
                                 folder = air
                             }
                                 add_mastery = {
-                                amount = 200
+                                amount = 150
                                 folder = naval
                             }
                                 add_mastery = {
-                                amount = 120
+                                amount = 90
                                 folder = special_forces
                             }
                       if = { limit = {is_major = yes}
