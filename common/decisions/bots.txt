@@ -227,9 +227,6 @@ BOTS = {
                 is_ai = yes
             }
                 complete_effect = {
-                    complete_special_project = {
-						project = sp:sp_land_super_heavy_howitzer
-					}
                     set_grand_doctrine = new_battlefield_support
                     set_grand_doctrine = superior_firepower
                     set_grand_doctrine = new_convoy_raiding
@@ -261,9 +258,14 @@ BOTS = {
                                 folder = naval
                             }
                                 add_mastery = {
-                                amount = 200
+                                amount = 120
                                 folder = special_forces
                             }
+                      if = { limit = {is_major = yes}
+                    complete_special_project = {
+						project = sp:sp_land_super_heavy_howitzer
+					}
+                }
                         }
     }
     bots_spr_attache = {
