@@ -1489,7 +1489,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 880
+			factor = 7000
 		}
 
 		available = {
@@ -1524,7 +1524,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 					has_war_with = JAP
-				factor = 1000
+				factor = 10000
 		}
 	}
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -2023,7 +2023,7 @@ focus_tree = {
 
 		cost = 10
 		ai_will_do = {
-			factor = 830
+			factor = 7000
 		}
 
 		available_if_capitulated = yes
@@ -2099,7 +2099,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 860
+			factor = 8000
 		}
 
 		allow_branch = {
@@ -2224,7 +2224,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 800
+			factor = 4000
 		}
 
 		available = {
@@ -2336,7 +2336,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 800
+			factor = 4000
 		}
 
 		available = {
@@ -2387,7 +2387,7 @@ focus_tree = {
 
 		cost = 10
 		ai_will_do = {
-			factor = 6000
+			factor = 8000
 		}
 		available = {
 			democratic > 0.95
@@ -2545,6 +2545,19 @@ focus_tree = {
 			if = {
 				limit = {
 					OR = {
+						is_ai = no
+						has_idea = isolation 
+						has_idea = undisturbed_isolation 
+						has_country_flag = USA_the_giant_wakes_added_civ_eco
+					}
+				}
+				add_ideas = civilian_economy
+				set_country_flag = USA_the_giant_wakes_added_civ_eco
+			}
+			if = {
+				limit = {
+					OR = {
+						is_ai = yes
 						has_idea = isolation 
 						has_idea = undisturbed_isolation 
 						has_country_flag = USA_the_giant_wakes_added_civ_eco
@@ -4797,7 +4810,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 500
+			factor = 5000
 		}
 
 		available = {
@@ -5058,7 +5071,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 500
+			factor = 5000
 		}
 
 		available = {
@@ -5096,7 +5109,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				has_war_with = FRA
-				factor = 300
+				factor = 3000
 			}
 		}
 
@@ -5134,6 +5147,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war_with = ITA
+				factor = 4500
+			}
 		}
 	
 		available = {
@@ -5176,7 +5193,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				has_war_with = GER
-				factor = 450
+				factor = 4500
 			}
 		}
 		completion_reward = {
@@ -5262,7 +5279,7 @@ focus_tree = {
 					factor = 1
 			modifier = {
 				has_war_with = SOV
-				factor = 400
+				factor = 4000
 			}
 		}
 
@@ -5326,7 +5343,7 @@ focus_tree = {
 						factor = 1
 			modifier = {
 				has_war_with = ENG
-				factor = 300
+				factor = 3000
 			}
 		}
 
@@ -5413,7 +5430,7 @@ focus_tree = {
 					has_war_with = JAP
 					has_war_with = CHI
 				 }
-				factor = 500
+				factor = 5000
 			}
 		}
 
@@ -5451,7 +5468,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 					has_war_with = JAP
-				factor = 500
+				factor = 5000
 			}
 		}
 
@@ -5476,7 +5493,7 @@ focus_tree = {
 		factor = 1
 			modifier = {
 					has_war_with = CHI
-				factor = 500
+				factor = 5000
 		}
 	}
 
@@ -5611,7 +5628,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 900
+			factor = 9000
 		}
 
 		available = {
@@ -5640,7 +5657,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1000
+			factor = 9000
 		}
 
 		available = {
@@ -5742,7 +5759,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 5000
 		}
 
 		available = {
@@ -5818,7 +5835,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 200
+			factor = 5000
 		}
 
 		available = {
@@ -5847,7 +5864,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 200
+			factor = 5000
 		}
 
 		available = {
@@ -5876,7 +5893,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = USA_selective_training_act }
 		ai_will_do = {
-			factor = 800
+			factor = 5000
 		}
 
 		available_if_capitulated = yes
@@ -6056,7 +6073,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 400
+			factor = 4000
 		}
 
 		available = {
@@ -6085,7 +6102,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 400
+			factor = 4000
 		}
 
 		available = {
@@ -6122,9 +6139,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 6000
+		}
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
 		available_if_capitulated = yes
@@ -6152,7 +6169,7 @@ focus_tree = {
 		relative_position_id = USA_air_war_plans_division
 		cost = 10
 		ai_will_do = {
-			factor = 830
+			factor = 6000
 		}
 
 		available_if_capitulated = yes
@@ -6172,7 +6189,7 @@ focus_tree = {
 		relative_position_id = USA_air_war_plans_division
 		cost = 10
 		ai_will_do = {
-			factor = 830
+			factor = 6000
 		}
 
 		available_if_capitulated = yes
@@ -6192,7 +6209,7 @@ focus_tree = {
 		relative_position_id = USA_air_support
 		cost = 5
 		ai_will_do = {
-			factor = 800
+			factor = 6000
 		}
 
 		available_if_capitulated = yes
@@ -6389,7 +6406,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 840
+			factor = 7000
 		}
 
 		available = {
@@ -6538,7 +6555,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 830
+			factor = 6000
 		}
 		prerequisite = { focus = USA_two_ocean_navy_act }
 		relative_position_id = USA_two_ocean_navy_act
