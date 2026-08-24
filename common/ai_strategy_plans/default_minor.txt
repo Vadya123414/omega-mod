@@ -45,3 +45,4 @@ default_minor = {
 	traits = {
 
 	}
+}

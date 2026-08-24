@@ -228,20 +228,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 10
-			
-				has_resources_in_country = {
-					resource = coal
-					amount > 0
-					only_imported = yes
-				}
-			}
+			factor = 0
 
 			modifier = {
 				factor = 5
+				resource = coal
+				amount > 0
+				only_imported = yes
 				energy_ratio < 0.9
 			}
 		}
@@ -266,21 +259,15 @@ technologies = {
 			position = { x = 2 y = 6 }
 		}
 		
+
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 5
-			
-				has_resources_in_country = {
-					resource = coal
-					amount > 0
-					only_imported = yes
-				}
-			}
-
-			modifier = {
-				factor = 5
+				resource = coal
+				amount > 0
+				only_imported = yes
 				energy_ratio < 0.9
 			}
 		}

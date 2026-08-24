@@ -312,7 +312,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -362,7 +362,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -404,7 +404,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 
 
 			modifier = {
@@ -458,7 +458,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -529,39 +529,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 20
-				tag = USA
-				date > 1943.1.1
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-
-			modifier = { #Sokolov Raid prep
-				factor = 20
-				tag = GER
-				has_completed_focus = GER_anschluss
-				CZE = { 
-					is_ai = no
-				}
-			}
-
-			modifier = {
-				factor = 5
-				tag = GER
-				has_completed_focus = GER_fallschirmjager
-			}
-		}
+			factor = 0
 	}
 
 	paratroopers2 = {
@@ -589,27 +557,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 0
 
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
 		}
 	}
 
@@ -633,22 +582,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
+			factor = 0
 		}
 	}
 
@@ -913,26 +847,7 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.7
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
 
-			modifier = {
-				factor = 5
-				tag = BRA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
 		}
 	}
 
@@ -961,7 +876,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
 		}
 	}
 
@@ -985,7 +900,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
 		}
 	}
 

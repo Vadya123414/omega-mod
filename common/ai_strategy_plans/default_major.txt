@@ -6,7 +6,7 @@ default_major = {
         is_major = yes
 	}
 	abort = {
-		
+		original_tag = USA
 	}
 
 	ai_national_focuses = {
@@ -47,3 +47,4 @@ default_major = {
 	traits = {
 
 	}
+}
