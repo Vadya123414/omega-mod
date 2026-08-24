@@ -1,7 +1,7 @@
 ﻿l_russian:
  BM_HISTORY_TITLE: "Краткая история"
- GATHERING_STORM_NAME: "Режим с ништяками"
- NON-Hist_NAME: "Режим для около-исторических каток"
+ GATHERING_STORM_NAME: "Non-Hist"
+ NON-Hist_NAME: "Semi Hist"
  GATHERING_STORM_DESC: "Режим с новыми решениями и доп контентом"
  NON-Hist_DESC: "Режим ориентирован для полухиста и хист каток"
  HITTING_FAN_NAME: "И начинается"
