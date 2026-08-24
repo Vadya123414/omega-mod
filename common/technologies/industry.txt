@@ -232,9 +232,6 @@ technologies = {
 
 			modifier = {
 				factor = 5
-				resource = coal
-				amount > 0
-				only_imported = yes
 				energy_ratio < 0.9
 			}
 		}
@@ -265,9 +262,6 @@ technologies = {
 
 			modifier = {
 				factor = 5
-				resource = coal
-				amount > 0
-				only_imported = yes
 				energy_ratio < 0.9
 			}
 		}

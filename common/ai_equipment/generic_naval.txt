@@ -362,9 +362,7 @@ naval_light_cruiser = {
 				factor = 0
 			}
 		}
-		upgrade_prio = {
-		base = 1
-		}
+
 		role_icon_index = 2
 
 		history = yes
@@ -409,9 +407,7 @@ naval_light_cruiser = {
 				factor = 0
 			}
 		}
-		upgrade_prio = {
-		base = 2
-		}
+
 		role_icon_index = 2
 
 		#history = yes
@@ -452,9 +448,6 @@ naval_light_cruiser = {
 	cruiser_light_advanced = {
 		priority = {
 			factor = 300
-		}
-		upgrade_prio = {
-		base = 3
 		}
 		role_icon_index = 2
 
@@ -651,7 +644,4 @@ naval_submarine = {
 			ship_radar
 		}
 	}
-}
-
-
 }

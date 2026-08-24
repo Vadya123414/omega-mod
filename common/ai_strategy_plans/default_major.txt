@@ -3,10 +3,15 @@ default_major = {
 	desc = ""
 
 	allowed = {
-        is_major = yes
+		original_tag = GER
+		original_tag = SOV
+		original_tag = ENG
+		original_tag = JAP
+	}
+	enable = {
+		
 	}
 	abort = {
-		original_tag = USA
 	}
 
 	ai_national_focuses = {
