@@ -65,7 +65,6 @@ USA_recalc_congress_icon_frames = yes
 
 USA = {
 	country_event = { id = usa.50 days = 2 }
-	country_event = { id = usa.51 days = 2 }
 }
 
 # Starting tech

@@ -9,6 +9,7 @@ NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 1;
 --NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.02;              --  шанс попадания ПВО по штурму
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5;	-- анлок 5 ячейки в столбце шаблона дивизии 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999;
@@ -38,6 +39,9 @@ NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- скорость мини�
 --Производство
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10;
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
+NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10;
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300;
+NDefines.NProduction.SHIP_REFIT_MAX_PROGRESS_TO_CANCEL = 0.99;
 --NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0            -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0        -- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0        -- XP cost for converting one equipment module to a related module when creating an equipment variant.
@@ -97,4 +101,7 @@ NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scie
 		50,			-- pp cost if 2 available scientist
 		50			-- pp cost if more than 2 available scientist
 	}
+
+NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
+
 
