@@ -38,7 +38,6 @@ ideas = {
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
 					}
 				}
 				ELSE = {
@@ -84,7 +83,6 @@ ideas = {
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
 					}
 				}
 				ELSE = {
@@ -203,14 +201,6 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.3
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
 						original_tag = TUR
 						has_dlc = "Battle for the Bosporus"
 					}
@@ -239,14 +229,6 @@ ideas = {
 				}
 			}
 			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 
 				if = {
 					limit = {
@@ -384,14 +366,6 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.5
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
 						original_tag = TUR
 						has_dlc = "Battle for the Bosporus"
 					}
@@ -433,14 +407,6 @@ ideas = {
 
 			cancel_if_invalid = no
 			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 
 				if = {
 					limit = {
@@ -606,14 +572,6 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.75
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
 						original_tag = TUR
 						has_dlc = "Battle for the Bosporus"
 					}
@@ -655,14 +613,6 @@ ideas = {
 
 			cancel_if_invalid = no
 			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 
 				if = {
 					limit = {
@@ -823,14 +773,6 @@ ideas = {
 				
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.9
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
 						original_tag = TUR
 						has_dlc = "Battle for the Bosporus"
 					}
@@ -859,14 +801,6 @@ ideas = {
 				}
 			}
 			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
 
 				if = {
 					limit = {
@@ -1594,8 +1528,8 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = 0.05
-				civilian_intel_to_others = -10.0
-				navy_intel_to_others = -5
+				civilian_intel_to_others = 5.0
+				navy_intel_to_others = 5
 			}
 
 			cancel_if_invalid = no
