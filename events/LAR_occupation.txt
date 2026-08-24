@@ -1,0 +1,3 @@
+﻿
+add_namespace = occupied_countries
+

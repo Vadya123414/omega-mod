@@ -13667,7 +13667,7 @@ focus_tree = {
 
 	focus = {
 		id = wuw_HUN_a_cult_of_personality
-		icon = GFX_focus_NOR_moscows_education_centers
+		icon = GFX_focus_RAJ_red_in_the_shadows
 		prerequisite = { focus = wuw_HUN_soviet_hungarian_war_indsutry }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
 		x = 0
