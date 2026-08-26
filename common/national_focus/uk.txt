@@ -9450,7 +9450,7 @@ default = no
 		completion_reward = {
 			add_ideas = ENG_british_fas
 			remove_ideas = ENG_the_war_to_end_all_wars
-			add_stability = 0.05
+			add_stability = 0.70
 			add_war_support = 0.05
 			GER = {
 				if = {
@@ -9892,7 +9892,6 @@ default = no
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
 			custom_effect_tooltip = ENG_occupation_laws_tt
-			show_ideas_tooltip = British_police
 			if = {
 				limit = {
 					has_country_leader = { ruling_only = yes name = "Edward VIII" }
