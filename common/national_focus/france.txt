@@ -715,7 +715,7 @@
 		prerequisite = {focus = FRA_colonial_industry }
 		mutually_exclusive = { }
 		relative_position_id = FRA_colonial_industry
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
 			factor = 1
@@ -1442,16 +1442,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			remove_ideas = FRA_victors_of_wwi
-			add_ideas = idea_SIA_order_discipline_and_unity
+			add_ideas = FRA_victors_of_wwi_1
 			custom_effect_tooltip = generic_skip_one_line_tt
-			army_experience = 10
+			army_experience = 100
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_doctrine_cost_reduction = {
-				name = FRA_army_reform
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 		}
 	}	
 

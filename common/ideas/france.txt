@@ -396,7 +396,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = 0.0025
+				stability_weekly = 0.002
 			}
 		}
 
@@ -1263,6 +1263,27 @@ ideas = {
 				war_support_factor = -0.05
 				land_doctrine_cost_factor = 0.5
 				land_mastery_gain_factor = -0.15
+			}
+		}
+
+		FRA_victors_of_wwi_1 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				war_support_factor = 0.05
+				land_mastery_gain_factor = 0.15
 			}
 		}
 
