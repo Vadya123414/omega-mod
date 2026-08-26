@@ -134,6 +134,7 @@ focus_tree = {
 
 
 		completion_reward = {
+			add_political_power = 50
 			ITA = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -377,7 +378,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			is_subject = no
 		}
 
 		bypass = {
@@ -460,6 +461,66 @@ focus_tree = {
 						}
 					}
 				}
+
+
+				IF = {
+					limit = {
+						SLV = {
+							capital_scope = {
+								NOT = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							} 
+						}
+						AUS = {
+							has_completed_focus = AUS_reclaiming_yugoslavian_territories
+						}
+					}
+
+					SLV = {
+						capital_scope = {
+							add_to_array = {
+								array = AUS.expansion_targets
+								value = THIS
+							}
+
+							log = "[THIS.GetName] Added to AUS expansion Array"
+						}
+					}
+					
+
+					IF = {
+						limit = {
+							CRO = {
+								capital_scope = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							}
+							AUS = {
+								has_completed_focus = AUS_reclaiming_yugoslavian_territories
+							}
+						}
+
+						YUG = {
+							capital_scope = {
+								remove_from_array = {
+									array = AUS.expansion_targets
+									value = THIS
+								}
+
+								log = "[THIS.GetName] was removed from the array"
+							}
+						}
+
+						
+					}
+				}
 			}
 		}
 	}
@@ -487,6 +548,7 @@ focus_tree = {
 				controls_state = 852
 				controls_state = 163
 			}
+			is_subject = no
 		}
 
 		bypass = {
@@ -584,6 +646,64 @@ focus_tree = {
 						}
 					}
 				}
+
+				IF = {
+					limit = {
+						CRO = {
+							capital_scope = {
+								NOT = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							}
+						}
+						AUS = {
+							has_completed_focus = AUS_reclaiming_yugoslavian_territories
+						}
+					}
+
+					CRO = {
+						capital_scope = {
+							add_to_array = {
+								array = AUS.expansion_targets
+								value = THIS
+							}
+
+							log = "[THIS.GetName] Added to AUS expansion Array"
+						}
+					}
+					
+
+					IF = {
+						limit = {
+							SLV = {
+								capital_scope = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							}
+							AUS = {
+								has_completed_focus = AUS_reclaiming_yugoslavian_territories
+							}
+						}
+
+						YUG = {
+							capital_scope = {
+								remove_from_array = {
+									array = AUS.expansion_targets
+									value = THIS
+								}
+
+								set_state_flag = AUS_no_longer_expansion_target
+							}
+						}
+						
+					}
+				}
 			}
 		}
 	}
@@ -607,6 +727,7 @@ focus_tree = {
 		available = {
 			controls_state = 109
 			controls_state = 103
+			is_subject = no
 		}
 
 		bypass = {
@@ -650,6 +771,7 @@ focus_tree = {
 						PREV = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+
 						}
 						set_country_flag = yug_croatia_flag
 					}
@@ -730,6 +852,63 @@ focus_tree = {
 						}
 					}
 				}
+
+				IF = {
+					limit = {
+						CRO = {
+							capital_scope = {
+								NOT = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							}
+						}
+						AUS = {
+							has_completed_focus = AUS_reclaiming_yugoslavian_territories
+						}
+					}
+
+					CRO = {
+						capital_scope = {
+							add_to_array = {
+								array = AUS.expansion_targets
+								value = THIS
+							}
+
+							log = "[THIS.GetName] Added to AUS expansion Array"
+						}
+					}
+					
+
+					IF = {
+						limit = {
+							SLV = {
+								capital_scope = {
+									is_in_array = {
+										array = AUS.expansion_targets
+										value = THIS
+									}
+								}
+							}
+							AUS = {
+								has_completed_focus = AUS_reclaiming_yugoslavian_territories
+							}
+						}
+
+						YUG = {
+							capital_scope = {
+								remove_from_array = {
+									array = AUS.expansion_targets
+									value = THIS
+								}
+
+								set_state_flag = AUS_no_longer_expansion_target
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -751,6 +930,7 @@ focus_tree = {
 
 		available = {
 			controls_state = 104
+			is_subject = no
 		}
 
 		bypass = {
@@ -861,6 +1041,7 @@ focus_tree = {
 		available = {
 			controls_state = 104
 			controls_state = 804
+			is_subject = no
 		}
 
 		bypass = {
@@ -990,12 +1171,15 @@ focus_tree = {
 			OR = {
 				controls_state = 108
 				controls_state = 106
+				controls_state = 970
 			}
+			is_subject = no
 		}
 
 		bypass = {
 			NOT = { controls_state = 108 }
 			NOT = { controls_state = 106 }
+			NOT = { controls_state = 970 }
 		}
 
 		cancel_if_invalid = yes
@@ -1148,6 +1332,7 @@ focus_tree = {
 				controls_state = 764
 				controls_state = 45
 			}
+			is_subject = no
 		}
 
 		bypass = {
@@ -1245,6 +1430,7 @@ focus_tree = {
 				controls_state = 764
 				controls_state = 45
 			}
+			is_subject = no
 		}
 
 		bypass = {
@@ -1555,7 +1741,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_attract_axis_capital
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1636,7 +1822,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_evolution
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1660,7 +1846,7 @@ focus_tree = {
 			remove_ideas = YUG_idea_croatian_opposition
 			add_timed_idea = {
 				idea = YUG_idea_croats_suppressed
-				days = 1060
+				days = 500
 			}
 		}
 	}
@@ -1674,7 +1860,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_establish_the_banovina_of_croatia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1701,7 +1887,7 @@ focus_tree = {
 			remove_ideas = YUG_idea_slovene_nationalism
 			add_timed_idea = {
 				idea = YUG_idea_slovene_nationalism_2
-				days = 1060
+				days = 500
 			}
 			ITA = {
 				add_opinion_modifier = { 
@@ -1721,7 +1907,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_establish_the_banovina_of_croatia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1825,7 +2011,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_ban_slovene_nationalist_parties
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1852,7 +2038,7 @@ focus_tree = {
 			remove_ideas = YUG_idea_macedonian_opposition
 			add_timed_idea = {
 				idea = YUG_idea_macedonian_opposition_1
-				days = 1060
+				days = 500
 			}
 		}
 	}
@@ -1866,7 +2052,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_ban_slovene_nationalist_parties
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -1985,10 +2171,10 @@ focus_tree = {
 					has_capitulated = no
 					is_faction_leader = yes
 				}
-				any_other_country = {
-					is_major = yes
+				ITA = {
+					NOT = { has_war_with = ROOT }
+					has_capitulated = no
 					has_government = fascism
-					is_faction_leader = yes
 				}
 			}
 			NOT = {
@@ -2000,7 +2186,10 @@ focus_tree = {
 		}
 
 		bypass = {
+			OR = {
 			is_in_faction_with = GER
+				is_in_faction_with = ITA
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2045,8 +2234,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					get_best_alliance_match_fascism_effect = yes
-					var:best_leader = {
+					ITA = {
 						add_opinion_modifier = { target = YUG modifier = tripartite_pact_opinion }
 						reverse_add_opinion_modifier = { target = YUG modifier = tripartite_pact_opinion }
 					}
@@ -2283,7 +2471,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_greater_yugoslavia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -2300,14 +2488,35 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
 
 		complete_tooltip = {
 
 		}
 
 		completion_reward = {
+
 			add_ideas = YUG_idea_all_yugoslavian_regiments
+
+			IF = {
+				limit = {
+					NOT = {
+						OR = {
+							has_global_flag = SOV_flug_and_shteifon_went_to_germany_flag
+							has_global_flag = SOV_flug_and_shteifon_went_to_russia_flag
+						}
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				show_unit_leaders_tooltip = SOV_vasily_flug
+				show_unit_leaders_tooltip = SOV_boris_shteifon
+
+				hidden_effect = {
+					set_global_flag = SOV_flug_and_shteifon_decided_to_fight_for_yugoslavia_flag
+					set_country_flag = SOV_flug_and_shteifon_are_ready_to_serve_flag
+				}
+			}
+			
 		}
 	}
 
@@ -2377,6 +2586,7 @@ focus_tree = {
 		}
 
 		available = {
+			is_subject = no
 			OR = {
 				AND = {
 					has_country_leader = {
@@ -2617,7 +2827,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_join_allies
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -3001,7 +3211,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_recognize_the_soviet_union
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 200
@@ -3083,7 +3293,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_recognize_the_soviet_union
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 150
@@ -3091,6 +3301,7 @@ focus_tree = {
 
 		available = {
 			communism > 0.4
+			is_subject = no
 		}
 
 		bypass = {
@@ -3130,7 +3341,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_abolish_the_monarchy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -3138,6 +3349,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
+			is_subject = no
 			ANY_comintern_joinable = yes 
 			IF = {
 				limit = {
@@ -3266,6 +3478,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			is_in_faction = no
 		}
 
 		bypass = {
@@ -3279,7 +3492,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = panslavic_workers_congress
+			create_faction_from_template = faction_template_panslavic_workers_congress
 			unlock_decision_tooltip = YUG_instigate_in_bulgaria
 			unlock_decision_tooltip = YUG_instigate_in_albania
 			hidden_effect = { news_event = { id = news.330 } }
@@ -3294,7 +3507,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_join_comintern
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -3370,7 +3583,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_bulgaria
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_generic_befriend_bulgaria
 		prerequisite = { focus = YUG_pan_slavic_workers_congress }
 		x = -1
 		y = 1
@@ -3391,6 +3604,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3427,7 +3641,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_albania
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_generic_befriend_albania
 		prerequisite = { focus = YUG_pan_slavic_workers_congress }
 		x = 1
 		y = 1
@@ -3448,6 +3662,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3522,7 +3737,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_romania
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_invite_romania
 		prerequisite = { focus = YUG_pan_balkan_workers_congress }
 		x = -2
 		y = 1
@@ -3543,6 +3758,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3588,7 +3804,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_greece
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_generic_befriend_greece
 		prerequisite = { focus = YUG_pan_balkan_workers_congress }
 		x = 0
 		y = 1
@@ -3609,6 +3825,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3654,7 +3871,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_hungary
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_generic_befriend_hungary
 		prerequisite = { focus = YUG_pan_balkan_workers_congress }
 		x = 2
 		y = 1
@@ -3675,6 +3892,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3720,7 +3938,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_invite_turkey
-		icon = GFX_goal_generic_alliance
+		icon = GFX_focus_generic_befriend_turkey
 		prerequisite = { focus = YUG_invite_greece }
 		prerequisite = { focus = YUG_invite_hungary }
 		prerequisite = { focus = YUG_invite_romania }
@@ -3743,6 +3961,7 @@ focus_tree = {
 				has_government = communism
 			}
 			is_faction_leader = yes
+			is_subject = no
 		}
 
 		bypass = {
@@ -3812,6 +4031,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = YUG_industrialization_program
 				bonus = 1.0
 				uses = 2
 				category = industry
@@ -4473,7 +4693,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_develop_slovenian_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -4772,7 +4992,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = YUG_develop_military_industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -4917,7 +5137,7 @@ focus_tree = {
 		x = 27
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -4945,7 +5165,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = air_doctrine
 			}
 		}
@@ -4993,7 +5213,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5054,7 +5274,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5115,7 +5335,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5176,7 +5396,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5228,13 +5448,13 @@ focus_tree = {
 
 	focus = {
 		id = YUG_heavy_fighter_project
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_usa_escort_fighters
 		prerequisite = { focus = YUG_the_ik_3 }
 		x = -1
 		y = 3
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -5266,13 +5486,13 @@ focus_tree = {
 
 	focus = {
 		id = YUG_bomber_project
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_SWE_marauder_bombers
 		prerequisite = { focus = YUG_the_ik_3 }
 		x = 1
 		y = 3
 		relative_position_id = YUG_local_developers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -5375,7 +5595,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_purchase_foreign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5409,7 +5629,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_purchase_foreign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5493,7 +5713,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_purchase_foreign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -5580,7 +5800,7 @@ focus_tree = {
 		x = 37
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -5605,7 +5825,7 @@ focus_tree = {
 
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 50
 		}
 	}
 
@@ -5658,7 +5878,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_motorize_the_cavalry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -5701,7 +5921,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_motorize_the_cavalry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -5781,7 +6001,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_motorize_the_cavalry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -5859,7 +6079,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_army_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -5891,13 +6111,13 @@ focus_tree = {
 
 	focus = {
 		id = YUG_domestic_artillery_production
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = YUG_small_arms }
 		x = 0
 		y = 1
 		relative_position_id = YUG_small_arms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -6080,44 +6300,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = YUG_form_parachute_battalions
-		icon = GFX_focus_generic_paratrooper
-		prerequisite = { focus = YUG_motorized_recon_companies }
-		x = 0
-		y = 3
-		relative_position_id = YUG_mountain_brigades
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = YUG_form_parachute_battalions
-				bonus = 3.0
-				uses = 1
-				category = para_tech
-			}
-		}
-	}
-
-	focus = {
 		id = YUG_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = YUG_army_modernization }
@@ -6125,7 +6307,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_army_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -6164,7 +6346,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -6185,12 +6367,24 @@ focus_tree = {
 
 
 		completion_reward = {
+
+			add_mastery_bonus = {
+				name = YUG_supremacy_of_offense
+				bonus = 0.1
+				days = 180
+				track = combat_support
+			}
+			add_mastery_bonus = {
+				name = YUG_supremacy_of_offense
+				bonus = 0.1
+				days = 180
+				track = armor
+			}
 			add_doctrine_cost_reduction = {
 				name = YUG_supremacy_of_offense
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_mobile_warfare
-				category = cat_superior_firepower
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
 			}
 		}
 	}
@@ -6204,7 +6398,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -6225,25 +6419,37 @@ focus_tree = {
 
 
 		completion_reward = {
+
+			add_mastery_bonus = {
+				name = YUG_supremacy_of_defense
+				bonus = 0.1
+				days = 180
+				track = infantry
+			}
+			add_mastery_bonus = {
+				name = YUG_supremacy_of_defense
+				bonus = 0.1
+				days = 180
+				track = operations
+			}
 			add_doctrine_cost_reduction = {
 				name = YUG_supremacy_of_defense
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_grand_battle_plan
-				category = cat_mass_assault
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
 			}
 		}
 	}
 
 	focus = {
 		id = YUG_artillery_regiments
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_focus_SWE_let_fly_all_guns
 		prerequisite = { focus = YUG_supremacy_of_offense focus = YUG_supremacy_of_defense }
 		x = 0
 		y = 2
 		relative_position_id = YUG_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -6276,7 +6482,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = YUG_army_maneuvers
 
-		cost = 10
+		cost = 5
 		
 		allow_branch = {
 			has_dlc = "By Blood Alone"
@@ -6318,7 +6524,7 @@ focus_tree = {
 		x = 45
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -6349,10 +6555,10 @@ focus_tree = {
 
 		completion_reward = {
 			103 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -6367,7 +6573,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -6407,7 +6613,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -6434,7 +6640,7 @@ focus_tree = {
 				name = YUG_replace_the_dalmacija
 				bonus = 1.0
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}
@@ -6447,7 +6653,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -6487,7 +6693,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -6527,7 +6733,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -6561,13 +6767,13 @@ focus_tree = {
 
 	focus = {
 		id = YUG_expand_the_serbian_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_POL_develop_polish_shipbuilding
 		mutually_exclusive = { focus = YUG_expand_the_split_shipyards }
 		x = 3
 		y = 0
 		relative_position_id = YUG_expand_the_split_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -6598,10 +6804,10 @@ focus_tree = {
 
 		completion_reward = {
 			105 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -6616,7 +6822,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_expand_the_serbian_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -6743,7 +6949,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = YUG_expand_the_serbian_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20

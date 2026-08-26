@@ -35,28 +35,6 @@ country_event = {
 			}
 			SOV = { country_event = { id = bftb_turkey.4 hours = 12 } }
 		}
-	}
-	option = {
-		name = bftb_turkey.1.b #we must not involve ourselves
-		ai_chance = {
-			factor = 20
-			modifier = {
-				OR = {
-					has_completed_focus = ENG_revisit_colonial_policy
-					has_completed_focus = ENG_concessions_to_the_trade_unions
-				}
-				factor = 80
-			}
-		}
-		add_stability = -0.05
-		custom_effect_tooltip = TUR_britain_unentangles_itself_tt
-		hidden_effect = {
-			TUR = {
-				set_country_flag = TUR_no_british_support
-				country_event = { id = bftb_turkey.3 hours = 8 }
-			}
-			SOV = { country_event = { id = bftb_turkey.4 hours = 12 } }
-		}
 	}	
 }
 #The Montreux Convention - Britain supports us
@@ -114,20 +92,6 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = bftb_turkey.4.b #it matters little to us
-		ai_chance = {
-			factor = 50
-			modifier = {
-				check_variable = { SOV_great_purge_counter > 0 }
-				factor = 0.25
-			}
-		}
-		custom_effect_tooltip = TUR_soviets_allow_militarisation_tt
-		hidden_effect = {
-			TUR = { country_event = { id = bftb_turkey.6 hours = 8 } }
-		}
-	}	
 }
 #The Montreux Convention - Soviets Oppose Turkish Remilitarisation of the Straits
 country_event = {

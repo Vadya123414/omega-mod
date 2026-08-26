@@ -959,7 +959,7 @@ focus_tree = {
 	focus = {
 		id = USA_end_monarchism
 		icon = GFX_focus_rom_abdicate
-		x = 4
+		x = 3
 		y = 1
 		prerequisite = { focus = USA_reach_out_to_the_ware_group }
 		relative_position_id = USA_reach_out_to_the_ware_group
@@ -1060,7 +1060,7 @@ focus_tree = {
 	focus = {
 		id = USA_shatter_the_empires
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 4
+		x = 3
 		y = 2
 		prerequisite = { focus = USA_end_monarchism }
 		relative_position_id = USA_reach_out_to_the_ware_group
@@ -1299,7 +1299,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_wpa }
 		relative_position_id = USA_wpa
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10000
@@ -1339,7 +1339,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_agricultural_adjustment_act }
 		relative_position_id = USA_wpa
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10000
@@ -1379,7 +1379,7 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_fair_labour_standards_act }
 		relative_position_id = USA_wpa
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10000
@@ -1486,7 +1486,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_wpa }
 		relative_position_id = USA_wpa
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 7000
@@ -1562,7 +1562,7 @@ focus_tree = {
 		relative_position_id = USA_continue_the_new_deal
 
 		offset = {
-			x = -1
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -1946,7 +1946,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_war = yes
-				has_war_support > 0.25
+				has_war_support > 0.3
 			}
 			
 		}
@@ -1972,8 +1972,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 30 }
-			add_ideas = low_economic_mobilisation
+			add_ideas = partial_economic_mobilisation
 			
 		}
 	}
@@ -1987,8 +1986,8 @@ focus_tree = {
 		relative_position_id = USA_black_chamber
 
 		offset = {
-			x = -1
-			y = -4
+			x = 0
+			y = -2
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -1998,7 +1997,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -1
+			x = 0
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -2041,7 +2040,7 @@ focus_tree = {
 		prerequisite = { focus = USA_scientist_haven }
 		
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_scientist_haven
 		cost = 10
 		#ai_will_do = {
@@ -2187,7 +2186,7 @@ focus_tree = {
 
 		offset = {
 			x = -1
-			y = -1
+			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -2198,8 +2197,8 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -2
-			y = -1
+			x = -1
+			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -2210,8 +2209,8 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 0
-			y = -1
+			x = 1
+			y = 0
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -2353,7 +2352,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
-			add_timed_idea = {idea = USA_mob days = 365}
 			362 = { set_state_category = megalopolis }
 			361 = { set_state_category = megalopolis }
 			359 = { set_state_category = megalopolis }
@@ -2609,7 +2607,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 800
 		}
@@ -2890,7 +2888,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_military_construction
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 800
 		}
@@ -4731,7 +4729,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 42
+		x = 43
 		y = 0
 		offset = {
 			x = -26

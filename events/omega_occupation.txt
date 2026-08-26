@@ -14,3 +14,19 @@ country_event = {
 	}
 }
 
+add_namespace = napoleon
+
+news_event = {
+	id = napoleon.1
+	title = napoleon.1.t
+	desc = napoleon.1.desc
+	picture = GFX_news_event_047
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = napoleon.1.a
+	}
+}
