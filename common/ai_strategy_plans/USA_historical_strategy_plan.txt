@@ -95,7 +95,7 @@ USA_historical_plan = {
 		medium_air = 200.0
 		cat_air_engine = 20.0
 		air_equipment = 10.0
-		light_air = -200.0
+		light_air = 20.0
         heavy_air = -200.0
         cat_air_guns = 20.0
 		naval_armor = -500.0
@@ -112,8 +112,7 @@ USA_historical_plan = {
 
 	ideas = {
 		war_industrialist = 50
-		financial_expert = 100
-		silent_workhorse = 80
+		USA_dwight_d_eisenhower = 10
 	}
 	traits = {
 		war_industrialist = 10
