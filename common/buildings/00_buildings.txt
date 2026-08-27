@@ -295,12 +295,12 @@ buildings = {
 		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
-				max_fuel_building = 100.0 #k
+				max_fuel_building = 125.0 #k
 			}
 		}
 		
 		level_cap = {
-			shares_slots = yes
+			shares_slots = no
 		}
 	}
 
@@ -413,7 +413,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 30000
+		base_cost = 20000
 		icon_frame = 13
 		nuclear_reactor = yes
 		value = 10
@@ -431,7 +431,7 @@ buildings = {
 
 		level_cap = {
 			state_max = 1
-			shares_slots = yes
+			shares_slots = no
 			group_by = reactors
 		}
 	}
@@ -444,7 +444,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 25000
+		base_cost = 17500
 		icon_frame = 13
 		nuclear_reactor = yes
 		value = 10
@@ -461,7 +461,7 @@ buildings = {
 
 		level_cap = {
 			state_max = 1
-			shares_slots = yes
+			shares_slots = no
 			group_by = reactors
 		}
 	}
@@ -475,7 +475,7 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 35000
+		base_cost = 17500
 		icon_frame = 27
 		nuclear_reactor = yes
 		affects_energy = yes
@@ -493,12 +493,12 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1			
-			local_factory_energy_consumption = -0.50
+			local_factory_energy_consumption = -0.9
 		}
 
 		level_cap = {
 			state_max = 1
-			shares_slots = yes
+			shares_slots = no
 			group_by = reactors
 		}
 	}
