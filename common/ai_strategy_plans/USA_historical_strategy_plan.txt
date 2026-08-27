@@ -25,87 +25,60 @@ USA_historical_plan = {
 			}
 		}
 	}
-	abort = {
-		OR = {
-			AND = {
-				has_game_rule = {
-					rule = USA_ai_behavior
-					option = DEFAULT
-				}
-				OR = {	
-					GER = {
-						OR = {
-							has_completed_focus = GER_oppose_hitler_ww
-							has_completed_focus = GER_oppose_hitler
-						}
-					}
-					ENG = {
-						not = { has_government = democratic }
-					}
-					has_war_with = CAN
-					has_war_with = MEX
-					JAP = {
-						not = {
-							OR = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	#abort = {
+	#	OR = {
+	#		AND = {
+	#			has_game_rule = {
+	#				rule = USA_ai_behavior
+	#				option = DEFAULT
+	#			}
+	#			OR = {	
+	#				GER = {
+	#					OR = {
+	#						has_completed_focus = GER_oppose_hitler_ww
+	#						has_completed_focus = GER_oppose_hitler
+	#					}
+	#				}
+	#				ENG = {
+	#					not = { has_government = democratic }
+	#				}
+	#				has_war_with = CAN
+	#				has_war_with = MEX
+	#				JAP = {
+	#					not = {
+	#						OR = {
+	#							has_government = fascism
+	#							has_government = neutrality
+	#						}
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
 
 	ai_national_focuses = {
 		USA_continue_the_new_deal
 		USA_wpa
-		USA_war_department
-		USA_air_war_plans_division
-		USA_war_plans_division
-		#1937
 		USA_agricultural_adjustment_act
-		USA_neutrality_act
-		USA_intervention_in_asia
-		USA_war_plan_orange
-		USA_intervention_in_europe
-		#1938
-		USA_war_plan_black
-		USA_strategic_bombing
 		USA_fair_labour_standards_act
-		USA_escort_fighters
-		USA_arsenal_of_democracy
-		#1939
-		USA_scientist_haven
-		USA_military_construction
-		USA_USACE_projects
-		USA_manhattan_project
 		USA_federal_housing_act
-		#1940
-		USA_the_giant_wakes
-		USA_military_construction
-		USA_two_ocean_navy_act
-		USA_fund_the_navy
+		USA_war_department
 		USA_selective_training_act
-		USA_destroyers_for_bases
-		#1941
-		USA_maritime_commission
-		USA_liberty_ships
-		USA_lend_lease_act
+		USA_neutrality_act
+		USA_arsenal_of_democracy
+		USA_the_giant_wakes
+		USA_two_ocean_navy_act
 		USA_office_of_scientific_research_and_development
-		USA_louisiana_maneuvers
-		USA_support_rock_island
-		#1942
-		USA_tank_experiments
-		USA_tank_destroyer_doctrine
-		USA_combined_bomber_offensive
+		USA_scientist_haven
 		USA_bureau_of_ships
-		USA_carrier_primacy
-		#1943
-		USA_wartime_industry
+		USA_air_war_plans_division
+		USA_air_support
+		USA_strategic_bombing
+		USA_TAC
 		USA_build_the_pentagon
-		USA_army_of_the_united_states
-		USA_womens_armed_service_integration_act
+		USA_department_of_defense
+		
 	}
 
 	focus_factors = {
@@ -113,16 +86,39 @@ USA_historical_plan = {
 	}
 
 	research = {
-
+		industry = 40.0
+		synth_resources = -200.0
+		electronics = -10.0
+		infantry_weapons = 15.0
+		mountaineers_tech = 5.0
+		artillery = 8.0
+		medium_air = 200.0
+		cat_air_engine = 20.0
+		air_equipment = 10.0
+		light_air = -200.0
+        heavy_air = -200.0
+        cat_air_guns = 20.0
+		naval_armor = -500.0
+		naval_artillery = -500.0
+		cat_torpedoes = -500.0
+		cat_ship_light_battery = -500.0
+		cat_ship_medium_battery = -500.0
+		cat_ship_heavy_battery = -500.0
+		armor = -500.0
+		cat_light_armor = -500.0
+		cat_medium_armor = -500.0
+		cat_heavy_armor = -500.0
 	}
 
 	ideas = {
-
+		war_industrialist = 50
+		financial_expert = 100
+		silent_workhorse = 80
 	}
 	traits = {
-		war_industrialist = 5
-		financial_expert = 10
-		silent_workhorse = 25
+		war_industrialist = 10
+		financial_expert = 100
+		silent_workhorse = 50
 	}
 
 	ai_strategy = {

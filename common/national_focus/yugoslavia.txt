@@ -2301,9 +2301,9 @@ focus_tree = {
 		id = YUG_ustup_italy 
 		icon = GFX_focus_ETH_invite_italian_settlers
 		prerequisite = { focus = YUG_join_axis focus = YUG_united_kingdom }
-		x = -1
+		x = 3
 		y = 1
-		relative_position_id = YUG_united_kingdom
+		relative_position_id = YUG_join_axis
 
 		cost = 5
 
@@ -2334,14 +2334,16 @@ focus_tree = {
            	 	relation = non_aggression_pact
             	active = yes
         	}
-			ITA = {give_guarantee = YUG}
-			YUG = {give_resource_rights = { receiver = ITA state = 105 }}
-			YUG = {give_resource_rights = { receiver = ITA state = 106 }}
-		    ITA = {
-				YUG = {
-				give_resource_rights = 105
-				give_resource_rights = 106
+			YUG = {
+				give_resource_rights = { 
+					receiver = ITA state = 105 
 				}
+				give_resource_rights = { 
+					receiver = ITA state = 106 
+				}
+			}
+		    ITA = {
+				give_guarantee = YUG
 				transfer_state = 103
 				transfer_state = 853
 				transfer_state = 102
@@ -2385,7 +2387,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no 
-		available_if_capitulated = no
+		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		complete_tooltip = {
@@ -2431,7 +2433,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = YUG_join_axis
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 100
@@ -2487,7 +2489,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
+		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
 
 		complete_tooltip = {
@@ -2843,7 +2845,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = no
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_to_tech_sharing_group = YUG_air_research_group

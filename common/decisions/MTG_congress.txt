@@ -87,12 +87,16 @@ USA_congress = {
 		}
 		cost = 25
 		ai_will_do = {
-			factor = 100
+			factor = 0
 			modifier = {
 				congress_low_support_trigger = yes
 				factor = 0
 			}
-		}
+			modifier = {
+				NOT = {has_completed_focus = USA_selective_training_act}
+				factor = 1
+			}	
+			}
 		days_re_enable = 90
 		complete_effect = {
 			USA_congress_small_support = yes
@@ -157,7 +161,7 @@ USA_congress = {
 		visible = { has_completed_focus = USA_agricultural_adjustment_act }
 		cost = 0
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
 				congress_low_support_trigger = yes
 				factor = 0
@@ -203,10 +207,11 @@ USA_congress = {
 		days_remove = 90
 		days_re_enable = 275
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
+				if = { limit = {date > 1938.1.1}}
 				congress_low_support_trigger = yes
-				factor = 0
+				factor = 1
 			}
 		}
 		modifier = { consumer_goods_factor = -0.10 }
@@ -224,10 +229,11 @@ USA_congress = {
 		days_remove = 90
 		days_re_enable = 275
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
+				if = { limit = {date > 1938.1.1}}
 				congress_low_support_trigger = yes
-				factor = 0
+				factor = 1
 			}
 		}
 		modifier = { research_speed_factor = 0.08 }

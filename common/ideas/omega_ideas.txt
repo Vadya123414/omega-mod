@@ -326,13 +326,12 @@ ideas = {
 			picture = generic_monarchist_uprising
 
 			modifier = {
-				neutrality_drift_ = 0.05
+				neutrality_drift = 0.05
 				political_power_factor = 0.15 
 				consumer_goods_expected_value = -0.10
 				conscription = 0.05
 				stability_weekly = 0.001
 				production_factory_efficiency_gain_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.05
 			} 
                    
 		}
@@ -1357,30 +1356,6 @@ ideas = {
 			} 
 		}
 		
-		HUN_ass = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = generic_aircraft_support
-
-			removal_cost = -1
-			
-			modifier = {
-				conscription_factor = 0.15
-				small_plane_airframe = {
-					build_cost_ic = -0.15  instant = yes
-				}
-			    air_agility_factor = 0.15
-				air_range_factor = 0.15
-			}
-		}
-		
 		CAN_commi = {
 			picture = SOV_system_decentralization
 			allowed = {
@@ -1552,35 +1527,6 @@ ideas = {
 				industrial_capacity_dockyard = -3
 			}
 		}
-			
-			MON_industry = {	
-			allowed = {
-				always = no
-			}
-
-			picture = SOV_third_five_year_plan_civilian
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			
-			
-			removal_cost = -1
-	
-			modifier = {
-		industrial_capacity_factory = 0.10	
-		consumer_goods_factor = -0.05		
-		political_power_gain = -0.25
-		stability_factor = -0.1
-		global_building_slots_factor = 0.25
-			}
-			}
-			
-			
-		
-		
-		
 		}
 }
 	

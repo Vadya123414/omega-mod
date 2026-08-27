@@ -7241,7 +7241,7 @@
 		completion_reward = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.1
+				popularity = 0.4
 			}
 
 			hidden_effect = {
@@ -7345,7 +7345,7 @@
 		}
 
 		available = {
-			
+			is_subject = no
 		}
 		
 		bypass = {
@@ -7443,6 +7443,7 @@
 					ideology = moderatism
 					traits = {
 						duke_of_orleans
+						count_of_paris
 					}
 				}
 			}
@@ -7455,6 +7456,7 @@
 					ideology = moderatism
 					traits = {
 						count_of_paris
+						duke_of_orleans
 					}
 				}
 			}
@@ -7749,6 +7751,7 @@
 					ideology = despotism
 					traits = {
 						disdain_for_politicians_1
+						count_of_paris
 					}
 				}
 			}
@@ -7761,6 +7764,7 @@
 					ideology = despotism
 					traits = {
 						disdain_for_politicians_1
+						count_of_paris
 					}
 				}
 			}
@@ -7773,6 +7777,9 @@
 			hidden_effect = {
 				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = charles_maurras
 		}
 	}
 	focus = {
@@ -8141,10 +8148,6 @@
 		available = {
 			
 			is_subject = no
-			OR = {
-				is_in_faction = no
-				is_faction_leader = yes
-			}
 		}
 		
 		bypass = {
@@ -8166,6 +8169,7 @@
 				ideology = despotism
 				traits = {
 					disdain_for_politicians_1
+					count_of_paris
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8191,6 +8195,9 @@
 				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
 			set_cosmetic_tag = FRA_THIRD_EMPIRE
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = charles_maurras
 		}
 	}
 	focus = {
@@ -8225,12 +8232,6 @@
 				}
 			}
 			HOL = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-			ENG = {
 				OR = {
 					exists = no
 					is_subject_of = ROOT
@@ -8285,6 +8286,7 @@
 		available = {
 			is_subject = no
 			OR = {
+			OR = {
 				HOL = {
 					is_subject_of = ROOT
 				}
@@ -8299,6 +8301,7 @@
 				any_controlled_state = {
 					is_core_of = BEL
 				}
+			}
 			}
 		}
 		
@@ -8340,14 +8343,6 @@
 
 		available = {
 			is_subject = no
-			OR = {
-				HOL = {
-					is_subject_of = ROOT
-				}
-				any_controlled_state = {
-					is_core_of = HOL
-				}
-			}
 		}
 		
 		bypass = {

@@ -25,7 +25,6 @@ default = no
 	focus = {
 		id = ENG_ind
 		icon = GFX_focus_generic_british_trade
-		mutually_exclusive = { focus = IRE_sabotage }
 		cost = 5
 		ai_will_do = {
 			factor = 5
@@ -48,7 +47,6 @@ default = no
 		focus = {
 		id = ENG_scotland
 		icon = GFX_focus_generic_mining_industry
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
 		cost = 5
 		ai_will_do = {
@@ -82,7 +80,6 @@ default = no
 		focus = {
 		id = ENG_england
 		icon = GFX_focus_generic_aluminum
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
 		cost = 5
 		ai_will_do = {
@@ -113,7 +110,6 @@ default = no
 		focus = {
 		id = ENG_yels
 		icon = GFX_goal_generic_construct_naval_dockyard
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
 		cost = 5
 		ai_will_do = {
@@ -144,7 +140,6 @@ default = no
 		focus = {
 		id = ENG_north
 		icon = GFX_goal_generic_construct_civ_factory
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
 		cost = 5
 		ai_will_do = {
@@ -175,7 +170,6 @@ default = no
 		focus = {
 		id = ENG_end_ind
 		icon = GFX_focus_chi_british_cooperation
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_north  focus = ENG_scotland  focus = ENG_england  focus = ENG_yels}
 		cost = 10
 		ai_will_do = {
@@ -3994,10 +3988,6 @@ default = no
 					instant_build = yes
 				}	
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_ideas = ENG_evacuated_colonial_assets
 
 		}
 

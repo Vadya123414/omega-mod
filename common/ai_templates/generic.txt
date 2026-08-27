@@ -89,13 +89,7 @@ garrison_generic = {
 		}
 		
 		target_template = {
-			
-			support = {
-			}
 
-			regimental_support = {
-			}
-			
 			regiments = {
 				cavalry = 1
 			}
@@ -121,8 +115,6 @@ suppression_generic = {
 		}
 		
 		target_template = {
-			
-			support = { }
 
 			regiments = {
 				cavalry = 1
