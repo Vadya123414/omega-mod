@@ -1117,6 +1117,10 @@ focus_tree = {
 		y = 1
 		
 		completion_reward = {
+			set_technology = {
+					basic_ship_hull_heavy = 1
+					improved_heavy_battery = 1
+				}
 			create_equipment_variant = {
 					name = "America Class"
 					type = ship_hull_heavy_2
@@ -1124,19 +1128,17 @@ focus_tree = {
 					parent_version = 0
 					allow_without_tech = yes 
 					modules = {
-						fixed_ship_battery_slot = ship_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-						fixed_ship_radar_slot = empty
+						fixed_ship_battery_slot = ship_heavy_battery_3
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = ship_radar_2
 						fixed_ship_engine_slot = heavy_ship_engine_2
 						fixed_ship_secondaries_slot = ship_secondaries_2
 						fixed_ship_armor_slot = ship_armor_shbb
-						front_1_custom_slot = ship_anti_air_1
-						front_2_custom_slot = ship_airplane_launcher_1
-						mid_1_custom_slot = empty
+						front_1_custom_slot = ship_heavy_battery_3
+						mid_1_custom_slot = ship_secondaries_2
 						mid_2_custom_slot = ship_secondaries_2
-						mid_3_custom_slot = ship_secondaries_2
-						
+						rear_1_custom_slot = ship_heavy_battery_3
 					}
 				}
 			add_equipment_production = {

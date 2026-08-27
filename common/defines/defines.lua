@@ -1,6 +1,27 @@
-NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.2, 0.1, 0.05, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
+--Оптимизация
+NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.19, 0.12, 0.07, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60;
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
+NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
+NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
+NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
+NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1					--чтобы линия фронта у ии не открисовывалась красиво, на ум бота это не повлияет, просто визуал
+NDefines.NNavy.CONVOY_LOSS_HISTORY_TIMEOUT_MONTHS = 3 -- 24. ограничивает историю потерь конвоев тремя месяцами вместо двух лет.
+NDefines.NNavy.NAVAL_COMBAT_RESULT_TIMEOUT_YEARS = 0.25 -- 2 . (0.25 years = 3 months) очищает всплывающие окна морских сражений спустя 3 месяца (0.25 года) вместо 2 лет.
+NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 3 --  12.Сокращает время хранения истории потерь в гарнизонах с одного года до 3 месяцев
+NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false -- полностью отключает запись истории приказов и маршрутов перемещения для всех дивизий ИИ.
+NDefines.NAir.BOMBERS_DIVISION_FACTOR = 200 -- Default 30. чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.FIGHTERS_DIVISION_FACTOR = 200 -- Default 30.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.MISSILES_DIVISION_FACTOR = 200 -- Default 60.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.TRANSPORT_DIVISION_FACTOR = 200 -- Default 30.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NNavy.NAVAL_ACCIDENTS_DAYS_TO_LIVE = 30 -- Default 120. Снижение лога аварий
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 30 -- Default 7. Думают дольше, например апнуть ли шаблон
+NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 14 -- Default 7. Думают дольше, например апнуть ли шаблон
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 30 -- Default 7. ИИ реже рассчитывает дизайн шаблонов.
+NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 96 -- Default 24. Оценка дипломатии и торговли для ИИ ограничена частотой раз в 4 дня. ИИ реже отправляет дипломатические запросы.
+NDefines.NAI.REMOVE_OBSOLETE_TEMPLATE_DAYS = 90 -- Default 180. ИИ быстрее очищает пустые неиспользуемые шаблоны, чтобы сэкономить оперативную память.
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 90 -- Default 30. ИИ реже проверяет наличие улучшений доктрины.
+NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 20 -- Default 7. выбирает теху дольше 
 
 --Армия
 --NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72;
@@ -46,9 +67,9 @@ NDefines.NProduction.SHIP_REFIT_MAX_PROGRESS_TO_CANCEL = 0.99;
 --NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0        -- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0        -- XP cost for converting one equipment module to a related module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0         -- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
---NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
---NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
---NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
+NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
 
 ---AI 
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
@@ -92,7 +113,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.7 ---размены в воздухе(ванила = 1)
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
