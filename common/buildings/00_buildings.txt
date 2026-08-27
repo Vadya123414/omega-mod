@@ -394,7 +394,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 5
 			}
 		}
 		level_cap = {
@@ -714,25 +714,6 @@ buildings = {
 	
 	#### Energy
 	
-	energy_infrastructure = {
-		base_cost = 12000
-		icon_frame = 30
-		value = 1
-
-		show_modifier = yes
-		affects_energy = yes
-
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = infrastructure_keystone
-		}
-		state_modifiers = {
-			local_factory_energy_consumption_per_infrastructure = -0.075
-		}
-	}
-	
 	industrial_infrastructure = {
 		base_cost = 12000
 		icon_frame = 31
@@ -748,6 +729,7 @@ buildings = {
 		}
 		state_modifiers = {
 			local_resource_gain_efficiency_per_infrastructure = 0.10
+			local_factory_energy_consumption_per_infrastructure = -0.075
 		}
 	}
 }

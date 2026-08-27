@@ -54,7 +54,7 @@ technologies = {
 			leads_to_tech = tech_maintenance_company
 			research_cost_coeff = 1
 		}
-		research_cost = 0.5
+		research_cost = 0.25
 		start_year = 1918
 		folder = {
 			name = support_folder
@@ -1853,7 +1853,7 @@ technologies = {
 			train_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.25
 		start_year = 1910
 		folder = {
 			name = support_folder
