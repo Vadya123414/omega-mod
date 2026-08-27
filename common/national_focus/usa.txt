@@ -128,7 +128,10 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			if= {limit = {is_ai = no}
 			add_political_power = 150
+			}
+			else_if = {add_ideas = USA_henry_morgenthau}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -203,7 +206,7 @@ focus_tree = {
 	focus = {
 		id = USA_desegregate_the_armed_forces
 		icon = GFX_goal_generic_small_arms
-		x = -6
+		x = -8
 		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
@@ -310,6 +313,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			
 			set_politics = { ruling_party = communism elections_allowed = yes } #good and nice communism has elections
 			add_popularity = { ideology = communism popularity = 0.25 }
 			hidden_effect = {
@@ -324,6 +328,7 @@ focus_tree = {
 					country_event = mtg_usa_civil_war_fascists.4
 				}
 			}
+			add_country_leader_trait = communist_revolutionary
 		}
 	}
 	focus = {
@@ -447,7 +452,7 @@ focus_tree = {
 	focus = {
 		id = USA_union_representation_act
 		icon = GFX_focus_usa_union_representation_act
-		x = -3
+		x = -4
 		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
@@ -477,6 +482,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_timed_idea = {days = 720 idea = USA_civil_war}
+			add_war_support = 0.05
 			if = {
 				limit = {
 					not = { congress_high_support_trigger = yes }
@@ -679,7 +686,7 @@ focus_tree = {
 	focus = {
 		id = USA_militia_organization_act
 		icon = GFX_focus_secret_rearmament
-		x = 2
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_guarantee_the_american_dream }
 		relative_position_id = USA_guarantee_the_american_dream
@@ -748,6 +755,7 @@ focus_tree = {
 				USA_congress_large_opposition = yes
 			}
 			USA_great_depression_level_down = yes
+			effect_tooltip = USA_communal_domain
 			unlock_decision_tooltip = { decision = USA_communal_domain show_effect_tooltip = yes }
 
 		}
@@ -798,9 +806,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_suspend_the_presecution }
-		prerequisite = { focus = USA_agricultural_adjustment_act }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 140
@@ -837,7 +844,7 @@ focus_tree = {
 		y = 5
 		prerequisite = { focus = USA_reach_out_to_the_ware_group }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 140
@@ -874,7 +881,7 @@ focus_tree = {
 		id = USA_unholy_alliance
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = USA_us_ussr_economic_cooperation }
-		mutually_exclusive = { focus = USA_secure_china }
+		mutually_exclusive = { focus = USA_secure_china focus = USA_allience_JAP}
 		
 		available = {
 			is_in_faction = no
@@ -901,12 +908,70 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_allience_JAP
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		x = -2
+		y = 3
+		prerequisite = { focus = USA_reach_out_to_the_ware_group }
+		mutually_exclusive = { focus = USA_unholy_alliance focus = USA_secure_china}
+		relative_position_id = USA_reach_out_to_the_ware_group
+		cost = 10
+
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available = {
+			USA = {has_government = communism}
+			JAP = {has_government = communism}
+			NOT = {has_country_flag = VUP_Hist_version}
+			not = {
+				has_war_with = JAP
+			}
+			OR = {
+				is_faction_leader = yes
+					JAP = {
+						is_faction_leader = yes
+					}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					event_target:JAP = {
+						is_faction_leader = yes
+					}
+				}
+				event_target:JAP = {
+					country_event = generic.2
+				}
+			}
+			else_if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				event_target:JAP = {
+					country_event = generic.5
+				}
+			}
+		}
+	}
+	focus = {
 		id = USA_secure_china
 		icon = GFX_focus_chi_cooperation_with_the_communists
 		x = 2
 		y = 3
 		prerequisite = { focus = USA_reach_out_to_the_ware_group }
-		mutually_exclusive = { focus = USA_unholy_alliance }
+		mutually_exclusive = { focus = USA_unholy_alliance focus = USA_allience_JAP}
 		relative_position_id = USA_reach_out_to_the_ware_group
 		cost = 10
 
@@ -1289,7 +1354,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			if= {limit = {is_ai = no}
 			add_political_power = 150
+			}
+			else_if = {add_ideas = USA_robert_taft}
 		}
 	}
 	focus = {
@@ -1512,13 +1580,12 @@ focus_tree = {
 	focus = {
 		id = USA_rubber_reserve_company
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = USA_office_of_scientific_research_and_development }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard}
 		available = {
-			
 		}
 		x = 2
-		y = 2
-		relative_position_id = USA_wpa
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2538,12 +2605,12 @@ focus_tree = {
 					NOT = { has_idea = isolation }
 					NOT = { has_country_flag = USA_the_giant_wakes_added_civ_eco }
 				}
-				add_political_power = 100
+				add_political_power = 150
 			}
 			if = {
 				limit = {
+					is_ai = no
 					OR = {
-						is_ai = no
 						has_idea = isolation 
 						has_idea = undisturbed_isolation 
 						has_country_flag = USA_the_giant_wakes_added_civ_eco
@@ -2554,14 +2621,15 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					is_ai = yes
 					OR = {
-						is_ai = yes
 						has_idea = isolation 
 						has_idea = undisturbed_isolation 
 						has_country_flag = USA_the_giant_wakes_added_civ_eco
 					}
 				}
-				add_ideas = civilian_economy
+				add_political_power = -150
+				add_ideas = partial_economic_mobilisation
 				set_country_flag = USA_the_giant_wakes_added_civ_eco
 			}
 		}
@@ -3138,6 +3206,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			
 			add_timed_idea = { idea = USA_adjusted_compensation_payment days = 180 }
 			USA_great_depression_level_down = yes
 			if = {
@@ -3494,6 +3563,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			add_timed_idea = { idea = USA_civil_war days = 720 }
+			add_war_support = 0.05
 			USA_congress_medium_support = yes
 			unlock_decision_tooltip = { decision = USA_beat_up_opposition show_effect_tooltip = yes }
 			if = {
@@ -3794,6 +3865,7 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_honor_the_confederacy
 			custom_effect_tooltip = USA_honor_the_confederacy_tt
+			add_country_leader_trait = fascist_demagogue
 		}
 	}
 
