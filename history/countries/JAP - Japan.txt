@@ -299,6 +299,7 @@ add_ideas = {
 
 	# Laws
 	limited_conscription
+	control_export
 	partial_economic_mobilisation
 
 	# National Spirits
@@ -472,7 +473,7 @@ complete_special_project = {
 # SET UP STARTING BRAKTHROUGH PROGRESS
 add_breakthrough_progress = {
 	specialization = specialization_naval
-	value = 0.8
+	value = 1
 }
 add_breakthrough_progress = {
 	specialization = specialization_air

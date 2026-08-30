@@ -1,0 +1,394 @@
+# TODO reintroduce a fortress buster role maybe?
+#	heavy_armor_default = {
+#		upgrade_prio = {
+#			base = 2
+#
+#			modifier = {
+#				factor = 1
+#			}
+#		}
+#
+#		target_width = 18.0
+#		width_weight = 3.0
+#		column_swap_factor = 0.1
+#
+#		stat_weights = {
+#			0.00 #-- default_morale
+#			1.10 #-- defense
+#			1.10 #-- breakthrough
+#			0.60 #-- hardness
+#			2.00 #-- soft_attack
+#			0.00 #-- hard_attack
+#			0.10 #-- recon
+#			0.01 #-- entrenchment
+#			0.10 #-- initiative
+#			0.01 #-- casualty_trickleback
+#			-0.05 #-- supply_consumption_factor
+#			-0.01 #-- supply_consumption
+#			0.00 #-- suppression
+#			0.00 #-- suppression_factor
+#			0.01 #-- experience_loss_factor
+#			0.00 #-- equipment_capture_factor
+#			0.00 #-- fuel_capacity
+#			#-- Air Values
+#			0.02 #-- air_attack
+#			#-- Common Values
+#			10.00 #-- max_organisation
+#			0.80 #-- max_strength
+#			0.0 #-- maximum_speed
+#			0.20 #-- armor_value
+#			0.05 #-- ap_attack
+#			0.10 #-- reliability
+#			0.10 #-- reliability_factor
+#			0.00 #-- weight
+#			0.00 #-- fuel_consumption
+#			0.00 #-- fuel_consumption_factor
+#			0.00 #-- strat_attack
+#			0.00 #-- carrier_size
+#			0.00 #-- acc_hot_gain
+#			0.00 #-- acc_cold_gain
+#			0.00 #-- build_cost_ic
+#		}
+#
+#		target_template = {
+#			weight = 1.0
+#			match_value = 1000.0
+#
+#			support = {
+#				engineer = 1
+#				recon = 1
+#				logistics_company = 1
+#				maintenance_company = 1
+#			}
+#
+#			regiments = {
+#				heavy_armor = 6
+#				infantry = 3
+#			}
+#		}
+#
+#		replace_at_match = 0.4
+#		replace_with = modern_armor_default
+#		target_min_match = 0.5
+#	}
+		
+garrison_generic = {
+
+	role = garrison
+	
+	upgrade_prio = {
+		base = 0
+	}
+
+	garrison_generic = {
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			base = 0
+		}
+		
+		target_template = {
+
+			regiments = {
+				cavalry = 1
+			}
+		}
+	}
+}
+
+suppression_generic = {
+	
+	role = suppression
+	blocked_for = {}
+	upgrade_prio = {
+		base = 0
+	}
+
+	suppression_generic = {
+	
+		reinforce_prio = 0
+		custom_icon = 13
+	
+		upgrade_prio = {
+			base = 0.5
+		}
+		
+		target_template = {
+
+			regiments = {
+				cavalry = 1
+			}
+		}
+	}
+}
+
+infantry_generic = {
+
+	role = infantry
+	
+	upgrade_prio = {
+		base = 3
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+		base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+			}
+			
+			regiments = {
+				infantry = 8
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_mid
+		target_min_match = 0.6
+	}
+		infantry_mid = {
+	
+		upgrade_prio = {
+			base = 3
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 3
+			}
+			
+			regiments = {
+				infantry = 14
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_late
+		target_min_match = 0.6
+	}
+	infantry_late = {
+	
+		upgrade_prio = {
+			base = 4
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 5
+			}
+			
+			regiments = {
+				infantry = 20
+			}
+
+		}
+	}
+
+}
+
+
+mountaineers_generic = {
+
+	role = mountaineers
+	
+	upgrade_prio = {
+		base = 2
+				modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_mountaineers
+			}
+		}
+	}
+
+		mountaineers_early = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				artillery = 1
+
+			}
+			
+			regimental_support = {
+				field_guns = 3
+			}
+
+			regiments = {
+				mountaineers = 10
+			}
+
+		}
+		replace_at_match = 0.5
+		replace_with = mountaineers_late
+		target_min_match = 0.5
+	}
+
+	mountaineers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				field_guns = 5
+			}
+
+			regiments = {
+				mountaineers = 20
+			}
+
+			}
+	}
+}
+
+marines_generic = {
+
+	role = marines
+	
+	upgrade_prio = {
+		base = 1
+				modifier = {
+			factor = 0
+			NOT = {
+				has_tech = marines
+			}
+		}
+	}
+
+	marine_default = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				field_guns = 5
+			}
+
+			regiments = {
+				marine = 20
+			}
+		}
+	}
+}
+hq_generic = {
+	role = hq_role
+	
+	upgrade_prio = {
+		base = 0.1
+	}
+
+	hq_default = {
+		upgrade_prio = {
+			base = 0.1
+		}
+
+		target_template = {
+			support = {
+				hq_support_company = 1
+				hq_recon = 1
+				hq_military_police = 1
+				hq_air_liaison = 1
+
+			}
+			
+			regiments = {
+				motorized = 4
+			}
+		}
+	}
+}
+
+
+# Non-complete list of sub-units
+
+# REGIMENTS:
+# - infantry
+# - light_armor
+# - medium_armor
+# - heavy_armor
+# - super_heavy_armor
+# - modern_armor
+# - cavalry
+# - motorized
+# - mechanized
+# - marine
+# - mountaineers
+# - paratrooper
+# - artillery_brigade
+# - anti_air_brigade
+# - anti_tank_brigade
+# - light_tank_destroyer_brigade
+# - medium_tank_destroyer_brigade
+# - heavy_tank_destroyer_brigade
+# - super_heavy_tank_destroyer_brigade
+# - modern_tank_destroyer_brigade
+# - light_sp_anti_air_brigade
+# - light_sp_artillery_brigade
+
+# SUPPORT:
+# - engineer
+# - recon
+# - signal_company
+# - maintenance_company
+# - artillery
+# - field_hospital
+# - logistics_company
+# - military_police
+# - rocket_artillery
+
+# SUPPORT (REGIMENTAL):
+# - anti_air
+# - anti_tank
+# - field_guns
+# - fire_support
+# - mot_fire_support
+# - rocket_battery

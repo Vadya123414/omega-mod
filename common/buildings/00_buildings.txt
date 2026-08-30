@@ -160,6 +160,7 @@ buildings = {
 		value = 1
 		tags = { naval_buildings_tag }
 		allied_build = yes
+		allied_build = yes
 		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 10
@@ -175,6 +176,7 @@ buildings = {
 		icon_frame = 7
 		land_fort = 1
 		value = 1
+		allied_build = yes
 		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 10
@@ -191,6 +193,7 @@ buildings = {
 		icon_frame = 8
 		naval_fort = 1
 		value = 1
+		allied_build = yes
 		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 10
@@ -204,6 +207,7 @@ buildings = {
 		base_cost = 10000
 		disabled_in_dmz = yes
 		icon_frame = 23
+		allied_build = yes
 		value = 1
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -248,6 +252,7 @@ buildings = {
 		disabled_in_dmz = yes
 		air_defence = 1
 		damage_factor = 0.1
+		allied_build = yes
 		value = 1
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -359,13 +364,14 @@ buildings = {
 		icon_frame = 28
 		disabled_in_dmz = yes
 		naval_supply_hub = yes
+		allied_build = yes
 		infrastructure_construction_effect = yes
 		only_costal = yes
 		tags = { naval_buildings_tag }
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 1
 			}
 		}
 		level_cap = {
@@ -388,7 +394,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 5
 			}
 		}
 		level_cap = {
@@ -708,41 +714,22 @@ buildings = {
 	
 	#### Energy
 	
-	energy_infrastructure = {
-		base_cost = 12000
-		icon_frame = 30
-		value = 1
-
-		show_modifier = yes
-		affects_energy = yes
-
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = infrastructure_keystone
-		}
-		state_modifiers = {
-			local_factory_energy_consumption_per_infrastructure = -0.075
-		}
-	}
-	
 	industrial_infrastructure = {
 		base_cost = 12000
 		icon_frame = 31
 		value = 1
-
+		allied_build = yes
 		show_modifier = yes
 
 
 		infrastructure_construction_effect = yes
 		level_cap = {
 			state_max = 1
-			shares_slots = yes
 			group_by = infrastructure_keystone
 		}
 		state_modifiers = {
 			local_resource_gain_efficiency_per_infrastructure = 0.10
+			local_factory_energy_consumption_per_infrastructure = -0.075
 		}
 	}
 }

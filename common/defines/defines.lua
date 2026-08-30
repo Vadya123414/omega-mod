@@ -1,6 +1,27 @@
-NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.2, 0.1, 0.05, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
+--Оптимизация
+NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.19, 0.12, 0.07, 0.0 }; -- SPEED 4 IS 0.1 IN VANILLA  game speeds for each level. Must be 5 entries with last one 0 for unbound]
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60;
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
+NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
+NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
+NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
+NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1					--чтобы линия фронта у ии не открисовывалась красиво, на ум бота это не повлияет, просто визуал
+NDefines.NNavy.CONVOY_LOSS_HISTORY_TIMEOUT_MONTHS = 3 -- 24. ограничивает историю потерь конвоев тремя месяцами вместо двух лет.
+NDefines.NNavy.NAVAL_COMBAT_RESULT_TIMEOUT_YEARS = 0.25 -- 2 . (0.25 years = 3 months) очищает всплывающие окна морских сражений спустя 3 месяца (0.25 года) вместо 2 лет.
+NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 3 --  12.Сокращает время хранения истории потерь в гарнизонах с одного года до 3 месяцев
+NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = false -- полностью отключает запись истории приказов и маршрутов перемещения для всех дивизий ИИ.
+NDefines.NAir.BOMBERS_DIVISION_FACTOR = 200 -- Default 30. чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.FIGHTERS_DIVISION_FACTOR = 200 -- Default 30.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.MISSILES_DIVISION_FACTOR = 200 -- Default 60.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NAir.TRANSPORT_DIVISION_FACTOR = 200 -- Default 30.чтобы меньше летало 3д моделек самолётов, то есть чтобы не лагало в лейте когда авиации до жопы
+NDefines.NNavy.NAVAL_ACCIDENTS_DAYS_TO_LIVE = 30 -- Default 120. Снижение лога аварий
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 30 -- Default 7. Думают дольше, например апнуть ли шаблон
+NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 14 -- Default 7. Думают дольше, например апнуть ли шаблон
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 30 -- Default 7. ИИ реже рассчитывает дизайн шаблонов.
+NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 96 -- Default 24. Оценка дипломатии и торговли для ИИ ограничена частотой раз в 4 дня. ИИ реже отправляет дипломатические запросы.
+NDefines.NAI.REMOVE_OBSOLETE_TEMPLATE_DAYS = 90 -- Default 180. ИИ быстрее очищает пустые неиспользуемые шаблоны, чтобы сэкономить оперативную память.
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 90 -- Default 30. ИИ реже проверяет наличие улучшений доктрины.
+NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 20 -- Default 7. выбирает теху дольше 
 
 --Армия
 --NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72;
@@ -9,6 +30,7 @@ NDefines.NGame.LAG_DAYS_FOR_PAUSE = 100;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 1;
 --NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.02;              --  шанс попадания ПВО по штурму
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5;	-- анлок 5 ячейки в столбце шаблона дивизии 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999;
@@ -20,6 +42,7 @@ NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		--
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
 NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 --NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
 --NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0;									-- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
@@ -29,29 +52,66 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войс
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
-NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
-NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0
+NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0;
+NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;--100							-- стоимость снятие гордости флота
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0.0-- Кол-во мин в рег
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- скорость минирования
+NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0;    -- шанс крита мин
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_DAMAGE_SCALE = 0;   -- урон крита мин
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_STRENGTH_LOSS = 0;      -- урон мин по прочности
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_ORG_LOSS_FACTOR = 0;	--урон мин по орге
 
 --Производство
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10;
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
+NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10;
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300;
+NDefines.NProduction.SHIP_REFIT_MAX_PROGRESS_TO_CANCEL = 0.99;
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 300
 --NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0            -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0        -- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0        -- XP cost for converting one equipment module to a related module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0         -- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
---NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
---NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
---NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
+NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
 
----AI
+---AI 
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
+
+NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не начнет тренировку, если уровень оснащения упадет ниже этого значения
+NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
+NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
+NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
+NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
+NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
+NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- к скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
+
+
+-- <start> construction prioritization
+NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_CIV_FACTORY = 0.80                                      -- base prio for civilian factories in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_MIL_FACTORY = 0.70                                       -- base prio for military factories in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 0.40 --vanila 1.1                                  -- base prio for supply buildings (supply hubs, ports) in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- base prio for railways in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- base prio for railway gun repairs in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- base prio for unspecified buildings (none of the categories above) in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- factor prio with this if occupied territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                             -- factor prio with this if owned non-core territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- factor prio with this if owned core territory
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                 -- factor prio with this if building is being repaired
+-- <end> construction prioritization
+
 
 --Agency Upgrade
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 30						-- Number of days needed to create an intelligence agency
@@ -60,13 +120,19 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.8 ---размены в воздухе(ванила = 1)
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.7 ---размены в воздухе(ванила = 1)
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1; -- глобальная скорость самолётов
+
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
 		25,			-- pp cost if no available scientist
 		25,			-- pp cost if 1 available scientist
 		50,			-- pp cost if 2 available scientist
 		50			-- pp cost if more than 2 available scientist
 	}
+
+NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
+
+NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 0.5
 

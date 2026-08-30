@@ -272,6 +272,46 @@ ideas = {
 				air_range_factor = 0.10
 			}
 		}
-		
+		 MON_khan_legacy_spirit = {
+            allowed = { always = yes }
+            modifier = {
+                political_power_factor = 0.10
+                justify_war_goal_time = -0.20
+            }
+        }
+        # Законы Ясы
+        MON_great_yassa_law = {
+            allowed = { always = yes }
+            modifier = {
+                conscription = 0.1
+                resistance_damage_to_garrison = -0.15   # Партизаны наносят меньше вреда
+                compliance_gain = 0.05                    # Подчинение растет быстрее
+            }
+        }
+        # Орда XXI века (Кони)
+        MON_steppe_horde_spirit = {
+            allowed = { always = yes }
+            modifier = {
+                cavalry_attack_factor = 0.15
+                cavalry_defence_factor = 0.15
+            }
+        }
+        # Железные всадники (Моторизация)
+        MON_iron_riders_spirit = {
+            allowed = { always = yes }
+            modifier = {
+                motorized_attack_factor = 0.20
+                motorized_defence_factor = 0.20
+            }
+        }
+        # Блицкриг Хана (Финал)
+        MON_blitz_khan_spirit = {
+            allowed = { always = yes }
+            modifier = {
+                army_speed_factor = 0.07
+                planning_speed = 0.10
+                max_planning = 0.10
+            }
+        }
 	}
 }

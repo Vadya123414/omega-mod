@@ -1066,7 +1066,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_0"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1088,7 +1088,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_1"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1110,7 +1110,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_2"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1132,7 +1132,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_3"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1154,20 +1154,20 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_3_target_btn"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
 		buttonType = {
 			name = "btn"
-			position = {x=0 y=1}
+			position = {x=-9999 y=-9999}
 			spriteType = "GFX_air_target_icon"
 			clicksound = click_default
 		}
 	}
 	containerWindowType = {
 		name = "air_mission_entry_4"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1189,7 +1189,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_7"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1211,7 +1211,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_8"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1232,8 +1232,30 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "air_mission_entry_10"
+		name = "air_mission_entry_9"
 		position = {x=0 y=0}
+		size = { width=47 height=34 }
+		Orientation = upper_left
+
+		buttonType = {
+			name = "btn"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_btn_checkbox_bg"
+			clicksound = "air_mission_select"
+			shortcut = "ctrl+r"
+		}
+		iconType = {
+			name = "icon"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_types"
+			frame = 10
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "air_mission_entry_10"
+		position = {x=-23 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1260,7 +1282,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_11"
-		position = {x=0 y=0}
+		position = {x=22 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1289,10 +1311,51 @@ guiTypes = {
 		}
 	}
 
+	containerWindowType = {
+		name = "air_mission_entry_12"
+		position = {x=0 y=0}
+		size = { width=47 height=34 }
+		Orientation = upper_left
+
+		buttonType = {
+			name = "btn"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_btn_checkbox_bg"
+			clicksound = "air_mission_select"
+		}
+		iconType = {
+			name = "icon"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_types"
+			frame = 13
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "air_mission_entry_13"
+		position = {x=0 y=0}
+		size = { width=47 height=34 }
+		Orientation = upper_left
+
+		buttonType = {
+			name = "btn"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_btn_checkbox_bg"
+			clicksound = "air_mission_select"
+		}
+		iconType = {
+			name = "icon"
+			position = {x=-9999 y=-9999}
+			spriteType = "GFX_strategicair_mission_types"
+			frame = 14
+			alwaystransparent = yes
+		}
+	}
 
 	containerWindowType = {
 		name = "air_mission_entry_14"
-		position = {x=0 y=0}
+		position = {x=-113 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1313,7 +1376,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "air_mission_entry_15"
-		position = {x=0 y=0}
+		position = {x=-113 y=0}
 		size = { width=47 height=34 }
 		Orientation = upper_left
 
@@ -1352,7 +1415,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "missions_grid"
-				position = { x = 14 y = 8 } #X value becomes spacing on both sides of the window
+				position = { x = -8 y = 8 } #X value becomes spacing on both sides of the window
 				size = { width = 1 height = 34 }
 				slotsize = { width = 45 height = 34 }
 				max_slots_vertical = 1

@@ -1,0 +1,43 @@
+focus_tree = {
+	id = Ukraine_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = UKR
+			has_dlc = "Battle for the Bosporus"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+    focus = {
+		id = UKR_acquire_modern_tools
+
+		icon = GFX_goal_generic_production2
+		x = 12
+		y = 0
+		cost = 5
+
+		available = {
+
+		}
+		
+		completion_reward = {
+			add_ideas = BUL_national_industry_01
+
+			add_tech_bonus = {
+				name = BUL_acquire_modern_tools
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+
+}

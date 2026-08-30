@@ -22,7 +22,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 999
 		}
 		available = {
 			
@@ -54,7 +54,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		available = {
 			
@@ -76,7 +76,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_another_capital focus = HON_railways }
 		available = {
@@ -99,7 +99,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_yacimientos_petroliferos_fiscales
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_economic_plan }
 		available = {
@@ -137,7 +137,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_cafe_com_leite_politics
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_ferms }
 		available = {
@@ -314,7 +314,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 999
 		}
 		prerequisite = { focus = HON_economic_plan }
 		mutually_exclusive = { focus = HON_civilian_way focus = HON_dockyard_way}
@@ -338,7 +338,7 @@ focus_tree = {
 		icon = GFX_focus_generic_reorient_production
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_military_way focus = HON_dockyard_way}
 		available = {
@@ -375,7 +375,7 @@ focus_tree = {
 		icon = GFX_focus_generic_tank_production
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_mil1 }
 		available = {
@@ -514,7 +514,7 @@ focus_tree = {
 		icon = GFX_focus_research2
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 1000
 		}
 		prerequisite = { focus = HON_doc2 focus = HON_mil2 focus = HON_civ2}
 		available = {
@@ -537,7 +537,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 900
 		}
 		available = {
 			
@@ -559,7 +559,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 899
 		}
 		available = {
 			
@@ -587,7 +587,7 @@ focus_tree = {
 		prerequisite = { focus = HON_start_ind }
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 900
 		}
 		relative_position_id = HON_race
 		available = {
@@ -775,7 +775,7 @@ focus_tree = {
 		prerequisite = { focus = HON_new_cource }
 		mutually_exclusive = {focus = HON_comi focus = HON_fasicm}
 		ai_will_do = {
-			factor = 5
+			factor = 900
 		}
 		relative_position_id = HON_new_cource
 		available = {
@@ -962,7 +962,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = HON_ENG_eco focus = HON_USA_eco focus = HON_FRA_eco}
 		ai_will_do = {
-			factor = 5
+			factor = 900
 		}
 		relative_position_id = HON_USA_eco	
 		available = {
@@ -1009,7 +1009,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = HON_ENG_eco focus = HON_USA_eco focus = HON_FRA_eco}
 		ai_will_do = {
-			factor = 5
+			factor = 850
 		}
 		relative_position_id = HON_USA_eco	
 		available = {
@@ -1054,7 +1054,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
 		ai_will_do = {
-			factor = 5
+			factor = 900
 		}
 		relative_position_id = HON_USA_money	
 		available = {
@@ -1079,7 +1079,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
 		ai_will_do = {
-			factor = 5
+			factor = 1
 		}
 		relative_position_id = HON_USA_money	
 		available = {
@@ -1103,7 +1103,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = HON_new_resource focus = HON_new_farics focus = HON_USA_money}
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 		relative_position_id = HON_USA_money	
 		available = {
@@ -1117,6 +1117,10 @@ focus_tree = {
 		y = 1
 		
 		completion_reward = {
+			set_technology = {
+					basic_ship_hull_heavy = 1
+					improved_heavy_battery = 1
+				}
 			create_equipment_variant = {
 					name = "America Class"
 					type = ship_hull_heavy_2
@@ -1124,19 +1128,17 @@ focus_tree = {
 					parent_version = 0
 					allow_without_tech = yes 
 					modules = {
-						fixed_ship_battery_slot = ship_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-						fixed_ship_radar_slot = empty
+						fixed_ship_battery_slot = ship_heavy_battery_3
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = ship_radar_2
 						fixed_ship_engine_slot = heavy_ship_engine_2
 						fixed_ship_secondaries_slot = ship_secondaries_2
 						fixed_ship_armor_slot = ship_armor_shbb
-						front_1_custom_slot = ship_anti_air_1
-						front_2_custom_slot = ship_airplane_launcher_1
-						mid_1_custom_slot = empty
+						front_1_custom_slot = ship_heavy_battery_3
+						mid_1_custom_slot = ship_secondaries_2
 						mid_2_custom_slot = ship_secondaries_2
-						mid_3_custom_slot = ship_secondaries_2
-						
+						rear_1_custom_slot = ship_heavy_battery_3
 					}
 				}
 			add_equipment_production = {

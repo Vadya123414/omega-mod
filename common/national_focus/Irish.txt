@@ -22,7 +22,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRE_sabotage }
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		available = {
 			
@@ -31,7 +31,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		
-		x = 19
+		x = 13
 		y = 0
 		
 		completion_reward = {
@@ -73,7 +73,7 @@ focus_tree = {
 		cost = 10
 		mutually_exclusive = { focus = IRE_LIVE_ENG }
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		relative_position_id = IRE_Vibori
 		available = {
@@ -85,7 +85,7 @@ focus_tree = {
 		y = 1
 		
 		completion_reward = {
-ENG = {
+			ENG = {
 				add_opinion_modifier = { target = IRE modifier = HOL_caved_to_the_british_eng }
 			}
 		}
@@ -124,9 +124,9 @@ focus = {
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		prerequisite = { focus = IRE_deal_with_england }
 		cost = 10
-		mutually_exclusive = { focus = IRE_Neutral focus = IRE_independet}
+		mutually_exclusive = { focus = IRE_Neutral}
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		relative_position_id = IRE_deal_with_england
 		available = {
@@ -237,7 +237,7 @@ focus = {
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = IRE_FREE_Nation }
 		cost = 10
-		mutually_exclusive = { focus = IRE_Neutral focus = IRE_Neutral}
+		mutually_exclusive = { focus = IRE_Neutral}
 		ai_will_do = {
 			factor = 5
 		}
@@ -263,7 +263,7 @@ focus = {
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = IRE_independet focus = IRE_new_dominion}
 		cost = 5
-		mutually_exclusive = { focus = IRE_join_commintern focus = IRE_Neutral}
+		mutually_exclusive = { focus = IRE_join_commintern focus = IRE_join_axis}
 		ai_will_do = {
 			factor = 5
 		}
@@ -944,7 +944,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		
-		x = 13
+		x = 8
 		y = 0
 		
 		completion_reward = {
@@ -1050,6 +1050,7 @@ focus = {
 		id = IRE_collective
 		icon = GFX_focus_generic_communist_industry
 		prerequisite = { focus =  IRE_referendum}
+		prerequisite = { focus =  IRE_Soviet_sup}
 		
 		cost = 10
 		ai_will_do = {
@@ -1058,7 +1059,6 @@ focus = {
 		relative_position_id = IRE_referendum
 		
 		available = {
-		has_completed_focus  = IRE_Soviet_sup 
 		}
 		available_if_capitulated = yes
 		
@@ -1074,6 +1074,7 @@ focus = {
 		id = IRE_corparation
 		icon = GFX_focus_ITA_generic_fascist_workers
 		prerequisite = {focus =  IRE_referendum}
+		prerequisite = {focus =  IRE_German_sup}
 		
 		cost = 10
 		ai_will_do = {
@@ -1082,7 +1083,6 @@ focus = {
 		relative_position_id = IRE_referendum
 		
 		available = {
-		has_completed_focus =  IRE_German_sup
 		}
 		available_if_capitulated = yes
 		
@@ -1417,7 +1417,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		
-		x = 21
+		x = 13
 		y = 0
 		
 		completion_reward = {

@@ -9,7 +9,7 @@ country_event = {
 	id = Mongol.1
 	title = Mongol.1.t
 	desc = Mongol.1.d
-	picture = GFX_news_event_stalin_meeting
+	picture = GFX_report_event_PRC_guotao_joining_kmt
 
 	is_triggered_only = yes
 
@@ -34,9 +34,6 @@ country_event = {
 			563 = {
                 remove_core_of = SOV
             }
-			564 = { add_core_of = MON }
-			566 = { add_core_of = MON }
-			563 = { add_core_of = MON }
 		}
 	}
 
@@ -51,11 +48,8 @@ country_event = {
 		}
 		MON = {
 			country_event = { id = Mongol.3 days = 1 }
-
-		}
-		    effect_tooltip = {
 			add_political_power = 50
-			}
+		}
 	}
 }
 

@@ -40,7 +40,7 @@ focus_tree = {
 	
 	focus = {
 		id = MON_start_industry
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
 		prerequisite = { focus = MON_rise_politic }
 		cost = 10.00
 		ai_will_do = {
@@ -381,7 +381,6 @@ focus = {
 		y = 1
 		
 		completion_reward = {
-			add_ideas = war_economy
 			add_war_support = 0.2
 			add_research_slot = 1
 			random_owned_state = {
@@ -572,7 +571,7 @@ focus = {
 	
 	focus = {
 		id = MON_Final
-		icon = GFX_focus_por_workers_of_iberia
+		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
 		prerequisite = { focus = MON_Pro_sov_politic focus = MON_our_politic focus = MON_soviet_accept}
 		relative_position_id = MON_Smuta
 		cost = 10
@@ -676,7 +675,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-		
+			is_ai = no
 		    SIK = { has_government = communism}
 			SIK = { is_ai = yes }
 			
@@ -904,7 +903,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = MON_mongolian_chydo
 		available_if_capitulated = yes
-		mutually_exclusive = {focus = MON_chience_fronte focus = MON_jap}
+		mutually_exclusive = {focus = MON_shadow_of_the_khan focus = MON_chience_fronte focus = MON_jap}
 		x = -1	
 		y = 1
 		
@@ -940,12 +939,36 @@ focus = {
 		y = 1
 		
 		completion_reward = {
+			add_ideas = MON_social_dem
+		}
+	}
+
+	focus = {
+		id = MON_soviet_baikal 
+		icon =  GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
+		prerequisite = { focus = MON_anarchi focus = MON_soviet_republic }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id = MON_anarchi
+		available_if_capitulated = yes
+		x = 1	
+		y = 1
+		
+		completion_reward = {
+			564 = { add_core_of = MON }
+			566 = { add_core_of = MON }
+			563 = { add_core_of = MON }
 			SOV = {
 			country_event = {
 				id = Mongol.1
 			}
 			}
-			add_ideas = MON_social_dem
 		}
 	}
 	focus = {
@@ -969,7 +992,6 @@ focus = {
 		completion_reward = {
 		add_ideas = MON_anarchi_rep
 		set_cosmetic_tag = MON_anarchist
-			add_ideas = GER_anarchi
 			add_ideas = SPR_collectivized_society
 		}
 	}
@@ -989,7 +1011,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = MON_mongolian_chydo
 		available_if_capitulated = yes
-		mutually_exclusive = {focus = MON_soviet_accept focus = MON_jap}
+		mutually_exclusive = {focus = MON_shadow_of_the_khan focus = MON_soviet_accept focus = MON_jap}
 		
 		x = 1	
 		y = 1
@@ -1185,7 +1207,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		
-		x = -1	
+		x = 0	
 		y = 1
 		
 		completion_reward = {
@@ -1210,7 +1232,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = MON_unitarn
 		available_if_capitulated = yes
-		mutually_exclusive = {focus = MON_soviet_accept focus = MON_chience_fronte}
+		mutually_exclusive = {focus = MON_soviet_accept focus = MON_shadow_of_the_khan focus = MON_chience_fronte}
 		
 		x = 1	
 		y = 1
@@ -1361,7 +1383,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		
-		x = -1	
+		x = 0	
 		y = 1
 		
 		completion_reward = {
@@ -1407,7 +1429,7 @@ focus = {
 	focus = {
 		id = MON_samurai
 		icon =  GFX_focus_generic_japanese_imperial_glory
-		prerequisite = { focus = MON_new_coloni_jap }
+		prerequisite = { focus = MON_dzaibatsu }
 		cost = 5
 		ai_will_do = {
 			factor = 5
@@ -1420,8 +1442,8 @@ focus = {
 		available_if_capitulated = yes
 		
 		
-		x = 1	
-		y = 1
+		x = 0	
+		y = 2
 		
 		completion_reward = {
 			add_ideas = MON_JAP_samurai
@@ -1444,10 +1466,32 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 24
+		x = 20
 		y = 0
 		
 		completion_reward = {
+			create_corps_commander = { 
+					name = "Jamiangin Jamyang"
+					gfx = GFX_Portrait_Asia_Generic_land_3
+					
+					traits = { panzer_leader  cavalry_leader adaptable}
+					skill = 6
+					attack_skill = 8
+					defense_skill = 6
+					planning_skill = 5
+					logistics_skill = 5
+				}
+				create_corps_commander = { 
+					name = "Choibalsan of Horlo"
+					gfx = GFX_Portrait_Asia_Generic_land_1
+					
+					traits = { adaptable cavalry_leader panzer_leader}
+					skill = 6
+					attack_skill = 8
+					defense_skill = 6
+					planning_skill = 5
+					logistics_skill = 5
+				}
 			army_experience = 25
 		}
 	}
@@ -1517,7 +1561,7 @@ focus = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = MON_exp  }
 		relative_position_id = MON_exp
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1583,7 +1627,7 @@ focus = {
 		prerequisite = { focus = MON_support_equi focus = MON_doctrine}
 		relative_position_id = MON_army
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1594,24 +1638,12 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = -2
-		y = 4
+		x = -1
+		y = 3
 		
 		completion_reward = {
 			add_ideas = political_commissars_focus
 			add_ideas = military_youth_focus
-			
-			create_corps_commander = { 
-					name = "Choibalsan of Horlo"
-					gfx = GFX_Portrait_Asia_Generic_land_1
-					
-					traits = { adaptable cavalry_leader panzer_leader}
-					skill = 6
-					attack_skill = 8
-					defense_skill = 6
-					planning_skill = 5
-					logistics_skill = 5
-				}
 		}
 	}
 	
@@ -1621,7 +1653,7 @@ focus = {
 		prerequisite = { focus = MON_support_equi focus = MON_doctrine}
 		relative_position_id = MON_army
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1631,23 +1663,10 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 2
-		y = 4
+		x = 1
+		y = 3
 		
 		completion_reward = {
-		create_corps_commander = { 
-					name = "Jamiangin Jamyang"
-					gfx = GFX_Portrait_Asia_Generic_land_3
-					
-					traits = { panzer_leader  cavalry_leader adaptable}
-					skill = 6
-					attack_skill = 8
-					defense_skill = 6
-					planning_skill = 5
-					logistics_skill = 5
-				}
-		
-
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.50
@@ -1679,7 +1698,7 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 29
+		x = 24
 		y = 0
 		
 		completion_reward = {
@@ -1789,7 +1808,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = -1
-		y = 2
+		y = 1
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -1819,7 +1838,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = 1
-		y = 2
+		y = 1
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -1849,7 +1868,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = 0
-		y = 3
+		y = 2
 		
 		completion_reward = {
 			random_owned_state = {
@@ -1882,7 +1901,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = -1
-		y = 2
+		y = 1
 		
 		completion_reward = {
 			add_ideas = MON_air_prodaction
@@ -1907,11 +1926,130 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = 1
-		y = 2
+		y = 1
 		
 		completion_reward = {
 			add_ideas = MON_air_ass
 		}
-	}	
+	}
+
+# ===================================================================
+# ВЕТКА ЧИНГИСХАНА: ОТ СТЕПНЫХ КОНЕЙ К СТАЛЬНЫМ ТУМЕНАМ
+# ===================================================================
+
+focus = {
+    id = MON_shadow_of_the_khan
+    icon = GFX_focus_AFG_quami
+    
+    relative_position_id = MON_new_course
+	prerequisite = { focus = MON_unitarn }
+	mutually_exclusive = {focus = MON_jap focus = MON_soviet_accept focus = MON_chience_fronte}
+    x = 5
+    y = 4
+    
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_popularity = { ideology = fascism popularity = 0.25 }
+        add_ideas = MON_khan_legacy_spirit
+    }
+}
+
+focus = {
+    id = MON_blood_kurultai
+    icon = GFX_SOV_coup_detat_ccp_2d_sov_compatibility
+    prerequisite = { focus = MON_shadow_of_the_khan }
+    relative_position_id = MON_shadow_of_the_khan
+    x = -1
+    y = 1
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_stability = 0.15
+        add_political_power = -75
+    }
+}
+
+focus = {
+    id = MON_great_yassa
+    icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
+    prerequisite = { focus = MON_shadow_of_the_khan }
+    relative_position_id = MON_shadow_of_the_khan
+    x = 1
+    y = 1
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_war_support = 0.10
+        add_ideas = MON_great_yassa_law
+    }
+}
+
+focus = {
+    id = MON_steppe_revival
+    icon = GFX_focus_AFG_afghan_bank
+    prerequisite = { focus = MON_blood_kurultai focus = MON_great_yassa }
+    relative_position_id = MON_shadow_of_the_khan
+    x = 0
+    y = 2
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_ideas = MON_steppe_horde_spirit
+    }
+}
+
+focus = {
+    id = MON_steel_horses
+    icon = GFX_focus_INS_oweralwagen
+    prerequisite = { focus = MON_steppe_revival }
+    relative_position_id = MON_steppe_revival
+    x = 0
+    y = 1
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_ideas = MON_iron_riders_spirit
+        add_tech_bonus = {
+				name = FRA_mechanized_focus
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+    }
+}
+
+focus = {
+    id = MON_united_ulus
+    icon = GFX_focus_AFG_establish_darulaman
+    prerequisite = { focus = MON_steel_horses }
+    relative_position_id = MON_steel_horses
+    x = 0
+    y = 1
+    cost = 10
+    ai_will_do = { factor = 10 }
+    
+    completion_reward = {
+        add_ideas = MON_blitz_khan_spirit
+        
+        every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					NOT = {
+						is_core_of = ROOT
+					}
+					is_on_continent = asia
+				}
+				add_compliance = 70
+			
+        }
+    }
+}
+	
 	
 }

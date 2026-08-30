@@ -1,0 +1,22 @@
+﻿division_template = {
+	name = "Mountaineer-Division"
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = { x = 0 y = 0 }
+				field_guns = { x = 0 y = 1 }
+			}
+	regiments = {
+			mountaineers = { x = 0 y = 0 }
+			mountaineers = { x = 0 y = 1 }
+			mountaineers = { x = 1 y = 0 }
+			mountaineers = { x = 0 y = 2 }
+			mountaineers = { x = 1 y = 1 }
+			mountaineers = { x = 0 y = 3 }
+			mountaineers = { x = 1 y = 2 }
+			mountaineers = { x = 1 y = 3 }
+
+	}
+}

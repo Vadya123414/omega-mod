@@ -1,0 +1,87 @@
+    BOTS = {
+    medium_1 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+                cost = 0
+            available = {
+                original_tag = USA
+                is_ai = yes
+            }
+            visible = {
+                original_tag = USA
+                is_ai = yes
+            }
+        ai_will_do = {
+			factor = 1000
+		}
+        days_remove = 45
+        		modifier = {
+			political_power_gain = -0.75
+		}
+                complete_effect = {
+                    USA_congress_medium_support = yes
+                        }
+    }
+          medium_2 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+                cost = 0
+            available = {
+                original_tag = USA
+                is_ai = yes
+                if = {date > 1936.3.15}
+            }
+            visible = {
+                original_tag = USA
+                is_ai = yes
+
+            }
+        ai_will_do = {
+			factor = 1000
+		}
+        days_remove = 45
+        		modifier = {
+			political_power_gain = -0.75
+		}
+                complete_effect = {
+                    USA_congress_medium_support = yes
+                        }
+    }
+          medium_3 = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+                cost = 0
+            available = {
+                original_tag = USA
+                is_ai = yes
+                has_completed_focus = USA_wpa
+            }
+            visible = {
+                original_tag = USA
+                is_ai = yes
+                has_completed_focus = USA_wpa
+            }
+        ai_will_do = {
+			factor = 1000
+		}
+        days_remove = 45
+        		modifier = {
+			political_power_gain = -0.75
+		}
+                complete_effect = {
+                    USA_congress_medium_support = yes
+                        }
+    }
+}

@@ -116,7 +116,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.25
 		start_year = 1918
 		folder = {
 			name = nsb_armour_folder
@@ -124,27 +124,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.2
-				date > 1937.1.1
-			}
-
-			modifier = {
-				factor = 1.2
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 1.2
-				date > 1939.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -215,27 +195,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1937.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1939.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -275,55 +235,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-				NOT = {
-					AND = {
-						tag = JAP
-						num_of_military_factories < 50
-					}
-				}
-			}
-			modifier = {
-				is_major = yes
-				not = { tag = JAP }
-				has_war = yes
-				factor = 10 #you are embarassing yourself
-			}
-			modifier = {
-				tag = SOV
-				factor = 3
-			}
-			modifier = {
-				factor = 8
-				# Matilda II was designed and entered production in 1937
-				tag = ENG
-				date > 1936.9.1
-			}
-			modifier = {
-				factor = 8
-				# M3 Stuart entered production in 1941
-				tag = USA
-				date > 1940.9.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1937.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1939.1.1
-			}
+			factor = 0
 		}
 
 		on_research_complete = {
@@ -400,34 +312,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				is_major = yes
-				NOT = {
-					TAG = GER
-				}
-			}
-			modifier = {
-				factor = 0.1
-				original_tag = GER #germany should never bother with this
-			}
-			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
-				factor = 2
-			}
-			modifier = {
-				not = {
-					any_controlled_state = {
-						is_coastal = yes
-					}
-				}
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -470,27 +355,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
-				factor = 2
-			}
-			modifier = {
-				not = {
-					any_controlled_state = {
-						is_coastal = yes
-					}
-				}
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -520,32 +385,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				is_major = no
-				factor = 2  # Minors prefer light tanks
-			}
-			modifier = {
-				factor = 8
-				# M24 Chaffee was designed and entered production in 1943
-				tag = USA
-				date > 1943.3.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1942.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1943.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1944.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -610,75 +450,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 1.1
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1940.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1941.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1942.1.1
-			}
-
-			modifier = {
-				factor = 3
-				is_major = yes
-				NOT = {
-					AND = {
-						tag = JAP
-						num_of_military_factories < 50
-					}
-				}
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				tag = SOV
-			}
-
-			modifier = {
-				factor = 4
-				# M3 Lee was designed and entered production in 1940-1941
-				tag = USA
-				date > 1940.3.1
-			}
-
-			modifier = {
-				factor = 15.0
-				tag = GER
-				has_completed_focus = GER_advanced_panzer_research
-				has_tech_bonus = {
-				    category = cat_medium_armor
-				}
-			}
-
-			modifier = { #Use the research bonus from the focus!
-				factor = 0.5
-				tag = GER
-				NOT = {
-					has_completed_focus = GER_advanced_panzer_research
-				}
-			}
-
-			modifier = {
-				factor = 6
-				# Crusader was designed and entered production in 1939
-				tag = ENG
-				date > 1938.11.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -779,63 +551,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-				NOT = {
-					AND = {
-						tag = JAP
-						num_of_military_factories < 50
-					}
-				}
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 3
-				tag = SOV
-				date > 1940.3.1
-			}
-
-			modifier = {
-				factor = 6
-				# M4 Sherman was entered production in late 1941
-				tag = USA
-				date > 1941.6.1
-			}
-
-			modifier = {
-				factor = 6
-				# Cromwell was designed and entered production in 1942-1944
-				tag = ENG
-				date > 1942.9.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1941.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1942.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1943.1.1
-			}
-
-			modifier = {
-				factor = 1.1
-				date > 1944.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -930,38 +646,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				tag = GER
-				date > "1942.6.1"
-				has_completed_focus = GER_expand_kummersdorfs_capacity
-				has_tech_bonus = {
-				    category = cat_medium_armor
-				}
-			}
-
-			modifier = {
-				factor = 6
-				# Comet was designed and entered production in 1943-1944
-				tag = ENG
-				date > 1943.6.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -994,29 +679,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > 1946.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1947.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1948.1.1
-			}
-
-			modifier = {
-				factor = 6
-				# Centurion was designed and entered production in 1945-1946
-				tag = ENG
-				date > 1944.9.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1082,35 +745,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-			modifier = {
-				tag = FRA
-				factor = 3
-			}
-			modifier = {
-				tag = SOV
-				factor = 5
-			}
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1162,39 +797,8 @@ technologies = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 0.8
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-			modifier = {
-				tag = SOV
-				factor = 5
-			}
-			modifier = {
-				factor = 5.0
-				tag = GER
-				has_completed_focus = GER_expand_kummersdorfs_capacity
-				has_tech_bonus = {
-				    category = cat_heavy_armor
-				}
-			}
+			ai_will_do = {
+			factor = 0
 		}
 
 		categories = {
@@ -1240,33 +844,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.8
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			modifier = {
-				tag = SOV
-				factor = 5
-			}
-
-			modifier = {
-				factor = 8
-				# M26 Pershing entered production in 1944
-				tag = USA
-				date > 1944.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1388,28 +966,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 1
-				date > 1943.9.1
-				NOT = { has_government = democratic }
-				num_of_military_factories > 150
-			}
-			modifier = {
-				add = 2
-				original_tag = GER
-				date > 1944.5.1
-				surrender_progress < 0.1
-				has_government = fascism
-				has_war_with = SOV
-			}
-			modifier = {
-				factor = 10
-				tag = GER
-				is_historical_focus_on = yes 
-			}
+			factor = 0
 		}
-
 		categories = {
 			armor
 			mio_cat_tech_all_armor_and_modules
@@ -1442,31 +1000,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 10
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 10
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1502,31 +1036,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 4
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1563,31 +1073,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1615,31 +1101,7 @@ technologies = {
 		show_effect_as_desc = yes
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1946.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1671,31 +1133,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1729,31 +1167,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1785,31 +1199,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1835,31 +1225,7 @@ technologies = {
 		}
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1945.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1946.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1982,31 +1348,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -2062,26 +1404,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -2156,26 +1479,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -2226,26 +1530,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -2290,26 +1575,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -2348,26 +1614,7 @@ technologies = {
 
 		show_effect_as_desc = yes
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {

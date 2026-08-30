@@ -1,0 +1,134 @@
+default_minor = {
+	name = "default_minor"
+	desc = ""
+
+	allowed = {
+		original_tag = ITA
+		original_tag = FRA
+		original_tag = AFG
+		original_tag = ALB
+		original_tag = ARG
+		original_tag = AST
+		original_tag = AUS
+		original_tag = BEL
+		original_tag = BHU
+		original_tag = BOL
+		original_tag = BRA
+		original_tag = BUL
+		original_tag = CAN
+		original_tag = CHI
+		original_tag = CHL
+		original_tag = COL
+		original_tag = COS
+		original_tag = CUB
+		original_tag = CZE
+		original_tag = DEN
+		original_tag = DOM
+		original_tag = ECU
+		original_tag = EGY
+		original_tag = ELS
+		original_tag = EST
+		original_tag = ETH
+		original_tag = FIN
+		original_tag = GRE
+		original_tag = GUA
+		original_tag = GXC
+		original_tag = HAI
+		original_tag = HOL
+		original_tag = HON
+		original_tag = HUN
+		original_tag = ICE
+		original_tag = INS
+		original_tag = IRE
+		original_tag = IRQ
+		original_tag = JOR
+		original_tag = KOR
+		original_tag = LAT
+		original_tag = LBA
+		original_tag = LEB
+		original_tag = LIB
+		original_tag = LIT
+		original_tag = LUX
+		original_tag = MAL
+		original_tag = MEN
+		original_tag = MEX
+		original_tag = MON
+		original_tag = NEP
+		original_tag = NIC
+		original_tag = NOR
+		original_tag = NZL
+		original_tag = OMA
+		original_tag = PAL
+		original_tag = PAN
+		original_tag = PAR
+		original_tag = PER
+		original_tag = PHI
+		original_tag = POL
+		original_tag = POR
+		original_tag = PRC
+		original_tag = PRU
+		original_tag = RAJ
+		original_tag = ROM
+		original_tag = SAF
+		original_tag = SAU
+		original_tag = SER
+		original_tag = SHX
+		original_tag = SIA
+		original_tag = SIK
+		original_tag = SLO
+		original_tag = SPR
+		original_tag = SWE
+		original_tag = SWI
+		original_tag = SYR
+		original_tag = TAN
+		original_tag = TIB
+		original_tag = TUR
+		original_tag = UKR
+		original_tag = URG
+		original_tag = VEN
+		original_tag = XSM
+		original_tag = YEM
+		original_tag = YUG
+		original_tag = YUN
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+	}
+
+	research = {
+		industry = 40.0
+		electronics = -10.0
+		synth_resources = -50.0
+		infantry_weapons = 15.0
+		mountaineers_tech = 5.0
+		artillery = 10.0
+		light_air = -200.0
+        medium_air = -200.0
+        heavy_air = -200.0
+        air_equipment = -20.0
+		naval_armor = -50.0
+		naval_artillery = -500.0
+		cat_torpedoes = -500.0
+		cat_ship_light_battery = -500.0
+		cat_ship_medium_battery = -500.0
+		cat_ship_heavy_battery = -500.0
+		armor = -500.0
+		cat_light_armor = -500.0
+		cat_medium_armor = -500.0
+		cat_heavy_armor = -500.0
+	}
+
+	ideas = {
+		
+	}
+	ai_strategy = {
+
+	}
+	traits = {
+
+	}
+}

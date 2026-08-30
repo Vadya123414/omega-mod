@@ -1,0 +1,18 @@
+################
+##### BOTS ######
+################
+
+BOTS = {
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		is_ai = yes
+			
+		
+	}
+	visible = {
+	is_ai = yes
+	}
+}
+
