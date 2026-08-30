@@ -945,23 +945,35 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			if = {
+			IF = {
 				limit = {
-					event_target:JAP = {
+					JAP = {
 						is_faction_leader = yes
+						has_government = communism
 					}
 				}
-				event_target:JAP = {
+				JAP = { country_event = generic.2 }
+			}
+			ELSE_IF = {
+				limit = {
+					JAP = {
+						is_in_faction = yes
+						is_faction_leader = no
+						has_government = communism
+					}
+				}
+				random_country = {
+					limit = {
+						is_in_faction_with = JAP
+						is_faction_leader = yes
+					}
 					country_event = generic.2
 				}
 			}
-			else_if = {
-				limit = {
-					is_faction_leader = yes
-				}
-				event_target:JAP = {
-					country_event = generic.5
-				}
+			ELSE = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_world_revolution
+				JAP = { country_event = generic.5 }
 			}
 		}
 	}

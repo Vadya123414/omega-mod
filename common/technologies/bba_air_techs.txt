@@ -252,11 +252,20 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
+		if = {
+            limit = {
+				original_tag = JAP
+                has_completed_focus = JAP_develop_new_fighters 
+            }
+            set_technology = {survivability_studies = 1}
+            set_technology = {aa_cannon_1 = 1}
+			set_technology = {range_improvements = 1}
+			set_technology = {engines_3 = 1}
+		}
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_air_jet_engine	
 			}
-			
 		}				
 
 		research_cost = 2

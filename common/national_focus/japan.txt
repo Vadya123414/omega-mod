@@ -17494,7 +17494,7 @@ focus_tree = {
 		id = JAP_a_red_sun_rises_for_a_new_era
 		icon = GFX_focus_JAP_the_red_sun_rises_for_a_new_era
 		mutually_exclusive = { focus = JAP_organize_a_general_election }
-		x = -11
+		x = -14
 		y = 2
 		relative_position_id = JAP_revoke_the_peace_preservation_law
 
@@ -18181,7 +18181,7 @@ focus_tree = {
 		id = JAP_the_ie_system_and_socialism
 		icon = GFX_focus_generic_soviet_politics
 		#mutually_exclusive = { focus =  }
-		x = -5
+		x = -3
 		y = 1
 		relative_position_id = JAP_sea_fate_of_the_imperial_family
 
@@ -18222,7 +18222,7 @@ focus_tree = {
 		id = JAP_fukumotoism
 		icon = GFX_focus_DEN_limited_regulations
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = JAP_the_ie_system_and_socialism
 
@@ -18273,7 +18273,7 @@ focus_tree = {
 		id = JAP_the_modern_ashigaru
 		icon = GFX_focus_JAP_the_modern_ashigaru
 		#mutually_exclusive = { focus =  }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = JAP_the_ie_system_and_socialism
 
@@ -18402,7 +18402,7 @@ focus_tree = {
 		id = JAP_further_urban_investments
 		icon = GFX_focus_JAP_further_urban_investments
 		#mutually_exclusive = { focus =  }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_fukumotoism
 
@@ -18453,7 +18453,7 @@ focus_tree = {
 		id = JAP_the_first_five_year_plan
 		icon = GFX_focus_generic_communist_industry
 		#mutually_exclusive = { focus =  }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = JAP_fukumotoism
 
@@ -19217,7 +19217,7 @@ focus_tree = {
 		id = JAP_guide_the_lesser_states
 		icon = GFX_focus_GER_liberate_exploited_colonial_workers
 		#mutually_exclusive = { focus =  }
-		x = 9
+		x = 11
 		y = 1
 		relative_position_id = JAP_the_labor_farmer_faction_ascendant
 
@@ -19307,6 +19307,48 @@ focus_tree = {
 
 	}
 
+	focus = {
+		id = JAP_befriend_mapuche_left
+		icon = GFX_focus_generic_befriend_mapuche
+		mutually_exclusive = { focus =  JAP_conquer_the_army_remnants}
+		x = -2
+		y = 1
+		relative_position_id = JAP_socialism_in_one_state
+
+		prerequisite = { focus = JAP_socialism_in_one_state } 
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MAN = {is_ai = no}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {  }
+
+		completion_reward = {
+				set_autonomy = {
+					target = MAN
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+
+		}
+	
+
+	}
 	focus = {
 		id = JAP_the_courage_to_defend_the_revolution
 		icon = GFX_focus_ITA_peasants_rise
@@ -19553,8 +19595,8 @@ focus_tree = {
 	focus = {
 		id = JAP_protect_the_manchurians
 		icon = GFX_focus_JAP_protect_the_manchurians
-		#mutually_exclusive = { focus =  }
-		x = -1
+		mutually_exclusive = { focus =  JAP_befriend_mapuche_right}
+		x = 0
 		y = 1
 		relative_position_id = JAP_ignite_the_korean_peninsula
 
@@ -19617,10 +19659,57 @@ focus_tree = {
 	}
 
 	focus = {
+		id = JAP_befriend_mapuche_right
+		icon = GFX_focus_generic_befriend_mapuche
+		mutually_exclusive = { focus =  JAP_protect_the_manchurians}
+		x = -2
+		y = 1
+		relative_position_id = JAP_ignite_the_korean_peninsula
+
+		prerequisite = { focus = JAP_ignite_the_korean_peninsula } 
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MAN = {is_ai = no}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {  }
+
+		completion_reward = {
+			MAN = {
+				country_event = {
+					id = SEA_japan_foreign_policy.4
+					hours = 6
+					random_hours = 12
+				}	
+			}
+				set_autonomy = {
+					target = MAN
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+
+		}
+	}
+	focus = {
 		id = JAP_guide_the_chinese
 		icon = GFX_focus_chi_one_china_policy
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = JAP_ignite_the_korean_peninsula
 
@@ -19719,7 +19808,7 @@ focus_tree = {
 		id = JAP_guide_the_mongols
 		icon = GFX_focus_generic_attack_mongolia
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = JAP_guide_the_chinese
 
@@ -19837,12 +19926,12 @@ focus_tree = {
 		id = JAP_spread_the_revolutuon_south
 		icon = GFX_focus_generic_spur_communist_revolutions
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = JAP_guide_the_chinese
 
 		prerequisite = { focus = JAP_guide_the_chinese } 
-		prerequisite = { focus = JAP_protect_the_manchurians } 
+		prerequisite = { focus = JAP_protect_the_manchurians focus = JAP_befriend_mapuche_right} 
 
 		cost = 10
 
@@ -20220,8 +20309,8 @@ focus_tree = {
 		id = JAP_the_pan_asian_revolutionary_front
 		icon = GFX_focus_CHL_union_of_hispanic_republics
 		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 6
+		x = -3
+		y = 7
 		relative_position_id = JAP_guide_the_lesser_states
 
 		prerequisite = { focus = JAP_guide_the_lesser_states } 
@@ -20537,103 +20626,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_extensive_navy_maneuvers
-		icon = GFX_focus_PER_the_peoples_navy
-		#mutually_exclusive = { focus =  }
-		x = 2
-		y = 1
-		relative_position_id = JAP_socialism_in_one_state
-
-		prerequisite = { focus = JAP_socialism_in_one_state } 
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_NAVY_XP }
-
-		completion_reward = {
-				
-			navy_experience = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = JAP_anti_breakway_navy_maneuvers_idea 
-				days = 365
-			}
-			
-		}
-	
-
-	}
-
-	focus = {
-		id = JAP_extensive_army_maneuvers
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		#mutually_exclusive = { focus =  }
-		x = -2
-		y = 1
-		relative_position_id = JAP_socialism_in_one_state
-
-		prerequisite = { focus = JAP_socialism_in_one_state } 
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-				
-			army_experience = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = JAP_anti_kwantung_army_maneuvers_idea 
-				days = 365
-			}			
-			
-		}
-	
-
-	}
-
-	focus = {
 		id = JAP_reclaim_lost_territories
 		icon = GFX_focus_JAP_reclaim_the_lost_territories
 		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		relative_position_id = JAP_socialism_in_one_state
 
 		prerequisite = { focus = JAP_socialism_in_one_state } 
@@ -20644,56 +20641,10 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			OR = {
-				PLU = {
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-				FOR = {
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-				KOR = {
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-			}	
+		available = {	
 		}
 
 		bypass = {
-			AND = {
-				PLU = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-				FOR = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-				KOR = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				}
-			}
 		}
 
 		will_lead_to_war_with = FOR
@@ -20707,72 +20658,74 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-				
-			PLU = {
-				every_core_state = {
-					add_claim_by = ROOT
-				}
-			}
-			FOR = {
-				every_core_state = {
-					add_claim_by = ROOT
-				}
-			}
-			KOR = {
-				every_core_state = {
-					add_claim_by = ROOT
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					PLU = {
-						exists = yes
+				hidden_effect = {
+				PLU = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				create_wargoal = {
-					type = annex_everything
-					target = PLU
-					expire = 0
-				}	
-			}
-			IF = {
-				limit = {
-					FOR = {
-						exists = yes
+				FOR = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				create_wargoal = {
-					type = annex_everything
-					target = FOR
-					expire = 0
-				}	
-			}
-			IF = {
-				limit = {
-					KOR = {
-						exists = yes
+				KOR = {
+					every_core_state = {
+						add_claim_by = ROOT
 					}
 				}
-				create_wargoal = {
-					type = annex_everything
-					target = KOR
-					expire = 0
-				}	
 			}
-			
-		}
 
-	}
+					create_wargoal = {
+						type = annex_everything
+						target = PLU
+						expire = 0
+					}	
+					create_wargoal = {
+						type = annex_everything
+						target = FOR
+						expire = 0
+					}	
 
+					create_wargoal = {
+						type = annex_everything
+						target = KOR
+						expire = 0
+					}	
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				JAP = {
+					add_collaboration = {
+						target = KOR
+						value = 1
+						}
+				custom_effect_tooltip = generic_skip_one_line_tt
+					add_collaboration = {
+						target = FOR
+						value = 1
+					}
+									custom_effect_tooltip = generic_skip_one_line_tt
+					add_collaboration = {
+						target = PLU
+						value = 1
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				navy_experience = 50
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				add_timed_idea = {
+					idea = JAP_anti_breakway_navy_maneuvers_idea 
+					days = 365
+					}
+				}
+}
 	focus = {
 		id = JAP_conquer_the_army_remnants
 		icon = GFX_focus_generic_attack_manchukuo
-		#mutually_exclusive = { focus =  }
-		x = -1
-		y = 2
+		mutually_exclusive = { focus =  JAP_befriend_mapuche_left}
+		x = 0
+		y = 1
 		relative_position_id = JAP_socialism_in_one_state
 
 		prerequisite = { focus = JAP_socialism_in_one_state } 
@@ -20784,23 +20737,11 @@ focus_tree = {
 		}
 
 		available = {
-			MAN = {
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-					is_ally_with = ROOT
-				}
-			}
+			MAN = {is_ai = yes}
 		}
 
 		bypass = {
-			MAN = {
-				OR = {
-					exists = no
-					has_war_with = ROOT
-					is_ally_with = ROOT
-				}
-			}
+
 		}
 
 		will_lead_to_war_with = MAN
@@ -20812,7 +20753,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-				
+			army_experience = 50
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			JAP = {
+			add_collaboration = {
+				target = MAN
+				value = 1
+			}
+			}
+	custom_effect_tooltip = generic_skip_one_line_tt
+
 			MAN = {
 				every_core_state = {
 					add_claim_by = ROOT
@@ -20826,7 +20778,12 @@ focus_tree = {
 				target = MAN
 				expire = 0
 			}	
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_timed_idea = {
+				idea = JAP_anti_kwantung_army_maneuvers_idea 
+				days = 365
+			}
 		}
 	
 
@@ -20836,11 +20793,11 @@ focus_tree = {
 		id = JAP_put_an_end_to_chinese_feudalism
 		icon = GFX_focus_JAP_put_an_end_to_chinese_feudalism
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = JAP_conquer_the_army_remnants
 
-		prerequisite = { focus = JAP_conquer_the_army_remnants } 
+		prerequisite = { focus = JAP_conquer_the_army_remnants focus = JAP_befriend_mapuche_left} 
 		prerequisite = { focus = JAP_reclaim_lost_territories } 
 
 		cost = 10
@@ -21748,8 +21705,8 @@ focus_tree = {
 		id = JAP_to_rival_the_comintern
 		icon = GFX_focus_generic_join_comintern
 		#mutually_exclusive = { focus =  }
-		x = 5
-		y = 1
+		x = 3
+		y = 3
 		relative_position_id = JAP_the_pacific_union_of_soviet_socialist_republics
 
 		prerequisite = { focus = JAP_the_pacific_union_of_soviet_socialist_republics } 
@@ -23179,8 +23136,8 @@ focus_tree = {
 	focus = {
 		id = JAP_democratic_war_with_manchukuo
 		icon = GFX_focus_generic_attack_manchukuo
-		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = 5
+		mutually_exclusive = { focus = JAP_befriend_mapuche_demo }
+		x = 4
 		y = 1
 		relative_position_id = JAP_organize_a_general_election
 
@@ -23193,6 +23150,7 @@ focus_tree = {
 		}
 
 		available = {
+		MAN = {is_ai = yes}
 			is_subject = no
 			MAN = {
 				exists = yes
@@ -23203,7 +23161,6 @@ focus_tree = {
 				has_country_flag = MAN_kwantung_army_took_control_flag
 			}
 		}
-
 		bypass = {
 
 		}
@@ -23221,7 +23178,13 @@ focus_tree = {
 			add_war_support = 0.05
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
+			JAP = {
+			add_collaboration = {
+				target = MAN
+				value = 1
+			}
+		}
+						custom_effect_tooltip = generic_skip_one_line_tt
 			create_wargoal = {
 				type = topple_government
 				target = MAN
@@ -23246,10 +23209,54 @@ focus_tree = {
 					generator = { 610 716 328 715 714 717 }
 				}
 			}
-			
+			add_timed_idea = {
+				idea = JAP_anti_kwantung_army_maneuvers_idea 
+				days = 365
+			}
 		}
 	}
 
+	focus = {
+		id = JAP_befriend_mapuche_demo
+		icon = GFX_focus_generic_befriend_mapuche
+		mutually_exclusive = { focus =  JAP_democratic_war_with_manchukuo}
+		x = 2
+		y = 0
+		relative_position_id = JAP_democratic_war_with_manchukuo
+
+		prerequisite = { focus = JAP_organize_a_general_election } 
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MAN = {is_ai = no}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {  }
+
+		completion_reward = {
+				
+				set_autonomy = {
+					target = MAN
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+
+		}
+	}
 	focus = {
 		id = JAP_democratic_war_with_china
 		icon = GFX_focus_attack_china
@@ -30060,7 +30067,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-
+			custom_effect_tooltip = jap_fast_research
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
