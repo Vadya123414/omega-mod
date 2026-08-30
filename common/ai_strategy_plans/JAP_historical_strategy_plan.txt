@@ -36,6 +36,7 @@ JAP_historical_plan = {
 	ai_national_focuses = {
 
 		# Do ASAP
+		JAP_the_harakiri_debate # 14
 		JAP_the_koiso_cabinet # 70 
 		JAP_found_the_boeitai # 35 
 		JAP_advance_one_hundred_million_fireballs # 70 
@@ -44,41 +45,35 @@ JAP_historical_plan = {
 
 		# 1936
 		JAP_ministry_of_commerce_and_industry # 35
-		JAP_increase_armament_spending # 35
 		JAP_promulgate_the_military_ministers_system # 35 - 270 days mission starts here
-		JAP_hokushin_ron # 35
 		JAP_the_imperial_defense_plan # 21
 		JAP_expand_kawagoe_army_arsenal # 35
 		JAP_establish_showa_aircraft_idnsutry # 35	
 		JAP_expand_hiratsuka_navy_arsenal # 35
 		JAP_revisit_the_thirteen_demands # 35
 		JAP_establish_mongol_military_government # 35
-		JAP_imperial_headquarters_liasion_conference # 35
 
 		# 1937
-		JAP_rely_on_supremacy_of_the_will # 35
-		JAP_the_harakiri_debate # 14
-		JAP_enact_the_national_conscription_law # 35
+		JAP_sea_national_defense_state # 70
+		JAP_imperial_rule_assistance_association # 35
+		JAP_sea_state_general_mobilization_law # 35
+		JAP_enact_religious_organizations_law # 35
+		JAP_new_order_movement # 70
+		JAP_reinforce_the_beijing_garrison # 70
 		JAP_konoes_first_cabinet # 35
-		JAP_reinforce_the_beijing_garrison # 70 attack on the 16th of July, 9 days later than historical
 		JAP_sea_national_spiritual_mobliization_movement # 35
 		JAP_form_the_central_economic_council # 35
 		JAP_expand_the_showa_research_association # 70
 		JAP_ministry_of_colonial_affairs # 35
-
+		JAP_increase_armament_spending # 35
 		# 1938
 		JAP_new_order_in_east_asia # 35
-		JAP_sea_state_general_mobilization_law # 35
-		JAP_enact_religious_organizations_law # 35
-		JAP_new_order_movement # 70
-		JAP_strategic_offensives # 35
 		JAP_sea_guide_the_zaibatsus # 35
 		JAP_approach_mitsubishi #70
 
 		# 1939
 		JAP_approach_yasuda #70(35)
 		JAP_fund_the_riken_institute # 70
-		JAP_prepare_the_southern_front # 35
 		JAP_balanced_naval_approach # 70(35)
 		JAP_form_the_great_japan_industrial_patriotic_association # 70
 
@@ -90,7 +85,7 @@ JAP_historical_plan = {
 		JAP_reorganize_the_united_autonomous_government # 35
 		JAP_invest_in_senbu # 35
 		JAP_intensify_anti_guerilla_operations # 35
-		JAP_imperial_rule_assistance_association # 35 12th October
+		
 		JAP_reorganized_national_government # 35
 		JAP_sea_greater_east_asian_co_properity_sphere # 70 June 1940, historically later
 		JAP_nanshin_ron # 35
@@ -101,8 +96,9 @@ JAP_historical_plan = {
 		JAP_mengjiang_united_autonomous_government # 35
 		JAP_sea_tripartite_pact # 35 if bypassed, potentially moves later attack dates 35 das forward
 		JAP_soviet_japanese_neutrality_pact #35 April 1941
+		JAP_hokushin_ron
 		JAP_demand_tonkinese_bases # 35 September 1941
-		JAP_unsinkable_aircraft_carriers # 35
+		#JAP_unsinkable_aircraft_carriers # 35
 		JAP_issue_the_shinmin_no_michi_manifesto # 35
 		JAP_occupy_indochina # 35
 		JAP_sea_pressure_siam # 35
@@ -112,7 +108,6 @@ JAP_historical_plan = {
 		# 1942
 		JAP_expand_navy_technical_department # 70
 		JAP_isolate_oceania # 70 May 1942
-		JAP_sea_national_defense_state # 70
 		JAP_7075_aluminium_alloy # 35
 		JAP_escort_efficiency # 35
 		JAP_sea_long_operational_range #70 get Longe Range Zeros for the war in the pacific

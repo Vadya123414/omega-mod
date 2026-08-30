@@ -147,8 +147,8 @@ focus_tree = {
 		}
 
 		override_position = {
-			x = 4100
-			y = 700
+			x = 5000
+			y = 1100
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -162,9 +162,10 @@ focus_tree = {
 			}
 		}
 
+		
 		override_position = {
-			x = 3000
-			y = 700
+			x = 3500
+			y = 1100
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -226,7 +227,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 20 y = 1200 }
+	continuous_focus_position = { x = 20 y = 800 }
 
 
 	focus = {
@@ -9041,7 +9042,11 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
+			or = {
+				has_war_with_major = yes
+				CHI = {exists = no}
+			}
+			
 			OR = {
 				has_war_support > 0.79
 				surrender_progress > 0
@@ -17489,7 +17494,7 @@ focus_tree = {
 		id = JAP_a_red_sun_rises_for_a_new_era
 		icon = GFX_focus_JAP_the_red_sun_rises_for_a_new_era
 		mutually_exclusive = { focus = JAP_organize_a_general_election }
-		x = -9
+		x = -11
 		y = 2
 		relative_position_id = JAP_revoke_the_peace_preservation_law
 
@@ -18113,7 +18118,7 @@ focus_tree = {
 		id = JAP_cooperate_with_anarchists
 		icon = GFX_focus_ETH_support_from_the_japanese_communists 
 		#mutually_exclusive = { focus =  }
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = JAP_sea_fate_of_the_imperial_family
 
@@ -18176,7 +18181,7 @@ focus_tree = {
 		id = JAP_the_ie_system_and_socialism
 		icon = GFX_focus_generic_soviet_politics
 		#mutually_exclusive = { focus =  }
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = JAP_sea_fate_of_the_imperial_family
 
@@ -18217,7 +18222,7 @@ focus_tree = {
 		id = JAP_fukumotoism
 		icon = GFX_focus_DEN_limited_regulations
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = JAP_the_ie_system_and_socialism
 
@@ -18268,7 +18273,7 @@ focus_tree = {
 		id = JAP_the_modern_ashigaru
 		icon = GFX_focus_JAP_the_modern_ashigaru
 		#mutually_exclusive = { focus =  }
-		x = -4
+		x = 2
 		y = 1
 		relative_position_id = JAP_the_ie_system_and_socialism
 
@@ -18338,7 +18343,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_learn_from_the_nkvd
 		#mutually_exclusive = { focus =  }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = JAP_the_modern_ashigaru
 
 		prerequisite = { focus = JAP_the_modern_ashigaru } 
@@ -18397,7 +18402,7 @@ focus_tree = {
 		id = JAP_further_urban_investments
 		icon = GFX_focus_JAP_further_urban_investments
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = JAP_fukumotoism
 
@@ -18448,7 +18453,7 @@ focus_tree = {
 		id = JAP_the_first_five_year_plan
 		icon = GFX_focus_generic_communist_industry
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = JAP_fukumotoism
 
@@ -18628,7 +18633,7 @@ focus_tree = {
 		id = JAP_incorporate_buddhist_socialism
 		icon = GFX_focus_JAP_incorporate_buddhist_socialism
 		#mutually_exclusive = { focus =  }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = JAP_cooperate_with_anarchists
 
@@ -18858,7 +18863,7 @@ focus_tree = {
 		id = JAP_kikues_new_model
 		icon = GFX_focus_JAP_kikues_new_model
 		#mutually_exclusive = { focus =  }
-		x = 5
+		x = 6
 		y = 1
 		relative_position_id = JAP_cooperate_with_anarchists
 
@@ -18962,7 +18967,7 @@ focus_tree = {
 		id = JAP_form_national_cooperatives
 		icon = GFX_goal_generic_national_unity
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = JAP_the_uno_school_of_economics
 
@@ -19037,7 +19042,7 @@ focus_tree = {
 		id = JAP_further_rural_investments
 		icon = GFX_focus_prc_agrarian_socialism
 		#mutually_exclusive = { focus =  }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = JAP_the_uno_school_of_economics
 
@@ -19092,7 +19097,7 @@ focus_tree = {
 		id = JAP_adopt_syndicalist_ideas
 		icon = GFX_focus_ARG_establish_the_free_association
 		#mutually_exclusive = { focus =  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = JAP_further_rural_investments
 
@@ -19137,8 +19142,8 @@ focus_tree = {
 		id = JAP_raise_the_red_flag_high
 		icon = GFX_focus_JAP_raise_the_red_flag_high
 		#mutually_exclusive = { focus =  }
-		x = -5
-		y = 2
+		x = -4
+		y = 1
 		relative_position_id = JAP_adopt_syndicalist_ideas
 
 		prerequisite = { focus = JAP_adopt_syndicalist_ideas focus = JAP_form_pioneer_organizations } 
@@ -19212,12 +19217,12 @@ focus_tree = {
 		id = JAP_guide_the_lesser_states
 		icon = GFX_focus_GER_liberate_exploited_colonial_workers
 		#mutually_exclusive = { focus =  }
-		x = 5
+		x = 9
 		y = 1
-		relative_position_id = JAP_raise_the_red_flag_high
+		relative_position_id = JAP_the_labor_farmer_faction_ascendant
 
-		prerequisite = { focus = JAP_raise_the_red_flag_high } 
-		prerequisite = { focus = JAP_adopt_syndicalist_ideas } 
+		prerequisite = { focus = JAP_the_labor_farmer_faction_ascendant } 
+
 
 		cost = 5
 
@@ -19264,12 +19269,11 @@ focus_tree = {
 		id = JAP_socialism_in_one_state
 		icon = GFX_focus_ETH_callout_to_the_world
 		#mutually_exclusive = { focus =  }
-		x = -5
+		x = -6
 		y = 1
-		relative_position_id = JAP_raise_the_red_flag_high
+		relative_position_id = JAP_the_lecture_group_ascendant
 
-		prerequisite = { focus = JAP_raise_the_red_flag_high } 
-		prerequisite = { focus = JAP_form_pioneer_organizations } 
+		prerequisite = { focus = JAP_the_lecture_group_ascendant } 
 
 		cost = 5
 
@@ -19355,7 +19359,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_guide_the_lesser_states } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -19487,7 +19491,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_demand_submission_from_breawakay_states } 
 
-		cost = 5
+		cost = 2
 
 		dynamic = yes
 
@@ -19556,7 +19560,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ignite_the_korean_peninsula } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -20216,8 +20220,8 @@ focus_tree = {
 		id = JAP_the_pan_asian_revolutionary_front
 		icon = GFX_focus_CHL_union_of_hispanic_republics
 		#mutually_exclusive = { focus =  }
-		x = -4
-		y = 1
+		x = -2
+		y = 6
 		relative_position_id = JAP_guide_the_lesser_states
 
 		prerequisite = { focus = JAP_guide_the_lesser_states } 
@@ -20634,7 +20638,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_socialism_in_one_state } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -20773,7 +20777,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_socialism_in_one_state } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -21744,7 +21748,7 @@ focus_tree = {
 		id = JAP_to_rival_the_comintern
 		icon = GFX_focus_generic_join_comintern
 		#mutually_exclusive = { focus =  }
-		x = -5
+		x = 5
 		y = 1
 		relative_position_id = JAP_the_pacific_union_of_soviet_socialist_republics
 
@@ -23176,13 +23180,13 @@ focus_tree = {
 		id = JAP_democratic_war_with_manchukuo
 		icon = GFX_focus_generic_attack_manchukuo
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -3
+		x = 5
 		y = 1
-		relative_position_id = JAP_crush_the_internal_factions
+		relative_position_id = JAP_organize_a_general_election
 
-		prerequisite = { focus = JAP_crush_the_internal_factions } 
+		prerequisite = { focus = JAP_organize_a_general_election } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -23250,11 +23254,11 @@ focus_tree = {
 		id = JAP_democratic_war_with_china
 		icon = GFX_focus_attack_china
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -6
+		x = 8
 		y = 1
-		relative_position_id = JAP_crush_the_internal_factions
+		relative_position_id = JAP_organize_a_general_election
 
-		prerequisite = { focus = JAP_crush_the_internal_factions } 
+		prerequisite = { focus = JAP_organize_a_general_election } 
 
 		cost = 10
 
@@ -23667,11 +23671,11 @@ focus_tree = {
 	focus = {
 		id = JAP_sea_rekindle_the_old_alliance
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = JAP_crush_the_internal_factions }
+		prerequisite = { focus = JAP_organize_a_general_election }
 		mutually_exclusive = { focus = JAP_create_greater_east_asian_treaty_organization }
-		x = -2
-		y = 2
-		relative_position_id = JAP_crush_the_internal_factions
+		x = 4
+		y = 1
+		relative_position_id = JAP_democratic_war_with_china
 
 		cost = 5
 
@@ -24092,7 +24096,7 @@ focus_tree = {
 		id = JAP_democratic_womens_suffrage
 		icon = GFX_focus_AUS_womens_education_initiative
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = 0
+		x = -4
 		y = 1
 		relative_position_id = JAP_crush_the_internal_factions
 
@@ -24140,7 +24144,7 @@ focus_tree = {
 		id = JAP_launch_the_income_doubling_plan
 		icon = GFX_focus_JAP_launch_the_income_doubling_plan
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = 5
+		x = 0
 		y = 1
 		relative_position_id = JAP_crush_the_internal_factions
 
@@ -24240,7 +24244,7 @@ focus_tree = {
 		id = JAP_democratic_women_in_the_workforce
 		icon = GFX_focus_ARG_women_in_industry
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_reform_the_education_system
 
@@ -24667,6 +24671,7 @@ focus_tree = {
 		}
 	}
 
+
 	focus = {
 		id = JAP_democratic_research_slot
 		icon = GFX_focus_research
@@ -24678,7 +24683,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_taiheyo_belt } 
 		prerequisite = { focus = JAP_reform_the_education_system } 
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
