@@ -85,7 +85,7 @@ USA_congress = {
 				check_variable = { representatives_support < representatives_total }
 			}
 		}
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			factor = 0
 			modifier = {

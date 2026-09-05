@@ -42,6 +42,7 @@ NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		--
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
 NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 --NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
 --NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0;									-- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
@@ -51,11 +52,16 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войс
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
-NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
-NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0
+NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0;
+NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;--100							-- стоимость снятие гордости флота
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0.0-- Кол-во мин в рег
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- скорость минирования
+NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0;    -- шанс крита мин
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_DAMAGE_SCALE = 0;   -- урон крита мин
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_STRENGTH_LOSS = 0;      -- урон мин по прочности
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_ORG_LOSS_FACTOR = 0;	--урон мин по орге
 
 --Производство
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10;
@@ -63,6 +69,7 @@ NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10;
 NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300;
 NDefines.NProduction.SHIP_REFIT_MAX_PROGRESS_TO_CANCEL = 0.99;
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 300
 --NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0            -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0        -- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 --NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0        -- XP cost for converting one equipment module to a related module when creating an equipment variant.
@@ -120,6 +127,8 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.7 ---размены в воздухе(ванила = 1)
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1; -- глобальная скорость самолётов
+
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
 		25,			-- pp cost if no available scientist
 		25,			-- pp cost if 1 available scientist
@@ -129,4 +138,5 @@ NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scie
 
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
 
+NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 0.5
 

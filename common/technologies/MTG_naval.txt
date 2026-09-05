@@ -44,7 +44,7 @@ technologies = {
 			has_dlc = "Man the Guns"
 		}
 
-		research_cost = 1
+		research_cost = 0.25
 
 		start_year = 1922
 
@@ -715,7 +715,7 @@ technologies = {
 			}
 		}	
 
-		research_cost = 1
+		research_cost = 0.25
 
 		start_year = 1922
 
@@ -1021,7 +1021,7 @@ technologies = {
 				PROJECT = sp_naval_super_heavy_battleship	
 			}
 		}
-		research_cost = 1
+		research_cost = 0.25
 
 		start_year = 1922
 
@@ -1391,7 +1391,7 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.25
 
 		start_year = 1922
 
@@ -1628,7 +1628,7 @@ early_ship_hull_carrier = {
 			}			
 		}
 
-		research_cost = 1
+		research_cost = 0.25
 
 		start_year = 1922
 

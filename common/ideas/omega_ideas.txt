@@ -911,7 +911,7 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.20
-				production_speed_buildings_factor = 0.35
+				production_speed_buildings_factor = 0.25
 			}
 		}
 		
@@ -1050,11 +1050,10 @@ ideas = {
 			picture = SOV_soviet_hegemony
 			modifier = {
 				industrial_capacity_factory = 0.10
-				consumer_goods_expected_value = -0.10
-				production_speed_buildings_factor = 0.10
-				production_factory_max_efficiency_factor = 0.10
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.05
 				global_building_slots_factor = 0.25
-				weekly_manpower = 3000
+				weekly_manpower = 1000
 			} 
 				
 			targeted_modifier = {
