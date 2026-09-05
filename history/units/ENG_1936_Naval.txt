@@ -46,8 +46,8 @@
 			ship = { name = "HMS Firedrake" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG version_name = "E/F/G/H Class"} } }
 			ship = { name = "HMS Foresight" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG version_name = "E/F/G/H Class"} } }
 			ship = { name = "HMS Fortune" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG version_name = "E/F/G/H Class"} } }							# to RCN as Saskatchewan, 1943
-			ship = { name = "HMS Queen Elizabeth" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
-			ship = { name = "HMS Valiant" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+			ship = { name = "HMS Queen Elizabeth" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Revenge Class" } } }
+			ship = { name = "HMS Valiant" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Revenge Class" } } }
 			ship = { name = "HMS Erebus" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = ENG version_name = "Erebus Class" } } }
 			ship = { name = "HMS Terror" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = ENG version_name = "Erebus Class" } } }
 			ship = { name = "HMS Frobisher" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "Hawkins Class" } } }
@@ -189,9 +189,9 @@
 			ship = { name = "HMS H49" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ENG version_name = "O/P/R Class" } } }
 			ship = { name = "HMS H50" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ENG version_name = "O/P/R Class" } } }
 			ship = { name = "HMS Glorious" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = ENG version_name = "Courageous Class" } } }
-			ship = { name = "HMS Warspite" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }			
-			ship = { name = "HMS Barham" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }			
-			ship = { name = "HMS Malaya" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }				
+			ship = { name = "HMS Warspite" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Revenge Class" } } }			
+			ship = { name = "HMS Barham" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Revenge Class" } } }			
+			ship = { name = "HMS Malaya" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = ENG version_name = "Revenge Class" } } }				
 			ship = { name = "HMS Devonshire" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "County Class" } } }
 			ship = { name = "HMS Shropshire" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "County Class" } } }
 			ship = { name = "HMS Sussex" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ENG version_name = "County Class" } } }		
