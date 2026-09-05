@@ -555,7 +555,17 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			modifier = {
+				factor = 10
+				OR = {
+					original_tag = ENG
+					original_tag = USA
+					original_tag = ITA
+					original_tag = JAP
+				}
+				
+			}
 		}
 		
 		categories = {
@@ -596,16 +606,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
-			
+			factor = 0
 			modifier = {
-				factor = 3
-				date > "1938.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1939.1.1"
+				factor = 10
+				OR = {
+					original_tag = ENG
+					original_tag = USA
+					original_tag = ITA
+					original_tag = JAP
+				}
+				
 			}
 		}
 		
@@ -653,21 +663,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
-			
+			factor = 0
 			modifier = {
-				factor = 3
-				date > "1940.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
+				factor = 10
+				OR = {
+					original_tag = ENG
+					original_tag = USA
+					original_tag = ITA
+					original_tag = JAP
+				}
+				
 			}
 		}
 		
@@ -701,11 +706,19 @@ technologies = {
 			name = electronics_folder
 			position = { x = @computing y = 14 }
 		}
-		
-		ai_will_do = {
-			factor = 3
-			
+				ai_will_do = {
+			factor = 0
 			modifier = {
+				factor = 10
+				OR = {
+					original_tag = ENG
+					original_tag = USA
+					original_tag = ITA
+					original_tag = JAP
+				}
+				
+			}
+						modifier = {
 				factor = 3
 				date > "1942.1.6"
 			}
@@ -715,6 +728,7 @@ technologies = {
 				date > "1943.1.1"
 			}
 		}
+
 		
 		categories = {
 			electronics
@@ -989,12 +1003,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.75
+			factor = 0.0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = ENG
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ITA
 				}
 				factor = 3
 			}
@@ -1030,12 +1045,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.75
+			factor = 0.0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = ENG
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ITA
 				}
 				factor = 3
 			}
@@ -1072,12 +1088,13 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.75
+			factor = 0.0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = ENG
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ITA
 				}
 				factor = 3
 			}
@@ -1124,7 +1141,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1936
 		folder = {
 			name = electronics_folder
@@ -1155,11 +1172,11 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1
-		start_year = 1936
+		research_cost = 1.5
+		start_year = 1938
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 2 }
+			position = { x = 0 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -1177,11 +1194,11 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1
-		start_year = 1938
+		research_cost = 1.5
+		start_year = 1940
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -1206,7 +1223,7 @@ technologies = {
 
 		coastal_bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1936
 		folder = {
 			name = electronics_folder
@@ -1228,11 +1245,11 @@ technologies = {
 
 		coastal_bunker_max_level_terrain_limit = 2
 		
-		research_cost = 1
-		start_year = 1938
+		research_cost = 1.5
+		start_year = 1940
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 6 }
+			position = { x = 2 y = 10 }
 		}
 		
 		ai_will_do = {

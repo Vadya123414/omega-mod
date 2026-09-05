@@ -100,7 +100,6 @@ garrison_generic = {
 suppression_generic = {
 	
 	role = suppression
-	blocked_for = {}
 	upgrade_prio = {
 		base = 0
 	}
@@ -124,7 +123,6 @@ suppression_generic = {
 }
 
 infantry_generic = {
-
 	role = infantry
 	
 	upgrade_prio = {

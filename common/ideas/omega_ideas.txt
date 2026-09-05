@@ -1,6 +1,20 @@
 ideas = {
 	country = {
 		
+				USA_civil_war = {	
+				allowed = {
+					always = no
+				}
+				picture = generic_women_in_the_army
+				allowed_civil_war = {
+					always = yes
+				}
+				removal_cost = -1
+		
+				modifier = {
+					weekly_casualties_war_support = 0.002
+				}
+			}
 		Russian_puppet_no_surrender = {
 			
 			allowed = {
@@ -1527,5 +1541,6 @@ ideas = {
 			}
 		}
 		}
+
 }
 	
