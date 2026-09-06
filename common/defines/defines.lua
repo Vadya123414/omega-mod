@@ -96,6 +96,10 @@ NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ИИ не бу�
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- к скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
+NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
+NDefines.NAI.EQUIPMENT_MARKET_SHORTAGE_DAYS_TO_CANCEL = 7
+NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
+
 
 
 -- <start> construction prioritization
