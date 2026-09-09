@@ -4711,7 +4711,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
+		cost = 5
 		dynamic = yes 
 		available = {
 
@@ -4830,7 +4830,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 2
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -5099,7 +5099,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_improve_the_stalin_line }
 
@@ -5340,7 +5340,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_the_molotov_line }
 
@@ -5722,7 +5722,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_military_engineering_university
-		cost = 5
+		cost = 3
 
 		available = {
 			has_full_control_of_state = 215 #ONEGA
@@ -5837,7 +5837,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		cost = 3
 
 		available = {
 			OR = {
@@ -6125,7 +6125,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -7069,7 +7069,6 @@ focus_tree = {
 			add_to_variable = { SOV_the_politburo_mobilization_laws_cost_factor = -0.2 }
 			custom_effect_tooltip = SOV_secure_the_administration_ns_tt
 
-			add_political_power = 150
 
 			SOV_paranoia_medium_decrease_effect = yes
 		}
@@ -7083,7 +7082,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -7376,39 +7375,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_organization_centralization_discipline
-		icon = GFX_focus_SOV_organization_centralization_discipline
-		prerequisite = { focus = SOV_the_collectivization_process }
-		prerequisite = { focus = SOV_the_workers_dictatorship }
-		x = -2
-		y = 1
-		relative_position_id = SOV_the_workers_dictatorship
-		cost = 1
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
-
-		completion_reward = {
-			add_to_variable = { SOV_the_politburo_max_command_power = 20 }
-			add_to_variable = { SOV_the_politburo_mobilization_speed = 0.05 }
-			custom_effect_tooltip = SOV_organization_centralization_discipline_ns_tt
-
-			add_political_power = 50
-
-			SOV_paranoia_medium_decrease_effect = yes
-		}
-	}
-
-	focus = {
 		id = SOV_war_economy
 		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_organization_centralization_discipline }
+		prerequisite = { focus = SOV_the_workers_dictatorship }
+		prerequisite = { focus = SOV_the_collectivization_process }
 		x = 0
-		y = 1
-		relative_position_id = SOV_organization_centralization_discipline
+		y = 2
+		relative_position_id = SOV_the_collectivization_process
 		cost = 5
 
 		available = {
@@ -7765,109 +7738,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_they_will_know_fear
-		icon = GFX_SOV_they_will_know_fear_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_stalins_cult_of_personality }
-		x = -3
-		y = 1
-		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 1
-
-		available = {
-			has_defensive_war = yes
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = advanced_heavy_tank_chassis
-			}
-			else = {
-				has_tech = advanced_heavy_tank
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 1
-			}
-
-			add_tech_bonus = {
-				name = SOV_they_will_know_fear
-				bonus = 1
-				uses = 1 # was 2
-				category = armor
-			}
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				# IS-2 tank template
-				if = {
-					limit = {
-						OR = {
-							has_tech = antiair2
-							has_tech = antitank2
-						}
-					}
-					create_equipment_variant = {
-						name = "IS-2"
-						type = heavy_tank_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_heavy_cannon_2
-							turret_type_slot = tank_heavy_three_man_tank_turret
-							suspension_type_slot = tank_torsion_bar_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = sloped_armor
-							special_type_slot_3 = smoke_launchers
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 8
-							tank_nsb_armor_upgrade = 6
-						}
-						icon = "GFX_SOV_advanced_heavy_tank_medium"
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							has_tech = interwar_antiair
-							has_tech = interwar_antitank
-						}
-					}
-					create_equipment_variant = {
-						name = "IS-2"
-						type = heavy_tank_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_heavy_cannon
-							turret_type_slot = tank_heavy_three_man_tank_turret
-							suspension_type_slot = tank_torsion_bar_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = sloped_armor
-							special_type_slot_3 = smoke_launchers
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 8
-							tank_nsb_armor_upgrade = 6
-						}
-						icon = "GFX_SOV_advanced_heavy_tank_medium"
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_inheritor_of_the_mantle_of_lenin
 		icon = GFX_SOV_inheritor_of_the_mantle_of_lenin_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_stalins_cult_of_personality }
@@ -8155,99 +8025,6 @@ focus_tree = {
 			}
 			hidden_effect = {
 				play_song = "comintern_war_1"
-			}
-		}
-	}
-
-	focus = {
-		id = SOV_freedom_of_debate_unity_of_action
-		icon = GFX_focus_generic_soviet_politics
-		prerequisite = { focus = SOV_stalins_cult_of_personality }
-		x = 3
-		y = 1
-		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 1
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
-
-		completion_reward = {
-			add_to_variable = { SOV_the_politburo_political_power_factor = 0.05 }
-			add_to_variable = { SOV_the_politburo_political_advisor_cost_factor = -0.15 }
-			custom_effect_tooltip = SOV_freedom_of_debate_unity_of_action_ns_tt
-
-			add_political_power = 50
-			add_stability = 0.05
-			add_war_support = 0.05
-		}
-	}
-
-	focus = {
-		id = SOV_the_construction_of_communism
-		icon = GFX_focus_ger_great_red_menace
-		prerequisite = { focus = SOV_freedom_of_debate_unity_of_action }
-		x = 0
-		y = 2
-		relative_position_id = SOV_freedom_of_debate_unity_of_action
-		cost = 1
-
-		available = {
-			num_subjects > 0
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			add_to_variable = { SOV_the_politburo_opinion_gain_monthly_same_ideology_factor = 0.25 }
-			custom_effect_tooltip = SOV_the_construction_of_communism_ns_tt
-
-			if = {
-				limit = {
-					num_subjects > 0
-				}
-				every_subject_country = {
-					add_autonomy_score = {
-						value = -100
-						localization = SOV_the_construction_of_communism
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_the_construction_of_communism_puppet_autonomy_tt
-			}
-
-			custom_effect_tooltip = SOV_the_construction_of_communism_railways_tt
-			#Build railway from Moscow to Puppets
-			hidden_effect = { #Hiidden for tooltip reasons
-				every_subject_country = {
-					limit = {
-						capital_scope = {
-							OR = {
-								is_on_continent = europe
-								is_on_continent = asia
-								is_on_continent = middle_east
-							}
-						}
-					}
-
-					if = {
-						limit = {
-							can_build_railway = {
-								start_state = ROOT.capital
-								target_state = THIS.capital
-								build_only_on_allied = yes
-							}
-						}
-						build_railway = {				
-							start_state = ROOT.capital
-							target_state = THIS.capital
-							build_only_on_allied = yes
-						}
-					}		
-				}
 			}
 		}
 	}
@@ -11729,7 +11506,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_collectivist_propaganda
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -11749,7 +11526,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_socialist_emulation
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -11939,52 +11716,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_war_measures_in_the_east
-		icon = GFX_SOV_war_measures_in_the_east_ccp_2d_sov_compatibility
+		id = SOV_annex_tannu_tuva
+		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_development_aid_for_eastern_allies }
 		x = 0
 		y = 1
 		relative_position_id = SOV_development_aid_for_eastern_allies
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_civil_war = yes
-			}	
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = SOV_war_measures_scope_tt
-			every_other_country = {
-				limit = {
-					is_in_faction_with = ROOT
-					capital_scope = { is_on_continent = asia }
-					is_major = no
-				}
-				country_event = { id = NSB_soviet_foreign_politics_events.11 hours = 2 random_hours = 1 }
-				custom_effect_tooltip = if_they_accept
-				effect_tooltip = {
-					add_timed_idea = { idea = SOV_war_measures_allies days = 1095 }
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SOV_annex_tannu_tuva
-		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_war_measures_in_the_east }
-		x = -1
-		y = 1
-		relative_position_id = SOV_war_measures_in_the_east
 		cost = 5
 
 		ai_will_do = {
@@ -12014,44 +11751,6 @@ focus_tree = {
 					hours = 6
 				} 
 			}
-		}
-	}
-
-	focus = {
-		id = SOV_fortify_mongolian_border
-		icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_war_measures_in_the_east }
-		x = 1
-		y = 1
-		relative_position_id = SOV_war_measures_in_the_east
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_civil_war = yes
-			}	
-		}
-		
-		available = {
-			MON = {
-				is_in_faction_with = ROOT
-				has_full_control_of_state = 330
-				has_full_control_of_state = 819
-				has_full_control_of_state = 817
-				has_full_control_of_state = 818
-
-			}
-			is_subject = no
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			MON = { country_event = { id = NSB_soviet_foreign_politics_events.12 hours = 2 random_hours = 1 } }
-			custom_effect_tooltip = if_they_accept
-			custom_effect_tooltip = SOV_fortify_mongolian_border_forts_tt
 		}
 	}
 
@@ -15730,7 +15429,7 @@ ai_will_do = {
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.05
+				popularity = 0.1
 			}
 			custom_effect_tooltip = SOV_fascist_womens_movement_tt
 			effect_tooltip = { add_ideas = SOV_fascist_womens_movement_idea }
@@ -15766,10 +15465,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -15808,11 +15503,7 @@ ai_will_do = {
 
 		completion_reward = {
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-			add_popularity = {
-				ideology = neutrality
+				ideology = democratic
 				popularity = 0.1
 			}	
 			custom_effect_tooltip = SOV_national_unification_tt 
@@ -15866,7 +15557,7 @@ ai_will_do = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -15897,7 +15588,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -15934,7 +15625,7 @@ ai_will_do = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -15965,7 +15656,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -15989,7 +15680,7 @@ ai_will_do = {
 			custom_effect_tooltip = SOV_fascist_youth_union_tt
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.05
+				popularity = 0.1
 			}	
 		}
 	}
@@ -16039,7 +15730,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_fascist_youth_union
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -16073,7 +15764,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_muster_the_old_guard
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -16421,31 +16112,6 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_rebuild_the_nation
-		icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_consolidate_power }
-		x = 0
-		y = 1
-		relative_position_id = SOV_consolidate_power
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = { has_war = no }
-
-		available_if_capitulated = no
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = SOV_rebuild_the_nation
-				days = 540
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_bringing_breakaways_back_to_the_fold
 		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_consolidate_power }
@@ -16523,10 +16189,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_restore_the_glory_of_the_motherland
 		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_rebuild_the_nation }
+		prerequisite = { focus = SOV_consolidate_power }
 		x = 0
 		y = 1
-		relative_position_id = SOV_rebuild_the_nation
+		relative_position_id = SOV_consolidate_power
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -16693,10 +16359,6 @@ ai_will_do = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_the_return_of_the_rocor_tt
-			add_popularity = {
-				ideology = communism 
-				popularity = -0.1
-			}
 		}
 	}
 
@@ -16882,9 +16544,9 @@ ai_will_do = {
 	focus = {
 		id = SOV_russian_corporate_state
 		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = RUS_not_vibor}
-		x = 2
-		y = 1
+		prerequisite = { focus = SOV_pacify_the_rim focus = RUS_not_vibor}
+		x = 5
+		y = 2
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 		cost = 5
 		ai_will_do = {
@@ -18142,11 +17804,11 @@ ai_will_do = {
 	focus = {
 		id = SOV_pacify_the_rim
 		icon = GFX_SOV_pacify_the_rim_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_romanov_reconstruction focus = RUS_not_vibor}
+		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_romanov_reconstruction}
 		x = -1
 		y = 1
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -18257,8 +17919,7 @@ ai_will_do = {
 		id = SOV_eastern_expansion
 		icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_pacify_the_rim }
-		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = RUS_not_vibor}
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = SOV_pacify_the_rim
 		cost = 5
@@ -18546,7 +18207,7 @@ ai_will_do = {
 		id = SOV_rebuild_the_far_eastern_fleet
 		icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_pacify_the_rim }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = SOV_pacify_the_rim
 		cost = 5
@@ -18664,7 +18325,6 @@ ai_will_do = {
 		id = SOV_memories_of_1905
 		icon = GFX_SOV_memories_of_1905_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_rebuild_the_far_eastern_fleet }
-		mutually_exclusive = { focus = SOV_japanese_overtures }
 		x = 0
 		y = 1
 		relative_position_id = SOV_rebuild_the_far_eastern_fleet
@@ -18799,10 +18459,11 @@ ai_will_do = {
 		id = SOV_the_berlin_moscow_axis
 		icon = GFX_SOV_the_berlin_moscow_axis_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_pacify_the_rim }
-		x = 2
+		mutually_exclusive = { focus = SOV_japanese_overtures }
+		x = 0
 		y = 1
 		relative_position_id = SOV_pacify_the_rim
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -18833,12 +18494,12 @@ ai_will_do = {
 	focus = {
 		id = SOV_japanese_overtures
 		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_berlin_moscow_axis }
-		mutually_exclusive = { focus = SOV_memories_of_1905 }
-		x = 0
+		prerequisite = { focus = SOV_pacify_the_rim }
+		mutually_exclusive = { focus = SOV_the_berlin_moscow_axis }
+		x = 2
 		y = 1
-		relative_position_id = SOV_the_berlin_moscow_axis
-		cost = 5
+		relative_position_id = SOV_pacify_the_rim
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -18848,7 +18509,6 @@ ai_will_do = {
 
 		available = {
 			is_subject = no
-			is_in_faction_with = GER
 			GER = { is_faction_leader = yes }
 			JAP = {
 				is_in_faction = no
@@ -18856,10 +18516,8 @@ ai_will_do = {
 			}
 		}
 
-		completion_reward = {
-			GER = {
-				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
-			}
+		completion_reward = {  
+			JAP = { country_event = priglos_v_alik.1 }
 		}
 	}
 	
@@ -18885,7 +18543,7 @@ ai_will_do = {
 			add_stability = 0.15
 			add_popularity = { ideology = democratic popularity = 0.2 }
 		}
-	}
+	} 
 	
 	focus = {
 		id = RUS_not_vibor
@@ -18910,7 +18568,7 @@ ai_will_do = {
 			add_war_support = 0.2
 			add_popularity = { ideology = democratic popularity = 0.30 }
 			add_country_leader_role = {
-				character = SOV_anton_denikin
+				character = SOV_pyotr_krasnov
 				country_leader = {
 					expire = "1965.1.1"
 					ideology = populism 
@@ -18928,7 +18586,7 @@ ai_will_do = {
 	focus = {
 		id = RUS_GER_cooperation
 		icon = GFX_focus_SOV_russo_german_alliance
-		prerequisite = { focus = RUS_not_vibor }
+		prerequisite = { focus = SOV_pacify_the_rim focus = RUS_not_vibor }
 		x = -6
 		y = 1
 		relative_position_id = RUS_not_vibor
@@ -18944,19 +18602,8 @@ ai_will_do = {
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			army_experience = 100
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
+			
 			GER = {army_experience = 100
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
 			}
 		}
 	}
@@ -18967,7 +18614,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_GER_cooperation }
 
 		x = -1
-		y = 4
+		y = 2
 		relative_position_id = RUS_GER_cooperation
 		cost = 5
 		available = {is_in_faction_with = GER }
@@ -18995,7 +18642,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_GER_cooperation }
 
 		x = 1
-		y = 4
+		y = 2
 		available = {is_in_faction_with = GER }
 		relative_position_id = RUS_GER_cooperation
 		cost = 5
@@ -19023,7 +18670,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_GER_cooperation }
 
 		x = 0
-		y = 6
+		y = 3
 		relative_position_id = RUS_GER_cooperation
 		cost = 5
 		available = {is_in_faction_with = GER }
@@ -19040,30 +18687,81 @@ ai_will_do = {
         	   resource = rubber
         	   amount = 1
         	}
-			229 = {
-					add_extra_state_shared_building_slots = 3
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						synthetic_refinery < 1
+						is_core_of = root
+					}
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 3
 						instant_build = yes
-					}
+					}				
 				}
-			260 = {
-					add_extra_state_shared_building_slots = 3
+				else_if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_core_of = root
+					}
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 3
 						instant_build = yes
-					}
+					}				
 				}
-			223 = {
-					add_extra_state_shared_building_slots = 3
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						synthetic_refinery < 1
+						is_core_of = root
+					}
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 3
 						instant_build = yes
+					}				
+				}
+				else_if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_core_of = root
 					}
-				}	
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 3
+						instant_build = yes
+					}				
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						synthetic_refinery < 1
+						is_core_of = root
+					}
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 3
+						instant_build = yes
+					}				
+				}
+				else_if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_core_of = root
+					}
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 3
+						instant_build = yes
+					}				
+				}
+			}
 		}
 	}
 	
@@ -19134,10 +18832,14 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expansion
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
+
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = LIT
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
@@ -19149,31 +18851,40 @@ ai_will_do = {
 				type = annex_everything
 				expire = 0
 			}
-			191 = { add_claim_by = SOV }
-			13 = { add_claim_by = SOV }
-			813 = { add_claim_by = SOV }
-			812 = { add_claim_by = SOV }
-			811 = { add_claim_by = SOV }
+			
+			every_state = {
+				limit = {
+					is_fully_controlled_by = EST
+					is_core_of = EST
+				}	
+				add_claim_by  = SOV
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			create_wargoal = {
 				target = LAT
 				type = annex_everything
 				expire = 0
 			}
-			810 = { add_claim_by = SOV }
-			12 = { add_claim_by = SOV }
-			808 = { add_claim_by = SOV }
-			809 = { add_claim_by = SOV }
-			190 = { add_claim_by = SOV }
+			every_state = {
+				limit = {
+					is_fully_controlled_by = LAT
+					is_core_of = LAT
+				}	
+				add_claim_by  = SOV
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			create_wargoal = {
 				target = LIT
 				type = annex_everything
 				expire = 0
 			}
-			815 = { add_claim_by = SOV }
-			189 = { add_claim_by = SOV }
-			188 = { add_claim_by = SOV }
-			11 = { add_claim_by = SOV }
-			814 = { add_claim_by = SOV }
+			every_state = {
+				limit = {
+					is_fully_controlled_by = LIT
+					is_core_of = LIT
+				}	
+				add_claim_by  = SOV
+			}
 		}
 	}
 	
@@ -19185,11 +18896,13 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expansion
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = no
+
+		will_lead_to_war_with = FIN
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
@@ -19199,6 +18912,7 @@ ai_will_do = {
 				type = annex_everything
 				expire = 0
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
 				limit = {
 					is_fully_controlled_by = FIN
@@ -19217,11 +18931,13 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_expansion
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = no
+
+		will_lead_to_war_with = POL
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
@@ -19231,22 +18947,26 @@ ai_will_do = {
 				type = annex_everything
 				expire = 0
 			}
-		
-			86 = {add_core_of = GER}
-			85 = {add_core_of = GER}
-			28 = {add_core_of = GER}
-			807 = {add_core_of = GER}
-			762 = {add_core_of = GER}
-			
-			96 = {add_core_of = SOV}
-			784 = {add_core_of = SOV}
-			95 = {add_core_of = SOV}
-			94 = {add_core_of = SOV}
-			93 = {add_core_of = SOV}
-			91 = {add_core_of = SOV}
-			97 = {add_core_of = SOV}
-			89 = {add_core_of = SOV}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					not = {
+						is_fully_controlled_by = SOV
+					}
+					is_core_of = BLR
+				}	
+				add_core_of  = SOV
 			}
+			every_state = {
+				limit = {
+					not = {
+						is_fully_controlled_by = SOV
+					}
+					is_core_of = UKR
+				}	
+				add_core_of  = SOV
+			}
+		}
 	}
 	
 	
@@ -19300,7 +19020,7 @@ ai_will_do = {
 		id = RUS_unifucation
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = RUS_reconstruction }
-		mutually_exclusive = { focus = RUS_raspad  }
+		prerequisite = { focus = RUS_not_vibor }
 		x = -1
 		y = 1
 		relative_position_id = RUS_reconstruction
@@ -19355,10 +19075,9 @@ ai_will_do = {
 		id = RUS_raspad
 		icon = GFX_focus_SOV_freedom_for_all
 		prerequisite = { focus = RUS_reconstruction }
-		mutually_exclusive = { focus = RUS_unifucation  }
+		prerequisite = { focus = RUS_liberate }
 		x = 1
 		y = 1
-		available = {has_completed_focus = RUS_liberate}
 		relative_position_id = RUS_reconstruction
 		cost = 5
 		ai_will_do = {
@@ -19408,7 +19127,7 @@ ai_will_do = {
 					autonomy_state = autonomy_dominion
 					freedom_level = 0.5
 				}
-				UKR = {add_ideas = RUS_ECONOMI}
+				UKR = {add_ideas = RUS_ECONOMI add_ideas = Russian_puppet_no_surrender}
 			if = {
 				limit = {
 					has_idea = RUS_FULL
@@ -19443,13 +19162,12 @@ ai_will_do = {
 				remove_ideas = RUS_ukr
 			}
 			UKR = {
-			add_offsite_building = { type = industrial_complex level = 15 }
-			add_offsite_building = { type = arms_factory level = 15 }
 			add_timed_idea = { idea = Time_end days = 365}
 			add_stability = 0.30
 			add_political_power = 300
 			add_research_slot = 1
-			set_technology = { 
+			hidden_effect = {
+					set_technology = { 
 			excavation1 = 1 
 			construction1 = 1 
 			construction2 = 1 
@@ -19467,6 +19185,8 @@ ai_will_do = {
 			basic_heavy_tank_chassis = 1
 			basic_medium_tank_chassis = 1
 			}
+			}
+			
 			}
 		}
 	}	
@@ -19492,7 +19212,10 @@ ai_will_do = {
 					autonomy_state = autonomy_dominion
 					freedom_level = 0.5
 				}
-				BLR = {add_ideas = RUS_ECONOMI}
+				BLR = {
+					add_ideas = RUS_ECONOMI
+					add_ideas = Russian_puppet_no_surrender
+				}
 			add_stability = 0.05
 			if = {
 				limit = {
@@ -19530,7 +19253,8 @@ ai_will_do = {
 				remove_ideas = RUS_blr
 			}
 			BLR = {
-			set_technology = { 
+				hidden_effect = {
+					set_technology = { 
 			excavation1 = 1 
 			construction1 = 1 
 			construction2 = 1 
@@ -19548,6 +19272,8 @@ ai_will_do = {
 			basic_heavy_tank_chassis = 1
 			basic_medium_tank_chassis = 1
 			}
+				}
+			
 			add_offsite_building = { type = industrial_complex level = 15 }
 			add_offsite_building = { type = arms_factory level = 15 }
 			add_timed_idea = { idea = Time_end days = 365}
@@ -19581,7 +19307,7 @@ ai_will_do = {
 					autonomy_state = autonomy_dominion
 					freedom_level = 0.5
 				}
-				KAZ = {add_ideas = RUS_ECONOMI}
+				KAZ = {add_ideas = RUS_ECONOMI add_ideas = Russian_puppet_no_surrender}
 				
 			add_stability = 0.05
 			if = {
@@ -19625,7 +19351,8 @@ ai_will_do = {
 			add_stability = 0.30
 			add_political_power = 300
 			add_research_slot = 1
-			set_technology = { 
+			hidden_effect = {
+				set_technology = { 
 			excavation1 = 1 
 			construction1 = 1 
 			construction2 = 1 
@@ -19643,6 +19370,8 @@ ai_will_do = {
 			basic_heavy_tank_chassis = 1
 			basic_medium_tank_chassis = 1
 			}
+			}
+			
 			}
 			
 		}
@@ -19680,7 +19409,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_UKR}
 		
 		x = -1
-		y = 3
+		y = 2
 		relative_position_id = RUS_BLR
 		cost = 5
 		ai_will_do = {
@@ -19728,7 +19457,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_UKR}
 		
 		x = 1
-		y = 3
+		y = 2
 		relative_position_id = RUS_BLR
 		cost = 5
 		ai_will_do = {
@@ -20142,8 +19871,10 @@ ai_will_do = {
 		completion_reward = {
 			create_faction = "moscow_pact"
 			add_political_power = 100
-			set_rule = { can_join_factions = no }
-			set_rule = { can_create_factions = yes }
+			hidden_effect = {
+				set_rule = { can_join_factions = no }
+				set_rule = { can_create_factions = yes }
+			}
 		}
 	}
 	focus = {
@@ -20151,7 +19882,7 @@ ai_will_do = {
 		icon = GFX_focus_FIN_viron_kansa
 		prerequisite = { focus = RUS_moscow_pact }
 		x = -2
-		y = 3
+		y = 1
 		relative_position_id = RUS_moscow_pact
 		cost = 3
 		ai_will_do = {
@@ -20162,8 +19893,8 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			unlock_decision_tooltip = RUS_invite_FIN
 			FIN = {add_timed_idea = {idea = RUS_propagand days = 720}}
+			FIN = { country_event = priglos_v_alik.1 }
 		}
 	}
 	
@@ -20172,7 +19903,7 @@ ai_will_do = {
 		icon = GFX_focus_SOV_baltic_security
 		prerequisite = { focus = RUS_moscow_pact }
 		x = 0
-		y = 3
+		y = 1
 		relative_position_id = RUS_moscow_pact
 		cost = 3
 		ai_will_do = {
@@ -20192,10 +19923,9 @@ ai_will_do = {
 			LAT = {add_timed_idea = {idea = RUS_propagand days = 720}
 			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
-			unlock_decision_tooltip = RUS_invite_EST
-			unlock_decision_tooltip = RUS_invite_LAT
-			unlock_decision_tooltip = RUS_invite_LIT
-			
+			EST = { country_event = priglos_v_alik.1 }
+			LIT = { country_event = priglos_v_alik.1 }
+			LAT = { country_event = priglos_v_alik.1 }
 		}
 	}
 	focus = {
@@ -20203,7 +19933,7 @@ ai_will_do = {
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = RUS_moscow_pact }
 		x = 2
-		y = 3
+		y = 1
 		relative_position_id = RUS_moscow_pact
 		cost = 3
 		ai_will_do = {
@@ -20216,10 +19946,10 @@ ai_will_do = {
 		completion_reward = {
 			TUR = {add_timed_idea = {idea = RUS_propagand days = 720}}
 			PER = {add_timed_idea = {idea = RUS_propagand days = 720}}
-			TUR = { country_event = generic.5 }
-			PER = { country_event = generic.5 }
+			TUR = { country_event = priglos_v_alik.1 }
+			PER = { country_event = priglos_v_alik.1 }
 		}
-	}
+	}  
 	
 	focus = {
 		id = RUS_our_friend
@@ -20227,7 +19957,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_FIN_friend focus = RUS_Pribaltic_friend focus = RUS_east_friend}
 		
 		x = 0
-		y = 4
+		y = 2
 		relative_position_id = RUS_moscow_pact
 		cost = 5
 		ai_will_do = {
@@ -20242,13 +19972,7 @@ ai_will_do = {
 			every_other_country = {
 					limit = { is_in_faction_with = SOV }
 				add_ideas = Moscow_pact
-				}
-		UKR = {
-		add_ideas = Russian_puppet_no_surrender
-		}
-		BLR = {
-		add_ideas = Russian_puppet_no_surrender
-		}
+			}
 		}
 	}
 	focus = {
@@ -20322,7 +20046,7 @@ ai_will_do = {
 		icon = GFX_focus_ARG_join_the_allies
 		prerequisite = { focus = RUS_reconstruction }
 		mutually_exclusive = { focus = RUS_moscow_pact  }
-		x = 14
+		x = 13
 		y = 1
 		available = {has_completed_focus = RUS_liberate}
 		relative_position_id = RUS_reconstruction
@@ -20368,7 +20092,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_alliance }
 		mutually_exclusive = { focus = RUS_ENG  focus = RUS_USA }
 		x = -2
-		y = 2
+		y = 1
 		relative_position_id = RUS_alliance
 		cost = 5
 		ai_will_do = {
@@ -20388,7 +20112,7 @@ ai_will_do = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = RUS_FRA }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_FRA
 		cost = 5
 		ai_will_do = {
@@ -20416,7 +20140,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_alliance }
 		mutually_exclusive = { focus = RUS_FRA  focus = RUS_USA }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_alliance
 		cost = 5
 		ai_will_do = {
@@ -20437,7 +20161,7 @@ ai_will_do = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = RUS_ENG }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_ENG
 		cost = 5
 		ai_will_do = {
@@ -20464,7 +20188,7 @@ ai_will_do = {
 		prerequisite = { focus = RUS_alliance }
 		mutually_exclusive = { focus = RUS_ENG  focus = RUS_FRA }
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = RUS_alliance
 		cost = 5
 		ai_will_do = {
@@ -20484,7 +20208,7 @@ ai_will_do = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = RUS_USA }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_USA
 		cost = 5
 		ai_will_do = {
@@ -20510,7 +20234,7 @@ ai_will_do = {
 		icon = GFX_focus_generic_total_war
 		prerequisite = { focus = RUS_ENG_dockyard focus = RUS_USA_planers focus = RUS_FRA_learn_ww1}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_ENG_dockyard
 		cost = 10
 		ai_will_do = {
@@ -20521,9 +20245,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.15
-			add_war_support = 0.25
 			add_ideas = NO_die
 		}
 	}

@@ -30,3 +30,65 @@ news_event = {
 		name = napoleon.1.a
 	}
 }
+
+add_namespace = priglos_v_alik
+
+country_event = {
+	id = priglos_v_alik.1
+	title = priglos_v_alik.1.t
+	desc = priglos_v_alik.1.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = { #Agree / Both Democratic
+		name = generic.5.a
+		ai_chance = {
+			base = 100
+		}
+		 FROM = { save_event_target_as = target_alliance_leader }
+		 every_faction_member = {
+            limit = { NOT = { tag = ROOT } } # Кроме самого лидера
+            country_event = { id = priglos_v_alik.2 } # Ивент-приглашение для членов альянса
+        }
+		FROM = {
+			faction_leader = {
+				add_to_faction = ROOT
+			}
+			
+			country_event = { id = generic.6 hours = 6 } 
+		}
+	}
+
+	option = { #Reject if in faction
+		name = priglos_v_alik.2.g
+		FROM = { 
+			country_event = { id = generic.7 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+    id = priglos_v_alik.2
+    title = priglos_v_alik.1.t  # Можно оставить те же тексты
+    desc = priglos_v_alik.1.desc
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = {
+        name = generic.5.a # "Мы тоже согласны!"
+        ai_chance = { base = 100 }
+
+        # Вступаем следом за лидером к сохраненной цели
+        event_target:target_alliance_leader = {
+            add_to_faction = ROOT
+        }
+    }
+    
+    option = {
+        name = priglos_v_alik.2.b # "Нет, мы выходим из союза"
+        ai_chance = { base = 0 }
+        # Страна просто останется без альянса
+    }
+}

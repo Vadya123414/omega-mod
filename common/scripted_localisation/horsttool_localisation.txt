@@ -37,19 +37,6 @@ defined_text = {
 		localization_key = transfer_states_on
 	}
 }
-defined_text = {
-	name = Debuffing_tooltip
- 
-	text = {
-		trigger = {
-			Root={has_global_flag = enabled_debuffing}
-		}
-		localization_key = Debuffing_off
-	}
-	text = {
-		localization_key = Debuffing_on
-	}
-}
 defined_text = { 
 	name = event_translet_horst_tooltip
  
@@ -102,7 +89,6 @@ defined_text = {
 		localization_key = command_limit_on
 	}
 }
-
 
 defined_text = {
 	name = ST_TOOLTIP
@@ -159,119 +145,92 @@ defined_text = {
 		}
 		localization_key = CHEAT3
 	}
-		text = {
+	text = {
 		trigger = {
 			check_variable = {Root.selected_cheat=4}
 		}
 		localization_key = CHEAT4
 	}
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=5}
-		}
-		localization_key = CHEAT5
-	}
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=6}
-		}
-		localization_key = CHEAT6
-	}	
-		
-
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=7}
-		}
-		localization_key = CHEAT7
-	}
-		
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=10}
-		}
-		localization_key = CHEAT10
-	}
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=11}
-		}
-		localization_key = CHEAT11
-	}
-			text = {
-		trigger = {
-			check_variable = {Root.selected_cheat=12}
-		}
-		localization_key = CHEAT12
-	}
 }
 
-
-defined_text = {
-	name = debuff_selected
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=0}
-			NOT={Root={has_global_flag=debuffing}}
-		}
-		localization_key = DEBUFF_SELECT
-	}
-	text = {
-		trigger = {
-			OR={check_variable = {Root.selected_debuff=1}
-			Root={has_global_flag=debuffing}}
-		}
-		localization_key = DEBUFF1
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=2}
-		}
-		localization_key = DEBUFF2
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=3}
-		}
-		localization_key = DEBUFF3
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=4}
-		}
-		localization_key = DEBUFF4
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=5}
-		}
-		localization_key = DEBUFF5
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=6}
-		}
-		localization_key = DEBUFF6
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=7}
-		}
-		localization_key = DEBUFF7
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=8}
-		}
-		localization_key = DEBUFF8
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_debuff=9}
-		}
-		localization_key = DEBUFF9
-	}
-}
+#defined_text = {
+#	name = Debuffing_tooltip
+# 
+#	text = {
+#		trigger = {
+#			Root={has_global_flag = enabled_debuffing}
+#		}
+#		localization_key = Debuffing_off
+#	}
+#	text = {
+#		localization_key = Debuffing_on
+#	}
+#}
+#defined_text = {
+#	name = debuff_selected
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=0}
+#			NOT={Root={has_global_flag=debuffing}}
+#		}
+#		localization_key = DEBUFF_SELECT
+#	}
+#	text = {
+#		trigger = {
+#			OR={check_variable = {Root.selected_debuff=1}
+#			Root={has_global_flag=debuffing}}
+#		}
+#		localization_key = DEBUFF1
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=2}
+#		}
+#		localization_key = DEBUFF2
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=3}
+#		}
+#		localization_key = DEBUFF3
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=4}
+#		}
+#		localization_key = DEBUFF4
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=5}
+#		}
+#		localization_key = DEBUFF5
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=6}
+#		}
+#		localization_key = DEBUFF6
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=7}
+#		}
+#		localization_key = DEBUFF7
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=8}
+#		}
+#		localization_key = DEBUFF8
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = {Root.selected_debuff=9}
+#		}
+#		localization_key = DEBUFF9
+#	}
+#}
 
 
 

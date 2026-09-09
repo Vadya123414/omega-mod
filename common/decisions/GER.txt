@@ -13072,15 +13072,6 @@ GER_military_buildup = {
 
 		available = {
 			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
 			NOT = {
 				has_idea = GER_jaegernotprogramm
 			}
@@ -13110,16 +13101,6 @@ GER_military_buildup = {
 		}
 
 		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
 			NOT = {
 				has_idea = GER_jaegernotprogramm
 			}

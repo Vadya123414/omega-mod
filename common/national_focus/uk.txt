@@ -6821,22 +6821,35 @@ default = no
 		prerequisite = { focus = ENG_imperial_conference }
 		available = {
 			date > 1940.1.1
-			OR = {
-				CAN = {
-					is_subject_of = ENG
-				}
-				SAF = {
-					is_subject_of = ENG
-				}
-				AST = {
-					is_subject_of = ENG
-				}
-				NZL = {
-					is_subject_of = ENG
-				}
+			or = {
+				OR = {
+				CAN = { is_subject_of = ENG }
+				276 = { is_controlled_by = ENG }
 			}
+			
+			OR = {
+				SAF = { is_subject_of = ENG }
+				275 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				AST = { is_subject_of = ENG }
+				285 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				NZL = { is_subject_of = ENG }
+				284 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				RAJ = { is_subject_of = ENG }
+				439 = { is_controlled_by = ENG }
+			}
+			}
+			
 		}
-
+ 
 		icon = GFX_focus_eng_imperial_federation
 
 		x = 0
@@ -6869,6 +6882,9 @@ default = no
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = infa_annex_imperka
+			hidden_effect = {
 			if = {
 				limit = {
 					CAN = {
@@ -6884,15 +6900,6 @@ default = no
 				annex_country = {
 				    target = CAN
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = CAN
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -6911,16 +6918,6 @@ default = no
 				    target = SAF
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = SAF
-							NOT = { state = 275 }
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6937,15 +6934,6 @@ default = no
 				annex_country = {
 				    target = RAJ
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = RAJ 
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -6964,15 +6952,6 @@ default = no
 				    target = AST
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = AST
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6989,15 +6968,6 @@ default = no
 				annex_country = {
 				    target = NZL
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = NZL
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -7016,14 +6986,57 @@ default = no
 				    target = MAL
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = MAL
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
+			}
+
+			
+				# Для Канады
+				every_state = {
+					limit = {
+						is_core_of = CAN
+						is_controlled_by = ENG
 					}
+					set_compliance = 100
+				}
+				# Для Южной Африки
+				every_state = {
+					limit = {
+						is_core_of = SAF
+						NOT = { state = 275 }
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Индии
+				every_state = {
+					limit = {
+						is_core_of = RAJ 
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Австралии
+				every_state = {
+					limit = {
+						is_core_of = AST
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Новой Зеландии
+				every_state = {
+					limit = {
+						is_core_of = NZL
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Малайзии
+				every_state = {
+					limit = {
+						is_core_of = MAL
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
 				}
 			}		
 		}
