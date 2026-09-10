@@ -4930,9 +4930,6 @@ form_mutapa_category = {
 			controls_state = 275
 			controls_state = 542
 			controls_state = 545
-			controls_state = 544
-			controls_state = 896
-			controls_state = 897
 			controls_state = 771
 			controls_state = 981
 		}
@@ -4950,9 +4947,6 @@ form_mutapa_category = {
 				state = 275
 				state = 542
 				state = 545
-				state = 544
-				state = 896
-				state = 897
 				state = 771
 				state = 981
 			}
@@ -17849,16 +17843,13 @@ greater_mongolia_category = {
 			controls_state = 329
 			controls_state = 760
 			controls_state = 756
-			controls_state = 621
-			controls_state = 746
-			controls_state = 612
-			controls_state = 611
-			controls_state = 761
-			controls_state = 616
-			controls_state = 1043 
 			controls_state = 1040 
-			controls_state = 1039  
-
+			controls_state = 618
+			controls_state = 617
+			controls_state = 619
+			controls_state = 287
+			controls_state = 1042
+			controls_state = 759
 		}
 
 		on_map_mode = decision_view_only
@@ -17873,15 +17864,13 @@ greater_mongolia_category = {
 				state = 329
 				state = 760
 				state = 756
-				state = 621
-				state = 746
-				state = 612
-				state = 611
-				state = 761
-				state = 616
-				state = 1043 
-				state = 1040 
-				state = 1039 
+				state = 1040
+				state = 618
+				state = 617
+				state = 619
+				state = 287
+				state = 1042
+				state = 759
 			}
 		}
 

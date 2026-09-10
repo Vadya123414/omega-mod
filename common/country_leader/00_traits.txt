@@ -13499,8 +13499,8 @@ leader_traits = {
 	GER_seasoned_socialist_resistance_fighter = { #Bernhard Bästlein
 		random = no
 		sprite = 13
-		army_core_defence_factor = 0.05
-		conscription_factor = 0.05
+		army_core_defence_factor = 0.1
+		conscription_factor = 0.1
 	}
 
 	GER_revolutionary_nationalist = { #Otto Strasser
@@ -13526,8 +13526,8 @@ leader_traits = {
 		random = no
 		sprite = 13 
 
-		communism_drift = 0.05
-		political_power_factor = 0.1
+		communism_drift = 0.2
+		political_power_factor = 0.15
 	}
 
 	GER_staunch_stalinist = { #Ulbricht upgrade

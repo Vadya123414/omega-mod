@@ -2794,7 +2794,7 @@
 		x = -3
 		y = 1
 		relative_position_id = SIA_achieve_foreign_legitimacy
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 50
 			modifier = {
@@ -2955,7 +2955,7 @@
 		y = 1
 		relative_position_id = SIA_join_the_allies
 		prerequisite = { focus = SIA_join_the_allies }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -3113,7 +3113,7 @@
 		y = 1
 		relative_position_id = SIA_allies_integration
 		prerequisite = { focus = SIA_allies_integration }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3289,7 +3289,7 @@
 		relative_position_id = SIA_the_end_of_gunboat_diplomacy
 		prerequisite = { focus = SIA_the_end_of_gunboat_diplomacy }
 		prerequisite = { focus = SIA_prepare_for_a_pacific_war }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3486,7 +3486,7 @@
 		x = 7
 		y = 0
 		relative_position_id = SIA_join_the_allies
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 50
@@ -3719,7 +3719,7 @@
 		y = 0
 		relative_position_id = SIA_join_the_united_front
 		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 50
 		}
@@ -6442,7 +6442,7 @@
 		relative_position_id = SIA_irrigation	
 		prerequisite = { focus = SIA_railway_and_port_extensions }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7266,7 +7266,7 @@
 		relative_position_id = SIA_rice_husk_steam_turbines	
 		prerequisite = { focus = SIA_domestic_tin_smelters focus = SIA_rice_husk_steam_turbines }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7338,7 +7338,7 @@
 		relative_position_id = SIA_contingency_funds
 		prerequisite = { focus = SIA_contingency_funds }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}

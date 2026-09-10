@@ -1151,7 +1151,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_modernize_congressional_factories
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1279,7 +1279,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_prepare_for_the_next_war
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1416,7 +1416,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_modernising_the_cavalry
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1443,7 +1443,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_study_foreign_tanks
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1459,33 +1459,6 @@ focus_tree = {
 				category = cat_medium_armor
 			}
 			#1x 50% reduction on research for medium tanks
-		}
-	}
-
-	focus = {
-		id = POL_artillery_modernisation
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = POL_army_modernisation }
-		
-		x = 3
-		y = 1
-		relative_position_id = POL_army_modernisation
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = POL_artillery_modernisation
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}
-			#1 x 50% for Artillery Equipment
 		}
 	}
 
@@ -1507,12 +1480,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = POL_anti_tank_guns
+				name = POL_artillery_modernisation
 				bonus = 1.0
-				uses = 1
-				category = cat_anti_tank
+				uses = 2
+				category = artillery
 			}
-			#1x 50% bonus for Anti-Tank guns
 		}
 	}
 
@@ -1547,7 +1519,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_attract_foreign_motors
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1694,7 +1666,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_air_base_expansion
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1739,7 +1711,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_air_base_expansion
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1765,7 +1737,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_air_innovations
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1808,7 +1780,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_air_innovations
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1858,7 +1830,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_heavy_fighter_concept
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1902,7 +1874,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_heavy_fighter_concept
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1945,7 +1917,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_light_bomber_focus
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1972,7 +1944,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_air_modernisations_programme
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2789,7 +2761,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_polish_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2893,7 +2865,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_pan_slavic_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2915,34 +2887,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_annex_czech
-		icon = GFX_goal_generic_attack_allies
-		prerequisite = { focus = POL_pan_slavic_revanchism }
-		will_lead_to_war_with = CZE
-		
-		x = -1
-		y = 2
-		relative_position_id = POL_pan_slavic_revanchism
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-		}
-
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			create_wargoal = {
-				target = CZE
-				type = annex_everything
-			}
-		}
-	}
-
-	focus = {
 		id = POL_sea_to_sea
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = POL_baltic_ultimatums }
@@ -2951,7 +2895,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_baltic_ultimatums
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2996,7 +2940,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_dissolve_the_bbwr
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3148,7 +3092,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_baltic_security
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3222,7 +3166,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_baltic_security
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3415,7 +3359,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = POL_baltic_security
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -3510,7 +3454,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = POL_plan_west
-		cost = 10
+		cost = 4
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3584,7 +3528,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = POL_plan_west
-		cost = 10
+		cost = 5
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3613,7 +3557,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_the_prusya_line
-		cost = 10
+		cost = 4
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3669,7 +3613,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_the_prusya_line
-		cost = 10
+		cost = 3
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3723,7 +3667,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = POL_the_prusya_line
-		cost = 10
+		cost = 4
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3811,7 +3755,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_plan_west
-		cost = 10
+		cost = 5
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3841,7 +3785,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_plan_west
-		cost = 10
+		cost = 4
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3905,7 +3849,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = POL_plan_west
-		cost = 10
+		cost = 2
 
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -4077,7 +4021,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -4104,7 +4048,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -4152,7 +4096,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -4200,7 +4144,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -4342,7 +4286,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -4446,7 +4390,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_fortification_of_belarus
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4514,7 +4458,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4588,7 +4532,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4612,7 +4556,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_camp_of_national_unity
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = POL_polish_revanchism focus = POL_baltic_security }
 		allow_branch = {
 			if = {
@@ -4659,10 +4603,10 @@ focus_tree = {
 		id = POL_join_allies
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = POL_align_with_the_west }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = POL_align_with_the_west
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -4732,7 +4676,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_join_allies
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4818,161 +4762,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_lithuanian_ultimatum
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = POL_align_with_the_west }
-		mutually_exclusive = { focus = POL_lithuanian_annexation }
-		x = 0
-		y = 1
-		relative_position_id = POL_align_with_the_west
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-		
-		available = {
-			is_subject = no 
-			LIT = { 
-				exists = yes
-				has_capitulated = no
-			}
-			784 = {
-				owns_or_subject_of = yes
-			}
-		}
-		
-		bypass = {
-			NOT = {
-				784 = { owns_or_subject_of = yes }
-			}
-		}
-
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#Poland asks for peace
-			LIT = {
-				country_event = {
-					id = poland.14
-					days = 5
-				}
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				diplomatic_relation = {
-					country = LIT
-					relation = guarantee
-					active = yes
-				}
-				LIT = {
-					diplomatic_relation = {
-						country = POL
-						relation = guarantee
-						active = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = POL_lithuanian_alliance
-		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = POL_lithuanian_ultimatum }
-		x = 0
-		y = 1
-		relative_position_id = POL_lithuanian_ultimatum
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_subject = no 
-			is_in_faction = yes
-			LIT = { 
-				exists = yes
-				has_capitulated = no
-				NOT = { has_war_with = ROOT }
-			}
-			NOT = { any_allied_country = { has_war_with = LIT } }
-		}
-
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#Brings Lithuania into the faction if Poland is faction leader
-			if = {
-				limit = {
-					is_faction_leader = yes
-					LIT = {
-						NOT = {
-							is_in_faction = yes
-						}
-					}
-					NOT = { has_war_with = LIT }
-					NOT = { any_allied_country = { has_war_with = LIT } }
-				}
-				LIT = {
-					country_event = {
-						id = poland.1301
-						days = 5
-					}
-				}
-			}
-			#Asks faction leader for permission to invite Lithuania if not faction leader
-			else_if = {
-				limit = {
-					is_in_faction = yes
-					LIT = {
-						NOT = {
-							is_in_faction = yes
-						}
-					}
-					NOT = { has_war_with = LIT }
-					NOT = { any_allied_country = { has_war_with = LIT } }
-				}
-				LIT = { save_event_target_as = faction_invitee_target }
-				effect_tooltip = {
-					LIT = {
-						country_event = {
-							id = poland.1301
-							days = 5
-						}
-					}
-				}
-				hidden_effect = {
-					random_country = {
-						limit = {
-							is_in_faction_with = ROOT
-							is_faction_leader = yes
-						}
-						country_event = {
-							id = poland.13
-							days = 5
-						}
-					}
-				}
-			}
-			else = {
-				effect_tooltip = {
-					LIT = {
-						country_event = {
-							id = poland.1301
-							days = 5
-						}
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = POL_lithuanian_annexation
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = POL_align_with_the_west focus = POL_polish_revanchism }
-		mutually_exclusive = { focus = POL_lithuanian_ultimatum }
 		x = -2
 		y = 1
 		relative_position_id = POL_align_with_the_west
@@ -7390,7 +7182,7 @@ focus_tree = {
 
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10295,7 +10087,7 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11100,7 +10892,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 2.5
@@ -12354,7 +12146,7 @@ focus_tree = {
 
 		x = 4
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12435,7 +12227,7 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12503,7 +12295,7 @@ focus_tree = {
 
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12618,7 +12410,7 @@ focus_tree = {
 
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12985,7 +12777,7 @@ focus_tree = {
 
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -13033,7 +12825,7 @@ focus_tree = {
 
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -15373,7 +15165,7 @@ focus_tree = {
 		prerequisite = { focus = POL_develop_polish_ship_building focus = POL_clamp_down_on_danzig }
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = POL_develop_polish_ship_building
 		ai_will_do = {
 			factor = 10
@@ -15694,7 +15486,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_expand_gdynia_seaport
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -15706,37 +15498,10 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = POL_the_twin_threats
 				cost_reduction = 0.5
-				uses = 1
+				uses = 4
 				category = naval_doctrine
 			}
 			#1x50% bonus to Naval Doctrine Research
-		}
-	}
-
-	focus = {
-		id = POL_a_cruiser_navy
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = POL_the_twin_threats }
-		
-		x = -1
-		y = 1
-		relative_position_id = POL_the_twin_threats
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = POL_a_cruiser_navy
-				bonus = 1.0
-				uses = 1
-				category = ca_tech
-			}
-			#1x50% research bonus to Light Cruisers
 		}
 	}
 
@@ -15747,7 +15512,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_integrate_gdansk_industries
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -15767,32 +15532,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_commerce_attack
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = POL_import_submarine_technology }
-		x = 1
-		y = 1
-		relative_position_id = POL_import_submarine_technology
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = POL_commerce_attack
-				cost_reduction = 0.5
-				uses = 1
-				category = submarine_doctrine
-			}
-			#1x50% research bonus to Submarine Doctrine
-		}
-	}
-
-	focus = {
 		id = POL_coastal_defense
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = POL_the_twin_threats }
@@ -15801,7 +15540,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -15819,7 +15558,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POL_coastal_defense
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = dd_tech
 			}
 			#1x50% research bonus to destroyers & 1 x50% bonus to Submarines
@@ -15835,7 +15574,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = POL_the_twin_threats
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -15844,59 +15583,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = { 
-				limit = {
-					NOT = { has_dlc = "Man the Guns" }
-				}
-				add_tech_bonus = {
-					name = POL_strike_force
-					bonus = 0.75
-					uses = 2
-					category = ca_tech
-				}
-				add_tech_bonus = {
+			add_tech_bonus = {
 					name = POL_strike_force
 					bonus = 1.0
-					uses = 1
+					uses = 3
 					category = ca_tech
 				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = POL_strike_force
-					bonus = 1.0
-					uses = 2
-					category = ca_tech
-				}
-			}
-			#1x50% research bonus to Light Cruisers & 1x50% bonus to Heavy Cruisers
-		}
-	}
-
-	focus = {
-		id = POL_baltic_navy
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = POL_strike_force focus = POL_coastal_defense }
-		
-		x = -1
-		y = 1
-		relative_position_id = POL_strike_force
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = POL_baltic_navy
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
-			}
-			#1x50% bonus to Naval Doctrine research
 		}
 	}
 

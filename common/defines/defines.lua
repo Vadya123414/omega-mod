@@ -128,6 +128,7 @@ NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.7 ---размены в воздухе(ва
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1; -- глобальная скорость самолётов
+NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
 		25,			-- pp cost if no available scientist

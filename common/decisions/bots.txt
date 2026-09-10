@@ -155,7 +155,6 @@ BOTS = {
                 is_ai = yes
             }
                 complete_effect = {
-                     set_sub_doctrine = field_engineering
                     set_grand_doctrine = special_forces_quality
                         }
     }

@@ -218,22 +218,6 @@ default = no
 				}
 			}
 		
-		bypass = {
-			OR = {
-				AND = {
-					has_war_with = GER
-					POL = {
-							is_in_faction_with = GER # If POL is in GER's faction, no help for us
-						}
-				}
-				AND = {
-					has_war = yes
-					is_in_faction_with = USA
-				}
-				GER = { exists = no }
-			}
-		}
-		
 		icon = GFX_focus_generic_cryptologic_bomb
 		x = 0
 		y = 0
@@ -296,7 +280,7 @@ default = no
 		x = 0
 		y = 3
 		relative_position_id = crypto_bomb_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -349,7 +333,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = tizard_mission_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1273,7 +1257,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = royal_ordinance_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2133,7 +2117,7 @@ default = no
 		x = 0
 		y = 2
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -2342,7 +2326,7 @@ default = no
 		x = 5
 		y = 1
 		relative_position_id = uk_service_focus
-		cost = 10
+		cost = 5
 		completion_reward = {
 			if = {
 				limit = {
@@ -2430,7 +2414,7 @@ default = no
 		x = -3
 		y = 1
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 		completion_reward = {
 			118 = {
 				IF = {
@@ -2531,7 +2515,7 @@ default = no
 		y = 1
 		relative_position_id = uk_mediterranean_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2617,7 +2601,7 @@ default = no
 		x = 0
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2751,7 +2735,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = uk_protect_suez
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2820,7 +2804,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_balkan_strategy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2851,7 +2835,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_sanction_italy_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -2887,7 +2871,7 @@ default = no
 		y = 1
 		relative_position_id = uk_protect_suez
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2971,7 +2955,7 @@ default = no
 		y = 1
 		relative_position_id = uk_protect_suez
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3037,7 +3021,7 @@ default = no
 		x = 2
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -4408,7 +4392,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_asia_focus
-		cost = 10
+		cost = 5
 
 		available = {
 			1021 = {
@@ -4822,7 +4806,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_royal_malay_regiment_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -5282,7 +5266,7 @@ default = no
 		y = 2
 		relative_position_id = hongkong_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5409,7 +5393,7 @@ default = no
 		y = 1
 		relative_position_id = peninsular_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8197,7 +8181,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_iran_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8223,7 +8207,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_embargo_ussr
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -8317,7 +8301,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_military_training_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -8344,7 +8328,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_embargo_germany
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9063,8 +9047,7 @@ default = no
 			}
 
 			hidden_effect = { news_event = { id = mtg_news.19 days = 1 } }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ENG_winston_churchill
+			activate_advisor = ENG_winston_churchill
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_oswald_mosley
 			custom_effect_tooltip = available_political_advisor
@@ -9181,7 +9164,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_reassess_continental_commitments
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9208,7 +9191,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9247,7 +9230,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9269,7 +9252,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_noninterference_treaty_with_germany
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10047,7 +10030,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10090,7 +10073,7 @@ default = no
 		x = -2
 		y = 1
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -10210,7 +10193,7 @@ default = no
 		x = -1
 		y = 2
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10333,7 +10316,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_consolidate_the_british_isles
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -10571,7 +10554,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10613,7 +10596,7 @@ default = no
 		x = 2
 		y = 1
 		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -11026,7 +11009,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_the_british_communist_alternative
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11514,7 +11497,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_the_british_communist_alternative
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11583,7 +11566,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_enforce_decolonization
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11622,7 +11605,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_reach_out_across_the_channel
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11695,7 +11678,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11740,7 +11723,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_tackle_fascism
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11774,7 +11757,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11796,7 +11779,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_tackle_capitalism
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11842,7 +11825,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_bermuda_invasion_launch_point
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11865,7 +11848,7 @@ default = no
 		x = 3
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11895,7 +11878,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_the_one_true_revolution
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	

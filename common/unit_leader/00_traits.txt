@@ -69,7 +69,7 @@ leader_traits = {
 		}
 		
 		non_shared_modifier = {
-			experience_gain_factor = -0.25
+			experience_gain_factor = -0.1
 		}
 
 		new_commander_weight = {
@@ -156,7 +156,6 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		non_shared_modifier = {
-			experience_gain_factor = -0.1
 			promote_cost_factor = -0.5
 		}
 
@@ -2724,7 +2723,7 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		modifier = {
-			experience_gain_factor = -0.25 
+			experience_gain_factor = -0.1
 		}
 		new_commander_weight = {
 			factor = 1  

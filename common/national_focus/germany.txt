@@ -7953,8 +7953,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = konstantin_von_neurath
+			activate_advisor = konstantin_von_neurath
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -9051,7 +9050,6 @@ focus_tree = {
 				category = armor
 				category = artillery
 				category = naval_equipment
-				category = air_equipment
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -13876,13 +13874,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
+			
 			add_political_power = 50
 			add_war_support = 0.05
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = joachim_von_ribbentrop
+			activate_advisor = joachim_von_ribbentrop
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -21356,9 +21354,8 @@ focus_tree = {
 			}
 
 			set_country_flag = GER_the_proletarian_revolution_flag
-
-			add_political_power = 75
-			add_stability = -0.025
+			activate_advisor = GER_walter_ulbricht
+			activate_advisor = GER_bernhard_bastlein
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -21486,8 +21483,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_walter_ulbricht
-			show_ideas_tooltip = GER_bernhard_bastlein
 
 			if = {
 				limit = {
@@ -23761,7 +23756,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = GER_the_peoples_victory
-		cost = 2
+		cost = 1
 		available = {
 			NOT = {
 				has_war_with = SOV

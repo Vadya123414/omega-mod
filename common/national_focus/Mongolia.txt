@@ -448,7 +448,7 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = -2
+		x = -1
 		y = 1
 		
 		completion_reward = {
@@ -478,7 +478,7 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = -1
+		x = 0
 		y = 1
 		 
 		completion_reward = {
@@ -556,7 +556,7 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 2
+		x = 1
 		y = 1
 		
 		completion_reward = {
@@ -572,8 +572,8 @@ focus = {
 	focus = {
 		id = MON_Final
 		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
-		prerequisite = { focus = MON_Pro_sov_politic focus = MON_our_politic focus = MON_soviet_accept}
-		relative_position_id = MON_Smuta
+		prerequisite = { focus = MON_Annex_Czinjan}
+		relative_position_id = MON_Annex_Czinjan
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -586,7 +586,7 @@ focus = {
 		available_if_capitulated = yes
 		
 		x = 0
-		y = 2
+		y = 1
 		
 		completion_reward = {
 		
@@ -727,7 +727,7 @@ focus = {
 		available_if_capitulated = yes
 		mutually_exclusive = {focus = MON_otsranenie}
 		
-		x = 11	
+		x = 12	
 		y = 1
 		
 		completion_reward = {
@@ -935,7 +935,7 @@ focus = {
 		relative_position_id = MON_soviet_accept
 		available_if_capitulated = yes
 		mutually_exclusive = {focus = MON_anarchi}
-		x = -1	
+		x = -2
 		y = 1
 		
 		completion_reward = {
@@ -986,7 +986,7 @@ focus = {
 		relative_position_id = MON_soviet_accept
 		available_if_capitulated = yes
 		mutually_exclusive = {focus = MON_soviet_republic}
-		x = -3	
+		x = -4
 		y = 1
 		
 		completion_reward = {
@@ -1001,7 +1001,7 @@ focus = {
 		id = MON_chience_fronte
 		icon =  GFX_focus_chi_cooperation_with_the_nationalists
 		prerequisite = { focus = MON_mongolian_chydo focus = MON_unitarn}
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1096,7 +1096,7 @@ focus = {
 		id = MON_enjoe_chi
 		icon =  GFX_focus_chi_proclaim_rival_government
 		prerequisite = { focus = MON_chience_fronte }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1150,7 +1150,7 @@ focus = {
 		id = MON_war_with_jap
 		icon =  GFX_focus_AST_war_japan
 		prerequisite = { focus = MON_enjoe_chi }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1190,7 +1190,7 @@ focus = {
 		id = MON_annex_chi
 		icon =  GFX_focus_chi_one_china_policy
 		prerequisite = { focus = MON_war_with_jap }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}

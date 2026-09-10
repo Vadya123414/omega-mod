@@ -384,8 +384,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SOV_lazar_kaganovich
+			activate_advisor = SOV_lazar_kaganovich
 		}
 	}
 
@@ -1419,7 +1418,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 5
+		cost = 1
 
 		mutually_exclusive = { focus = SOV_foreign_experts }
 
@@ -3244,8 +3243,8 @@ focus_tree = {
 
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = SOV_expand_shipbuilding_plants }
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = SOV_expand_shipbuilding_plants
 		cost = 5
 
@@ -3475,10 +3474,10 @@ focus_tree = {
 
 		icon = GFX_SOV_offensive_maritime_strategy_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_surface_warfare }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -3591,10 +3590,10 @@ focus_tree = {
 
 		icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_surface_warfare focus = SOV_submarine_warfare }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 5
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3718,59 +3717,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_mine_warfare
-
-		icon = GFX_focus_generic_mine_warfare
-		prerequisite = { focus = SOV_surface_warfare focus = SOV_submarine_warfare }
-		x = -1
-		y = 1
-		relative_position_id = SOV_submarine_warfare
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_ideas = SOV_mine_warfare_ns
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_tech_bonus = {
-					name = SOV_mine_warfare
-					bonus = 1.0
-					uses = 2
-					category = naval_mines
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = SOV_mine_warfare
-					bonus = 0.5
-					uses = 1
-					category = ss_tech
-					category = dd_tech
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_doctrine_cost_reduction = {
-					name = SOV_mine_warfare
-					cost_reduction = 0.75
-					uses = 1
-					category = naval_doctrine
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_long_range_raiders
 
 		icon = GFX_SOV_long_range_raiders_ccp_2d_sov_compatibility
@@ -3778,7 +3724,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3834,12 +3780,11 @@ focus_tree = {
 		id = SOV_advanced_maneuvers
 
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = SOV_expand_shipbuilding_plants }
-		prerequisite = { focus = SOV_an_oceangoing_navy }
+		prerequisite = { focus = SOV_naval_infantry }
 		x = 0
-		y = 3
-		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 10
+		y = 1
+		relative_position_id = SOV_naval_infantry
+		cost = 5
 
 		available = {
 		}
@@ -3861,12 +3806,11 @@ focus_tree = {
 		id = SOV_expand_the_morskaya_aviatsiya
 
 		icon = GFX_SOV_expand_the_morskaya_aviatsiya_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_increase_aircraft_production focus = SOV_intensify_pilot_training_program }
-		prerequisite = { focus = SOV_advanced_maneuvers }
-		x = -2
+		prerequisite = { focus = SOV_surface_warfare }
+		x = -1
 		y = 1
-		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		relative_position_id = SOV_surface_warfare
+		cost = 5
 
 		available = {
 
@@ -4152,11 +4096,11 @@ focus_tree = {
 		id = SOV_naval_infantry
 
 		icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_advanced_maneuvers }
-		x = 0
+		prerequisite = { focus = SOV_an_oceangoing_navy focus = SOV_offensive_maritime_strategy }
+		x = 1
 		y = 1
-		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		relative_position_id = SOV_offensive_maritime_strategy
+		cost = 5
 
 		available = {
 
@@ -8341,7 +8285,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SOV_the_fourth_international
-		cost = 5
+		cost = 2
 
 		available = {
 		}
@@ -8540,7 +8484,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_approach_tukhachevsky
-		cost = 5
+		cost = 2
 
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
@@ -8647,7 +8591,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_funds_for_the_cause
-		cost = 5
+		cost = 2
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war 
@@ -9020,7 +8964,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_permanent_revolution
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			surrender_progress < 0.15
@@ -9199,7 +9143,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_autonomous_soviet_republics 
 		
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -9242,7 +9186,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_a_global_class_struggle 
 		
-		cost = 10
+		cost = 5
 
 		available = {	
 			surrender_progress < 0.05
@@ -9263,7 +9207,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_a_global_class_struggle
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			surrender_progress < 0.05
@@ -9284,7 +9228,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_onslaught_on_colonialism
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			surrender_progress < 0.05
@@ -9533,7 +9477,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_reverse_the_collectivization_process
-		cost = 5
+		cost = 2
 		available = {
 			NOT = { has_country_flag = SOV_soviet_civil_war_over } # you should be able to do this during the CW as well
 			SOV_has_selected_hq = yes 
@@ -9555,7 +9499,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SOV_reverse_the_collectivization_process
-		cost = 5
+		cost = 1
 		available = {
 			SOV_soviet_civil_war_not_started = yes
 			NOT = { has_global_flag = scw_over } #Allowed Soviets to do this before SCW starts, so that they can make Spanish AI go POUM
@@ -9685,7 +9629,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_covert_support_for_spanish_poum
-		cost = 5
+		cost = 2
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over 
 			custom_trigger_tooltip = {
@@ -9906,7 +9850,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_coup_detat
-		cost = 10
+		cost = 5
 		available = {
 			NOT = { has_global_flag = SOV_soviet_civil_war_over }
 		}
@@ -10190,7 +10134,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_incorporate_local_organizations
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_strengthen_the_trade_unions }
 
@@ -10246,7 +10190,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_for_the_common_good
-		cost = 10
+		cost = 5
 		available = {
 
 		}
@@ -10273,7 +10217,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_victory_over_devastation
-		cost = 10
+		cost = 5
 		available = {
 
 		}
@@ -11926,8 +11870,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SOV_maksim_litvinov
+			activate_advisor = SOV_maksim_litvinov
 
 		}
 	}
@@ -11939,7 +11882,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_policy_of_collective_security
-		cost = 5
+		cost = 10
 		
 ai_will_do = {
 			factor = 1
@@ -12258,8 +12201,7 @@ ai_will_do = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SOV_vyacheslav_molotov
+			activate_advisor = SOV_vyacheslav_molotov
 
 		}
 	}
@@ -14575,7 +14517,7 @@ ai_will_do = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_the_gobi_gambit
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -14641,7 +14583,7 @@ ai_will_do = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_two_red_flags
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1

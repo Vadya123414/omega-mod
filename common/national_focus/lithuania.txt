@@ -121,8 +121,7 @@ focus_tree = {
 			add_political_power = 100
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LIT_aleksandras_stulginskis
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = LIT_jonas_staugaitis
+			activate_advisor = LIT_jonas_staugaitis
 			activate_mission_tooltip = LIT_iron_wolf_partisans
 
 			if = {

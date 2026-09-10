@@ -1441,11 +1441,11 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			remove_ideas = FRA_victors_of_wwi
-			add_ideas = FRA_victors_of_wwi_1
-			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = FRA_victors_of_wwi
+				add_idea = FRA_victors_of_wwi_1
+			}
 			army_experience = 100
-			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}	
 
@@ -4812,11 +4812,36 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			If = {
+				limit = {
+					is_ai = No
+				}
+				add_tech_bonus = {
+					name = FRA_laissez_faire
+					category = industry
+					uses = 3
+					bonus = 1.5
+				}
+			}
+			else = {
+				add_tech_bonus = {
+                name = GER_the_four_year_plan
+                bonus = 1.0
+                uses = 1
+                technology = concentrated_industry4
+            }
 			add_tech_bonus = {
-				name = FRA_laissez_faire
-				category = industry
-				uses = 3
-				bonus = 1.5
+                name = GER_the_four_year_plan
+                bonus = 1.0
+                uses = 1
+                technology = concentrated_industry5
+            }
+			add_tech_bonus = {
+                name = GER_the_four_year_plan
+                bonus = 1.0
+                uses = 1
+                technology = assembly_line_production
+            }
 			}
 			hidden_effect = { country_event = { id = lar_fra_inefficient_economy.1 days = 730 } }
 			custom_effect_tooltip = FRA_laissez_faire_tt
@@ -7472,8 +7497,7 @@
 				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = charles_maurras
+			activate_advisor = charles_maurras
 		}
 	}
 	focus = {
@@ -7778,8 +7802,7 @@
 				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = charles_maurras
+			activate_advisor = charles_maurras
 		}
 	}
 	focus = {
@@ -8196,8 +8219,7 @@
 			}
 			set_cosmetic_tag = FRA_THIRD_EMPIRE
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = charles_maurras
+			activate_advisor = charles_maurras
 		}
 	}
 	focus = {

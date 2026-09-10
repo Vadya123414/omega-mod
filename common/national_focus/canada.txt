@@ -94,7 +94,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 70
 		}
 	}
 
@@ -128,8 +128,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CAN_c_d_howe
+			activate_advisor = CAN_c_d_howe
 		}
 	}
 
@@ -2277,7 +2276,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_army_modernization 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2622,7 +2621,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAN_strengthen_the_commonwealth_ties
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 35
@@ -2660,7 +2659,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_strengthen_the_commonwealth_ties
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3621,7 +3620,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_swastika_clubs
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3673,7 +3672,7 @@ focus_tree = {
 		relative_position_id = CAN_swastika_clubs
 		mutually_exclusive = { focus = CAN_offer_concessions_for_labrador_and_newfoundland }
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3713,7 +3712,7 @@ focus_tree = {
 		relative_position_id = CAN_swastika_clubs
 		mutually_exclusive = { focus = CAN_demand_labrador_and_newfoundland }
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3946,7 +3945,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAN_reject_authoritarianism
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4055,7 +4054,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4126,7 +4125,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4214,7 +4213,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4245,7 +4244,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4305,7 +4304,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25

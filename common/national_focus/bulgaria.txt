@@ -413,7 +413,7 @@ focus_tree = {
 		relative_position_id = BUL_increase_industry_investments
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		mutually_exclusive = { focus = BUL_nationalization }
 
 		available = {
@@ -515,7 +515,6 @@ focus_tree = {
 		prerequisite = { focus = BUL_national_railway_lines }
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		relative_position_id = BUL_national_railway_lines
-		mutually_exclusive = { focus = BUL_light_metal_exploitation }
 		x = -1
 		y = 1
 		cost = 5
@@ -526,7 +525,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.025
 			48 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -544,7 +543,6 @@ focus_tree = {
 		prerequisite = { focus = BUL_national_railway_lines }
 		icon = GFX_goal_generic_construct_civilian
 		relative_position_id = BUL_national_railway_lines
-		mutually_exclusive = { focus = BUL_all_that_glitters }
 		x = 1
 		y = 1
 		cost = 5
@@ -555,6 +553,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_stability = 0.025
 			48 = {
 				add_resource = {
 					type = aluminium
@@ -572,7 +571,7 @@ focus_tree = {
 		relative_position_id = BUL_national_railway_lines
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 
 		available = {
 			controls_state = 48
@@ -610,7 +609,7 @@ focus_tree = {
 		relative_position_id = BUL_steel_plant_in_pernik
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_tech = excavation2
@@ -642,7 +641,7 @@ focus_tree = {
 		relative_position_id = BUL_utmost_optimization
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_tech = excavation3
@@ -863,7 +862,6 @@ focus_tree = {
 			    bonus = 1.0
 			    uses = 1
 			    category = infantry_weapons
-				category = artillery
 			}
 		}
 	}
@@ -1136,7 +1134,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = BUL_found_dvf_sopot
-			    bonus = 0.5
+			    bonus = 1
 			    uses = 2
 				category = artillery
 			}
@@ -1441,7 +1439,7 @@ focus_tree = {
 		relative_position_id = BUL_war_logistics
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_reinforce_naval_bases }
 
 		available = {
@@ -1524,7 +1522,7 @@ focus_tree = {
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
 		x = 12
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -1615,7 +1613,7 @@ focus_tree = {
 		relative_position_id = BUL_a_black_sea_fleet
 		x = -3
 		y = 1
-		cost = 10
+		cost = 2
 
 		available = {
 			211 = {
@@ -1672,12 +1670,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_tech_bonus = {
-				name = BUL_improve_coastal_defenses
-			    bonus = 1.0
-			    uses = 1
-				category = artillery
-			}
 		}
 	}
 
@@ -1689,7 +1681,7 @@ focus_tree = {
 		relative_position_id = BUL_improve_coastal_defenses
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_defensive_lines }
 
 		available = {
@@ -1759,7 +1751,7 @@ focus_tree = {
 		relative_position_id = BUL_defensive_lines
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -2212,7 +2204,7 @@ focus_tree = {
 		relative_position_id = BUL_dominance_in_the_aegean_sea
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			any_controlled_state = {
@@ -2287,7 +2279,7 @@ focus_tree = {
 		relative_position_id = BUL_a_black_sea_fleet
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -2312,7 +2304,7 @@ focus_tree = {
 		relative_position_id = BUL_a_black_sea_fleet
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			controls_state = 211
@@ -2352,7 +2344,7 @@ focus_tree = {
 		relative_position_id = BUL_bulgarian_shipping_chamber
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_a_powerful_bulgarian_navy }
 
 		available = {
@@ -2465,7 +2457,7 @@ focus_tree = {
 		relative_position_id = BUL_a_black_sea_fleet
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			any_controlled_state = {
@@ -2529,7 +2521,7 @@ focus_tree = {
 		relative_position_id = BUL_an_aegean_sea_fleet
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_strike_from_the_seas }
 
 		available = {
@@ -2562,7 +2554,7 @@ focus_tree = {
 		relative_position_id = BUL_strike_from_the_seas
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3103,7 +3095,7 @@ focus_tree = {
 		relative_position_id = BUL_the_fatherland_front
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3248,7 +3240,7 @@ focus_tree = {
 		relative_position_id = BUL_the_peoples_republic_of_bulgaria
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			country_exists = SOU
@@ -3452,7 +3444,7 @@ focus_tree = {
 		relative_position_id = BUL_follow_the_stalinist_doctrine
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			BUL_is_not_alone_in_faction = yes
@@ -3488,7 +3480,7 @@ focus_tree = {
 		relative_position_id = BUL_joint_research_effort
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			is_in_faction_with = SOV
@@ -3846,7 +3838,7 @@ focus_tree = {
 		relative_position_id = BUL_follow_the_stalinist_doctrine
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -3983,7 +3975,7 @@ focus_tree = {
 		relative_position_id = BUL_carry_the_revolution_abroad
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -4028,7 +4020,7 @@ focus_tree = {
 		relative_position_id = BUL_liberation_of_the_proletariat
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -4240,7 +4232,7 @@ focus_tree = {
 		relative_position_id = BUL_the_peoples_republic_of_bulgaria
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -4273,7 +4265,7 @@ focus_tree = {
 		relative_position_id = BUL_the_peoples_republic_of_bulgaria
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -4374,7 +4366,7 @@ focus_tree = {
 		relative_position_id = BUL_the_peoples_republic_of_bulgaria
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -4395,7 +4387,7 @@ focus_tree = {
 		relative_position_id = BUL_the_peoples_republic_of_bulgaria
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		bypass = {
 			OR = {
@@ -4781,7 +4773,7 @@ focus_tree = {
 		relative_position_id = BUL_bury_the_grudges_of_the_past
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			BUL_is_not_alone_in_faction = yes
@@ -4871,7 +4863,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = BUL_stefan_stefanov
-			show_ideas_tooltip = BUL_konstantin_muraviev
+			activate_advisor = BUL_konstantin_muraviev
 
 			BUL_zveno_low_loyalty_decrease_effect = yes
 			BUL_bs_low_loyalty_increase_effect = yes
@@ -5465,7 +5457,7 @@ focus_tree = {
 		relative_position_id = BUL_legislative_elections
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		bypass = {
 			OR = {
@@ -5678,7 +5670,7 @@ focus_tree = {
 		relative_position_id = BUL_join_the_allies
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			OR = {
@@ -5716,7 +5708,7 @@ focus_tree = {
 		relative_position_id = BUL_consolidate_the_third_bulgarian_state
 		x = 0
 		y = 3
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = BUL_the_unification_of_the_balkans }
 
 		available = {
@@ -6287,7 +6279,7 @@ focus_tree = {
 		relative_position_id = BUL_join_the_allies
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			BUL_is_not_alone_in_faction = yes
@@ -7505,7 +7497,7 @@ focus_tree = {
 		relative_position_id = BUL_the_fate_of_the_balkans
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			any_country = {
@@ -7616,7 +7608,7 @@ focus_tree = {
 		relative_position_id = BUL_the_fate_of_the_balkans
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			BUL_is_not_alone_in_faction = yes
@@ -7643,7 +7635,7 @@ focus_tree = {
 		relative_position_id = BUL_nationalist_propaganda
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -7723,7 +7715,7 @@ focus_tree = {
 		relative_position_id = BUL_guardians_of_the_balkans
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -8775,7 +8767,7 @@ focus_tree = {
 		relative_position_id = BUL_join_the_tripartite_pact
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			BUL_is_not_alone_in_faction = yes
