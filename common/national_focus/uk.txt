@@ -25,12 +25,12 @@ default = no
 	focus = {
 		id = ENG_ind
 		icon = GFX_focus_generic_british_trade
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
 		available = {
-			
+			126 = { is_controlled_by = ENG }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -48,7 +48,7 @@ default = no
 		id = ENG_scotland
 		icon = GFX_focus_generic_mining_industry
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -81,7 +81,7 @@ default = no
 		id = ENG_england
 		icon = GFX_focus_generic_aluminum
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -111,7 +111,7 @@ default = no
 		id = ENG_yels
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -141,7 +141,7 @@ default = no
 		id = ENG_north
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -171,12 +171,18 @@ default = no
 		id = ENG_end_ind
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = ENG_north  focus = ENG_scotland  focus = ENG_england  focus = ENG_yels}
-		cost = 10
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
 		available = {
-			119 = { is_controlled_by = ENG }
+			OR = {
+				119 = { is_controlled_by = ENG }
+			132 = { is_controlled_by = ENG }
+			122 = { is_controlled_by = ENG }
+			133 = { is_controlled_by = ENG }
+			}
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = ENG_ind
@@ -188,19 +194,22 @@ default = no
 		completion_reward = {
 			custom_effect_tooltip = ENG_end_ind_tt
 			if = {
-				limit = {has_completed_focus = ENG_scotland}
+				limit = {
+					has_completed_focus = ENG_scotland
+					133 = { is_controlled_by = ENG }
+				}
 				133 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_england}
+				limit = {has_completed_focus = ENG_england 132 = { is_controlled_by = ENG }}
 				132 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_yels}
+				limit = {has_completed_focus = ENG_yels 122 = { is_controlled_by = ENG }}
 				122 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_north}
+				limit = {has_completed_focus = ENG_north 119 = { is_controlled_by = ENG }}
 				119 = { set_state_category = megalopolis }
 			}
 		}

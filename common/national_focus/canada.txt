@@ -169,43 +169,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = CAN_national_housing_act_IC
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			IF = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						character = CAN_mackenzie_king
-					}
-				}
-
-				add_trait = {
-					character = CAN_mackenzie_king
-					trait = CAN_father_of_the_canadian_welfare_state
-					ideology = liberalism 
-				}
-			}
-		}
-
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1	
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
