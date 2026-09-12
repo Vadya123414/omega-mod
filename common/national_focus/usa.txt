@@ -1606,6 +1606,21 @@ focus_tree = {
 				factor = 10000
 		}
 	}
+			offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				AND = {
+					has_completed_focus = USA_reestablish_the_gold_standard
+					has_completed_focus = USA_reestablish_the_gold_standard
+				}
+			}
+		}
+
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1637,7 +1652,7 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_continue_the_new_deal
 
 		offset = {
@@ -2142,7 +2157,7 @@ focus_tree = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
 		x = 4
-		y = 1
+		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
@@ -3306,7 +3321,7 @@ focus_tree = {
 		id = USA_income_tax_reform
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
-		y = 4
+		y = 3
 		prerequisite = { focus = USA_protectionist_tariffs }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 5
@@ -3337,7 +3352,8 @@ focus_tree = {
 		id = USA_institute_of_american_sciences
 		icon = GFX_focus_research
 		x = 0
-		y = 6
+		y = 5
+		
 		prerequisite = { focus = USA_income_tax_reform }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 5
