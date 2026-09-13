@@ -1011,8 +1011,8 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.10
-				production_speed_buildings_factor = -0.1
-				global_building_slots_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.2
 				factory_energy_consumption = 0.20
 			}
 

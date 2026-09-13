@@ -26037,7 +26037,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = GER_the_monarchy_compromise_ww
 
-		cost = 2
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -26100,7 +26100,7 @@ focus_tree = {
 		x = -9
 		y = 1
 		relative_position_id = GER_realpolitik
-		cost = 2
+		cost = 5
 		available = {
 			is_subject = no
 			OR = {
@@ -26328,7 +26328,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_the_austrian_question
-		cost = 5
+		cost = 2
 
 		available = {
 			is_subject = no
@@ -26372,7 +26372,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_align_czechoslovakia
-		cost = 2
+		cost = 3
 		available = {
 			is_subject = no
 			is_faction_leader = yes
@@ -26744,16 +26744,6 @@ focus_tree = {
 				}
 			}
 			NOT = { has_war_with = CZE }
-			OR = { #Can't be in a faction with both AUS and HUN since they both can receive land
-				AND = {
-					is_in_faction_with = AUS
-					NOT = { is_in_faction_with = HUN }
-				}
-				AND = {
-					is_in_faction_with = HUN
-					NOT = { is_in_faction_with = AUS }
-				}
-			}
 		}
 
 		bypass = {
@@ -27735,7 +27725,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_align_czechoslovakia
 		
-		cost = 2
+		cost = 5
 		available = {
 			is_subject = no
 			num_faction_members > 1
@@ -28349,7 +28339,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_realpolitik
-		cost = 2
+		cost = 5
 
 		available = {
 			is_subject = no
