@@ -4636,7 +4636,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_the_showa_restoration }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -4739,7 +4739,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ally_the_league_of_blood }
 
-		cost = 2
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -4789,7 +4789,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_ally_the_league_of_blood }
 
-		cost = 2
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -16169,7 +16169,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
 		x = -1
-		y = 1
+		y = 3
 		relative_position_id = JAP_build_an_anti_army_coalition
 
 		prerequisite = { focus = JAP_build_an_anti_army_coalition }
@@ -16222,7 +16222,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_gather_royal_pacifists_support
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
 		x = 1
-		y = 1
+		y = 3
 		relative_position_id = JAP_build_an_anti_army_coalition
 
 		prerequisite = { focus = JAP_build_an_anti_army_coalition }
@@ -16359,10 +16359,10 @@ focus_tree = {
 		icon = GFX_focus_generic_sway_navy
 		mutually_exclusive = { }
 		x = 3
-		y = 1
+		y = -4
 		relative_position_id = JAP_return_of_the_manchukuo_exiles
 
-		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
+		prerequisite = { focus = JAP_mountain_village_operation_units focus = JAP_raise_support_within_the_proletarian_class focus = JAP_ensure_cross_party_support focus = JAP_gather_royal_pacifists_support} 
 
 		cost = 5
 
@@ -16438,7 +16438,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_raid_military_storages
 		mutually_exclusive = { focus = JAP_return_of_the_manchukuo_exiles }
 		x = 0
-		y = 2
+		y = 4
 		relative_position_id = JAP_limit_military_power
 
 		prerequisite = { focus = JAP_limit_military_power}
@@ -16509,8 +16509,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = JAP_sway_the_navy_moderates
 
-		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
-
+		prerequisite = { focus = JAP_mountain_village_operation_units focus = JAP_raise_support_within_the_proletarian_class  focus = JAP_ensure_cross_party_support focus = JAP_gather_royal_pacifists_support } 
 		offset = {
 			x = -0
 			y = 0
@@ -17147,7 +17146,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_return_of_the_machukuo_exiles
 		mutually_exclusive = { focus = JAP_divert_military_funds }
 		x = 2
-		y = 1
+		y = 5
 		relative_position_id = JAP_mountain_village_operation_units
 
 		prerequisite = { focus = JAP_mountain_village_operation_units }
@@ -17323,7 +17322,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_revoke_the_peace_preservation_law
 		#mutually_exclusive = { focus = JAP_the_unthinkable_option }
 		x = 4
-		y = 4
+		y = 1
 		relative_position_id = JAP_return_of_the_manchukuo_exiles
 
 		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
@@ -17471,8 +17470,6 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_organize_a_general_election
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
@@ -18266,7 +18263,19 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 				
 			add_ideas = JAP_modern_ashigaru_idea
-
+			set_technology = {
+				militia_tech = 1
+			}
+			set_sub_doctrine = peoples_war
+			                 add_mastery = {
+                                amount = 75
+                                track = infantry
+                            }
+			set_sub_doctrine = guerilla_war
+                              add_mastery = {
+                                amount = 100
+                                track = operations
+                            }
 			hidden_effect = {
 				delete_unit_template_and_units = {
 					division_template = "Ashigaru Levy"
@@ -19183,7 +19192,6 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_the_labor_farmer_faction_ascendant } 
 
-
 		cost = 5
 
 		ai_will_do = {
@@ -19232,6 +19240,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = JAP_the_lecture_group_ascendant
+
 
 		prerequisite = { focus = JAP_the_lecture_group_ascendant } 
 
@@ -19662,7 +19671,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-				
+			add_timed_idea = {
+				idea = JAP_mobilizing_the_proletariat
+				days = 420
+			}	
+			add_timed_idea = {
+				idea = JAP_the_long_march_to_victory_idea
+				days = 730
+			}
 			custom_effect_tooltip = JAP_guide_the_chinese_tt
 			every_country = {
 				limit = {
@@ -20758,7 +20774,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-				
+			add_timed_idea = {
+				idea = JAP_mobilizing_the_proletariat
+				days = 420
+			}	
+			add_timed_idea = {
+				idea = JAP_the_long_march_to_victory_idea
+				days = 730
+			}
 			CHI = {
 				every_core_state = {
 					add_claim_by = ROOT
@@ -20786,90 +20809,6 @@ focus_tree = {
 			}
 			
 		}
-
-	}
-
-	focus = {
-		id = JAP_mobilize_the_proletariat
-		icon = GFX_focus_GER_proletarian_solidarity
-		#mutually_exclusive = { focus =  }
-		x = 1
-		y = 1
-		relative_position_id = JAP_put_an_end_to_chinese_feudalism
-
-		prerequisite = { focus = JAP_put_an_end_to_chinese_feudalism } 
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-				
-			add_timed_idea = {
-				idea = JAP_mobilizing_the_proletariat
-				days = 420
-			}	
-			
-		}
-	
-
-	}
-
-	focus = {
-		id = JAP_the_long_march_to_victory
-		icon = GFX_focus_SOV_the_road_of_life
-		#mutually_exclusive = { focus =  }
-		x = -1
-		y = 1
-		relative_position_id = JAP_put_an_end_to_chinese_feudalism
-
-		prerequisite = { focus = JAP_put_an_end_to_chinese_feudalism } 
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
-
-		completion_reward = {
-				
-			add_timed_idea = {
-				idea = JAP_the_long_march_to_victory_idea
-				days = 730
-			}	
-			
-		}
-	
 
 	}
 
@@ -22022,8 +21961,6 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
@@ -22120,6 +22057,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		JAP_add_or_modify_civilian_cabinet = yes
+		add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
 
 			add_political_power = 50
 
@@ -22170,7 +22109,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
+		JAP_add_or_modify_civilian_cabinet = yes
+		add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
 			add_political_power = 50
 
 			add_popularity = {
@@ -22298,7 +22238,7 @@ focus_tree = {
 
 			JAP_add_or_modify_civilian_cabinet = yes
 
-			add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
+			add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.075 tooltip = political_power_factor_tt }
 			add_to_variable = { JAP_civilian_cabinet_stability_factor = 0.1 tooltip = stability_factor_tt }
 				
 			
@@ -22414,7 +22354,7 @@ focus_tree = {
 
 			JAP_add_or_modify_civilian_cabinet = yes
 
-			add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
+			add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.075 tooltip = political_power_factor_tt }
 			add_to_variable = { JAP_civilian_cabinet_war_support_factor = 0.1 tooltip = war_support_factor_tt }
 			
 		}
@@ -22950,7 +22890,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-
+		JAP_add_or_modify_civilian_cabinet = yes
+		add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
 			add_political_power = 50
 
 			add_popularity = {
@@ -22998,7 +22939,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-
+		JAP_add_or_modify_civilian_cabinet = yes
+		add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
 			add_stability = 0.1
 
 			add_popularity = {
@@ -32338,19 +32280,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_IMPERIAL_INFLUENCE }
 
 		completion_reward = {
-
-			add_tech_bonus = {
-				name = JAP_expand_navy_technical_department
-				bonus = 0.33
-				uses = 2
-				category = naval_equipment
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			JAP_add_or_modify_imperial_navy = yes
-			add_to_variable = { JAP_navy_navy_org_factor = 0.05 tooltip = navy_org_factor_tt }
-			add_to_variable = { JAP_navy_experience_gain_navy_unit_factor = 0.05 tooltip = experience_gain_navy_unit_factor_tt }
+			add_to_variable = { JAP_navy_navy_org_factor = 0.1 tooltip = navy_org_factor_tt }
+			add_to_variable = { JAP_navy_experience_gain_navy_unit_factor = 0.1 tooltip = experience_gain_navy_unit_factor_tt }
 		}
 	}
 
@@ -32448,16 +32380,16 @@ focus_tree = {
 						is_fully_controlled_by = ROOT
 						free_building_slots = {
 							building = dockyard
-							size > 1
+							size > 3
 							include_locked = yes
 						}
 					}
 				}
 				531 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
