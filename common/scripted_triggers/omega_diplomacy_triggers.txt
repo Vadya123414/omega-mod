@@ -6,8 +6,11 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
-    
-    OR = {
+    if = {
+        limit = {
+            is_ai = not
+        }
+        OR = {
         # Оправдание на ИИ с 1937
         AND = {
             FROM = {
@@ -41,6 +44,8 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
         }
         }
     }
+    }
+    
     custom_trigger_tooltip = {
 		tooltip = vuina_diploma
 	}
@@ -48,6 +53,10 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
+    if = {
+        limit = {
+            is_ai = not
+        }
     OR = {
             AND = {
                 FROM = { is_ai = yes }
@@ -78,11 +87,66 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
             }
             }
     }
+    }
     custom_trigger_tooltip = {
 		tooltip = vuina_diploma
 	}
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
-     date > 1938.7.1
+    date > 1938.7.1
+}
+
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
+}
+
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
+}
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
+}
+
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
+}
+
+DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
+}
+
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+    NOT = {
+        AND = {
+            tag = FRA
+            has_completed_focus = FRA_proclaim_the_third_empire
+        }
+    }
 }

@@ -434,16 +434,25 @@ ideas = {
 			modifier = {
 				conscription = 0.03
 				conscription_factor = 0.25
-				war_support_factor = 0.1
+				war_support_factor = 0.3
 				training_time_army_factor = -0.2
-				#industrial_capacity_factory = 0.1
-				#industrial_capacity_dockyard = 0.1
-				#production_speed_buildings_factor = 0.1
-                experience_gain_army_factor = 0.1
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_buildings_factor = 0.15
+                experience_gain_army_factor = 0.15
+				ARMY_NON_CORE_DEFENCE_FACTOR = 0.05
+				ARMY_NON_CORE_ATTACK_FACTOR = 0.1
 				army_speed_factor = 0.05  
-
+				land_mastery_gain_factor = 0.15
+				war_stability_factor = 0.15
+				weekly_casualties_war_support = 0.001
+				supply_factor = 0.1
+				out_of_supply_factor = -0.1        
+				winter_attrition_factor = -0.1 
+				army_leader_start_level = 2
+				military_leader_cost_factor = -0.2
+				mobilization_speed = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 

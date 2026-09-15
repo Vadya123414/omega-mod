@@ -9452,13 +9452,6 @@ focus_tree = {
 		cost = 2
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over 
-			custom_trigger_tooltip = {
-				tooltip = SOV_poum_exists_tt
-				SPC = { 
-					exists = yes 
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
-			}
 		}
 
 		search_filters = {}
@@ -10068,6 +10061,28 @@ focus_tree = {
 					}
 					add_opinion_modifier = { modifier = SOV_international_socialist_association_bad target = ROOT }
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_a_sustainable_economy
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = SOV_paced_industrialization }
+		x = 0
+		y = 1
+		relative_position_id = SOV_paced_industrialization
+		cost = 10
+		available = {
+			has_idea = new_economic_policy
+		}
+		                
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = new_economic_policy
+				add_idea = new_economic_policy_2
 			}
 		}
 	}

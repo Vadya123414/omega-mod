@@ -92,3 +92,92 @@ country_event = {
         # Страна просто останется без альянса
     }
 }
+
+add_namespace = my_coalition
+
+# === Событие для Франции: уведомление о коалиции ===
+country_event = {
+    id = my_coalition.1
+    title = my_coalition.1.t
+    desc = my_coalition.1.d
+    picture = GFX_report_event_FIN_finnish_generals
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.1.a
+        # Ничего не делаем — просто уведомление
+    }
+}
+
+# === Событие для стран коалиции: появилось решение ===
+country_event = {
+    id = my_coalition.2
+    title = my_coalition.2.t
+    desc = my_coalition.2.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.2.a
+        # Просто уведомление
+		ROOT = {
+			set_country_flag = coalition_mission_active
+		}
+    }
+}
+
+# === Событие для СССР: появилась миссия ===
+country_event = {
+    id = my_coalition.3
+    title = my_coalition.3.t
+    desc = my_coalition.3.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.3.a
+		ROOT = {
+			set_country_flag = sov_coalition_mission_active
+		}
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии Франции ===
+country_event = {
+    id = my_coalition.4
+    title = my_coalition.4.t
+    desc = my_coalition.4.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.4.a
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии СССР (если не отказался) ===
+country_event = {
+    id = my_coalition.5
+    title = my_coalition.5.t
+    desc = my_coalition.5.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.5.a
+		declare_war_on = {
+                target = FRA
+                type = annex_everything
+            }
+			add_ideas = FRA_coalition
+    }
+
+	option = {
+        name = my_coalition.5.b
+    }
+}

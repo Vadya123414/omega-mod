@@ -87,6 +87,50 @@ ideas = {
 
                         
 		}
+
+		FRA_coalition = {
+			picture = FRA_undividable
+			allowed = {
+				
+			}
+			cancel = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			removal_cost = -1
+			modifier = { 
+				war_support_factor = 0.20
+				offensive_war_stability_factor = 0.1
+			} 
+		}
+
+		FRA_swiss_rubber_import_modifier = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				country_resource_rubber = 70
+			}
+			
+			picture = generic_flexible_foreign_policy2
+		}
+
+		CHE_french_parallel_import_factories = {
+			allowed = {
+				always = yes
+			}
+			
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 9 }
+			}
+
+			on_remove = {
+				add_offsite_building = { type = industrial_complex level = -9 }
+			}
+			
+			picture = HUN_revaluing_the_pengo
+		}
 		
 		IRE_cpecial_arm = {
 				allowed = {
