@@ -1,6 +1,28 @@
 ideas = {
 
 	country = {
+		FRA_combined_warfare_effort_idea = {
+			allowed = {
+				original_tag = FRA
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SWE_land_air_warfare
+
+			modifier = {
+				air_cas_present_factor = 0.05
+				ground_attack_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.1
+				motorized_attack_factor = 0.05
+                motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+			}
+		}
 
 		FRA_full_employment = {
 			picture = generic_production_bonus
