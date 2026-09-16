@@ -98,7 +98,7 @@ my_coalition_category = {
     FRA_coalition_warning_mission = {
         icon = generic_political_actions
         is_good = no
-        days_mission_timeout = 365
+        days_mission_timeout = 390
         selectable_mission = no
 
         activation = {
@@ -123,7 +123,7 @@ my_coalition_category = {
     SOV_coalition_mission = {
         icon = generic_political_actions
         is_good = no
-        days_mission_timeout = 365
+        days_mission_timeout = 400
         selectable_mission = no
 		fire_only_once = yes
 
@@ -181,12 +181,14 @@ my_coalition_category = {
     generic_join_coalition = {
         icon = generic_political_actions
         is_good = no
-        days_mission_timeout = 365
+        days_mission_timeout = 400
         selectable_mission = no
 		fire_only_once = yes
 
         available = {
-            always = no
+            not = {
+				 has_country_flag = coalition_mission_active
+			}
         }
 
 		activation = {
@@ -212,6 +214,33 @@ my_coalition_category = {
 
         ai_will_do = {
             factor = 1
+        }
+    }
+
+	 generic_no_join_coalition = {
+        icon = generic_political_actions
+        cost = 0
+
+        # Решение доступно, пока активна миссия
+        available = {
+			
+        }
+		
+
+        visible = {
+            has_country_flag = coalition_mission_active
+        }
+
+		fire_only_once = yes
+
+        # При нажатии — отказ
+        complete_effect = {
+            remove_decision = generic_join_coalition
+            clr_country_flag = coalition_mission_active
+        }
+
+        ai_will_do = {
+            factor = 0  # ИИ никогда не отказывается
         }
     }
     

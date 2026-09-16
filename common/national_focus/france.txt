@@ -828,6 +828,7 @@
 	focus = {
 		id = FRA_methodical_battle
 		icon = GFX_goal_generic_cavalry
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = -1
 		y = 1
 		
@@ -864,6 +865,7 @@
 		id = FRA_fortification_focus
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = FRA_methodical_battle }
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 1
 		relative_position_id = FRA_methodical_battle
@@ -952,6 +954,7 @@
 		id = FRA_artillery_focus
 		icon = GFX_focus_PER_construct_air_defenses
 		prerequisite = { focus = FRA_infantry_focus }
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 1
 		relative_position_id = FRA_infantry_focus
@@ -1241,6 +1244,7 @@
 	focus = {
 		id = FRA_mechanized_focus
 		icon = GFX_goal_generic_build_tank
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_motorized_focus }
 		x = 0
 		y = 1
@@ -1280,6 +1284,7 @@
 	focus = {
 		id = FRA_air_dominance
 		icon = GFX_goal_generic_air_fighter2
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
@@ -1310,6 +1315,7 @@
 	focus = {
 		id = FRA_cas_focus
 		icon = GFX_goal_generic_CAS
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { 
 	 		focus = FRA_air_dominance
 	 	}
@@ -3199,6 +3205,7 @@
 	focus = {
 		id = FRA_the_blum_viollette_proposal
 		icon = GFX_goal_generic_improve_relations
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 4
 		y = 1
 		
@@ -3420,6 +3427,9 @@
 
 		available = {
 			FRA_has_worker_shortage = yes
+			NOT = {
+				has_completed_focus = HOL_lud
+			}
 		}
 		
 		bypass = {
@@ -4405,6 +4415,7 @@
 	focus = {
 		id = FRA_stimulate_the_dynamic_market
 		icon = GFX_goal_generic_construct_civilian
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
@@ -4539,6 +4550,7 @@
 	focus = {
 		id = FRA_promote_entrepeneurship
 		icon = GFX_goal_generic_propaganda
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 1
 		
@@ -7750,8 +7762,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.1 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { capacity_factor_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { capacity_factor_arms = 0.35 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
@@ -8572,15 +8584,34 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.1 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { capacity_factor_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { capacity_factor_arms = 0.35 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CZE_national_defense_act_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			reduce_focus_completion_cost = {
-				focus = { FRA_naval_rearmament FRA_develop_colonial_dockyards FRA_the_old_school FRA_air_focus FRA_fighter_focus FRA_army_reform FRA_economic_devolution }
+				focus = { 
+					FRA_methodical_battle
+					FRA_fortification_focus
+					FRA_artillery_focus
+					FRA_air_dominance
+					FRA_cas_focus
+					FRA_mechanized_focus
+					FRA_army_reform
+					FRA_the_blum_viollette_proposal
+					FRA_economic_devolution
+					FRA_promote_entrepeneurship
+					FRA_stimulate_the_dynamic_market
+					FRA_naval_rearmament
+					FRA_develop_colonial_dockyards
+					FRA_the_old_school
+					FRA_the_young_school
+					FRA_undersea_combat
+					FRA_air_focus
+					FRA_fighter_focus
+				}
 				cost = 35
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -9143,6 +9174,7 @@
 	focus = {
 		id = FRA_the_young_school
 		icon = GFX_goal_generic_navy_cruiser
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { focus = FRA_naval_rearmament }
 	 	mutually_exclusive = { focus = FRA_the_old_school }
 		x = 4
@@ -9159,6 +9191,7 @@
 
 	focus = {
 		id = FRA_undersea_combat
+		overlay = GFX_focus_fast_overlay_generic_clock
 		icon = GFX_goal_generic_navy_submarine
 	 	prerequisite = { focus = FRA_the_young_school }
 		x = -1
