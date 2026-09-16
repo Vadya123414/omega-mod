@@ -765,5 +765,7 @@ MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR_tt:0 " $MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR$
 MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR_tt:0 " $MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR$ $RIGHT|G=%1$"
 army_leader_start_level_tt: " $MODIFIER_ARMY_LEADER_START_LEVEL$ $RIGHT|G=%1$"
 FRA_hard_path_tooltip:0 "§RВнимание: Данный путь является экстремально сложным!§!\n\nВыбрав этот курс, Франция окажется в полной дипломатической изоляции. Нам предстоит вести §Rтотальную войну на уничтожение§! со всеми нашими соседями:\n $BULLET$ §YГерманский Рейх§!\n $BULLET$ §YКоролевство Италия§!\n $BULLET$ §YИспанское Государство§!\n $BULLET$ §YСоединенное Королевство§!\n $BULLET$ §YБельгия§! и §YНидерланды§!\nЕдинственным островком стабильности останется §GШвейцария§!, чьи альпийские границы и каналы поставок станут нашей единственной «дорогой жизни»."
+FRA_combined_warfare_effort_idea: "Ставка на совместные военные действия"
+
 coalition_mission_active:0 "Отказался от войны"
 sov_coalition_mission_active:0 "Отказался от войны"

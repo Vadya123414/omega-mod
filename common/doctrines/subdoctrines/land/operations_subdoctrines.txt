@@ -799,10 +799,13 @@ rapid_domination = {
                     default_morale = 0.1
                     add = yes
                 }
+                default_morale = 0.1    #ЗАМЕНИТЬ НА ТУЛТИП
             }
+
 			category_regimental_support_artillery = {
 				soft_attack = 0.1
 			}
+
 
         }
 		
