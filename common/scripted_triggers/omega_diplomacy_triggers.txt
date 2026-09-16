@@ -99,54 +99,102 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 
 DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }
 
 DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }
 
 DIPLOMACY_MILACC_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }
 
 DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }
 
 DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }
 
 DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
     NOT = {
-        AND = {
-            tag = FRA
-            has_completed_focus = FRA_proclaim_the_third_empire
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
         }
     }
 }

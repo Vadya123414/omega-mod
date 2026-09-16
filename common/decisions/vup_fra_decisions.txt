@@ -9,7 +9,11 @@ FRA_annex = {
 			date > 1939.1.1 
 		}
 
-		
+        highlight_states = {
+			highlight_state_targets = {
+				state = 660
+			}
+		}
 
 		fire_only_once = yes
 		days_remove    = -1
@@ -217,7 +221,7 @@ my_coalition_category = {
         }
     }
 
-	 generic_no_join_coalition = {
+	generic_no_join_coalition = {
         icon = generic_political_actions
         cost = 0
 
@@ -247,7 +251,6 @@ my_coalition_category = {
     FRA_build_fuel_silos_decision = {
 		icon = decision_generic_construction
 
-		# Ограничение: доступно только для Франции
 		allowed = {
 			tag = FRA
 		}
@@ -256,13 +259,22 @@ my_coalition_category = {
             has_completed_focus = FRA_podgotovka
         }
 
-		# Условия, чтобы решение появилось на панели
 		available = {
 			command_power = 25
+            num_of_civilian_factories_available_for_projects > 4
             15 = { is_controlled_by = FRA }
             14 = { is_controlled_by = FRA }
-            32 = { is_controlled_by = FRA }
+            23 = { is_controlled_by = FRA }
             19 = { is_controlled_by = FRA }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 15
+                state = 14
+                state = 23
+                state = 19
+			}
 		}
 
 		cost = 50
@@ -280,12 +292,52 @@ my_coalition_category = {
 
 		remove_effect = {
             custom_effect_tooltip = FRA_command_power_cost_25_tt # Показывает в подсказке, что снимет 25 КР
-			15 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } # Корсика/Юг
-			14 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } # Нормандия
-			23 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } # Париж/Иль-де-Франс
-            19 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } # Кале/Пикардия
+			15 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+			14 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+			23 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+            19 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
             add_fuel = 1800000
         }
+	}
+
+    FRA_coal_overn = {
+	    cost = 25
+        icon = coal
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 26
+		}
+
+        allowed = {
+			tag = FRA
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		remove_effect = {
+		    26 = {
+		    	add_resource = {
+		    		type = coal
+		    		amount = 24
+		    	}
+		    }
+        }
+		ai_will_do = {
+			factor = 200
+		}
 	}
 
     #FRA_swiss_parallel_rubber_import = {
@@ -333,6 +385,12 @@ my_coalition_category = {
             3 = { is_controlled_by = SWI }
 		}
 
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
         visible = {
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
@@ -363,6 +421,12 @@ my_coalition_category = {
                 modifier = FRA_parallel_import_modifier
             }
 			check_variable = { FRA_active_rubber_contracts > 0 }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
 		}
 
         visible = {
@@ -403,6 +467,12 @@ my_coalition_category = {
             3 = { is_controlled_by = SWI }
 		}
 
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
         visible = {
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
@@ -433,6 +503,12 @@ my_coalition_category = {
                 modifier = FRA_parallel_import_modifier
             }
 			check_variable = { FRA_active_oil_contracts > 0 }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
 		}
 
         visible = {
@@ -473,6 +549,12 @@ my_coalition_category = {
             3 = { is_controlled_by = SWI }
 		}
 
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
         visible = {
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
@@ -505,6 +587,12 @@ my_coalition_category = {
 			check_variable = { FRA_active_tungsten_contracts > 0 }
 		}
 
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
         visible = {
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
@@ -532,10 +620,12 @@ my_coalition_category = {
 		}
 	}
 
+    
+
     FRA_ter_ita = { 
 		icon = decision_generic_break_treaty
 		allowed = { tag = FRA }
-
+        cost = 15
 		available = {
             any_country = {
 					has_war_with = ROOT
@@ -578,7 +668,7 @@ my_coalition_category = {
     FRA_ter_ispa = {
 		icon = decision_generic_break_treaty
 		allowed = { tag = FRA }
-
+        cost = 15
 		available = {
             any_country = {
 					has_war_with = ROOT
@@ -621,6 +711,7 @@ my_coalition_category = {
     FRA_ter_ger = {
 		icon = decision_generic_break_treaty
 		allowed = { tag = FRA }
+        cost = 15
 
 		available = {
             any_country = {
