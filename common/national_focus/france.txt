@@ -942,7 +942,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_firepower_kills
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1232,7 +1232,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_battle_of_maneuver
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -7762,7 +7762,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.35 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_arms = 0.25 tooltip = industrial_capacity_factory_tt }
 			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8110,6 +8110,7 @@
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
 			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
+			add_to_variable = { war_goal_time = -5 tooltip = enemy_justify_war_goal_time_tt }
 			create_wargoal = { 
 				type = annex_everything
 				target = GER
@@ -8584,7 +8585,7 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.35 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_arms = 0.25 tooltip = industrial_capacity_factory_tt }
 			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt

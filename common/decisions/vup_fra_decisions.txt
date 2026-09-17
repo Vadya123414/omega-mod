@@ -249,7 +249,7 @@ my_coalition_category = {
     }
     
     FRA_build_fuel_silos_decision = {
-		icon = decision_generic_construction
+		icon = GFX_decision_generic_electricity
 
 		allowed = {
 			tag = FRA
@@ -319,6 +319,10 @@ my_coalition_category = {
 			}
 		}
 
+		visible = {
+            has_completed_focus = FRA_podgotovka
+        }
+
 		fire_only_once = yes
 
 		days_remove = 60
@@ -375,7 +379,7 @@ my_coalition_category = {
 	#}
 
 	FRA_buy_swiss_rubber = {
-		icon = decision_generic_trade
+		icon = rubber
 		allowed = { tag = FRA }
 
 		available = {
@@ -392,6 +396,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -413,7 +418,7 @@ my_coalition_category = {
 	}
 
 	FRA_cancel_swiss_rubber = {
-		icon = decision_generic_break_treaty
+		icon = rubber
 		allowed = { tag = FRA }
 
 		available = {
@@ -430,6 +435,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -457,7 +463,7 @@ my_coalition_category = {
 	}
 
     FRA_buy_swiss_oil = {
-		icon = decision_generic_trade
+		icon = oil
 		allowed = { tag = FRA }
 
 		available = {
@@ -474,6 +480,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -495,7 +502,7 @@ my_coalition_category = {
 	}
 
 	FRA_cancel_swiss_oil = {
-		icon = decision_generic_break_treaty
+		icon = oil
 		allowed = { tag = FRA }
 
 		available = {
@@ -512,6 +519,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -539,7 +547,7 @@ my_coalition_category = {
 	}
 
     FRA_buy_swiss_tungsten = {
-		icon = decision_generic_trade
+		icon = tungsten
 		allowed = { tag = FRA }
 
 		available = {
@@ -556,6 +564,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -577,7 +586,7 @@ my_coalition_category = {
 	}
 
 	FRA_cancel_swiss_tungsten = {
-		icon = decision_generic_break_treaty
+		icon = tungsten
 		allowed = { tag = FRA }
 
 		available = {
@@ -594,6 +603,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			NOT = { has_war_with = SWI }
             has_dynamic_modifier = {
                 modifier = FRA_parallel_import_modifier
             }
@@ -623,7 +633,7 @@ my_coalition_category = {
     
 
     FRA_ter_ita = { 
-		icon = decision_generic_break_treaty
+		icon = GFX_decision_infiltrate_state
 		allowed = { tag = FRA }
         cost = 15
 		available = {
@@ -666,7 +676,7 @@ my_coalition_category = {
 	}
 
     FRA_ter_ispa = {
-		icon = decision_generic_break_treaty
+		icon = GFX_decision_infiltrate_state
 		allowed = { tag = FRA }
         cost = 15
 		available = {
@@ -709,7 +719,7 @@ my_coalition_category = {
 	}
 
     FRA_ter_ger = {
-		icon = decision_generic_break_treaty
+		icon = GFX_decision_infiltrate_state
 		allowed = { tag = FRA }
         cost = 15
 

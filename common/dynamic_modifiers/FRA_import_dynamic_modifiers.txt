@@ -1,9 +1,14 @@
 FRA_parallel_import_modifier = {
 	icon = GFX_portrait_ITA_guido_de_rugiero_small
 	remove_trigger = {
-        NOT = {
-            3 = { is_controlled_by = SWI }
-        }
+		OR = {
+			FRA = {
+				has_war_with = SWI
+			}
+       		NOT = {
+       		    3 = { is_controlled_by = SWI }
+       		}
+		}
 	}
 	enable = { always = yes }
     
