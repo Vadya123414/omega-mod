@@ -18,6 +18,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	shared_focus = ABDA_abdacom
 
 #Metropoli 
 
