@@ -280,7 +280,11 @@ my_coalition_category = {
 		cost = 50
 
 		days_remove = 60
-
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		custom_cost_text = decision_cost_CP_25_pp_50
 		modifier = {
 			civilian_factory_use = 5
 		}
@@ -291,7 +295,6 @@ my_coalition_category = {
 		}
 
 		remove_effect = {
-            custom_effect_tooltip = FRA_command_power_cost_25_tt # Показывает в подсказке, что снимет 25 КР
 			15 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
 			14 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
 			23 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
