@@ -107,7 +107,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -143,7 +143,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -180,7 +180,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -217,7 +217,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -254,7 +254,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -291,7 +291,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -342,7 +342,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -427,7 +427,7 @@
 		}
 		relative_position_id = FRA_appeal_to_the_french_nation
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -483,7 +483,7 @@
 		}
 		relative_position_id = FRA_continue_the_fight
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -528,7 +528,7 @@
 		}
 		relative_position_id = FRA_continue_the_fight
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -566,7 +566,7 @@
 		}
 		relative_position_id = FRA_continue_the_fight
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -610,7 +610,7 @@
 			
 		}
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -654,7 +654,7 @@
 		}
 		relative_position_id = FRA_refus_absurde
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -698,7 +698,7 @@
 		}
 		relative_position_id = FRA_refus_absurde
 		
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -731,7 +731,7 @@
 		}
 		relative_position_id = FRA_reach_out_to_trade_unions
 		
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -773,7 +773,7 @@
 		}
 		relative_position_id = FRA_refus_absurde
 		
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -806,7 +806,7 @@
 		}
 		relative_position_id = FRA_connections_to_industrialists
 		
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -848,7 +848,7 @@
 		}
 		relative_position_id = FRA_the_civil_and_military_organization
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -884,7 +884,7 @@
 		}
 		relative_position_id = FRA_national_council_of_the_resistance
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
