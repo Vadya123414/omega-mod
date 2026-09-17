@@ -181,3 +181,25 @@ country_event = {
         name = my_coalition.5.b
     }
 }
+
+add_namespace = fra_leave
+
+country_event = {
+    id = fra_leave.1
+    hidden = yes # Ивент скрыт от игрока, нет всплывающего окна
+
+    trigger = {
+        tag = FRA
+        has_completed_focus = FRA_proclaim_the_third_empire
+        is_in_faction = yes                                
+        is_faction_leader = no                          
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    immediate = {
+        leave_faction = yes
+    }
+}
