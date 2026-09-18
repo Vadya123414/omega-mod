@@ -109,7 +109,12 @@ CHI_sea_nationalist_historical_plan = {
 	}
 
 	ideas = {
-		CHI_soong_mei_ling = 5
+		CHI_alexander_von_falkenhausen = 100
+		CHI_chiang_ching_kuo = 30
+		CHI_zhang_qun = 20
+
+		CHI_xiao_yisu = 10
+
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

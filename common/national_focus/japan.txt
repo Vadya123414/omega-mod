@@ -11492,7 +11492,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			
 			OR = {
 				AND = {
 					608 = {
@@ -11526,7 +11525,6 @@ focus_tree = {
 						}
 					}
 				}
-				is_in_faction_with = CHI
 				has_war_with = CHI
 				has_subject = CHI
 			}
@@ -11712,10 +11710,8 @@ focus_tree = {
 				add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
 
 			}
-			ELSE_IF = {
-				limit = {
-					has_active_mission = JAP_kwantung_army_impatience
-				}
+			ELSE = {
+					#has_active_mission = JAP_kwantung_army_impatience
 
 				add_days_mission_timeout = {
 				    mission = JAP_kwantung_army_impatience
@@ -17470,6 +17466,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_organize_a_general_election
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
@@ -21961,6 +21959,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
