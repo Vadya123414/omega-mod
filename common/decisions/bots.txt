@@ -1,5 +1,35 @@
 BOTS = {
+        GER_autarky= {
 
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            is_ai = yes
+            original_tag = GER
+            has_full_control_of_state = 105       
+                }
+		visible = {
+            is_ai = yes
+            original_tag = GER
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            105 = {
+            add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = NO
+                }
+              add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+					instant_build = NO
+                }
+            }
+        }
+    }
     startxp = {
 
 		fire_only_once = yes
@@ -10,6 +40,18 @@ BOTS = {
             is_ai = yes
             has_war = no
             has_civil_war = no
+            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
 		}
 		visible = {
             is_ai = yes
@@ -33,6 +75,18 @@ BOTS = {
                 is_ai = yes
                  has_war = no
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes
@@ -72,6 +126,18 @@ BOTS = {
                 if = {date > 1937.1.1}
                 is_ai = yes
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes
@@ -97,6 +163,18 @@ BOTS = {
                 if = {date > 1938.1.1}
                 is_ai = yes
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes
@@ -121,6 +199,18 @@ BOTS = {
                 if = {date > 1939.1.1}
                 is_ai = yes
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes
@@ -150,6 +240,18 @@ BOTS = {
                if = { date > 1940.1.1}
                 is_ai = yes
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes
@@ -170,6 +272,18 @@ BOTS = {
                if = { date > 1941.1.1}
                 is_ai = yes
                 has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
             }
             visible = {
                 is_ai = yes

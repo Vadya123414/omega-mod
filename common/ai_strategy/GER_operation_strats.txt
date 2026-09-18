@@ -56,3 +56,177 @@ GER_collaboration_on_NOR = {
 		mission_target = NOR
 	}
 }
+GER_collaboration_on_HOL = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		HOL = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = GER }
+		}
+		# only try before end of 1941 (and continue if already doing)
+		OR = {
+			date < 1938.6.1
+			is_preparing_operation = {
+				operation = operation_collaboration_government
+				target = HOL
+			}
+			is_running_operation = {
+				operation = operation_collaboration_government
+				target = HOL
+			}
+		}
+		# do at most once or twice depending on date
+		OR = {
+			num_finished_operations = {
+				operation = operation_collaboration_government
+				target = HOL
+				value < 1
+			}
+			AND = {
+				date > 1938.6.1
+				num_finished_operations = {
+					operation = operation_collaboration_government
+					target = HOL
+					value < 2
+				}
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 1200
+		operation_target = HOL
+	}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = HOL
+	}
+}
+GER_collaboration_on_BEL = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		BEL = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = GER }
+		}
+		# only try before end of 1941 (and continue if already doing)
+		OR = {
+			date < 1938.6.1
+			is_preparing_operation = {
+				operation = operation_collaboration_government
+				target = BEL
+			}
+			is_running_operation = {
+				operation = operation_collaboration_government
+				target = BEL
+			}
+		}
+		# do at most once or twice depending on date
+		OR = {
+			num_finished_operations = {
+				operation = operation_collaboration_government
+				target = BEL
+				value < 1
+			}
+			AND = {
+				date > 1938.6.1
+				num_finished_operations = {
+					operation = operation_collaboration_government
+					target = BEL
+					value < 2
+				}
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 1200
+		operation_target = BEL
+	}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = BEL
+	}
+}
+GER_collaboration_on_YUG = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		YUG = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = GER }
+		}
+		# only try before end of 1941 (and continue if already doing)
+		OR = {
+			date < 1938.6.1
+			is_preparing_operation = {
+				operation = operation_collaboration_government
+				target = YUG
+			}
+			is_running_operation = {
+				operation = operation_collaboration_government
+				target = YUG
+			}
+		}
+		# do at most once or twice depending on date
+		OR = {
+			num_finished_operations = {
+				operation = operation_collaboration_government
+				target = YUG
+				value < 1
+			}
+			AND = {
+				date > 1938.6.1
+				num_finished_operations = {
+					operation = operation_collaboration_government
+					target = YUG
+					value < 2
+				}
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 1200
+		operation_target = NOR
+	}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = NOR
+	}
+}
