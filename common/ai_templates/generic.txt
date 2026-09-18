@@ -101,12 +101,12 @@ suppression_generic = {
 	
 	role = suppression
 	upgrade_prio = {
-		base = 0
+		base = 1
 	}
 
 	suppression_generic = {
 	
-		reinforce_prio = 0
+		reinforce_prio = 1
 		custom_icon = 13
 	
 		upgrade_prio = {
@@ -170,7 +170,7 @@ infantry_generic = {
 			}
 			
 			regiments = {
-				infantry = 14
+				infantry = 12
 			}
 		}
 		replace_at_match = 0.6
@@ -189,7 +189,7 @@ infantry_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-				rangers_support = 1 
+
 				super_heavy_artillery = 1
 			}
 
@@ -198,7 +198,7 @@ infantry_generic = {
 			}
 			
 			regiments = {
-				infantry = 20
+				infantry = 15
 			}
 
 		}

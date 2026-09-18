@@ -54,12 +54,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 4
-				tag = ENG
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -93,21 +88,8 @@ technologies = {
 			name = mtgnavalfolder
 			position = { x = 0 y = 8 }
 		}
-
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				OR = {
-					tag = ENG
-					tag = JAP
-				}
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -143,26 +125,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -193,16 +156,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -228,27 +182,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				has_navy_size = { size < 10 }
-				factor = 0.1
-			}
-
-			modifier = {
-				factor = 4
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -332,16 +266,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 4
-
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -380,16 +305,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 4
-
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -427,20 +343,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
-			modifier = {
-				factor = 0.1
-				original_tag = GER				
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -475,16 +378,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -518,16 +412,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -562,25 +447,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 5
-				anti_submarine_strategy_required_trigger = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1938.6.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1939.6.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -615,16 +482,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -653,18 +511,8 @@ technologies = {
 			name = mtgnavalfolder
 			position = { x = 2 y = 19 }
 		}
-
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -723,18 +571,8 @@ technologies = {
 			name = mtgnavalfolder
 			position = {  x = -1 y = 2 }
 		}
-
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -773,18 +611,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
-
 		categories = {
 			naval_equipment
 			ca_tech
@@ -818,25 +646,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-				factor = 4
-			}
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -867,15 +677,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -966,16 +768,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1031,24 +824,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1092,24 +868,7 @@ technologies = {
 		#}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1178,25 +937,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1233,19 +974,8 @@ technologies = {
 			name = mtgnavalfolder
 			position = {  x = 0 y = 20 }
 		}
-
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1288,17 +1018,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
-			
+			factor = 0
 		}
 
 		categories = {
@@ -1336,24 +1056,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 0
-				date < 1939.1.1
-			}
-
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
-			modifier = {
-				has_tech = improved_ship_hull_heavy
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1401,16 +1104,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1453,16 +1147,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1520,25 +1205,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1576,16 +1243,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1638,15 +1296,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1699,15 +1349,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1748,24 +1390,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1795,15 +1420,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1837,22 +1454,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
-			modifier = {
-				not = {
-					has_war_with = ENG
-					has_War_with = USA
-				}
-				factor = 0.5
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1886,15 +1488,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
+			factor = 0
 		}
 
 		categories = {

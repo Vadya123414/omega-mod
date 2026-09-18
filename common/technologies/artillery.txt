@@ -507,18 +507,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
-
-			modifier = {
-				factor = 10
-				tag = SOV
-				date > "1941.1.1"
-			}
+			factor = 10
 		}
 
 		categories = {

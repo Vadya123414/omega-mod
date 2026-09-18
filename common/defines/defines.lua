@@ -89,10 +89,10 @@ NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не н�
 NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
 NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
 NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.9 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- к скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
@@ -100,7 +100,22 @@ NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_SHORTAGE_DAYS_TO_CANCEL = 7
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
 
+NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 10                      -- How many units a country wants is partially based on how much military industry that is available
+NDefines.NAI.WANTED_UNITS_WEIGHT_FRONTS_WANT = 0.8                      -- Weight of front needs when computing final nr wanted units
+NDefines.NAI.WANTED_UNITS_WEIGHT_FACTORIES = 0.8                      -- Weight of military factories when computing final nr wanted units
+NDefines.NAI.WANTED_UNITS_WEIGHT_MANPOWER = 0.3                         -- Weight of manpower availability when computing final nr wanted units
 
+NDefines.NAI.WANTED_LAND_PLANES_PER_BASE_CAPACITY_FACTOR = 2	-- Scales how many land-based planes the AI want per air base space (excluding carriers).
+NDefines.NAI.WANTED_LAND_PLANES_PER_DIVISION = 20				-- How many land-based planes the AI want for each division it wants.
+NDefines.NAI.WANTED_LAND_PLANES_TOTAL_MAX_PER_DIVISION = 100	-- The max total number of land-based planes the AI want.
+
+NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = { 	1,   2,   3,   4,   5,
+													6,   7,   8,   9,   10,
+													11,  12,  13,  14,  15,
+													16,  17,  18,  19,  20,
+													21,  22,  23,  24,  25} 
+		
+NDefines.NProduction.MILITARY_FACTORY_COHERENCY_BONUS = 15
 
 -- <start> construction prioritization
 NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue

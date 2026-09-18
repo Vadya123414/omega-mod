@@ -15,6 +15,7 @@ ideas = {
                 mobilization_speed = 10
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
 			}
 
 			cancel = {

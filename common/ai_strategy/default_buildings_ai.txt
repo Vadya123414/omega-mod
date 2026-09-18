@@ -59,7 +59,7 @@ MINOR_strategy_arms_factory_building = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
-				date < 1936.10.1
+				date > 1936.10.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -88,7 +88,64 @@ MAJOR_strategy_industrial_complex_building = {
 		value = 400
 	}
 }
-
+GER_strategy_liquefaction_building_1 = {
+		enable = {
+			AND = {
+				original_tag = GER
+				date > 1938.10.1
+				rubber < 60
+				}
+			}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_strategy_liquefaction_building_2 = {
+		enable = {
+				original_tag = GER
+				FRA = {has_capitulated = yes}
+				rubber < 150
+				}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_autarky_building_1 = {
+		allowed = {
+		original_tag = GER
+		}
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 105
+	}
+}
+GER_autarky_building_2 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = industrial_infrastructure
+		value = 1000000
+		target = 105
+	}
+}	
 MAJOR_strategy_arms_factory_building = {
 		enable = {
 			AND = {
@@ -98,7 +155,7 @@ MAJOR_strategy_arms_factory_building = {
 					original_tag = ENG
 					original_tag = FRA
 				}
-				date < 1937.10.1
+				date > 1937.10.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -155,21 +212,21 @@ JAP_dockyard_building = {
 		enable = {
 			AND = {
 				original_tag = JAP
-				date > 1939.6.15
+				date > 1938.5.15 
 			}
 		}
 		abort_when_not_enabled = yes
 		ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 1000
+		value = 400
 	}
 }
 JAP_arms_factory = {
 		enable = {
 			AND = {
 				original_tag = JAP
-				date > 1938.5.15
+				date > 1939.6.15
 				}
 		}
 		abort_when_not_enabled = yes
