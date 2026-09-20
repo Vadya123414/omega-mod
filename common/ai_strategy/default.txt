@@ -810,7 +810,7 @@ build_intelligence_agency_as_major = {
 		is_major = yes
 		OR = {
 			has_war = yes
-			date > 1938.1.1
+			date > 1936.6.1
 		}
 	}
 	abort_when_not_enabled = yes

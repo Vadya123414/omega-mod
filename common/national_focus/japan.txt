@@ -11993,7 +11993,6 @@ focus_tree = {
 			CHI = {
 				every_core_state = {
 					limit = {
-						is_owned_and_controlled_by = ROOT
 						NOT = {
 							state = 745 # Kwantung Leased Territory
 							state = 609 # Easty Hebei
@@ -12012,10 +12011,32 @@ focus_tree = {
 						}
 					}
 					add_core_of = RNG
+				}
+			}
+			CHI = {
+				every_core_state = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						NOT = {
+							state = 745 # Kwantung Leased Territory
+							state = 609 # Easty Hebei
+							state = 611 # South Chahar
+							state = 612 # Chahar
+							region = 155 # West Manchuria
+							region = 242 # North Manchuria
+							region = 243 # East Manchuria
+							state = 728 # Gouangzhouwan
+							state = 729 # Macau
+							state = 326 # Hong Kong
+							state = 743 # Qingdao
+							state = 524 # Taiwan
+							state = 1039 # Hebei-Chahar
+							state = 591 # Hainan
+						}
+					}
 					transfer_state_to = RNG
 				}
 			}
-
 			hidden_effect = {
 				RNG = {
 					add_equipment_to_stockpile = { 

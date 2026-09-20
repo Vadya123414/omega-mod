@@ -45,14 +45,14 @@ GER_collaboration_on_NOR = {
 	ai_strategy = {
 		type = operative_operation
 		operation = operation_collaboration_government
-		value = 1200
+		value = 600
 		operation_target = NOR
 	}
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 1000
+		value = 600
 		mission_target = NOR
 	}
 }
@@ -103,14 +103,14 @@ GER_collaboration_on_HOL = {
 	ai_strategy = {
 		type = operative_operation
 		operation = operation_collaboration_government
-		value = 1200
+		value = 800
 		operation_target = HOL
 	}
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 1000
+		value = 800
 		mission_target = HOL
 	}
 }
@@ -161,7 +161,7 @@ GER_collaboration_on_BEL = {
 	ai_strategy = {
 		type = operative_operation
 		operation = operation_collaboration_government
-		value = 1200
+		value = 1000
 		operation_target = BEL
 	}
 	
@@ -226,7 +226,7 @@ GER_collaboration_on_YUG = {
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 1000
+		value = 1200
 		mission_target = NOR
 	}
 }

@@ -40,11 +40,11 @@ CHI_sea_nationalist_historical_plan = {
 		CHI_defence_in_depth						# 70d
 
 		# 1937
+		CHI_one_nation_undivided					# 70d - Second United Front, Sep 1937; won't happen on historical
 		CHI_initiate_the_gung_ho_movement			# 70d - Indusco/Gung Ho cooperatives founded 1938; take ASAP after war starts
 		CHI_finance_cooperatives					# 70d - take ASAP after war starts
 		CHI_expand_the_cooperatives					# 35d - take ASAP after war starts
 		CHI_relocate_factories_from_the_coast		# 35d - Industrial migration to Sichuan/Yunnan, 1937-38
-		CHI_one_nation_undivided					# 70d - Second United Front, Sep 1937; won't happen on historical
 		CHI_guerrilla_warfare						# 35d
 		CHI_formalize_field_promotions				# 70d
 
