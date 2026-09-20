@@ -6,6 +6,9 @@ state = {
 	state_category = rural
 
 	history = {
+		victory_points = {
+			1015 1
+		}
 
 		owner = ENG
 		add_core_of = PAL

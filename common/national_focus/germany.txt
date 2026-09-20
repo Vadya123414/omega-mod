@@ -3557,7 +3557,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_instill_auftragstaktik
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5849,7 +5849,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_torpedobomber
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -5999,7 +5999,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
-		cost = 10
+		cost = 5
 
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -6734,7 +6734,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_construct_aircraft_carriers
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -7003,7 +7003,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_marinestosstrupp
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_an_atantic_island_tt
@@ -7743,7 +7743,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
 
-		cost = 5
+		cost = 10
 
 		bypass = {
 			42 = { is_demilitarized_zone = no } #RHINELAND
@@ -8547,12 +8547,8 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			has_war = no
-			is_subject = no
-			OR = {
-				date > 1937.6.1
-				has_army_manpower = { size > 599999 }
-			}
+			date > 1937.6.1
+			has_army_manpower = { size > 599999 }
 		}
 
 		ai_will_do = {
@@ -10235,7 +10231,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_anschluss
-		cost = 5
+		cost = 10
 		
 		bypass = {
 			188 = { is_owned_by = GER }
@@ -11160,7 +11156,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_reassert_eastern_claims
-		cost = 5
+		cost = 10
 
 		will_lead_to_war_with = POL
 
@@ -11480,7 +11476,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_danzig_or_war
-		cost = 4
+		cost = 5
 
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = HOL
@@ -11665,7 +11661,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_danzig_or_war
-		cost = 4
+		cost = 5
 
 		will_lead_to_war_with = DEN 
 		will_lead_to_war_with = NOR
@@ -17650,7 +17646,7 @@ focus_tree = {
 		x = -17
 		y = 8
 		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 5
+		cost = 6
 		available = {
 			has_government = fascism
 		}

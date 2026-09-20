@@ -18184,6 +18184,14 @@ ai_will_do = {
 			add_political_power = 150
 			add_stability = 0.15
 			add_popularity = { ideology = democratic popularity = 0.2 }
+			if = {
+				limit = { has_idea = SOV_romanov_spirit_idea }
+				remove_ideas = SOV_romanov_spirit_idea
+			}
+			if = {
+				limit = { has_idea = SOV_the_true_tsars_idea }
+				remove_ideas = SOV_the_true_tsars_idea
+			}
 		}
 	} 
 	
@@ -19530,13 +19538,26 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			FIN = {add_timed_idea = {idea = RUS_propagand days = 720}}
-			FIN = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { FIN = { NOT = { is_in_faction = yes } } }
+				FIN = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}
 	
@@ -19551,26 +19572,42 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			EST = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
 			LIT = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
 			LAT = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
-			EST = { country_event = priglos_v_alik.1 }
-			LIT = { country_event = priglos_v_alik.1 }
-			LAT = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { EST = { NOT = { is_in_faction = yes } } }
+				EST = { country_event = priglos_v_alik.1 }
+			}	
+			if = {
+				limit = { LIT = { NOT = { is_in_faction = yes } } }
+				LIT = { country_event = priglos_v_alik.1 }
+			}
+			if = {
+				limit = { LAT = { NOT = { is_in_faction = yes } } }
+				LAT = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}
-	focus = {
+	focus = {  
 		id = RUS_east_friend
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = RUS_moscow_pact }
@@ -19581,6 +19618,16 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
@@ -19588,8 +19635,14 @@ ai_will_do = {
 		completion_reward = {
 			TUR = {add_timed_idea = {idea = RUS_propagand days = 720}}
 			PER = {add_timed_idea = {idea = RUS_propagand days = 720}}
-			TUR = { country_event = priglos_v_alik.1 }
-			PER = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { TUR = { NOT = { is_in_faction = yes } } }
+				TUR = { country_event = priglos_v_alik.1 }
+			}
+			if = {
+				limit = { PER = { NOT = { is_in_faction = yes } } }
+				PER = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}  
 	
@@ -19690,7 +19743,6 @@ ai_will_do = {
 		mutually_exclusive = { focus = RUS_moscow_pact  }
 		x = 13
 		y = 1
-		available = {has_completed_focus = RUS_liberate}
 		relative_position_id = RUS_reconstruction
 		cost = 5
 		ai_will_do = {

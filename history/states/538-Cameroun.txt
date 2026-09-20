@@ -9,6 +9,9 @@ state = {
 	manpower = 1693974
 
 	history = {
+		victory_points = {
+			12824 1
+		}
 
 		owner = BEL
 		add_core_of = COG

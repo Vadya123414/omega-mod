@@ -11,6 +11,24 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			10092 1
+		}
+		victory_points = {
+			10020 1
+		}
+		victory_points = {
+			10011 1
+		}
+		victory_points = {
+			4164 1
+		}
+		victory_points = {
+			4027 1
+		}
+		victory_points = {
+			1158 1
+		}
 
 		owner = JAP
 		add_core_of = JAP

@@ -4,6 +4,9 @@ state={
 
 	history={
 		victory_points = {
+			513 1
+		}
+		victory_points = {
 			6557 1
 		}
 		#victory_points = {

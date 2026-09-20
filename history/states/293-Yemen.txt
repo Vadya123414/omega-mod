@@ -10,6 +10,12 @@ state={
 		oil=1 # was: 1
 	}
 	history={
+		victory_points = {
+			10752 1
+		}
+		victory_points = {
+			4924 1
+		}
 		owner = SAU
 		buildings = {
 			infrastructure = 2

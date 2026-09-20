@@ -967,11 +967,12 @@
 	focus = {
 		id = FRA_fortification_focus
 		icon = GFX_goal_generic_construction2
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_methodical_battle }
 		x = 0
 		y = 1
 		relative_position_id = FRA_methodical_battle
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1011,12 +1012,11 @@
 	focus = {
 		id = FRA_extend_the_maginot_line
 		icon = GFX_goal_generic_fortify_city
-		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_alpine_forts }
 		x = 0
 		y = 1
 		relative_position_id = FRA_alpine_forts
-		cost = 10
+		cost = 5
 
 		available = {
 			18 = { is_controlled_by = ROOT }
@@ -1041,6 +1041,7 @@
 	focus = {
 		id = FRA_infantry_focus
 		icon = GFX_goal_generic_allies_build_infantry
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_firepower_kills }
 		x = 0
 		y = 1
@@ -1339,6 +1340,7 @@
 	focus = {
 		id = FRA_motorized_focus
 		icon = GFX_goal_generic_army_motorized
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_battle_of_maneuver }
 		x = 0
 		y = 1
@@ -1373,12 +1375,11 @@
 	focus = {
 		id = FRA_light_medium_armor
 		icon = GFX_goal_generic_army_tanks
-		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_artillery_focus focus = FRA_mechanized_focus }
 		x = -1
 		y = 1
 		relative_position_id = FRA_mechanized_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -1426,13 +1427,14 @@
 	focus = {
 		id = FRA_cas_focus
 		icon = GFX_goal_generic_CAS
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { 
 	 		focus = FRA_air_dominance
 	 	}
 		x = 0
 		y = 1
 		relative_position_id = FRA_air_dominance
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1484,14 +1486,13 @@
 	focus = {
 		id = FRA_flying_artillery
 		icon = GFX_goal_poland_goal
-		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 3
 		
 		prerequisite = { focus = FRA_air_ground_cooperation }
 		mutually_exclusive = { }
 		relative_position_id = FRA_air_dominance
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4569,7 +4570,7 @@
 		}
 		mutually_exclusive = { focus = FRA_laissez_faire }
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4589,6 +4590,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_agricultural_protectionism }
+			add_political_power = 75
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -6876,7 +6879,7 @@
 			focus = FRA_the_council_of_rambouillet
 		}
 		relative_position_id = FRA_the_council_of_rambouillet
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6895,7 +6898,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_timed_idea = { idea = FRA_constitutional_revision days = 365 }
+			add_timed_idea = { idea = FRA_constitutional_revision days = 200 }
 		}
 	}
 
@@ -6909,7 +6912,7 @@
 			focus = FRA_revise_the_constitution
 		}
 		relative_position_id = FRA_revise_the_constitution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7021,7 +7024,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7331,7 +7334,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7774,7 +7777,7 @@
 			focus = FRA_the_legitimate_heir
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7873,9 +7876,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.25 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
-			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { capacity_factor_arms = 0.15 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { speed_buildings = 0.05 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
 				add_dynamic_modifier = { modifier = FRA_parallel_import_modifier }
@@ -8544,7 +8547,7 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { ludi = 0.02 tooltip = conscription_tt }
+			add_to_variable = { ludi = 0.03 tooltip = conscription_tt }
 			add_to_variable = { factor_lud = 0.25 tooltip = conscription_factor_tt }
 			add_to_variable = { trenirivka = -0.2 tooltip = training_time_army_factor_tt }
 			add_to_variable = { mobilization_speed_modifaer = 0.3 tooltip = mobilization_speed_tt }
@@ -8697,9 +8700,9 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
-			add_to_variable = { capacity_factor_arms = 0.25 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { capacity_factor_dockyard = 0.35 tooltip = industrial_capacity_dockyard_tt }
-			add_to_variable = { speed_buildings = 0.075 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { capacity_factor_arms = 0.5 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.5 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { speed_buildings = 0.1 tooltip = production_speed_buildings_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CZE_national_defense_act_idea
 			custom_effect_tooltip = generic_skip_one_line_tt

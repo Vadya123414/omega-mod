@@ -6,6 +6,12 @@ state = {
 	state_category = town # was large_city
 
 	history = {
+		victory_points = {
+			9965 1
+		}
+		victory_points = {
+			4094 1
+		}
 
 		owner = JAP
 		add_core_of = JAP

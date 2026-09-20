@@ -7718,12 +7718,10 @@ leader_traits = {
 	#BUKHARIN -> Improved
 	hero_of_the_peasantry = {
 		random = no
-		political_power_factor = 0.15
-		stability_factor = 0.1
-		research_speed_factor = 0.05
-		democratic_acceptance = 50
-		civilian_intel_to_others = 15
-		industrial_capacity_factory = -0.02
+		political_power_factor = 0.2
+		stability_factor = 0.2
+		research_speed_factor = 0.1
+		industrial_capacity_factory = 0.05
 	}
 
 	#RYKOV

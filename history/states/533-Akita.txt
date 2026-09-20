@@ -10,6 +10,12 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			11847 1
+		}
+		victory_points = {
+			9859 1
+		}
 
 		owner = JAP
 		add_core_of = JAP
