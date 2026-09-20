@@ -5396,11 +5396,17 @@ focus_tree = {
 			
 		}
 
+		
 		bypass = {
 			or = {
 			has_war_with = CHI
 				CHI = {
-					is_subject_of = ROOT
+					or = {
+						is_subject_of = ROOT
+						exists = no
+						has_capitulated = yes
+					}
+					
 				}
 			}
 		}
