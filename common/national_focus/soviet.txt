@@ -8660,7 +8660,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_left_opposition_coup
-		cost = 10
+		cost = 5
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -8772,7 +8772,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = SOV_committee_in_exile
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -8821,7 +8821,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8864,7 +8864,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -9179,7 +9179,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_the_right_opposition
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -9633,7 +9633,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_coup_detat
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -9710,7 +9710,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 			has_character = SOV_aleksey_rykov
@@ -9752,7 +9752,7 @@ focus_tree = {
 					swap_ruler_traits = {
 						remove = defender_of_the_peasantry
 						add = hero_of_the_peasantry
-					}
+					} 
 				}
 				else = {
 					effect_tooltip = {
@@ -9819,7 +9819,7 @@ focus_tree = {
 							uses = 2
 							category = industry
 						}
-						add_ideas = new_economic_policy
+						add_ideas = new_economic_policy_2
 					}
 				}
 			}
@@ -9833,7 +9833,7 @@ focus_tree = {
 						uses = 2
 						category = industry
 					}
-					add_ideas = new_economic_policy
+					add_ideas = new_economic_policy_2
 				}
 			}
 			
@@ -10089,28 +10089,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_a_sustainable_economy
-		icon = GFX_focus_prc_agrarian_socialism
-		prerequisite = { focus = SOV_paced_industrialization }
-		x = 0
-		y = 1
-		relative_position_id = SOV_paced_industrialization
-		cost = 10
-		available = {
-			has_idea = new_economic_policy
-		}
-		                
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = new_economic_policy
-				add_idea = new_economic_policy_2
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_the_enemies_of_the_people
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		prerequisite = { focus = SOV_international_revolutionary_marxist_centre }
@@ -10165,7 +10143,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_enemies_of_the_people
-		cost = 10
+		cost = 5
 		available = {
 			surrender_progress < 0.01
 		}
@@ -10766,7 +10744,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_peoples_revolution
-		cost = 10
+		cost = 5
 		available = {
 			has_government = communism
 		}

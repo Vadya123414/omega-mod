@@ -1,0 +1,32 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_excavation6_medium"
+		texturefile = "gfx/interface/technologies/excavation6.dds"
+	}
+	SpriteType = {
+		name = "GFX_flexible_line2_medium"
+		texturefile = "gfx/interface/technologies/flexible_line.dds"
+	}
+	SpriteType = {
+		name = "GFX_streamlined_line2_medium"
+		texturefile = "gfx/interface/technologies/streamlined_line2.dds"
+	}
+	SpriteType = {
+		name = "GFX_concentrated_industry6_medium"
+		texturefile = "gfx/interface/technologies/concentrated_industry6.dds"
+	}	
+	SpriteType = {
+		name = "GFX_dispersed_industry6_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry6.dds"
+	}
+	SpriteType = {
+		name = "GFX_modern2_rubber_processing_medium"
+		texturefile = "gfx/interface/technologies/modern2_rubber_processing.dds"
+	}
+	SpriteType = {
+		name = "GFX_construction6_medium"
+		texturefile = "gfx/interface/technologies/advanced_conversion2.dds"
+	}
+
+}

@@ -772,3 +772,12 @@ FRA_combined_warfare_effort_idea: "Ставка на совместные вое
 
 coalition_mission_active:0 "Отказался от войны"
 sov_coalition_mission_active:0 "Отказался от войны"
+flexible_line2:0 "Универсальный поток"
+streamlined_line2: "Серийный конвейер"
+concentrated_industry6: "Концентрированная промышленность VI"
+dispersed_industry6: "Рассредоточенная промышленность VI"
+construction6: "Строительство VI"
+excavation6: "Добыча ресурсво VI"
+modern2_rubber_processing: "Современная переработка"
+hot_expert:0 "Эксперт по жаре"
+hot_specialist:0 "Мастер летней войны"

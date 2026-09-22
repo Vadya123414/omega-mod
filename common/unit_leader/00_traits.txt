@@ -1304,6 +1304,46 @@ leader_traits = {
 		gui_row = 7
 	}
 
+	hot_specialist = { 
+		type = corps_commander
+
+		gain_xp = {
+			temperature > 20
+		}
+		cost = 500
+		modifier = {
+			heat_attrition_factor = -0.5
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = basic_terrain_trait
+		gui_row = 8
+	}
+
+	hot_expert = { 
+		type = corps_commander
+
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		modifier = {
+			acclimatization_hot_climate_gain_factor = 0.4
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		any_parent = { hot_specialist }
+
+		trait_type = assignable_terrain_trait
+		gui_row = 8
+	}
+
 	adaptable = { 
 		type = corps_commander
 		gain_xp = {
@@ -1333,6 +1373,7 @@ leader_traits = {
 				ranger
 				urban_assault_specialist
 				winter_specialist
+				hot_specialist
 			}
 			num_parents_needed = 2
 		} 

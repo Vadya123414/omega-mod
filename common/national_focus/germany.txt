@@ -2185,7 +2185,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_coal_liquefaction
-		cost = 5
+		cost = 10
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2627,7 +2627,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2725,6 +2725,7 @@ focus_tree = {
 		relative_position_id = GER_armament_rationalization
 		cost = 5
 		available = {
+			has_government = fascism
 			has_war_with_major = yes
 			OR = {
 				has_war_support > 0.89
@@ -2736,6 +2737,14 @@ focus_tree = {
 					ratio > 0.5
 				}
 			}
+		}
+
+		allow_branch = {
+			has_government = fascism
+		}
+
+		select_effect = {
+			play_song = "Тотальная война"
 		}
 
 		continue_if_invalid = yes
