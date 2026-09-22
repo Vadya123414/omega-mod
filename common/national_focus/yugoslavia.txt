@@ -2282,6 +2282,8 @@ focus_tree = {
 			}
 			NOT = { has_completed_focus = YUG_end_the_regency }
 		}
+		
+		will_lead_to_war_with = GRE
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -2382,7 +2384,6 @@ focus_tree = {
 		}
 		will_lead_to_war_with = BUL
 		will_lead_to_war_with = ALB
-		will_lead_to_war_with = GRE
 		bypass = {
 
 		}
