@@ -1082,7 +1082,46 @@ ideas = {
 				
 			} 
 		}
-		
+		RUS_ECONOMI_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				
+			}
+			removal_cost = -1
+			picture = SOV_soviet_hegemony
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.25
+			} 
+				
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.5
+				extra_trade_to_target_factor = 0.5
+			}
+
+
+            targeted_modifier = {
+				tag = UKR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+                        
+           targeted_modifier = {
+				tag = BLR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+			targeted_modifier = {
+				tag = KAZ
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}             
+		}
 		RUS_ECONOMI = {
 				allowed = {
 				always = no
@@ -1107,24 +1146,24 @@ ideas = {
 			}
 
 
-                        targeted_modifier = {
+            targeted_modifier = {
 				tag = UKR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                         
-                         targeted_modifier = {
+           targeted_modifier = {
 				tag = BLR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
-			             targeted_modifier = {
+			targeted_modifier = {
 				tag = KAZ
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                          
-		}	
+		}
 		
 		RUS_submarines = {
 			picture = generic_naval_manufacturer_1

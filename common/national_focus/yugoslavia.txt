@@ -2380,7 +2380,9 @@ focus_tree = {
 		available = {
 
 		}
-
+		will_lead_to_war_with = BUL
+		will_lead_to_war_with = ALB
+		will_lead_to_war_with = GRE
 		bypass = {
 
 		}
@@ -2390,25 +2392,27 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
+
 		complete_tooltip = {
 
 		}
 
 		completion_reward = {
+
 			BUL = {
-				every_owned_state = {
+				every_state = {
 					limit = { is_core_of = BUL }
 					add_core_of = ROOT
 				}
 			}
 			GRE = {
-				every_owned_state = {
+				every_state = {
 					limit = { is_core_of = GRE }
 					add_core_of = ROOT
 				}
 			}
 			ALB = {
-				every_owned_state = {
+				every_state = {
 					limit = { is_core_of = ALB }
 					add_core_of = ROOT
 				}

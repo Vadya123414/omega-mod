@@ -18739,7 +18739,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas =  RUS_ECONOMI
+			add_ideas =  RUS_ECONOMI_1
 			add_popularity = { ideology = democratic popularity = 0.25 }
 			hidden_effect = {
 			823 = {add_core_of = KAZ}
@@ -18772,6 +18772,8 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 5 }
+			add_offsite_building = { type = arms_factory level = 15 }
 			add_stability = 0.05
 			release_autonomy = {
 					target = UKR
