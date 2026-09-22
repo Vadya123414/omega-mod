@@ -26357,85 +26357,9 @@ focus_tree = {
 				limit = {
 					NOT = { is_in_faction_with = AUS }
 				}
-				AUS = {
-					country_event = {
-						id = wuw_GER_realpolitik.42
-						hours = 6
-						random_hours = 12
-					}	
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					if = {
-						limit = {
-							NOT = { is_in_faction_with = AUS }
-						}
-						add_to_faction = AUS
-					}
-
-					IF = {
-						limit = {
-							has_government = neutrality
-							AUS = {
-								NOT = {
-									has_cosmetic_tag = HUN_EMPIRE
-								}
-							}
-						}
-						AUS = {
-							set_cosmetic_tag = AUS_kingdom_of_austria
-						}
-					}
-				}
-			}
-
-			effect_tooltip = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 102 #N Slovenia
-							state = 853 #Ljubljana
-							state = 103 #Dalmatia
-							state = 104 #Bosnia
-							state = 804 #Herzegovina
-							state = 109 #Croatia
-							state = 155 #N Transnubia
-							state = 43 #N Hungary
-							state = 973 #Bacs-Kiskun
-							state = 974 #S Transnubia
-							state = 154 #Tiszantul
-						}
-						NOT = { 
-							is_claimed_by = ROOT
-							is_owned_by = ROOT 
-						}
-					}
-					display_individual_scopes = yes
-					if = {
-						limit = {
-							is_fully_controlled_by = ROOT
-						}
-						transfer_state_to = AUS
-						if = {
-							limit = {
-								NOT = {
-									is_core_of = AUS
-								}
-							}
-							add_core_of = AUS
-						}
-					}
-					else_if = {
-						limit = {
-							controller = {
-								NOT = {
-									is_ally_with = ROOT
-								}
-							}
-						}
-						add_claim_by = AUS
-					}
-				}
+				country_event = {
+					id = wuw_GER_realpolitik.422
+				}	
 			}
 		}
 	}

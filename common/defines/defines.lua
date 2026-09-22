@@ -142,3 +142,4 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
 
 NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 0.5
 
+NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 0;    --через сколько дней можно будет изменить политику в кб
