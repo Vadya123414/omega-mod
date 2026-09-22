@@ -2232,7 +2232,7 @@ focus_tree = {
 				is_subject = no
 				has_war = no
 			}
-			strength_ratio = { tag = BUL ratio > 1.5 }
+			strength_ratio = { tag = BUL ratio > 2.7 }
 			has_army_manpower = { size > 249999 }
 		}
 
@@ -2291,7 +2291,7 @@ focus_tree = {
 			}
 			strength_ratio = {
 				tag = HUN
-				ratio > 1.5
+				ratio > 2.0
 			}
 			has_army_manpower = { size > 249999 }
 		}
@@ -2482,7 +2482,7 @@ focus_tree = {
 				is_puppet = no
 				NOT =  { is_in_faction_with = ROM }
 			}
-			strength_ratio = { tag = CZE ratio > 1.5 }
+			strength_ratio = { tag = CZE ratio > 1 }
 			has_army_manpower = { size > 249999 }
 		}
 
@@ -2519,7 +2519,7 @@ focus_tree = {
 				exists = yes
 				NOT = { has_war_with = ROM }
 			}
-			strength_ratio = { tag = TUR ratio > 1.5 }
+			strength_ratio = { tag = TUR ratio > 1 }
 			has_army_manpower = { size > 599999 }
 		}
 

@@ -384,7 +384,8 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			activate_advisor = SOV_lazar_kaganovich
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_lazar_kaganovich
 		}
 	}
 
