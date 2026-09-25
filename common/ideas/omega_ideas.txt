@@ -87,6 +87,50 @@ ideas = {
 
                         
 		}
+
+		FRA_coalition = {
+			picture = FRA_undividable
+			allowed = {
+				
+			}
+			cancel = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			removal_cost = -1
+			modifier = { 
+				war_support_factor = 0.20
+				offensive_war_stability_factor = 0.1
+			} 
+		}
+
+		FRA_swiss_rubber_import_modifier = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				country_resource_rubber = 70
+			}
+			
+			picture = generic_flexible_foreign_policy2
+		}
+
+		CHE_french_parallel_import_factories = {
+			allowed = {
+				always = yes
+			}
+			
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 9 }
+			}
+
+			on_remove = {
+				add_offsite_building = { type = industrial_complex level = -9 }
+			}
+			
+			picture = HUN_revaluing_the_pengo
+		}
 		
 		IRE_cpecial_arm = {
 				allowed = {
@@ -1038,7 +1082,46 @@ ideas = {
 				
 			} 
 		}
-		
+		RUS_ECONOMI_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				
+			}
+			removal_cost = -1
+			picture = SOV_soviet_hegemony
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.25
+			} 
+				
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.5
+				extra_trade_to_target_factor = 0.5
+			}
+
+
+            targeted_modifier = {
+				tag = UKR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+                        
+           targeted_modifier = {
+				tag = BLR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+			targeted_modifier = {
+				tag = KAZ
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}             
+		}
 		RUS_ECONOMI = {
 				allowed = {
 				always = no
@@ -1063,24 +1146,24 @@ ideas = {
 			}
 
 
-                        targeted_modifier = {
+            targeted_modifier = {
 				tag = UKR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                         
-                         targeted_modifier = {
+           targeted_modifier = {
 				tag = BLR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
-			             targeted_modifier = {
+			targeted_modifier = {
 				tag = KAZ
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                          
-		}	
+		}
 		
 		RUS_submarines = {
 			picture = generic_naval_manufacturer_1

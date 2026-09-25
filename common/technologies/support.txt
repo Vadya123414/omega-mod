@@ -1381,11 +1381,7 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.12
 		}
 
 		path = {
@@ -1418,11 +1414,7 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.12
 		}
 
 		path = {
@@ -1454,11 +1446,7 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.12
 		}
 
 

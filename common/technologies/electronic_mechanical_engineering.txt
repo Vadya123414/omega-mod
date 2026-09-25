@@ -1141,7 +1141,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = electronics_folder
@@ -1172,11 +1172,11 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1938
+		research_cost = 1
+		start_year = 1937
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -1194,11 +1194,11 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1940
+		research_cost = 1
+		start_year = 1939
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 10 }
+			position = { x = 0 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -1223,11 +1223,11 @@ technologies = {
 
 		coastal_bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1936
+		research_cost = 1
+		start_year = 1937
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 2 }
+			position = { x = 2 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -1237,19 +1237,17 @@ technologies = {
 		categories = {
 			cat_fortification
 		}
-		
-
 	}
 
 	coastal_fort_tech_2 = {
 
 		coastal_bunker_max_level_terrain_limit = 2
 		
-		research_cost = 1.5
-		start_year = 1940
+		research_cost = 1
+		start_year = 1939
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 10 }
+			position = { x = 2 y = 8 }
 		}
 		
 		ai_will_do = {

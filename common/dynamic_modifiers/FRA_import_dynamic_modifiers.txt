@@ -1,0 +1,51 @@
+FRA_parallel_import_modifier = {
+	icon = GFX_portrait_ITA_guido_de_rugiero_small
+	remove_trigger = {
+		OR = {
+			FRA = {
+				has_war_with = SWI
+			}
+       		NOT = {
+       		    3 = { is_controlled_by = SWI }
+       		}
+		}
+	}
+	enable = { always = yes }
+    
+    country_resource_rubber = FRA_rubber_amount
+	country_resource_oil = FRA_oil_amount
+    country_resource_tungsten = FRA_tungsten_amount
+    industrial_factory_donations = fabriki_SWI
+    industrial_factory_donations = fabriki_FRA
+}
+
+FRA_la_deluge_army = {
+	icon = GFX_idea_FRA_la_deluge
+	remove_trigger = {
+        is_subject = yes
+	}
+	enable = { always = yes }
+    
+    conscription = ludi
+	conscription_factor = factor_lud
+	war_support_factor = ws_factor
+	training_time_army_factor = trenirivka
+	industrial_capacity_factory = capacity_factor_arms
+	industrial_capacity_dockyard = capacity_factor_dockyard
+	production_speed_buildings_factor = speed_buildings
+    experience_gain_army_factor = experience_army
+	ARMY_CLAIM_ATTACK_FACTOR = ARMY_CLAIM_ATTACK
+	ARMY_CLAIM_DEFENCE_FACTOR = ARMY_CLAIM_DEFENCE
+	army_speed_factor = army_speed
+	land_mastery_gain_factor = land_mastery_gain
+	war_stability_factor = war_stability
+	weekly_casualties_war_support = weekly_casualties_war
+	supply_factor = supply_front
+	out_of_supply_factor = out_of_supply_front 
+	winter_attrition_factor = winter_attrition_front
+	army_leader_start_level = army_leader_start_level_modifaer
+	military_leader_cost_factor = military_leader_cost_modifaer
+	mobilization_speed = mobilization_speed_modifaer
+	army_core_defence_factor = army_core_defence_modifaer
+	enemy_justify_war_goal_time = war_goal_time
+}

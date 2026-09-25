@@ -10,6 +10,9 @@ state = {
 
 
 	history = {
+		victory_points = {
+			13369 1
+		}
 		
 		owner = OMA
 		add_core_of = OMA

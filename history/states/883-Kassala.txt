@@ -5,6 +5,12 @@ state = {
 	state_category = rural
 
 	history = {
+		victory_points = {
+			2003 1
+		}
+		victory_points = {
+			1977 1
+		}
 		owner = ENG
 		add_core_of = SUD
 		victory_points = {

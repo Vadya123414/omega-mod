@@ -1120,10 +1120,6 @@ British_police = {
 		compliance_gain 				= -0.03
 		local_factories 				= 0.2
 		local_resources 				= 0.1
-
-
-
-		custom_modifier_tooltip = "factory_sabotage_decrease_tooltip"
 	}
 	
 	visible = {
@@ -1157,21 +1153,18 @@ GER_SS_occupation = {
 	sound_effect = "Martial_Law_Interface_Harsh_Quotas_Occupation"
 
 	state_modifier = {
-		resistance_target 				= -0.10
+		resistance_target 				= -0.20
 		resistance_damage_to_garrison 	= 0.10
 		local_manpower 					= -0.15
-		required_garrison_factor 		= 0.20
+		required_garrison_factor 		= 0.05
 		local_factories 				= 0.25
 		local_resources 				= 0.25
 		compliance_gain 				= -0.04
-
-
-		custom_modifier_tooltip = "factory_sabotage_decrease_tooltip"
 	}
 	
 	visible = {
 		original_tag = GER
-		GER = {has_completed_focus = GER_remilitarize_the_rhineland}
+		GER = {has_completed_focus = GER_SS_ocupation}
 		
 	}
 	ai_will_do = {
@@ -1192,10 +1185,6 @@ FRA_man_powers = {
 		required_garrison_factor 		= -0.10
 		resistance_damage_to_garrison 	= -0.10
 		local_manpower 					= 0.50
-
-
-
-		custom_modifier_tooltip = "factory_sabotage_decrease_tooltip"
 	}
 	
 	visible = {

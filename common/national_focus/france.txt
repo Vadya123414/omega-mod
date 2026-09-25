@@ -232,13 +232,14 @@
 	focus = {
 		id = FRA_industrial_expansion
 		icon = GFX_focus_generic_industry_3
+		overlay = GFX_focus_fast_overlay_generic_clock
 		available = {
 		}
 		prerequisite = { focus = FRA_metropolitan_france focus = FRA_algerie_france }
 		x = 0
 		y = 1
 		relative_position_id = FRA_metropolitan_france
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -283,6 +284,7 @@
 	focus = {
 		id = FRA_military_factories
 		icon = GFX_goal_generic_construct_mil_factory
+		overlay = GFX_focus_fast_overlay_generic_clock
 		available = {
 		}
 		prerequisite = { focus = FRA_industrial_expansion focus = FRA_colonial_industry }
@@ -537,9 +539,108 @@
 		}
 	}
 	focus = {
-		id = FRA_invest_in_syria
+		id = FRA_invest_in_indochina
 		icon = GFX_focus_generic_industry_1
 		x = 2
+		y = 1
+		
+		prerequisite = { focus = FRA_invest_in_the_colonies }
+		mutually_exclusive = { }
+		relative_position_id = FRA_invest_in_the_colonies
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_state = {
+				OR = {
+					is_core_of = VIN
+					is_core_of = CAM
+					is_core_of = LAO
+				}
+				is_owned_or_subject_trigger = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_state = {
+				limit = { 
+					OR = {
+						state = 741
+						state = 286
+						state = 671
+						state = 670
+						state = 1017
+						state = 1066 
+						state = 1067 
+						state = 1068 
+						state = 1069 
+					}
+					OWNER = { is_owned_or_subject_trigger = yes }	
+					NOT = {
+						has_state_flag = FRA_colonial_industry_target
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				set_state_flag = FRA_colonial_industry_target
+			}
+			IF = {
+				limit = {
+					VIN = {
+						is_subject_of = ROOT
+					}
+				}
+				VIN = {
+					add_autonomy_score = { 
+						value = -150
+						localization = FRA_invest_in_indochina
+					}	
+				}
+			}
+			IF = {
+				limit = {
+					CAM = {
+						is_subject_of = ROOT
+					}
+				}
+				CAM = {
+					add_autonomy_score = { 
+						value = -150
+						localization = FRA_invest_in_indochina
+					}	
+				}
+			}
+			IF = {
+				limit = {
+					LAO = {
+						is_subject_of = ROOT
+					}
+				}
+				LAO = {
+					add_autonomy_score = { 
+						value = -150
+						localization = FRA_invest_in_indochina
+					}	
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invest_in_syria
+		icon = GFX_focus_generic_industry_1
+		x = 4
 		y = 1
 		
 		prerequisite = {focus = FRA_invest_in_the_colonies }
@@ -587,37 +688,12 @@
 				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
-			IF = {
-				limit = {
-					SYR = {
-						is_subject_of = ROOT
-					}
-				}
-				SYR = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_syria
-					}	
-				}
-			}
-			IF = {
-				limit = {
-					LEB = {
-						is_subject_of = ROOT
-					}
-				}
-				LEB = {
-					add_autonomy_score = { 
-						value = -150
-						localization = FRA_invest_in_syria
-					}	
-				}
-			}
 		}
 	}
 	focus = {
 		id = FRA_colonial_industry
 		icon = GFX_focus_generic_industry_3
+		overlay = GFX_focus_fast_overlay_generic_clock
 		available = {
 		}
 		prerequisite = { focus = FRA_algerie_france focus = FRA_invest_in_west_africa focus = FRA_invest_in_indochina focus = FRA_invest_in_syria }
@@ -694,11 +770,14 @@
 				num_of_factories > 75
 			}
 			amount_research_slots < 5
+			NOT = {
+				has_completed_focus = FRA_ob_um
+			}
 		}
 		x = 0
 		y = 1
 		relative_position_id = FRA_colonial_industry
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -820,13 +899,14 @@
 	focus = {
 		id = FRA_firepower_kills
 		icon = GFX_goal_generic_army_artillery
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
 		prerequisite = { focus = FRA_defensive_focus }
 		
 		relative_position_id = FRA_defensive_focus
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -851,6 +931,7 @@
 	focus = {
 		id = FRA_methodical_battle
 		icon = GFX_goal_generic_cavalry
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = -1
 		y = 1
 		
@@ -886,6 +967,7 @@
 	focus = {
 		id = FRA_fortification_focus
 		icon = GFX_goal_generic_construction2
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_methodical_battle }
 		x = 0
 		y = 1
@@ -959,11 +1041,12 @@
 	focus = {
 		id = FRA_infantry_focus
 		icon = GFX_goal_generic_allies_build_infantry
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_firepower_kills }
 		x = 0
 		y = 1
 		relative_position_id = FRA_firepower_kills
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -978,7 +1061,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_infantry_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -1001,8 +1084,16 @@
 				set_technology = { railway_gun = 1 popup = no }
 			}
 			create_railway_gun = {
-				equipment = super_heavy_railway_gun_equipment_1
+				equipment = railway_gun_equipment_1
 				name = "France Railway Gun #1"
+			}
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+				name = "France Railway Gun #2"
+			}
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+				name = "France Railway Gun #3"
 			}
 		}
 	}
@@ -1029,7 +1120,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = HUN_combined_warfare_effort_idea
+			add_ideas = FRA_combined_warfare_effort_idea
 		}
 	}
 
@@ -1216,13 +1307,14 @@
 	focus = {
 		id = FRA_battle_of_maneuver
 		icon = GFX_goal_generic_position_armies
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = -1
 		y = 1
 		
 		prerequisite = { focus = FRA_aggressive_focus }
 		
 		relative_position_id = FRA_aggressive_focus
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1248,11 +1340,12 @@
 	focus = {
 		id = FRA_motorized_focus
 		icon = GFX_goal_generic_army_motorized
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = FRA_battle_of_maneuver }
 		x = 0
 		y = 1
 		relative_position_id = FRA_battle_of_maneuver
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1268,7 +1361,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_motorized_focus
-		cost = 10
+		cost = 5
 		completion_reward = {
 			army_experience = 5
 			add_tech_bonus = {
@@ -1303,6 +1396,7 @@
 	focus = {
 		id = FRA_air_dominance
 		icon = GFX_goal_generic_air_fighter2
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
@@ -1333,6 +1427,7 @@
 	focus = {
 		id = FRA_cas_focus
 		icon = GFX_goal_generic_CAS
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { 
 	 		focus = FRA_air_dominance
 	 	}
@@ -1423,6 +1518,7 @@
 	focus = {
 		id = FRA_army_reform
 		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { 
 			focus = FRA_light_medium_armor 
 			focus = FRA_heavy_armor_focus 
@@ -3221,6 +3317,7 @@
 	focus = {
 		id = FRA_the_blum_viollette_proposal
 		icon = GFX_goal_generic_improve_relations
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 4
 		y = 1
 		
@@ -3442,6 +3539,9 @@
 
 		available = {
 			FRA_has_worker_shortage = yes
+			NOT = {
+				has_completed_focus = HOL_lud
+			}
 		}
 		
 		bypass = {
@@ -3622,56 +3722,10 @@
 		}
 	}
 	focus = {
-		id = FRA_support_the_finns
-		icon = GFX_focus_invite_finland
-		x = 2
-		y = 1
-		
-		prerequisite = {
-			focus = FRA_review_foreign_policy
-		}
-		relative_position_id = FRA_review_foreign_policy
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			FIN = {
-				has_war = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 10
-			FIN = {
-				add_manpower = 10000
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 2500
-					producer = FRA
-				}
-			}
-		}
-	}
-	focus = {
 		id = FRA_buy_time
 		icon = GFX_goal_generic_neutrality_focus
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = FRA_review_foreign_policy
 		}
@@ -4473,6 +4527,7 @@
 	focus = {
 		id = FRA_stimulate_the_dynamic_market
 		icon = GFX_goal_generic_construct_civilian
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
@@ -4515,7 +4570,7 @@
 		}
 		mutually_exclusive = { focus = FRA_laissez_faire }
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4535,11 +4590,14 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_agricultural_protectionism }
+			add_political_power = 75
+			add_stability = 0.05
 		}
 	}
 	focus = {
 		id = FRA_economic_devolution
 		icon = GFX_goal_generic_positive_trade_relations
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 1
 		
@@ -4606,6 +4664,7 @@
 	focus = {
 		id = FRA_promote_entrepeneurship
 		icon = GFX_goal_generic_propaganda
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 0
 		y = 1
 		
@@ -6820,7 +6879,7 @@
 			focus = FRA_the_council_of_rambouillet
 		}
 		relative_position_id = FRA_the_council_of_rambouillet
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6839,7 +6898,7 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_timed_idea = { idea = FRA_constitutional_revision days = 365 }
+			add_timed_idea = { idea = FRA_constitutional_revision days = 200 }
 		}
 	}
 
@@ -6853,7 +6912,7 @@
 			focus = FRA_revise_the_constitution
 		}
 		relative_position_id = FRA_revise_the_constitution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6889,12 +6948,8 @@
 		prerequisite = {
 			focus = FRA_proclaim_the_third_empire
 		}
-		relative_position_id = FRA_proclaim_the_third_empire
+		relative_position_id = FRA_the_legitimate_heir
 		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
 
 		available = {
 			is_subject = no
@@ -6903,13 +6958,18 @@
 		bypass = {
 
 		}
-
+ 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
 		completion_reward = {
-			add_ideas = { POL_royal_officer_corps }
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { experience_army = 0.15 tooltip = experience_gain_army_factor_tt }
+			add_to_variable = { land_mastery_gain = 0.15 tooltip = land_mastery_gain_factor_tt }
+			add_to_variable = { army_leader_start_level_modifaer = 3 tooltip = army_leader_start_level_tt }
+			add_to_variable = { military_leader_cost_modifaer = -0.2 tooltip = military_leader_cost_factor_tt }
+			army_experience = 100
 		}
 	}
 
@@ -6964,7 +7024,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7274,7 +7334,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7523,12 +7583,12 @@
 
 	focus = {
 		id = HOL_lud
-		prerequisite = { focus = FRA_tree_crown focus = FRA_avenge_waterloo }
+		prerequisite = { focus = FRA_tree_crown focus = FRA_reorganize_the_dutch }
 		icon = GFX_focus_PER_strengthen_the_tudeh
-		x = 1
-		y = 2
-		relative_position_id = FRA_two_countries_two_crowns
-		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = FRA_tree_crown
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
@@ -7536,9 +7596,37 @@
 			
 			add_stability = 0.1
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = HOL_depillarization
+			if = {
+				limit = {
+					not = {
+						has_completed_focus = FRA_proclaim_the_third_empire
+					}
+				}
+				add_ideas = HOL_depillarization
+			}
+			else = {
+				custom_effect_tooltip = FRA_la_deluge_infa
+				add_to_variable = { ludi = 0.01 tooltip = conscription_tt }
+			}
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_worker_shortage_effect = yes
+		}
+	}
+
+	focus = {
+		id = FRA_ob_um
+		prerequisite = { focus = HOL_lud }
+		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		relative_position_id = HOL_lud
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 
@@ -7571,9 +7659,9 @@
 
 		completion_reward = {
 			create_wargoal = {
-								type = annex_everything
-								target = POR
-						}
+				type = annex_everything
+				target = POR
+			}
 		}
 	}
 
@@ -7581,13 +7669,13 @@
 		id = FRA_exproet_resurse
 		icon = GFX_focus_DEN_fromandskorpset
 		x = 0
-		y = 3
+		y = 1
 		
 		prerequisite = {
 			focus = FRA_tree_crown
 		}
 		
-		relative_position_id = FRA_secure_the_crown_of_spain
+		relative_position_id = FRA_tree_crown
 		cost = 5
 
 		ai_will_do = {
@@ -7648,13 +7736,13 @@
 		id = FRA_end_history
 		icon = GFX_focus_PHI_national_defense_act
 		x = 0
-		y = 4
+		y = 1
 		
 		prerequisite = {
 			focus = FRA_exproet_resurse
 		}
 		
-		relative_position_id = FRA_secure_the_crown_of_spain
+		relative_position_id = FRA_exproet_resurse
 		cost = 10
 
 		ai_will_do = {
@@ -7676,9 +7764,9 @@
 	}
 
 	focus = {
-		id = FRA_proclaim_the_third_empire
+		id = FRA_proclaim_the_third_empire 
 		icon = GFX_focus_focus_fra_third_empire
-		x = 3
+		x = 4
 		y = 1
 		
 		prerequisite = {
@@ -7689,7 +7777,7 @@
 			focus = FRA_the_legitimate_heir
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7709,8 +7797,13 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_stability = -0.1
-			add_war_support = 0.1
+			custom_effect_tooltip = FRA_hard_path_tooltip
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_diplomacy_impossible_due_to_politics_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = { modifier = FRA_la_deluge_army }
+			add_to_variable = { ws_factor = 0.1 tooltip = war_support_factor_tt }
+			add_to_variable = { war_goal_time = 5 tooltip = enemy_justify_war_goal_time_tt }
 			create_country_leader = {
 				name = "Napoléon VI"
 				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
@@ -7747,18 +7840,131 @@
 			set_cosmetic_tag = FRA_THIRD_EMPIRE
 			custom_effect_tooltip = generic_skip_one_line_tt
 			activate_advisor = charles_maurras
+			
 		}
 	}
 	focus = {
-		id = FRA_avenge_waterloo #you now have ABBA stuck in your head for the rest of the day
-		icon = GFX_focus_BEL_dyle_plan
-		x = 0
-		y = 2
+		id = FRA_podgotovka  
+		icon = GFX_focus_PER_increase_oil_sales
+		x = 3
+		y = 1
 		
 		prerequisite = {
 			focus = FRA_granic
 		}
-		relative_position_id = FRA_proclaim_the_third_empire
+		prerequisite = {
+			focus = FRA_zakon
+		}
+		relative_position_id = FRA_granic
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+
+		} 
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { capacity_factor_arms = 0.15 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { speed_buildings = 0.05 tooltip = production_speed_buildings_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = FRA_parallel_import_modifier }
+            SWI = {
+                add_dynamic_modifier = { modifier = FRA_parallel_import_modifier }
+            }
+			}
+			custom_effect_tooltip = FRA_war_preparation_decisions_available_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			diplomatic_relation = {
+            	country = SWI
+           	 	relation = non_aggression_pact
+            	active = yes
+        	}
+			diplomatic_relation = {
+				country = SWI
+				relation = guarantee
+				active = yes
+			}
+			diplomatic_relation = {
+                    country = SWI
+                    relation = military_access
+                    active = yes
+                }
+                diplomatic_relation = { 
+                	country = SWI
+                	relation = air_base_access 	
+                	active = yes
+                }
+		}
+	}
+	focus = {
+		id = FRA_podgotovka2
+		icon = GFX_focus_BEL_interpreters
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_reorganize_the_dutch 
+		}
+		relative_position_id = FRA_reorganize_the_dutch
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			6 = { is_controlled_by = FRA } # Брюссель
+			7 = { is_controlled_by = FRA } # Голландия/Амстердам
+			is_subject = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_henri_de_man
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_vadik48
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_prince_bernhard
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = FRA_characters_integrated_tt
+		}
+	}
+	focus = {
+		id = FRA_avenge_waterloo
+		icon = GFX_focus_BEL_dyle_plan
+		x = 1
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_granic
+		}
+		relative_position_id = FRA_granic
 		cost = 5
 
 		ai_will_do = {
@@ -7799,6 +8005,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
+			add_to_variable = { war_stability = 0.15 tooltip = war_stability_factor_tt }
 			create_wargoal = {
 				target = BEL
 				type = annex_everything
@@ -7819,7 +8028,7 @@
 	focus = {
 		id = FRA_reorganize_the_dutch
 		icon = GFX_focus_BEL_dietsland
-		x = 3
+		x = -1
 		y = 1
 		
 		prerequisite = {
@@ -7878,12 +8087,12 @@
 		id = FRA_granic
 		icon = GFX_focus_focus_fra_border
 		x = 0
-		y = -1
+		y = 1
 		
 		prerequisite = {
 			focus = FRA_proclaim_the_third_empire
 		}
-		relative_position_id = FRA_avenge_waterloo
+		relative_position_id = FRA_proclaim_the_third_empire
 		cost = 5
 
 		ai_will_do = {
@@ -7894,7 +8103,7 @@
 			is_subject = no
 		}
 		
-		bypass = {
+		bypass = { 
 
 		}
 
@@ -7903,6 +8112,9 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			custom_effect_tooltip = FRA_hard_path_tooltip
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
 			every_state = {
 				limit = {
 					is_fully_controlled_by = BEL
@@ -7917,9 +8129,22 @@
 				}	
 				add_claim_by  = FRA
 			}
-			add_ideas = CZE_standing_against_the_storm_idea
+			
+			ENG = { country_event = { id = my_coalition.2 days = 2 } }
 			hidden_effect = {
 				news_event = { id = napoleon.1 days = 3 random_days = 5 }
+				# Уведомление для Франции
+        		country_event = { id = my_coalition.1 days = 1 }
+
+        		# Уведомления для всех стран коалиции
+        
+        		ITA = { country_event = { id = my_coalition.2 days = 2 } }
+        		GER = { country_event = { id = my_coalition.2 days = 2 } }
+        		SPR = { country_event = { id = my_coalition.2 days = 2 } }
+        		LUX = { country_event = { id = my_coalition.2 days = 2 } }
+        		BEL = { country_event = { id = my_coalition.2 days = 2 } }
+        		HOL = { country_event = { id = my_coalition.2 days = 2 } }
+        		SOV = { country_event = { id = my_coalition.3 days = 2 } }
 			}
 		}
 	}
@@ -7928,7 +8153,7 @@
 		id = FRA_gvardia
 		icon = GFX_focus_HABSBURG_bring_back_royal_and_imperial_hussars
 		x = 0
-		y = 1
+		y = 2
 		
 		prerequisite = {
 			focus = FRA_royal_corpus
@@ -7953,7 +8178,12 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = HUN_horthyist_royal_guard
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ARMY_CLAIM_ATTACK = 0.1 tooltip = MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR_tt }
+			add_to_variable = { ARMY_CLAIM_DEFENCE = 0.05 tooltip = MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR_tt }
+			add_to_variable = { army_speed = 0.05 tooltip = army_speed_factor_tt }
+			add_to_variable = { army_core_defence_modifaer = 0.1 tooltip = army_core_defence_factor_tt }
+			army_experience = 100
 		}
 	}
 
@@ -7965,6 +8195,9 @@
 		
 		prerequisite = {
 			focus = FRA_avenge_waterloo
+		}
+		prerequisite = {
+			focus = FRA_zakon
 		}
 		relative_position_id = FRA_avenge_waterloo
 		cost = 5
@@ -7990,6 +8223,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
+			add_to_variable = { war_goal_time = -5 tooltip = enemy_justify_war_goal_time_tt }
 			create_wargoal = { 
 				type = annex_everything
 				target = GER
@@ -8000,7 +8236,7 @@
 	focus = {
 		id = FRA_disunite_germany
 		icon = GFX_focus_AFG_establish_darulaman
-		x = 2
+		x = 0
 		y = 1
 		
 		prerequisite = {
@@ -8241,9 +8477,11 @@
 	focus = {
 		id = FRA_return_to_borodino
 		icon = GFX_focus_attack_soviet
-		x = 0
-		y = 1
-		
+		x = -1
+		y = 2
+		mutually_exclusive = {
+			focus = FRA_sov_alik
+		}
 		prerequisite = {
 			focus = FRA_retribution_for_sedan
 		}
@@ -8267,6 +8505,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
 			create_wargoal = {
 				target = SOV
 				type = annex_everything
@@ -8277,14 +8517,17 @@
 	focus = {
 		id = FRA_je_suis_la_deluge
 		icon = GFX_focus_fra_le_deluge
-		x = 0
+		x = -1
 		y = 1
 		
 		prerequisite = {
-			focus = FRA_return_to_borodino
+			focus = FRA_granic
 		}
-		relative_position_id = FRA_return_to_borodino
-		cost = 10
+		prerequisite = {
+			focus = FRA_royal_corpus
+		}
+		relative_position_id = FRA_granic
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8303,14 +8546,19 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_ideas = FRA_la_deluge
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { ludi = 0.03 tooltip = conscription_tt }
+			add_to_variable = { factor_lud = 0.25 tooltip = conscription_factor_tt }
+			add_to_variable = { trenirivka = -0.2 tooltip = training_time_army_factor_tt }
+			add_to_variable = { mobilization_speed_modifaer = 0.3 tooltip = mobilization_speed_tt }
+			add_to_variable = { weekly_casualties_war = 0.001 tooltip = weekly_casualties_war_support_tt }
 		}
 	}
 
 	focus = {
-		id = FRA_zakon
-		icon = GFX_focus_AST_under_the_rule_of_canberra
-		x = 2
+		id = FRA_rus_annex 
+		icon = GFX_focus_PHI_war_plan_orange
+		x = 0
 		y = 1
 		
 		prerequisite = {
@@ -8336,7 +8584,158 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { supply_front = 0.1 tooltip = supply_factor_tt }
+			add_to_variable = { out_of_supply_front = -0.1 tooltip = out_of_supply_factor_tt }
+			add_to_variable = { winter_attrition_front = -0.1 tooltip = winter_attrition_factor_tt }
+		}
+	}
+
+	focus = {
+		id = FRA_sov_alik
+		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
+		x = 1
+		y = 2
+		mutually_exclusive = {
+			focus = FRA_return_to_borodino
+		}
+		
+		prerequisite = {
+			focus = FRA_retribution_for_sedan
+		}
+		relative_position_id = FRA_retribution_for_sedan
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			SOV = {
+				has_completed_focus = SOV_romanov_reconstruction
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = -50
+			SOV = { add_political_power = 50 country_event = { id = priglos_v_alik.1 days = 1 } }
+		}
+	}
+
+	focus = {
+		id = FRA_tur_alik
+		icon = GFX_focus_TUR_pivot_to_the_past
+		x = 2
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_return_to_borodino
+			focus = FRA_sov_alik
+		}
+		relative_position_id = FRA_return_to_borodino
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			TUR = {
+				has_completed_focus = TUR_pivot_to_the_past
+			}
+		}
+		
+		bypass = {
+
+		}
+ 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = -100
+			TUR = { add_political_power = 100 country_event = { id = priglos_v_alik.1 days = 1 } }
+		}
+	}
+
+	focus = {
+		id = FRA_zakon
+		icon = GFX_focus_CHI_planned_economy
+		x = 2
+		y = 1
+		
+		prerequisite = {
+			focus = FRA_proclaim_the_third_empire
+			#focus = FRA_the_legitimate_heir
+		}
+		relative_position_id = FRA_proclaim_the_third_empire
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = FRA_la_deluge_infa
+			add_to_variable = { capacity_factor_arms = 0.5 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { capacity_factor_dockyard = 0.5 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { speed_buildings = 0.1 tooltip = production_speed_buildings_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CZE_national_defense_act_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			reduce_focus_completion_cost = {
+				focus = { 
+					FRA_methodical_battle
+					FRA_air_dominance
+					FRA_army_reform
+					FRA_the_blum_viollette_proposal
+					FRA_economic_devolution
+					FRA_promote_entrepeneurship
+					FRA_stimulate_the_dynamic_market
+					FRA_naval_rearmament
+					FRA_develop_colonial_dockyards
+					FRA_the_old_school
+					FRA_the_young_school
+					FRA_undersea_combat
+					FRA_air_focus
+					FRA_fighter_focus
+					FRA_firepower_kills
+					FRA_battle_of_maneuver
+					FRA_extend_the_maginot_line
+					FRA_light_medium_armor
+					FRA_flying_artillery
+					FRA_industrial_expansion
+					FRA_colonial_industry
+					FRA_military_factories
+				}
+				cost = 35
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = PHI_clock_tt
 		}
 	}
 
@@ -8344,13 +8743,13 @@
 		id = wuw_FRA_cult
 		icon = GFX_focus_RAJ_red_in_the_shadows
 		prerequisite = { 
-			focus = FRA_je_suis_la_deluge
+			focus = FRA_return_to_borodino
 			focus = FRA_no_further_humiliations
 			focus = FRA_end_history
 		}
-		x = -3
+		x = 2
 		y = 1
-		relative_position_id = FRA_je_suis_la_deluge
+		relative_position_id = FRA_end_history
 
 		cost = 10
 
@@ -8385,7 +8784,8 @@
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 70
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = 72
 		y = 0
 
 		offset = {
@@ -8583,9 +8983,9 @@
 	focus = {
 		id = FRA_colonial_naval_bases
 		icon = GFX_goal_generic_build_navy
-	 	prerequisite = { focus = FRA_naval_rearmament }
+	 	prerequisite = { focus = FRA_develop_colonial_dockyards }
 		x = -3
-		y = 1
+		y = 2
 		relative_position_id = FRA_naval_rearmament
 		cost = 5
 
@@ -8646,9 +9046,10 @@
 	focus = {
 		id = FRA_develop_colonial_dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-	 	prerequisite = { focus = FRA_colonial_naval_bases }
+		overlay = GFX_focus_fast_overlay_generic_clock
+	 	prerequisite = { focus = FRA_naval_rearmament }
 		x = 0
-		y = 1
+		y = -1
 		relative_position_id = FRA_colonial_naval_bases
 		cost = 10
 
@@ -8697,6 +9098,7 @@
 	focus = {
 		id = FRA_the_old_school
 		icon = GFX_focus_generic_navy_battleship2
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { focus = FRA_naval_rearmament }
 	 	mutually_exclusive = { focus = FRA_the_young_school }
 		x = 0
@@ -8892,6 +9294,7 @@
 	focus = {
 		id = FRA_the_young_school
 		icon = GFX_goal_generic_navy_cruiser
+		overlay = GFX_focus_fast_overlay_generic_clock
 	 	prerequisite = { focus = FRA_naval_rearmament }
 	 	mutually_exclusive = { focus = FRA_the_old_school }
 		x = 4
@@ -8908,6 +9311,7 @@
 
 	focus = {
 		id = FRA_undersea_combat
+		overlay = GFX_focus_fast_overlay_generic_clock
 		icon = GFX_goal_generic_navy_submarine
 	 	prerequisite = { focus = FRA_the_young_school }
 		x = -1
@@ -9005,6 +9409,7 @@
 	focus = {
 		id = FRA_air_focus
 		icon = GFX_goal_generic_build_airforce
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 9
 		y = 0
 		relative_position_id = FRA_naval_rearmament
@@ -9042,6 +9447,7 @@
 	focus = {
 		id = FRA_fighter_focus
 		icon = GFX_goal_generic_air_fighter
+		overlay = GFX_focus_fast_overlay_generic_clock
 		#mutually_exclusive = { focus = FRA_bomber_focus }
 	 	prerequisite = { focus = FRA_air_focus }
 		x = -1

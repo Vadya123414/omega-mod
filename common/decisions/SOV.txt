@@ -12984,24 +12984,14 @@ SOV_soviet_civil_war_dec_cat = {
 				custom_effect_tooltip = SOV_assassinate_stalin_good_tt
 				custom_effect_tooltip = SOV_assassinate_stalin_outcome_tt
 				hidden_effect = {
-					random_list = {
-						80 = {
-							retire_character = SOV_iosif_stalin
-							SOV_promote_to_country_leader_beriya = yes
-							news_event = {
-								id = NSB_soviet_communist_civil_war.009
-							}
-							subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
-							SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
-							set_country_flag = SOV_assassinated_stalin_flag
-						}
-						20 = {
-							SOV_paranoia_very_high_increase_effect = yes
-							news_event = {
-								id = NSB_soviet_communist_civil_war.008
-							}
-						}
+					retire_character = SOV_iosif_stalin
+					SOV_promote_to_country_leader_beriya = yes
+					news_event = {
+						id = NSB_soviet_communist_civil_war.009
 					}
+					subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
+					SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
+					set_country_flag = SOV_assassinated_stalin_flag
 					# TODO Create events
 				}
 			}

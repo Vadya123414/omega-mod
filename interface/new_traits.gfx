@@ -1,0 +1,13 @@
+
+### new gain traits ###
+spriteTypes = {	
+    				
+	spriteType = {
+        name = "GFX_trait_hot_expert"
+        texturefile = "gfx/interface/traits/trait_hot_expert.dds"
+    }
+    spriteType = {
+        name = "GFX_trait_hot_specialist"
+        texturefile = "gfx/interface/traits/trait_hot_specialist.dds"
+    }
+}

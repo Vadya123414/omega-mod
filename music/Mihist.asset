@@ -1,0 +1,5 @@
+music = {
+    name = "Тотальная война"
+    file = "Goebbels_speech_total_war.ogg"
+    volume = 0.70
+}

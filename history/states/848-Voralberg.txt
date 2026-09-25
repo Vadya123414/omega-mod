@@ -5,6 +5,9 @@ state={
 	manpower = 154354
 	state_category = pastoral
 	history={
+		victory_points = {
+			6680 1
+		}
 		owner = AUS
 		buildings = {
 			infrastructure = 2

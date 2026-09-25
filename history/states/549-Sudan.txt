@@ -6,6 +6,9 @@ state={
 	manpower = 1802132
 
 	history = {
+		victory_points = {
+			10739 1
+		}
 		
 		owner = ENG
 		add_core_of = SUD

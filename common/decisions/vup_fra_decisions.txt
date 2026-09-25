@@ -9,7 +9,11 @@ FRA_annex = {
 			date > 1939.1.1 
 		}
 
-		
+        highlight_states = {
+			highlight_state_targets = {
+				state = 660
+			}
+		}
 
 		fire_only_once = yes
 		days_remove    = -1
@@ -65,11 +69,6 @@ FRA_annex = {
 		}
 	}
 	
-	
-
-	
-	
-	
 	FRA_Revolt = {
 	
 		icon = GFX_decision_SWI_guisan_speech
@@ -98,3 +97,695 @@ FRA_annex = {
 	
 }
 
+my_coalition_category = {
+
+    FRA_coalition_warning_mission = {
+        icon = generic_political_actions
+        is_good = no
+        days_mission_timeout = 390
+        selectable_mission = no
+
+        activation = {
+            has_completed_focus = FRA_granic
+        }
+
+        fire_only_once = yes
+
+        available = {
+            always = no
+        }
+
+        timeout_effect = {
+            news_event = { id = my_coalition.4 days = 1 }
+        }
+
+        complete_effect = {
+        }
+    }
+
+    # === МИССИЯ ДЛЯ СССР ===
+    SOV_coalition_mission = {
+        icon = generic_political_actions
+        is_good = no
+        days_mission_timeout = 400
+        selectable_mission = no
+		fire_only_once = yes
+
+        # Активируется через событие
+        activation = {
+            has_country_flag = sov_coalition_mission_active
+        }
+
+        # Доступна всегда, когда активна 
+        available = {
+			not = {
+				 has_country_flag = sov_coalition_mission_active
+			}
+        }
+
+        timeout_effect = {
+            
+            news_event = { id = my_coalition.5 days = 1 }
+            clr_country_flag = sov_coalition_mission_active
+        }
+
+        complete_effect = {
+            
+        }
+    }
+
+    # === РЕШЕНИЕ ДЛЯ СССР: ОТКАЗАТЬСЯ ===
+    SOV_refuse_coalition = {
+        icon = generic_political_actions
+        cost = 0
+
+        # Решение доступно, пока активна миссия
+        available = {
+        }
+		
+
+        visible = {
+            has_country_flag = sov_coalition_mission_active
+        }
+
+		fire_only_once = yes
+
+        # При нажатии — отказ
+        complete_effect = {
+            remove_decision = SOV_coalition_mission
+            clr_country_flag = sov_coalition_mission_active
+        }
+
+        ai_will_do = {
+            factor = 0  # ИИ никогда не отказывается
+        }
+    }
+
+    # === РЕШЕНИЕ ДЛЯ ОСТАЛЬНЫХ СТРАН ===
+    generic_join_coalition = {
+        icon = generic_political_actions
+        is_good = no
+        days_mission_timeout = 400
+        selectable_mission = no
+		fire_only_once = yes
+
+        available = {
+            not = {
+				 has_country_flag = coalition_mission_active
+			}
+        }
+
+		activation = {
+            has_country_flag = coalition_mission_active
+        }
+
+        visible = {
+            has_country_flag = coalition_mission_active
+        }
+
+        timeout_effect = {
+            declare_war_on = {
+                target = FRA  # Замените на актуальную цель
+                type = annex_everything
+            }
+			clr_country_flag = coalition_mission_active
+            add_ideas = FRA_coalition
+        }
+
+		complete_effect = {
+            
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	generic_no_join_coalition = {
+        icon = generic_political_actions
+        cost = 0
+
+        # Решение доступно, пока активна миссия
+        available = {
+			
+        }
+		
+
+        visible = {
+            has_country_flag = coalition_mission_active
+        }
+
+		fire_only_once = yes
+
+        # При нажатии — отказ
+        complete_effect = {
+            remove_decision = generic_join_coalition
+            clr_country_flag = coalition_mission_active
+        }
+
+        ai_will_do = {
+            factor = 0  # ИИ никогда не отказывается
+        }
+    }
+    
+    FRA_build_fuel_silos_decision = {
+		icon = GFX_decision_generic_electricity
+
+		allowed = {
+			tag = FRA
+		}
+
+        visible = {
+            has_completed_focus = FRA_podgotovka
+        }
+
+		available = {
+            num_of_civilian_factories_available_for_projects > 4
+            15 = { is_controlled_by = FRA }
+            14 = { is_controlled_by = FRA }
+            23 = { is_controlled_by = FRA }
+            19 = { is_controlled_by = FRA }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 15
+                state = 14
+                state = 23
+                state = 19
+			}
+		}
+
+		days_remove = 60
+		custom_cost_trigger = {
+			command_power > 24
+			political_power > 49
+		}
+		custom_cost_text = decision_cost_CP_25_pp_50
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power= -50
+			}
+		}
+
+		remove_effect = {
+			15 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+			14 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+			23 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+            19 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+            add_fuel = 1800000
+        }
+	}
+
+    FRA_coal_overn = {
+	    cost = 25
+        icon = coal
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 26
+		}
+
+        allowed = {
+			tag = FRA
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+			}
+		}
+
+		visible = {
+            has_completed_focus = FRA_podgotovka
+        }
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		remove_effect = {
+		    26 = {
+		    	add_resource = {
+		    		type = coal
+		    		amount = 24
+		    	}
+		    }
+        }
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+    #FRA_swiss_parallel_rubber_import = {
+	#	icon = decision_generic_trade
+    #
+	#	allowed = {
+	#		tag = FRA
+	#	}
+    #
+	#	available = {
+	#		SWI = { exists = yes }    
+	#		NOT = { has_war_with = SWI }  
+	#	}
+    #
+	#	cost = 75
+	#	days_remove = 365
+    #
+	#	modifier = {
+	#		civilian_factory_use = 9
+	#	}
+    #
+	#	complete_effect = {
+	#		add_ideas = FRA_swiss_rubber_import_modifier
+    #        SWI = {
+	#			add_ideas = CHE_french_parallel_import_factories
+	#		}
+	#	}
+    #
+	#	remove_effect = {
+	#		remove_ideas = FRA_swiss_rubber_import_modifier
+    #        SWI = {
+	#			remove_ideas = CHE_french_parallel_import_factories
+	#		}
+	#	}
+	#}
+
+	FRA_buy_swiss_rubber = {
+		icon = rubber
+		allowed = { tag = FRA }
+
+		available = {
+			SWI = { exists = yes }
+			NOT = { has_war_with = SWI }
+			num_of_civilian_factories_available_for_projects > 0 
+            3 = { is_controlled_by = SWI }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            custom_effect_tooltip = FRA_parallel_import_modifier_tt
+            add_to_variable = { FRA_rubber_amount = 8 tooltip = country_resource_rubber_tt }
+            add_to_variable = { fabriki_FRA = -1 tooltip = fabriki_FRA_tt }
+            
+            SWI = {
+                add_to_variable = { fabriki_SWI = 1 tooltip = fabriki_SWI_tt }
+            }
+            
+		    add_to_variable = { FRA_active_rubber_contracts = 1 }
+		}
+	}
+
+	FRA_cancel_swiss_rubber = {
+		icon = rubber
+		allowed = { tag = FRA }
+
+		available = {
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+			check_variable = { FRA_active_rubber_contracts > 0 }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+            check_variable = { FRA_active_rubber_contracts > 0 }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+			
+            if = {
+                limit = {
+                    check_variable = { FRA_active_rubber_contracts > 0 }
+                }
+                add_to_variable = { FRA_rubber_amount = -8 tooltip = country_resource_rubber_tt }
+                add_to_variable = { fabriki_FRA = 1 tooltip = fabriki_offFRA_tt }
+                SWI = {
+                    add_to_variable = { fabriki_SWI = -1 tooltip = fabriki_offSWI_tt }
+                }
+            }
+            
+            add_to_variable = { FRA_active_rubber_contracts = -1 }
+
+		}
+	}
+
+    FRA_buy_swiss_oil = {
+		icon = oil
+		allowed = { tag = FRA }
+
+		available = {
+			SWI = { exists = yes }
+			NOT = { has_war_with = SWI }
+			num_of_civilian_factories_available_for_projects > 0 
+            3 = { is_controlled_by = SWI }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            custom_effect_tooltip = FRA_parallel_import_modifier_tt
+            add_to_variable = { FRA_oil_amount = 8 tooltip = country_resource_oil_tt }
+            add_to_variable = { fabriki_FRA = -1 tooltip = fabriki_FRA_tt }
+            
+            SWI = {
+                add_to_variable = { fabriki_SWI = 1 tooltip = fabriki_SWI_tt }
+            }
+            
+		    add_to_variable = { FRA_active_oil_contracts = 1 }
+		}
+	}
+
+	FRA_cancel_swiss_oil = {
+		icon = oil
+		allowed = { tag = FRA }
+
+		available = {
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+			check_variable = { FRA_active_oil_contracts > 0 }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+            check_variable = { FRA_active_oil_contracts > 0 }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+			
+            if = {
+                limit = {
+                    check_variable = { FRA_active_oil_contracts > 0 }
+                }
+                add_to_variable = { FRA_oil_amount = -8 tooltip = country_resource_oil_tt }
+                add_to_variable = { fabriki_FRA = 1 tooltip = fabriki_offFRA_tt }
+                SWI = {
+                    add_to_variable = { fabriki_SWI = -1 tooltip = fabriki_offSWI_tt }
+                }
+            }
+            
+            add_to_variable = { FRA_active_oil_contracts = -1 }
+
+		}
+	}
+
+    FRA_buy_swiss_tungsten = {
+		icon = tungsten
+		allowed = { tag = FRA }
+
+		available = {
+			SWI = { exists = yes }
+			NOT = { has_war_with = SWI }
+			num_of_civilian_factories_available_for_projects > 0 
+            3 = { is_controlled_by = SWI }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            custom_effect_tooltip = FRA_parallel_import_modifier_tt
+            add_to_variable = { FRA_tungsten_amount = 8 tooltip = country_resource_tungsten_tt }
+            add_to_variable = { fabriki_FRA = -1 tooltip = fabriki_FRA_tt }
+            
+            SWI = {
+                add_to_variable = { fabriki_SWI = 1 tooltip = fabriki_SWI_tt }
+            }
+            
+		    add_to_variable = { FRA_active_tungsten_contracts = 1 }
+		}
+	}
+
+	FRA_cancel_swiss_tungsten = {
+		icon = tungsten
+		allowed = { tag = FRA }
+
+		available = {
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+			check_variable = { FRA_active_tungsten_contracts > 0 }
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+
+        visible = {
+			NOT = { has_war_with = SWI }
+            has_dynamic_modifier = {
+                modifier = FRA_parallel_import_modifier
+            }
+            check_variable = { FRA_active_tungsten_contracts > 0 }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+			
+            if = {
+                limit = {
+                    check_variable = { FRA_active_tungsten_contracts > 0 }
+                }
+                add_to_variable = { FRA_tungsten_amount = -8 tooltip = country_resource_tungsten_tt }
+                add_to_variable = { fabriki_FRA = 1 tooltip = fabriki_offFRA_tt }
+                SWI = {
+                    add_to_variable = { fabriki_SWI = -1 tooltip = fabriki_offSWI_tt }
+                }
+            }
+            
+            add_to_variable = { FRA_active_tungsten_contracts = -1 }
+
+		}
+	}
+
+    
+
+    FRA_ter_ita = { 
+		icon = GFX_decision_infiltrate_state
+		allowed = { tag = FRA }
+        cost = 15
+		available = {
+            any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 158 # Контролирует Наварру
+						controls_state = 162 # Контролирует Арагон
+					}
+				}
+		}
+
+        visible = {
+            any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 158 # Контролирует Наварру
+						controls_state = 162 # Контролирует Арагон
+					}
+				}
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 162
+                state = 158
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            158 = {
+                add_claim_by  = FRA
+            }
+            162 = {
+                add_claim_by  = FRA
+            }
+		}
+	}
+
+    FRA_ter_ispa = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { tag = FRA }
+        cost = 15
+		available = {
+            any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 165 # Контролирует Наварру
+						controls_state = 177 # Контролирует Арагон
+					}
+				}
+		}
+
+        visible = {
+           any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 165 # Контролирует Наварру
+						controls_state = 177 # Контролирует Арагон
+					}
+				}
+        }
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 165
+                state = 177
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            165 = {
+                add_claim_by  = FRA
+            }
+            177 = {
+                add_claim_by  = FRA
+            }
+		}
+	}
+
+    FRA_ter_ger = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { tag = FRA }
+        cost = 15
+
+		available = {
+            any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 42 # Контролирует Наварру
+						controls_state = 55 # Контролирует Арагон
+                        controls_state = 51 # Контролирует Наварру
+						controls_state = 57 # Контролирует Арагон
+                        controls_state = 56 # Контролирует Наварру
+						controls_state = 59 # Контролирует Арагон
+					}
+				}
+		}
+
+        highlight_states = {
+			highlight_state_targets = {
+				state = 42
+                state = 55
+                state = 51
+                state = 57
+                state = 56
+                state = 59
+			}
+		}
+
+        visible = {
+            any_country = {
+					has_war_with = ROOT
+					OR = {
+						controls_state = 42 # Контролирует Наварру
+						controls_state = 55 # Контролирует Арагон
+                        controls_state = 51 # Контролирует Наварру
+						controls_state = 57 # Контролирует Арагон
+                        controls_state = 56 # Контролирует Наварру
+						controls_state = 59 # Контролирует Арагон
+					}
+				}
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            42 = {
+                add_claim_by  = FRA
+            }
+            55 = {
+                add_claim_by  = FRA
+            }
+            51 = {
+                add_claim_by  = FRA
+            }
+            57 = {
+                add_claim_by  = FRA
+            }
+            56 = {
+                add_claim_by  = FRA
+            }
+            59 = {
+                add_claim_by  = FRA
+            }
+		}
+	}
+}

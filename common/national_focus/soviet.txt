@@ -384,7 +384,8 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			activate_advisor = SOV_lazar_kaganovich
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_lazar_kaganovich
 		}
 	}
 
@@ -8659,7 +8660,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_left_opposition_coup
-		cost = 10
+		cost = 5
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -8771,7 +8772,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = SOV_committee_in_exile
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -8820,7 +8821,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8863,7 +8864,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -9178,7 +9179,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_the_right_opposition
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -9452,13 +9453,6 @@ focus_tree = {
 		cost = 2
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over 
-			custom_trigger_tooltip = {
-				tooltip = SOV_poum_exists_tt
-				SPC = { 
-					exists = yes 
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
-			}
 		}
 
 		search_filters = {}
@@ -9639,7 +9633,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_coup_detat
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -9716,7 +9710,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 			has_character = SOV_aleksey_rykov
@@ -9758,7 +9752,7 @@ focus_tree = {
 					swap_ruler_traits = {
 						remove = defender_of_the_peasantry
 						add = hero_of_the_peasantry
-					}
+					} 
 				}
 				else = {
 					effect_tooltip = {
@@ -9825,7 +9819,7 @@ focus_tree = {
 							uses = 2
 							category = industry
 						}
-						add_ideas = new_economic_policy
+						add_ideas = new_economic_policy_2
 					}
 				}
 			}
@@ -9839,7 +9833,7 @@ focus_tree = {
 						uses = 2
 						category = industry
 					}
-					add_ideas = new_economic_policy
+					add_ideas = new_economic_policy_2
 				}
 			}
 			
@@ -10149,7 +10143,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_enemies_of_the_people
-		cost = 10
+		cost = 5
 		available = {
 			surrender_progress < 0.01
 		}
@@ -10750,7 +10744,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_peoples_revolution
-		cost = 10
+		cost = 5
 		available = {
 			has_government = communism
 		}
@@ -12843,18 +12837,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-			add_collaboration = {
-				target = EST
-				value = 0.25
-			}
-			add_collaboration = {
-				target = LAT
-				value = 0.25
-			}
-			add_collaboration = {
-				target = LIT
-				value = 0.25
-			}
+			
 			# Estonia
 			custom_effect_tooltip = SOV_estonian_claimed_states_tt
 			hidden_effect = {
@@ -12901,6 +12884,18 @@ ai_will_do = {
 						is_ai = yes
 					}
 				}
+				add_collaboration = {
+				target = EST
+				value = 0.5
+			}
+			add_collaboration = {
+				target = LAT
+				value = 0.5
+			}
+			add_collaboration = {
+				target = LIT
+				value = 0.5
+			}
 				annex_country = {
 				    target = LIT
 				    transfer_troops = yes
@@ -18168,6 +18163,14 @@ ai_will_do = {
 			add_political_power = 150
 			add_stability = 0.15
 			add_popularity = { ideology = democratic popularity = 0.2 }
+			if = {
+				limit = { has_idea = SOV_romanov_spirit_idea }
+				remove_ideas = SOV_romanov_spirit_idea
+			}
+			if = {
+				limit = { has_idea = SOV_the_true_tsars_idea }
+				remove_ideas = SOV_the_true_tsars_idea
+			}
 		}
 	} 
 	
@@ -18714,7 +18717,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas =  RUS_ECONOMI
+			add_ideas =  RUS_ECONOMI_1
 			add_popularity = { ideology = democratic popularity = 0.25 }
 			hidden_effect = {
 			823 = {add_core_of = KAZ}
@@ -18747,6 +18750,8 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 5 }
+			add_offsite_building = { type = arms_factory level = 15 }
 			add_stability = 0.05
 			release_autonomy = {
 					target = UKR
@@ -19514,13 +19519,26 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			FIN = {add_timed_idea = {idea = RUS_propagand days = 720}}
-			FIN = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { FIN = { NOT = { is_in_faction = yes } } }
+				FIN = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}
 	
@@ -19535,26 +19553,42 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			EST = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
 			LIT = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
 			LAT = {add_timed_idea = {idea = RUS_propagand days = 720}
-			add_popularity = { ideology = democratic popularity = 0.2 }
 			}
-			EST = { country_event = priglos_v_alik.1 }
-			LIT = { country_event = priglos_v_alik.1 }
-			LAT = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { EST = { NOT = { is_in_faction = yes } } }
+				EST = { country_event = priglos_v_alik.1 }
+			}	
+			if = {
+				limit = { LIT = { NOT = { is_in_faction = yes } } }
+				LIT = { country_event = priglos_v_alik.1 }
+			}
+			if = {
+				limit = { LAT = { NOT = { is_in_faction = yes } } }
+				LAT = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}
-	focus = {
+	focus = {  
 		id = RUS_east_friend
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = RUS_moscow_pact }
@@ -19565,6 +19599,16 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			OR = {
+				EST = { NOT = { is_in_faction = yes } }
+				LIT = { NOT = { is_in_faction = yes } }
+				LAT = { NOT = { is_in_faction = yes } }
+				TUR = { NOT = { is_in_faction = yes } }
+				PER = { NOT = { is_in_faction = yes } }
+				FIN = { NOT = { is_in_faction = yes } }
+			}
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
@@ -19572,8 +19616,14 @@ ai_will_do = {
 		completion_reward = {
 			TUR = {add_timed_idea = {idea = RUS_propagand days = 720}}
 			PER = {add_timed_idea = {idea = RUS_propagand days = 720}}
-			TUR = { country_event = priglos_v_alik.1 }
-			PER = { country_event = priglos_v_alik.1 }
+			if = {
+				limit = { TUR = { NOT = { is_in_faction = yes } } }
+				TUR = { country_event = priglos_v_alik.1 }
+			}
+			if = {
+				limit = { PER = { NOT = { is_in_faction = yes } } }
+				PER = { country_event = priglos_v_alik.1 }
+			}
 		}
 	}  
 	
@@ -19674,7 +19724,6 @@ ai_will_do = {
 		mutually_exclusive = { focus = RUS_moscow_pact  }
 		x = 13
 		y = 1
-		available = {has_completed_focus = RUS_liberate}
 		relative_position_id = RUS_reconstruction
 		cost = 5
 		ai_will_do = {

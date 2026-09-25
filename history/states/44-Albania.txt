@@ -9,6 +9,9 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			9875 1
+		}
 		owner = ALB
 		victory_points = {
 			9914 5 

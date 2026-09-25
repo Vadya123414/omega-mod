@@ -40,55 +40,132 @@ country_event = {
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
-	
-	option = { #Agree / Both Democratic
+
+	option = { # Согласиться
 		name = generic.5.a
-		ai_chance = {
-			base = 100
-		}
-		 FROM = { save_event_target_as = target_alliance_leader }
-		 every_faction_member = {
-            limit = { NOT = { tag = ROOT } } # Кроме самого лидера
-            country_event = { id = priglos_v_alik.2 } # Ивент-приглашение для членов альянса
-        }
+		ai_chance = { base = 100 }
+
 		FROM = {
 			faction_leader = {
 				add_to_faction = ROOT
 			}
-			
-			country_event = { id = generic.6 hours = 6 } 
 		}
 	}
 
-	option = { #Reject if in faction
-		name = priglos_v_alik.2.g
-		FROM = { 
-			country_event = { id = generic.7 hours = 6 }
-		}
+	option = { # Отказаться
+		name = priglos_v_alik.1.b
+		ai_chance = { base = 0 }
+		# Ничего не происходит
 	}
 }
 
+add_namespace = my_coalition
+
+# === Событие для Франции: уведомление о коалиции ===
 country_event = {
-    id = priglos_v_alik.2
-    title = priglos_v_alik.1.t  # Можно оставить те же тексты
-    desc = priglos_v_alik.1.desc
-    picture = GFX_report_event_generic_read_write
+    id = my_coalition.1
+    title = my_coalition.1.t
+    desc = my_coalition.1.d
+    picture = GFX_report_event_FIN_finnish_generals
 
     is_triggered_only = yes
 
     option = {
-        name = generic.5.a # "Мы тоже согласны!"
-        ai_chance = { base = 100 }
-
-        # Вступаем следом за лидером к сохраненной цели
-        event_target:target_alliance_leader = {
-            add_to_faction = ROOT
-        }
+        name = my_coalition.1.a
+        # Ничего не делаем — просто уведомление
     }
-    
+}
+
+# === Событие для стран коалиции: появилось решение ===
+country_event = {
+    id = my_coalition.2
+    title = my_coalition.2.t
+    desc = my_coalition.2.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
     option = {
-        name = priglos_v_alik.2.b # "Нет, мы выходим из союза"
-        ai_chance = { base = 0 }
-        # Страна просто останется без альянса
+        name = my_coalition.2.a
+        # Просто уведомление
+		ROOT = {
+			set_country_flag = coalition_mission_active
+		}
+    }
+}
+
+# === Событие для СССР: появилась миссия ===
+country_event = {
+    id = my_coalition.3
+    title = my_coalition.3.t
+    desc = my_coalition.3.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.3.a
+		ROOT = {
+			set_country_flag = sov_coalition_mission_active
+		}
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии Франции ===
+country_event = {
+    id = my_coalition.4
+    title = my_coalition.4.t
+    desc = my_coalition.4.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.4.a
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии СССР (если не отказался) ===
+country_event = {
+    id = my_coalition.5
+    title = my_coalition.5.t
+    desc = my_coalition.5.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.5.a
+		declare_war_on = {
+                target = FRA
+                type = annex_everything
+            }
+			add_ideas = FRA_coalition
+    }
+
+	option = {
+        name = my_coalition.5.b
+    }
+}
+
+add_namespace = fra_leave
+
+country_event = {
+    id = fra_leave.1
+    hidden = yes # Ивент скрыт от игрока, нет всплывающего окна
+
+    trigger = {
+        tag = FRA
+        has_completed_focus = FRA_proclaim_the_third_empire
+        is_in_faction = yes                                
+        is_faction_leader = no                          
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    immediate = {
+        leave_faction = yes
     }
 }
