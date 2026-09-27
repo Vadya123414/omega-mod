@@ -1,5 +1,6 @@
 ideas = {
     hidden_ideas = { 
+		
 		smart_bots = {
 			name = smart_bots
 
@@ -23,6 +24,43 @@ ideas = {
 					is_ai = no
 					has_civil_war = yes
 					}
+			}
+		}
+					idea_RAJ_ordnance_sim = {
+			picture = generic_license_production
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				artillery_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				support_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				anti_air_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
 			}
 		}
 	}
