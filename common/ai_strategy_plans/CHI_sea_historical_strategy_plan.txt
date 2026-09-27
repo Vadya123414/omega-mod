@@ -14,16 +14,16 @@ CHI_sea_nationalist_historical_plan = {
 					rule = CHI_ai_behavior
 					option = DEFAULT
 				}	
-
 			}
 			has_country_flag = CHI_AI_RANDOM_HISTORICAL_SEA
 			has_game_rule = {
 				rule = CHI_ai_behavior
 				option = HISTORICAL_SEA
+					}
+				}
 			}
-		}
-	}
 	abort = {
+		JAP = { has_completed_focus = JAP_okadas_military_purge_speech}
 	}
 
 	ai_national_focuses = {
@@ -37,10 +37,10 @@ CHI_sea_nationalist_historical_plan = {
 		CHI_arrest_the_seven_gentlemen				# 70d - Seven Gentlemen Incident, Nov 1936
 		CHI_military_affairs_commission_sea			# 35d
 		CHI_protracted_warfare						# 70d
-		CHI_defence_in_depth						# 70d
+		CHI_one_nation_undivided					# 70d - Second United Front, Sep 1937; won't happen on historical
 
 		# 1937
-		CHI_one_nation_undivided					# 70d - Second United Front, Sep 1937; won't happen on historical
+		CHI_defence_in_depth						# 70d
 		CHI_initiate_the_gung_ho_movement			# 70d - Indusco/Gung Ho cooperatives founded 1938; take ASAP after war starts
 		CHI_finance_cooperatives					# 70d - take ASAP after war starts
 		CHI_expand_the_cooperatives					# 35d - take ASAP after war starts

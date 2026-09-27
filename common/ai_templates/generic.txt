@@ -243,9 +243,9 @@ mountaineers_generic = {
 			}
 
 		}
-		replace_at_match = 0.5
+		replace_at_match = 0.6
 		replace_with = mountaineers_late
-		target_min_match = 0.5
+		target_min_match = 0.6
 	}
 
 	mountaineers_late = {
@@ -270,7 +270,7 @@ mountaineers_generic = {
 			}
 
 			regiments = {
-				mountaineers = 20
+				mountaineers = 12
 			}
 
 			}
@@ -312,7 +312,7 @@ marines_generic = {
 			}
 
 			regiments = {
-				marine = 20
+				marine = 15
 			}
 		}
 	}
