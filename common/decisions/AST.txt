@@ -2722,16 +2722,16 @@ AST_kingdom_expansions_cat = {
 
 		available = {
 			INS = {
-				is_puppet_of = HOL
+				is_puppet = yes
 			}
-			HOL = {
+			OVERLORD = {
 				NOT = { has_war_with = ROOT}
 				OR = {
 					has_war = yes
 					has_capitulated = yes
 				}
 			}
-			HOL = {
+			OVERLORD = {
 				naval_strength_ratio = {
 					tag = AST
 					ratio < 1
@@ -2798,7 +2798,7 @@ AST_kingdom_expansions_cat = {
 		cost = 100
 
 		available = {
-			any_allied_country = {
+			any_country = {
 				owns_state = 634
 				controls_state = 634
 				owns_state = 734
@@ -2820,7 +2820,7 @@ AST_kingdom_expansions_cat = {
 		remove_effect = {
 			IF = {
 				limit = {
-					any_allied_country = {
+					any_country = {
 						is_ai = no
 						owns_state = 634
 						controls_state = 634
@@ -2893,7 +2893,7 @@ AST_kingdom_expansions_cat = {
 		cost = 100
 
 		available = {
-			any_allied_country = {
+			any_country = {
 				owns_state = 1071
 				controls_state = 1071
 				owns_state = 635
@@ -2913,7 +2913,7 @@ AST_kingdom_expansions_cat = {
 		remove_effect = {
 			IF = {
 				limit = {
-					any_allied_country = {
+					any_country = {
 						is_ai = no
 						owns_state = 1071
 						controls_state = 1071
