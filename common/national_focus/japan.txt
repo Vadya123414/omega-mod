@@ -22049,7 +22049,17 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}	
-			
+			if = {
+				limit = {CHI = {is_ai = yes}}
+			}
+			hidden_effect = {
+				CHI = {
+				reduce_focus_completion_cost = {
+				focus = { CHI_one_nation_undivided }
+				cost = -70
+				}
+				}
+			}
 		}
 	}
 
@@ -23177,17 +23187,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			613 = {
-				OR = {
-					is_owned_by = ROOT
-					OWNER = {
-						is_ally_with = ROOT
-					}
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
 		}
 
 		will_lead_to_war_with = CHI
@@ -25134,7 +25133,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-
+			every_controlled_state = {
+				limit = {
+				JAP_is_home_islands_state = yes
+				NOT = { 
+					has_state_category = megalopolis
+				}
+				}
+				set_state_category = metropolis
+			}
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -25201,7 +25208,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
+			random_core_states = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = {

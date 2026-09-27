@@ -116,7 +116,7 @@ focus_tree = {
         icon = GFX_focus_RAJ_indianisation_of_army
         x = 0
         y = 0
-        mutually_exclusive = { focus = RAJ_keep_british_generals }
+        #mutually_exclusive = { focus = RAJ_keep_british_generals }
         cost = 5
 
         offset = {
@@ -586,29 +586,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNATIONAL_TRADE}
 
         completion_reward = { #Note: the equipment is ACTUALLY ADDED in RAJ_mughal_uprising, if you want to change the amount, you need to do it here and TWICE in the RAJ_Mughal_uprising
-            IF = {
-                limit = {
-                    has_dlc = "Arms Against Tyranny"
-                }
-                add_equipment_subsidy = {
-                    cic = 1000
-                    equipment_type = infantry_equipment
-                    seller_tags = { SOV GER JAP ITA } 
-                }
-                add_equipment_subsidy = {
-                    cic = 1000
-                    equipment_type = artillery_equipment
-                    seller_tags = { SOV GER JAP ITA }
-                }
-                add_equipment_subsidy = {
-                    cic = 1000
-                    equipment_type = light_tank_chassis
-                    seller_tags = { SOV GER JAP ITA } 
-                }
-            }
-            ELSE = {
                 set_country_flag = RAJ_mughal_no_aat_give_equipment
-                effect_tooltip = {
                     add_equipment_to_stockpile = { 
                         type = infantry_equipment
                         amount = 4000
@@ -619,62 +597,11 @@ focus_tree = {
                         amount = 800
                         producer = SOV
                     }
-                }
-            }
-
-            effect_tooltip = {
-                add_equipment_to_stockpile = { 
-                    type = infantry_equipment
-                    amount = 2000
-                    producer = SOV
-                }
-                add_equipment_to_stockpile = { 
-                    type = artillery_equipment
-                    amount = 500
-                    producer = SOV
-                }
-            }
-            IF = {
-                limit = {
-                    has_dlc = "No Step Back"
-                }
-                create_equipment_variant = {
-                    name = "BT-7"
-                    type = light_tank_chassis_2
-
-                   upgrades = {       
-                       tank_nsb_engine_upgrade = 10
-                       tank_nsb_armor_upgrade = 2 
-                   }
-                    modules={
-                        main_armament_slot=tank_small_cannon_2
-                        engine_type_slot=tank_gasoline_engine
-                        turret_type_slot=tank_light_two_man_tank_turret
-                        suspension_type_slot=tank_christie_suspension
-                        armor_type_slot=tank_welded_armor
-                    }
-                    
-                    model = "SOV_light_armor_entity"
-                    icon = "GFX_SOV_improved_light_tank_medium" 
-                }
-                effect_tooltip = {
-                    add_equipment_to_stockpile = {
-                        type =  light_tank_chassis
-                        variant_name = "BT-7"
-                        amount = 100
+                    add_equipment_to_stockpile = { 
+                        type = support_equipment
+                        amount = 800
                         producer = SOV
                     }
-                }
-            }
-            ELSE = {
-                effect_tooltip = {
-                    add_equipment_to_stockpile = { 
-                        type = light_tank_equipment_1 
-                        amount = 100 
-                        producer = SOV 
-                    }
-                }
-            }
 			custom_effect_tooltip = newline_tt
 			custom_effect_tooltip = MUGHAL_divisions_spawned
             custom_effect_tooltip = newline_tt
@@ -742,10 +669,10 @@ focus_tree = {
                 }
 
                 987 = {
-                    add_extra_state_shared_building_slots = 1
+                    add_extra_state_shared_building_slots = 2
                     add_building_construction = {
                         type = arms_factory
-                        level = 1
+                        level = 2
                         instant_build = yes
                     }
                 }
@@ -767,7 +694,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_stir_unrest_in_the_north 
 
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -1285,7 +1212,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_mughal_uprising
 
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -1480,7 +1407,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_halls_of_knowledge
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -1515,7 +1442,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_halls_of_knowledge_2
 
-        cost = 10
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -1732,13 +1659,30 @@ focus_tree = {
 
         completion_reward = {
             try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
-            if = {
-                limit = {
-                    has_idea = civilian_economy
-                }
-
-                add_ideas = low_economic_mobilisation
-            }
+			if = {
+				limit = {
+					has_idea = civilian_economy
+				}
+				add_ideas = low_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = low_economic_mobilisation
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+			else_if = {
+				limit = {
+					has_idea = war_economy
+				}
+				add_ideas = tot_economic_mobilisation
+			}
 
             add_ideas = idea_RAJ_reviving_the_workshop_of_the_world
 
@@ -1778,11 +1722,11 @@ focus_tree = {
             random_core_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    infrastructure < 5
+                    infrastructure < 4
                 }
                 add_building_construction = {
                     type = infrastructure
-                    level = 1
+                    level = 2
                     instant_build = yes
                 } 
             }
@@ -1790,11 +1734,11 @@ focus_tree = {
             random_core_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    infrastructure < 5
+                    infrastructure < 4
                 }
                 add_building_construction = {
                     type = infrastructure
-                    level = 1
+                    level = 2
                     instant_build = yes
                 } 
             }
@@ -1802,11 +1746,11 @@ focus_tree = {
             random_core_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    infrastructure < 5
+                    infrastructure < 4
                 }
                 add_building_construction = {
                     type = infrastructure
-                    level = 1
+                    level = 2
                     instant_build = yes
                 } 
             }
@@ -1863,22 +1807,28 @@ focus_tree = {
             division_template = {
                 name = "Gajhastas"
                 is_locked = no
-                #division_names_group = NAMELIST_ID # optional
-                priority = 1 # optional 
-                template_counter = 108 # optional
+
+                priority = 1 
+                template_counter = 108 
+                override_model = RAJ_elephantry_entity
                 regiments = {
-                    elephantry = { x = 0 y = 0 }
-                    elephantry = { x = 0 y = 1 }
-                    elephantry = { x = 0 y = 2 }
-                    elephantry = { x = 0 y = 3 }
-                    elephantry = { x = 1 y = 0 }
-                    elephantry = { x = 1 y = 1 }
-                    elephantry = { x = 1 y = 2 }
-                    elephantry = { x = 1 y = 3 }
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 0 y = 3 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 1 y = 3 }
+
+                    artillery_brigade = { x = 2 y = 0 }
+                    artillery_brigade = { x = 2 y = 1 }
+                    artillery_brigade = { x = 2 y = 2 }
+                    artillery_brigade = { x = 2 y = 3 }
                 }
-                #support = {
-                #    artillery = { x = 0 y = 0 }
-                #}
+                support = {
+                    elephantry = { x = 0 y = 0 }
+                }
             }
             capital_scope = {
                 create_unit = {
@@ -4224,7 +4174,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_appoint_a_c_suite
 
-        cost = 5
+        cost = 4
 
         ai_will_do = {
             factor = 1
@@ -4411,7 +4361,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_take_over_administrative_rights
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -4516,7 +4466,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_privatized_tutelage
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -5328,7 +5278,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_circuvment_demobilization_restrictions
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -5398,7 +5348,10 @@ focus_tree = {
         available_if_capitulated = no
 
         search_filters = {FOCUS_FILTER_ANNEXATION}
-
+        will_lead_to_war_with = BHU
+        will_lead_to_war_with = NEP
+        will_lead_to_war_with = PER
+        will_lead_to_war_with = TIB
         completion_reward = {
             if = {
                 limit = {
@@ -7059,7 +7012,7 @@ focus_tree = {
         id = RAJ_productivity_mandate
         icon = GFX_focus_CZE_german_puppet
         prerequisite = { focus = RAJ_acquire_new_resources }
-        mutually_exclusive = { focus = RAJ_night_shifts }
+        #mutually_exclusive = { focus = RAJ_night_shifts }
         x = 2
         y = 1
         relative_position_id = RAJ_acquire_new_resources
@@ -7167,7 +7120,7 @@ focus_tree = {
         id = RAJ_night_shifts
         icon = GFX_goal_generic_production2
         prerequisite = { focus = RAJ_acquire_new_resources }
-        mutually_exclusive = { focus = RAJ_productivity_mandate }
+        #mutually_exclusive = { focus = RAJ_productivity_mandate }
         x = 2
         y = 0
         relative_position_id = RAJ_productivity_mandate
@@ -7961,7 +7914,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_uplifting_the_people_of_india
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -7994,7 +7947,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_mahatma
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -8106,7 +8059,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_form_a_federal_court
        
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -8184,7 +8137,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_litteracy_effort
        
-        cost = 10
+        cost = 4
 
         ai_will_do = {
             factor = 1
@@ -8279,7 +8232,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_enrollment_of_dali_children
        
-        cost = 10
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -8385,7 +8338,7 @@ focus_tree = {
 
             custom_effect_tooltip = generic_skip_one_line_tt
 
-            add_ideas = idea_RAJ_government_budget_shortfall
+            #add_ideas = idea_RAJ_government_budget_shortfall
         }
     }
 
@@ -8712,95 +8665,33 @@ focus_tree = {
 
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
-        complete_tooltip = {
-            every_owned_state = {
-                limit = { has_state_flag = agcoop_built_infra }
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1
-                    instant_build = yes
-                }
-      
-            }
-
-            every_owned_state = { #Need to loop through twice beccause sometimes you can build a civ but not an infra if you already had a 5 infra in a state
-                limit = { has_state_flag = agcoop_built_civ }
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-        }
-
         completion_reward = {
-            custom_effect_tooltip = RAJ_agricultural_cooperatives_tt
-
-            #effect_tooltip = {
-            #    every_owned_state = {
-            #        limit = {
-            #            is_controlled_by = ROOT
-            #            industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
-            #            infrastructure < 5
-            #        }
-#
-            #        add_building_construction = {
-            #            type = infrastructure
-            #            level = 1
-            #            instant_build = yes
-            #        }
-            #    }
-            #}
-
-            set_variable = { agcoop_infra_build_counter = 0 }
-            set_variable = { agcoop_civ_build_counter = 0 }
-            for_each_scope_loop = {
-                array = owned_states_at_game_start
-                
-                 if = {
-                     limit = {
-                        is_controlled_by = ROOT
-                        industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
+  		every_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+                is_core_of = RAJ
+				infrastructure < 4
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 2
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
                     }     
-                    ROOT = { add_to_variable = { agcoop_infra_build_counter = 1 } } #Count infra if state requirements are correct, even if one isnt build because you already technically fulfilled the requirements
-                    if = {
-                        limit = {
-                            infrastructure < 5
-                        }
-
-                        add_building_construction = {
-                            type = infrastructure
-                            level = 1
-                            instant_build = yes
-                        }
-                        set_state_flag = agcoop_built_infra #used for complete tooltip
-                    }
-
-                    log = "INFRA BUILT: [?ROOT.agcoop_infra_build_counter]"
-                    set_temp_variable = { t_infra_build_counter  = ROOT.agcoop_infra_build_counter }
-
-                    modulo_temp_variable = { var = t_infra_build_counter value = 2 } #every other infra counts as a civ
-
-                    if = {
-                        limit = {
-                            check_variable = { t_infra_build_counter = 1 } 
-                            check_variable = { ROOT.agcoop_civ_build_counter < 10 } #Max roof
-                        }
-#
-                        
-                        add_extra_state_shared_building_slots = 1
-                        add_building_construction = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
-                        set_state_flag = agcoop_built_civ
-                        add_to_variable = { ROOT.agcoop_civ_build_counter = 1 }
-                    }     
-                }
-            }
         }
-    }
 
     focus = {
         id = RAJ_tea_exports
@@ -9083,7 +8974,7 @@ focus_tree = {
         y = 2
         relative_position_id = RAJ_league_against_gandhism
         mutually_exclusive = { focus = RAJ_red_in_the_shadows }
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -9232,7 +9123,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_a_congress_resurgent
         mutually_exclusive = { focus = RAJ_two_nation_theory_dlc }
-        cost = 10
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -9265,7 +9156,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_india_united
         mutually_exclusive = { focus = RAJ_india_united }
-        cost = 10
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -9273,7 +9164,6 @@ focus_tree = {
 
         available = {
             compare_autonomy_state > autonomy_colony
-            date > 2077.1.1
         }
         
         bypass = {
@@ -9514,7 +9404,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_red_in_the_shadows
 
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -10021,7 +9911,7 @@ focus_tree = {
         mutually_exclusive = {  }
         relative_position_id = RAJ_agrarian_socialism
 
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -10090,7 +9980,7 @@ focus_tree = {
         y = 2
         relative_position_id = RAJ_agrarian_socialism
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -10176,7 +10066,7 @@ focus_tree = {
                 name = RAJ_communism_party
             }
             custom_effect_tooltip = RAJ_five_year_plan_modify_tt
-            add_to_variable = { RAJ_fyp_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
+            add_to_variable = { RAJ_fyp_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
             add_to_variable = { RAJ_fyp_consumer_goods_factor = 0.1 tooltip = consumer_goods_factor_tt }
             if = {
                 limit = {
@@ -10197,7 +10087,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_land_of_the_tillers
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -10273,7 +10163,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_peoples_liberation_army
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -10376,7 +10266,7 @@ focus_tree = {
 
         #mutually_exclusive = { focus = RAJ_soviet_influence }
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -10400,7 +10290,7 @@ focus_tree = {
 
         completion_reward = {
             custom_effect_tooltip = RAJ_five_year_plan_modify_tt
-            add_to_variable = { RAJ_fyp_production_speed_industrial_complex_factor = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
+            add_to_variable = { RAJ_fyp_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
         }
     }
 
@@ -10458,7 +10348,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_reorganize_the_five_year_plan_towards_heavy_industry
 
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -10558,7 +10448,7 @@ focus_tree = {
             custom_effect_tooltip = RAJ_five_year_plan_modify_tt
             add_to_variable = { RAJ_fyp_consumer_goods_factor = 0.08 tooltip = consumer_goods_factor_tt }
             add_to_variable = { RAJ_fyp_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
-            add_to_variable = { RAJ_fyp_production_speed_industrial_complex_factor = 0.05 tooltip = production_speed_industrial_complex_factor_tt }
+            add_to_variable = { RAJ_fyp_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
             add_to_variable = { RAJ_fyp_production_lack_of_resource_penalty_factor = -0.15 tooltip = production_lack_of_resource_penalty_factor_tt }
 
         }
@@ -10574,7 +10464,7 @@ focus_tree = {
 
        # mutually_exclusive = { focus = RAJ_reorganize_the_five_year_plan_towards_heavy_industry }
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -10612,7 +10502,7 @@ focus_tree = {
         y = 2
         relative_position_id = RAJ_focus_on_military_industry
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -10807,7 +10697,7 @@ focus_tree = {
         mutually_exclusive = {  }
         relative_position_id = RAJ_land_of_the_tillers
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -11175,7 +11065,7 @@ focus_tree = {
             add_tech_bonus = {
                 name = RAJ_education_for_the_masses
                 #bonus = <float>
-                uses = 1
+                uses = 3
                 category = computing_tech # optional 
                 ahead_reduction = 2
                 # technology  = technology_id # optional
@@ -11312,11 +11202,11 @@ focus_tree = {
 
                 add_resource = {
                     type = tungsten
-                    amount = 4
+                    amount = 8
                 }
                 add_resource = {
                     type = steel
-                    amount = 4
+                    amount = 8
                 }
             }
         }
@@ -11439,7 +11329,7 @@ focus_tree = {
         relative_position_id = RAJ_every_man_a_gun
 
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -11518,7 +11408,7 @@ focus_tree = {
         mutually_exclusive = {  }
         relative_position_id = RAJ_comrades_of_the_city
 
-        cost = 10
+        cost = 8
 
         ai_will_do = {
             factor = 1
@@ -11542,7 +11432,7 @@ focus_tree = {
 
         completion_reward = {
             435 = {
-                add_extra_state_shared_building_slots = 2
+                add_extra_state_shared_building_slots = 3
                 add_building_construction = {
                     type = dam
                     level = 1
@@ -11554,7 +11444,7 @@ focus_tree = {
             }
 
             431 = {
-                add_extra_state_shared_building_slots = 2
+                add_extra_state_shared_building_slots = 3
                 add_building_construction = {
                     type = dam
                     level = 1
@@ -11566,7 +11456,7 @@ focus_tree = {
             }
 
             430 = {
-                add_extra_state_shared_building_slots = 2
+                add_extra_state_shared_building_slots = 3
                 add_building_construction = {
                     type = dam
                     level = 1
@@ -11786,7 +11676,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_red_curtain_falls_over_asia
 
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -11966,7 +11856,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_protest_against_the_howell_monument
         
-        cost = 10
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -12833,7 +12723,7 @@ focus_tree = {
                 has_completed_focus = RAJ_red_in_the_shadows
             }
         }
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -13006,7 +12896,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_seek_japanese_support
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -13345,7 +13235,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_war_taxes
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -13410,7 +13300,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_azad_hind_dlc_bank
         
-        cost = 10
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -13447,7 +13337,7 @@ focus_tree = {
         y = 4
         relative_position_id = RAJ_give_me_blood_and_i_will_grant_you_freedom
         mutually_exclusive = { focus = RAJ_netaji }
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -13496,7 +13386,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_hindutva
         mutually_exclusive = { focus = RAJ_hindutva }
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -13537,7 +13427,7 @@ focus_tree = {
         relative_position_id = RAJ_netaji
        
 
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -13553,7 +13443,7 @@ focus_tree = {
         bypass = {
 
         }
-
+        will_lead_to_war_with = BHU
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -14042,7 +13932,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_netaji
         prerequisite = { focus = RAJ_netaji }
-        cost = 10
+        cost = 5
         ai_will_do = {
             factor = 30
         }
@@ -14359,7 +14249,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_second_duar_war
         #mutually_exclusive = { focus = RAJ_guarantee_nepalese_independence }
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -14374,7 +14264,7 @@ focus_tree = {
                 exists = no
             }
         }
-
+        will_lead_to_war_with = NEP
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -14425,7 +14315,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_seek_financial_aid_from_the_ussr
        #mutually_exclusive = { focus = RAJ_form_ties_with_leftist_parties }
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -14616,7 +14506,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_hindutva
         
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -14845,7 +14735,7 @@ focus_tree = {
         y = 2
         relative_position_id = RAJ_sanatani
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -14878,7 +14768,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_sword_and_the_saffron
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -14948,7 +14838,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_seven_shackles
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15034,8 +14924,8 @@ focus_tree = {
         x = 0
         y = 1
         relative_position_id = RAJ_tea_exports
-        mutually_exclusive = { focus = RAJ_haripura_session_of_the_indian_national_congress  }
-        cost = 5
+        #mutually_exclusive = { focus = RAJ_haripura_session_of_the_indian_national_congress  }
+        cost = 3
 
         ai_will_do = {
             factor = 25
@@ -15106,8 +14996,8 @@ focus_tree = {
         x = -2
         y = 0
         relative_position_id = RAJ_cripps_mission_dlc
-        mutually_exclusive = { focus = RAJ_cripps_mission_dlc }
-        cost = 5
+        #mutually_exclusive = { focus = RAJ_cripps_mission_dlc }
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -15182,7 +15072,7 @@ focus_tree = {
 
                 }
 
-                add_compliance = -50
+                add_compliance = -10
                 add_resistance = -30
             }
         }
@@ -15196,7 +15086,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_power_sharing_agreement
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15319,7 +15209,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_the_pakistan_movement
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15456,7 +15346,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_cabinet_mission_plan
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15636,7 +15526,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            add_stability = -0.15
+            add_stability = -0.5
             add_political_power = 150
             set_country_flag = RAJ_allow_release_states
         }
@@ -15651,7 +15541,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_haripura_session_of_the_indian_national_congress
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -15710,7 +15600,7 @@ focus_tree = {
         relative_position_id = RAJ_hedgemony_of_the_subcontinent
         
 
-        cost = 10
+        cost = 7
 
         ai_will_do = {
             factor = 1
@@ -16322,7 +16212,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_preamble_to_the_constitution_of_india
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -16357,7 +16247,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_india_indivisible
         
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -16540,7 +16430,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_an_economy_unbound 
         
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -16587,7 +16477,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_annex_goa
         
-        cost = 5
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -16660,7 +16550,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_annex_goa 
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -16704,7 +16594,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_an_economy_unbound
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -16907,7 +16797,7 @@ focus_tree = {
         y = 0
         relative_position_id = RAJ_mixed_economy
         
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -16963,7 +16853,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_fight_malnutrition
         
-        cost = 10
+        cost = 3
 
         ai_will_do = {
             factor = 1
@@ -17010,13 +16900,10 @@ focus_tree = {
         available = {
             OR = {
                 surrender_progress > 0.15
-                AND = {
                     has_war_support > 0.59
-                    num_of_factories > 60
                 }
                 has_idea = tot_economic_mobilisation
             }
-        }
         
         bypass = {
 
@@ -17034,6 +16921,8 @@ focus_tree = {
            add_research_slot = 1
            try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
            try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
+           try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
+           try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
            try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
            try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
         }
@@ -17968,7 +17857,7 @@ focus = {
 	x = 1
 	y = 1
 	relative_position_id = RAJ_curtail_the_zamindars 
-	cost = 5
+	cost = 3
 
 	search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -18327,32 +18216,23 @@ focus = {
 		
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
+			add_equipment_to_stockpile = {
+                type = infantry_equipment
+				amount = 2000
+				producer = ENG  
 			}
-			add_equipment_subsidy = {
-				cic = 1000
-				equipment_type = infantry_equipment
-				seller_tags = { ENG } 
+			add_equipment_to_stockpile = {
+                type = motorized_equipment
+				amount = 400
+				producer = ENG  
 			}
-			add_equipment_subsidy = {
-				cic = 1000
-				equipment_type = motorized_equipment
-				seller_tags = { ENG } 
-			}
-			add_equipment_subsidy = {
-				cic = 1000
-				equipment_type = artillery_equipment
-				seller_tags = { ENG } 
-			}
-			add_equipment_subsidy = {
-				cic = 1000
-				equipment_type = light_tank_chassis
-				seller_tags = { ENG } 
+			add_equipment_to_stockpile = {
+                type = support_equipment
+				amount = 285
+				producer = ENG  
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-		}
+    
 
 		every_owned_state = {
 			limit = {
@@ -18369,10 +18249,10 @@ focus = {
 				type = arms_factory
 				level = 1
 				instant_build = yes
-			}
-		}
-	}
-}
+                }
+            }
+        }
+    }
 
 focus = {
 	id = RAJ_imperial_rail_renewal_act
@@ -21079,7 +20959,7 @@ focus = {
         x = -4
         y = 0
         relative_position_id = RAJ_indianize_the_army
-        mutually_exclusive = { focus = RAJ_indianize_the_army }
+        #mutually_exclusive = { focus = RAJ_indianize_the_army }
 
         cost = 5
 
@@ -22595,7 +22475,7 @@ focus = {
         y = 1
         relative_position_id = RAJ_local_recruitment_offices
         icon = GFX_focus_generic_commonwealth_build_infantry
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -24317,8 +24197,12 @@ focus = {
         }
         
         bypass = {
-
-        }
+            CHI = {OR = {
+                is_capitulated = yes
+                exists = no
+                }
+            }
+         }
 
         cancel_if_invalid = yes
         continue_if_invalid = no
@@ -24999,7 +24883,7 @@ focus = {
         bypass = {
 
         }
-
+  
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -25007,6 +24891,11 @@ focus = {
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
+            hidden_effect = {
+            if = { limit = {is_ai = yes}
+                add_ideas = idea_RAJ_ordnance_sim
+        }
+    }
             if = {
                 limit = {
                     has_dlc = "Arms Against Tyranny"
@@ -25649,7 +25538,7 @@ focus = {
         y = 1
         relative_position_id = RAJ_increase_funding_for_the_GRSE
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -25832,7 +25721,7 @@ focus = {
         y = 1
         relative_position_id = RAJ_the_red_curtain_falls_over_asia
 
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -25880,7 +25769,7 @@ focus = {
         y = 0
         relative_position_id = RAJ_red_punjab_operation
 
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -25930,7 +25819,7 @@ focus = {
         y = 0
         relative_position_id = RAJ_red_punjab_operation
 
-        cost = 5
+        cost = 2
 
         ai_will_do = {
             factor = 1
@@ -25978,7 +25867,7 @@ focus = {
         y = 1
         relative_position_id = RAJ_red_punjab_operation
 
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -25993,7 +25882,8 @@ focus = {
         bypass = {
 
         }
-
+        will_lead_to_war_with = PAK
+        will_lead_to_war_with = BRM
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -26117,8 +26007,10 @@ focus = {
 
         completion_reward = {
             try_build_civ_in_core_otherwise_build_in_controlled = yes
+            try_build_civ_in_core_otherwise_build_in_controlled = yes
+            try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
             try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
         }
-    }
+        }
 
 }       
