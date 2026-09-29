@@ -650,6 +650,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			has_completed_focus = FRA_proclaim_the_third_empire
             any_country = {
 					has_war_with = ROOT
 					OR = {
@@ -693,7 +694,8 @@ my_coalition_category = {
 		}
 
         visible = {
-           any_country = {
+			has_completed_focus = FRA_proclaim_the_third_empire
+            any_country = {
 					has_war_with = ROOT
 					OR = {
 						controls_state = 165 # Контролирует Наварру
@@ -752,6 +754,7 @@ my_coalition_category = {
 		}
 
         visible = {
+			has_completed_focus = FRA_proclaim_the_third_empire
             any_country = {
 					has_war_with = ROOT
 					OR = {
