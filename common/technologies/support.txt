@@ -318,7 +318,7 @@ technologies = {
 
 		light_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -326,7 +326,7 @@ technologies = {
 		}
 		medium_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -334,7 +334,7 @@ technologies = {
 		}
 		heavy_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -395,7 +395,7 @@ technologies = {
 		assault_engineer = {
 			breakthrough = 0.1
 			urban = {
-				attack = 0.15
+				attack = 0.1
 			}
 		}
 
@@ -409,7 +409,7 @@ technologies = {
 
 		light_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -417,7 +417,7 @@ technologies = {
 		}
 		medium_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -425,7 +425,7 @@ technologies = {
 		}
 		heavy_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -1295,7 +1295,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		path = {
@@ -1350,7 +1350,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		helicopter_brigade = {
@@ -1497,7 +1497,11 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.12
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
 		}
 
 		path = {
@@ -1545,7 +1549,11 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.12
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
 		}
 
 		path = {
@@ -1592,7 +1600,11 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.12
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
 		}
 
 
@@ -2110,7 +2122,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		show_equipment_icon = yes
 
-		research_cost = 2.0
+		research_cost = 1.0
 		start_year = 1938
 		folder = {
 			name = support_folder

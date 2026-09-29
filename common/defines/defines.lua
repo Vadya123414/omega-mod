@@ -36,13 +36,13 @@ NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость тре
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999;
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999;
 NDefines.NMilitary.MAX_AIR_EXPERIENCE  = 999;
-NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0;	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
-NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;
-NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Value at index J is the scaling applied to planning cap when HQ is J provinces behind the frontline
-NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
-NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
-NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
+NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;  --  какая часть людских ресурсов возвращается в ваш общий пул при ручном расформировании подразделения, находящегося в окружении.
+-- NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0;	-- скоростью накопления бонусов планирования для неподвижных дивок
+-- NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Value at index J is the scaling applied to planning cap when HQ is J provinces behind the frontline
+-- NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
+-- NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
+-- NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- левел во время развёртки
 --NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };		-- Same as PLANNING_CAP_COMMS_SCALING but for leader modifiers
 --NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0;									-- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- Same as PLANNING_CAP_COMMS_SCALING but for active abilities
@@ -52,9 +52,9 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войс
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
-NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0;
-NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;--100							-- стоимость снятие гордости флота
-NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
+NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0; -- орга когда двигаешь флот
+NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;      --100	-- стоимость снятие гордости флота
+NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- случайная поломка во время тренировки
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0.0-- Кол-во мин в рег
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- скорость минирования
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
@@ -125,11 +125,11 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Number of factories us
 
 --Воздух
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.7 ---размены в воздухе(ванила = 1)
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.6 ---размены в воздухе(ванила = 1)
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- скорость минирования
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- минимальная скорость минирования
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1; -- глобальная скорость самолётов
-NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
+NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- скорость развёртки самолётов
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
 		25,			-- pp cost if no available scientist

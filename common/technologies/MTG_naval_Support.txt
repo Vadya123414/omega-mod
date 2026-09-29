@@ -1567,8 +1567,6 @@ technologies = {
 			}
 		}
 
-
-
 		path = {
 			leads_to_tech = mtg_landing_craft
 			research_cost_coeff = 1
@@ -1579,12 +1577,12 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 
-		research_cost = 0.25
+		research_cost = 1.5
 		start_year = 1922
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 1 }
+			position = { x = 0 y = 1 }
 		}
 
 		ai_will_do = {
@@ -1632,14 +1630,14 @@ technologies = {
 		#naval_invasion_capacity = 20
 
 		path = {
-			leads_to_tech = sp_improved_support_ship
-			research_cost_coeff = 1
-		}
-		path = {
 			leads_to_tech = mtg_tank_landing_craft
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = sp_improved_support_ship
+			research_cost_coeff = 1
+		}
 
 		enable_equipments = {
 			floating_harbor_equipment_1
@@ -1648,11 +1646,11 @@ technologies = {
 		show_equipment_icon = yes
 
 		research_cost = 2
-		start_year = 1938
+		start_year = 1940
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 10 }
+			position = { x = 0 y = 13 }
 		}
 
 		ai_will_do = {
@@ -1696,10 +1694,10 @@ technologies = {
 		#naval_invasion_capacity = 100
 
 		research_cost = 2
-		start_year = 1940
+		start_year = 1942
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 13 }
+			position = { x = 0 y = 16 }
 		}
 
 		ai_will_do = {
@@ -1766,12 +1764,12 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 4 y = 10 }
+			position = { x = 1 y = 10 }
 		}
 
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = 10 }
+			position = { x = 1 y = 10 }
 		}		
 
 		categories = {
@@ -1799,15 +1797,15 @@ technologies = {
 		xp_boost_cost = 75
 		xp_research_bonus = 1.5
 		research_cost = 2.5
-		start_year = 1940
+		start_year = 1941
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 4 y = 13 }
+			position = { x = 1 y = 14 }
 		}
 
 		folder = {
 			name = naval_folder
-			position = { x = 4 y = 17 }
+			position = { x = 1 y = 17 }
 		}		
 
 		categories = {
@@ -1843,7 +1841,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 17 }
+			position = { x = -2 y = 17 }
 		}
 
 		categories = {
