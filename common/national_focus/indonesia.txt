@@ -5927,7 +5927,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = INS_subsidize_local_business
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 0.2 #be patient
@@ -6109,7 +6109,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = INS_governor_general_de_jonge
 
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 		completion_reward = {
@@ -6135,7 +6135,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = INS_governor_general_de_jonge
 
-		cost = 10
+		cost = 4
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -6182,7 +6182,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = INS_governor_general_de_jonge
 
-		cost = 10
+		cost = 4
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 		completion_reward = {
@@ -6358,7 +6358,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = INS_governor_general_tjarda
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {

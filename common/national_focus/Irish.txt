@@ -22,7 +22,7 @@ focus_tree = {
 		mutually_exclusive = { focus = IRE_sabotage }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 100000
 		}
 		available = {
 			

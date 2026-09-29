@@ -678,6 +678,8 @@ focus = {
 			is_ai = no
 		    SIK = { has_government = communism}
 			SIK = { is_ai = yes }
+			SIK = { NOT = {has_war_with = RAJ }}
+			
 			
 		}
 

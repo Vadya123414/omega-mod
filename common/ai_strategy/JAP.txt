@@ -121,60 +121,60 @@ chinese_war = {
 
 	ai_strategy = {
 	    type = front_unit_request
-	    tag = CHI
+	    id = CHI
 	    value = 2000
 	}
 	ai_strategy = {
 	    type = front_unit_request
-	    tag = HBC
+	    id = HBC
 	    value = 2000
 	}
 
 	ai_strategy = {
 	    type = antagonize
-	    tag = XSM
+	   id = XSM
 	    value = -30
 	}
 
 	ai_strategy = {
 	    type = antagonize
-	    tag = NXM
+	    id = NXM
 	    value = -30
 	}
 
 	ai_strategy = {
 	    type = antagonize
-	    tag = GSM
+	    id = GSM
 	    value = -30
 	}
 	ai_strategy = {
 	    type = antagonize
-	    tag = SHX
+	    id = SHX
 	    value = -30
 	}
 		ai_strategy = {
 	    type = antagonize
-	    tag = XIS
+	    id = XIS
 	    value = -30
 	}
 	ai_strategy = {
 	    type = antagonize
-	    tag = GDC
+	    id = GDC
 	    value = -30
 	}
 		ai_strategy = {
 	    type = antagonize
-	    tag = GXC
+	   	id = GXC
 	    value = -30
 	}
 		ai_strategy = {
 	    type = antagonize
-	    tag = SIC
+	    id = SIC
 	    value = -30
 	}
 		ai_strategy = {
 	    type = antagonize
-	    tag = PRC
+	    id = PRC
 	    value = -30
 	}
 }

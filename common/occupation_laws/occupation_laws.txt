@@ -1170,7 +1170,9 @@ GER_SS_occupation = {
 	ai_will_do = {
 		# enabled if has damaged factories
 		# gets higher score if more are damaged
-		base = 1000
+		base = 0
+
+		
 	}
 }
 

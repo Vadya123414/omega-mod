@@ -202,36 +202,103 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		
-		ai_will_do = {
-			factor = 2
-			
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1940.1.1"
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
-	
 	
 	
 	improved_small_airframe = {
@@ -289,38 +356,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 2
-			
-			modifier = {
-				factor = 5
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1940.2.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1944.1.1"
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -370,32 +499,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 		
-		ai_will_do = {
-			factor = 2
-			
-			modifier = {
-				factor = 4
-				is_major = yes
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1948.1.1"
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -444,15 +641,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				tag = GER
-				factor = 2
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -474,8 +756,101 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 0
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
+			}
 		}
 	}
 	
@@ -509,12 +884,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				num_of_military_factories < 15
-				factor = 0.1
-			}
+			factor = 0
 		}
 	}
 	
@@ -549,31 +919,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1936.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 	}
 	
@@ -612,31 +958,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1940.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 	
@@ -675,25 +997,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1944.1.1"
-			}
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = tactical_bomber
-				}
-				factor = 2
-			}
-			modifier = {
-				factor = 1.2
-				is_major = yes
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 	}
 	
@@ -731,11 +1035,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_major = yes
-				factor = 4
-			}
+			factor = 0
 		}
 	}
 
@@ -768,23 +1068,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				num_of_military_factories < 30
-				factor = 0.1
-			}
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 10
-				tag = USA
-				date > 1937.1.1
-			}
+			base = 0
 		}
 	}
 	
@@ -817,17 +1101,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 10
-				tag = USA
-			}
+			base = 0
 		}
 	}
 	
@@ -878,17 +1152,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			base = 0
 		}
 	}
 	
@@ -921,17 +1185,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			base = 0
 		}
 	}
 	
@@ -968,14 +1222,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_deployed_air_force_size = {
-					size > 500
-					type = strategic_bomber
-				}
-				factor = 4.5
-			}
+			base = 0
 		}
 	}
 
@@ -1020,15 +1267,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1069,15 +1308,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1106,15 +1337,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1141,13 +1364,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = basic_medium_airframe
-				}
-				factor = 3
-			}
+			factor = 0
 		}
 	}
 
@@ -1182,15 +1399,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1225,15 +1434,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1263,15 +1464,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -1318,15 +1511,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
+			ai_will_do = {
 				factor = 5
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1360,23 +1638,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				date > "1937.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1938.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1939.1.1"
-				factor = 3
-			}
-			modifier = {
-				has_War = yes
-				factor = 3
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1409,22 +1764,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = basic_small_airframe
-					has_tech = basic_medium_airframe
-					has_tech = basic_large_airframe
-				}
+			ai_will_do = {
 				factor = 5
-			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = GER
-				}
-				factor = 3
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1465,23 +1898,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = basic_small_airframe
-					has_tech = basic_medium_airframe
-					has_tech = basic_large_airframe
-				}
-				factor = 5
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			factor = 0
 		}
 	}
 
@@ -1514,23 +1931,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = improved_small_airframe
-					has_tech = improved_medium_airframe
-					has_tech = improved_large_airframe
-				}
-				factor = 5
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			factor = 0
 		}
 	}
 
@@ -1563,23 +1964,7 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = improved_small_airframe
-					has_tech = improved_medium_airframe
-					has_tech = improved_large_airframe
-				}
-				factor = 5
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = SOV
-					tag = ENG
-				}
-				factor = 3
-			}
+			factor = 0
 		}
 	}
 
@@ -1629,35 +2014,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_tech = iw_small_airframe
-					has_tech = iw_medium_airframe
-					has_tech = iw_large_airframe
-				}
-				factor = 5
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			modifier = {
-				date > "1937.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1938.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1939.1.1"
-				factor = 3
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1703,27 +2153,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			modifier = {
-				date > "1937.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1938.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1939.1.1"
-				factor = 3
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1769,34 +2292,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				is_major = yes
-				factor = 8
-				date > "1940.6.1"
-			}
-			modifier = {
-				factor = 0
-				original_tag = GER
-				date < "1940.12.1"
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			
-			modifier = {
-				date > "1941.1.1"
-				factor = 2
-			}
-			modifier = {
-				date > "1942.1.1"
-				factor = 2
-			}
-			modifier = {
-				date > "1943.1.1"
-				factor = 3
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1837,27 +2426,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			modifier = {
-				date > "1943.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1944.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1945.1.1"
-				factor = 3
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1891,34 +2553,100 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-			modifier = {
-				num_of_military_factories < 10
-				factor = 0
-			}
-			modifier = {
-				date > "1937.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1938.1.1"
-				factor = 1.5
-			}
-			modifier = {
-				date > "1939.1.1"
-				factor = 3
-			}
-			modifier = {
-				OR = {
-					tag = USA
-					tag = JAP
-				}
-				factor = 3
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
 			}
 		}
 	}
@@ -1955,8 +2683,101 @@ technologies = {
 		}
 		special_project_specialization = { specialization_air }
 
-		ai_will_do = {
-			factor = 5
+			ai_will_do = {
+				factor = 30000
+				modifier = {
+					OR = {
+						original_tag = MAN 
+						original_tag = ITA
+						original_tag = FRA
+						original_tag = AFG
+						original_tag = ALB
+						original_tag = ARG
+						original_tag = AST
+						original_tag = AUS
+						original_tag = BEL
+						original_tag = BHU
+						original_tag = BOL
+						original_tag = BRA
+						original_tag = BUL
+						original_tag = CAN
+						original_tag = CHI
+						original_tag = CHL
+						original_tag = COL
+						original_tag = COS
+						original_tag = CUB
+						original_tag = CZE
+						original_tag = DEN
+						original_tag = DOM
+						original_tag = ECU
+						original_tag = EGY
+						original_tag = ELS
+						original_tag = EST
+						original_tag = ETH
+						original_tag = FIN
+						original_tag = GRE
+						original_tag = GUA
+						original_tag = GXC
+						original_tag = HAI
+						original_tag = HOL
+						original_tag = HON
+						original_tag = HUN
+						original_tag = ICE
+						original_tag = INS
+						original_tag = IRE
+						original_tag = IRQ
+						original_tag = JOR
+						original_tag = KOR
+						original_tag = LAT
+						original_tag = LBA
+						original_tag = LEB
+						original_tag = LIB
+						original_tag = LIT
+						original_tag = LUX
+						original_tag = MAL
+						original_tag = MEN
+						original_tag = MEX
+						original_tag = MON
+						original_tag = NEP
+						original_tag = NIC
+						original_tag = NOR
+						original_tag = NZL
+						original_tag = OMA
+						original_tag = PAL
+						original_tag = PAN
+						original_tag = PAR
+						original_tag = PER
+						original_tag = PHI
+						original_tag = POL
+						original_tag = POR
+						original_tag = PRC
+						original_tag = PRU
+						original_tag = RAJ
+						original_tag = ROM
+						original_tag = SAF
+						original_tag = SAU
+						original_tag = SER
+						original_tag = SHX
+						original_tag = SIA
+						original_tag = SIK
+						original_tag = SLO
+						original_tag = SPR
+						original_tag = SWE
+						original_tag = SWI
+						original_tag = SYR
+						original_tag = TAN
+						original_tag = TIB
+						original_tag = TUR
+						original_tag = UKR
+						original_tag = URG
+						original_tag = VEN
+						original_tag = XSM
+						original_tag = YEM
+						original_tag = YUG
+						original_tag = YUN
+					}
+					factor = 0
+			}
 		}
 	}
 

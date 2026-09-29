@@ -5396,11 +5396,17 @@ focus_tree = {
 			
 		}
 
+		
 		bypass = {
 			or = {
 			has_war_with = CHI
 				CHI = {
-					is_subject_of = ROOT
+					or = {
+						is_subject_of = ROOT
+						exists = no
+						has_capitulated = yes
+					}
+					
 				}
 			}
 		}
@@ -11492,7 +11498,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			
 			OR = {
 				AND = {
 					608 = {
@@ -11526,7 +11531,6 @@ focus_tree = {
 						}
 					}
 				}
-				is_in_faction_with = CHI
 				has_war_with = CHI
 				has_subject = CHI
 			}
@@ -11712,10 +11716,8 @@ focus_tree = {
 				add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
 
 			}
-			ELSE_IF = {
-				limit = {
-					has_active_mission = JAP_kwantung_army_impatience
-				}
+			ELSE = {
+					#has_active_mission = JAP_kwantung_army_impatience
 
 				add_days_mission_timeout = {
 				    mission = JAP_kwantung_army_impatience
@@ -11997,7 +11999,6 @@ focus_tree = {
 			CHI = {
 				every_core_state = {
 					limit = {
-						is_owned_and_controlled_by = ROOT
 						NOT = {
 							state = 745 # Kwantung Leased Territory
 							state = 609 # Easty Hebei
@@ -12016,10 +12017,32 @@ focus_tree = {
 						}
 					}
 					add_core_of = RNG
+				}
+			}
+			CHI = {
+				every_core_state = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						NOT = {
+							state = 745 # Kwantung Leased Territory
+							state = 609 # Easty Hebei
+							state = 611 # South Chahar
+							state = 612 # Chahar
+							region = 155 # West Manchuria
+							region = 242 # North Manchuria
+							region = 243 # East Manchuria
+							state = 728 # Gouangzhouwan
+							state = 729 # Macau
+							state = 326 # Hong Kong
+							state = 743 # Qingdao
+							state = 524 # Taiwan
+							state = 1039 # Hebei-Chahar
+							state = 591 # Hainan
+						}
+					}
 					transfer_state_to = RNG
 				}
 			}
-
 			hidden_effect = {
 				RNG = {
 					add_equipment_to_stockpile = { 
@@ -17470,6 +17493,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_organize_a_general_election
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
@@ -21961,6 +21986,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
 				}
 			}
 		}
@@ -22022,7 +22049,17 @@ focus_tree = {
 				}
 				mark_focus_tree_layout_dirty = yes
 			}	
-			
+			if = {
+				limit = {CHI = {is_ai = yes}}
+			}
+			hidden_effect = {
+				CHI = {
+				reduce_focus_completion_cost = {
+				focus = { CHI_one_nation_undivided }
+				cost = -70
+				}
+				}
+			}
 		}
 	}
 
@@ -23150,17 +23187,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			613 = {
-				OR = {
-					is_owned_by = ROOT
-					OWNER = {
-						is_ally_with = ROOT
-					}
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}
 		}
 
 		will_lead_to_war_with = CHI
@@ -25107,7 +25133,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-
+			every_controlled_state = {
+				limit = {
+				JAP_is_home_islands_state = yes
+				NOT = { 
+					has_state_category = megalopolis
+				}
+				}
+				set_state_category = metropolis
+			}
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -25174,7 +25208,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
+			random_core_states = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = {
