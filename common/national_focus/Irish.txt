@@ -263,19 +263,23 @@ focus = {
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = IRE_independet focus = IRE_new_dominion}
 		cost = 5
-		mutually_exclusive = { focus = IRE_join_commintern focus = IRE_join_axis}
 		ai_will_do = {
 			factor = 5
 		}
 		relative_position_id = IRE_Vibori
 		available = {
-		
+			is_subject = no
 		}
 		available_if_capitulated = yes
 		
 		x = 0
 		y = 6
-		
+		bypass = {
+			OR = {
+				is_subject = no
+				is_in_faction_with = ENG
+			}
+		}
 		completion_reward = {
 			ENG = { add_to_faction = IRE }
 			add_war_support = 0.15
@@ -1158,8 +1162,8 @@ focus = {
 	focus = {
 		id = IRE_join_commintern
 		icon = GFX_focus_SOV_socialism_in_one_country
-		prerequisite = {focus =  IRE_new_course focus =  IRE_independet}
-		mutually_exclusive = {focus = IRE_Allies focus = IRE_join_axis}
+		prerequisite = {focus =  IRE_new_course }
+		mutually_exclusive = {focus = IRE_join_axis}
 		
 		cost = 5
 		ai_will_do = {
@@ -1168,10 +1172,15 @@ focus = {
 		relative_position_id = IRE_new_course
 		
 		available = {
-
+			is_subject = no
 		}
 		available_if_capitulated = yes
-		
+		bypass = {
+			OR = {
+				is_subject = no
+				is_in_faction_with = SOV
+			}
+		}
 		x = -2
 		y = 2
 		
@@ -1269,8 +1278,8 @@ focus = {
 	focus = {
 		id = IRE_join_axis
 		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = {focus =  IRE_new_course focus =  IRE_independet}
-		mutually_exclusive = {focus = IRE_Allies focus = IRE_join_commintern}
+		prerequisite = {focus =  IRE_new_course }
+		mutually_exclusive = { focus = IRE_join_commintern}
 		cost = 5
 		ai_will_do = {
 			factor = 5
@@ -1278,10 +1287,15 @@ focus = {
 		relative_position_id = IRE_new_course
 		
 		available = {
-
+			is_subject = no
 		}
 		available_if_capitulated = yes
-		
+		bypass = {
+			OR = {
+				is_subject = no
+				is_in_faction_with = GER
+			}
+		}
 		x = 2
 		y = 2
 		

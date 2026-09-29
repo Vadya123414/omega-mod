@@ -973,7 +973,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_develop_libya
-		cost = 1
+		cost = 3
 		available = {
 			OR = {
 				any_controlled_state = {
@@ -1600,7 +1600,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = ITA_litoranea_balbo
-		cost = 10
+		cost = 5
 		available = {
 			448 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -1754,7 +1754,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 10
+		cost = 5
 		available = {
 			any_controlled_state = {
 				is_on_continent = africa
@@ -1778,7 +1778,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 10
+		cost = 5
 		available = {
 			any_state = {
 				OR = {
@@ -2337,7 +2337,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_polizia_dell_africa_italiana
-		cost = 10
+		cost = 5
 		available = {
 			any_state = {
 				OR = {
@@ -21738,25 +21738,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_cooperatives_for_intensive_exploitation_tt
-
-			if = {
-				limit = {
-					any_owned_state = {
-						is_on_continent = africa
-						is_controlled_by = ROOT
-						state_has_any_resource = yes
-					}
-				}
-				custom_effect_tooltip = generic_current_effects
-				every_owned_state = {
-					limit = {
-						is_on_continent = africa
-						is_controlled_by = ROOT
-						state_has_any_resource = yes
-					}
-					add_dynamic_modifier = { modifier = ITA_cooperatives_for_intensive_exploitation_dm }
-				}
-			}
 		}
 	}
 

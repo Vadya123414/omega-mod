@@ -2725,7 +2725,6 @@ focus_tree = {
 		relative_position_id = GER_armament_rationalization
 		cost = 5
 		available = {
-			has_government = fascism
 			has_war_with_major = yes
 			OR = {
 				has_war_support > 0.89
@@ -2739,12 +2738,13 @@ focus_tree = {
 			}
 		}
 
-		allow_branch = {
-			has_government = fascism
-		}
-
 		select_effect = {
-			play_song = "Тотальная война"
+			IF = {
+				limit = {
+					has_government = fascism
+				}
+				play_song = "Тотальная война"
+			}
 		}
 
 		continue_if_invalid = yes
