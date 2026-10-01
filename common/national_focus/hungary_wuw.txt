@@ -469,7 +469,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_subvert_gombos_troops
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -797,7 +797,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
 
-		cost = 5
+		cost = 3
 
 		allow_branch = {
 			has_dlc = "La Resistance"
@@ -1138,7 +1138,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_the_old_habsburg_king
 
-		cost = 10
+		cost = 5
 
 		offset = {
 			x = 2
@@ -1214,7 +1214,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_attempt_economic_independence
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1574,7 +1574,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_austrian_restoration
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 25
@@ -1650,7 +1650,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_austrian_restoration
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -1701,7 +1701,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_austrian_restoration
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -1901,7 +1901,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_grand_habsburg_alliance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -2203,7 +2203,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_grand_habsburg_alliance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -2349,7 +2349,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_a_grand_habsburg_alliance
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 15
@@ -2448,7 +2448,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_reenlist_the_sich_riflemen
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 20
@@ -2778,7 +2778,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_the_kingdom_of_ukraine
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 25
@@ -3956,7 +3956,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_lombardo_venetian_kingdom
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 50
@@ -4348,7 +4348,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_lombardo_venetian_kingdom
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 5
@@ -4453,7 +4453,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_reclaim_the_holy_city
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -4731,7 +4731,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_hungarian_galicia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4888,7 +4888,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_hungarian_galicia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4927,7 +4927,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_multi_ethnic_empire
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -5124,7 +5124,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_the_old_habsburg_king
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -5174,7 +5174,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_secure_army_loyalty
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -5329,7 +5329,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_honor_the_great_war_veterans
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5724,7 +5724,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_elect_a_democratic_king
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -5942,7 +5942,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_elect_a_fascist_king
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -6038,7 +6038,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_establishing_a_new_dynasty
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -6434,7 +6434,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_royalist_education_initiative
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -6956,7 +6956,7 @@ focus_tree = {
 		will_lead_to_war_with = JOR
 		will_lead_to_war_with = SUD
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -7173,7 +7173,7 @@ focus_tree = {
 
 		will_lead_to_war_with = SOV
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -7451,7 +7451,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_guarantee_religious_liberties
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -7535,7 +7535,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_guarantee_religious_liberties
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -7625,7 +7625,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_join_the_allies
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 15
@@ -7913,7 +7913,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -8038,7 +8038,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_strengthen_horthys_reign
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -8657,7 +8657,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_undermine_the_admiral
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 10
@@ -9061,7 +9061,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_a_roman_catholic_state
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -9218,7 +9218,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_heirs_of_the_huns
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -9263,7 +9263,7 @@ focus_tree = {
 
 		will_lead_to_war_with = SOV
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -9708,7 +9708,7 @@ focus_tree = {
 		will_lead_to_war_with = YUG
 		will_lead_to_war_with = CRO
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -10583,7 +10583,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_demand_carpathian_ruthenia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40
@@ -11166,7 +11166,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_joint_aluminum_mining_company
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 80
@@ -11322,7 +11322,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_protect_austria
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 15
@@ -11475,7 +11475,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 15
@@ -11525,7 +11525,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 5
@@ -11568,7 +11568,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -12102,7 +12102,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_reviving_the_spirit_of_1848
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 15
@@ -12501,7 +12501,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_establish_the_second_republic
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -13132,7 +13132,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_approach_the_diasporas
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -13460,7 +13460,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_join_the_comintern
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -13500,7 +13500,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_goulash_communism
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -13677,7 +13677,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_soviet_hungarian_war_indsutry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -13721,7 +13721,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -13771,7 +13771,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -14005,7 +14005,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -14210,7 +14210,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_nationalize_key_industries
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -15125,7 +15125,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -15370,7 +15370,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -15641,7 +15641,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16108,7 +16108,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -16286,7 +16286,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_AIR_XP FOCUS_FILTER_HISTORICAL }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 5
@@ -16393,7 +16393,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 15
@@ -16489,7 +16489,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -16638,7 +16638,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 5
@@ -17568,7 +17568,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -17637,7 +17637,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = HUN_solyom_development
-				bonus = 0.15
+				bonus = 0.2
 				uses = 3
 				category = cat_air_bombs
 				category = cat_air_engine
@@ -17963,7 +17963,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -18018,7 +18018,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -18061,7 +18061,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_joint_air_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -18237,7 +18237,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -18335,14 +18335,14 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = wuw_HUN_form_the_gyorshadtest
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = cat_light_armor
 			}
 
 			add_tech_bonus = {
 				name = wuw_HUN_form_the_gyorshadtest
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = motorized_equipment
 			}
@@ -18556,7 +18556,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 15
@@ -18719,7 +18719,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_magyar_kiralyi_csendorseg
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -18758,7 +18758,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -18955,7 +18955,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -19059,7 +19059,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = HUN_the_botond
-				bonus = 0.75
+				bonus = 1
 				uses = 1
 				category = motorized_equipment
 			}
@@ -19134,112 +19134,6 @@ focus_tree = {
 				category = cat_medium_armor
 			}
 
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				IF = {
-					limit = {
-						has_tech = improved_medium_tank_chassis
-					}
-					#40M Turán
-					create_equipment_variant = {
-						name = "40M Turán"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = additional_machine_guns
-							special_type_slot_2 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 3
-							tank_nsb_armor_upgrade = 3
-						}
-						#icon = "GFX_ITA_basic_medium_tank_medium"
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = wuw_HUN_the_turan_40_tt
-					effect_tooltip = {
-						#40M Turán
-						create_equipment_variant = {
-							name = "40M Turán"
-							type = medium_tank_chassis_2
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_medium_cannon_2
-								turret_type_slot = tank_medium_two_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = additional_machine_guns
-								special_type_slot_2 = additional_machine_guns
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 3
-								tank_nsb_armor_upgrade = 3
-							}
-							#icon = "GFX_ITA_basic_medium_tank_medium"
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_tech = advanced_medium_tank_chassis
-					}
-					#43M Turán III
-					create_equipment_variant = {
-						name = "43M Turán III"
-						type = medium_tank_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon_2
-							turret_type_slot = tank_medium_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = secondary_turret_hmg
-							special_type_slot_2 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 3
-							tank_nsb_armor_upgrade = 7
-						}
-						#icon = "GFX_ITA_basic_medium_tank_medium"
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = wuw_HUN_the_turan_43_tt
-					effect_tooltip = {
-						#43M Turán III
-						create_equipment_variant = {
-							name = "43M Turán III"
-							type = medium_tank_chassis_3
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_medium_cannon_2
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = secondary_turret_hmg
-								special_type_slot_2 = additional_machine_guns
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 3
-								tank_nsb_armor_upgrade = 7
-							}
-							#icon = "GFX_ITA_basic_medium_tank_medium"
-						}
-					}
-				}
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			IF = {
@@ -19306,109 +19200,6 @@ focus_tree = {
 
 			add_ideas = wuw_HUN_assault_gun_focus_idea
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				IF = {
-					limit = {
-						has_tech = advanced_medium_tank_chassis
-					}
-					# 43M Zrínyi
-					create_equipment_variant = {
-						name = "43M Zrínyi"
-						type = medium_tank_artillery_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_howitzer_2
-							turret_type_slot = tank_medium_one_man_tank_turret
-							suspension_type_slot = tank_torsion_bar_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 3
-							tank_nsb_armor_upgrade = 3
-						}
-						#icon = "GFX_ITA_advanced_medium_art_medium"
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = wuw_HUN_zrinyi_arty_tt
-					effect_tooltip = {
-						# 43M Zrínyi
-						create_equipment_variant = {
-							name = "43M Zrínyi"
-							type = medium_tank_artillery_chassis_3
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_medium_howitzer_2
-								turret_type_slot = tank_medium_one_man_tank_turret
-								suspension_type_slot = tank_torsion_bar_suspension
-								armor_type_slot = tank_riveted_armor
-								engine_type_slot = tank_gasoline_engine
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 3
-								tank_nsb_armor_upgrade = 3
-							}
-							#icon = "GFX_ITA_advanced_medium_art_medium"
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_tech = improved_medium_tank_chassis
-					}
-					# 40M Nimród
-					create_equipment_variant = {
-						name = "40M Nimród"
-						type = medium_tank_aa_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_anti_air_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_torsion_bar_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = auto_loader
-							special_type_slot_2 = secondary_turret_small_cannon
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 6
-							tank_nsb_armor_upgrade = 2
-						}
-						#icon = "GFX_ITA_advanced_medium_spaa_medium"
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = wuw_HUN_nimrod_aa_tt
-					effect_tooltip = {
-						# 40M Nimród
-						create_equipment_variant = {
-							name = "40M Nimród"
-							type = medium_tank_aa_chassis_2
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_anti_air_cannon_2
-								turret_type_slot = tank_medium_two_man_tank_turret
-								suspension_type_slot = tank_torsion_bar_suspension
-								armor_type_slot = tank_riveted_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = auto_loader
-								special_type_slot_2 = secondary_turret_small_cannon
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 2
-							}
-							#icon = "GFX_ITA_advanced_medium_spaa_medium"
-						}
-					}
-				}
-			}
 
 		}
 	}
@@ -19424,7 +19215,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -19456,61 +19247,6 @@ focus_tree = {
 
 			add_ideas = HUN_rapid_army_groups_idea
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				IF = {
-					limit = {
-						has_tech = improved_light_tank_chassis
-					}
-					#38M Toldi
-					create_equipment_variant = {
-						name = "38M Toldi"
-						type = light_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon_2
-							turret_type_slot = tank_light_fixed_superstructure_turret
-							suspension_type_slot = tank_torsion_bar_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_2 = tank_radio_1
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 3
-							tank_nsb_armor_upgrade = 2
-						}
-						#icon = "GFX_ITA_improved_light_tank_medium"
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = wuw_HUN_the_toldi_tt
-					effect_tooltip = {
-						#38M Toldi
-						create_equipment_variant = {
-							name = "38M Toldi"
-							type = light_tank_chassis_2
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_small_cannon_2
-								turret_type_slot = tank_light_fixed_superstructure_turret
-								suspension_type_slot = tank_torsion_bar_suspension
-								armor_type_slot = tank_riveted_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_2 = tank_radio_1
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 3
-								tank_nsb_armor_upgrade = 2
-							}
-							#icon = "GFX_ITA_improved_light_tank_medium"
-						}
-					}
-				}
-			}
 
 		}
 	}
@@ -20368,7 +20104,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10

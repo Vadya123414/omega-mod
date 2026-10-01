@@ -2313,8 +2313,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_found_the_jet_institute
-				bonus = 0.5
-				uses = 2
+				bonus = 1
+				uses = 1 
 				category = jet_technology
 			}
 
@@ -15506,7 +15506,7 @@ ai_will_do = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_the_hands_do
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -15566,7 +15566,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_call_for_aid
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15740,7 +15740,7 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_consolidate_power
 		mutually_exclusive = { focus = SOV_offer_autonomy_to_former_soviet_republics }
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -15777,7 +15777,7 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_consolidate_power
 		mutually_exclusive = { focus = SOV_bringing_breakaways_back_to_the_fold }
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -15810,11 +15810,11 @@ ai_will_do = {
 	focus = {
 		id = SOV_restore_the_glory_of_the_motherland
 		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_consolidate_power }
+		prerequisite = { focus = SOV_romanov_reconstruction }
 		x = 0
 		y = 1
-		relative_position_id = SOV_consolidate_power
-		cost = 10
+		relative_position_id = SOV_romanov_reconstruction
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16114,7 +16114,7 @@ ai_will_do = {
 		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_romanov_reconstruction focus = SOV_democratic_referandum}
-		x = 5	
+		x = 2	
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 5
@@ -16166,7 +16166,7 @@ ai_will_do = {
 		id = SOV_russian_corporate_state
 		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_pacify_the_rim focus = RUS_not_vibor}
-		x = 5
+		x = 6
 		y = 2
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 		cost = 5
@@ -16261,10 +16261,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_capital_of_the_tsars
 		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_romanov_reconstruction }
-		x = -2
-		y = 2
-		relative_position_id = SOV_romanov_reconstruction
+		prerequisite = { focus = SOV_restore_the_glory_of_the_motherland }
+		x = 0
+		y = 1
+		relative_position_id = SOV_restore_the_glory_of_the_motherland
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -16285,84 +16285,15 @@ ai_will_do = {
 				}
 			}
 			195 = {
-				if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 5
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 6
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 4
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 3
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 				add_building_construction = {
 					type = anti_air_building
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 				
@@ -16370,43 +16301,6 @@ ai_will_do = {
 				add_dynamic_modifier = {
 					modifier = SOV_capital_of_the_tsars
 				}
-			}
-		}
-	}
-
-	focus = {
-		id = SOV_church_candidates
-		icon = GFX_focus_generic_diplomatic_treaty
-		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = 5
-		y = 2
-		relative_position_id = SOV_romanov_reconstruction
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SOV_dismantle_the_zemsky_sobor }
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
-				}
-				SOV_increase_church_power = yes
-			}
-			if = {
-				limit = {
-					has_completed_focus = SOV_dismantle_the_zemsky_sobor
-				}
-				add_stability = 0.05
-				SOV_increase_church_power = yes
 			}
 		}
 	}
@@ -16419,7 +16313,7 @@ ai_will_do = {
 		prerequisite = { 
 			focus = SOV_romanov_reconstruction 
  		}
-		x = -5
+		x = -3
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
@@ -16533,156 +16427,20 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_the_rightful_heir_to_the_empire
-		icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_church_candidates }
-		mutually_exclusive = { focus = SOV_panslavic_nationalism }
-		x = 0
-		y = 2
-		relative_position_id = SOV_church_candidates
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		
-		search_filters = {}
-
-		available = {
-			is_subject = no
-		}
-
-		completion_reward = {
-
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 2
-	  				}
-
-				 SOV = {
-
-					create_wargoal = {
-					    type = take_state_focus
-					    target = PREV
-					    generator = { 2 }
-	  				}
-    			}
-    		}
-
-			random_country = {
-	 		 	limit = {
-	     			 owns_state = 454
-	  				}
-
-				 SOV = {
-
-					create_wargoal = {
-					    type = take_state_focus
-					    target = PREV
-					    generator = { 454 }
-	  				}
-    			}
-    		}
- 			random_country = {
-	 		 	limit = {
-	     			 owns_state = 797
-	  				}
-
-				 SOV = {
-
-					create_wargoal = {
-					    type = take_state_focus
-					    target = PREV
-					    generator = { 797 }
-	  				}
-    			}
-    		}   			
-    		add_state_claim = 2
-   			add_state_claim = 797
-   			add_state_claim = 454
-		}
-	}
-
-	focus = {
-		id = SOV_the_third_rome
-		icon = GFX_focus_SOV_third_rome
-
-		prerequisite = { focus = SOV_the_rightful_heir_to_the_empire }
-
-		x = 0
-		y = 1
-		relative_position_id = SOV_the_rightful_heir_to_the_empire
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = no
-
-		available = {
-			is_subject = no
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
-
-		completion_reward = {
-			add_ideas = SOV_legacy_of_rome
-   			set_cosmetic_tag = SOV_ROME
-   			custom_effect_tooltip = generic_skip_one_line_tt
-   			
-   			remove_ideas = SOV_tsar_vladimir_i
-   			custom_effect_tooltip = SOV_the_third_rome_tt
-   			if = {
-   				limit = {
-   					has_government = neutrality 
-   				}
-   			promote_character = SOV_metropolitan_meletius
-   			set_country_leader_name = {
-			  ideology = neutrality
-			  name = SOV_patriarch_meletius
-			}
-   			}
-   			else_if = {
-   				limit = {
-   					has_government = fascism
-   				}
-   				add_country_leader_role = {
-   					character = SOV_metropolitan_meletius
-   					promote_leader = yes
-   					country_leader = {
-   						ideology = fascism_ideology
-   						expire = "1953.3.1.1"
-   						traits = { defier_of_the_sun_god supreme_representative_of_god_on_earth } 
-   					}
-   				}	
-   				set_country_leader_name = {
-   				  ideology = fascism
-   				  name = SOV_patriarch_meletius
-   				}
-   			}
-			
-			custom_effect_tooltip = SOV_the_third_rome_tt_2
-   			country_event = NSB_soviet_fascist_tsarist.15
-		}
-	}
-
-	focus = {
 		id = SOV_vengeance_for_the_yoke
 		icon = GFX_focus_generic_attack_mongolia
-		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = -3
+		prerequisite = { focus = SOV_reclaim_uryankhay_krai }
+		x = 0
 		y = 1
-		relative_position_id = SOV_dismantle_the_zemsky_sobor
+		relative_position_id = SOV_reclaim_uryankhay_krai
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = no
-
+		bypass = {
+			MON = { exists = no }
+		}
 		will_lead_to_war_with = MON
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -16715,14 +16473,16 @@ ai_will_do = {
 
 		dynamic = yes
 
-		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
+		prerequisite = { focus = SOV_eastern_expansion }
 
-		x = -7
+		x = 3
 		y = 1
-		relative_position_id = SOV_dismantle_the_zemsky_sobor
+		relative_position_id = SOV_eastern_expansion
 
 		cost = 5
-
+		bypass = {
+			TAN = { exists = no }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -16757,8 +16517,8 @@ ai_will_do = {
 	focus = {
 		id = SOV_westward_bound
 		icon = GFX_SOV_westward_bound_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = 1
+		prerequisite = { focus = SOV_romanov_reconstruction }
+		x = 2
 		y = 2
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
@@ -17214,7 +16974,7 @@ ai_will_do = {
 		prerequisite = { focus = SOV_secure_the_baltics }
 		prerequisite = { focus = SOV_secure_finland }
 		prerequisite = { focus = SOV_the_old_enemy }
-		mutually_exclusive = { focus = SOV_the_rightful_heir_to_the_empire focus = SOV_our_slavic_commitments }
+		mutually_exclusive = { focus = SOV_our_slavic_commitments }
 		x = 0
 		y = 1
 		relative_position_id = SOV_secure_finland
@@ -17425,8 +17185,8 @@ ai_will_do = {
 	focus = {
 		id = SOV_pacify_the_rim
 		icon = GFX_SOV_pacify_the_rim_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_romanov_reconstruction}
-		x = -1
+		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
+		x = 0
 		y = 1
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 		cost = 5
@@ -17540,7 +17300,7 @@ ai_will_do = {
 		id = SOV_eastern_expansion
 		icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_pacify_the_rim }
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = SOV_pacify_the_rim
 		cost = 5
@@ -17612,10 +17372,10 @@ ai_will_do = {
 		id = SOV_intervention_in_the_americas
 		icon = GFX_focus_SOV_ivan_plays_baseball
 		prerequisite = { focus = SOV_eastern_expansion }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SOV_eastern_expansion
-		mutually_exclusive = { focus = SOV_into_central_asia }
+		#mutually_exclusive = { focus = SOV_into_central_asia }
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17729,10 +17489,10 @@ ai_will_do = {
 		id = SOV_into_central_asia
 		icon = GFX_SOV_into_central_asia_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_eastern_expansion }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_expansion
-		mutually_exclusive = { focus = SOV_intervention_in_the_americas }
+		#mutually_exclusive = { focus = SOV_intervention_in_the_americas }
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17847,14 +17607,14 @@ ai_will_do = {
 					limit = {
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 4
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 4
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -17864,14 +17624,14 @@ ai_will_do = {
 					limit = {
 						free_building_slots = {
 							building = dockyard
-							size > 1
+							size > 2
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -17881,14 +17641,14 @@ ai_will_do = {
 					limit = {
 						free_building_slots = {
 							building = dockyard
-							size > 1
+							size > 2
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -17899,10 +17659,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_modernize_the_far_eastern_fleet
 		icon = GFX_SOV_modernize_the_far_eastern_fleet_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_rebuild_the_far_eastern_fleet }
-		x = -2
+		prerequisite = { focus = SOV_japanese_overtures focus = SOV_the_berlin_moscow_axis }
+		x = 0
 		y = 1
-		relative_position_id = SOV_rebuild_the_far_eastern_fleet
+		relative_position_id = SOV_japanese_overtures
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17945,10 +17705,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_memories_of_1905
 		icon = GFX_SOV_memories_of_1905_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_rebuild_the_far_eastern_fleet }
+		prerequisite = { focus = SOV_pacify_the_rim }
 		x = 0
 		y = 1
-		relative_position_id = SOV_rebuild_the_far_eastern_fleet
+		relative_position_id = SOV_pacify_the_rim
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17979,10 +17739,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_lonely_island
 		icon = GFX_SOV_the_lonely_island_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_memories_of_1905 }
-		x = 0
-		y = 1
-		relative_position_id = SOV_memories_of_1905
+		prerequisite = { focus = SOV_the_berlin_moscow_axis }
+		x = -3
+		y = 2
+		relative_position_id = SOV_eastern_expansion
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -18039,7 +17799,7 @@ ai_will_do = {
 	focus = {
 		id = SOV_an_empire_in_the_pacific
 		icon = GFX_focus_SOV_pacific_empire
-		prerequisite = { focus = SOV_the_lonely_island }
+		prerequisite = { focus = SOV_modernize_the_far_eastern_fleet focus = SOV_the_lonely_island focus = SOV_restore_the_old_eastern_empire }
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_lonely_island
@@ -18079,18 +17839,19 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_berlin_moscow_axis
 		icon = GFX_SOV_the_berlin_moscow_axis_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_pacify_the_rim }
+		prerequisite = { focus = SOV_memories_of_1905 }
+		prerequisite = { focus = SOV_eastern_expansion }
+		prerequisite = { focus = SOV_rebuild_the_far_eastern_fleet }
 		mutually_exclusive = { focus = SOV_japanese_overtures }
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = SOV_pacify_the_rim
+		relative_position_id = SOV_memories_of_1905
 		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
 		bypass = {
-			is_in_faction_with = GER
-			GER = { is_faction_leader = yes }
+			GER = { NOT = { has_government = fascism } }
 		}
 		available_if_capitulated = no
 
@@ -18115,14 +17876,22 @@ ai_will_do = {
 	focus = {
 		id = SOV_japanese_overtures
 		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_pacify_the_rim }
+		prerequisite = { focus = SOV_rebuild_the_far_eastern_fleet }
 		mutually_exclusive = { focus = SOV_the_berlin_moscow_axis }
-		x = 2
+		x = -3
 		y = 1
-		relative_position_id = SOV_pacify_the_rim
+		relative_position_id = SOV_memories_of_1905
 		cost = 2
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			JAP = { 
+				OR = {
+					has_government = democratic 
+					has_government = communism 
+				}
+			}
 		}
 		available_if_capitulated = no
 
@@ -18130,10 +17899,9 @@ ai_will_do = {
 
 		available = {
 			is_subject = no
-			GER = { is_faction_leader = yes }
+			is_faction_leader = yes
 			JAP = {
 				is_in_faction = no
-				has_government = fascism
 			}
 		}
 
@@ -18147,7 +17915,7 @@ ai_will_do = {
 		icon = GFX_focus_SOV_defenders_of_democracy
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_romanov_reconstruction  focus = SOV_dismantle_the_zemsky_sobor}
-		x = 19
+		x = 17
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 5
@@ -18229,7 +17997,9 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = { ideology = democratic popularity = -0.1 }
 			army_experience = 100
 			
 			GER = {army_experience = 100
@@ -18423,31 +18193,31 @@ ai_will_do = {
 			add_ideas = RUS_aggresive_war
 			add_named_threat = { threat = 5  }
 		create_corps_commander = { 
-					name = "Molod"
-					traits = { adaptable  panzer_leader}
-					skill = 6
-					attack_skill = 6
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 0
+					name = "Comandor"
+					traits = { adaptable  infantry_leader}
+					skill = 5
+					attack_skill = 3
+					defense_skill = 8
+					planning_skill = 4
+					logistics_skill = 4
 				}
 		create_corps_commander = { 
 					name = "Kefir"
-					traits = { adaptable  infantry_leader}
-					skill = 6
-					attack_skill = 4
+					traits = { adaptable  panzer_leader}
+					skill = 5
+					attack_skill = 8
 					defense_skill = 3
-					planning_skill = 7
-					logistics_skill = 5
+					planning_skill = 3
+					logistics_skill = 2
 				}
 		create_corps_commander = { 
 					name = "IRA"
 					traits = { adaptable  infantry_leader}
-					skill = 6
+					skill = 5
 					attack_skill = 4
-					defense_skill = 7
-					planning_skill = 4
-					logistics_skill = 4
+					defense_skill = 4
+					planning_skill = 7
+					logistics_skill = 5
 				}
 			
 		}
@@ -19390,19 +19160,19 @@ ai_will_do = {
 			}
 			create_corps_commander = { 
 					name = "NKVD(Nikitka)"
-					traits = { adaptable  panzer_leader}
-					skill = 6
-					attack_skill = 5
-					defense_skill = 3
-					planning_skill = 3
-					logistics_skill = 3
+					traits = { infantry_leader}
+					skill = 5
+					attack_skill = 3
+					defense_skill = 6
+					planning_skill = 6
+					logistics_skill = 6
 				}
 			BLR = {
 			add_ideas = military_youth_focus
 			create_corps_commander = { 
-					name = "Vadya"
+					name = "Sapr"
 					traits = { adaptable  panzer_leader}
-					skill = 6
+					skill = 5
 					attack_skill = 5
 					defense_skill = 3
 					planning_skill = 3
@@ -19418,9 +19188,9 @@ ai_will_do = {
 			UKR = {
 			add_ideas = military_youth_focus
 			create_corps_commander = { 
-					name = "Adolfys"
+					name = "Vadya"
 					traits = { adaptable  panzer_leader}
-					skill = 6
+					skill = 5
 					attack_skill = 5
 					defense_skill = 3
 					planning_skill = 3
@@ -19438,7 +19208,7 @@ ai_will_do = {
 			create_corps_commander = { 
 					name = "Larion"
 					traits = { adaptable  panzer_leader}
-					skill = 6
+					skill = 5
 					attack_skill = 5
 					defense_skill = 3
 					planning_skill = 3
@@ -19520,14 +19290,7 @@ ai_will_do = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				EST = { NOT = { is_in_faction = yes } }
-				LIT = { NOT = { is_in_faction = yes } }
-				LAT = { NOT = { is_in_faction = yes } }
-				TUR = { NOT = { is_in_faction = yes } }
-				PER = { NOT = { is_in_faction = yes } }
-				FIN = { NOT = { is_in_faction = yes } }
-			}
+			FIN = { NOT = { is_in_faction = yes } }
 		}
 		available_if_capitulated = no
 		
@@ -19558,9 +19321,6 @@ ai_will_do = {
 				EST = { NOT = { is_in_faction = yes } }
 				LIT = { NOT = { is_in_faction = yes } }
 				LAT = { NOT = { is_in_faction = yes } }
-				TUR = { NOT = { is_in_faction = yes } }
-				PER = { NOT = { is_in_faction = yes } }
-				FIN = { NOT = { is_in_faction = yes } }
 			}
 		}
 		available_if_capitulated = no
@@ -19601,12 +19361,8 @@ ai_will_do = {
 		}
 		available = {
 			OR = {
-				EST = { NOT = { is_in_faction = yes } }
-				LIT = { NOT = { is_in_faction = yes } }
-				LAT = { NOT = { is_in_faction = yes } }
 				TUR = { NOT = { is_in_faction = yes } }
 				PER = { NOT = { is_in_faction = yes } }
-				FIN = { NOT = { is_in_faction = yes } }
 			}
 		}
 		available_if_capitulated = no
@@ -19773,6 +19529,10 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			FRA = { exists = yes }
+		}
+		
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
@@ -19821,6 +19581,9 @@ ai_will_do = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			ENG = { exists = yes }
+		}
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL }
@@ -19868,6 +19631,9 @@ ai_will_do = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			USA = { exists = yes }
 		}
 		available_if_capitulated = no
 		
