@@ -31130,7 +31130,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_kure_naval_arsenal_organization
 				mio:JAP_kure_naval_arsenal_organization = {
 					add_mio_size = 2

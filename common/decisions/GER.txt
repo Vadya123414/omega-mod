@@ -3235,7 +3235,6 @@ GER_hilfskreuzer_cat = {
 		custom_cost_text = decision_cost_20_convoy_10_NavXP
 
 		custom_cost_trigger = {
-			has_navy_experience > 9
 			has_equipment = {
 				convoy > 19
 			}
@@ -3250,10 +3249,13 @@ GER_hilfskreuzer_cat = {
 		days_remove = 25
 
 		complete_effect = {
-			#add_equipment_to_stockpile = { 
-			#	type = convoy_1
-			#	amount = -20 
-			#}
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = convoy_1
+					amount = -20 
+				}
+				navy_experience = -10
+			}
 		}
 		remove_effect = {
 			if = {
