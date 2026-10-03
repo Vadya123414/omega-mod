@@ -1645,7 +1645,7 @@ ENG_organize_the_blackshirts = {
 			FROM = {
 				has_government = fascism
 			}
-			has_stability < 0.8
+			has_stability < 0.5
 		}
 
 		targets = { GER }
@@ -1682,7 +1682,6 @@ ENG_organize_the_blackshirts = {
 
 		complete_effect = {
 			country_event = { id = mtg_britain.60 hours = 6 }
-			custom_effect_tooltip = ENG_speech_against_germany_tt
 			add_ai_strategy = {
 				type = antagonize
 				id = FROM

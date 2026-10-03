@@ -118,6 +118,7 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 16
 		infrastructure_construction_effect = yes
+		allied_build = yes
 		level_cap = {
 			province_max = 1
 		}
@@ -387,6 +388,7 @@ buildings = {
 		per_controlled_building_extra_cost = 5000
 		icon_frame = 29
 		value = 1
+		allied_build = yes
 		naval_headquarter = yes
 		disabled_in_dmz = yes
 		infrastructure_construction_effect = yes
