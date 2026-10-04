@@ -152,11 +152,6 @@ chinese_war = {
 	    id = SHX
 	    value = -30
 	}
-		ai_strategy = {
-	    type = antagonize
-	    id = XIS
-	    value = -30
-	}
 	ai_strategy = {
 	    type = antagonize
 	    id = GDC
@@ -227,11 +222,6 @@ chinese_war_dont_push_mas = {
 	    tag = SHX
 	    value = -30
 	}
-		ai_strategy = {
-	    type = front_unit_request
-	    tag = XIS
-	    value = -30
-	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = GDC
@@ -260,10 +250,7 @@ JAP_push_snd_hard_initially = {
 		original_tag = JAP
 	}
 	enable = {
-		#is_historical_focus_on = yes
-		
 		has_war_with = SND
-		date < 1939.1.1
 	}
 
 	abort_when_not_enabled = yes
@@ -363,14 +350,7 @@ JAP_push_CHI_hard_initially = {
 		original_tag = JAP
 	}
 	enable = {
-
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				date > 1937.1.1
-			}
 			has_war_with = CHI
-		}
 	}
 
 	abort_when_not_enabled = yes
@@ -388,7 +368,7 @@ JAP_push_CHI_hard_initially = {
 	ai_strategy = {
 		type = front_control
 		tag = CHI
-		ratio = 0.8
+		ratio = 0.9
 		priority = 10000
 		ordertype = front
 		execution_type = rush

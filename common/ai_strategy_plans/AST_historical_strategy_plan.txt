@@ -50,7 +50,6 @@ AST_historical_taog = {
 		AST_empire_air_training_scheme
 		AST_commonwealth_aircraft_corporation
 		AST_solidarity_by_the_empire
-		AST_wool_agreement
 		AST_australian_war_cabinet
 		AST_british_war_cabinet
 		AST_overseas_loyalties
@@ -125,6 +124,90 @@ AST_historical_tfv = {
 	}
 
 	ai_national_focuses = {
+		#выборы мензис
+		AST_solidarity_by_the_empire
+		AST_australian_war_cabinet
+		
+		AST_british_war_cabinet
+		AST_overseas_loyalties
+		AST_all_dressed_up
+
+		AST_the_ultimate_overseas_duty
+		AST_australian_command
+		AST_holding_the_battlefield
+
+		#выборы кэртин
+		AST_no_foreign_battlefields
+		AST_ratify_westminster_adoption_act
+		AST_administer_the_mandate
+
+		AST_until_the_tide_of_battle_swings
+		AST_liberty_loans
+
+		AST_bring_on_the_giant
+		AST_conscription_at_last
+		AST_allied_after_all
+		AST_equal_training
+		AST_reclaim_the_lost_territory
+
+		#окончательная независимость
+		AST_inevitably_independent
+
+		#мольба к британии
+		AST_pleading_britain
+		AST_ending_overseas_conscription
+		AST_seven_million_britishers
+		AST_its_fight_work_or_perish
+
+		AST_populate_or_perish
+		AST_war_is_coming
+		AST_domestic_industry
+		AST_department_of_munitions
+		AST_a_collapsing_league_of_nations
+		AST_public_works
+		AST_lang_plan
+		AST_goods_standard
+		AST_lang_is_right
+		AST_industrial_expansion
+		AST_council_for_scientific_and_industrial_research
+		AST_australian_military_forces
+		AST_invoke_the_1903_defence_act
+		AST_recruitment_drive
+		AST_income_tax_assessment_act
+		AST_reverse_wage_cuts
+		AST_bring_home_the_farmers
+		AST_recovery
+		AST_the_manpower_directorate
+		AST_the_phosphate_commision
+		AST_standard_gauge_line_to_darwin
+		AST_within_reach
+		AST_broken_hill_propietary_company
+		AST_new_deal
+		AST_department_of_aboriginal_affairs
+		AST_diverse_army
+		AST_a_democratic_bulwark
+		AST_rural_concessions
+		AST_volunteer_defence_corps
+		AST_permanant_military_forces
+		AST_second_australian_imperial_force
+		AST_anzac_spirit
+		AST_larrikinism
+		AST_diggers
+		AST_call_that_a_knife
+		AST_lithgow_small_arms_factory
+		AST_lee_enfield_no1_mark3
+		AST_owen_gun
+		AST_defence_citizen_military_forces_act
+		AST_new_south_wales_government_railways
+		AST_dingo_scout_car
+		AST_sentinel_tank_development
+		AST_australian_regular_army
+		AST_department_of_supply_and_development
+		AST_war_carriers
+
+
+
+
 		AST_standard_gauge_railway						#1930s
 		AST_industries_assistance_corporation			#1941
 		AST_western_australian_government_railways		#1937
@@ -196,12 +279,62 @@ AST_historical_tfv = {
 	}
 
 	ideas = {
-		
+				army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
+		army_infantry_2 = 2
+		army_infantry_3 = 2
+		war_industrialist  = 5
 	}
 
 	traits = {
-		captain_of_industry = 5
+
 		war_industrialist = 5
+		army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

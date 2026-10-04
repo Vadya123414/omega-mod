@@ -28,6 +28,8 @@ PAR_historical_plan = {
 	}
 
 	ai_national_focuses = {
+		GUAY_clamp_down_on_new_territories
+		GUAY_no_second_american_colonization
 		
 		GUAY_the_tag_economic_miracle
 		GUAY_exploit_mineral_wealth

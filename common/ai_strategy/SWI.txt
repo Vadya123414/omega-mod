@@ -297,3 +297,55 @@ SWI_strat_avoid_silo_ticino = {
 		target = 846
 	}
 }
+
+SWI_defend_our_terrain = {
+	allowed = {
+		tag = SWI
+	}
+
+	enable = {
+		NOT = { SWI = {has_completed_focus = SWI_attack_from_the_mountains}}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 847
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 3
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 845
+		value = 1000
+	}
+		ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 151
+		value = 1000
+	}
+}
+SWI_defend_our_terrain = {
+	allowed = {
+		tag = SWI
+	}
+
+	enable = {
+		SWI = {has_completed_focus = SWI_attack_from_the_mountains}
+	}
+	abort_when_not_enabled = yes
+
+	# Alexandria
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 3
+		value = 10000
+	}
+
+}
