@@ -2680,6 +2680,12 @@ AST_kingdom_expansions_cat = {
 		fire_only_once = yes
 
 		remove_effect = {
+			every_state = {
+	 			limit = {
+  					is_core_of = NZL
+  				}
+  				add_core_of = AST
+  			}
 			IF = {
 				limit = {
 					NZL = {
