@@ -17,6 +17,7 @@ ideas = {
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
 			}
 
 			cancel = {
