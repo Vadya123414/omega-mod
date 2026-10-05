@@ -258,7 +258,7 @@ USA_chrysler_organization = {
 }
 
 USA_army_ordnance_department_organization = {
-	include = generic_medium_tank_organization
+	include = generic_heavy_tank_organization
 	icon = GFX_idea_army_ordnance_department
 	
 	allowed = {	
@@ -271,10 +271,10 @@ USA_army_ordnance_department_organization = {
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_armor
 		special_trait_background = yes
 
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_all_round_cupola
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_fully_cast_turret
 
-		all_parents = { generic_mio_trait_all_round_cupola }
+		all_parents = { generic_mio_trait_fully_cast_turret }
 		equipment_bonus = {
 			breakthrough = 0.1
 			defense = 0.05
@@ -287,10 +287,10 @@ USA_army_ordnance_department_organization = {
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
 		special_trait_background = yes
 
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_commander_cupola
 
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
+		any_parent = { generic_mio_trait_simplified_layout generic_mio_trait_commander_cupola }
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
 			production_efficiency_gain_factor = 0.1
@@ -1066,7 +1066,10 @@ USA_douglas_aircraft_company_organization = {
 	icon = GFX_idea_douglas_aircraft_company
 	
 	allowed = {	
-		tag = USA 
+		OR = {
+			tag = USA 
+			tag = MEX
+		}
 	}
 
 	override_trait = {
@@ -1122,7 +1125,10 @@ USA_boeing_organization = {
 	icon = GFX_idea_boeing
 	
 	allowed = {	
-		tag = USA 
+		OR = {
+			tag = USA 
+			tag = MEX
+		}
 	}
 	
 	override_trait = {
