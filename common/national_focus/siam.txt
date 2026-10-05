@@ -3966,6 +3966,29 @@
 	}
 
 	focus = {
+		id = SIA_siamese_youth_movement
+		icon = GFX_focus_RAJ_military_into_the_workforce 
+		x = 6
+		y = 1
+		relative_position_id = SIA_phibuns_premiership	
+		prerequisite = { focus =  SIA_phibuns_premiership }
+		#mutually_exclusive = { focus =  }
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		#allow_branch = {
+		#}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = idea_SIA_yuvachon
+		}
+	}
+
+	focus = {
 		id = SIA_territorial_defense_student
 		icon = GFX_focus_SIA_territorial_defense_student
 		x = 0
