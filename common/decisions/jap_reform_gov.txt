@@ -1,0 +1,39 @@
+foreign_politics = {
+		RNG_coastal = {
+
+    fire_only_once = no
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+                cost = 5
+            available = {
+                original_tag = JAP
+            }
+            visible = {
+				AND = {
+					RNG = { exists = yes}
+					original_tag = JAP
+				}
+            }
+        ai_will_do = {
+			factor = 1000
+		}
+                complete_effect = {
+					RNG = {
+						every_controlled_state = {
+							limit = {
+								AND = {
+									is_core_of = RNG
+									is_coastal = yes
+								}	
+							}
+							transfer_state_to = JAP
+							add_compliance = 100
+                        }
+					}
+
+				}
+			}
+
+}

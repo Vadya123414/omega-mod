@@ -3,12 +3,12 @@ MAL_UK = {
     color_ui = rgb { 255 73 121 }
 }
 
-RAJ_UK = {
+RAJ_UK = { 
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }
 }
 
-RAJ_FREE = {
+RAJ_FREE = {    
 	color = rgb { 80  165  10 }
 	color_ui = rgb { 80  165  10 }
 }
@@ -1383,8 +1383,8 @@ BUL_AUS_danubian_state = {
 }
 
 antilles = {
-	color = rgb { 140 65 166 }
-	color_ui = rgb { 140 65 166 }
+	color = rgb { 51 153 255 }
+	color_ui = rgb { 0 89 179 }
 }
 
 latin_africa = {

@@ -1,7 +1,7 @@
 FRA_annex = {
 	
 	icon = military_operation
-	
+	priority = 67
 	picture = generic_army_support
 	
 	allowed = {
@@ -14,3 +14,13 @@ FRA_annex = {
 	
 }
 
+my_coalition_category = {
+    icon = generic_political_actions
+	priority = 1488
+	picture = GFX_decision_cat_picture_ARG_international_loan_decisions
+	
+	
+	visible = {
+		
+	}
+}

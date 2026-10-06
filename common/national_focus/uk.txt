@@ -18,6 +18,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	shared_focus = ABDA_abdacom
 
 #Metropoli 
 
@@ -25,13 +26,12 @@ default = no
 	focus = {
 		id = ENG_ind
 		icon = GFX_focus_generic_british_trade
-		mutually_exclusive = { focus = IRE_sabotage }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
 		available = {
-			
+			126 = { is_controlled_by = ENG }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -48,9 +48,8 @@ default = no
 		focus = {
 		id = ENG_scotland
 		icon = GFX_focus_generic_mining_industry
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -82,9 +81,8 @@ default = no
 		focus = {
 		id = ENG_england
 		icon = GFX_focus_generic_aluminum
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -113,9 +111,8 @@ default = no
 		focus = {
 		id = ENG_yels
 		icon = GFX_goal_generic_construct_naval_dockyard
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -144,9 +141,8 @@ default = no
 		focus = {
 		id = ENG_north
 		icon = GFX_goal_generic_construct_civ_factory
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_ind }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -175,14 +171,19 @@ default = no
 		focus = {
 		id = ENG_end_ind
 		icon = GFX_focus_chi_british_cooperation
-		mutually_exclusive = { focus = IRE_sabotage }
 		prerequisite = { focus = ENG_north  focus = ENG_scotland  focus = ENG_england  focus = ENG_yels}
-		cost = 10
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
 		available = {
-			119 = { is_controlled_by = ENG }
+			OR = {
+				119 = { is_controlled_by = ENG }
+			132 = { is_controlled_by = ENG }
+			122 = { is_controlled_by = ENG }
+			133 = { is_controlled_by = ENG }
+			}
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = ENG_ind
@@ -194,19 +195,22 @@ default = no
 		completion_reward = {
 			custom_effect_tooltip = ENG_end_ind_tt
 			if = {
-				limit = {has_completed_focus = ENG_scotland}
+				limit = {
+					has_completed_focus = ENG_scotland
+					133 = { is_controlled_by = ENG }
+				}
 				133 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_england}
+				limit = {has_completed_focus = ENG_england 132 = { is_controlled_by = ENG }}
 				132 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_yels}
+				limit = {has_completed_focus = ENG_yels 122 = { is_controlled_by = ENG }}
 				122 = { set_state_category = megalopolis }
 			}
 			if = {
-				limit = {has_completed_focus = ENG_north}
+				limit = {has_completed_focus = ENG_north 119 = { is_controlled_by = ENG }}
 				119 = { set_state_category = megalopolis }
 			}
 		}
@@ -223,22 +227,6 @@ default = no
 					NOT = { is_in_faction_with = GER } #We assume POL will help vs Germany unless they are allied to them
 				}
 			}
-		
-		bypass = {
-			OR = {
-				AND = {
-					has_war_with = GER
-					POL = {
-							is_in_faction_with = GER # If POL is in GER's faction, no help for us
-						}
-				}
-				AND = {
-					has_war = yes
-					is_in_faction_with = USA
-				}
-				GER = { exists = no }
-			}
-		}
 		
 		icon = GFX_focus_generic_cryptologic_bomb
 		x = 0
@@ -302,7 +290,7 @@ default = no
 		x = 0
 		y = 3
 		relative_position_id = crypto_bomb_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -355,7 +343,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = tizard_mission_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1279,7 +1267,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = royal_ordinance_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2139,7 +2127,7 @@ default = no
 		x = 0
 		y = 2
 		relative_position_id = uk_battleship_focus
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -2348,7 +2336,7 @@ default = no
 		x = 5
 		y = 1
 		relative_position_id = uk_service_focus
-		cost = 10
+		cost = 5
 		completion_reward = {
 			if = {
 				limit = {
@@ -2436,7 +2424,7 @@ default = no
 		x = -3
 		y = 1
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 		completion_reward = {
 			118 = {
 				IF = {
@@ -2537,7 +2525,7 @@ default = no
 		y = 1
 		relative_position_id = uk_mediterranean_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2623,7 +2611,7 @@ default = no
 		x = 0
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2757,7 +2745,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = uk_protect_suez
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2826,7 +2814,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_balkan_strategy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2857,7 +2845,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_sanction_italy_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -2893,7 +2881,7 @@ default = no
 		y = 1
 		relative_position_id = uk_protect_suez
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2977,7 +2965,7 @@ default = no
 		y = 1
 		relative_position_id = uk_protect_suez
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3043,7 +3031,7 @@ default = no
 		x = 2
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -3995,10 +3983,6 @@ default = no
 				}	
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_ideas = ENG_evacuated_colonial_assets
-
 		}
 
 	}
@@ -4418,7 +4402,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_asia_focus
-		cost = 10
+		cost = 5
 
 		available = {
 			1021 = {
@@ -4832,7 +4816,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_royal_malay_regiment_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -5292,7 +5276,7 @@ default = no
 		y = 2
 		relative_position_id = hongkong_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5419,7 +5403,7 @@ default = no
 		y = 1
 		relative_position_id = peninsular_focus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6831,22 +6815,35 @@ default = no
 		prerequisite = { focus = ENG_imperial_conference }
 		available = {
 			date > 1940.1.1
-			OR = {
-				CAN = {
-					is_subject_of = ENG
-				}
-				SAF = {
-					is_subject_of = ENG
-				}
-				AST = {
-					is_subject_of = ENG
-				}
-				NZL = {
-					is_subject_of = ENG
-				}
+			or = {
+				OR = {
+				CAN = { is_subject_of = ENG }
+				276 = { is_controlled_by = ENG }
 			}
+			
+			OR = {
+				SAF = { is_subject_of = ENG }
+				275 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				AST = { is_subject_of = ENG }
+				285 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				NZL = { is_subject_of = ENG }
+				284 = { is_controlled_by = ENG }
+			}
+			
+			OR = {
+				RAJ = { is_subject_of = ENG }
+				439 = { is_controlled_by = ENG }
+			}
+			}
+			
 		}
-
+ 
 		icon = GFX_focus_eng_imperial_federation
 
 		x = 0
@@ -6879,6 +6876,9 @@ default = no
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = infa_annex_imperka
+			hidden_effect = {
 			if = {
 				limit = {
 					CAN = {
@@ -6894,15 +6894,6 @@ default = no
 				annex_country = {
 				    target = CAN
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = CAN
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -6921,16 +6912,6 @@ default = no
 				    target = SAF
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = SAF
-							NOT = { state = 275 }
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6947,15 +6928,6 @@ default = no
 				annex_country = {
 				    target = RAJ
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = RAJ 
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -6974,15 +6946,6 @@ default = no
 				    target = AST
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = AST
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -6999,15 +6962,6 @@ default = no
 				annex_country = {
 				    target = NZL
 				    transfer_troops = yes
-				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = NZL
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
-					}
 				}
 			}
 			if = {
@@ -7026,14 +6980,57 @@ default = no
 				    target = MAL
 				    transfer_troops = yes
 				}
-				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = MAL
-							is_controlled_by = ENG
-						}
-						set_compliance = 100
+			}
+
+			
+				# Для Канады
+				every_state = {
+					limit = {
+						is_core_of = CAN
+						is_controlled_by = ENG
 					}
+					set_compliance = 100
+				}
+				# Для Южной Африки
+				every_state = {
+					limit = {
+						is_core_of = SAF
+						NOT = { state = 275 }
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Индии
+				every_state = {
+					limit = {
+						is_core_of = RAJ 
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Австралии
+				every_state = {
+					limit = {
+						is_core_of = AST
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Новой Зеландии
+				every_state = {
+					limit = {
+						is_core_of = NZL
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
+				}
+				# Для Малайзии
+				every_state = {
+					limit = {
+						is_core_of = MAL
+						is_controlled_by = ENG
+					}
+					set_compliance = 100
 				}
 			}		
 		}
@@ -8194,7 +8191,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = uk_iran_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8220,7 +8217,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_embargo_ussr
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -8314,7 +8311,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_military_training_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -8341,7 +8338,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_embargo_germany
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9060,8 +9057,7 @@ default = no
 			}
 
 			hidden_effect = { news_event = { id = mtg_news.19 days = 1 } }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ENG_winston_churchill
+			activate_advisor = ENG_winston_churchill
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_oswald_mosley
 			custom_effect_tooltip = available_political_advisor
@@ -9178,7 +9174,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_reassess_continental_commitments
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9205,7 +9201,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9244,7 +9240,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9266,7 +9262,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_noninterference_treaty_with_germany
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10044,7 +10040,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10087,7 +10083,7 @@ default = no
 		x = -2
 		y = 1
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -10207,7 +10203,7 @@ default = no
 		x = -1
 		y = 2
 		relative_position_id = ENG_imperial_conscription
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10330,7 +10326,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_consolidate_the_british_isles
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -10568,7 +10564,7 @@ default = no
 		x = 1
 		y = 2
 		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10610,7 +10606,7 @@ default = no
 		x = 2
 		y = 1
 		relative_position_id = ENG_bring_the_dominions_back_into_the_fold
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -11023,7 +11019,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_the_british_communist_alternative
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11511,7 +11507,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_the_british_communist_alternative
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11580,7 +11576,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_enforce_decolonization
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11619,7 +11615,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_reach_out_across_the_channel
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11692,7 +11688,7 @@ default = no
 		x = -1
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11737,7 +11733,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_tackle_fascism
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11771,7 +11767,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -11793,7 +11789,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_tackle_capitalism
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11839,7 +11835,7 @@ default = no
 		x = 0
 		y = 1
 		relative_position_id = ENG_bermuda_invasion_launch_point
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11862,7 +11858,7 @@ default = no
 		x = 3
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -11892,7 +11888,7 @@ default = no
 		x = 1
 		y = 1
 		relative_position_id = ENG_the_one_true_revolution
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	

@@ -1125,7 +1125,7 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				air_air_superiority_2
+				air_strategic_bombing_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1199,7 +1199,7 @@ characters={
 			traits = {
 				army_infantry_1
 			}
-			cost = 100
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}

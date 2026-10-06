@@ -1012,3 +1012,951 @@ news_event = {
 		is_triggered_only = yes
       option = { name = "Пох?"  }
    }
+   news_event = {		
+   id = news.4302
+   title = news.4302.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4303
+   title = news.4303.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4304
+   title = news.4304.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4305
+   title = news.4305.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4306
+   title = news.4306.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4307
+   title = news.4307.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+
+   news_event = {		
+   id = news.4308
+   title = news.4308.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4309
+   title = news.4309.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+
+   news_event = {		
+   id = news.4310
+   title = news.4310.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4311
+   title = news.4311.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4312
+   title = news.4312.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4313
+   title = news.4313.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4314
+   title = news.4314.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4315
+   title = news.4315.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4316
+   title = news.4316.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4317
+   title = news.4317.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4318
+   title = news.4318.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4319
+   title = news.4319.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4320
+   title = news.4320.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4321
+   title = news.4321.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+
+ ############################################
+
+   news_event = {		
+   id = news.4322
+   title = news.4322.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4323
+   title = news.4323.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4324
+   title = news.4324.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4325
+   title = news.4325.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4326
+   title = news.4326.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4327
+   title = news.4327.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4328
+   title = news.4328.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4329
+   title = news.4329.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4330
+   title = news.4330.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4331
+   title = news.4331.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4332
+   title = news.4332.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+	news_event = {		
+   id = news.4333
+   title = news.4333.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+##########################################
+   news_event = {		
+   id = news.4400
+   title = news.4400.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4401
+   title = news.4401.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4402
+   title = news.4403.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4404
+   title = news.4404.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4405
+   title = news.4405.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4406
+   title = news.4406.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4407
+   title = news.4407.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4408
+   title = news.4408.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4409
+   title = news.4409.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4410
+   title = news.4410.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4411
+   title = news.4411.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4412
+   title = news.4412.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4413
+   title = news.4413.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4414
+   title = news.4414.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4415
+   title = news.4415.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4416
+   title = news.4416.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4417
+   title = news.4417.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4418
+   title = news.4418.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4419
+   title = news.4419.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4420
+   title = news.4420.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4421
+   title = news.4421.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4422
+   title = news.4422.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4423
+   title = news.4423.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4424
+   title = news.4424.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4425
+   title = news.4425.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4426
+   title = news.4426.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4427
+   title = news.4427.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4428
+   title = news.4428.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4429
+   title = news.4429.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4430
+   title = news.4430.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4431
+   title = news.4431.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4432
+   title = news.4432.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4433
+   title = news.4433.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4434
+   title = news.4434.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4435
+   title = news.4435.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4436
+   title = news.4436.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4437
+   title = news.4437.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4438
+   title = news.4438.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4439
+   title = news.4439.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4440
+   title = news.4440.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+

@@ -17,8 +17,6 @@ add_ideas = {
 	MON_situation1
 	MON_industry
 	soldiers_of_the_steppe
-	not_infantary_volontroopers
-	SOV_closed_eco
 }
 
 recruit_character = MON_anandyn_amar

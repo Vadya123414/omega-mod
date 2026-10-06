@@ -13,104 +13,7 @@ GER_fighter = {
 		factor = 1000
 	}
 
-	great_war_fighter_default = {
-		priority = {
-			factor = 1
-			modifier = { 
-				has_tech = basic_small_airframe
-				factor = 0 #let's not waste XP here
-			}
-		}
 
-		history = yes
-		target_variant = {
-			match_value = 1000
-			type = small_plane_airframe_0
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty	
-			}
-		}
-
-		allowed_modules = {
-			engine_1_1x
-			light_mg_2x
-		}
-	}
-
-	basic_fighter_default = { #BF 109 E ('A' & 'B' in game atm)
-		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = improved_small_airframe
-				factor = 0 #let's not waste XP here
-			}
-		}
-
-		history = yes
-		target_variant = {
-			match_value = 2000
-			type = small_plane_airframe_1
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = fuel_tanks_small
-				special_type_slot_2 = armor_plate_small	
-			}
-		}
-
-		allowed_modules = {
-			light_mg_2x
-			aircraft_cannon_1_2x
-			aircraft_cannon_1_1x
-			engine_2_1x
-			armor_plate_small
-			fuel_tanks_small
-		}
-	}
-
-	# Fw 190 A-1 - early radial fighter (1941)
-	fw_190_a1 = {
-		priority = {
-			factor = 10
-			modifier = {
-				has_tech = advanced_small_airframe
-				factor = 0 #let's not waste XP here
-			}
-			modifier = {
-				has_tech = engines_3
-				factor = 0 #superseded by the A-5
-			}
-		}
-
-		history = yes
-		target_variant = {
-			match_value = 3000
-			type = small_plane_airframe_2
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = armor_plate_small
-				special_type_slot_2 = self_sealing_fuel_tanks_small
-			}
-		}
-
-		allowed_modules = {
-			aircraft_cannon_1_2x
-			aircraft_cannon_1_1x
-			light_mg_4x
-			light_mg_2x
-			engine_2_1x
-			armor_plate_small
-			self_sealing_fuel_tanks_small
-			fuel_tanks_small
-		}
-	}
 
 	# Fw 190 A-5 - definitive radial fighter, adds a drop tank (1942-43)
 	# kept as a fallback past engines_4 in case the 30mm hub cannon for the D-12 isn't researched yet; the D-12's higher match_value supersedes it once buildable
@@ -186,64 +89,6 @@ GER_fighter = {
 			fuel_tanks_small
 		}
 	}
-
-
-	advanced_fighter_default = { #Ta 152
-		priority = {
-			factor = 10
-		}
-
-		history = yes
-		target_variant = {
-			match_value = 4000
-			type = small_plane_airframe_3
-			modules = {
-				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-				engine_type_slot = engine_4_1x
-				special_type_slot_1 = armor_plate_small
-				special_type_slot_2 = fuel_tanks_small
-				special_type_slot_3 = self_sealing_fuel_tanks_small	
-			}
-		}
-
-		allowed_modules = { 
-			aircraft_cannon_2_2x
-			aircraft_cannon_2_1x
-			engine_4_1x
-			armor_plate_small
-			self_sealing_fuel_tanks_small
-			fuel_tanks_small
-		}
-	}
-	jet_fighter_default = { #Me 262
-		priority = {
-			factor = 100
-		}
-
-		history = yes
-		target_variant = {
-			match_value = 4000
-			type = small_plane_airframe_4
-			modules = {
-				fixed_main_weapon_slot = aircraft_cannon_2_2x
-				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
-				engine_type_slot = jet_engine_2x
-				special_type_slot_1 = armor_plate_small
-				special_type_slot_2 = fuel_tanks_small	
-				special_type_slot_3 = self_sealing_fuel_tanks_small	
-			}
-		}
-
-		allowed_modules = { 
-			aircraft_cannon_2_2x
-			aircraft_cannon_2_2x
-			jet_engine_2x
-			armor_plate_small
-			fuel_tanks_small
-		}
-	}
 }
 
 GER_cas = {
@@ -257,66 +102,6 @@ GER_cas = {
 
 	priority = {
 		factor = 100
-	}
-	cas_0 = { #Hs 123
-		priority = {
-			factor = 10
-			modifier = { 
-				has_tech = basic_small_airframe
-				factor = 0 #let's not waste XP here
-			}
-		}
-
-		history = yes
-		target_variant = {
-			match_value = 500
-			type = small_plane_cas_airframe_0
-			modules = {
-				fixed_main_weapon_slot = bomb_locks
-				fixed_auxiliary_weapon_slot_1 = empty
-				engine_type_slot = engine_1_1x
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty
-			}
-			
-		}
-
-		allowed_modules = {
-			bomb_locks
-			engine_1_1x
-			armor_plate_small
-			fuel_tanks_small
-		}
-	}
-	cas_1 = { #Ju 87
-		priority = {
-			factor = 100
-			
-		}
-
-
-		history = yes
-		target_variant = {
-			match_value = 1000
-			type = small_plane_cas_airframe_1
-			modules = {
-				fixed_main_weapon_slot = bomb_locks
-				fixed_auxiliary_weapon_slot_1 = empty
-				engine_type_slot = engine_2_1x
-				special_type_slot_1 = lmg_defense_turret
-				special_type_slot_2 = dive_brakes_small	
-			}
-			
-		}
-
-		allowed_modules = {
-			bomb_locks
-			engine_2_1x
-			armor_plate_small
-			fuel_tanks_small
-			lmg_defense_turret
-			dive_brakes_small
-		}
 	}
 	cas_2 = { #Ju 87 G
 		priority = {
@@ -347,34 +132,7 @@ GER_cas = {
 			rocket_rails
 		}
 	}
-	cas_3 = { #HS 129
-		priority = {
-			factor = 200
-		}
-		history = yes
-		target_variant = {
-			match_value = 2500
-			type = small_plane_cas_airframe_3
-			modules = {
-				fixed_main_weapon_slot = tank_buster_2
-				fixed_auxiliary_weapon_slot_1 = rocket_rails
-				fixed_auxiliary_weapon_slot_2 = rocket_rails
-				engine_type_slot = engine_3_1x
-				special_type_slot_1 = armor_plate_small
-				special_type_slot_2 = self_sealing_fuel_tanks_small
-				special_type_slot_3 = fuel_tanks_small
-			}
-		}
-
-		allowed_modules = {
-			tank_buster_2
-			bomb_locks
-			engine_3_2x
-			rocket_rails
-		}
-	}
 }
-
 GER_naval_bomber = {
 	category = air
 

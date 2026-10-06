@@ -6,6 +6,9 @@ state = {
 	state_category = large_city
 	
 	history = {
+		victory_points = {
+			749 1
+		}
 
 		owner = CAN
 		add_core_of = CAN

@@ -5,31 +5,13 @@ units= {
 	### METRPOLITAN FRANCE ###
 	fleet = {
 		name = "Amiral Nord"
-		naval_base = 3552 # Dunkerque
+		naval_base = 3552 
 		task_force = {				
 			name = "1ère Région Navale"			
 			location = 3552 # Dunkerque			
 			# 8e Division des Contre-Torpilleurs
 			ship = { name = "Le Terrible" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Le Fantasque Class" } } }
 			ship = { name = "L'Audacieux" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Le Fantasque Class" } } }
-		}
-		task_force = {				
-			name = "Sous-Marins Force du Nord"			
-			location = 3552 # Dunkerque	
-			# 16e Division des Sous-Marins
-			ship = { name = "Orphée" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
-			ship = { name = "Amazone" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
-			ship = { name = "La Sybille" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
-			ship = { name = "Antiope" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
-		}				
-	}
-		
-	fleet = {
-		name = "Amiral Ouest"
-		naval_base = 3552 # Brest
-		task_force = {
-			name = "2ème Région Navale"
-			location = 3552 # Brest			
 			ship = { name = "Béarn" definition = carrier equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = FRA version_name = "Béarn Class" } } 
 			}
 			# 2e Division des Contre-Torpilleurs
@@ -52,11 +34,7 @@ units= {
 			# 6e Légère Division des Contre-Torpilleurs
 			ship = { name = "Cyclone" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }
 			ship = { name = "Siroco" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }	
-			ship = { name = "Mistral" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }	
-		}				
-		task_force = {				
-			name = "4ème Escadron Sous-Marins"			
-			location = 3552 # Brest			
+			ship = { name = "Mistral" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }
 			# 2e Division des Sous-Marins
 			ship = { name = "Pasteur" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			ship = { name = "Achille" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
@@ -68,15 +46,11 @@ units= {
 			# 8e Division des Sous-Marins
 			ship = { name = "Surcouf" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = FRA version_name = "Surcouf Class" } } }
 			ship = { name = "Phénix" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
-		}				
-	}
-
-	fleet = {
-		name = "Amiral Sud"			
-		naval_base = 3552 # Toulon
-		task_force = {				
-			name = "3ème Région Navale"			
-			location = 3552 # Toulon	
+			# 16e Division des Sous-Marins
+			ship = { name = "Orphée" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+			ship = { name = "Amazone" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+			ship = { name = "La Sybille" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+			ship = { name = "Antiope" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
 			ship = { name = "Courbet" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }        
 			ship = { name = "Paris" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }
 			ship = { name = "Algérie" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Algérie Class" } } }			
@@ -100,10 +74,6 @@ units= {
 			ship = { name = "Cassard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
 			ship = { name = "Maillé Brézé" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
 			ship = { name = "Kersaint" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		}				
-		task_force = {				
-			name = "3ème Escadron Sous-Marins"			
-			location = 3552 # Toulon			
 			# 1e Division des Sous-Marins
 			ship = { name = "Le Glorieux" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			# 3 Division des Sous-Marins
@@ -115,10 +85,6 @@ units= {
 			ship = { name = "L`Espoire" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			ship = { name = "Pégase" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			ship = { name = "Monge" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
-		}				
-		task_force = {				
-			name = "5ème Escadron Sous-Marins"			
-			location = 3552 # Toulon			
 			# 7e Division des Sous-Marins
 			ship = { name = "Redoutable" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			ship = { name = "Vengeur" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
@@ -135,16 +101,6 @@ units= {
 			# 21e Division des Sous-Marins
 			ship = { name = "Diamant" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Saphir Class" } } }
 			ship = { name = "Perle" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Saphir Class" } } }
-		}				
-	}
-
-	### NORTH AFRICA ###				
-	fleet = {
-		name = "Amiral Afrique"			
-		naval_base = 3552 # Oran
-		task_force = {				
-			name = "Flottille de Haute Mers"			
-			location = 3552 # Oran			
 			ship = { name = "Provence" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
 			ship = { name = "Lorraine" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
 			ship = { name = "Bretagne" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
@@ -167,11 +123,7 @@ units= {
 			ship = { name = "Trombe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }	
 			# 9e Légère Division des Contre-Torpilleurs
 			ship = { name = "Forbin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }	
-			ship = { name = "Basque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }	
-		}				
-		task_force = {				
-			name = "Force d'Attaque Légère"			
-			location = 3552 # Bizerte, Tunisia	
+			ship = { name = "Basque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }
 			ship = { name = "La Galissonnière" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "La Galissonnière Class" } } }
 			ship = { name = "Émile Bertin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Émile Bertin Class" } } }
 			# 1e Division des Contre-Torpilleurs
@@ -186,17 +138,9 @@ units= {
 			ship = { name = "Aigle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
 			ship = { name = "Milan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
 			ship = { name = "Épervier" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		}				
-		task_force = {				
-			name = "Flotte d'Afrique de l'Ouest"			
-			location = 3552 # Dakar			
 			ship = { name = "Jeanne d'Arc" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Duguay-Trouin Class" } } }
 			ship = { name = "Duguay-Trouin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Duguay-Trouin Class" } } }
 			ship = { name = "Primauguet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Duguay-Trouin Class" } } }
-		}
-		task_force = {				
-			name = "2ème Escadron Sous-Marins" 			
-			location = 3552 # Oran			
 			# 4e Division des Sous-Marins
 			ship = { name = "Le Centaure" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
 			ship = { name = "Argo" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
@@ -213,11 +157,7 @@ units= {
 			ship = { name = "Diane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
 			ship = { name = "Ariane" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
 			ship = { name = "Eurydice" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
-			ship = { name = "Danaé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
-		}				
-		task_force = {				
-			name = "6ème Escadron Sous-Marins"			
-			location = 3552 # Bizerte, Tunisia	
+			ship = { name = "Danaé" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }	
 			# 9e Division des Sous-Marins
 			ship = { name = "Caïman" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
 			ship = { name = "Morse" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
@@ -236,27 +176,13 @@ units= {
 			ship = { name = "Turquoise" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Saphir Class" } } }
 			ship = { name = "Nautilus" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Saphir Class" } } }
 			ship = { name = "Rubis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Saphir Class" } } }
-		}				
-		task_force = {				
-			name = "Sous-Marins Force de Levant"			
-			location = 3552 # Beirut			
 			# 11e Division des Sous-Marins
 			ship = { name = "Requin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
 			ship = { name = "Marsouin" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
-			ship = { name = "Narval" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }				
-		}				
-	}
-
-	### FAR EAST ###				
-	fleet = {
-		name = "Flotte d'Extrême Orient"
-		naval_base = 3552 # Saigon
-		task_force = {
-			name = "Flotte d'Extrême Orient"
-			location = 3552 # Saigon			
+			ship = { name = "Narval" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "600 Series" } } }
 			ship = { name = "Suffren" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }
-			ship = { name = "Lamotte-Picquet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Duguay-Trouin Class" } } }
-		}
+			ship = { name = "Lamotte-Picquet" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Duguay-Trouin Class" } } }			
+		}		
 	}
 } 
 

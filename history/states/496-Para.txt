@@ -12,6 +12,9 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			12334 1
+		}
 
 		owner = BRA
 		add_core_of = BRA

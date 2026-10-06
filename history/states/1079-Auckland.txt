@@ -10,6 +10,9 @@ state = {
 	state_category = city
 	
 	history = {
+		victory_points = {
+			10609 1
+		}
 
 		owner = NZL
 		add_core_of = NZL

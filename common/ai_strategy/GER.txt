@@ -168,27 +168,6 @@ GER_stockpile_less_early_game = {
 	}
 }
 
-GER_raids_store_some_equipment = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		date > 1938.4.1
-		date < 1941.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = save_equipment
-		id = transport_plane_equipment
-		value = 10
-	}
-	ai_strategy = {
-		type = save_equipment
-		id = support_equipment
-		value = 100
-	}
-}
 GER_raids_get_some_paras_for_eben_emael = {
 	allowed = {
 		original_tag = GER
@@ -4539,31 +4518,6 @@ GER_take_advantage_of_sokolov_raid = {
 		state = 69
 
 		value = 25 # +25%
-	}
-}
-
-GER_sokol_raids_store_some_equipment = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_war_with = CZE
-		date > 1938.1.1
-		date < 1939.9.9
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = transport_plane_equipment
-		value = 1
-	}
-
-	ai_strategy = {
-		type = save_equipment
-		id = transport_plane_equipment
-		value = 25 #Need to save more for that than Bel raid and try nudge to fill the 20 unit gap it has at this time
 	}
 }
 

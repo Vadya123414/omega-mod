@@ -9,6 +9,12 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			11934 1
+		}
+		victory_points = {
+			2034 1
+		}
 
 		owner = BEL
 

@@ -436,7 +436,9 @@ add_ideas = {
 	FRA_inefficient_economy_2
 }
 
-
+recruit_character = FRA_henri_de_man
+recruit_character = FRA_vadik48
+recruit_character = FRA_prince_bernhard
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval

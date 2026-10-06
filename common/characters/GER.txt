@@ -890,7 +890,7 @@ characters = {
 			legacy_id = 25
 
 			visible = {
-				has_completed_focus = GER_panzer_troops_school
+				has_completed_focus = GER_adopt_new_panzer_doctrine
 			}
 		}
 	}
@@ -968,7 +968,7 @@ characters = {
 			legacy_id = 34
 
 			visible = {
-				has_completed_focus = GER_lessons_of_the_great_war
+				has_completed_focus = GER_the_prussian_legacy
 			}
 		}
 	}
@@ -1010,7 +1010,7 @@ characters = {
 			legacy_id = 21
 
 			visible = {
-				has_completed_focus = GER_lessons_of_the_great_war
+				has_completed_focus = GER_the_prussian_legacy
 			}
 		}
 	}
@@ -1273,7 +1273,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_panzer_troops_school
+				has_completed_focus = GER_adopt_new_panzer_doctrine
 			}
 		}
 	}

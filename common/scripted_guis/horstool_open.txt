@@ -40,11 +40,68 @@ scripted_gui = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
 						ROOT = { set_global_flag = enabled_debuffing }
 					}
-					else_if = {
+				} 
+			}
+			Debuffing_close_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { has_global_flag = enabled_debuffing  } }
 						ROOT = { clr_global_flag = enabled_debuffing }
 					}
 				} 
 			}
+
+			debuf_industrial_plus_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { NOT = { has_global_flag = enabled_industrial } } }
+						ROOT = { set_global_flag = enabled_industrial }
+					}
+				} 
+			}
+			debuf_industrial_minys_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { has_global_flag = enabled_industrial  } }
+						ROOT = { clr_global_flag = enabled_industrial }
+					}
+				} 
+			}
+
+			debuf_politic_plus_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { NOT = { has_global_flag = enabled_politic } } }
+						ROOT = { set_global_flag = enabled_politic }
+					}
+				} 
+			}
+			debuf_politic_minys_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { has_global_flag = enabled_politic  } }
+						ROOT = { clr_global_flag = enabled_politic }
+					}
+				} 
+			}
+
+			debuf_army_plus_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { NOT = { has_global_flag = enabled_army } } }
+						ROOT = { set_global_flag = enabled_army }
+					}
+				} 
+			}
+			debuf_army_minys_click = {
+				owner = {
+					if = {
+						limit = { ROOT = { has_global_flag = enabled_army  } }
+						ROOT = { clr_global_flag = enabled_army }
+					}
+				} 
+			}
+
 
 			event_translet_horst_open_click = {
 				owner = {
@@ -83,6 +140,256 @@ scripted_gui = {
 					}
 				}
 			}
+		#################################################################### Доктрины армия
+			hosttool_add_lan_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = infantry
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_lan_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = infantry
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+
+			hosttool_add_lan_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = combat_support
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_lan_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = combat_support
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+
+			hosttool_add_lan_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = armor
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_lan_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = armor
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+
+			hosttool_add_lan_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = operations
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_lan_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = operations
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+		#################################################################### Доктрины флот
+			hosttool_add_naval_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = submarines
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_naval_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = submarines
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_naval_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = screens
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_naval_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = screens
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_naval_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = carriers
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_naval_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = carriers
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_naval_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = capital_ships
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_naval_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = capital_ships
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+		#################################################################### Доктрины авиация
+			hosttool_add_air_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = fighter_aircraft
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_air_doctrin_infantry_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = fighter_aircraft
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_air_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = strike_aircraft
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_air_doctrin_artirellia_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = strike_aircraft
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_air_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = medium_aircraft
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_air_doctrin_armor_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = medium_aircraft
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+			hosttool_add_air_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = 100
+						track = heavy_aircraft
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_air_doctrin_operations_click = {
+				owner={
+					add_mastery = {
+						amount = -100
+						track = heavy_aircraft
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+		#################################################################### Доктрины Спец
+			hosttool_add_spec_click = {
+				owner={
+					add_mastery = {
+						amount = 60
+						track = special_forces_first
+					}
+					add_mastery = {
+						amount = 60
+						track = special_forces_second
+					}
+					news_event = { id = news.4439 }
+				}
+			}
+			hosttool_sub_spec_click = {
+				owner={
+					add_mastery = {
+						amount = -60
+						track = special_forces_first
+					}
+					add_mastery = {
+						amount = -60
+						track = special_forces_second
+					}
+					news_event = { id = news.4440 }
+				}
+			}
+		############################################################## Ресурсы		
 			States_resursed_rubber_click = {
 				owner={
 					news_event = { id = news.4201 }
@@ -382,7 +689,55 @@ scripted_gui = {
 					}
 				}
 			}
-
+		#########################################################################
+			faction_initiativ_add_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_faction_initiative = 1 news_event = { id = news.4308 } }
+				}
+			}
+			faction_initiative_remove_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_faction_initiative = -1 news_event = { id = news.4309 } }
+				}
+			}
+			war_support_add_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_war_support = 0.01 news_event = { id = news.4302 } }
+				}
+			}
+			war_support_remove_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_war_support = -0.01 news_event = { id = news.4306 } }
+				}
+			}
+			stability_add_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_stability  = 0.01 news_event = { id = news.4303 } }
+				}
+			}
+			stability_remove_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_stability  = -0.01 news_event = { id = news.4307 } }
+				}
+			}
+			research_add_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_research_slot = 1 news_event = { id = news.4304 } }
+				}
+			}
+			research_remove_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_research_slot = -1 news_event = { id = news.4305 } }
+				}
+			}
 			observer_click = {
 				owner = { 				
 				set_temp_variable = { ROOT.marks = this}	var:marks = { news_event = { id = news.4004 } }	DDR = {change_tag_from =var:marks}
@@ -392,7 +747,80 @@ scripted_gui = {
 				ROOT = { clr_country_flag = host		}
 				owner = { set_country_flag = host	news_event = { id = news.4005 }	  }
 			}
-			
+		################################################# Идеалогия
+			communism_group_bg_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { set_politics = { ruling_party = communism } news_event = { id = news.4322 } }
+				}
+			}
+			democratic_group_bg_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { set_politics = { ruling_party = democratic } news_event = { id = news.4323 } }
+				}
+			}
+			fascism_group_bg_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { set_politics = { ruling_party = fascism } news_event = { id = news.4324 } }
+				}
+			}
+			neutrality_group_bg_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { set_politics = { ruling_party = neutrality } news_event = { id = news.4325 } }
+				}
+			}
+			hosttool_add_5_party_communism_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = communism popularity = 0.05 } news_event = { id = news.4326 } }
+				}
+			}
+			hosttool_sub_5_party_communism_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = communism popularity = -0.05 } news_event = { id = news.4327 } }
+				}
+			}
+			hosttool_add_5_party_democratic_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = democratic popularity = 0.05 } news_event = { id = news.4328 } }
+				}
+			}
+			hosttool_sub_5_party_democratic_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = democratic popularity = -0.05 } news_event = { id = news.4329 } }
+				}
+			}
+			hosttool_add_5_party_fascism_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = fascism popularity = 0.05 } news_event = { id = news.4330 } }
+				}
+			}
+			hosttool_sub_5_party_fascism_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = fascism popularity = -0.05 } news_event = { id = news.4331 } }
+				}
+			}
+			hosttool_add_5_party_neutrality_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = neutrality popularity = 0.05 } news_event = { id = news.4332 } }
+				}
+			}
+			hosttool_sub_5_party_neutrality_group_click = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = { add_popularity = { ideology = neutrality popularity = 0.05 } news_event = { id = news.4333 } }
+				}
+			}
+		#################################################
 			addpp_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
@@ -473,14 +901,564 @@ scripted_gui = {
 					}
 				}
 			}
-			add_compliance_click = { 
+		############################################ шртрафы бафы Промышленность
+			debuf_industrial_1_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = 0.10 } news_event = { id = news.4400 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = -0.10 } news_event = { id = news.4400 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_2_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = 0.01 } news_event = { id = news.4401 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = -0.01 } news_event = { id = news.4401 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_3_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = 0.05 } news_event = { id = news.4402 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.05 } news_event = { id = news.4402 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_4_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = 0.05 } news_event = { id = news.4403 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = -0.05 } news_event = { id = news.4403 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_5_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = 0.05 } news_event = { id = news.4404 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = -0.05 } news_event = { id = news.4404 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_6_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = 0.1 } news_event = { id = news.4405 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = -0.1 } news_event = { id = news.4405 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_7_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = 0.1 } news_event = { id = news.4406 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = -0.1 } news_event = { id = news.4406 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_8_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05 } news_event = { id = news.4407 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = -0.05 } news_event = { id = news.4407 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_9_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = 0.05 } news_event = { id = news.4408 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = -0.05 } news_event = { id = news.4408 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_10_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.1 } news_event = { id = news.4409 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = -0.1 } news_event = { id = news.4409 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_11_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = 0.1 } news_event = { id = news.4410 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = -0.1 } news_event = { id = news.4410 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_12_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = 0.05 } news_event = { id = news.4411 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = -0.05 } news_event = { id = news.4411 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_13_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = 0.05 } news_event = { id = news.4412 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = -0.05 } news_event = { id = news.4412 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_14_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = 0.1 } news_event = { id = news.4413 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = -0.1 } news_event = { id = news.4413 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_industrial_15_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_industrial}}
+						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = 0.1 } news_event = { id = news.4414 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_industrial}
+						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = -0.1 } news_event = { id = news.4414 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+		##################################################шртрафы бафы Политика
+			debuf_Politic_1_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = 0.1 } news_event = { id = news.4415 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = -0.1 } news_event = { id = news.4415 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_2_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = 0.05 } news_event = { id = news.4416 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = -0.05 } news_event = { id = news.4416 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_3_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = -0.2 } news_event = { id = news.4417 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = 0.2 } news_event = { id = news.4417 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_4_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = 0.2 } news_event = { id = news.4418 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = -0.2 } news_event = { id = news.4418 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_5_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = 0.005 } news_event = { id = news.4419 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = -0.005 } news_event = { id = news.4419 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_6_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = 0.005 } news_event = { id = news.4420 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = -0.005 } news_event = { id = news.4420 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_7_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = 0.1 } news_event = { id = news.4421 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = -0.1 } news_event = { id = news.4421 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_8_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = 1 } news_event = { id = news.4422 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = -1 } news_event = { id = news.4422 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_9_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = 0.1 } news_event = { id = news.4423 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = -0.1 } news_event = { id = news.4423 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_10_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_conscription = 0.01 } news_event = { id = news.4424 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_conscription = -0.01 } news_event = { id = news.4424 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_Politic_11_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_politic}}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = 0.1 } news_event = { id = news.4425 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_politic}
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = -0.1 } news_event = { id = news.4425 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+		##################################################шртрафы бафы армия 
+			debuf_army_1_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = 0.15 } news_event = { id = news.4426 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = -0.15 } news_event = { id = news.4426 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_2_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = 0.05 } news_event = { id = news.4427 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = -0.05 } news_event = { id = news.4427 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_3_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4428 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4428 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_4_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = 0.05 } news_event = { id = news.4429 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = -0.05 } news_event = { id = news.4429 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_5_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4430 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4430 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_6_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = 0.05 } news_event = { id = news.4431 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = -0.05 } news_event = { id = news.4431 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_7_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4432 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4432 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_8_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = 0.05 } news_event = { id = news.4433 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = -0.05 } news_event = { id = news.4433 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_9_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4434 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4434 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_10_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = 0.05 } news_event = { id = news.4435 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = -0.05 } news_event = { id = news.4435 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_11_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = 0.05 } news_event = { id = news.4436 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = -0.05 } news_event = { id = news.4436 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_12_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = 0.1 } news_event = { id = news.4437 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = -0.1 } news_event = { id = news.4437 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+			debuf_army_13_click = {
+				owner={
+					if = {
+						limit = { NOT = { has_global_flag = enabled_army}}
+						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = 0.1 } news_event = { id = news.4438 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+					else_if = {
+						limit = { has_global_flag = enabled_army}
+						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = -0.1 } news_event = { id = news.4438 }
+						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
+					}
+				}
+			}
+		#################################################### Подчинение
+			hosttool_add_100_compliance_click = { 
 				owner={
 					news_event = { id = news.4130 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = 100}
+						var:state = { add_compliance = 100 }
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -492,14 +1470,71 @@ scripted_gui = {
 					}
 				}
 			}
-			add_compliance1_click = { 
+			hosttool_add_75_compliance_click = { 
+				owner={
+					news_event = { id = news.4316 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = 75 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_add_50_compliance_click = { 
+				owner={
+					news_event = { id = news.4318 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = 50 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_add_25_compliance_click = { 
+				owner={
+					news_event = { id = news.4320 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = 25 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_100_compliance_click = { 
 				owner={
 					news_event = { id = news.4129 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = -100}
+						var:state = { add_compliance = -100 }
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -511,7 +1546,84 @@ scripted_gui = {
 					}
 				}
 			}
-			add_cover_click = { 
+			hosttool_sub_75_compliance_click = { 
+				owner={
+					news_event = { id = news.4317 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = -75 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_50_compliance_click = { 
+				owner={
+					news_event = { id = news.4319 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = -50 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_25_compliance_click = { 
+				owner={
+					news_event = { id = news.4321 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_compliance = -25 }
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+		####################################################### сопротивление
+			hosttool_add_100_compliance1_click = { 
+				owner={
+					news_event = { id = news.4310 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = 100}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_add_75_compliance1_click = { 
 				owner={
 					news_event = { id = news.4132 }
 					set_temp_variable = { ROOT.taker = this}
@@ -530,7 +1642,64 @@ scripted_gui = {
 					}
 				}
 			}
-			add_cover1_click = { 
+			hosttool_add_50_compliance1_click = { 
+				owner={
+					news_event = { id = news.4312 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = 50}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_add_25_compliance1_click = { 
+				owner={
+					news_event = { id = news.4314 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = 25}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_100_compliance1_click = { 
+				owner={
+					news_event = { id = news.4311 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = -100}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_75_compliance1_click = { 
 				owner={
 					news_event = { id = news.4128 }
 					set_temp_variable = { ROOT.taker = this}
@@ -549,6 +1718,45 @@ scripted_gui = {
 					}
 				}
 			}
+			hosttool_sub_50_compliance1_click = { 
+				owner={
+					news_event = { id = news.4313 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = -50}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+			hosttool_sub_25_compliance1_click = { 
+				owner={
+					news_event = { id = news.4315 }
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop={
+						array=ROOT.marked_states
+						value=state
+						var:state = { add_resistance = -25}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+		######################################################################
 			annex_country_click = {
 				
 				owner={ set_variable = { ROOT.taker = this}}
@@ -603,7 +1811,6 @@ scripted_gui = {
 							        autonomy_state = autonomy_free
 						        }
 							}
-						
 				}
 					
 				ROOT = {
@@ -652,12 +1859,6 @@ scripted_gui = {
 					if={limit={check_variable={Root.selected_cheat=2}} generic_bonus_3 = yes }
 					if={limit={check_variable={Root.selected_cheat=3}} generic_bonus_2y = yes }
 					if={limit={check_variable={Root.selected_cheat=4}} generic_bonus_999 = yes }
-					if={limit={check_variable={Root.selected_cheat=5}} add_stability  = 0.01 }
-					if={limit={check_variable={Root.selected_cheat=6}} add_war_support = 0.01 }
-					if={limit={check_variable={Root.selected_cheat=7}} add_research_slot = 1 }
-					if={limit={check_variable={Root.selected_cheat=10}} add_research_slot = -1 }
-					if={limit={check_variable={Root.selected_cheat=11}} add_war_support = -0.01 }
-					if={limit={check_variable={Root.selected_cheat=12}} add_stability  = -0.01 }
 					}
 				}
 				GER={
@@ -677,11 +1878,6 @@ scripted_gui = {
 					   if={owner={ news_event = { id = horsttool.15 days = 0}}limit={check_variable={Root.selected_debuff=2}} generic_debuff_2 = yes }
 					   if={owner={ news_event = { id = horsttool.40 days = 0}}limit={check_variable={Root.selected_debuff=3}} generic_debuff_3 = yes }
 					   if={owner={ news_event = { id = horsttool.41 days = 0}}limit={check_variable={Root.selected_debuff=4}} generic_debuff_4 = yes }
-					   if={owner={ news_event = { id = horsttool.42 days = 0}}limit={check_variable={Root.selected_debuff=5}} generic_debuff_5 = yes }
-					   if={owner={ news_event = { id = horsttool.43 days = 0}}limit={check_variable={Root.selected_debuff=6}} generic_debuff_6 = yes }
-					   if={owner={ news_event = { id = horsttool.44 days = 0}}limit={check_variable={Root.selected_debuff=7}} generic_debuff_7 = yes }
-					   if={owner={ news_event = { id = horsttool.45 days = 0}}limit={check_variable={Root.selected_debuff=8}} generic_debuff_8 = yes }
-					   if={owner={ news_event = { id = horsttool.46 days = 0}}limit={check_variable={Root.selected_debuff=9}} generic_debuff_9 = yes }
 				   }
 				}
 				GER={
@@ -691,8 +1887,7 @@ scripted_gui = {
 				clear_variable = ROOT.taker
 			}
 			
-			
-			toogle_mark_click = {
+			toogle_mark_click = { #sort_button_120x29
 				if={
 					limit={check_variable={mark_status=0}}
 					set_variable={mark_status=2}
@@ -774,11 +1969,6 @@ scripted_gui = {
 			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_global_flag=cheating}}
 			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_global_flag=cheating}}
 			cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_global_flag=cheating}}
-			cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_global_flag=cheating}}
-			cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_global_flag=cheating}}
-			cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_global_flag=cheating}}
-			cheat11_click={set_variable={Root.selected_cheat=11} ROOT={clr_global_flag=cheating}}
-			cheat12_click={set_variable={Root.selected_cheat=12} ROOT={clr_global_flag=cheating}}
 
 				
 			debuff1_click={if={limit={Root={has_global_flag=debuffing}} set_variable={Root.selected_debuff=1} ROOT={clr_global_flag=debuffing}} else={ROOT={set_global_flag=debuffing}}	}
@@ -813,7 +2003,7 @@ scripted_gui = {
 
 			add_debuff_click_enabled = {check_variable={Root.selected_debuff>0}}
 			
-			cb_red_visible ={	}
+			cb_red_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			cb_orange_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_yellow_visible={ROOT={has_global_flag=colorblindness}}
 			cb_green_visible={ROOT={has_global_flag=colorblindness}}
@@ -823,7 +2013,7 @@ scripted_gui = {
 			cb_teal_visible={ROOT={has_global_flag=colorblindness}}
 			cb_remove_visible={ROOT={has_global_flag=colorblindness}}
 				
-			cb_red_text_visible ={	}
+			cb_red_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			cb_orange_text_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_yellow_text_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_green_text_visible={ ROOT={has_global_flag=colorblindness}}
@@ -833,11 +2023,11 @@ scripted_gui = {
 			cb_teal_text_visible={ROOT={has_global_flag=colorblindness}}
 			cb_remove_text_visible={ROOT={has_global_flag=colorblindness}}
 
-			pause_blocker_major_visible ={  }
+			pause_blocker_major_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			pause_blocker_all_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_visible ={ has_global_flag=blocking_pauses }
-			pause_blocker_major_text_visible ={  }	
-			pause_blocker_major1_text_visible ={  }
+			pause_blocker_major_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}	
+			pause_blocker_major1_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			pause_blocker_all_text_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_text_visible ={ has_global_flag=blocking_pauses }
 
@@ -845,9 +2035,9 @@ scripted_gui = {
 			annex_country_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 			tpt_war_button_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 			add_autonomy_free_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-
-			cheat1_visible={}
-			cheat1_text_visible={}
+################################################################### видимость текста чита
+			cheat1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			cheat1_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			cheat2_visible={ROOT={has_global_flag=cheating}}
 			cheat3_visible={ROOT={has_global_flag=cheating}}
 			cheat4_visible={ROOT={has_global_flag=cheating}}
@@ -856,17 +2046,7 @@ scripted_gui = {
 			cheat3_text_visible={ROOT={has_global_flag=cheating}}
 			cheat5_visible={ROOT={has_global_flag=cheating}}
 			cheat5_text_visible={ROOT={has_global_flag=cheating}}
-			cheat6_visible={ROOT={has_global_flag=cheating}}
-			cheat6_text_visible={ROOT={has_global_flag=cheating}}
-			cheat7_visible={ROOT={has_global_flag=cheating}}
-			cheat7_text_visible={ROOT={has_global_flag=cheating}}
-			cheat10_visible={ROOT={has_global_flag=cheating}}
-			cheat10_text_visible={ROOT={has_global_flag=cheating}}
-			cheat11_visible={ROOT={has_global_flag=cheating}}
-			cheat11_text_visible={ROOT={has_global_flag=cheating}}
-			cheat12_visible={ROOT={has_global_flag=cheating}}
-			cheat12_text_visible={ROOT={has_global_flag=cheating}}
-
+######################################################################################
 			award_states_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 
 			mill_add_click_enabled = { }
@@ -901,14 +2081,27 @@ scripted_gui = {
 			States_resursed_chromium1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_coal1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 
-			add_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_cover_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_cover1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			
+			hosttool_add_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 
 			wt_add_click_enabled = {}
 			wt_remove_click_enabled = {}
-
+################################################################################################### Переход на след страницу
 			debuff1_visible={}
 			debuff2_visible={ROOT={has_global_flag=debuffing}}
 			debuff1_text_visible={}
@@ -935,23 +2128,23 @@ scripted_gui = {
 			manpower_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			manpower_NO_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			add_NO_autonomy_ratio_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp2_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp3_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_convoy48_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			manpower_NO_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_NO_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_convoy48_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			remove_pingtool_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_mill_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_civ_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_addpp_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			remove_debuff_click_enabled = {}
 
@@ -963,22 +2156,213 @@ scripted_gui = {
 			States_resursed_chromium_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			States_resursed_coal_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			States_resursed_steel1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_rubber1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_oil1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_alu1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_tungsten1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_chromium1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_coal1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_steel1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_rubber1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_oil1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_alu1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_tungsten1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_chromium1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_coal1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			Debuffing_enable_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			Debuffing_enable_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			Debuffing_enable_text2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			wt_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			wt_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			wt_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			war_support_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			war_support_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			stability_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			stability_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			research_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			research_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			annex_country_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			tpt_war_button_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_autonomy_free_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			add_cover_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_cover1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			clear_all_markings_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_cores_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			fix_production_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_100_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_75_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_50_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_25_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_100_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_75_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_50_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_25_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_100_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_75_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_50_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_25_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_100_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_75_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_50_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_25_compliance1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			communism_group_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			democratic_group_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			fascism_group_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			neutrality_group_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_5_party_communism_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_5_party_communism_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_5_party_democratic_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_5_party_democratic_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_5_party_fascism_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_5_party_fascism_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_5_party_neutrality_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_5_party_neutrality_group_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			faction_initiativ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			faction_initiative_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			st_state_manager_powers_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			title_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			toogle_mark_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			clear_all_markings_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			award_states_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			whitepeace_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			observer_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			fuhrer_mana_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			event_translet_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			event_translet_horst_open_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			title_event_translet_horst_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			change_host_nation_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_color_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			pause_blocker_shield_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_cheat_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			textbox_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			textbox1_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Background4_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			Debuffing_open_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Debuffing_close_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			#textbox_bg2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			debuf_industrial_1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+			S1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			S2_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			S3_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			S1_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			S2_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			S3_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+			add_dynamic_Hort_tool_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			add_dynamic_Hort_tool1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+			debuf_industrial_1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_2_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_3_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_4_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_5_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_6_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_7_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_8_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_9_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_10_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_11_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_12_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_13_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_14_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_industrial_15_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+			debuf_Politic_1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_2_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_3_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_4_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_5_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_6_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_7_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_8_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_9_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_10_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_Politic_11_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+			debuf_army_1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_2_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_3_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_4_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_5_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_6_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_7_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_8_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_9_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_10_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_11_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_12_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			debuf_army_13_visible = {ROOT={has_global_flag=enabled_debuffing}}
+
+
+
+			Doctrin_lan_1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_lan_2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_lan_3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_lan_4_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_naval_1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_naval_2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_naval_3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_naval_4_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_air_1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_air_2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_air_3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			Doctrin_air_4_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_lan_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_lan_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_lan_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_lan_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_lan_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_lan_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_lan_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_lan_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_naval_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_naval_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_naval_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_naval_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_naval_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_naval_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_naval_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_naval_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_air_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_air_doctrin_infantry_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_air_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_air_doctrin_artirellia_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_air_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_air_doctrin_armor_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_add_air_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_air_doctrin_operations_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			Doctrin_spec_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			hosttool_add_spec_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			hosttool_sub_spec_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+			debuf_industrial_plus_visible = {ROOT={has_global_flag=enabled_debuffing NOT={has_global_flag=enabled_industrial}}}
+			debuf_industrial_minys_visible = {ROOT={has_global_flag=enabled_debuffing has_global_flag=enabled_industrial}}
+			debuf_politic_plus_visible = {ROOT={has_global_flag=enabled_debuffing NOT={has_global_flag=enabled_politic}}}
+			debuf_politic_minys_visible = {ROOT={has_global_flag=enabled_debuffing has_global_flag=enabled_politic}}
+			debuf_army_plus_visible = {ROOT={has_global_flag=enabled_debuffing NOT={has_global_flag=enabled_army}}}
+			debuf_army_minys_visible = {ROOT={has_global_flag=enabled_debuffing has_global_flag=enabled_army}}
+
+			#debuf_industrial_plus_visible = {ROOT={has_global_flag=enabled_industrial}}
+			#debuf_industrial_minys_visible = {ROOT={NOT={has_global_flag=enabled_industrial}}}
+
+
+####################################################################################################################
 		}
 	}
-		
 	pause_is_blocked = {
 		context_type = player_context
 		window_name = "pause_block_window"

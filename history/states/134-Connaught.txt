@@ -8,6 +8,12 @@ state=
 	state_category = town
 
 	history= {
+		victory_points = {
+			11287 1
+		}
+		victory_points = {
+			337 1
+		}
 		owner = IRE
 		victory_points = {
 			9303 3 #Galway

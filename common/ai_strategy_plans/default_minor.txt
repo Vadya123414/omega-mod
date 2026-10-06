@@ -102,15 +102,15 @@ default_minor = {
 	research = {
 		industry = 40.0
 		electronics = -10.0
-		synth_resources = -50.0
+		synth_resources = -5000.0
 		infantry_weapons = 15.0
 		mountaineers_tech = 5.0
 		artillery = 10.0
-		light_air = -200.0
-        medium_air = -200.0
-        heavy_air = -200.0
-        air_equipment = -20.0
-		naval_armor = -50.0
+		light_air = -20000.0
+        medium_air = -20000.0
+        heavy_air = -20000.0
+        air_equipment = -20000.0
+		naval_armor = -50000.0
 		naval_artillery = -500.0
 		cat_torpedoes = -500.0
 		cat_ship_light_battery = -500.0
@@ -123,12 +123,64 @@ default_minor = {
 	}
 
 	ideas = {
-		
+		army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
+		army_infantry_2 = 2
+		army_infantry_3 = 2
+		war_industrialist  = 5
 	}
 	ai_strategy = {
 
 	}
 	traits = {
-
+		army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
+		army_infantry_2 = 2
+		army_infantry_3 = 2
+		war_industrialist  = 5
 	}
 }

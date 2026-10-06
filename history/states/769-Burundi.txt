@@ -6,6 +6,9 @@ state = {
 	manpower = 2145731
 
 	history = {
+		victory_points = {
+			13363 1
+		}
 
 		owner = BEL
 

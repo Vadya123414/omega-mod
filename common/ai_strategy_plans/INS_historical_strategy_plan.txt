@@ -31,41 +31,47 @@ INS_historical_plan = {
 	ai_national_focuses = {
 
 		INS_recovering_from_the_great_depression 				#5-Feb-1936
+		INS_first_come_first_serve								#29-Jul-1936
+		INS_prioritize_sugar_economy							#20-Apr-1938
+		INS_more_market_resources								#7-Sep-1938
+		INS_coopereate_with_chinese_businessmen					#9-Feb-1938
 		INS_developing_java 				 				 	#11-Mar-1936
+		INS_all_cards_into_industry
+		INS_expand_batavia_technical_institute
+
 		INS_the_bangka_project									#15-Apr-1936
+		INS_aluminium_factory
+		INS_finish_the_bauxite_project
 		INSHOL_dutch_east_indies								#20-May-1936
 		INSHOL_reform_knil										#24-Jun-1936
-		INS_first_come_first_serve								#29-Jul-1936
+		
 
-		INS_increased_trade_with_japan							#7-Oct-1936
-		INSHOL_manado_military_academy							#11-Nov-1936
-		INS_governor_general_tjarda								#16-Dec-1936
+
+
 		INSHOL_sideline_the_volksraad							#20-Jan-1937
+		INSHOL_development_loans_netherlands
+		INS_governor_general_tjarda								#16-Dec-1936
+	
 		INSHOL_prioritize_dutch_profits							#24-Feb-1937
-		INSHOL_modernize_knil									#31-Mar-1937
-		INSHOL_knil_engineers									#5-May-1937
+		INSHOL_loyalty_to_crown
 
 		INSHOL_license_dutch_weapon_blueprints					#14-Jul-1937
-
-		INSHOL_java_factories									#22-Sep-1937
-
+		INSHOL_manado_military_academy							#11-Nov-1936
 		INSHOL_bangka_production_lines							#1-Dec-1937
-
-		INS_coopereate_with_chinese_businessmen					#9-Feb-1938
-
-		INS_prioritize_sugar_economy							#20-Apr-1938
-
 		INSHOL_fund_ml_knil										#29-Jun-1938
-
-		INS_more_market_resources								#7-Sep-1938
-
 		INS_prioritize_dutch_companies							#16-Nov-1938
-
 		INSHOL_artillerie_inrichtingen							#1-Mar-1939
 
 		#then go based on ai weights. do the below as soon as possible, no specific dates:
 
-		INS_seize_oppurtunity
+		INSHOL_java_factories
+		INS_developing_sumatra
+		INS_develop_borneo
+		INS_kalimantan_mic
+		INS_develop_sulawesi
+		INS_sumatra_railway
+		INS_pontianak_to_balikpapan
+		INS_centralize_the_state
 		
 		INSHOL_seek_foreign_help
 		INSHOL_renville_agreement
@@ -78,6 +84,7 @@ INS_historical_plan = {
 		INS_continue_hybrid_politics
 		INS_guided_economy
 
+		INS_increased_trade_with_japan							#7-Oct-1936
 	}
 
 	research = {

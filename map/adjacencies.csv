@@ -139,7 +139,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7304;4360;sea;8614;-1;-1;-1;-1;;New Foundland-Strait
 5407;5382;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar North
 5407;2400;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South
-2455;2431;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
 5412;7678;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
 7452;7678;;-1;-1;-1;-1;-1;DARDANELLES_STRAIT;Dardanelles
 2919;2943;;-1;-1;-1;-1;-1;HORMUZ_STRAIT;hormuz
@@ -250,9 +249,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10231;12995;impassable;-1;-1;-1;-1;-1;;Kokoda Track
 13401;13396;sea;436;-1;-1;-1;-1;;Aceh-Islands
 1428;13395;sea;812;-1;-1;-1;-1;;Padang-Islands
-13228;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
-10094;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
-7153;4135;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+13228;4135;impassable;-1;-1;-1;-1;-1;;gibra
+10094;4135;impassable;-1;-1;-1;-1;-1;;gibra
+7153;4135;impassable;-1;-1;-1;-1;-1;;gibra
+2506;2455;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;DANISH_BELTS_STRAIT
+
 
 -1;-1;;-1;-1;-1;-1;-1;-1 
 #Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment

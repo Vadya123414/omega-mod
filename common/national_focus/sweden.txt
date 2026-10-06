@@ -2193,7 +2193,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_rule_the_baltic }
 		relative_position_id = SWE_rule_the_baltic
 		#mutually_exclusive = { focus = SWE_all_cards_on_deck }
@@ -3275,7 +3275,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_airforce_modernization }
 		relative_position_id = SWE_airforce_modernization
 		mutually_exclusive	= { focus = SWE_rockets }
@@ -3334,7 +3334,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_airforce_modernization }
 		relative_position_id = SWE_airforce_modernization
 		mutually_exclusive = { focus = SWE_the_barrel }
@@ -4494,10 +4494,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_peoples_commissar_for_defense }
 		relative_position_id = SWE_peoples_commissar_for_defense	
-		
+		will_lead_to_war_with = DEN
 
 		ai_will_do = {
 			factor = 10		
@@ -4550,22 +4550,11 @@ focus_tree = {
 				}
 				
 			}
-
-			if = {
-				limit = {
-					DEN = { NOT = { has_country_flag = banned_communism_flag } }
-				}
-
-				DEN = {
-					add_timed_idea = {
-						idea = SWE_foreign_communist_influence
-						days = 420
-					}
-				}
+			create_wargoal = {
+				type = take_state_focus
+				target = DEN
+				expire = 0
 			}
-
-			unlock_decision_tooltip = SWE_pull_the_trigger_den
-			
 		}
 	}
 
@@ -4575,10 +4564,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_peoples_commissar_for_defense }
 		relative_position_id = SWE_peoples_commissar_for_defense	
-		
+		will_lead_to_war_with = NOR
 
 		ai_will_do = {
 			factor = 10		
@@ -4637,26 +4626,10 @@ focus_tree = {
 				}
 			
 			}
-
-			if = {
-				limit = {
-					NOR = { NOT = { has_country_flag = banned_communism_flag } }
-				}
-
-				NOR = {
-					add_timed_idea = {
-						idea = SWE_foreign_communist_influence
-						days = 420
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOR = {
-						NOT = { has_completed_focus = NOR_a_resurgent_labor_movement }
-					}
-				}
-				unlock_decision_tooltip = SWE_pull_the_trigger_nor
+			create_wargoal = {
+				type = take_state_focus
+				target = NOR
+				expire = 0
 			}
 		}
 	}
@@ -4667,7 +4640,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 5
+		cost = 2
 		prerequisite = { focus = SWE_peoples_commissar_for_defense }
 		relative_position_id = SWE_peoples_commissar_for_defense	
 		
@@ -5552,7 +5525,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_central_nordic_army_command }
 		relative_position_id = SWE_central_nordic_army_command
 		
@@ -5743,7 +5716,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_central_nordic_army_command }
 		relative_position_id = SWE_central_nordic_army_command
 		
@@ -8463,7 +8436,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_military_integration
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8484,7 +8457,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_military_independence
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8543,7 +8516,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SWE_germanify_sweden
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8653,7 +8626,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SWE_germanify_sweden
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8695,7 +8668,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SWE_promote_nordic_identity
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8732,7 +8705,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SWE_finland_claims
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -8940,7 +8913,7 @@ focus_tree = {
 		x = 1 
 		y = 1
 		relative_position_id = SWE_finland_claims
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = GER
 			has_government = fascism
@@ -9184,7 +9157,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
-		cost = 5
+		cost = 2
 		available = {
 			OR = {
 				ENG = {
@@ -9244,7 +9217,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SWE_approach_the_allies
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				274 = {
@@ -9628,7 +9601,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
-		cost = 5
+		cost = 2
 		available = {
 		}
 	                
@@ -9788,7 +9761,7 @@ focus_tree = {
 		x = 0 
 		y = 2
 		relative_position_id = SWE_narvik_crisis
-		cost = 10
+		cost = 5
 		available = {
 			NOR = {
 				exists = yes
@@ -9827,7 +9800,7 @@ focus_tree = {
 		x = 2 
 		y = 1
 		relative_position_id = SWE_the_aland_issue
-		cost = 10
+		cost = 5
 		available = {
 			FIN = {
 				is_in_faction = no
@@ -9857,7 +9830,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_demand_atlantic_resource_rights
-		cost = 10
+		cost = 5
 		available = {
 			
 		}
@@ -9899,7 +9872,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_demand_demilitarization_of_finnish_border
-		cost = 10
+		cost = 5
 		available = {
 			FIN = {
 				is_subject = no
@@ -9964,7 +9937,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_crusade_against_bolshevism
-		cost = 10
+		cost = 5
 		available = {
 		}
 	                
@@ -9995,7 +9968,7 @@ focus_tree = {
 		x = 0 
 		y = 2
 		relative_position_id = SWE_danish_alignment
-		cost = 10
+		cost = 5
 		available = {
 		}
 	                
@@ -10727,7 +10700,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_end_the_fubkrieg }
 		relative_position_id = SWE_end_the_fubkrieg
 		

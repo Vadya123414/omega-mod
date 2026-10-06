@@ -294,7 +294,6 @@ ideas = {
             modifier = {
                 cavalry_attack_factor = 0.15
                 cavalry_defence_factor = 0.15
-                cavalry_speed_factor = 0.10
             }
         }
         # Железные всадники (Моторизация)
@@ -303,7 +302,6 @@ ideas = {
             modifier = {
                 motorized_attack_factor = 0.20
                 motorized_defence_factor = 0.20
-                motorized_speed_factor = 0.05
             }
         }
         # Блицкриг Хана (Финал)

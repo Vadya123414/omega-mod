@@ -106,6 +106,7 @@ CZE_historical_strategy_plan = {
 		war_industrialist = 5
 		prince_of_terror = 0
 		backroom_backstabber = 5
+		
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

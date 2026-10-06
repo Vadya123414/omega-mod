@@ -108,7 +108,6 @@ bookmarks = {
 			focuses = {
 				GER_anschluss
 				GER_danzig_or_war
-				GER_ussr_war_goal
 			}
 		}
 		"ITA"={
@@ -152,7 +151,6 @@ bookmarks = {
 			focuses = {
 				JAP_the_zero
 				JAP_warrior_spirit
-				JAP_strike_on_the_southern_resource_area
 			}			
 		}
 		"SOV"={

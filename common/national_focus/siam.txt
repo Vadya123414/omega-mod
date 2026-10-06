@@ -2790,11 +2790,11 @@
 		id = SIA_join_the_allies
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
-		mutually_exclusive = { focus = SIA_join_the_united_front focus = SIA_asian_democratic_compact }
+		mutually_exclusive = { focus = SIA_join_the_united_front }
 		x = -3
 		y = 1
 		relative_position_id = SIA_achieve_foreign_legitimacy
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 50
 			modifier = {
@@ -2955,7 +2955,7 @@
 		y = 1
 		relative_position_id = SIA_join_the_allies
 		prerequisite = { focus = SIA_join_the_allies }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -3113,7 +3113,7 @@
 		y = 1
 		relative_position_id = SIA_allies_integration
 		prerequisite = { focus = SIA_allies_integration }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3289,7 +3289,7 @@
 		relative_position_id = SIA_the_end_of_gunboat_diplomacy
 		prerequisite = { focus = SIA_the_end_of_gunboat_diplomacy }
 		prerequisite = { focus = SIA_prepare_for_a_pacific_war }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3482,11 +3482,11 @@
 		id = SIA_join_the_united_front
 		icon = GFX_focus_chi_united_front
 		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
-		mutually_exclusive = { focus = SIA_join_the_allies focus = SIA_asian_democratic_compact }
+		mutually_exclusive = { focus = SIA_join_the_allies }
 		x = 7
 		y = 0
 		relative_position_id = SIA_join_the_allies
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 50
@@ -3707,41 +3707,6 @@
 		completion_reward = {
 			add_faction_influence_ratio = 0.10
 			add_ideas = idea_SIA_death_to_communists
-		}
-	}
-
-
-
-	focus = {
-		id = SIA_asian_democratic_compact
-		icon = GFX_focus_SIA_asian_democratic_compact
-		x = 7
-		y = 0
-		relative_position_id = SIA_join_the_united_front
-		prerequisite = { focus = SIA_achieve_foreign_legitimacy }
-		cost = 5
-		ai_will_do = {
-			factor = 50
-		}
-		available = {
-		}
-		mutually_exclusive = { focus = SIA_join_the_allies focus = SIA_join_the_united_front }
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		will_lead_to_war_with = FRA
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_tt
-			if = {
-				limit = {
-					is_in_faction = yes
-				}
-
-				leave_faction = yes
-			}
-			create_faction_from_template = faction_template_SIA_asian_democratic_compact
-			add_dynamic_modifier = { modifier = idea_SIA_asian_democratic_compact }
 		}
 	}
 
@@ -3997,163 +3962,6 @@
 				}
 				mark_focus_tree_layout_dirty = yes
 			}
-		}
-	}
-
-	focus = {
-		id = SIA_southeast_asia_joint_command
-		icon = GFX_focus_PRC_army_command
-		x = -3
-		y = 1
-		relative_position_id = SIA_asian_democratic_compact
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_southeast_asia_joint_command_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_pan_asian_weapon_standardization 
-		icon = GFX_focus_JAP_army_weapons_administration_hq
-		x = 2
-		y = 0
-		relative_position_id = SIA_southeast_asia_joint_command
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_pan_asian_weapon_standardization_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_united_against_aggression
-		icon = GFX_focus_SIA_united_against_aggresion
-		x = 2
-		y = 0
-		relative_position_id = SIA_pan_asian_weapon_standardization
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_united_against_aggression_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_the_hammers_that_strike
-		icon = GFX_focus_SIA_the_hammers_that_strike
-		x = 2
-		y = 0
-		relative_position_id = SIA_united_against_aggression
-		prerequisite = { focus = SIA_asian_democratic_compact }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-			custom_effect_tooltip = SIA_asian_democratic_compact_modify
-			custom_effect_tooltip = SIA_the_hammers_that_strike_tt
-			SIA_update_adc = yes
-		}
-	}
-
-	focus = {
-		id = SIA_stronger_together 
-		icon = GFX_goal_generic_major_alliance
-		x = 3
-		y = 1
-		relative_position_id = SIA_southeast_asia_joint_command
-		prerequisite = { focus = SIA_southeast_asia_joint_command focus = SIA_pan_asian_weapon_standardization focus = SIA_united_against_aggression focus = SIA_the_hammers_that_strike }
-		#mutually_exclusive = { focus = }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			is_faction_leader = yes
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = middle_east
-						}
-					}
-					is_faction_leader = yes
-					NOT = { has_war_with = ROOT }
-					NOT = {
-						any_enemy_country = {
-							OR = {
-								tag = CHI
-								is_in_faction_with = CHI
-							}
-						}
-					}
-				}
-
-
-				country_event = {
-					id = siam.45
-					hours = 2 # optional - can take hours/days/months
-					random_hours = 4 # optional - can take hours/days/months
-				}
-			}
-
 		}
 	}
 
@@ -6442,7 +6250,7 @@
 		relative_position_id = SIA_irrigation	
 		prerequisite = { focus = SIA_railway_and_port_extensions }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7266,7 +7074,7 @@
 		relative_position_id = SIA_rice_husk_steam_turbines	
 		prerequisite = { focus = SIA_domestic_tin_smelters focus = SIA_rice_husk_steam_turbines }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7338,7 +7146,7 @@
 		relative_position_id = SIA_contingency_funds
 		prerequisite = { focus = SIA_contingency_funds }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}

@@ -11,6 +11,9 @@ state={
 	state_category = pastoral
 
 	history = {
+		victory_points = {
+			10655 1
+		}
 		owner = SOV
 		buildings = {
 			infrastructure = 2

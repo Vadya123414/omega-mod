@@ -10,6 +10,12 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			12839 1
+		}
+		victory_points = {
+			12046 1
+		}
 
 		owner = IRQ
 		add_core_of = IRQ

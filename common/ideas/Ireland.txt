@@ -79,12 +79,10 @@ ideas = {
 				
 			}
 			cancel = {
-				has_stability > 0.8
+				has_stability > 0.79
 			}
 			removal_cost = -1
-			custom_effect_tooltip = IRE_tt1
-			modifier = {
-				
+			modifier = { 
 				conscription_factor = -0.15
 				stability_factor = -0.08
 				political_power_factor = -0.20

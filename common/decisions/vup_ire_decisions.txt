@@ -40,14 +40,14 @@ IRE_annex = {
 		icon = generic_army_support
 
 		available = {
-		   has_completed_focus = IRE_nigeria_assimilation
 		   NOT = { has_idea = IRE_assimilation_NIG }
 		}
 
-		
+		visible = {
+            has_completed_focus = IRE_nigeria_assimilation
+        }
 
 		fire_only_once = yes
-		days_remove    = -1
 		
 		complete_effect = {
 				    902 = {
