@@ -23,7 +23,7 @@ BOTS = {
         ai_will_do = {base = 1000}
         cost = 0
         complete_effect = {
-            add_manpower = 300000
+            add_manpower = 100000
         }
     }
         GER_autarky= {
@@ -413,11 +413,78 @@ BOTS = {
         ai_will_do = {base = 1000}
         cost = 0
         complete_effect = {
-            add_war_support = 0.25
+    if = {
+        limit = {
+            has_war_support > 0.00
+            has_war_support < 0.06
+        }
+        add_war_support = 0.21
+    }
+    if = {
+        limit = {
+            has_war_support > 0.05
+            has_war_support < 0.11
+        }
+        add_war_support = 0.16
+    }
+    if = {
+        limit = {
+            has_war_support > 0.10
+            has_war_support < 0.16
+        }
+        add_war_support = 0.11
+    }
+    if = {
+        limit = {
+            has_war_support > 0.15
+            has_war_support < 0.21
+        }
+        add_war_support = 0.06
+    }
+    
+    # Точечные интервалы по 1%
+    if = {
+        limit = {
+            has_war_support > 0.20
+            has_war_support < 0.22
+        }
+        add_war_support = 0.05
+    }
+    if = {
+        limit = {
+            has_war_support > 0.21
+            has_war_support < 0.23
+        }
+        add_war_support = 0.04
+    }
+    if = {
+        limit = {
+            has_war_support > 0.22
+            has_war_support < 0.24
+        }
+        add_war_support = 0.03
+    }
+    if = {
+        limit = {
+            has_war_support > 0.23
+            has_war_support < 0.25
+        }
+        add_war_support = 0.02
+    }
+    if = {
+        limit = {
+            has_war_support > 0.24
+            has_war_support < 0.26
+        }
+        add_war_support = 0.01
+    }
+
+            #add_war_support = 0.25
             add_command_power = -50
             add_ideas = partial_economic_mobilisation
         }
     }
+    
             bots_spr_attache_comm_fas = {
 
 		fire_only_once = yes
@@ -452,7 +519,78 @@ BOTS = {
         ai_will_do = {base = 1000}
         cost = 0
         complete_effect = {
-            add_war_support = 0.25
+    if = {
+        limit = {
+            has_war_support > 0.00
+            has_war_support < 0.06
+        }
+        add_war_support = 0.5
+    }
+        if = {
+        limit = {
+            has_war_support > 0.06
+            has_war_support < 0.11
+        }
+        add_war_support = 0.45
+    }
+            if = {
+        limit = {
+            has_war_support > 0.11
+            has_war_support < 0.16
+        }
+        add_war_support = 0.4
+    }
+                if = {
+        limit = {
+            has_war_support > 0.16
+            has_war_support < 0.21
+        }
+        add_war_support = 0.35
+    }
+                    if = {
+        limit = {
+            has_war_support > 0.21
+            has_war_support < 0.26
+        }
+        add_war_support = 0.3
+    }
+                        if = {
+        limit = {
+            has_war_support > 0.26
+            has_war_support < 0.31
+        }
+        add_war_support = 0.25
+    }
+                            if = {
+        limit = {
+            has_war_support > 0.31
+            has_war_support < 0.36
+        }
+        add_war_support = 0.2
+    }
+                                if = {
+        limit = {
+            has_war_support > 0.36
+            has_war_support < 0.41
+        }
+        add_war_support = 0.15
+    }
+                                    if = {
+        limit = {
+            has_war_support > 0.41
+            has_war_support < 0.46
+        }
+        add_war_support = 0.1
+    }
+                                        if = {
+        limit = {
+            has_war_support > 0.46
+            has_war_support < 0.51
+        }
+        add_war_support = 0.05
+    }
+
+            #add_war_support = 0.25
             add_command_power = -50
            add_ideas = war_economy
         }

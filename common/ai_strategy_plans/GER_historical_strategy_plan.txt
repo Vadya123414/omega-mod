@@ -25,87 +25,12 @@ German_historical = {
 		}
 	}
 	abort = {
-		OR = {
-			SWE = {
-				has_government = communism #prio 1, crush Sweden
-			}
-			SOV = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			ENG = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-			any_country_with_original_tag = {
-				original_tag_to_check = HUN
-				has_completed_focus = HUN_invite_the_habsburg_prince
-			}
-			AND = {
-				OR = {
-					has_completed_focus = GER_anschluss
-					AUS = {
-						is_subject_of = CZE
-					}
-					CZE = {
-						has_war = no
-						has_full_control_of_state = 4
-						has_full_control_of_state = 152
-						has_full_control_of_state = 153
-						has_full_control_of_state = 848
-						has_full_control_of_state = 975
-					}
-				}
-				CZE = {	#PfoT: early game, with good allies, Czechoslovakia can defeat Germany quite easily
-					OR = {
-						is_in_faction = yes
-						AND = { #An alt history Czech whose considered a major is VERY dangerous
-							is_major = yes
-							has_completed_focus = CZE_appeal_to_the_castle
-						}
-						AND = { #An alt history Czech whose considered a major is VERY dangerous
-							is_major = yes
-							has_completed_focus = CZE_form_a_federation
-						}
-						AND = { #An alt history Czech whose considered a major is VERY dangerous
-							is_major = yes
-							has_completed_focus = CZE_expand_the_communist_press
-						}
-					}
-					NOT = {
-						has_war_with = ROOT		#just in case we further expand exile content
-						is_subject_of = ROOT	#if they surrender on their own, no need to cancel hist
-					}
-				}
-			}
-			any_country_with_original_tag = {
-				original_tag_to_check = FRA
-				OR = {
-					has_completed_focus = FRA_utilize_the_leagues
-					has_completed_focus = FRA_invite_communist_ministers
-					has_completed_focus = FRA_leftist_rhetoric
-					has_completed_focus = FRA_right_wing_rhetoric
-				}
-			}
-			any_country_with_original_tag = {
-				original_tag_to_check = USA
-				OR = {
-					has_completed_focus = USA_war_plan_red
-					has_completed_focus = USA_war_plan_white
-				}
-			}
-			is_subject = yes
-			has_government = democratic
-			has_government = communism
-		}
 	}
 
 	ai_national_focuses = {
 
 		#Focus 									#Days 	#Historical Daye
-		GER_loyalty_to_the_fuhrer						Do this if it's ever possible
+		GER_loyalty_to_the_fuhrer				#		Do this if it's ever possible
 		GER_legion_condor						#35		Do this if it's ever possible
 		GER_the_triumphant_will					#35		Do this if it's ever possible
 		GER_ascension_of_todt					#14		(whenever)

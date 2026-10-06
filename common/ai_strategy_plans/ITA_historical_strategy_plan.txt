@@ -31,15 +31,7 @@ ITA_historical_plan = {
 		}
 	}
 	abort = {
-		OR = {
-			has_country_flag = italo_balbo_for_italy
-			has_country_flag = dino_grandi_for_italy
-			GER_is_oppose_hitler = yes
-			AND = {
-				has_country_flag = ITA_defeat_in_ethiopia_flag
-				NOT = { has_idea = ITA_a_meeting_at_the_high_table4 }
-			}
-		}
+
 	}
 
 	ai_national_focuses = {

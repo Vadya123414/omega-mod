@@ -1,16 +1,27 @@
-generic_historical = {
+IRE_historical = {
 	name = "generic historical plan"
 	desc = ""
 
 	allowed = {
-
-		
+		original_tag = IRE
 	}
 	enable = {
-		
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = IRE_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = IRE_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = IRE_ai_behavior
+				option = HISTORICAL
+			}
+		}	
 	}
 	abort = {
-		
 	}
 
 	ai_national_focuses = {
