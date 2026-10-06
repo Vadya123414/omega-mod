@@ -3981,172 +3981,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_vallo_alpino_del_littorio
-		icon = GFX_goal_fortify_the_westwall
-		prerequisite = { focus = ITA_milan_comms_industry }
-		prerequisite = { focus = ITA_increase_artillery_production }
-
-		x = 1
-		y = 1
-		relative_position_id = ITA_milan_comms_industry
-		cost = 5
-		
-		available = {
-			OR = {
-				has_full_control_of_state = 158 #PIEDMONT
-				has_full_control_of_state = 159 #LOMBARDY
-				has_full_control_of_state = 850 #TRENTINO
-				has_full_control_of_state = 39 #ALTO ADIGE
-				has_full_control_of_state = 160 #VENETO
-				has_full_control_of_state = 736 #LITORALE
-				has_full_control_of_state = 852 #FIUME
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-
-			### VALLO ALPINO OCCIDENTALE ###
-			if = { #PIEDMONT
-				limit = {
-					158 = { is_fully_controlled_by = ROOT }
-				}
-				158 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 6780
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 6635
-						}
-						instant_build = yes
-					}
-				}
-			}
-
-			### VALLO ALPINO SETTENTRIONALE ###
-			if = { #LOMBARDY
-				limit = {
-					159 = { is_fully_controlled_by = ROOT }
-				}
-				159 = {
-					add_building_construction = { #Two separate effects for stupid tt reasons :)
-						type = bunker
-						level = 2
-						province = {
-							id = 9584
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 6661
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = { #ALTO ADIGE
-				limit = {
-					39 = { is_fully_controlled_by = ROOT }
-				}
-				39 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 11615
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 11598
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = { #TRENTINO
-				limit = {
-					850 = { is_fully_controlled_by = ROOT }
-				}
-				850 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 9598
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = { #VENETO
-				limit = {
-					160 = { is_fully_controlled_by = ROOT }
-				}
-				160 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 3657
-						}
-						instant_build = yes
-					}
-				}
-			}
-
-			### VALLO ALPINO ORIENTALE ###
-			if = { #LITORALE
-				limit = {
-					736 = { is_fully_controlled_by = ROOT }
-				}
-				736 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 11595
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = { #ISTRIA
-				limit = {
-					852 = { is_fully_controlled_by = ROOT }
-				}
-				852 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 11564
-						}
-						instant_build = yes
-					}
-				}
-			}
-
-			custom_effect_tooltip = ITA_vallo_alpino_del_littorio_tt
-		}
-	}
-
-	focus = {
 		id = ITA_moschettieri_del_duce
 		icon = GFX_focus_ITA_moschettieri_del_duce
 		prerequisite = { focus = ITA_preserve_army_traditions }
@@ -13805,7 +13639,7 @@ focus_tree = {
 
 
 
-
+	
 ########  #######  ########  ######## ####  ######   ##    ##    ########   #######  ##       #### ######## ####  ######   ######     ########  ####  ######   ##     ## ######## 
 ##       ##     ## ##     ## ##        ##  ##    ##  ###   ##    ##     ## ##     ## ##        ##     ##     ##  ##    ## ##    ##    ##     ##  ##  ##    ##  ##     ##    ##    
 ##       ##     ## ##     ## ##        ##  ##        ####  ##    ##     ## ##     ## ##        ##     ##     ##  ##       ##          ##     ##  ##  ##        ##     ##    ##    
@@ -13833,7 +13667,7 @@ focus_tree = {
 			}
 		}
 
-		x = 48
+		x = 50
 		y = 1
 		offset = {
 			x = -29
@@ -14034,7 +13868,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
 
-		x = -10
+		x = -12
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
 		cost = 5
@@ -14282,6 +14116,553 @@ focus_tree = {
 						count = 3
 					}
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_vallo_alpino_del_littorio
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
+		mutually_exclusive = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+		
+		x = -10
+		y = 1
+		relative_position_id = ITA_potential_allies_in_the_balkans
+		cost = 5
+		
+		available = {
+			OR = {
+				has_full_control_of_state = 158 #PIEDMONT
+				has_full_control_of_state = 159 #LOMBARDY
+				has_full_control_of_state = 850 #TRENTINO
+				has_full_control_of_state = 39 #ALTO ADIGE
+				has_full_control_of_state = 160 #VENETO
+				has_full_control_of_state = 736 #LITORALE
+				has_full_control_of_state = 852 #FIUME
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+
+			### VALLO ALPINO OCCIDENTALE ###
+			if = { #PIEDMONT
+				limit = {
+					158 = { is_fully_controlled_by = ROOT }
+				}
+				158 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 6780
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 6635
+						}
+						instant_build = yes
+					}
+				}
+			}
+
+			### VALLO ALPINO SETTENTRIONALE ###
+			if = { #LOMBARDY
+				limit = {
+					159 = { is_fully_controlled_by = ROOT }
+				}
+				159 = {
+					add_building_construction = { #Two separate effects for stupid tt reasons :)
+						type = bunker
+						level = 2
+						province = {
+							id = 9584
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 6661
+						}
+						instant_build = yes
+					}
+				}
+			}
+			if = { #ALTO ADIGE
+				limit = {
+					39 = { is_fully_controlled_by = ROOT }
+				}
+				39 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 11615
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 11598
+						}
+						instant_build = yes
+					}
+				}
+			}
+			if = { #TRENTINO
+				limit = {
+					850 = { is_fully_controlled_by = ROOT }
+				}
+				850 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 9598
+						}
+						instant_build = yes
+					}
+				}
+			}
+			if = { #VENETO
+				limit = {
+					160 = { is_fully_controlled_by = ROOT }
+				}
+				160 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 3657
+						}
+						instant_build = yes
+					}
+				}
+			}
+
+			### VALLO ALPINO ORIENTALE ###
+			if = { #LITORALE
+				limit = {
+					736 = { is_fully_controlled_by = ROOT }
+				}
+				736 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 11595
+						}
+						instant_build = yes
+					}
+				}
+			}
+			if = { #ISTRIA
+				limit = {
+					852 = { is_fully_controlled_by = ROOT }
+				}
+				852 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 11564
+						}
+						instant_build = yes
+					}
+				}
+			}
+
+			custom_effect_tooltip = ITA_vallo_alpino_del_littorio_tt
+		}
+	}
+	focus = {
+		id = ITA_negotiate_italian_claims
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = ITA_vallo_alpino_del_littorio }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_vallo_alpino_del_littorio
+		cost = 10
+		available = { 
+			NOT = {
+				has_war_with = ENG
+				has_war_with = FRA
+			}
+		}
+
+		bypass = {
+			OR = {
+				ENG = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				FRA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = ITA_ENG_must_control_necessary_states_tt
+						ENG = {
+							NOT = {
+								controls_state = 269 
+								controls_state = 903
+								controls_state = 906
+								controls_state = 116 
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ITA_FRA_must_control_necessary_states_tt
+						FRA = {
+							NOT = {
+								controls_state = 268
+								controls_state = 458
+								controls_state = 665
+							}
+						}
+					}
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			if = { #Send this event if ETH is hosted by ENG and ITA is at war with ETH
+				limit = { #UK or an ally is hosting exiled Ethiopia
+					ITA_hosting_exiled_ethiopia = yes
+					ROOT = {
+						has_war_with = ETH
+					}
+				}
+				ENG = {
+					country_event = { id = BBA_italy_interaction_events.50 hours = 1 }
+				}
+			}
+			else_if = { #Send this event if ITA isn't at war with ETH or ETH isn't hosted by ENG
+				limit = {
+					ENG = {
+						controls_state = 269
+						controls_state = 903	
+					}
+				}
+				ENG = {
+					country_event = { id = BBA_italy_interaction_events.31 hours = 1 }
+				}
+			}
+			else_if = { #If Britain didn't have the necessary state(s), send this event
+				limit = {
+					FRA = {
+						controls_state = 268
+					}
+				}
+				FRA = {
+					country_event = {
+					    id = BBA_italy_interaction_events.32
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+			else_if = { #If France didn't have the necessary state(s), send this event
+				limit = {
+					ENG = {
+						controls_state = 906
+					}
+				}
+				ENG = {
+					country_event = {
+					    id = BBA_italy_interaction_events.33
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+			else_if = { #If Britain didn't have the necessary state(s), send this event
+				limit = {
+					FRA = {
+						controls_state = 458
+						controls_state = 665
+					}
+				}
+				FRA = {
+					country_event = {
+					    id = BBA_italy_interaction_events.34
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+			else_if = { #If France didn't have the necessary state(s), send this event
+				limit = {
+					ENG = {
+						controls_state = 116
+					}
+				}
+				ENG = {
+					country_event = {
+					    id = BBA_italy_interaction_events.35
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+			else = { #If Britain didn't have the necessary state(s), send this event
+				FRA = {
+					country_event = { #Balkan claims event
+					    id = BBA_italy_interaction_events.36
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_ratify_the_stresa_front
+		icon = GFX_focus_focus_fra_ratify_stresa
+		prerequisite = { focus = ITA_negotiate_italian_claims }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_negotiate_italian_claims
+		cost = 10
+		available = {
+			is_subject = no 
+			OR = {
+				AND = {
+					NOT = {
+						has_war_with = ENG
+						has_war_with = FRA
+					}
+					FRA = {
+						is_in_faction_with = ENG
+					} 
+				}
+				AND = {
+					NOT = {
+						has_war_with = FRA
+					}
+					FRA = {
+						NOT = {
+							is_in_faction_with = ENG
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			IF = {
+				limit = {
+					FRA = {
+						NOT = {
+							has_completed_focus = FRA_proclaim_the_third_empire
+						}
+					}
+				}
+				FRA = {
+					country_event = {
+						id = BBA_italy_interaction_events.40
+					    days = 3
+					    random = 6
+					}
+				}
+			}
+			effect_tooltip = {
+				every_country = { #If Italy has any wargoal on other countries, remove them so they can join the faction
+					limit = {
+						OR = {
+							is_in_faction_with = FRA
+							tag = FRA
+						} 
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+					custom_effect_tooltip = if_they_accept_tt
+					ROOT = {
+						remove_wargoal = {
+							type = all
+							target = PREV 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_joint_military_programs
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = ITA_ratify_the_stresa_front }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_ratify_the_stresa_front
+		cost = 5
+		available = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+				}
+				army_experience = 30
+				navy_experience = 30
+				air_experience = 30
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 2
+					category = ship_modules_tech
+				}
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 2
+					category = light_air
+				}
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 2
+					category = cat_medium_armor
+				}
+				custom_effect_tooltip = ITA_joint_military_programs_two_allies_tt
+			}
+			else = {
+				army_experience = 15
+				navy_experience = 15
+				air_experience = 15
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 1
+					category = ship_modules_tech
+				}
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 1
+					category = light_air
+				}
+				add_tech_bonus = {
+					name = ITA_joint_military_programs
+					bonus = 0.5
+					uses = 1
+					category = cat_medium_armor
+				}
+				custom_effect_tooltip = ITA_joint_military_programs_one_ally_tt
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_italys_destiny
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = { focus = ITA_ratify_the_stresa_front }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_ratify_the_stresa_front
+		cost = 10
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					BUL_is_balkan_nation = yes
+					NOT = { tag = TUR } #Skip Turkey
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_guaranteed_by = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+
+			add_ideas = ITA_italys_destiny_idea 
+		}
+	}
+
+	focus = {
+		id = ITA_the_eastern_threat
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = ITA_italys_destiny }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_italys_destiny
+		cost = 10
+		available = {
+			any_country = {
+				original_tag = SOV
+				exists = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_non_aggression_pact_with = ROOT }
+				NOT = { is_guaranteed_by = ROOT }
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_the_eastern_threat_claims_tt
+			every_state = {
+				limit = {
+					BUL_state_is_in_the_black_sea = yes
+					is_owned_by = SOV
+				}
+				hidden_effect ={
+					ROOT = { add_state_claim = PREV }
+				}
+				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
+			add_timed_idea = {
+				idea = ITA_the_eastern_threat_ns
+				days = 365
 			}
 		}
 	}
