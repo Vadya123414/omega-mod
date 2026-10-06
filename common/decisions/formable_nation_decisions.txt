@@ -4930,9 +4930,6 @@ form_mutapa_category = {
 			controls_state = 275
 			controls_state = 542
 			controls_state = 545
-			controls_state = 544
-			controls_state = 896
-			controls_state = 897
 			controls_state = 771
 			controls_state = 981
 		}
@@ -4950,9 +4947,6 @@ form_mutapa_category = {
 				state = 275
 				state = 542
 				state = 545
-				state = 544
-				state = 896
-				state = 897
 				state = 771
 				state = 981
 			}
