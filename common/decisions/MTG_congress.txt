@@ -288,8 +288,9 @@ USA_congress = {
 		icon = ger_mefo_bills
 		available = {
 			congress_medium_support_trigger = yes
+			has_government = communism
 		}
-		visible = {always = yes}
+		visible = {has_government = communism}
 		cost = 25
 		days_remove = 90
 		days_re_enable = 275
