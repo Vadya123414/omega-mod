@@ -31,6 +31,8 @@ sov_strategy_arms_factory_building = {
 MINOR_strategy_industrial_complex_building = {
 		enable = {
 			AND = {
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
 					not = {original_tag = USA}
 					not = {original_tag = ITA}
 					not = {original_tag = GER}
@@ -52,6 +54,8 @@ MINOR_strategy_industrial_complex_building = {
 MINOR_strategy_arms_factory_building = {
 		enable = {
 				AND = {
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
 						not = {original_tag = USA}
 						not = {original_tag = ITA}
 						not = {original_tag = GER}
@@ -248,5 +252,78 @@ JAP_industrial_complex_building = {
 		type = building_target
 		id = industrial_complex
 		value = 1000
+	}
+}
+AST_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+					original_tag = AST
+					date < 1937.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+AST_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					original_tag = AST
+					date > 1937.10.1
+					num_of_military_factories < 20
+				}
+		}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+Dockyard_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					original_tag = AST
+					num_of_military_factories > 19
+				}
+		}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 900
+	}
+}
+PHI_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				not = {has_completed_focus = PHI_national_defense_act}
+				original_tag = PHI
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+PHI_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					has_completed_focus = PHI_national_defense_act
+					original_tag = PHI
+				}
+		}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
 	}
 }

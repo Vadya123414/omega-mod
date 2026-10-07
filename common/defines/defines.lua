@@ -134,10 +134,11 @@ NDefines.NAI.PRODUCTION_LINE_SWITCH_SURPLUS_NEEDED_MODIFIER = 0.15  -- в ван
 
 NDefines.NAI.DEFAULT_SUPPLY_TRAIN_NEED_FACTOR = 1.25  -- в ванилле 1.2 | ИИ умножает текущее использование поездов на это значение для определения желаемого количества необходимых поездов. Может быть изменено стратегиями ИИ wanted_supply_train и min_wanted_supply_trains. | [BIC]
 
-NDefines.NAI.CHIEF_ADDED_WEIGHT_FACTOR = 6.5  -- в ванилле 2.4 | Множитель веса для ролей начальников штабов по сравнению с другими типами советников или идей | [FAI]
-NDefines.NAI.ARMY_CHIEF_SCORE_MULTIPLIER = 2.5  -- в ванилле 1.0 | Множитель очков для найма начальника армии | [FAI]
-NDefines.NAI.AIR_CHIEF_SCORE_MULTIPLIER = 25.0  -- в ванилле 1.0 | Множитель очков для найма начальника авиации | [FAI]
-NDefines.NAI.NAVY_CHIEF_SCORE_MULTIPLIER = 40.5  -- в ванилле 1.0 | Множитель очков для найма начальника флота | [FAI]
+--NDefines.NAI.CHIEF_ADDED_WEIGHT_FACTOR = 6.5  -- в ванилле 2.4 | Множитель веса для ролей начальников штабов по сравнению с другими типами советников или идей | [FAI]
+NDefines.NAI.ARMY_CHIEF_SCORE_MULTIPLIER = 8.0  -- в ванилле 1.0 | Множитель очков для найма начальника армии | [FAI]
+--NDefines.NAI.AIR_CHIEF_SCORE_MULTIPLIER = 1.0  -- в ванилле 1.0 | Множитель очков для найма начальника авиации | [FAI]
+--NDefines.NAI.NAVY_CHIEF_SCORE_MULTIPLIER = 1.0  -- в ванилле 1.0 | Множитель очков для найма начальника флота | [FAI]
+NDefines.NAI.POLITICAL_ADVISOR_SCORE_MULTIPLIER = 6.0  -- в ванилле 1.0 | Множитель очков для найма политического советника | [FAI]
 
 NDefines.NAI.ASSIGN_MOUNTAINEERS_TO_MOUNTAINS = 50.0  -- в ванилле 10.0 | Фактор для назначения горнострелковых дивизий на фронты с горами (пропорционально количеству этого типа местности)
 
@@ -162,7 +163,7 @@ NDefines.NAI.DIVISION_SUPPLY_RATIO_TO_MOTORIZE = 0.90  -- в ванилле 0.80
 
 NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 32  -- в ванилле 3 | ИИ просматривает свои приказы и проверяет, есть ли ситуации, которыми можно воспользоваться
 NDefines.NAI.MICRO_POCKET_SIZE = 8  -- в ванилле 4 | Котлы с размером, равным или меньшим этого значения, будут зачищаться ИИ микроконтролем для эффективности.
-NDefines.NAI.POCKET_DISTANCE_MAX = 6000  -- в ванилле 40000 | Кратчайшее квадратное расстояние, на котором ии вообще утруждаем себя преследованием котлов
+NDefines.NAI.POCKET_DISTANCE_MAX = 6000  -- в ванилле 40000 | Кратчайшее квадратное расстояние, на котором ии вообще утруждает себя преследованием котлов
 
 NDefines.NAI.ORG_UNIT_WEAK = 0.4  -- в ванилле 0.25 | % организации для того, чтобы подразделение считалось слабым | [FAI]
 NDefines.NAI.ORG_UNIT_NORMAL = 0.6  -- в ванилле 0.35 | % организации для того, чтобы подразделение считалось нормальным | [FAI]
@@ -202,6 +203,8 @@ NDefines.NMilitary.PLAN_PROVINCE_PORT_BASE_IMPORTANCE = 25.0       -- в ван�
 NDefines.NMilitary.PLAN_PROVINCE_AIRFIELD_LEVEL_FACTOR = 3      -- в ванилле 0.25
 
 
+NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = 1000 -- в ванилле 0	-- for positive values of following defines, ai weights will take over of hardcoded ai scoring system
+NDefines.NAI.EXPORT_RESOURCE_TRADE_NEED_IMPORTANCE = 1 -- в ванилле 0.5 -- how important is each lost resource to overexport for trade law selection
 
 NDefines.NAI.DEPLOY_MIN_TRAINING_SURRENDER_FACTOR = 1     -- Требуемый процент обучения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
 NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.9   -- Требуемый процент снаряжения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
@@ -219,17 +222,8 @@ NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = { 	1,   4,   7,   10,   13,
 NDefines.NProduction.MILITARY_FACTORY_COHERENCY_BONUS = 15
 
 -- <start> приоритеты строительства
-NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 0 --в ванилле 0.2                         -- Базовый приоритет для инфраструктуры в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_CIV_FACTORY = 0.80                                      -- Базовый приоритет для гражданских фабрик в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_MIL_FACTORY = 0.70                                       -- Базовый приоритет для военных заводов в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 0.40 --в ванилле 1.1                       -- Базовый приоритет для зданий снабжения (узлы снабжения, порты) в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- Базовый приоритет для железных дорог в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- Базовый приоритет для ремонта железнодорожных орудий в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- Базовый приоритет для неуказанных зданий (ни одна из категорий выше) в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- Множитель приоритета на это значение, если территория оккупирована
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                             -- Множитель приоритета на это значение, если это собственная некоренная (национальная) территория
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- Множитель приоритета на это значение, если это собственная коренная (национальная) территория
-NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                 -- Множитель приоритета на это значение, если здание ремонтируется
+NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 1 --в ванилле 0.2                         -- Базовый приоритет для инфраструктуры в очереди строительства
+NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 2 --в ванилле 1.1                       -- Базовый приоритет для зданий снабжения (узлы снабжения, порты) в очереди строительства
 -- <end> приоритеты строительства
 
 

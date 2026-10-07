@@ -2,11 +2,22 @@ boost_div_upgrades = {
 	enable = {
 		always = yes
 	}
-	abort = { always = no }
+	abort_when_not_enabled = no
 	ai_strategy = {
 		type = land_xp_spend_priority
 		id = division_template
 		value = 1000
+	}
+}
+pp_spend_priority_economy = { 
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = no
+	ai_strategy = {
+		type = pp_spend_priority
+		id = economy
+		value = 10000
 	}
 }
 default_air_production = {
@@ -15,7 +26,7 @@ default_air_production = {
 		has_tech = improved_small_airframe
 		has_tech = engines_3
 	}
-	abort_when_not_enabled = yes
+	abort_when_not_enabled = no
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
@@ -85,7 +96,11 @@ default_air_production = {
 		enable = {
 		always = yes
 	}
-	abort = { always = no }
+	abort = {		
+		is_major = yes
+		has_tech = improved_small_airframe
+		has_tech = engines_3|
+		}
 	# Air unit factors
 
 	ai_strategy = {
@@ -145,7 +160,10 @@ default_unit_production = {
 		always = yes
 	}
 	abort_when_not_enabled = no
-	
+		ai_strategy = { 
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
