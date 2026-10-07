@@ -1296,7 +1296,16 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+				}
+			}
 		}
 
 		categories = {
@@ -1348,8 +1357,18 @@ early_ship_hull_carrier = {
 			position = {  x = -2 y = 8 }
 		}
 
+
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+				}
+			}
 		}
 
 		categories = {
@@ -1389,8 +1408,18 @@ early_ship_hull_carrier = {
 			position = {  x = -2 y = 14 }
 		}
 
+
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+				}
+			}
 		}
 
 		categories = {
@@ -1453,8 +1482,18 @@ early_ship_hull_carrier = {
 			position = {  x = -1 y = 13 }
 		}
 
+
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+				}
+			}
 		}
 
 		categories = {
@@ -1487,8 +1526,18 @@ early_ship_hull_carrier = {
 			position = {  x = -1 y = 19 }
 		}
 
+
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+				}
+			}
 		}
 
 		categories = {

@@ -247,7 +247,7 @@ mountaineers_generic = {
 			}
 
 			regiments = {
-				mountaineers = 10
+				mountaineers = 15
 			}
 
 		}

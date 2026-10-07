@@ -8,7 +8,6 @@ default_minor = {
 		original_tag = AFG
 		original_tag = ALB
 		original_tag = ARG
-		original_tag = AST
 		original_tag = AUS
 		original_tag = BEL
 		original_tag = BHU

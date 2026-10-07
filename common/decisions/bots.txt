@@ -10,6 +10,7 @@ BOTS = {
                 original_tag = LIT
                 original_tag = LAT
                 original_tag = EST
+                original_tag = DEN
             }      
                 }
 		visible = {
@@ -18,6 +19,7 @@ BOTS = {
                 original_tag = LIT
                 original_tag = LAT
                 original_tag = EST
+                original_tag = DEN
             }  
 		}
         ai_will_do = {base = 1000}
