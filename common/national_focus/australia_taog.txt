@@ -8881,7 +8881,7 @@ focus = {
 		x = 2
 		y = 1
 	
-		cost = 6
+		cost = 10
 
 		available = {
 			has_idea = AST_nationalizing_spirit
