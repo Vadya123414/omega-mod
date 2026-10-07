@@ -63,9 +63,9 @@ USA_historical_plan = {
 		USA_agricultural_adjustment_act
 		USA_fair_labour_standards_act
 		USA_federal_housing_act
+		USA_neutrality_act
 		USA_war_department
 		USA_selective_training_act
-		USA_neutrality_act
 		USA_arsenal_of_democracy
 		USA_the_giant_wakes
 		USA_two_ocean_navy_act

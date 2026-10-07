@@ -5760,6 +5760,7 @@ focus_tree = {
 		}
 
 		available = {
+			if = {limit = {is_ai = no}
 			if = {
 				limit = {
 					threat < 0.5
@@ -5769,6 +5770,7 @@ focus_tree = {
 			}
 			else = {
 				congress_low_support_trigger = yes
+				}
 			}
 		}
 		
