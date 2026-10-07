@@ -500,13 +500,6 @@ DEN_balance_of_power_category = {
 
 		ai_will_do = { #TODO_DANNE
 			base = 0
-			modifier = {
-				add = 50
-				DEN_rearming_ai = yes
-				DEN_christmas_moller = { is_country_leader = no }
-				has_political_power > 200
-				has_war = no
-			}
 		}
 
 		allowed = {
@@ -565,16 +558,7 @@ DEN_balance_of_power_category = {
 		icon = GFX_decision_eng_trade_unions_demand
 
 		ai_will_do = { #TODO_DANNE
-			base = 5
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 5
-				DEN_historical_ai  = yes
-				NOT = { has_country_flag = DEN_has_occupation_flag }
-			}
+			base = 0
 		}
 
 		allowed = {
@@ -623,14 +607,6 @@ DEN_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 75
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-				has_political_power > 100
-			}
 		}
 
 		allowed = {
@@ -723,16 +699,6 @@ DEN_balance_of_power_category = {
 
 		ai_will_do = { 
 			base = 0
-			modifier = {
-				add = 100
-				DEN_historical_ai = yes
-				has_political_power > 100
-				NOT = { has_country_flag = DEN_has_occupation_flag }
-				power_balance_value = {
-					id = DEN_balance_of_power
-					value > -0.6
-				}
-			}
 		}
 
 		allowed = {
@@ -767,16 +733,7 @@ DEN_balance_of_power_category = {
 
 		ai_will_do = { 
 			base = 0
-			modifier = {
-				add = 100
-				DEN_historical_ai = yes
-				has_political_power > 100
-				NOT = { has_country_flag = DEN_has_occupation_flag }
-				power_balance_value = {
-					id = DEN_balance_of_power
-					value > -0.6
-				}
-			}
+
 		}
 
 		allowed = {
@@ -825,16 +782,6 @@ DEN_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 100
-				DEN_historical_ai = yes
-				has_political_power > 100
-				NOT = { has_country_flag = DEN_has_occupation_flag }
-				power_balance_value = {
-					id = DEN_balance_of_power
-					value > -0.6
-				}
-			}
 		}
 
 		allowed = {
@@ -874,16 +821,7 @@ DEN_balance_of_power_category = {
 		icon = GFX_decision_generic_welfare
 
 		ai_will_do = { 
-			base = 50
-			modifier = {
-				factor = 2
-				has_political_power > 150
-				NOT = { has_country_flag = DEN_has_occupation_flag }
-				power_balance_value = {
-					id = DEN_balance_of_power
-					value > -0.8
-				}
-			}
+			base = 0
 		}
 
 		allowed = {
@@ -1085,7 +1023,7 @@ DEN_balance_of_power_category = {
 		icon = GFX_decision_eng_trade_unions_demand
 
 		ai_will_do = { 
-			base = 0
+			base = 5
 			modifier = {
 				add = 50
 				power_balance_value = {
@@ -1135,7 +1073,7 @@ DEN_balance_of_power_category = {
 		icon = GFX_decision_eng_trade_unions_demand
 
 		ai_will_do = { 
-			base = 0
+			base = 5
 			modifier = {
 				add = 50
 				power_balance_value = {

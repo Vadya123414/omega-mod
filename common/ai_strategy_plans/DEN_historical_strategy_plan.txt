@@ -29,33 +29,33 @@ DEN_historical_plan = {
 
 		DEN_fortify_our_borders
 		DEN_devalue_the_krone
-DEN_refortify_tunestillingen
-DEN_build_a_modern_dannevirke
-DEN_fortify_the_islands
-DEN_sign_forsvarsforliget
-DEN_expand_vaernepligten
-DEN_connect_the_islands
-DEN_reorient_production_lines
-DEN_strengthen_military_industries
-DEN_danske_stalvalsevaerket
-DEN_expand_institut_for_teoretisk_fysik
-DEN_expand_the_industries
-DEN_aalborg_portland_cement_plant
-DEN_declare_neutrality
-DEN_political_unity
-DEN_policy_of_disarmament
-DEN_import_machinery_and_material
-DEN_modernize_industrial_machinery
-DEN_increase_industrial_production
-DEN_modernize_agricultural_machinery
-DEN_agricultural_reinvestments
-DEN_industrial_reinvestments
-DEN_social_stability
-DEN_build_motorveje
-DEN_heavy_market_regulations
-DEN_welcome_foreign_scientists
-DEN_side_with_unions
-DEN_limited_social_mobilization
+		DEN_refortify_tunestillingen
+		DEN_build_a_modern_dannevirke
+		DEN_fortify_the_islands
+		DEN_sign_forsvarsforliget
+		DEN_expand_vaernepligten
+		DEN_connect_the_islands
+		DEN_reorient_production_lines
+		DEN_strengthen_military_industries
+		DEN_danske_stalvalsevaerket
+		DEN_expand_institut_for_teoretisk_fysik
+		DEN_expand_the_industries
+		DEN_aalborg_portland_cement_plant
+		DEN_declare_neutrality
+		DEN_political_unity
+		DEN_policy_of_disarmament
+		DEN_import_machinery_and_material
+		DEN_modernize_industrial_machinery
+		DEN_increase_industrial_production
+		DEN_modernize_agricultural_machinery
+		DEN_agricultural_reinvestments
+		DEN_industrial_reinvestments
+		DEN_social_stability
+		DEN_build_motorveje
+		DEN_heavy_market_regulations
+		DEN_welcome_foreign_scientists
+		DEN_side_with_unions
+		DEN_limited_social_mobilization
 
 
 		DEN_declare_neutrality
@@ -131,6 +131,9 @@ DEN_limited_social_mobilization
 	}
 
 	ideas = {
+		DEN_arnold_peter_moller = 30
+		DEN_vilhelm_buhl = 6
+		DEN_alsing_andersen = 3
 
 	}
 
