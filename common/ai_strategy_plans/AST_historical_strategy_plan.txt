@@ -62,6 +62,7 @@ AST_historical_tfv = {
 		AST_its_fight_work_or_perish
 
 		AST_populate_or_perish
+		AST_royal_australian_navy
 		AST_war_is_coming
 		AST_domestic_industry
 		AST_department_of_munitions
@@ -86,6 +87,7 @@ AST_historical_tfv = {
 		AST_broken_hill_propietary_company
 		AST_new_deal
 		AST_department_of_aboriginal_affairs
+		AST_womens_armed_services
 		AST_diverse_army
 		AST_a_democratic_bulwark
 		AST_rural_concessions
@@ -104,139 +106,47 @@ AST_historical_tfv = {
 		AST_dingo_scout_car
 		AST_sentinel_tank_development
 		AST_australian_regular_army
+		AST_naval_auxiliary_patrol_taog
+		AST_cockatoo_island_shipyards_taog
+		AST_strike_from_down_under
+		AST_kangaroo_point_dry_dock_taog
 		AST_department_of_supply_and_development
 		AST_war_carriers
+		AST_a_domestic_supply_chain
+		AST_call_for_a_referendum
 
-
-
-
-		AST_standard_gauge_railway						#1930s
-		AST_industries_assistance_corporation			#1941
-		AST_western_australian_government_railways		#1937
-		AST_south_australian_housing_trust				#1936
-		AST_additional_militia_training					#1938
-		AST_royal_australian_artillery					#1930s
-		AST_daimler_dingo								#1938
-		AST_promote_reservists							#1939
-		AST_support_the_policy_of_appeasement			#1938
-		AST_strengthen_ties_with_uk						#1937
-		AST_adopt_westminster							#1940
-		AST_CSIR										#1936
-		AST_expand_the_raaf								#1939
-		AST_swpa_protector								#1939
-		AST_commonwealth_aircraft_corporation			#1936
-		AST_establish_advisory_war_council				#1940
-		AST_national_security_act						#1939
-		AST_volunteer_defence_corps						#1940
-		AST_expand_lithgow_small_arms_factory			#1940
-		AST_expand_the_northern_railway					#1940s
-		AST_specialize_equipment						#1940s
-		AST_army_inventions_directorate					#1942
-		AST_hmas_assault								#1942
-		AST_fund_owen_gun_research						#1939
-		AST_cac_woomera									#1941
-		AST_cac_boomerang								#1941
-		AST_volunteer_air_observers_corps				#1941
-		AST_womens_auxilliary_australian_air_force		#1941
-		AST_australian_womens_army_service				#1941
-		AST_sentinel_tank_project						#1941
-		AST_cockatoo_island_shipyards					#1942
-		AST_kangaroo_point_shipyards					#1942
-		AST_citizen_military_forces						#1939
-		AST_classify_aliens								#1939
-		AST_protect_overseas_commerce					#1940s
-		AST_expand_northern_presence					#1940s
-		AST_empire_air_training_scheme					#1940
-		AST_scrap_iron_flotilla							#1940
-		AST_naval_auxiliary_patrol						#1942
-		AST_pacific_area_navy							#1940s
-		AST_cruisers									#1940s
-		AST_invest_in_victory							#1940
-		AST_squash_the_squanderbugs						#1940
-		AST_rationing_and_recycling						#1940
-		AST_royal_australian_submarine_service			#1943
-		AST_airborne_defence							#1940s
-		AST_introduce_unconventional_warfare			#1940s
-		AST_rats_of_tobruk								#1941
-		AST_australian_army_catering_corps				#1943
-		AST_civil_construction_corps					#1942
-		AST_fight_work_or_perish						#1942
-		AST_department_of_supply_and_development		#1942
-		AST_allied_works_council						#1942
-		AST_australian_arms_production					#1940s
-		AST_naval_bombers								#1940s
-		AST_death_from_down_under						#1940s
-		AST_dominate_the_skies							#1940s
-		AST_uranium_mining								#1944
-		AST_z_special_unit								#1942
-		AST_m_special_unit	
 	}
 
 	research = {
-		industry = 20.0
-		infantry_tech = 15.0
-		artillery = 8.0
-		support_tech = 6.5
-		dd_tech = 5
+		industry = 40.0
+		electronics = -10.0
+		synth_resources = -5000.0
+		infantry_weapons = 15.0
+		mountaineers_tech = 5.0
+		artillery = 10.0
+		light_air = -20000.0
+        medium_air = -20000.0
+        heavy_air = -20000.0
+        air_equipment = -20000.0
+		naval_armor = -50000.0
+		naval_artillery = -500.0
+		cat_ship_light_battery = -500.0
+		cat_ship_medium_battery = -500.0
+		cat_ship_heavy_battery = -500.0
+		armor = -500.0
+		cat_light_armor = -500.0
+		cat_medium_armor = -500.0
+		cat_heavy_armor = -500.0
 	}
 
 	ideas = {
-				army_chief_offensive_3 = 100
-		army_chief_offensive_2 = 95
-		army_chief_offensive_1 = 90 
-		army_chief_reform_3 = 10
-		army_chief_reform_2 = 9
-		army_chief_reform_1 = 8
-		army_chief_planning_3 = 10
-		army_chief_planning_2 = 9
-		army_chief_planning_1 = 8
-		army_chief_defensive_3 = 85
-		army_chief_defensive_2 = 80
-		army_chief_defensive_1 = 75
-		army_chief_maneuver_3 = 10
-		army_chief_maneuver_2 = 9
-		army_chief_maneuver_1 = 8
-		army_chief_organizational_3 = 50
-		army_chief_organizational_2 = 45
-		army_chief_organizational_1 = 40
-		army_chief_morale_3 = 70
-		army_chief_morale_2 = 65
-		army_chief_morale_1 = 60
-		army_chief_drill_3 = 7
-		army_chief_drill_2 = 6
-		army_chief_drill_1 = 5 
-		army_infantry_2 = 2
-		army_infantry_3 = 2
-		war_industrialist  = 5
-	}
 
+	}
+	ai_strategy = {
+
+	}
 	traits = {
 
-		war_industrialist = 5
-		army_chief_offensive_3 = 100
-		army_chief_offensive_2 = 95
-		army_chief_offensive_1 = 90 
-		army_chief_reform_3 = 10
-		army_chief_reform_2 = 9
-		army_chief_reform_1 = 8
-		army_chief_planning_3 = 10
-		army_chief_planning_2 = 9
-		army_chief_planning_1 = 8
-		army_chief_defensive_3 = 85
-		army_chief_defensive_2 = 80
-		army_chief_defensive_1 = 75
-		army_chief_maneuver_3 = 10
-		army_chief_maneuver_2 = 9
-		army_chief_maneuver_1 = 8
-		army_chief_organizational_3 = 50
-		army_chief_organizational_2 = 45
-		army_chief_organizational_1 = 40
-		army_chief_morale_3 = 70
-		army_chief_morale_2 = 65
-		army_chief_morale_1 = 60
-		army_chief_drill_3 = 7
-		army_chief_drill_2 = 6
-		army_chief_drill_1 = 5 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

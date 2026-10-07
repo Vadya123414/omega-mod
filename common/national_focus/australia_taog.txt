@@ -360,22 +360,6 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = AST_maurice_blackburn
-			if = { limit = { is_ai = yes}
-				add_tech_bonus = {
-                name = AST_a_democratic_bulwark
-                bonus = 1.0
-                uses = 1
-                technology = concentrated_industry3
-				}
-				add_tech_bonus = {
-				name = AST_a_democratic_bulwark
-				bonus = 1
-				uses = 1
-				name = industry
-				technology = advanced_machine_tools
-		    }
-			}
-else = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = AST_a_democratic_bulwark
@@ -383,8 +367,6 @@ else = {
 				uses = 2
 				category = industry
 			}
-
-		}
 	}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
@@ -9688,12 +9670,16 @@ focus = {
 						is_ai = yes
 				}
 			activate_advisor = AST_essington_lewis
+			activate_advisor = AST_billy_hughes
+			activate_advisor = AST_geoffrey_street
+			add_ideas = limited_exports
+			add_political_power = -150
 			}
 			IF = {
 				limit = {
 						is_ai = yes
 				}
-			add_ideas = AST_broken_hill_proprietary_company_improved_ic
+			add_ideas = AST_whyalla_steelworks_improved_ic
 			}
 			}
 
