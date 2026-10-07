@@ -6,7 +6,7 @@ ideas = {
 
 		undisturbed_isolation = {
 
-
+			level = 5
 			allowed = {
 				always = no
 			}
@@ -52,7 +52,7 @@ ideas = {
 		}
 
 		isolation = {
-
+		level = 5
 			allowed = {
 				always = no
 			}
@@ -264,17 +264,18 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 100
-
+   				factor = 2
 				modifier = {
-					has_war_support > 0.25
-					factor = 0 #don't even look at it if you could be taking partial mob
+					factor = 20
+				
+					is_major = yes
+					is_minor = yes
 				}
    			}
 		}
 
 		SOV_war_economy_lar = {
-
+		level = 2
 			picture = SOV_third_five_year_plan_military
 
 			allowed = {
@@ -417,7 +418,13 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-   				factor = 200
+   				factor = 3
+				modifier = {
+					factor = 20
+				
+					is_major = yes
+					is_minor = yes
+				}
    			}
 		}
 
@@ -582,29 +589,16 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-   				base = 300
-
+   				factor = 4
 				modifier = {
-					add = 1800
-
-					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
-					has_large_ally_not_pick_closed_economy = yes
-				}
-
-				modifier = {
-					# They will take the focus to gain this for free, so they shouldn't spend pp on it too willy-nilly 
-					factor = 0.1
-					original_tag = JAP
-					OR = {
-						is_historical_focus_on = yes
-						has_country_flag = JAP_AI_RANDOM_FASCIST
-						has_country_flag = JAP_AI_RANDOM_NEUTRALITY
-					}
-
+					factor = 20
+				
+					is_major = yes
+					is_minor = yes
 				}
    			}
 		}
+		
 
 		tot_economic_mobilisation = {
 
@@ -741,7 +735,13 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-   				base = 400
+   				factor = 5
+				modifier = {
+					factor = 20
+				
+					is_major = yes
+					is_minor = yes
+				}
 
 				modifier = {
 					#Block  unless nation has a lot of manpower
@@ -781,7 +781,7 @@ ideas = {
 				original_tag = GER
 				has_completed_focus = GER_totaler_krieg
 			}
-
+			level = 1
 			available = {
 				has_completed_focus = GER_totaler_krieg
 				has_war_with_major = yes
@@ -814,7 +814,7 @@ ideas = {
 		national_defense_state = { 
 
 			picture = JAP_national_defense_state
-
+			level = 1
 			visible = {
 				original_tag = JAP
 				OR = {
