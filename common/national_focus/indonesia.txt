@@ -2078,7 +2078,7 @@ focus_tree = {
 			base = 10
 		}
 
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -2735,10 +2735,10 @@ focus_tree = {
 		relative_position_id = INS_vice_presidential_edict
 
 		ai_will_do = {
-			base = 10
+			base = 3
 		}
 
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -4192,7 +4192,7 @@ focus_tree = {
 			base = 10
 		}
 
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -4918,7 +4918,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = INS_divert_javanese_education_funding_the_east
 
-		cost = 10
+		cost = 3
 
 		search_filters = { }
 		completion_reward = {
@@ -6089,7 +6089,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = INS_not_industry
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			base = 5
@@ -7154,7 +7154,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = INS_governor_general_de_jonge
 
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 		completion_reward = {
