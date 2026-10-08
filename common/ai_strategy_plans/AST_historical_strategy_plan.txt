@@ -140,13 +140,17 @@ AST_historical_tfv = {
 	}
 
 	ideas = {
-
+		AST_ragnar_colvin = 60
+		AST_geoffrey_street = 100
+		AST_billy_hughes = 80
 	}
 	ai_strategy = {
 
 	}
 	traits = {
-
+		AST_ragnar_colvin = 2
+		AST_geoffrey_street = 4
+		AST_billy_hughes = 3
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

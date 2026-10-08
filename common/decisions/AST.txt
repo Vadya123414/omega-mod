@@ -3141,6 +3141,7 @@ AST_big_business_pact_cat = {
 		modifier = {
 			production_speed_industrial_complex_factor = 0.3
 			production_speed_arms_factory_factor = 0.3
+			production_speed_dockyard_factor = 0.3
 		}
 
 		complete_effect = {

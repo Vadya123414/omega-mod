@@ -4938,7 +4938,7 @@ initial_show_position = {
 		x = 11
 		y = 11
 	
-		cost = 2
+		cost = 10
 
 		available = {
 			custom_trigger_tooltip = {

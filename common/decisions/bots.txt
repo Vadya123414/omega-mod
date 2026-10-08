@@ -406,6 +406,7 @@ BOTS = {
                 }
             }
 		visible = {
+            not = {original_tag = SPR}
             is_ai = yes
                 OR = {
                         has_government = democratic
@@ -517,6 +518,7 @@ BOTS = {
                         has_government = fascism
                         has_government = communism
                     }
+                    not = {original_tag = SPR}
 		}
         ai_will_do = {base = 1000}
         cost = 0
@@ -603,6 +605,7 @@ BOTS = {
 
 		icon = oppression
 		available = {
+            NOT ={has_idea = SPR_political_violence}
             has_political_power > 49
             #is_minor = yes
                     has_war_support > 0.15
@@ -637,6 +640,7 @@ BOTS = {
 
 		icon = oppression
 		available = {
+            NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             #is_minor = yes
                 has_war_support > 0.24   
@@ -666,11 +670,11 @@ BOTS = {
         }
     }
         bots_war_economy = {
-
 		fire_only_once = yes
 
 		icon = oppression
 		available = {
+            NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             has_war = yes
             #is_minor = yes
@@ -709,6 +713,7 @@ BOTS = {
 
 		icon = oppression
 		available = {
+            NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             has_war = yes
             #is_minor = yes
@@ -745,6 +750,7 @@ BOTS = {
 
 		icon = oppression
 		available = {
+            NOT ={has_idea = SPR_political_violence}
             #is_minor = yes
                  AND = {
                     has_war_support > 0.51

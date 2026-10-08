@@ -9669,6 +9669,7 @@ focus = {
 				limit = {
 						is_ai = yes
 				}
+			deactivate_advisor = AST_jack_lang
 			activate_advisor = AST_essington_lewis
 			activate_advisor = AST_billy_hughes
 			activate_advisor = AST_geoffrey_street

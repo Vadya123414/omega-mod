@@ -1507,7 +1507,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 
@@ -1540,7 +1540,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 1
+		modifier = {
+				factor = 0
+				is_major = no
+			}
 		}
 	}
 
@@ -1591,8 +1595,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
-
+			base = 1
+		modifier = {
+				factor = 0
+				is_major = no
+			}
 		}
 	}
 

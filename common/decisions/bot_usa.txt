@@ -5,10 +5,6 @@
 		visible = {
             original_tag = USA
             is_ai = yes
-                    OR = {
-                        has_government = fascism
-                        has_government = communism
-                    }
 		}
 		icon = oppression
 		available = {
