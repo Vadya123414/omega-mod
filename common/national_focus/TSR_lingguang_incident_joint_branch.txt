@@ -404,8 +404,8 @@ joint_focus = {
 			remove_ideas = GXC_uneasy_minds_idea
 		}
 	}
-	if = { limit = {is_ai = no }
 	completion_reward_joint_originator = {
+			if = { limit = {is_ai = no }
 		CHI = {
 			country_event = {
 				id = SEA_warlords.34
@@ -413,7 +413,6 @@ joint_focus = {
 					}
 				}
 			}
-
 		}
 
 }

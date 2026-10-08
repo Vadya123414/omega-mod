@@ -77,21 +77,29 @@ garrison_generic = {
 	role = garrison
 	
 	upgrade_prio = {
-		base = 0
+		base = 0.5
 	}
 
 	garrison_generic = {
-		reinforce_prio = 0
+		reinforce_prio = 1
 		custom_icon = 7
 	
 		upgrade_prio = {
-			base = 0
+			base = 0.5
 		}
 		
 		target_template = {
+			
+			support = {
+				artillery = 1
+			}
 
+			regimental_support = {
+				field_guns = 2
+			}
+			
 			regiments = {
-				cavalry = 1
+				infantry = 8
 			}
 		}
 	}
@@ -239,7 +247,7 @@ mountaineers_generic = {
 			}
 
 			regiments = {
-				mountaineers = 10
+				mountaineers = 15
 			}
 
 		}

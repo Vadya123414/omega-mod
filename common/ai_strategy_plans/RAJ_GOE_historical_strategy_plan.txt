@@ -34,7 +34,8 @@ RAJ_GOE_historical = {
 		RAJ_holding_the_gates_of_india
 		RAJ_abolish_agrarian_society_criteria
 		RAJ_the_ordnance_factories_board
-
+		RAJ_south_east_asia_command
+		
 		RAJ_local_recruitment_offices
 		RAJ_his_majestys_loyal_government
 		RAJ_the_government_of_india_act
@@ -58,6 +59,10 @@ RAJ_GOE_historical = {
 		RAJ_cordite_factory_aruvankadu_tamil_nadu
 		RAJ_rifle_factory_ishapore_west_bengal
 		RAJ_ordnance_factory_kanpur_uttar_pradesh
+		RAJ_indian_gentleman_officers
+		RAJ_consult_with_congress_leaders
+		RAJ_mobilization_of_the_indian_army
+		RAJ_the_aden_protectorate
 		RAJ_the_riches_of_the_raj
 		RAJ_east_india_railways_dlc
 		RAJ_bombay_baroda_and_central_india_railway
@@ -73,14 +78,14 @@ RAJ_GOE_historical = {
 		RAJ_legacy_of_military_service
 		RAJ_regimental_loyalty
 		RAJ_relax_agrarian_society_criteria
-		RAJ_indian_gentleman_officers
-		RAJ_the_aden_protectorate
-		RAJ_consult_with_congress_leaders
-		RAJ_mobilization_of_the_indian_army
-		RAJ_south_east_asia_command
-		RAJ_jungle_training_GOE
-		RAJ_defense_of_burma
 
+
+
+		RAJ_royal_indian_navy_dlc
+		RAJ_expand_mazagon_dock_dlc
+		RAJ_found_scindia_shipyard_dlc
+		RAJ_indian_cruiser_development
+		RAJ_womens_royal_indian_naval_service
 
 
 	}

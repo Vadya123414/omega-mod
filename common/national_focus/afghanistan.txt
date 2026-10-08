@@ -1159,7 +1159,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AFG_rail_construction
 		#mutually_exclusive = { focus = AFG_look_to_other_partners }
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -2289,7 +2289,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AFG_expand_academy
 		
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -2364,7 +2364,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AFG_expand_academy
 		
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -2497,7 +2497,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AFG_purchase_tanks
 		#mutually_exclusive = { focus = AFG_maintain_quami }
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -2557,7 +2557,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = AFG_purchase_aircraft
 		#mutually_exclusive = { focus = AFG_maintain_quami }
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -2624,9 +2624,7 @@ focus_tree = {
 	focus = {
 		id = AFG_prussians_of_the_orient
 		icon = GFX_focus_GER_prussian_legacy 
-		prerequisite = { focus = AFG_expand_standing_army }
-		prerequisite = { focus = AFG_increase_air_purchases }
-		prerequisite = { focus = AFG_expand_equipment_purchases }
+		prerequisite = { focus = AFG_expand_equipment_purchases focus = AFG_increase_air_purchases focus = AFG_expand_standing_army}
 		x = 0
 		y = 1
 		relative_position_id = AFG_expand_standing_army
@@ -4417,16 +4415,25 @@ focus_tree = {
 	            #division_names_group = NAMELIST_ID # optional
 	            priority = 1 # optional 
 	            template_counter = 108 # optional
-	            regiments = {
-	                elephantry = { x = 0 y = 0 }
-	                elephantry = { x = 0 y = 1 }
-	                elephantry = { x = 0 y = 2 }
-	                elephantry = { x = 0 y = 3 }
-	                elephantry = { x = 1 y = 0 }
-	                elephantry = { x = 1 y = 1 }
-	                elephantry = { x = 1 y = 2 }
-	                elephantry = { x = 1 y = 3 }
-	            }
+				override_model = RAJ_elephantry_entity
+                regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 0 y = 3 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 1 y = 3 }
+
+                    artillery_brigade = { x = 2 y = 0 }
+                    artillery_brigade = { x = 2 y = 1 }
+                    artillery_brigade = { x = 2 y = 2 }
+                    artillery_brigade = { x = 2 y = 3 }
+                }
+                support = {
+                    elephantry = { x = 0 y = 0 }
+                }
 	        }
 	        capital_scope = {
 	            create_unit = {
@@ -8947,7 +8954,7 @@ focus_tree = {
 			
 			add_timed_idea = {
 				idea = AFG_constructing_a_national_identity_idea
-				days = 730
+				days = 365
 			}	
 			custom_effect_tooltip = AFG_constructing_a_national_identity_tt
 			effect_tooltip = {
