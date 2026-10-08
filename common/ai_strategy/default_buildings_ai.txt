@@ -274,7 +274,7 @@ AST_strategy_arms_factory_building = {
 				AND = {
 					original_tag = AST
 					date > 1937.10.1
-					num_of_military_factories < 20
+					num_of_military_factories < 12
 				}
 		}
 	abort_when_not_enabled = yes
@@ -288,7 +288,7 @@ AST_Dockyard_strategy_arms_factory_building = {
 		enable = {
 				AND = {
 					original_tag = AST
-					num_of_military_factories > 15
+					num_of_military_factories > 12
 				}
 		}
 	abort_when_not_enabled = yes
@@ -320,7 +320,7 @@ PHI_strategy_arms_factory_building = {
 					original_tag = PHI
 				}
 		}
-	abort_when_not_enabled = yes
+	abort_when_not_enabled = no
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
