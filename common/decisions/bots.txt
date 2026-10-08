@@ -5,6 +5,7 @@ BOTS = {
 
 		icon = oppression
 		available = {
+            always = no
             is_ai = yes
             or = {
                 original_tag = LIT
