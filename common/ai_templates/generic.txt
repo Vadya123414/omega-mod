@@ -95,7 +95,7 @@ garrison_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 2
+				fire_support = 2
 			}
 			
 			regiments = {
@@ -174,7 +174,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 			
 			regiments = {
@@ -202,7 +202,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 			
 			regiments = {
@@ -243,7 +243,7 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 
 			regiments = {
@@ -274,7 +274,7 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {
@@ -316,7 +316,7 @@ marines_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {

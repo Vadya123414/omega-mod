@@ -4312,6 +4312,7 @@ focus_tree = {
 					}
 				}
 			}
+			add_ideas = BALTIC_international_brigades
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
