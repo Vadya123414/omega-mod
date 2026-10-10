@@ -28,19 +28,64 @@ PHI_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		
+		PHI_subject_surrender
+		PHI_local_resistance
+		PHI_hukbalahap
+		PHI_soldiers_in_hiding
+		PHI_the_hunters
+		PHI_i_shall_return
+		PHI_submarine_supplies
+		PHI_grassroot_guerillas
+		PHI_exile_support
+		PHI_exile_support
+
 		#Getting started as historical, then the focus AI weights will take over.
 
 		PHI_commonwealth_of_the_philippines
 		PHI_align_with_the_usa
 		PHI_peg_the_peso_to_the_dollar
 		PHI_quezon_city
-		PHI_agricultural_migrants_to_hawaii
+		PHI_quezon_city_campus
 		PHI_united_states_army_forces_in_the_far_east
 		PHI_appoint_macarthur
 		PHI_national_fiscal_policy
 		PHI_bring_in_eisenhower
+		PHI_american_capital_injection
 		PHI_reduce_unneccessary_expenditure
+		PHI_subsidies
+		PHI_pro_hacendados
+		PHI_investment_fund
+		PHI_sugar_barons
+		PHI_luzon_transport
+		PHI_textile_mills
+		PHI_mindanao_transport
+		PHI_mineral_prospecting
+		PHI_nationality_act
+		PHI_national_defense_act
+		PHI_luce_celler_act
+		PHI_philippine_american_educational_foundation
+		PHI_uncouple_the_peso_and_dollar
+		PHI_government_filipinization
+		PHI_bicameral_legislature
+		PHI_militarize_the_constabulary
+		PHI_philippine_scouts
+		PHI_philippine_army_orchestra
+		PHI_philippine_division
+		PHI_philippine_military_academy
+		PHI_10_year_training_plan
+		PHI_mandatory_conscription
+		PHI_battalion_combat_teams
+		PHI_self_reliance_defense
+		PHI_army_of_the_philippines
+		PHI_war_plan_orange
+		PHI_fortify_corregidor
+		PHI_offshore_patrol
+		PHI_cavite_naval_base
+		PHI_expand_gold_mining
+		PHI_encourage_gold_exports
+		
+
+
 	}
 
 	#Focuses never to take
@@ -55,7 +100,9 @@ PHI_historical_plan = {
 	}
 
 	ideas = {
-
+		PHI_jose_laurel = 100
+		PHI_jose_abad_santos = 50
+		PHI_emilio_aguinaldo = 20
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

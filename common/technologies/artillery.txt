@@ -66,22 +66,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -130,33 +115,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = { #This is needed for a lot of tank designs
-				factor = 6.0
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
-
-			# It is imperative to prepare military tech for the war with China
-			modifier = {
-				factor = 5
-				original_tag = JAP
-			}
+			factor = 0
 		}
 	}
 
@@ -209,22 +168,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1938.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.6"
-			}
+			factor = 0
 		}
 	}
 
@@ -273,22 +217,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1940.1.6"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1942.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -335,17 +264,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1941.1.6"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1942.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -385,22 +304,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1941.1.9"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1942.1.6"
-			}
+			factor = 0
 		}
 	}
 
@@ -443,22 +347,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 2
-				date > "1943.1.6"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -686,34 +575,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 0.5
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
 		}
 
 		categories = {
@@ -1085,60 +946,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 0.2
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_war_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = { #This is needed for a lot of tank designs
-				factor = 4.0
-				is_major = yes
-			}
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1939.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 30
-						}
-					}
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1184,37 +992,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 30
-						}
-					}
-				}
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1939.1.6"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1256,46 +1034,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1939.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-			modifier = {
-				tag = USA
-				has_War = no
-				factor = 0.5 #this tank nonsense will never catch on
-			}
-			modifier = {
-				factor = 5
-				date > "1940.1.6"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 32
-						}
-					}
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1353,47 +1092,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-			modifier = {
-				factor = 10
-				original_tag = GER
-				has_war_with = SOV
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1943.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 32
-						}
-					}
-				}
-			}
+			factor = 0
 		}
 	}
 
@@ -1432,37 +1131,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.6"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 5
-				date > "1943.1.1"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 35
-						}
-					}
-				}
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1498,42 +1167,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.9"
-			}
-			modifier = {
-				tag = JAP
-				not = {
-					OR = {
-						has_War_with = SOV
-						has_war_with = USA
-					}
-				}
-				factor = 0.5
-			}
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 5
-				date > "1943.1.6"
-			}
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					ROOT = {
-						estimated_intel_max_armor = {
-							tag = PREV
-							value > 35
-						}
-					}
-				}
-			}
+			factor = 0
 		}
 
 		categories = {

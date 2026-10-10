@@ -28,7 +28,6 @@ COG_historical_plan = {
 	}
 
 	ai_national_focuses = {
-
 		# Keep in mind that the years denoted will be wildly inaccurate due to the ASAP focuses
 
 		## THINGS TO DO ASAP ##
@@ -36,7 +35,7 @@ COG_historical_plan = {
 		COG_national_insitute_of_agronomic_study # 70
 		COG_congo_and_the_war_in_europe # 35
 		CONGO_force_publique # 70
-		CONGO_establish_university_of_louvain # 70
+		CONGO_congo_army
 		CONGO_chefs_coutumiers # 70
 		COG_found_the_congolese_national_movement # 70
 		COG_establish_the_anc # 35
@@ -44,12 +43,33 @@ COG_historical_plan = {
 		COG_desgregate_the_universites # 70
 		COG_shatter_the_roof # 35
 
-		#1936
+
+		#
+
 		COG_governor_general_pierre_ryckmans # 35
-		COG_allow_local_autonomy # 35
 		CONGO_belgian_congo # 35
-		CONGO_rawji_group # 35
+		CONGO_establish_university_of_louvain # 70
+		CONGO_weapon_repair_workshops
+		CONGO_free_enterprise_fund
+		CONGO_rawji_group
 		CONGO_the_heart_of_africa # 70
+		CONGO_expand_villages
+		COG_allow_local_autonomy # 35
+		COG_closer_cooperation_with_eugene_jungers # 70
+		COG_establish_new_sabena_air_routes
+		COG_improve_colonial_lawmaking
+
+		CONGO_ccci
+		CONGO_prince_leopold_mine
+		CONGO_forminiere
+		CONGO_bakwanga_mine
+
+
+
+
+
+		#1936
+		CONGO_rawji_group # 35
 		COG_invest_in_urban_centers # 70
 		CONGO_jungle_industry # 70
 
@@ -57,7 +77,6 @@ COG_historical_plan = {
 		COG_strengthen_the_banque_du_congo_belge # 70
 		COG_cooperate_with_the_comite_special_du_katanga # 70
 		COG_establish_new_sabena_air_routes # 70
-		COG_closer_cooperation_with_eugene_jungers # 70
 		COG_uplift_the_apostolic_vicar_of_leopoldville # 35
 		COG_contract_the_empain_group # 35
 
@@ -140,7 +159,33 @@ COG_historical_plan = {
 	}
 
 	ideas = {
-
+		army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
+		army_infantry_2 = 2
+		army_infantry_3 = 2
+		war_industrialist  = 5
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

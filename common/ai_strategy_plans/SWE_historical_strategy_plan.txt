@@ -3,7 +3,7 @@ SWE_historical_plan = {
 	desc = ""
 
 	allowed = {
-		SWE_AAT = yes
+		original_tag = SWE
 	}
 	enable = {
 		OR = {
@@ -22,69 +22,66 @@ SWE_historical_plan = {
 		}	
 	}
 	abort = {
-		is_subject = yes 
-		has_war = no 
 	}
 
 	ai_national_focuses = {
+		SWE_the_aland_question
 		
 		#1936
 		SWE_defense_act
 		SWE_urbanization
 		SWE_hygenic_housing
 		SWE_work_projects_for_the_unemployed
-		SWE_government_weapons_contract
-		
-		#1937
-		SWE_individual_liberty_and_prosperity_for_all
-		SWE_paid_holidays
-		SWE_norma_projektilfabrik
-		SWE_bofors_fly_swatter
-		SWE_bofors_anti_tank_gun
-		SWE_form_saab
-		SWE_affordable_housing
-		SWE_saltsjobaden_agreement
-		SWE_education_reform
-
-		#1938
-		SWE_husqvarna_vapenfabrik
-		SWE_standardize_equipment
 		SWE_radiojanst
+	
+		SWE_defense_above_all
+		SWE_deep_mining_complexes
+		SWE_privately_managed_holidays
+		SWE_saltsjobaden_agreement
 		SWE_research_slot_1
 		
-
-		#1939
+		SWE_infrastructure
+		SWE_license_skf_ball_bearings
 		SWE_continue_the_second_industrial_revolution
-		SWE_deep_mining_complexes
-		SWE_as_the_barometer_falls
-		SWE_swedes_not_sweden_to_finlands_aid
 		SWE_coalition_war_cabinet
-		SWE_land_air_warfare
-		SWE_en_svensk_tiger
-
-		#1940
-
 		SWE_winter_drill
+
 		SWE_varnplikt
+		SWE_form_rfsu
+		SWE_totalforsvar
+		SWE_government_weapons_contract
+		SWE_standardize_equipment
+
+		SWE_husqvarna_vapenfabrik
+		SWE_bofors_fly_swatter
+		SWE_allow_landsverk_to_operate
+		SWE_volvo
+		SWE_form_saab
+
+		SWE_norma_projektilfabrik
+		SWE_as_the_barometer_falls
+		SWE_defense_in_depth
+		SWE_hedgehog_defense
+		SWE_beneath_sticks_and_stones
+		SWE_end_the_fubkrieg
+		SWE_research_slot_2
+		SWE_mobilization_of_society
+		
+		SWE_bofors_anti_tank_gun
+		SWE_gotaverken
+		SWE_lindholmens_varv
+		SWE_kockums
+		SWE_retool_dockyards
+		SWE_train_the_sheltered
 		SWE_per_albin_bus
 		SWE_rationing
-		SWE_totalforsvar
-		SWE_train_the_sheltered
-		#SWE_hedgehog_defense
-
-		#1941
-		
-		SWE_train_the_sheltered
-		SWE_secret_mobilization
-		SWE_per_albin_line
-		
-		#1942
-		
-		
-		#1943
-		
-		
-		#1944
+		SWE_jagartrupper
+		SWE_lottakaren
+		SWE_hemvarnet
+		SWE_swedish_shooting_movement
+	
+		SWE_the_cross_we_bear
+		SWE_the_threat_of_the_iron_curtain
 		
 		
 	}
@@ -98,7 +95,9 @@ SWE_historical_plan = {
 	}
 
 	ideas = {
-
+		SWE_ivar_holmquist = 5.0
+		SWE_ernst_linder = 3.0
+		SWE_archibald_douglas = 3.0
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -111,3 +110,4 @@ SWE_historical_plan = {
 	}
 
 }
+

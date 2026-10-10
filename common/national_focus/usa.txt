@@ -1722,6 +1722,7 @@ focus_tree = {
 					}
 				}
 			}
+			add_ideas = USA_limited_intervention
 			set_rule = { can_send_volunteers = yes }
 			USA_congress_medium_opposition = yes
 			
@@ -5760,6 +5761,7 @@ focus_tree = {
 		}
 
 		available = {
+			if = {limit = {is_ai = no}
 			if = {
 				limit = {
 					threat < 0.5
@@ -5769,6 +5771,7 @@ focus_tree = {
 			}
 			else = {
 				congress_low_support_trigger = yes
+				}
 			}
 		}
 		

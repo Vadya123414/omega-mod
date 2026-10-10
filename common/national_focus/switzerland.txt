@@ -911,7 +911,9 @@
 				id = SWI_centralization_bop
 				value > 0
 			}
-			NOT = { has_country_flag = SWI_militias_turned_into_regulars }			
+			if = {limit = {is_ai = no}
+			NOT = { has_country_flag = SWI_militias_turned_into_regulars }	
+		}		
 		}
 	
 		search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS } 
@@ -1216,7 +1218,9 @@
 				id = SWI_centralization_bop
 				value > 0
 			}
+			if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -1374,7 +1378,9 @@
 				id = SWI_centralization_bop
 				value > 0
 			}
+			if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -1464,7 +1470,9 @@
 				SWI_is_country_to_balance = yes
 				has_war = yes 
 			}
+			if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -1568,7 +1576,9 @@
 				id = SWI_centralization_bop
 				range = SWI_centralization_bop_fully_cantons
 			}
+			if = {limit = {is_ai = no}
 			NOT = {	has_country_flag = SWI_militias_turned_into_regulars }	
+		}
 		}
 		
 		cancel_if_invalid = no
@@ -1682,7 +1692,9 @@
 				id = SWI_centralization_bop
 				range = SWI_centralization_bop_fully_cantons
 			}
+			if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -1749,7 +1761,9 @@
 				id = SWI_centralization_bop
 				range = SWI_centralization_bop_fully_cantons
 			}
+			if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -1792,7 +1806,9 @@
 				id = SWI_centralization_bop
 				range = SWI_centralization_bop_fully_cantons
 			}
+						if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -3057,7 +3073,9 @@
 				id = SWI_centralization_bop
 				value > 0
 			}
+						if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {
@@ -3106,7 +3124,9 @@
 				id = SWI_centralization_bop
 				value > 0
 			}
+						if = {limit = {is_ai = no}
 			NOT = { has_country_flag = SWI_militias_turned_into_regulars }
+		}
 		}
 		
 		bypass = {

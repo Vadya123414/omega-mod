@@ -11470,7 +11470,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		will_lead_to_war_with = CHI
 		available = {
 			is_subject = no 
 			NOT = { 
@@ -25133,6 +25133,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			hidden_effect = {
+				if = {limit = {{is_ai = yes}
+					add_offsite_building = {
+					type = arms_factory
+					level = 8
+					}
+				}
+			}
 			every_controlled_state = {
 				limit = {
 				JAP_is_home_islands_state = yes

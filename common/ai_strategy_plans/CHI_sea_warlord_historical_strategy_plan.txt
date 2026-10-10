@@ -45,6 +45,10 @@ CHI_sea_warlord_historical_plan_nationalist = {
 		GXC_formation_of_the_nraja
 		GXC_declare_opposition
 		SIC_the_sichuan_clique
+		SIC_the_governor_of_sichuan
+		SIC_develop_chongqing
+		SIC_the_domain_of_liu_wenhui
+		SIC_develop_xikang
 		XSM_the_military_governor
 		XSM_sideline_family_conflicts
 		KHM_call_for_aid
@@ -55,6 +59,20 @@ CHI_sea_warlord_historical_plan_nationalist = {
 		SIC_the_governor_of_sichuan
 		XSM_a_hui_army
 		YUN_rally_around_long_yun
+		YUN_expand_local_infrastructure
+		YUN_strive_for_self_sufficiency
+		CHI_sea_strenghten_warlord_authority
+		CHI_sea_uplift_the_mountain_brigades
+		CHI_sea_consolidate_our_rule
+		CHI_sea_infantry_efforts
+		CHI_sea_opposition
+		CHI_sea_war_taxes
+		CHI_sea_personal_leadership
+		CHI_sea_defensive_posture
+		CHI_sea_public_works
+		CHI_sea_labor_reform
+		CHI_sea_rural_militias
+		CHI_sea_proclaim_rival_government
 		CHI_sea_cooperation_with_the_nationalists
 		SIC_develop_chongqing
 		XSM_sway_the_people
@@ -214,7 +232,6 @@ CHI_sea_warlord_historical_plan_communist = {
 		army_infantry_2 = 2
 		army_infantry_3 = 2
 		war_industrialist  = 5
-
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

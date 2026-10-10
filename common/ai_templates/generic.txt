@@ -77,21 +77,29 @@ garrison_generic = {
 	role = garrison
 	
 	upgrade_prio = {
-		base = 0
+		base = 0.5
 	}
 
 	garrison_generic = {
-		reinforce_prio = 0
+		reinforce_prio = 1
 		custom_icon = 7
 	
 		upgrade_prio = {
-			base = 0
+			base = 0.5
 		}
 		
 		target_template = {
+			
+			support = {
+				artillery = 1
+			}
 
+			regimental_support = {
+				fire_support = 3
+			}
+			
 			regiments = {
-				cavalry = 1
+				infantry = 9
 			}
 		}
 	}
@@ -166,7 +174,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 			
 			regiments = {
@@ -194,7 +202,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 			
 			regiments = {
@@ -235,11 +243,11 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 
 			regiments = {
-				mountaineers = 10
+				mountaineers = 15
 			}
 
 		}
@@ -266,7 +274,7 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {
@@ -308,7 +316,7 @@ marines_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {
