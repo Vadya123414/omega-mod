@@ -714,11 +714,18 @@ BOTS = {
 
 		icon = oppression
 		available = {
+					OR = {
+                        has_idea = extensive_conscription
+                        has_idea = scraping_the_barrel
+						has_idea = all_adults_serve
+						has_idea = service_by_requirement
+
+					}
             NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             has_war = yes
             #is_minor = yes
-            has_war_support < 0.81
+            has_war_support > 0.81
             NOT = { 
                 OR = {
                     has_idea = undisturbed_isolation
