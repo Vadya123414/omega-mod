@@ -206,6 +206,9 @@ NDefines.NMilitary.PLAN_PROVINCE_AIRFIELD_LEVEL_FACTOR = 3      -- в ванил
 NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = 1000 -- в ванилле 0	-- for positive values of following defines, ai weights will take over of hardcoded ai scoring system
 NDefines.NAI.EXPORT_RESOURCE_TRADE_NEED_IMPORTANCE = 1 -- в ванилле 0.5 -- how important is each lost resource to overexport for trade law selection
 
+NDefines.NAI.PEACE_BID_FOLD_TURNS_AGAINST_OTHER_AI = 3  -- сколько раз ии будет спорить в мирной конференции с ии
+NDefines.NAI.PEACE_BID_FOLD_AGAINST_PLAYER_CHANCE = 0	--шанс того что ии спасует перед игроком
+
 NDefines.NAI.DEPLOY_MIN_TRAINING_SURRENDER_FACTOR = 1     -- Требуемый процент обучения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
 NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.9   -- Требуемый процент снаряжения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
 NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 1       -- Требуемый процент обучения (1.0 = 100%) для развертывания подразделения ИИ в мирное время
