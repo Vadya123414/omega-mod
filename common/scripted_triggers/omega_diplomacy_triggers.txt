@@ -198,3 +198,12 @@ DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
         }
     }
 }
+
+EAEU_is_eaeu_member = {
+    OR = {
+        tag = SOV
+        tag = UKR
+        tag = BLR
+        tag = KAZ
+    }
+}
