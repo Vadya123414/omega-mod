@@ -17,6 +17,7 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
+				
 			}
 
 			cancel = {
@@ -39,6 +40,7 @@ ideas = {
 
 			modifier = {
 			supply_consumption_factor = -1
+			unit_upkeep_attrition_factor = -1
 			}
 
 			cancel = {

@@ -95,11 +95,11 @@ garrison_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 2
+				fire_support = 3
 			}
 			
 			regiments = {
-				infantry = 8
+				infantry = 9
 			}
 		}
 	}
