@@ -3869,7 +3869,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_buy_time
-		cost = 2
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -3906,7 +3906,7 @@
 			focus = FRA_go_with_britain
 		}
 		relative_position_id = FRA_go_with_britain
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -4381,13 +4381,12 @@
 	focus = {
 		id = FRA_laissez_faire
 		icon = GFX_goal_generic_consumer_goods
-		x = -1
+		x = 0
 		y = 1
 		
 		prerequisite = {
 			focus = FRA_revive_the_national_bloc
 		}
-		mutually_exclusive = { focus = FRA_agricultural_protectionism }
 		relative_position_id = FRA_revive_the_national_bloc
 		cost = 10
 
@@ -4446,12 +4445,11 @@
 	focus = {
 		id = FRA_protect_the_rights_of_man
 		icon = GFX_goal_generic_demand_territory
-		x = 0
+		x = -1
 		y = 1
 		
 		prerequisite = {
 			focus = FRA_laissez_faire
-			focus = FRA_agricultural_protectionism
 		}
 		relative_position_id = FRA_laissez_faire
 		cost = 5
@@ -4486,7 +4484,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_protect_the_rights_of_man
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -4559,53 +4557,16 @@
 		}
 	}
 	focus = {
-		id = FRA_agricultural_protectionism
-		icon = GFX_goal_generic_defence
+		id = FRA_economic_devolution
+		icon = GFX_goal_generic_positive_trade_relations
+		overlay = GFX_focus_fast_overlay_generic_clock
 		x = 1
 		y = 1
 		
 		prerequisite = {
-			focus = FRA_revive_the_national_bloc
-
-		}
-		mutually_exclusive = { focus = FRA_laissez_faire }
-		relative_position_id = FRA_revive_the_national_bloc
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = { FRA_agricultural_protectionism }
-			add_political_power = 75
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = FRA_economic_devolution
-		icon = GFX_goal_generic_positive_trade_relations
-		overlay = GFX_focus_fast_overlay_generic_clock
-		x = 0
-		y = 1
-		
-		prerequisite = {
-			focus = FRA_agricultural_protectionism
 			focus = FRA_laissez_faire
 		}
-		relative_position_id = FRA_agricultural_protectionism
+		relative_position_id = FRA_laissez_faire
 		cost = 10
 
 		ai_will_do = {
@@ -7419,7 +7380,7 @@
 		bypass = {
 
 		}
-
+		will_lead_to_war_with = SPR
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -8217,6 +8178,7 @@
 
 			}
 		}
+		will_lead_to_war_with = GER
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8225,7 +8187,6 @@
 		completion_reward = {
 			custom_effect_tooltip = FRA_la_deluge_infa
 			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
-			add_to_variable = { war_goal_time = -5 tooltip = enemy_justify_war_goal_time_tt }
 			create_wargoal = { 
 				type = annex_everything
 				target = GER
@@ -8499,7 +8460,7 @@
 		bypass = {
 			has_war_with = SOV
 		}
-
+		will_lead_to_war_with = SOV
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no

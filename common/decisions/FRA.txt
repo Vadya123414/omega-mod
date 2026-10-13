@@ -1173,10 +1173,19 @@ FRA_spanish_intervention_category = {
 		target_trigger = { 
 			FROM = {
 				original_tag = SPR
-				has_government = ROOT
+				OR = {
+					has_government = ROOT
+					AND = {
+						ROOT = { has_government = fascism }
+						has_government = neutrality
+					}
+					AND = {
+						ROOT = { has_government = communism }
+						has_government = democratic
+					}
+				}
 			}
 		}
-
 		complete_effect = {
 			#This is not optimal, but it generates a beautiful tooltip
 			if = {

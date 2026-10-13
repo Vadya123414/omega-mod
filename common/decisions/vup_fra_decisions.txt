@@ -120,6 +120,12 @@ my_coalition_category = {
         }
 
         complete_effect = {
+			if = {
+				limit = {
+					check_variable = { war_goal_time > 4 } 
+				}
+				add_to_variable = { war_goal_time = -5 tooltip = enemy_justify_war_goal_time_tt }
+			}
         }
     }
 
