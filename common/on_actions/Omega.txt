@@ -9,4 +9,58 @@ on_actions = {
 		    }
         }
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = GER
+						original_tag = ITA
+						original_tag = ENG
+						original_tag = SOV
+					}
+
+					FROM = {
+						tag = FRA
+					}
+
+					FRA = {
+						has_completed_focus = FRA_proclaim_the_third_empire
+						check_variable = { capacity_factor_arms > 0.2 }
+					}
+				}
+				FRA = {
+					country_event = { id = my_coalition.6 }
+				}
+			}
+		}
+	}
+	on_monthly_FRA = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					date > 1936.1.1
+					has_completed_focus = FRA_proclaim_the_third_empire
+        			check_variable = { capacity_factor_arms > 0.14 }
+					num_of_factories > 250
+					NOT = { has_country_flag = fra_refused_to_capitulate_punishment } 
+				}
+				country_event = { id = my_coalition.7 }
+			}
+		}
+	}
+	on_monthly_FRA = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					is_in_war = yes 
+					check_variable = { war_goal_time > 4 } 
+				}
+				set_variable = { war_goal_time = 0 }
+			}
+		}
+	}
+
 }

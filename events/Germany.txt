@@ -2276,6 +2276,9 @@ country_event = {
 		if = {
 			limit = {
 				tag = ENG
+				FRA = {
+					exists = yes
+				}
 			}
 			FRA = { 
 				country_event = {
@@ -2288,6 +2291,99 @@ country_event = {
 					has_completed_focus = ENG_no_further_appeasement
 				}
 				add_political_power = -200
+			}
+		}
+		else_if = {
+			limit = {
+				tag = ENG
+				FRA = {
+					exists = no
+				}
+			}
+			# Notify CZE and they hate us (with good reason)
+			CZE = {
+				country_event = {
+					id = germany.46
+					hours = 2
+				} 
+			}
+
+			# Deal with factions
+			if = {
+				limit = {
+					is_in_faction_with = CZE
+				}
+				if = {
+					limit = {
+						is_faction_leader = no
+					}
+					random_other_country = {
+						limit = {
+							is_in_faction_with = ROOT
+							is_faction_leader = yes
+						}
+						remove_from_faction = ROOT
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							any_other_country = { #check if CZE and FRA are the only countries in this faction
+								NOT = { original_tag = CZE }
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+					dismantle_faction = yes
+				}
+			}
+
+			#Deal with relations
+			if = {
+				limit = {
+					CZE = { is_guaranteed_by = ROOT }
+				}
+				diplomatic_relation = {
+					country = CZE
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = protect
+					id = CZE
+					value = -100
+				}
+			}
+			if = {
+				limit = {
+					country_exists = CZE
+				}
+				add_ai_strategy = { #Back out on you once, not going to back you up again
+					type = diplo_action_desire
+					id = CZE
+					target = guarantee
+					value = -100
+				}
+			}
+
+			#Some fallout to YUG
+			if = {
+				limit = {
+					YUG = { is_guaranteed_by = ROOT }
+				}
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+				add_ai_strategy = {
+					type = protect
+					id = YUG
+					value = -100
+				}
+				YUG = {
+					add_opinion_modifier = { target = FRA modifier = western_betrayal }
+				}
 			}
 		}
 		else_if = {

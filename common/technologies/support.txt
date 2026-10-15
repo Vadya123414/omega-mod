@@ -126,7 +126,9 @@ technologies = {
 			support_tech
 			engineers_tech
 		}
-
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		ai_will_do = {
 			base = 4
 
@@ -251,6 +253,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1939 }
@@ -347,6 +352,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1942 }
@@ -433,6 +441,9 @@ technologies = {
 		}
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1945 }
@@ -494,6 +505,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1936 }
@@ -526,6 +540,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1939 }
@@ -562,6 +579,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1942 }
@@ -588,6 +608,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1945 }
@@ -639,6 +662,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1936 }
@@ -691,6 +717,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1939 }
@@ -727,6 +756,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1942 }
@@ -757,6 +789,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1945 }
@@ -822,6 +857,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1936 }
@@ -874,6 +912,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1939 }
@@ -909,6 +950,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1942 }
@@ -938,6 +982,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1945 }
@@ -979,6 +1026,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1936 }
@@ -1036,6 +1086,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1939 }
@@ -1087,6 +1140,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1942 }
@@ -1122,6 +1178,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1945 }
@@ -1208,6 +1267,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1936 }
@@ -1244,6 +1306,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1939 }
@@ -1284,6 +1349,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1942 }
@@ -1314,6 +1382,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1945 }
@@ -1359,6 +1430,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1936 }
@@ -1392,6 +1466,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1939 }
@@ -1425,6 +1502,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1942 }
@@ -1453,6 +1533,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1945 }
@@ -1625,6 +1708,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 1 y = @1938 }
@@ -1664,6 +1750,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 7 y = @1938 }
@@ -1703,6 +1792,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 15 y = @1938 }
@@ -1751,6 +1843,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @1938 }
@@ -1790,6 +1885,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 3 y = @1938 }
@@ -1821,6 +1919,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @1938 }
@@ -1851,6 +1952,9 @@ technologies = {
 
 		research_cost = 1.0
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 5 y = @1938 }

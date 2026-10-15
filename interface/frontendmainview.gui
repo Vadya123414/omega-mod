@@ -274,7 +274,7 @@ guiTypes = {
 
 		positionType = {
 			name = "subscription_size"
-			position = { x = 320 y = 575 }
+			position = { x = 320 y = 400 }
 		}
 				
 		background = {
@@ -398,13 +398,13 @@ guiTypes = {
 
 		iconType = {
 			name = "subscription_divider"
-			position = { x = 4 y = 336 }
+			position = { x = 4 y = 3360 }
 			spriteType = "GFX_main_lobby_divider"
 		}
 
 		containerWindowType = {
 			name = "subscription_widget"
-			position = { x = 16 y = 352 }
+			position = { x = 16 y = 3520 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -418,26 +418,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "subscription_widget_simp_chinese"
-			position = { x = 16 y = 352 }
-			size = { width = 288 height = 108 }
-			hide = yes
-
-			ButtonType = {
-				name = "show_subscription"
-				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_subscription_widget_chinese"
-				frame = 10
-				buttonText = "SUBSCRIPTION_WIDGET_SIMP_CHINESE"
-				buttonFont = "hoi_24header"
-				multiline = yes
-				web_link = "https://cn.heartsofiron.com/add-ons"
-			}
-		}
-
-		containerWindowType = {
 			name = "subscription_widget_subscribed"
-			position = { x = 16 y = 352 }
+			position = { x = 16 y = 3520 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -523,7 +505,7 @@ guiTypes = {
 			position = { x=30 y=5 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=72 y=0 }
+                position = { x=72 y=-57 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"

@@ -148,6 +148,42 @@ country_event = {
     }
 }
 
+country_event = {
+	id = my_coalition.6
+	title = my_coalition.6.t
+	desc = my_coalition.6.d
+	picture = GFX_report_event_industry_collapse 
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_coalition.6.a
+		add_to_variable = { capacity_factor_dockyard = -0.25 tooltip = industrial_capacity_dockyard_tt }
+		add_to_variable = { capacity_factor_arms = -0.25 tooltip = industrial_capacity_factory_tt }
+	}
+}
+
+country_event = {
+	id = my_coalition.7
+	title = my_coalition.7.t
+	desc = my_coalition.7.d
+	picture = GFX_report_event_industry_collapse
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_coalition.7.a
+		set_country_flag = fra_refused_to_capitulate_punishment
+        
+        custom_effect_tooltip = fra_la_deluge_change_tt
+        hidden_effect = {
+            set_variable = { capacity_factor_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+		    set_variable = { capacity_factor_arms = 0.15 tooltip = industrial_capacity_factory_tt }
+        }
+	}
+}
+
+
 add_namespace = fra_leave
 
 country_event = {
