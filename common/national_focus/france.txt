@@ -278,6 +278,8 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -335,7 +337,9 @@
 					level = 2
 					instant_build = yes
 				}
-			}				
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost				
 		}
 	}
 
@@ -725,6 +729,8 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -926,6 +932,8 @@
 
 		completion_reward = {
 			add_ideas = { FRA_firepower }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -957,11 +965,12 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			
 			swap_ideas = {
 			 	remove_idea = SWE_defense_in_depth_0
 			 	add_idea = SWE_defense_in_depth_1
 			 }
+			 custom_effect_tooltip = generic_skip_one_line_tt
+			 custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -977,13 +986,14 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
 			 swap_ideas = {
 			 	remove_idea = SWE_defense_in_depth_1
 			 	add_idea = SWE_defense_in_depth_2
 			 }
 			 custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = FRA_fortification_focus
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1052,6 +1062,8 @@
 
 		completion_reward = {
 			add_ideas = FRA_infantry_focus
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1095,6 +1107,7 @@
 				equipment = railway_gun_equipment_1
 				name = "France Railway Gun #3"
 			}
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1335,6 +1348,8 @@
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = charles_de_gaulle
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1352,6 +1367,8 @@
 		completion_reward = {
 			army_experience = 5
 			add_ideas = FRA_motorized_focus
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1370,6 +1387,8 @@
 				uses = 1
 				category = cat_mechanized_equipment
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1422,6 +1441,8 @@
 
 		completion_reward = {
 			add_ideas = { FRA_air_dominance }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1445,6 +1466,8 @@
 				uses = 2
 				category = cas_bomber
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1542,7 +1565,10 @@
 				add_idea = FRA_victors_of_wwi_1
 			}
 			army_experience = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
+		
 	}	
 
 #### END ####
@@ -3392,6 +3418,8 @@
 				annex_country = { target = ALG }
 			}
 			FRA_right_wing_riot_effect = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -4556,6 +4584,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_market_dynamism }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -4658,6 +4688,8 @@
 				}
 				remove_ideas = FRA_inefficient_economy_1
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -4692,6 +4724,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { FRA_entrepeneurship }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -7493,7 +7527,10 @@
 		}
 		
 		bypass = {
-
+			AND = {
+				has_global_flag = scw_over
+				not = {country_exists = SPB}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7548,7 +7585,10 @@
 		}
 		
 		bypass = {
-
+			AND = {
+				has_global_flag = scw_over
+				not = {country_exists = SPB}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7651,7 +7691,12 @@
 		available = {
 			
 		}
-		
+		bypass = {
+			AND = {
+				has_global_flag = scw_over
+				not = {country_exists = SPB}
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8669,6 +8714,7 @@
 		}
 	}
 
+
 	focus = {
 		id = FRA_zakon
 		icon = GFX_focus_CHI_planned_economy
@@ -8977,6 +9023,8 @@
 					}
 				set_state_flag = FRA_naval_rearmament_2NB
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9092,6 +9140,8 @@
 					set_state_flag = FRA_colonial_dockyards
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9122,6 +9172,8 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9306,6 +9358,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = FRA_the_young_school
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9329,6 +9383,8 @@
 				uses = 2
 				category = ss_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9441,6 +9497,7 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
@@ -9464,6 +9521,7 @@
 				uses = 1
 				category = light_fighter
 			}
+			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 
