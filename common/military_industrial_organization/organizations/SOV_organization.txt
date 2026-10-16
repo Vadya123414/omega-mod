@@ -91,7 +91,7 @@ SOV_morozov_design_bureau_organization = {
 				OR = {
 					is_literally_china = yes
 					tag = MAN
-									} 
+				} 
 				has_dlc = "Waking the Tiger"
 			}
 			NOR_AAT = yes
@@ -346,7 +346,7 @@ SOV_astrov_design_bureau_organization = {
 			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
 			AND = {
 				original_tag = CHI
 				has_dlc = "No Compromise, No Surrender"
@@ -694,10 +694,10 @@ SOV_mytishchy_machine_building_plant_organization = {
 	icon = GFX_idea_SOV_mytishchy_machine_building_plant
 	
 	allowed = {	
-		tag = UKR
+		OR = {
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		OR = {
 			tag = SOV
 			AND = {
 				tag = ETH 
@@ -844,7 +844,7 @@ SOV_kirov_organization = {
 			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-			original_tag = SOV
+			tag = SOV
 			AND = {
 				tag = BEL
 				has_dlc = "Gotterdammerung"
@@ -1402,10 +1402,12 @@ SOV_black_sea_shipyard_organization = {
 	icon = GFX_idea_SOV_black_sea_shipyard
 	
 	allowed = {	
-		tag = UKR
+		OR = {
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
+		}
 	}
 
 	tree_header_text = {
@@ -1598,11 +1600,13 @@ SOV_sevastopol_marine_plant_organization = {
 	include = generic_refurbishment_repair_organization
 	icon = GFX_idea_SOV_sevastopol_marine_plant
 	
-	allowed = {	
-		tag = UKR
+	allowed = {
+		OR = {
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
+		}
 	}
 
 	tree_header_text = {
@@ -2137,7 +2141,7 @@ SOV_yakovlev_design_bureau_organization = {
 			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
 			AND = {
 			    tag = AST
 			    has_dlc = "Thunder at Our Gates"
@@ -2286,11 +2290,13 @@ SOV_yakovlev_design_bureau_organization = {
 SOV_tupolev_design_bureau_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_tupolev_design_bureau
-	allowed = {	
-		tag = UKR
+	allowed = {
+		OR ={
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
+		}	
 	}
 
 	available = {
@@ -2645,10 +2651,12 @@ SOV_tula_arms_plant_organization = {
 	icon = GFX_idea_tula_arms_plant
 	
 	allowed = {	
-		tag = UKR
+		OR ={
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
+		}	
 	}
 
 	tree_header_text = {
@@ -2986,9 +2994,11 @@ SOV_kolomna_organization = {
 	icon = GFX_idea_SOV_kolomna_alt
 	name = "[SOV_kolomna_locomotive_plant_name_dynamic]"
 	allowed = {
-		tag = UKR
+		OR ={
+			tag = UKR
 			tag = BLR 
 			tag = KAZ 
-		original_tag = SOV
+			tag = SOV
+		}	
 	}
 }
