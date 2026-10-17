@@ -16,7 +16,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
             FROM = {
                 is_ai = yes
             }
-            date > 1937.1.1
+            date > 1938.1.1
         }
         # Оправдание на игрока с 1939
         AND = {

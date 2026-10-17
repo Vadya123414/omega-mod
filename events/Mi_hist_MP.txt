@@ -1024,7 +1024,7 @@ news_event = {
 	id = news_ost_west.10
 	title = news_ost_west.10.t
 	desc = news_ost_west.10.desc
-	picture = GFX_report_event_generic_panzer_attack
+	picture = news_ost_west.3
 	
     major = yes
 
