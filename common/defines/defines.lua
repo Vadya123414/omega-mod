@@ -48,8 +48,8 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- То же, что и PLANNING_CAP_COMMS_SCALING, но для активных способностей
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 148 --24 лимит спец войск
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войск
+--NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
