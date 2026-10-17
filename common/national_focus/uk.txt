@@ -2509,6 +2509,7 @@ default = no
 		mutually_exclusive = { focus = uk_rock_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			any_other_country = {
 				original_tag = SPR
 				exists = yes
@@ -2731,6 +2732,7 @@ default = no
 		prerequisite = { focus = uk_malta_focus }
 		icon = GFX_goal_generic_improve_relations
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_government = democratic
 		}
 		bypass = {
@@ -2866,6 +2868,7 @@ default = no
 		mutually_exclusive = { focus = uk_greece_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			TUR = {
 				exists = yes
 				has_war = no
@@ -2950,6 +2953,7 @@ default = no
 		mutually_exclusive = { focus = uk_turkey_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			GRE = {
 				exists = yes
 				has_war = no
@@ -3096,10 +3100,6 @@ default = no
 		available = { 
 			has_completed_focus = ENG_concessions_to_the_trade_unions
 			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		continue_if_invalid = yes
@@ -4356,6 +4356,7 @@ default = no
 		id = ENG_war_with_japan
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_offensive_war = no
 			JAP = {
 				ENG_focus_available_war = yes
@@ -5554,6 +5555,7 @@ default = no
 		available = {
 			CHI = { exists = yes }
 			has_government = democratic
+			NOT = {has_country_flag = VUP_Hist_version}
 		} 
 
 		cancel = {
@@ -8178,6 +8180,7 @@ default = no
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			SOV = {
 				ENG_focus_available_embargo_sanction = yes
 			}			
@@ -8324,6 +8327,7 @@ default = no
 	focus = {
 		id = ENG_war_with_germany
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_war = no
 			GER = {
 				ENG_focus_available_war = yes
@@ -8358,6 +8362,7 @@ default = no
 	focus = {
 		id = uk_scandinavian_focus
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				SWE = { 
 					exists = yes
@@ -8620,6 +8625,7 @@ default = no
 	focus = {
 		id = ENG_benelux_intervention
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				BEL = {
 					exists = yes

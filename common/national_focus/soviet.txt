@@ -11537,7 +11537,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_policy_of_individual_security }
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -12207,6 +12207,7 @@ ai_will_do = {
 		}
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			any_country = {
 				OR = {
@@ -12368,6 +12369,7 @@ ai_will_do = {
 		}
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
@@ -12681,6 +12683,7 @@ ai_will_do = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			}
@@ -12787,6 +12790,7 @@ ai_will_do = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
@@ -13001,6 +13005,7 @@ ai_will_do = {
 		}
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
@@ -13237,6 +13242,7 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_offer_poland_protection }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 			NOT =  { is_in_faction_with = POL }
@@ -13338,6 +13344,7 @@ ai_will_do = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			country_exists = POL
 			NOT = { has_war_with = POL }
@@ -13548,6 +13555,7 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_seek_balkan_cooperation }
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			any_other_country = {
 				BUL_is_balkan_nation = yes
@@ -13601,6 +13609,7 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_demand_balkan_submission }
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			any_other_country = {
 				BUL_is_balkan_nation = yes
@@ -13666,6 +13675,7 @@ ai_will_do = {
 		}
 
 		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
 		
@@ -14007,6 +14017,7 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_reconcile_japan }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			any_country = {
 				SOV_is_free_chinese_tag = yes
 				has_war_with = JAP
@@ -14719,7 +14730,8 @@ ai_will_do = {
 			}
 		}
 
-		available = {			
+		available = {
+			NOT = {has_country_flag = VUP_Hist_version}			
 			NOT = { has_war_with = JAP }
 			is_subject = no
 			655 = {

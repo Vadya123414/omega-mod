@@ -1,7 +1,7 @@
 GER_annex = {
 	
 	icon = military_operation
-	
+	priority = 67
 	picture = generic_army_support
 	
 	allowed = {

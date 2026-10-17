@@ -7426,6 +7426,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_country_flag = JAP_harakiri_debate_has_taken_place_flag
 		}
 
@@ -11397,6 +11398,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_subject = MEN
 			JAP_army_faction_is_at_least_influential = yes
 		}
@@ -14783,6 +14785,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			CHI = {
 				exists = yes
 				is_subject = no
@@ -15503,6 +15506,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			JAP_army_faction_is_at_least_influential = yes
 			IF = {
 				limit = {
@@ -15675,6 +15679,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			JAP_army_faction_is_at_least_influential = yes
 			IF = {
 				limit = {

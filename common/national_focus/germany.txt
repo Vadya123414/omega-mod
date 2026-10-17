@@ -132,6 +132,7 @@ focus_tree = {
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = {
 				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 			}
@@ -7952,6 +7953,7 @@ focus_tree = {
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -10070,6 +10072,7 @@ focus_tree = {
 		relative_position_id = GER_expand_claims_in_baltic
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 		}
 
@@ -10797,6 +10800,7 @@ focus_tree = {
 		}
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			OR = {
 				SLO = {
@@ -11138,6 +11142,7 @@ focus_tree = {
 		relative_position_id = GER_danzig_for_slovakia
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 		}
 
@@ -12816,6 +12821,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			NOT = { is_in_faction_with = YUG }
 			NOT = { YUG = { has_non_aggression_pact_with = GER } }
@@ -13768,6 +13774,7 @@ focus_tree = {
 		cost = 5
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			has_army_manpower = { size > 849999 } #ca 90 div
 			SOU = {
@@ -14333,6 +14340,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			has_government = fascism
 			has_war = no
@@ -14770,6 +14778,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			AND = {
 				country_exists = CHI
@@ -20453,7 +20462,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-
+			NOT = {has_country_flag = VUP_Hist_version}
 			custom_trigger_tooltip = {
 				tooltip = GER_a_strong_successor_trigger_tt
 				count_triggers = {

@@ -1103,11 +1103,6 @@
 				equipment = railway_gun_equipment_1
 				name = "France Railway Gun #2"
 			}
-			create_railway_gun = {
-				equipment = railway_gun_equipment_1
-				name = "France Railway Gun #3"
-			}
-			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1387,8 +1382,6 @@
 				uses = 1
 				category = cat_mechanized_equipment
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = FRA_focus_reduce_Cost
 		}
 	}
 	focus = {
@@ -1556,6 +1549,10 @@
 		available_if_capitulated = yes
 
 		available = {
+			OR = {
+				date > 1939.8.15
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 			NOT = { has_idea = FRA_disjointed_government }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2915,7 +2912,7 @@
 			focus = FRA_form_the_popular_front
 		}
 		relative_position_id = FRA_form_the_popular_front
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2954,7 +2951,7 @@
 			focus = FRA_reform_the_labour_laws
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3477,7 +3474,7 @@
 		}
 
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		bypass = {
@@ -3734,6 +3731,7 @@
 		available = {
 			SPR_scw_in_progress = yes
 			is_subject = no
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		bypass = {
@@ -3758,7 +3756,7 @@
 			focus = FRA_review_foreign_policy
 		}
 		relative_position_id = FRA_review_foreign_policy
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3897,7 +3895,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_buy_time
-		cost = 1
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -3975,6 +3973,7 @@
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			is_in_faction = no
 		}
@@ -4381,7 +4380,7 @@
 			factor = 1
 		}
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		mutually_exclusive = { focus = FRA_form_the_popular_front }
 		bypass = {
@@ -8684,7 +8683,6 @@
 		
 		prerequisite = {
 			focus = FRA_proclaim_the_third_empire
-			#focus = FRA_the_legitimate_heir
 		}
 		relative_position_id = FRA_proclaim_the_third_empire
 		cost = 5
@@ -8716,9 +8714,17 @@
 
 			reduce_focus_completion_cost = {
 				focus = { 
+					#армейская ветка
 					FRA_methodical_battle
 					FRA_air_dominance
 					FRA_army_reform
+					FRA_fortification_focus
+					FRA_firepower_kills
+					FRA_infantry_focus
+					FRA_battle_of_maneuver
+					FRA_motorized_focus
+					FRA_cas_focus
+
 					FRA_the_blum_viollette_proposal
 					FRA_economic_devolution
 					FRA_promote_entrepeneurship
@@ -8730,11 +8736,6 @@
 					FRA_undersea_combat
 					FRA_air_focus
 					FRA_fighter_focus
-					FRA_firepower_kills
-					FRA_battle_of_maneuver
-					FRA_extend_the_maginot_line
-					FRA_light_medium_armor
-					FRA_flying_artillery
 					FRA_industrial_expansion
 					FRA_colonial_industry
 					FRA_military_factories

@@ -97,6 +97,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = {
 				has_government = communism
 			}
@@ -318,6 +319,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				AND = {
 					is_subject = no
@@ -7854,6 +7856,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_country_leader = {
 				ruling_only = yes
 				character = HUN_miklos_horthy

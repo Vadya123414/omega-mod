@@ -7135,6 +7135,7 @@ focus_tree = {
 		relative_position_id = ITA_struggle_in_ethiopia
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		allow_branch = {
@@ -7307,8 +7308,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_global_flag = second_italo_ethiopian_war_flag }
-			NOT = { has_country_flag = ITA_defeat_in_ethiopia_flag }
+			
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
@@ -12510,6 +12510,7 @@ focus_tree = {
 		relative_position_id = ITA_towards_a_greater_italy
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			any_owned_state = {
 				is_controlled_by = ROOT
 				dockyard > 0
@@ -14132,6 +14133,7 @@ focus_tree = {
 		cost = 5
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				has_full_control_of_state = 158 #PIEDMONT
 				has_full_control_of_state = 159 #LOMBARDY
@@ -15704,6 +15706,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_in_faction = yes
 			if = {
 				limit = {
@@ -15832,6 +15835,7 @@ focus_tree = {
 		relative_position_id = ITA_spanish_italian_alliance
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_in_faction = yes
 			country_exists = POR
 			NOT = {
@@ -17558,6 +17562,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_completed_focus = ITA_foreign_affairs }
 			has_civil_war = no
 		}

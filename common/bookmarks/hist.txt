@@ -1,7 +1,7 @@
 bookmarks = {
 	bookmark = {
-		name = "NON-Hist_NAME"
-		desc = "NON-Hist_DESC"
+		name = "Hist_NAME"
+		desc = "Hist_DESC"
 		date = 1936.1.1.13
 		picture = "GFX_select_date_1939"
 		default_country = "GER"
@@ -217,19 +217,6 @@ bookmarks = {
 				AST_delegation_to_china
 			}
 		}
-		"NZL"={
-			minor = yes
-			history = "NZL_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				
-			}
-			focuses = {
-				NZL_bob_semple_tank
-				NZL_independent_new_zealand
-				NZL_maori_volunteers
-			}
-		}
 		"SAF"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
@@ -273,7 +260,6 @@ bookmarks = {
 				HUN_renounce_the_treaty_of_trianon
 			}
 		}
-
 		"ROM"={
 			minor = yes
 			history = "ROM_GATHERING_STORM_DESC"
@@ -288,76 +274,6 @@ bookmarks = {
 				ROM_preserve_greater_romania
 			}
 		}
-		
-		
-		
-	
-		"MAN"={
-			minor = yes
-			history = "MAN_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
-				MAN_low_legitimacy_5
-			}
-			focuses = {
-				MAN_obedience
-				MAN_independence_war
-				MAN_claim_the_mandate_of_heaven
-			}
-		}
-		
-		
-		"MEX"={
-			minor = yes
-			history = "MEXICO_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				MEX_church_power_2
-				MEX_politicised_army
-				MEX_oil_concessions
-			}
-			focuses = {
-				MEX_focus_aztec_eagles
-				MEX_focus_hispanic_alliance
-				MEX_focus_smash_the_bureaucrats
-			}
-		}
-
-		"HOL"={
-			minor = yes
-			history = "NETHERLANDS_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				HOL_wilhelmina
-				HOL_shell_shocked_spectator_5
-				HOL_de_crisisjaren_5
-			}
-			focuses = {
-				HOL_continue_the_war_in_batavia
-				HOL_liberation
-				HOL_prepare_the_inundation_lines
-			}
-		}
-
-		"SPR"={
-			minor = yes
-			history = "SPAIN_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
-			}
-			focuses = {
-				SPA_caudillo_of_spain
-				SPA_no_compromise_on_carlist_ideals
-				SPR_anarchism_knows_no_borders
-			}
-		}
-
-
 		"BUL"={
 			minor = yes
 			history = "BUL_GATHERING_STORM_DESC"
@@ -371,23 +287,6 @@ bookmarks = {
 				BUL_the_fatherland_front
 				BUL_restore_the_bulgarian_patriarchate
 				BUL_prussia_of_the_balkans
-			}
-		}
-
-
-		
-		FIN={
-			minor = yes
-			history = FIN_GATHERING_STORM_DESC
-			ideology = neutrality
-			available = { has_dlc = "Arms Against Tyranny" } 
-			ideas = {
-				FIN_sisu_2
-			}
-			focuses = {
-				FIN_red_finland
-				FIN_winter_warfare
-				FIN_greater_finland
 			}
 		}
 		
