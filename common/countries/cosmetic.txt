@@ -1922,35 +1922,292 @@ AST_monarchy = {
 	color_ui = rgb { 218 165 32 }
 }
 
+### HOST Tool: colour palette cosmetic tags (vanilla content above is kept intact)
 COLORBLIND_RED = {
-	color = rgb { 255  0  0 }
-	color_ui = rgb { 255  0  0 } 
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
 }
 COLORBLIND_ORANGE = {
-	color = rgb { 265  165  0 }
-	color_ui = rgb { 265  165  0 } 
+	color = rgb { 255 165 0 }
+	color_ui = rgb { 255 165 0 }
 }
 COLORBLIND_YELLOW = {
-	color = rgb { 255  255  0 }
-	color_ui = rgb { 255  255  0 } 
+	color = rgb { 255 255 0 }
+	color_ui = rgb { 255 255 0 }
 }
 COLORBLIND_GREEN = {
-	color = rgb { 3  125  15 }
-	color_ui = rgb { 3  125  15 } 
+	color = rgb { 3 125 15 }
+	color_ui = rgb { 3 125 15 }
 }
 COLORBLIND_BLUE = {
-	color = rgb { 0  49  83 }
-	color_ui = rgb { 0  49  83 } 
+	color = rgb { 0 49 83 }
+	color_ui = rgb { 0 49 83 }
 }
 COLORBLIND_PURPLE = {
-	color = rgb { 255  0  255 }
-	color_ui = rgb { 255  0  255 } 
+	color = rgb { 255 0 255 }
+	color_ui = rgb { 255 0 255 }
 }
-COLORBLIND_PINK = { 
-	color = rgb { 255  20  147 }
-	color_ui = rgb { 255  20  147 } 
+COLORBLIND_PINK = {
+	color = rgb { 255 20 147 }
+	color_ui = rgb { 255 20 147 }
 }
 COLORBLIND_TEAL = {
-	color = rgb { 255  255  255 }
-	color_ui = rgb { 255  255  255 } 
+	color = rgb { 255 255 255 }
+	color_ui = rgb { 255 255 255 }
+}
+HOSTCLR_SALMON = {
+	color = rgb { 250 128 114 }
+	color_ui = rgb { 250 128 114 }
+}
+HOSTCLR_DARK_RED = {
+	color = rgb { 120 0 0 }
+	color_ui = rgb { 120 0 0 }
+}
+HOSTCLR_PEACH = {
+	color = rgb { 255 200 150 }
+	color_ui = rgb { 255 200 150 }
+}
+HOSTCLR_BROWN = {
+	color = rgb { 120 70 25 }
+	color_ui = rgb { 120 70 25 }
+}
+HOSTCLR_CREAM = {
+	color = rgb { 255 240 160 }
+	color_ui = rgb { 255 240 160 }
+}
+HOSTCLR_OLIVE = {
+	color = rgb { 120 120 20 }
+	color_ui = rgb { 120 120 20 }
+}
+HOSTCLR_LIGHT_LIME = {
+	color = rgb { 205 245 140 }
+	color_ui = rgb { 205 245 140 }
+}
+HOSTCLR_LIME = {
+	color = rgb { 150 215 30 }
+	color_ui = rgb { 150 215 30 }
+}
+HOSTCLR_SWAMP = {
+	color = rgb { 75 100 20 }
+	color_ui = rgb { 75 100 20 }
+}
+HOSTCLR_MINT = {
+	color = rgb { 150 230 170 }
+	color_ui = rgb { 150 230 170 }
+}
+HOSTCLR_GREEN = {
+	color = rgb { 0 190 60 }
+	color_ui = rgb { 0 190 60 }
+}
+HOSTCLR_AQUAMARINE = {
+	color = rgb { 130 225 210 }
+	color_ui = rgb { 130 225 210 }
+}
+HOSTCLR_TURQUOISE = {
+	color = rgb { 0 170 150 }
+	color_ui = rgb { 0 170 150 }
+}
+HOSTCLR_DARK_TEAL = {
+	color = rgb { 0 90 85 }
+	color_ui = rgb { 0 90 85 }
+}
+HOSTCLR_LIGHT_SKY = {
+	color = rgb { 160 215 255 }
+	color_ui = rgb { 160 215 255 }
+}
+HOSTCLR_SKY = {
+	color = rgb { 0 170 255 }
+	color_ui = rgb { 0 170 255 }
+}
+HOSTCLR_SEA = {
+	color = rgb { 20 85 140 }
+	color_ui = rgb { 20 85 140 }
+}
+HOSTCLR_CORNFLOWER = {
+	color = rgb { 120 150 255 }
+	color_ui = rgb { 120 150 255 }
+}
+HOSTCLR_BLUE = {
+	color = rgb { 30 70 230 }
+	color_ui = rgb { 30 70 230 }
+}
+HOSTCLR_LAVENDER = {
+	color = rgb { 190 165 240 }
+	color_ui = rgb { 190 165 240 }
+}
+HOSTCLR_VIOLET = {
+	color = rgb { 130 50 210 }
+	color_ui = rgb { 130 50 210 }
+}
+HOSTCLR_INDIGO = {
+	color = rgb { 55 25 110 }
+	color_ui = rgb { 55 25 110 }
+}
+HOSTCLR_LILAC = {
+	color = rgb { 230 160 230 }
+	color_ui = rgb { 230 160 230 }
+}
+HOSTCLR_PLUM = {
+	color = rgb { 100 15 90 }
+	color_ui = rgb { 100 15 90 }
+}
+HOSTCLR_LIGHT_PINK = {
+	color = rgb { 255 185 210 }
+	color_ui = rgb { 255 185 210 }
+}
+HOSTCLR_BURGUNDY = {
+	color = rgb { 110 10 55 }
+	color_ui = rgb { 110 10 55 }
+}
+HOSTCLR_GREY = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 128 128 128 }
+}
+HOSTCLR_BLACK = {
+	color = rgb { 30 30 30 }
+	color_ui = rgb { 30 30 30 }
+}
+HOSTCLR_PALE_RED = {
+	color = rgb { 255 184 184 }
+	color_ui = rgb { 255 184 184 }
+}
+HOSTCLR_PALE_ORANGE = {
+	color = rgb { 255 219 184 }
+	color_ui = rgb { 255 219 184 }
+}
+HOSTCLR_PALE_YELLOW = {
+	color = rgb { 255 249 184 }
+	color_ui = rgb { 255 249 184 }
+}
+HOSTCLR_PALE_LIME = {
+	color = rgb { 225 255 184 }
+	color_ui = rgb { 225 255 184 }
+}
+HOSTCLR_PALE_GREEN = {
+	color = rgb { 184 255 195 }
+	color_ui = rgb { 184 255 195 }
+}
+HOSTCLR_PALE_TURQUOISE = {
+	color = rgb { 184 255 243 }
+	color_ui = rgb { 184 255 243 }
+}
+HOSTCLR_PALE_SKY = {
+	color = rgb { 184 231 255 }
+	color_ui = rgb { 184 231 255 }
+}
+HOSTCLR_PALE_BLUE = {
+	color = rgb { 184 201 255 }
+	color_ui = rgb { 184 201 255 }
+}
+HOSTCLR_PALE_VIOLET = {
+	color = rgb { 213 184 255 }
+	color_ui = rgb { 213 184 255 }
+}
+HOSTCLR_PALE_MAGENTA = {
+	color = rgb { 255 184 255 }
+	color_ui = rgb { 255 184 255 }
+}
+HOSTCLR_PALE_PINK = {
+	color = rgb { 255 184 219 }
+	color_ui = rgb { 255 184 219 }
+}
+HOSTCLR_LIGHT_GREY = {
+	color = rgb { 205 205 205 }
+	color_ui = rgb { 205 205 205 }
+}
+HOSTCLR_MUTED_RED = {
+	color = rgb { 168 84 84 }
+	color_ui = rgb { 168 84 84 }
+}
+HOSTCLR_MUTED_ORANGE = {
+	color = rgb { 168 126 84 }
+	color_ui = rgb { 168 126 84 }
+}
+HOSTCLR_MUTED_YELLOW = {
+	color = rgb { 168 161 84 }
+	color_ui = rgb { 168 161 84 }
+}
+HOSTCLR_MUTED_LIME = {
+	color = rgb { 133 168 84 }
+	color_ui = rgb { 133 168 84 }
+}
+HOSTCLR_MUTED_GREEN = {
+	color = rgb { 84 168 98 }
+	color_ui = rgb { 84 168 98 }
+}
+HOSTCLR_MUTED_TURQUOISE = {
+	color = rgb { 84 168 154 }
+	color_ui = rgb { 84 168 154 }
+}
+HOSTCLR_MUTED_SKY = {
+	color = rgb { 84 140 168 }
+	color_ui = rgb { 84 140 168 }
+}
+HOSTCLR_MUTED_BLUE = {
+	color = rgb { 84 105 168 }
+	color_ui = rgb { 84 105 168 }
+}
+HOSTCLR_MUTED_VIOLET = {
+	color = rgb { 119 84 168 }
+	color_ui = rgb { 119 84 168 }
+}
+HOSTCLR_MUTED_MAGENTA = {
+	color = rgb { 168 84 168 }
+	color_ui = rgb { 168 84 168 }
+}
+HOSTCLR_MUTED_PINK = {
+	color = rgb { 168 84 126 }
+	color_ui = rgb { 168 84 126 }
+}
+HOSTCLR_DARK_GREY = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 75 75 75 }
+}
+HOSTCLR_GREYISH_RED = {
+	color = rgb { 107 70 70 }
+	color_ui = rgb { 107 70 70 }
+}
+HOSTCLR_GREYISH_ORANGE = {
+	color = rgb { 107 88 70 }
+	color_ui = rgb { 107 88 70 }
+}
+HOSTCLR_GREYISH_YELLOW = {
+	color = rgb { 107 104 70 }
+	color_ui = rgb { 107 104 70 }
+}
+HOSTCLR_GREYISH_LIME = {
+	color = rgb { 91 107 70 }
+	color_ui = rgb { 91 107 70 }
+}
+HOSTCLR_GREYISH_GREEN = {
+	color = rgb { 70 107 76 }
+	color_ui = rgb { 70 107 76 }
+}
+HOSTCLR_GREYISH_TURQUOISE = {
+	color = rgb { 70 107 101 }
+	color_ui = rgb { 70 107 101 }
+}
+HOSTCLR_GREYISH_SKY = {
+	color = rgb { 70 95 107 }
+	color_ui = rgb { 70 95 107 }
+}
+HOSTCLR_GREYISH_BLUE = {
+	color = rgb { 70 79 107 }
+	color_ui = rgb { 70 79 107 }
+}
+HOSTCLR_GREYISH_VIOLET = {
+	color = rgb { 85 70 107 }
+	color_ui = rgb { 85 70 107 }
+}
+HOSTCLR_GREYISH_MAGENTA = {
+	color = rgb { 107 70 107 }
+	color_ui = rgb { 107 70 107 }
+}
+HOSTCLR_GREYISH_PINK = {
+	color = rgb { 107 70 88 }
+	color_ui = rgb { 107 70 88 }
+}
+HOSTCLR_BEIGE = {
+	color = rgb { 215 195 160 }
+	color_ui = rgb { 215 195 160 }
 }

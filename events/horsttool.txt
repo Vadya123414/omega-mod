@@ -33,14 +33,10 @@ country_event = {
 
 news_event = {
 	id = horsttool.1
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал [Root.cheat_selected] для [From.From.Owner.Getname]"
+	desc = horsttool.1.d
 	picture = GFX_news_event_001
-
-	trigger = {
-		Root={NOT={has_global_flag = enabled_event_translet_horst}}
-	}
 
 	trigger = {
 		Root={NOT={has_global_flag = enabled_event_translet_horst}}
@@ -51,9 +47,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
-		clear_variable=this.selected_cheat 
-		clear_variable=this.target_country
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -61,9 +55,9 @@ news_event = {
 	
 	news_event = {
 	id = horsttool.11
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдан один военный завод для [From.From.Owner.Getname]"
+	desc = horsttool.11.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -75,15 +69,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.18
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалено один военный завод для [From.From.Owner.Getname]"
+	desc = horsttool.18.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -95,15 +89,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.12
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
+	desc = horsttool.12.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -115,15 +109,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 			news_event = {
 	id = horsttool.17
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
+	desc = horsttool.17.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -135,16 +129,16 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 
    	news_event = {
 	id = horsttool.13
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдана одна верфь для [From.From.Owner.Getname]"
+	desc = horsttool.13.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -156,15 +150,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.16
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна верфь для [From.From.Owner.Getname]"
+	desc = horsttool.16.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -176,16 +170,16 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 
 	news_event = {
 	id = horsttool.14
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал дебаф на танки для [From.From.Owner.Getname]"
+	desc = horsttool.14.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -197,15 +191,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 	}
 
 	news_event = {
 	id = horsttool.15
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал дебаф на авиацию для [From.From.Owner.Getname]"
+	desc = horsttool.15.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -217,13 +211,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.40
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.1"
 	picture = GFX_news_event_001
@@ -237,13 +231,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.41
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.2"
 	picture = GFX_news_event_001
@@ -257,13 +251,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.42
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.3" 
 	picture = GFX_news_event_001
@@ -277,13 +271,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.43
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.4"
 	picture = GFX_news_event_001
@@ -297,13 +291,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.44
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.5"
 	picture = GFX_news_event_001
@@ -317,13 +311,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.45
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.6"
 	picture = GFX_news_event_001
@@ -337,13 +331,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.46
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.7"
 	picture = GFX_news_event_001
@@ -357,7 +351,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -365,9 +359,9 @@ news_event = {
 	
 	news_event = {
 	id = horsttool.30
-	title = "How to use Horsttool"
+	title = horsttool.30.t
 	
-	desc = "Click MARK STATE to mark all the states you which to be targeted by a certain effect and then click on the effect you wish to apply. The effect will then apply to the markeeted states and remove all previously marked states."
+	desc = horsttool.30.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -379,15 +373,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.31
-	title = "Изменён цвет страны"
+	title = horsttool.31.t
 	
-	desc = "[From.Getname] изменил цвет [From.From.Owner.Getname] на [FROM.color_selected]"
+	desc = horsttool.31.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -399,7 +393,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -414,13 +408,9 @@ news_event = {
 		Root={NOT={has_global_flag = enabled_event_translet_horst}}
 	}
 
-   	trigger = {
-		Root={NOT={has_global_flag = enabled_event_translet_horst}}
-	}
-
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       
           news_event = {		
@@ -435,7 +425,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
              news_event = {		
    id = news.4004
@@ -449,7 +439,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
                 news_event = {		
    id = news.4005
@@ -463,7 +453,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
                    news_event = {		
    id = news.4006
@@ -477,7 +467,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
      news_event = {		
    id = news.4007
@@ -491,7 +481,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {	
    id = news.4008
@@ -505,7 +495,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4113
@@ -519,7 +509,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -534,7 +524,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -549,7 +539,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -564,7 +554,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -579,7 +569,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -594,7 +584,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4119
@@ -608,7 +598,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4120
@@ -622,7 +612,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
     news_event = {		
@@ -637,7 +627,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4122
@@ -651,7 +641,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4123
@@ -665,7 +655,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4124
@@ -679,7 +669,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4125
@@ -693,7 +683,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4126
@@ -707,7 +697,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4127
@@ -721,7 +711,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       news_event = {		
    id = news.4128
@@ -735,7 +725,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       news_event = {		
    id = news.4129
@@ -749,7 +739,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4130
@@ -763,7 +753,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 	news_event = {		
    id = news.4131
@@ -777,7 +767,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4132
@@ -791,7 +781,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -806,7 +796,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4201
@@ -820,7 +810,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4202
@@ -834,7 +824,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4203
@@ -848,7 +838,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4204
@@ -862,7 +852,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4205
@@ -876,7 +866,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4206
@@ -890,7 +880,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4207
@@ -904,7 +894,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4208
@@ -918,7 +908,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4209
@@ -932,7 +922,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4210
@@ -946,7 +936,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4211
@@ -960,7 +950,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4212
@@ -974,7 +964,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4213
@@ -988,7 +978,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
       news_event = {		
@@ -999,7 +989,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
       news_event = {		
@@ -1010,7 +1000,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4302
@@ -1024,7 +1014,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4303
@@ -1038,7 +1028,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4304
@@ -1052,7 +1042,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4305
@@ -1066,7 +1056,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4306
@@ -1080,7 +1070,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4307
@@ -1093,7 +1083,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -1107,7 +1097,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4309
@@ -1120,7 +1110,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -1134,7 +1124,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4311
@@ -1147,7 +1137,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4312
@@ -1160,7 +1150,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4313
@@ -1173,7 +1163,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4314
@@ -1186,7 +1176,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4315
@@ -1199,7 +1189,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4316
@@ -1212,7 +1202,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4317
@@ -1225,7 +1215,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4318
@@ -1238,7 +1228,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4319
@@ -1251,7 +1241,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4320
@@ -1264,7 +1254,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4321
@@ -1277,7 +1267,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
  ############################################
@@ -1293,7 +1283,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4323
@@ -1306,7 +1296,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4324
@@ -1319,7 +1309,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4325
@@ -1332,7 +1322,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4326
@@ -1345,7 +1335,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4327
@@ -1358,7 +1348,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4328
@@ -1371,7 +1361,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4329
@@ -1384,7 +1374,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4330
@@ -1397,7 +1387,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4331
@@ -1410,7 +1400,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4332
@@ -1423,7 +1413,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 	news_event = {		
    id = news.4333
@@ -1436,7 +1426,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 ##########################################
    news_event = {		
@@ -1450,7 +1440,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4401
@@ -1463,7 +1453,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4402
@@ -1476,7 +1466,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4404
@@ -1489,7 +1479,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4405
@@ -1502,7 +1492,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4406
@@ -1515,7 +1505,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4407
@@ -1528,7 +1518,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4408
@@ -1541,7 +1531,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4409
@@ -1554,7 +1544,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4410
@@ -1567,7 +1557,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4411
@@ -1580,7 +1570,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4412
@@ -1593,7 +1583,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4413
@@ -1606,7 +1596,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4414
@@ -1619,7 +1609,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4415
@@ -1632,7 +1622,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4416
@@ -1645,7 +1635,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4417
@@ -1658,7 +1648,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4418
@@ -1671,7 +1661,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4419
@@ -1684,7 +1674,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4420
@@ -1697,7 +1687,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4421
@@ -1710,7 +1700,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4422
@@ -1723,7 +1713,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4423
@@ -1736,7 +1726,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4424
@@ -1749,7 +1739,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4425
@@ -1762,7 +1752,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4426
@@ -1775,7 +1765,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4427
@@ -1788,7 +1778,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4428
@@ -1801,7 +1791,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4429
@@ -1814,7 +1804,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4430
@@ -1827,7 +1817,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4431
@@ -1840,7 +1830,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4432
@@ -1853,7 +1843,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4433
@@ -1866,7 +1856,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4434
@@ -1879,7 +1869,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4435
@@ -1892,7 +1882,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4436
@@ -1905,7 +1895,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4437
@@ -1918,7 +1908,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4438
@@ -1931,7 +1921,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4439
@@ -1944,7 +1934,7 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4440
@@ -1957,6 +1947,45 @@ news_event = {
 	}
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
+
+news_event = {
+	id = news.4009
+	title = news.4009.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
+
+news_event = {
+	id = news.4010
+	title = news.4010.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
+
+news_event = {
+	id = news.4403
+	title = news.4403.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
