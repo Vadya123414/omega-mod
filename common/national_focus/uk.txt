@@ -6887,7 +6887,21 @@ default = no
 						is_ai = yes
 						is_subject_of = ENG
 					}
+					AST = {
+						is_ai = yes
+						is_subject_of = ENG
+					}
+					add_research_slot = 1
 				}
+			}
+			if = {
+				limit = {
+					CAN = {
+						is_ai = yes
+						is_subject_of = ENG
+					}
+				}
+				
 				CAN = {
 					every_unit_leader = {
 						set_nationality = ENG

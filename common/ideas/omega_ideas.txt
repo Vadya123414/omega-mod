@@ -1,7 +1,60 @@
 ideas = {
 	country = {
+
+		debaf_pexa_ideas = {
+		    allowed = {
+	            always = no
+	        }
+			
+	        removal_cost = -1
+
+	        picture = ETH_conservative_high_command
 		
-				USA_civil_war = {	
+		    modifier = {
+
+		      army_infantry_defence_factor = -0.15
+			  
+            }
+	    }
+
+		no_farm_gen = {	
+			picture = CHI_protracted_warfare
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_factor = -1.15
+			}
+		}
+
+		zakup_no = {
+		    allowed = {
+	            always = no
+	        }
+			
+	        removal_cost = -1
+
+	        picture = ETH_customs_barrier_ITA
+		
+		    modifier = {
+		        production_lack_of_resource_penalty_factor = -1
+				resource_trade_cost_bonus_per_factory = -100
+				consumer_goods_factor = +0.10
+				#research_speed_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				country_resource_chromium = 20 
+				country_resource_rubber = 20
+            }
+	    }
+		
+			USA_civil_war = {	
 				allowed = {
 					always = no
 				}

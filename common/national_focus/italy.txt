@@ -58,96 +58,7 @@ focus_tree = {
 ##       ##     ## ##       ##     ## ## ## ##  ##  ##     ## ##             ##        ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##       
 ##       ##     ## ##       ##     ## ##  ####  ##  ######### ##            ##         ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##       
 ##    ## ##     ## ##       ##     ## ##   ###  ##  ##     ## ##           ##          ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##       
- ######   #######  ########  #######  ##    ## #### ##     ## ########    ##          #### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ######## 
-
-
-	focus = {
-		id = ITA_ethiopian_war_logistics_bba
-		icon = GFX_goal_generic_position_armies
-
-		x = 2
-		y = 0
-		offset = {
-			x = 6
-			y = 0
-			trigger = {
-				ITA_cw_branches_are_visible = yes
-			}
-		}
-		cost = 1
-
-		bypass = {
-			OR = {
-				NOT = { has_global_flag = second_italo_ethiopian_war_flag }
-				AND = {
-					550 = { NOT = { is_owned_and_controlled_by = ITA } }
-					559 = { NOT = { is_owned_and_controlled_by = ITA } }
-					844 = { NOT = { is_owned_and_controlled_by = ITA } }
-				}
-			}
-		}
-
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			if = { limit = { 550 = { is_owned_and_controlled_by = ITA } }
-				550 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-				550 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 12766
-						instant_build = yes
-					}
-				}
-			}
-
-			if = { limit = { 559 = { is_owned_and_controlled_by = ITA } }
-				559 = {
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-				}
-				559 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 12991
-						instant_build = yes
-					}
-				}
-			}
-
-			if = { limit = { 844 = { is_owned_and_controlled_by = ITA } }
-				844 = {
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-				}
-				844 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 12941
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
+ ######   #######  ########  #######  ##    ## #### ##     ## ########    ##          #### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ##
 
 	focus = {
 		id = ITA_italian_highways_bba
@@ -232,7 +143,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = ITA_italian_highways_bba
-		cost = 5
+		cost = 3
 		available = {
 			NOT = { has_global_flag = second_italo_ethiopian_war_flag }
 			OR = {
@@ -264,7 +175,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_ministry_of_italian_africa
-		cost = 1		
+		cost = 1
 		available = {
 			OR = {
 				any_controlled_state = {
@@ -581,18 +492,6 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 1
 		available = {
-			OR = {
-				any_controlled_state = {
-					is_core_of = LBA
-					is_fully_controlled_by = ROOT
-				}
-				any_subject_country = { #FOR PUPPETS
-					any_controlled_state = {
-						is_core_of = LBA
-						is_fully_controlled_by = PREV
-					}
-				}
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1206,10 +1105,10 @@ focus_tree = {
 		icon = GFX_focus_generic_improve_roads
 		prerequisite = { focus = ITA_regional_development }
 
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 2
+		cost = 3
 		available = {
 			OR = {
 				448 = {
@@ -1239,7 +1138,7 @@ focus_tree = {
 				448 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1253,7 +1152,7 @@ focus_tree = {
 				449 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1267,7 +1166,7 @@ focus_tree = {
 				450 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1281,7 +1180,7 @@ focus_tree = {
 				451 = {
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1294,10 +1193,10 @@ focus_tree = {
 		icon = GFX_goal_reichsautobahn
 		prerequisite = { focus = ITA_litoranea_balbo }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ITA_litoranea_balbo
-		cost = 2
+		cost = 3
 		available = {
 			451 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -1597,10 +1496,10 @@ focus_tree = {
 		icon = GFX_focus_generic_railroad
 		prerequisite = { focus = ITA_litoranea_balbo }
 		prerequisite = { focus = ITA_prospect_for_oil }
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = ITA_litoranea_balbo
-		cost = 2
+		cost = 3
 		available = {
 			448 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -1656,19 +1555,20 @@ focus_tree = {
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = ITA_regional_development }
 
-		x = -1
+		x = 2
 		y = 1
 		relative_position_id = ITA_regional_development
 		cost = 5
 
 		bypass = {
-			448 = {
+			662 = {
 				has_state_flag = sirte_oil_developed
 			}
 		}
 
 		available = {
-			448 = {
+			has_country_flag = VUP_Hist_version
+			662 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 			}
 		}
@@ -1679,23 +1579,34 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 8
-				state = 448
+				state = 662
+			}
+			add_resource = {
+				type = oil
+				amount = 31
+				state = 661
+			}
+			add_resource = {
+				type = oil
+				amount = 47
+				state = 663
 			}	
 
-			448 = {
+			662 = {
 				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
 				set_state_flag = sirte_oil_developed
 			}
 			if = {
 				limit = {
-					448 = {
+					449 = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
-				448 = {
+				449 = {
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = fuel_silo
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1708,13 +1619,13 @@ focus_tree = {
 		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = ITA_prospect_for_oil }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ITA_prospect_for_oil
 		cost = 5
 
 		available = {
-			448 = {
+			450 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 				NOT = {
 					has_state_flag = benghazi_oil_developed
@@ -1728,16 +1639,76 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 8
-				state = 448
+				amount = 9
+				state = 450
+			}
+			450 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
 			}
 			448 = {
 				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
 				set_state_flag = benghazi_oil_developed
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 2
+					level = 3
+					instant_build = yes
+				}
+			}
+			449 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			661 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			662 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			663 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			451 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
 					instant_build = yes
 				}
 			}	
@@ -1749,8 +1720,7 @@ focus_tree = {
 		id = ITA_polizia_dell_africa_italiana
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = ITA_regional_development }
-		mutually_exclusive = { focus = ITA_strengthen_ascari_corps }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ITA_regional_development
 		cost = 5
@@ -1766,968 +1736,6 @@ focus_tree = {
 			custom_effect_tooltip = ITA_polizia_dell_africa_italiana_occupation_law_tt
 
 			set_country_flag = ITA_colonial_police_final_flag
-		}
-	}
-
-	focus = {
-		id = ITA_strengthen_ascari_corps
-		icon = GFX_focus_ITA_strengthen_ascari_corps
-		prerequisite = { focus = ITA_regional_development }
-		mutually_exclusive = { focus = ITA_polizia_dell_africa_italiana }
-		x = 3
-		y = 1
-		relative_position_id = ITA_regional_development
-		cost = 5
-		available = {
-			any_state = {
-				OR = {
-					is_core_of = LBA
-					is_core_of = ERI
-					is_core_of = SOM
-					is_core_of = ETH
-				}
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_MANPOWER}
-
-		completion_reward = {
-			unlock_decision_tooltip = ITA_reorganize_ascari
-
-			hidden_effect = {
-				### COLONIAL CAVALRY & CAMELRY TEMPLATES
-				if = {
-					limit = {
-						NOT = { has_template = "Cavalleria Coloniale" }
-					}
-					division_template = {
-						name = "Cavalleria Coloniale" 
-						division_names_group = ITA_CAV_03
-						override_model = ITA_cavalry_alt_1_entity
-						is_locked = yes
-
-						# Represents lesser-equipped colonial units
-						regiments = { 
-							cavalry = { x = 0 y = 0 } 
-							cavalry = { x = 0 y = 1 } 
-							cavalry = { x = 1 y = 0 } 
-							cavalry = { x = 1 y = 1 }
-						} 
-
-						priority = 0 
-					}
-				}
-
-				if = {
-					limit = {
-						NOT = { has_template = "Reggimento Meharista" }
-					}
-					division_template = {
-						name = "Reggimento Meharista" 
-						division_names_group = ITA_CAM_01 
-						override_model = ITA_camelry_alt_2_entity
-						regiments = { 
-							camelry = { x = 0 y = 0 } 
-							camelry = { x = 0 y = 1 } 
-							camelry = { x = 1 y = 0 } 
-							camelry = { x = 1 y = 1 } 
-						} 
-					}
-				}
-			}
-
-			### ASCARI INFANTRY TEMPLATES
-			if = {
-				limit = {
-					NOT = { has_template = "Divisione Coloniale" }
-				}
-				division_template = { 
-					name = "Divisione Coloniale" 
-					division_names_group = ITA_COL_01
-					template_counter = 67
-					#is_locked = yes
-
-					# Represents lesser-equipped colonial units
-					regiments = { 
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-					}
-
-					priority = 0 
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = { has_template = "Divisione Ascari Libica" }
-				}
-				division_template = { 
-					name = "Divisione Ascari Libica" 
-					division_names_group = ITA_COL_01
-					override_model = ITA_infantry_alt_0_entity
-					template_counter = 67
-					#is_locked = yes
-					obsolete = yes
-
-					# Represents lesser-equipped colonial units
-					regiments = { 
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-					}
-
-					priority = 0 
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = { has_template = "Divisione Ascari Eritrea" }
-				}
-				division_template = { 
-					name = "Divisione Ascari Eritrea" 
-					division_names_group = ITA_COL_01
-					template_counter = 67
-					#is_locked = yes
-					obsolete = yes
-
-					# Represents lesser-equipped colonial units
-					regiments = { 
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-					}
-
-					priority = 0 
-				}
-			}
-
-			if = {
-				limit = {
-					NOT = { has_template = "Divisione Ascari Somala" }
-				}
-				division_template = { 
-					name = "Divisione Ascari Somala" 
-					division_names_group = ITA_COL_01
-					override_model = ITA_infantry_alt_1_entity
-					template_counter = 67
-					#is_locked = yes
-					obsolete = yes
-
-					# Represents lesser-equipped colonial units
-					regiments = { 
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-					}
-
-					priority = 0 
-				}
-			}
-
-
-			custom_effect_tooltip = ITA_strengthen_ascari_corps_create_units_tt 
-
-			## CAVALRY + INFANTRY ##
-
-			#ERITREA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = ERI
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = ERI
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_strengthen_ascari_corps_eritrea_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Cavalleria Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "division_template = \"Divisione Ascari Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = ERI
-							is_fully_controlled_by = PREV
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = ERI
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = ERI
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_strengthen_ascari_corps_eritrea_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Cavalleria Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "division_template = \"Divisione Ascari Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			#LIBYA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = LBA
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = LBA
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 448 } #TRIPOLI (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_strengthen_ascari_corps_libya_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Cavalleria Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "division_template = \"Divisione Ascari Libica\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = LBA
-							is_fully_controlled_by = PREV
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = LBA
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = LBA
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 448 } #TRIPOLI (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_strengthen_ascari_corps_libya_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Cavalleria Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "division_template = \"Divisione Ascari Libica\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			#SOMALIA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 559 } #SOMALILAND (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_strengthen_ascari_corps_somalia_tt
-					hidden_effect = {
-						create_unit = {
-							division = "name = \"101a Divisione F. Coloniale Somala\" division_template = \"Divisione Ascari Somala\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "name = \"102a Divisione F. Coloniale Somala\" division_template = \"Divisione Ascari Somala\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = SOM
-							is_fully_controlled_by = PREV
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = SOM
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = SOM
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 559 } #SOMALILAND (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_strengthen_ascari_corps_somalia_tt
-						hidden_effect = {
-							create_unit = {
-								division = "name = \"101a Divisione F. Coloniale Somala\" division_template = \"Divisione Ascari Somala\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "name = \"102a Divisione F. Coloniale Somala\" division_template = \"Divisione Ascari Somala\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-
-			#ETHIOPIA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = ETH
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = ETH
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 271 } #ADDIS ABABA (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_strengthen_ascari_corps_ethiopia_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Divisione Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = ETH
-							is_fully_controlled_by = PREV
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = ETH
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = ETH
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 271 } #ADDIS ABABA (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_strengthen_ascari_corps_ethiopia_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Divisione Coloniale\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 2
-							}
-						}
-					}
-				}
-			}
-		
-			## CAMELRY ## Separated so that Libyan Meharisti go before Eritrean ones (cavalry is the other way around)
-			hidden_effect = {
-				#LIBYA
-				if = {
-					limit = {
-						any_controlled_state = {
-							is_core_of = LBA
-							is_fully_controlled_by = ROOT
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = LBA
-							is_fully_controlled_by = ROOT
-						}
-						prioritize = { 448 } #TRIPOLI (In case at some point this gets split or tag gets more cores)
-						#Regular Camelry Eritrean
-						create_unit = {
-							division = "division_template = \"Reggimento Meharista\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						any_subject_country = {
-							any_controlled_state = {
-								is_core_of = LBA
-								is_fully_controlled_by = ROOT
-							}
-						}
-					}
-					random_other_country = {
-						limit = {
-							is_subject_of = ROOT
-							any_controlled_state = {
-								is_core_of = LBA
-								is_fully_controlled_by = ROOT
-							}
-						}
-						random_controlled_state = {
-							limit = {
-								is_core_of = LBA
-								is_fully_controlled_by = PREV
-							}
-							prioritize = { 448 } #TRIPOLI (In case at some point this gets split or tag gets more cores)
-							#Regular Camelry Eritrean
-							create_unit = {
-								division = "division_template = \"Reggimento Meharista\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 2
-							}
-						}
-					}
-				}
-
-				#ERITREA
-				if = {
-					limit = {
-						any_controlled_state = {
-							is_core_of = ERI
-							is_fully_controlled_by = ROOT
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = ERI
-							is_fully_controlled_by = ROOT
-						}
-						prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-						#Regular Camelry Eritrean
-						create_unit = {
-							division = "division_template = \"Reggimento Meharista\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						any_subject_country = {
-							any_controlled_state = {
-								is_core_of = ERI
-								is_fully_controlled_by = ROOT
-							}
-						}
-					}
-					random_other_country = {
-						limit = {
-							is_subject_of = ROOT
-							any_controlled_state = {
-								is_core_of = ERI
-								is_fully_controlled_by = ROOT
-							}
-						}
-						random_controlled_state = {
-							limit = {
-								is_core_of = ERI
-								is_fully_controlled_by = PREV
-							}
-							prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-							#Regular Camelry Eritrean
-							create_unit = {
-								division = "division_template = \"Reggimento Meharista\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			show_unit_leaders_tooltip = ITA_hamid_idris_awate
-
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ITA_forza_navale_especiale }
-				}
-				custom_effect_tooltip = ITA_strengthen_ascari_corps_ibrahim_farag_mohammed_tt
-			}
-			show_unit_leaders_tooltip = ITA_ibrahim_farag_mohammed
-		}
-	}
-
-	focus = {
-		id = ITA_comandante_diavolo
-		icon = GFX_focus_ITA_comandante_diavolo
-		prerequisite = { focus = ITA_polizia_dell_africa_italiana focus = ITA_strengthen_ascari_corps }
-
-		x = 1
-		y = 1
-		relative_position_id = ITA_polizia_dell_africa_italiana
-		cost = 5
-		available = {
-			any_state = {
-				OR = {
-					is_core_of = LBA
-					is_core_of = ERI
-					is_core_of = SOM
-					is_core_of = ETH
-				}
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_MANPOWER}
-
-		completion_reward = {
-			add_ideas = ITA_hardened_irregular_bands
-
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_template = "Truppe Irregolari a Cavallo" }
-					}
-					if = {
-						limit = {
-							NOT = { has_country_flag = ITA_improved_irregular_templates_flag }
-						}
-						division_template = { #Improve Irregular template
-							name = "Truppe Irregolari a Cavallo"		
-							division_names_group = ITA_CAV_05
-							is_locked = yes
-							regiments = {
-								cavalry = { x = 0 y = 0 }
-								cavalry = { x = 0 y = 1 }
-								cavalry = { x = 1 y = 0 }
-								cavalry = { x = 1 y = 1 }
-							}
-							priority = 0
-						}
-					}
-					else = {
-						division_template = { #Basic irregular template
-							name = "Truppe Irregolari a Cavallo"		
-							division_names_group = ITA_CAV_05
-							is_locked = yes
-							regiments = {
-								cavalry = { x = 0 y = 0 }
-								cavalry = { x = 0 y = 1 }
-								cavalry = { x = 0 y = 2 }
-								cavalry = { x = 1 y = 0 }
-								cavalry = { x = 1 y = 1 }
-								cavalry = { x = 1 y = 2 }
-							}
-							support = { 
-								recon = { x = 0 y = 0 } 
-							} 
-							priority = 0
-						}
-					}
-				}
-
-				if = {
-					limit = {
-						NOT = { has_template = "Truppe Irregolari di Cammelli" }
-					}
-					if = {
-						limit = {
-							NOT = { has_country_flag = ITA_improved_irregular_templates_flag }
-						}
-						division_template = { #Improve Irregular template
-							name = "Truppe Irregolari di Cammelli"		
-							division_names_group = ITA_CAM_02
-							is_locked = yes
-							regiments = {
-								camelry = { x = 0 y = 0 }
-								camelry = { x = 0 y = 1 }
-								camelry = { x = 1 y = 0 }
-								camelry = { x = 1 y = 1 }
-							}
-							priority = 0
-						}
-					}
-					else = {
-						division_template = { #Basic irregular template
-							name = "Truppe Irregolari di Cammelli"		
-							division_names_group = ITA_CAM_02
-							is_locked = yes
-							regiments = {
-								camelry = { x = 0 y = 0 }
-								camelry = { x = 0 y = 1 }
-								camelry = { x = 0 y = 2 }
-								camelry = { x = 1 y = 0 }
-								camelry = { x = 1 y = 1 }
-								camelry = { x = 1 y = 2 }
-							}
-							support = { 
-								recon = { x = 0 y = 0 } 
-							} 
-							priority = 0
-						}
-					}
-				}
-			}
-
-			custom_effect_tooltip = ITA_comandante_diavolo_create_units_tt
-
-			#ERITREA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = ERI
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = ERI
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_comandante_diavolo_eritrea_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Banda Irregolare Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = ERI
-							is_fully_controlled_by = ROOT
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = ERI
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = ERI
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 550 } # ERITREA (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_comandante_diavolo_eritrea_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Banda Irregolare Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 2
-							}
-						}
-					}
-				}
-			}
-
-			#LIBYA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = LBA
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = LBA
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 448 } # TRIPOLI (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_comandante_diavolo_libya_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari di Cammelli\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = LBA
-							is_fully_controlled_by = ROOT
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = LBA
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = LBA
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 448 } # TRIPOLI (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_comandante_diavolo_libya_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 2
-							}
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari di Cammelli\" start_experience_factor = 0.15 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			#SOMALIA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = SOM
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 559 } # SOMALILAND (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_comandante_diavolo_somalia_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Banda Irregolare Somala\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 2
-						}
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = SOM
-							is_fully_controlled_by = ROOT
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_subject_of = ROOT
-						any_controlled_state = {
-							is_core_of = SOM
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = SOM
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 559 } # SOMALILAND (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_comandante_diavolo_somalia_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Banda Irregolare Somala\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 2
-							}
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			#ETHIOPIA
-			if = {
-				limit = {
-					any_controlled_state = {
-						is_core_of = ETH
-						is_fully_controlled_by = ROOT
-					}
-				}
-				random_controlled_state = {
-					limit = {
-						is_core_of = ETH
-						is_fully_controlled_by = ROOT
-					}
-					prioritize = { 271 } # ADDIS ABABA (In case at some point this gets split or tag gets more cores)
-					custom_effect_tooltip = ITA_comandante_diavolo_ethiopia_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template = \"Banda Irregolare Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "name = \"Gruppo Bande Amhara\" division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-						create_unit = {
-							division = "division_template = \"Truppe Irregolari di Cammelli\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-							owner = ROOT
-							count = 1
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_core_of = ETH
-							is_fully_controlled_by = ROOT
-						}
-					}
-				}
-				random_other_country = {
-					limit = {
-						any_controlled_state = {
-							is_core_of = ETH
-							is_fully_controlled_by = PREV
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							is_core_of = ETH
-							is_fully_controlled_by = PREV
-						}
-						prioritize = { 271 } # ADDIS ABABA (In case at some point this gets split or tag gets more cores)
-						custom_effect_tooltip = ITA_comandante_diavolo_ethiopia_tt
-						hidden_effect = {
-							create_unit = {
-								division = "division_template = \"Banda Irregolare Eritrea\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari a Cavallo\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-							create_unit = {
-								division = "division_template = \"Truppe Irregolari di Cammelli\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
-								owner = ROOT
-								count = 1
-							}
-						}
-					}
-				}
-			}
-
-			show_unit_leaders_tooltip = ITA_amedeo_guillet
 		}
 	}
 

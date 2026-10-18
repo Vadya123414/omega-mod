@@ -14186,6 +14186,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				date > 1941.6.1
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 			is_subject = no
 			IF = {
 				limit = {

@@ -1599,7 +1599,7 @@ technologies = {
 			}
 		}
 
-		research_cost = 1.5
+		research_cost = 2.25
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1625,7 +1625,7 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1655,7 +1655,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder

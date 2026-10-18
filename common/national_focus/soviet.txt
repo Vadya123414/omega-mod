@@ -12830,7 +12830,10 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			OR = {
+				date > 1940.1.1
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 			is_subject = no
 		}
 

@@ -1,4 +1,25 @@
-﻿add_namespace = obuchenie
+﻿add_namespace = debaf_pexa
+
+news_event = {
+	id = debaf_pexa.1
+	title = debaf_pexa.1.t
+	desc = debaf_pexa.1.desc
+	picture = GFX_news_event_soviet_soldiers_ruins
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = debaf_pexa.1.a
+		
+        add_ideas = debaf_pexa_ideas
+	}
+}
+
+add_namespace = obuchenie
 
 country_event = {
 	id = obuchenie.1
