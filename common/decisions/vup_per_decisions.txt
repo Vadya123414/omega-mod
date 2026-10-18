@@ -123,9 +123,6 @@ PER_annex = {
             transfer_state = 702
 		
               }
-			  ITA = {
-		    transfer_state = 846	
-              }
 			  POR = {
 			add_ideas = BAN_BAN
 			add_ideas = free_trade

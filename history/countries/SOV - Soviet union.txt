@@ -873,7 +873,9 @@ add_ideas = {
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
 
-
+1936.1.1.13 = {
+	set_research_slots = 4
+}
 1939.1.1 = {
 
 	add_political_power = 1198

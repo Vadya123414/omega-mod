@@ -434,6 +434,9 @@ IF = {
 	}
 }
 set_war_support = 0.3
+1936.1.1.13 = {
+	set_research_slots = 5
+}
 
 
 # SETUP THE 1939 SCENARIO
