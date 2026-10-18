@@ -2947,6 +2947,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			SOV = {
 				is_faction_leader = yes
@@ -3544,6 +3545,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			OR = {
 				has_war = yes
@@ -3635,6 +3637,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			ENG = {
 				is_faction_leader = yes

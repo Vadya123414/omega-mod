@@ -2135,7 +2135,17 @@ focus_tree = {
 		id = USA_manhattan_project
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
-		
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = USA_scientist_haven
@@ -2485,7 +2495,7 @@ focus_tree = {
 			factor = 8000
 		}
 		available = {
-			democratic > 0.95
+			democratic > 0.9
 		}
 		bypass = {
 			AND = {
@@ -2611,7 +2621,11 @@ focus_tree = {
 				has_war = yes
 				has_war_support > 0.3
 			}
-			democratic > 0.95
+			OR = {
+				date > 1938.3.1
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+			democratic > 0.90
 		}
 		continue_if_invalid = yes
 		x = 0

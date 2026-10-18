@@ -1963,41 +1963,10 @@ country_event = {
 				limit = { has_global_flag = ITA_claims_on_france_1 }
 				ITA = { transfer_state = 1 }
 			}
-		}
-
-		if = {
-			limit = {
-				has_global_flag = ITA_claims_on_france_735
-				has_global_flag = ITA_claims_on_france_1
-				OR = {
-					owns_state = 554
-					owns_state = 677
-					owns_state = 680
-				}
-
-			}
-			random_other_country = {
-				limit = {
-					original_tag = FRA
-					has_government = democratic
-				}
-				if = {
-					limit = { ROOT = { owns_state = 554 } }
-					transfer_state = 554
-				}
-				if = {
-					limit = { ROOT = { owns_state = 677 } }
-					transfer_state = 677
-				}
-				if = {
-					limit = { ROOT = { owns_state = 680 } }
-					transfer_state = 680
-				}
-				country_event = france.28
-			}
+			ITA = { transfer_state = 458 }
+			ITA = { transfer_state = 665 }
 		}
 	}
-
 }
 
 # France - Syria defects to us

@@ -1442,3 +1442,31 @@ country_event = {
 		}
    }
 }
+add_namespace = vichy_war
+
+# Ивент для Вишистской Франции
+country_event = {
+	id = vichy_war.1
+	title = vichy_war.1.t
+	desc = vichy_war.1.d
+	picture = GFX_report_event_french_soldiers
+
+	trigger = {
+		tag = VIC
+		FRA = { exists = yes } 
+		NOT = { has_war_with = FRA }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = vichy_war.1.a
+		ai_chance = {
+			base = 100 
+		}
+		declare_war_on = {
+			target = FRA
+			type = annex_everything
+		}
+	}
+}

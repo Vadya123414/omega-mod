@@ -32,6 +32,7 @@ default = no
 		}
 		available = {
 			126 = { is_controlled_by = ENG }
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		

@@ -23,6 +23,45 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
+		name = "owned_dlc_item"
+		size = { width = 50 height = 50 }
+		
+		buttonType =
+		{
+			position = { x = -230 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		iconType = {
+			name = "glowup"
+			position = { x = -50 y = -21 }
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 28 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	containerWindowType = {
 		name = "change_background"
 		size = { width = 100 height = 40 }
 		position = { x = -20 y = -20 }
@@ -274,7 +313,7 @@ guiTypes = {
 
 		positionType = {
 			name = "subscription_size"
-			position = { x = 320 y = 400 }
+			position = { x = 320 y = 410 }
 		}
 				
 		background = {
@@ -324,7 +363,7 @@ guiTypes = {
 
 		positionType = {
 			name = "version_label_subscription_position"
-			position = { x = 0 y = 539 }
+			position = { x = 0 y = 377 }
 		}
 		
 		
@@ -505,7 +544,7 @@ guiTypes = {
 			position = { x=30 y=5 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=72 y=-57 }
+                position = { x=72 y=-67 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"

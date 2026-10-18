@@ -12744,13 +12744,16 @@ focus_tree = {
 		}
 
 		search_filters = {}
-
+		will_lead_to_war_with = YUG
 		completion_reward = {
 			add_state_claim = 102 #NORTH SLOVENIA
 			add_state_claim = 853 #LJUBLJANA
 			add_state_claim = 103 #DALMATIA
 			add_state_claim = 105 #MONTENEGRO
-
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}
 			if = {
 				limit = {
 					country_exists = CRO
@@ -12779,7 +12782,6 @@ focus_tree = {
 						105 = { is_fully_controlled_by = YUG }
 					}
 				}
-				activate_targeted_decision = { target = YUG decision = ITA_send_ultimatum_to_country_balkan }
 			}	
 		}
 	}
@@ -13893,6 +13895,10 @@ focus_tree = {
 					controls_state = 735
 					owns_state = 1
 					controls_state = 1
+					owns_state = 458
+					controls_state = 458
+					owns_state = 665
+					controls_state = 665
 				}
 			}
 		}
@@ -14187,6 +14193,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			FRA = { exists = yes }
 			NOT = { is_in_faction_with = FRA }
@@ -14249,7 +14256,7 @@ focus_tree = {
 		relative_position_id = ITA_war_with_france
 		cost = 10
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 			846 = {
 				is_owned_and_controlled_by = SWI
 			}
@@ -14292,6 +14299,7 @@ focus_tree = {
 		relative_position_id = ITA_italy_first
 		cost = 10
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			NOT = { is_in_faction_with = ENG }
 			NOT = { has_guaranteed = ENG }
@@ -14466,6 +14474,7 @@ focus_tree = {
 		relative_position_id = ITA_war_with_greece
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			TUR = {
 				owns_state = 342
 			}
@@ -14508,6 +14517,7 @@ focus_tree = {
 		relative_position_id = ITA_claims_on_turkey_bba
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			country_exists = TUR
 			NOT = {
 				has_war_with = TUR

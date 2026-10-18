@@ -12683,7 +12683,6 @@ ai_will_do = {
 		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			}
@@ -13660,7 +13659,7 @@ ai_will_do = {
 		relative_position_id = SOV_baltic_security
 		cost = 5
 		
-ai_will_do = {
+	ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
@@ -13830,6 +13829,7 @@ ai_will_do = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				country_exists = IRQ
 				country_exists = PER

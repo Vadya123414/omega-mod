@@ -877,8 +877,8 @@ add_ideas = {
 	add_ideas = {
 		no_farm_gen
 	}
+	set_research_slots = 4
 }
-
 
 1939.1.1 = {
 
