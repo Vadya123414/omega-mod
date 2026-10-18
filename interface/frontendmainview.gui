@@ -274,7 +274,7 @@ guiTypes = {
 
 		positionType = {
 			name = "subscription_size"
-			position = { x = 320 y = 400 }
+			position = { x = 320 y = 410 }
 		}
 				
 		background = {
@@ -324,7 +324,7 @@ guiTypes = {
 
 		positionType = {
 			name = "version_label_subscription_position"
-			position = { x = 0 y = 539 }
+			position = { x = 0 y = 377 }
 		}
 		
 		
@@ -505,7 +505,7 @@ guiTypes = {
 			position = { x=30 y=5 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=72 y=-57 }
+                position = { x=72 y=-67 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"
