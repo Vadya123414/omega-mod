@@ -27,6 +27,12 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				GER = {
+					has_completed_focus = GER_war_with_the_ussr
+				}
+			}
+
 			removal_cost = -1
 			
 			modifier = {

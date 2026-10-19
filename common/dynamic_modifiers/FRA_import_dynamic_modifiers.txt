@@ -100,3 +100,18 @@ nastup = {
 	out_of_supply_factor = -0.1
 	supply_consumption_factor = -0.05
 }
+
+FRA_fabriki = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans
+	local_building_slots_factor = -5
+	production_speed_naval_base_factor = -1
+}
+
+Kefir_delat_plaki_plaki = { #STATE MODIFIER
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_tank
+
+	army_attack_factor = -1
+}

@@ -206,6 +206,73 @@ guiTypes = {
 		}
 	}	
 
+	### MAIN MENU PANEL (upperleft)
+	containerWindowType = {
+		name  ="mainmenu_panel_upperleft"
+		position = { x=0 y =-200 }
+		show_position = { x=0 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000
+		size = { width = 256 height = 768}
+		
+		iconType =
+		{
+			name ="frontend_game_logo"
+			spriteType = "GFX_frontend_game_logo"
+			position = { x= 20 y = 20 }
+		}
+		
+	}
+
+	#containerWindowType = {
+	#	name  ="frontend_alpha_stamp"
+	#	position = { x=100 y =-100  }
+	#	size = { width = 131 height = 132}
+	#	orientation = lower_left
+	#	origo = lower_left
+	#	
+	#	iconType =
+	#	{
+	#		name ="frontend_alpha_stamp"
+	#		spriteType = "GFX_alpha_stamp"
+	#		position = { x= 0 y = 20 }
+	#	}		
+	#	
+	#}	
+	
+	### MAIN MENU PANEL (upperright)
+	containerWindowType = {
+		name ="mainmenu_panel_upperright"
+		position = { x=0 y =-1 }
+		show_position = { x=-256 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000					
+		size = { width = 256 height = 768}
+		Orientation = upper_right
+
+		ButtonType = {
+			name = "achievements_button"
+			position = { x = -50 y = 25 }
+			quadTextureSprite ="achievements"
+			pdx_tooltip = "MENU_ACHIEVEMENTS"
+		}
+
+		iconType =
+		{
+			name ="frontend_dev_logo"
+			spriteType = "GFX_frontend_dev_logo"
+			position = { x= 15 y = 15 }
+		}
+		
+		iconType =
+		{
+			name ="pdx_int_logo"
+			spriteType = "GFX_pdx_int_logo"
+			position = { x= 135 y = 15 }
+		}		
+		
+	}		
+
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
@@ -313,7 +380,7 @@ guiTypes = {
 
 		positionType = {
 			name = "subscription_size"
-			position = { x = 320 y = 410 }
+			position = { x = 320 y = 575 }
 		}
 				
 		background = {
@@ -363,7 +430,7 @@ guiTypes = {
 
 		positionType = {
 			name = "version_label_subscription_position"
-			position = { x = 0 y = 377 }
+			position = { x = 0 y = 539 }
 		}
 		
 		
@@ -437,13 +504,13 @@ guiTypes = {
 
 		iconType = {
 			name = "subscription_divider"
-			position = { x = 4 y = 3360 }
+			position = { x = 4 y = 336 }
 			spriteType = "GFX_main_lobby_divider"
 		}
 
 		containerWindowType = {
 			name = "subscription_widget"
-			position = { x = 16 y = 3520 }
+			position = { x = 16 y = 352 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -457,8 +524,26 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "subscription_widget_simp_chinese"
+			position = { x = 16 y = 352 }
+			size = { width = 288 height = 108 }
+			hide = yes
+
+			ButtonType = {
+				name = "show_subscription"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_subscription_widget_chinese"
+				frame = 10
+				buttonText = "SUBSCRIPTION_WIDGET_SIMP_CHINESE"
+				buttonFont = "hoi_24header"
+				multiline = yes
+				web_link = "https://cn.heartsofiron.com/add-ons"
+			}
+		}
+
+		containerWindowType = {
 			name = "subscription_widget_subscribed"
-			position = { x = 16 y = 3520 }
+			position = { x = 16 y = 352 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -541,16 +626,20 @@ guiTypes = {
 		}
         containerWindowType = {
             name = "first_row"
-			position = { x=30 y=5 }
+			position = { x=33 y=0 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=72 y=-67 }
+                position = { x=72 y=0 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"
                 web_link = "https://discord.gg/VBczbW7uXb"
                 scale = 0.9
             }
+        }
+        containerWindowType = {
+            name = "second_row"
+			position = { x=30 y=19 }
         }
 	}
 

@@ -10944,6 +10944,50 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 		
 		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				hidden_effect = {
+					28 = {
+						add_dynamic_modifier = {
+							modifier = Kefir_delat_plaki_plaki
+							scope = GER
+							days = 250
+						}
+					}
+					42 = {
+						add_dynamic_modifier = {
+							modifier = Kefir_delat_plaki_plaki
+							scope = FRA
+							days = 250
+						}
+					}
+					51 = {
+						add_dynamic_modifier = {
+							modifier = Kefir_delat_plaki_plaki
+							scope = FRA
+							days = 250
+						}
+					}
+					35 = {
+						add_dynamic_modifier = {
+							modifier = Kefir_delat_plaki_plaki
+							scope = FRA
+							days = 250
+						}
+					}
+					7 = {
+						add_dynamic_modifier = {
+							modifier = Kefir_delat_plaki_plaki
+							scope = FRA
+							days = 250
+						}
+					}
+					ENG = {add_to_faction = POL}
+				}
+			}
+			
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {
