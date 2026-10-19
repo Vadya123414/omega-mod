@@ -1298,7 +1298,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_found_the_comecon
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			has_government = communism
@@ -1337,7 +1337,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_fourth_five_year_plan
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -6597,7 +6597,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_keep_commissars_organization
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			NOT = {

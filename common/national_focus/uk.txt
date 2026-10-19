@@ -30,6 +30,9 @@ default = no
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			126 = { is_controlled_by = ENG }
 			NOT = {has_country_flag = VUP_Hist_version}
