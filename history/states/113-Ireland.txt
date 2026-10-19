@@ -1,4 +1,3 @@
-
 state={
 	id=113
 	name="STATE_113" # Leinster
@@ -18,6 +17,12 @@ state={
 		}
 		victory_points = {
 			303 1 #Tullamore
+		}
+		victory_points = {
+			3359 1 #Drogheda
+		}
+		victory_points = {
+			7377 1 #Wicklow
 		}
 		victory_points = {
 			11293 10 #Dublin

@@ -89,19 +89,6 @@ defined_text = {
 		localization_key = Debuffing_TOOLTIP_on
 	}
 }
-defined_text = {
-	name = command_limit_tooltip
-
-	text = {
-		trigger = {
-			has_global_flag = show_admiral_list
-		}
-		localization_key = command_limit_off
-	}
-	text = {
-		localization_key = command_limit_on
-	}
-}
 
 
 defined_text = {
@@ -119,11 +106,11 @@ defined_text = {
 }
 
 defined_text = {
-	name = mark_status
+	name = HostTool_MarkText
 
 	text = {
 		trigger = {
-			has_state_flag = marked_for_transfer
+			check_variable = { mark_status = 2 }
 		}
 		localization_key = mark_status_marked
 	}
@@ -276,96 +263,210 @@ defined_text = {
 
 
 defined_text = {
-	name = color_selected
-	text = {
-		trigger = {
-			check_variable = {Root.selected_color=0}
-			NOT={Root={has_global_flag=colorblindness}}
-		}
-		localization_key = COLOR_SELECT
-	}
-	text = {
-		trigger = {
-			OR={check_variable = {Root.selected_color=1}
-			Root={has_global_flag=colorblindness}}
-		}
-		localization_key = COLOR1
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_color=2}
-		}
-		localization_key = COLOR2
-	}
-	text = {
-		trigger = {
-			check_variable = {Root.selected_color=3}
-		}
-		localization_key = COLOR3
-	}
-		text = {
-		trigger = {
-			check_variable = {Root.selected_color=4}
-		}
-		localization_key = COLOR4
-	}
-			text = {
-		trigger = {
-			check_variable = {Root.selected_color=5}
-		}
-		localization_key = COLOR5
-	}
-				text = {
-		trigger = {
-			check_variable = {Root.selected_color=6}
-		}
-		localization_key = COLOR6
-	}
-				text = {
-		trigger = {
-			check_variable = {Root.selected_color=7}
-		}
-		localization_key = COLOR7
-	}
-				text = {
-		trigger = {
-			check_variable = {Root.selected_color=8}
-		}
-		localization_key = COLOR8
-	}
-					text = {
-		trigger = {
-			check_variable = {Root.selected_color=9}
-		}
-		localization_key = COLOR9
-	}
-}
-
-defined_text = {
 	name = pause_selected
 	text = {
-		trigger = {
-			check_variable = {COL.pause_blocker_variable=0}
-			NOT={Root={has_global_flag=blocking_pauses}}
-		}
+		trigger = { Root={has_global_flag=blocking_pauses} }
+		localization_key = PAUSE3
+	}
+	text = {
+		trigger = { check_variable = {global.pause_blocker_variable=0} }
 		localization_key = PAUSE_SELECT
 	}
 	text = {
 		trigger = {
-			check_variable = {COL.pause_blocker_variable=1}
+			check_variable = {global.pause_blocker_variable=1}
 		}
 		localization_key = PAUSE1 #все
 	}
 	text = {
 		trigger = {
-			check_variable = {COL.pause_blocker_variable=2}
+			check_variable = {global.pause_blocker_variable=2}
 		}
 		localization_key = PAUSE2 #хост
 	}
 	text = {
 		trigger = {
-			check_variable = {COL.pause_blocker_variable=3}
+			check_variable = {global.pause_blocker_variable=3}
 		}
 		localization_key = PAUSE3 #только мажоры
 	}
+}
+defined_text = {
+	name = HostTool_OwnerControl
+	text = {
+		trigger = { owner = { is_ai = yes } }
+		localization_key = HOSTTOOL_CONTROL_AI
+	}
+	text = {
+		localization_key = HOSTTOOL_CONTROL_PLAYER
+	}
+}
+
+defined_text = {
+	name = HostTool_LastCheat
+	text = { trigger = { check_variable = { global.hosttool_last_cheat = 1 } } localization_key = CHEAT1 }
+	text = { trigger = { check_variable = { global.hosttool_last_cheat = 2 } } localization_key = CHEAT2 }
+	text = { trigger = { check_variable = { global.hosttool_last_cheat = 3 } } localization_key = CHEAT3 }
+	text = { trigger = { check_variable = { global.hosttool_last_cheat = 4 } } localization_key = CHEAT4 }
+	text = { localization_key = CHEAT_SELECT }
+}
+
+defined_text = {
+	name = HostTool_LastColor
+	text = { trigger = { check_variable = { global.hosttool_last_color = 1 } } localization_key = HOSTCLR_1 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 2 } } localization_key = HOSTCLR_2 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 3 } } localization_key = HOSTCLR_3 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 4 } } localization_key = HOSTCLR_4 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 5 } } localization_key = HOSTCLR_5 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 6 } } localization_key = HOSTCLR_6 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 7 } } localization_key = HOSTCLR_7 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 8 } } localization_key = HOSTCLR_8 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 9 } } localization_key = HOSTCLR_9 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 10 } } localization_key = HOSTCLR_10 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 11 } } localization_key = HOSTCLR_11 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 12 } } localization_key = HOSTCLR_12 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 13 } } localization_key = HOSTCLR_13 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 14 } } localization_key = HOSTCLR_14 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 15 } } localization_key = HOSTCLR_15 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 16 } } localization_key = HOSTCLR_16 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 17 } } localization_key = HOSTCLR_17 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 18 } } localization_key = HOSTCLR_18 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 19 } } localization_key = HOSTCLR_19 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 20 } } localization_key = HOSTCLR_20 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 21 } } localization_key = HOSTCLR_21 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 22 } } localization_key = HOSTCLR_22 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 23 } } localization_key = HOSTCLR_23 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 24 } } localization_key = HOSTCLR_24 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 25 } } localization_key = HOSTCLR_25 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 26 } } localization_key = HOSTCLR_26 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 27 } } localization_key = HOSTCLR_27 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 28 } } localization_key = HOSTCLR_28 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 29 } } localization_key = HOSTCLR_29 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 30 } } localization_key = HOSTCLR_30 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 31 } } localization_key = HOSTCLR_31 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 32 } } localization_key = HOSTCLR_32 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 33 } } localization_key = HOSTCLR_33 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 34 } } localization_key = HOSTCLR_34 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 35 } } localization_key = HOSTCLR_35 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 36 } } localization_key = HOSTCLR_36 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 37 } } localization_key = HOSTCLR_37 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 38 } } localization_key = HOSTCLR_38 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 39 } } localization_key = HOSTCLR_39 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 40 } } localization_key = HOSTCLR_40 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 41 } } localization_key = HOSTCLR_41 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 42 } } localization_key = HOSTCLR_42 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 43 } } localization_key = HOSTCLR_43 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 44 } } localization_key = HOSTCLR_44 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 45 } } localization_key = HOSTCLR_45 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 46 } } localization_key = HOSTCLR_46 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 47 } } localization_key = HOSTCLR_47 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 48 } } localization_key = HOSTCLR_48 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 49 } } localization_key = HOSTCLR_49 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 50 } } localization_key = HOSTCLR_50 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 51 } } localization_key = HOSTCLR_51 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 52 } } localization_key = HOSTCLR_52 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 53 } } localization_key = HOSTCLR_53 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 54 } } localization_key = HOSTCLR_54 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 55 } } localization_key = HOSTCLR_55 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 56 } } localization_key = HOSTCLR_56 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 57 } } localization_key = HOSTCLR_57 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 58 } } localization_key = HOSTCLR_58 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 59 } } localization_key = HOSTCLR_59 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 60 } } localization_key = HOSTCLR_60 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 61 } } localization_key = HOSTCLR_61 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 62 } } localization_key = HOSTCLR_62 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 63 } } localization_key = HOSTCLR_63 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 64 } } localization_key = HOSTCLR_64 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 65 } } localization_key = HOSTCLR_65 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 66 } } localization_key = HOSTCLR_66 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 67 } } localization_key = HOSTCLR_67 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 68 } } localization_key = HOSTCLR_68 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 69 } } localization_key = HOSTCLR_69 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 70 } } localization_key = HOSTCLR_70 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 71 } } localization_key = HOSTCLR_71 }
+	text = { trigger = { check_variable = { global.hosttool_last_color = 72 } } localization_key = HOSTCLR_72 }
+	text = { localization_key = HOSTCLR_0 }
+}
+
+defined_text = {
+	name = HostTool_CurrentColor
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_RED } } localization_key = HOSTCLR_1 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_ORANGE } } localization_key = HOSTCLR_2 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_YELLOW } } localization_key = HOSTCLR_3 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_GREEN } } localization_key = HOSTCLR_4 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_BLUE } } localization_key = HOSTCLR_5 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_PURPLE } } localization_key = HOSTCLR_6 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_PINK } } localization_key = HOSTCLR_7 }
+	text = { trigger = { owner = { has_cosmetic_tag = COLORBLIND_TEAL } } localization_key = HOSTCLR_8 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_SALMON } } localization_key = HOSTCLR_9 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_DARK_RED } } localization_key = HOSTCLR_10 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PEACH } } localization_key = HOSTCLR_11 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_BROWN } } localization_key = HOSTCLR_12 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_CREAM } } localization_key = HOSTCLR_13 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_OLIVE } } localization_key = HOSTCLR_14 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_LIME } } localization_key = HOSTCLR_15 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LIME } } localization_key = HOSTCLR_16 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_SWAMP } } localization_key = HOSTCLR_17 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MINT } } localization_key = HOSTCLR_18 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREEN } } localization_key = HOSTCLR_19 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_AQUAMARINE } } localization_key = HOSTCLR_20 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_TURQUOISE } } localization_key = HOSTCLR_21 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_DARK_TEAL } } localization_key = HOSTCLR_22 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_SKY } } localization_key = HOSTCLR_23 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_SKY } } localization_key = HOSTCLR_24 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_SEA } } localization_key = HOSTCLR_25 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_CORNFLOWER } } localization_key = HOSTCLR_26 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_BLUE } } localization_key = HOSTCLR_27 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LAVENDER } } localization_key = HOSTCLR_28 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_VIOLET } } localization_key = HOSTCLR_29 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_INDIGO } } localization_key = HOSTCLR_30 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LILAC } } localization_key = HOSTCLR_31 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PLUM } } localization_key = HOSTCLR_32 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_PINK } } localization_key = HOSTCLR_33 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_BURGUNDY } } localization_key = HOSTCLR_34 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREY } } localization_key = HOSTCLR_35 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_BLACK } } localization_key = HOSTCLR_36 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_RED } } localization_key = HOSTCLR_37 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_ORANGE } } localization_key = HOSTCLR_38 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_YELLOW } } localization_key = HOSTCLR_39 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_LIME } } localization_key = HOSTCLR_40 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_GREEN } } localization_key = HOSTCLR_41 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_TURQUOISE } } localization_key = HOSTCLR_42 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_SKY } } localization_key = HOSTCLR_43 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_BLUE } } localization_key = HOSTCLR_44 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_VIOLET } } localization_key = HOSTCLR_45 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_MAGENTA } } localization_key = HOSTCLR_46 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_PALE_PINK } } localization_key = HOSTCLR_47 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_GREY } } localization_key = HOSTCLR_48 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_RED } } localization_key = HOSTCLR_49 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_ORANGE } } localization_key = HOSTCLR_50 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_YELLOW } } localization_key = HOSTCLR_51 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_LIME } } localization_key = HOSTCLR_52 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_GREEN } } localization_key = HOSTCLR_53 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_TURQUOISE } } localization_key = HOSTCLR_54 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_SKY } } localization_key = HOSTCLR_55 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_BLUE } } localization_key = HOSTCLR_56 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_VIOLET } } localization_key = HOSTCLR_57 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_MAGENTA } } localization_key = HOSTCLR_58 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_PINK } } localization_key = HOSTCLR_59 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_DARK_GREY } } localization_key = HOSTCLR_60 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_RED } } localization_key = HOSTCLR_61 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_ORANGE } } localization_key = HOSTCLR_62 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_YELLOW } } localization_key = HOSTCLR_63 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_LIME } } localization_key = HOSTCLR_64 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_GREEN } } localization_key = HOSTCLR_65 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_TURQUOISE } } localization_key = HOSTCLR_66 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_SKY } } localization_key = HOSTCLR_67 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_BLUE } } localization_key = HOSTCLR_68 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_VIOLET } } localization_key = HOSTCLR_69 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_MAGENTA } } localization_key = HOSTCLR_70 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_PINK } } localization_key = HOSTCLR_71 }
+	text = { trigger = { owner = { has_cosmetic_tag = HOSTCLR_BEIGE } } localization_key = HOSTCLR_72 }
+	text = { localization_key = HOSTCLR_0 }
+}
+
+defined_text = {
+	name = HostTool_PaletteButton
+	text = { trigger = { has_global_flag = hosttool_color_open } localization_key = HOSTCLR_OPEN_CLOSE }
+	text = { localization_key = HOSTCLR_OPEN_OPEN }
 }

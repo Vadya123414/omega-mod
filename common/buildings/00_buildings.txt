@@ -118,6 +118,7 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 16
 		infrastructure_construction_effect = yes
+		allied_build = yes
 		level_cap = {
 			province_max = 1
 		}
@@ -125,8 +126,8 @@ buildings = {
 	
 	naval_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 10000
+		per_controlled_building_extra_cost = 6000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
 		value = 1
@@ -139,6 +140,7 @@ buildings = {
 		detecting_intel_type = navy
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_naval
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -371,7 +373,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 1
+				level = 3
 			}
 		}
 		level_cap = {
@@ -386,6 +388,7 @@ buildings = {
 		per_controlled_building_extra_cost = 5000
 		icon_frame = 29
 		value = 1
+		allied_build = yes
 		naval_headquarter = yes
 		disabled_in_dmz = yes
 		infrastructure_construction_effect = yes
@@ -394,7 +397,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 5
+				level = 3
 			}
 		}
 		level_cap = {
@@ -538,8 +541,8 @@ buildings = {
 
 	air_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 10000
+		per_controlled_building_extra_cost = 6000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
 		value = 1
@@ -552,6 +555,7 @@ buildings = {
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_air
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -561,8 +565,8 @@ buildings = {
 
 	land_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 10000
+		per_controlled_building_extra_cost = 6000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19
 		value = 1
@@ -575,6 +579,7 @@ buildings = {
 		detecting_intel_type = army
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_land
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -713,7 +718,25 @@ buildings = {
 	}
 	
 	#### Energy
-	
+	energy_infrastructure = {
+		base_cost = 12000
+		icon_frame = 30
+		value = 1
+
+		show_modifier = yes
+		affects_energy = yes
+		is_buildable = no
+		infrastructure_construction_effect = yes
+		level_cap = {
+			state_max = 1
+			shares_slots = no
+			group_by = infrastructure_keystone
+		}
+		state_modifiers = {
+			local_resource_gain_efficiency_per_infrastructure = 0.10
+			local_factory_energy_consumption_per_infrastructure = -0.075
+		}
+	}
 	industrial_infrastructure = {
 		base_cost = 12000
 		icon_frame = 31

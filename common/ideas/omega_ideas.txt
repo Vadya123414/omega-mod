@@ -1,7 +1,66 @@
 ideas = {
 	country = {
+
+		debaf_pexa_ideas = {
+		    allowed = {
+	            always = no
+	        }
+			
+	        removal_cost = -1
+
+	        picture = ETH_conservative_high_command
 		
-				USA_civil_war = {	
+		    modifier = {
+
+		      army_infantry_defence_factor = -0.15
+			  
+            }
+	    }
+
+		no_farm_gen = {	
+			picture = CHI_protracted_warfare
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				GER = {
+					has_completed_focus = GER_war_with_the_ussr
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_factor = -1.15
+			}
+		}
+
+		zakup_no = {
+		    allowed = {
+	            always = no
+	        }
+			
+	        removal_cost = -1
+
+	        picture = ETH_customs_barrier_ITA
+		
+		    modifier = {
+		        production_lack_of_resource_penalty_factor = -1
+				resource_trade_cost_bonus_per_factory = -100
+				consumer_goods_factor = +0.10
+				#research_speed_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				country_resource_chromium = 20 
+				country_resource_rubber = 20
+            }
+	    }
+		
+			USA_civil_war = {	
 				allowed = {
 					always = no
 				}
@@ -86,6 +145,50 @@ ideas = {
 			}
 
                         
+		}
+
+		FRA_coalition = {
+			picture = FRA_undividable
+			allowed = {
+				
+			}
+			cancel = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			removal_cost = -1
+			modifier = { 
+				war_support_factor = 0.20
+				offensive_war_stability_factor = 0.1
+			} 
+		}
+
+		FRA_swiss_rubber_import_modifier = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				country_resource_rubber = 70
+			}
+			
+			picture = generic_flexible_foreign_policy2
+		}
+
+		CHE_french_parallel_import_factories = {
+			allowed = {
+				always = yes
+			}
+			
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 9 }
+			}
+
+			on_remove = {
+				add_offsite_building = { type = industrial_complex level = -9 }
+			}
+			
+			picture = HUN_revaluing_the_pengo
 		}
 		
 		IRE_cpecial_arm = {
@@ -1038,7 +1141,46 @@ ideas = {
 				
 			} 
 		}
-		
+		RUS_ECONOMI_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				
+			}
+			removal_cost = -1
+			picture = SOV_soviet_hegemony
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.25
+			} 
+				
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.5
+				extra_trade_to_target_factor = 0.5
+			}
+
+
+            targeted_modifier = {
+				tag = UKR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+                        
+           targeted_modifier = {
+				tag = BLR
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}
+			targeted_modifier = {
+				tag = KAZ
+				extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.5
+			}             
+		}
 		RUS_ECONOMI = {
 				allowed = {
 				always = no
@@ -1063,24 +1205,24 @@ ideas = {
 			}
 
 
-                        targeted_modifier = {
+            targeted_modifier = {
 				tag = UKR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                         
-                         targeted_modifier = {
+           targeted_modifier = {
 				tag = BLR
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
-			             targeted_modifier = {
+			targeted_modifier = {
 				tag = KAZ
 				extra_trade_to_target_factor = 0.5
-                                trade_cost_for_target_factor = -0.5
+                trade_cost_for_target_factor = -0.5
 			}
                          
-		}	
+		}
 		
 		RUS_submarines = {
 			picture = generic_naval_manufacturer_1
@@ -1434,6 +1576,20 @@ ideas = {
 				consumer_goods_expected_value = -0.07
 			}
 		}
+
+		GER_za_faterland = {
+		    
+			allowed = {
+				always = no
+			}
+			picture = SPR_the_popular_front
+			removal_cost = -1
+			
+			modifier = {
+			    army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.10
+			}
+		}
 	
 		SOV_ECONOMI = {
 				allowed = {
@@ -1540,6 +1696,54 @@ ideas = {
 				industrial_capacity_dockyard = -3
 			}
 		}
+		#СНГ
+		
+        EAEU_development_fund_originator_ns = {
+			picture = HUN_revaluing_the_pengo
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                production_speed_arms_factory_factor = 0.1
+            }
+        }
+        EAEU_development_fund_member_ns = {
+			picture = HUN_revaluing_the_pengo
+            modifier = {
+                production_speed_infrastructure_factor = 0.1
+                production_speed_arms_factory_factor = 0.07
+            }
+        }
+        EAEU_railway_expansion_originator_ns = {
+			picture = generic_build_infrastructure
+            modifier = {
+                production_speed_rail_way_factor = 0.25
+                railway_capacity_factor = 0.15
+            }
+        }
+        EAEU_railway_expansion_member_ns = {
+			picture = generic_build_infrastructure
+            modifier = {
+                production_speed_rail_way_factor = 0.15
+                railway_capacity_factor = 0.1
+            }
+        }
+		EAEU_temporary_boost_originator = {
+            picture = ARG_construction_guilds
+            allowed = { always = no }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.15
+                production_speed_buildings_factor = 0.2
+            }
+        }
+        EAEU_temporary_boost_member = {
+            picture = ARG_construction_guilds
+            allowed = { always = no }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.1
+                production_speed_buildings_factor = 0.15
+            }
+        }
 		}
 
 }

@@ -434,6 +434,9 @@ IF = {
 	}
 }
 set_war_support = 0.3
+1936.1.1.13 = {
+	set_research_slots = 5
+}
 
 
 # SETUP THE 1939 SCENARIO
@@ -877,6 +880,12 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+}
+
+1936.1.1.13 = {
+	add_ideas = {
+		no_farm_gen
+	}
 }
 
 # Activates the MEFO Bills Mission

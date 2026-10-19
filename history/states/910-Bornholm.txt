@@ -5,6 +5,9 @@ state = {
 	manpower = 45819
 
 	history = {
+		victory_points = {
+			6361 1
+		}
 		owner = DEN
 		add_core_of = DEN
 		buildings = {

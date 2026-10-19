@@ -3250,10 +3250,13 @@ GER_hilfskreuzer_cat = {
 		days_remove = 25
 
 		complete_effect = {
-			#add_equipment_to_stockpile = { 
-			#	type = convoy_1
-			#	amount = -20 
-			#}
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = convoy_1
+					amount = -20 
+				}
+				navy_experience = -10
+			}
 		}
 		remove_effect = {
 			if = {
@@ -13072,15 +13075,6 @@ GER_military_buildup = {
 
 		available = {
 			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
 			NOT = {
 				has_idea = GER_jaegernotprogramm
 			}
@@ -13110,16 +13104,6 @@ GER_military_buildup = {
 		}
 
 		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
 			NOT = {
 				has_idea = GER_jaegernotprogramm
 			}

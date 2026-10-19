@@ -865,7 +865,7 @@ if = {
 
 set_country_flag = SOV_TEST_REMOVE_VANILLA_ADVISORS_flag
 
-add_ideas = {	
+add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
@@ -873,6 +873,12 @@ add_ideas = {
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
 
+1936.1.1.13 = {
+	add_ideas = {
+		no_farm_gen
+	}
+	set_research_slots = 4
+}
 
 1939.1.1 = {
 

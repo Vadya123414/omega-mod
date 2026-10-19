@@ -1,29 +1,44 @@
-guiTypes = { 
+guiTypes = {
 
+<<<<<<< Updated upstream
 ####################### 
+=======
+####################### Кнопка открытия Host Tool (верхняя панель)
+>>>>>>> Stashed changes
 	containerWindowType = {
 		name = "horsttool_open_container"
 		position = { x = -503 y = 4 }
+		size = { width = 106 height = 30 }
 		Orientation = UPPER_RIGHT
 		buttonType = {
 			name = "tool_open"
 			quadTextureSprite = "GFX_generic_box_96"
 			position = { x = 0 y = 0 }
-			scale=1.1
+			scale = 1.1
 			pdx_tooltip = "[ST_TOOLTIP]"
 			clicksound = click_ok
 			oversound = ui_menu_over
 		}
+<<<<<<< Updated upstream
 		
+=======
+>>>>>>> Stashed changes
 		instantTextboxType = {
 			name = "title"
-			position = {x=3 y=4}
+			position = { x = 6 y = 5 }
 			font = "hoi_18mbs"
 			text = "[transfer_states_tooltip]"
+<<<<<<< Updated upstream
 			maxWidth = 200
 			maxHeight = 23
+=======
+			maxWidth = 100
+			maxHeight = 20
+>>>>>>> Stashed changes
 			format = left
+			alwaystransparent = yes
 		}
+<<<<<<< Updated upstream
 
 	}
 		
@@ -32,12 +47,36 @@ guiTypes = {
 		position = {x=1200 y=20}
 		size = { width=750 height=750}
 		
+=======
+	}
+
+####################### Блокировка паузы (поверх часов в верхней панели)
+	containerWindowType = {
+		name = "pause_block_window"
+		position = { x = 0 y = 0 }
+		size = { width = 253 height = 40 }
+		buttonType = {
+			name = "pause_block_overlay"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_horst_pause_block"
+			pdx_tooltip = "PAUSE_BLOCKED_TT"
+		}
+	}
+
+####################### Главное окно
+	containerWindowType = {
+		name = "horsttool_container"
+		position = { x = -1020 y = 70 }
+		Orientation = UPPER_RIGHT
+		size = { width = 720 height = 780 }
+>>>>>>> Stashed changes
 		fade_time = 300
 		fade_type = linear
 		moveable = yes
 		
 		background = {
 			name = "Background"
+<<<<<<< Updated upstream
 			#spriteType = "GFX_generic_bg_307x113"
 		spriteType = "GFX_diplo_action_justify_wargoals_bg"
 		}
@@ -1195,10 +1234,506 @@ guiTypes = {
 			font = "hoi_24header"
 			text = "st_state_id_tt"
 			maxWidth = 250
-			maxHeight = 23
+=======
+			quadTextureSprite = "GFX_tiled_window_2b_border"
+		}
+
+	############ Заголовок (виден на обеих страницах)
+		instantTextboxType = {
+			name = "window_title"
+			position = { x = 22 y = 14 }
+			font = "hoi_20bs"
+			text = "HOSTTOOL_TITLE"
+			maxWidth = 160
+			maxHeight = 24
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "owner_name_text"
+			position = { x = 190 y = 12 }
+			font = "hoi_20bs"
+			text = "why_use_lel_lennard_tt"
+			maxWidth = 340
+			maxHeight = 24
 			format = centre
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "control_status_text"
+			position = { x = 190 y = 38 }
+			font = "hoi_16mbs"
+			text = "[HostTool_OwnerControl]"
+			maxWidth = 340
+			maxHeight = 20
+			format = centre
+			alwaystransparent = yes
 		}
 		buttonType = {
+			name = "horsttool_helpbutton"
+			position = { x = 628 y = 12 }
+			spriteType = "GFX_horst_help"
+			scale = 0.55
+			pdx_tooltip = "HORST_HELP"
+			pdx_tooltip_delayed = "HOST_HELP_DELAYED"
+		}
+		buttonType = {
+			name = "close_tool"
+			position = { x = 672 y = 14 }
+			quadTextureSprite = "GFX_closebutton"
+			pdx_tooltip = "HOSTTOOL_CLOSE_TT"
+			clicksound = click_close
+		}
+		iconType = {
+			name = "header_divider"
+			position = { x = 103 y = 62 }
+			spriteType = "GFX_divider"
+			alwaystransparent = yes
+		}
+
+	############ Заголовки разделов (главная страница)
+		instantTextboxType = {
+			name = "sec_resources"
+			position = { x = 22 y = 70 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_RESOURCES"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_res_plus"
+			position = { x = 24 y = 99 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_PLUS5"
+			maxWidth = 30
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_res_minus"
+			position = { x = 24 y = 139 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_MINUS5"
+			maxWidth = 30
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_ideology"
+			position = { x = 22 y = 178 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_IDEOLOGY"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_country"
+			position = { x = 22 y = 296 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_COUNTRY"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_doctrines"
+			position = { x = 375 y = 70 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_DOCTRINES"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_tech"
+			position = { x = 375 y = 328 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_TECH"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_states"
+			position = { x = 375 y = 392 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_STATES"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_compliance"
+			position = { x = 375 y = 512 }
+			font = "hoi_16mbs"
+			text = "HOSTTOOL_SEC_COMPLIANCE"
+			maxWidth = 150
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_resistance"
+			position = { x = 545 y = 512 }
+			font = "hoi_16mbs"
+			text = "HOSTTOOL_SEC_RESISTANCE"
+			maxWidth = 150
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_players"
+			position = { x = 22 y = 610 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_PLAYERS"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "sec_settings"
+			position = { x = 375 y = 610 }
+			font = "hoi_18mbs"
+			text = "HOSTTOOL_SEC_SETTINGS"
+			maxWidth = 330
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "marked_count_text"
+			position = { x = 525 y = 421 }
+			font = "hoi_16mbs"
+			text = "HOSTTOOL_MARKED_COUNT"
+			maxWidth = 180
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+
+	############ Ресурсы отмеченных регионов
+		buttonType = { name = "States_resursed_steel"      position = { x = 55  y = 92 } spriteType = "GFX_resources_strip" frame = 5 scale = 1.25 pdx_tooltip = "States_resursed_steel_TT" }
+		buttonType = { name = "States_resursed_rubber"     position = { x = 97  y = 92 } spriteType = "GFX_resources_strip" frame = 3 scale = 1.25 pdx_tooltip = "States_resursed_rubber_TT" }
+		buttonType = { name = "States_resursed_oil"        position = { x = 139 y = 92 } spriteType = "GFX_resources_strip" frame = 1 scale = 1.25 pdx_tooltip = "States_resursed_oil_TT" }
+		buttonType = { name = "States_resursed_alu"        position = { x = 181 y = 92 } spriteType = "GFX_resources_strip" frame = 2 scale = 1.25 pdx_tooltip = "States_resursed_alu_TT" }
+		buttonType = { name = "States_resursed_tungsten"   position = { x = 223 y = 92 } spriteType = "GFX_resources_strip" frame = 4 scale = 1.25 pdx_tooltip = "States_resursed_tungsten_TT" }
+		buttonType = { name = "States_resursed_chromium"   position = { x = 265 y = 92 } spriteType = "GFX_resources_strip" frame = 6 scale = 1.25 pdx_tooltip = "States_resursed_chromium_TT" }
+		buttonType = { name = "States_resursed_coal"       position = { x = 307 y = 92 } spriteType = "GFX_resources_strip" frame = 7 scale = 1.25 pdx_tooltip = "States_resursed_coal_TT" }
+		buttonType = { name = "States_resursed_steel1"     position = { x = 55  y = 132 } spriteType = "GFX_resources_strip" frame = 5 scale = 1.25 pdx_tooltip = "States_resursed_steel1_TT" }
+		buttonType = { name = "States_resursed_rubber1"    position = { x = 97  y = 132 } spriteType = "GFX_resources_strip" frame = 3 scale = 1.25 pdx_tooltip = "States_resursed_rubber1_TT" }
+		buttonType = { name = "States_resursed_oil1"       position = { x = 139 y = 132 } spriteType = "GFX_resources_strip" frame = 1 scale = 1.25 pdx_tooltip = "States_resursed_oil1_TT" }
+		buttonType = { name = "States_resursed_alu1"       position = { x = 181 y = 132 } spriteType = "GFX_resources_strip" frame = 2 scale = 1.25 pdx_tooltip = "States_resursed_alu1_TT" }
+		buttonType = { name = "States_resursed_tungsten1"  position = { x = 223 y = 132 } spriteType = "GFX_resources_strip" frame = 4 scale = 1.25 pdx_tooltip = "States_resursed_tungsten1_TT" }
+		buttonType = { name = "States_resursed_chromium1"  position = { x = 265 y = 132 } spriteType = "GFX_resources_strip" frame = 6 scale = 1.25 pdx_tooltip = "States_resursed_chromium1_TT" }
+		buttonType = { name = "States_resursed_coal1"      position = { x = 307 y = 132 } spriteType = "GFX_resources_strip" frame = 7 scale = 1.25 pdx_tooltip = "States_resursed_coal1_TT" }
+
+	############ Идеология
+		buttonType = { name = "communism_group_bg"   position = { x = 30  y = 200 } spriteType = "GFX_communism_group"  scale = 0.7 pdx_tooltip = "communism_group_bg_TT" }
+		buttonType = { name = "democratic_group_bg"  position = { x = 112 y = 200 } spriteType = "GFX_democratic_group" scale = 0.7 pdx_tooltip = "democratic_group_bg_TT" }
+		buttonType = { name = "fascism_group_bg"     position = { x = 194 y = 200 } spriteType = "GFX_fascism_group"    scale = 0.7 pdx_tooltip = "fascism_group_bg_TT" }
+		buttonType = { name = "neutrality_group_bg"  position = { x = 276 y = 200 } spriteType = "GFX_neutrality_group" scale = 0.7 pdx_tooltip = "neutrality_group_bg_TT" }
+		buttonType = { name = "hosttool_add_5_party_communism_group"   position = { x = 26  y = 254 } spriteType = "GFX_hosttool_add_5" pdx_tooltip = "hosttool_add_5_party_communism_group_TT" }
+		buttonType = { name = "hosttool_sub_5_party_communism_group"   position = { x = 54  y = 254 } spriteType = "GFX_hosttool_sub_5" pdx_tooltip = "hosttool_sub_5_party_communism_group_TT" }
+		buttonType = { name = "hosttool_add_5_party_democratic_group"  position = { x = 108 y = 254 } spriteType = "GFX_hosttool_add_5" pdx_tooltip = "hosttool_add_5_party_democratic_group_TT" }
+		buttonType = { name = "hosttool_sub_5_party_democratic_group"  position = { x = 136 y = 254 } spriteType = "GFX_hosttool_sub_5" pdx_tooltip = "hosttool_sub_5_party_democratic_group_TT" }
+		buttonType = { name = "hosttool_add_5_party_fascism_group"     position = { x = 190 y = 254 } spriteType = "GFX_hosttool_add_5" pdx_tooltip = "hosttool_add_5_party_fascism_group_TT" }
+		buttonType = { name = "hosttool_sub_5_party_fascism_group"     position = { x = 218 y = 254 } spriteType = "GFX_hosttool_sub_5" pdx_tooltip = "hosttool_sub_5_party_fascism_group_TT" }
+		buttonType = { name = "hosttool_add_5_party_neutrality_group"  position = { x = 272 y = 254 } spriteType = "GFX_hosttool_add_5" pdx_tooltip = "hosttool_add_5_party_neutrality_group_TT" }
+		buttonType = { name = "hosttool_sub_5_party_neutrality_group"  position = { x = 300 y = 254 } spriteType = "GFX_hosttool_sub_5" pdx_tooltip = "hosttool_sub_5_party_neutrality_group_TT" }
+
+	############ Государство: пары "выдать / убрать"
+		# ряд 1
+		buttonType = { name = "research_add"       position = { x = 22  y = 320 } spriteType = "GFX_hostcountry_research_add" pdx_tooltip = "research_add_TT" }
+		buttonType = { name = "research_remove"    position = { x = 65  y = 320 } spriteType = "GFX_hostcountry_research_remove" pdx_tooltip = "research_remove_TT" }
+		buttonType = { name = "stability_add"      position = { x = 132 y = 320 } spriteType = "GFX_hostcountry_stability_add" pdx_tooltip = "stability_add_TT" }
+		buttonType = { name = "stability_remove"   position = { x = 175 y = 320 } spriteType = "GFX_hostcountry_stability_remove" pdx_tooltip = "stability_remove_TT" }
+		buttonType = { name = "war_support_add"    position = { x = 242 y = 320 } spriteType = "GFX_hostcountry_war_support_add" pdx_tooltip = "war_support_add_TT" }
+		buttonType = { name = "war_support_remove" position = { x = 285 y = 320 } spriteType = "GFX_hostcountry_war_support_remove" pdx_tooltip = "war_support_remove_TT" }
+		# ряд 2
+		buttonType = { name = "addpp"                     position = { x = 22  y = 366 } spriteType = "GFX_hostcountry_pol_power_add" pdx_tooltip = "ADDPP" }
+		buttonType = { name = "remove_addpp"              position = { x = 65  y = 366 } spriteType = "GFX_hostcountry_pol_power_remove" pdx_tooltip = "remove_ADDPP" }
+		buttonType = { name = "faction_initiativ_add"     position = { x = 132 y = 366 } spriteType = "GFX_hostcountry_initiative_add" pdx_tooltip = "faction_initiativ_add_TT" }
+		buttonType = { name = "faction_initiative_remove" position = { x = 175 y = 366 } spriteType = "GFX_hostcountry_initiative_remove" pdx_tooltip = "faction_initiative_remove_TT" }
+		buttonType = { name = "manpower_add"              position = { x = 242 y = 366 } spriteType = "GFX_hostcountry_manpower_add"  pdx_tooltip = "manpower_add"    pdx_tooltip_delayed = "manpower_add_TT_DELAYED" }
+		buttonType = { name = "manpower_NO_add"           position = { x = 285 y = 366 } spriteType = "GFX_hostcountry_manpower_remove" pdx_tooltip = "manpower_NO_add" pdx_tooltip_delayed = "manpower_NO_add_TT_DELAYED" }
+		# ряд 3
+		buttonType = { name = "mill_add"         position = { x = 22  y = 412 } spriteType = "GFX_hostcountry_mil_factory_add" pdx_tooltip = "MILADD" }
+		buttonType = { name = "remove_mill_add"  position = { x = 65  y = 412 } spriteType = "GFX_hostcountry_mil_factory_remove" pdx_tooltip = "remove_MILADD" }
+		buttonType = { name = "civ_add"          position = { x = 132 y = 412 } spriteType = "GFX_hostcountry_civ_factory_add" pdx_tooltip = "CIVADD" }
+		buttonType = { name = "remove_civ_add"   position = { x = 175 y = 412 } spriteType = "GFX_hostcountry_civ_factory_remove" pdx_tooltip = "remove_CIVADD" }
+		buttonType = { name = "pingtool"         position = { x = 242 y = 412 } spriteType = "GFX_hostcountry_dockyard_add" pdx_tooltip = "PINGTOOL" }
+		buttonType = { name = "remove_pingtool"  position = { x = 285 y = 412 } spriteType = "GFX_hostcountry_dockyard_remove" pdx_tooltip = "remove_PINGTOOL" }
+		# ряд 4
+		buttonType = { name = "fix_xp"         position = { x = 22  y = 458 } spriteType = "GFX_hostcountry_army_xp_add" pdx_tooltip = "FIX_XP_TT"         pdx_tooltip_delayed = "FIX_XP_TT_DELAYED" }
+		buttonType = { name = "remove_fix_xp"  position = { x = 65  y = 458 } spriteType = "GFX_hostcountry_army_xp_remove" pdx_tooltip = "remove_FIX_XP_TT"  pdx_tooltip_delayed = "remove_FIX_XP_TT_DELAYED" }
+		buttonType = { name = "fix_xp2"        position = { x = 132 y = 458 } spriteType = "GFX_hostcountry_navy_xp_add" pdx_tooltip = "FIX_XP2_TT"        pdx_tooltip_delayed = "FIX_XP2_TT_DELAYED" }
+		buttonType = { name = "remove_fix_xp2" position = { x = 175 y = 458 } spriteType = "GFX_hostcountry_navy_xp_remove" pdx_tooltip = "remove_FIX_XP2_TT" pdx_tooltip_delayed = "remove_FIX_XP2_TT_DELAYED" }
+		buttonType = { name = "fix_xp3"        position = { x = 242 y = 458 } spriteType = "GFX_hostcountry_air_xp_add" pdx_tooltip = "FIX_XP3_TT"        pdx_tooltip_delayed = "FIX_XP3_TT_DELAYED" }
+		buttonType = { name = "remove_fix_xp3" position = { x = 285 y = 458 } spriteType = "GFX_hostcountry_air_xp_remove" pdx_tooltip = "remove_FIX_XP3_TT" pdx_tooltip_delayed = "remove_FIX_XP3_TT_DELAYED" }
+		# ряд 5
+		buttonType = { name = "convoy48"              position = { x = 22  y = 504 } spriteType = "GFX_hostcountry_convoys_add" pdx_tooltip = "convoy48"              pdx_tooltip_delayed = "convoy48_TT_DELAYED" }
+		buttonType = { name = "remove_convoy48"       position = { x = 65  y = 504 } spriteType = "GFX_hostcountry_convoys_remove" pdx_tooltip = "remove_convoy48"       pdx_tooltip_delayed = "remove_convoy48_TT_DELAYED" }
+		buttonType = { name = "add_autonomy_ratio"    position = { x = 132 y = 504 } spriteType = "GFX_hostcountry_autonomy_add" pdx_tooltip = "add_autonomy_ratio"    pdx_tooltip_delayed = "add_autonomy_ratio_TT_DELAYED" }
+		buttonType = { name = "add_NO_autonomy_ratio" position = { x = 175 y = 504 } spriteType = "GFX_hostcountry_autonomy_remove" pdx_tooltip = "add_NO_autonomy_ratio" pdx_tooltip_delayed = "add_NO_autonomy_ratio_TT_DELAYED" }
+		buttonType = { name = "wt_add"                position = { x = 242 y = 504 } spriteType = "GFX_hostcountry_tension_add" pdx_tooltip = "WTADD" }
+		buttonType = { name = "wt_remove"             position = { x = 285 y = 504 } spriteType = "GFX_hostcountry_tension_remove" pdx_tooltip = "WTREMOVE" }
+		# ряд 6: одиночные действия
+		buttonType = { name = "fix_production"    position = { x = 22  y = 553 } spriteType = "GFX_topbar_production_horst_tool" frame = 2 pdx_tooltip = "FIX_PRODUCTION_TT" pdx_tooltip_delayed = "FIX_PRODUCTION_TT_DELAYED" }
+		buttonType = { name = "add_autonomy_free" position = { x = 90  y = 551 } spriteType = "GFX_goal_continuous_boost_freedom" scale = 0.55 pdx_tooltip = "add_autonomy_free" pdx_tooltip_delayed = "add_autonomy_freeTT_DELAYED" }
+		buttonType = { name = "whitepeace"        position = { x = 162 y = 557 } spriteType = "GFX_relation_truce" scale = 1.2 pdx_tooltip = "WHITEPEACE" }
+
+	############ Доктрины (иконки + кнопки ±1 уровень)
+		iconType = { name = "Doctrin_lan_1"   position = { x = 378 y = 92 }  spriteType = "GFX_doctrine_milestone_infantry_land"   scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_lan_2"   position = { x = 442 y = 92 }  spriteType = "GFX_doctrine_milestone_artillery_land"  scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_lan_3"   position = { x = 506 y = 92 }  spriteType = "GFX_doctrine_milestone_armored_land"    scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_lan_4"   position = { x = 570 y = 92 }  spriteType = "GFX_doctrine_milestone_operations_land" scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_naval_1" position = { x = 378 y = 168 } spriteType = "GFX_doctrine_milestone_submarine_naval" scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_naval_2" position = { x = 442 y = 168 } spriteType = "GFX_doctrine_milestone_screens_naval"   scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_naval_3" position = { x = 506 y = 168 } spriteType = "GFX_doctrine_milestone_carriers_naval"  scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_naval_4" position = { x = 570 y = 168 } spriteType = "GFX_doctrine_milestone_ships_naval"     scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_air_1"   position = { x = 378 y = 244 } spriteType = "GFX_doctrine_milestone_fighter_air"     scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_air_2"   position = { x = 442 y = 244 } spriteType = "GFX_doctrine_milestone_striker_air"     scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_air_3"   position = { x = 506 y = 244 } spriteType = "GFX_doctrine_milestone_medium_air"      scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_air_4"   position = { x = 570 y = 244 } spriteType = "GFX_doctrine_milestone_heavy_air"       scale = 0.5 alwaystransparent = yes }
+		iconType = { name = "Doctrin_spec"    position = { x = 638 y = 168 } spriteType = "GFX_doctrine_milestone_special_forces"  scale = 0.5 alwaystransparent = yes }
+
+		buttonType = { name = "hosttool_add_lan_doctrin_infantry"    position = { x = 378 y = 136 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_lan_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_sub_lan_doctrin_infantry"    position = { x = 405 y = 136 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_lan_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_add_lan_doctrin_artirellia"  position = { x = 442 y = 136 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_lan_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_sub_lan_doctrin_artirellia"  position = { x = 469 y = 136 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_lan_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_add_lan_doctrin_armor"       position = { x = 506 y = 136 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_lan_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_sub_lan_doctrin_armor"       position = { x = 533 y = 136 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_lan_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_add_lan_doctrin_operations"  position = { x = 570 y = 136 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_lan_doctrin_operations_TT" }
+		buttonType = { name = "hosttool_sub_lan_doctrin_operations"  position = { x = 597 y = 136 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_lan_doctrin_operations_TT" }
+
+		buttonType = { name = "hosttool_add_naval_doctrin_infantry"   position = { x = 378 y = 212 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_naval_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_sub_naval_doctrin_infantry"   position = { x = 405 y = 212 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_naval_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_add_naval_doctrin_artirellia" position = { x = 442 y = 212 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_naval_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_sub_naval_doctrin_artirellia" position = { x = 469 y = 212 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_naval_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_add_naval_doctrin_armor"      position = { x = 506 y = 212 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_naval_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_sub_naval_doctrin_armor"      position = { x = 533 y = 212 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_naval_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_add_naval_doctrin_operations" position = { x = 570 y = 212 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_naval_doctrin_operations_TT" }
+		buttonType = { name = "hosttool_sub_naval_doctrin_operations" position = { x = 597 y = 212 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_naval_doctrin_operations_TT" }
+		buttonType = { name = "hosttool_add_spec"                     position = { x = 638 y = 212 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_spec_TT" }
+		buttonType = { name = "hosttool_sub_spec"                     position = { x = 665 y = 212 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_spec_TT" }
+
+		buttonType = { name = "hosttool_add_air_doctrin_infantry"    position = { x = 378 y = 288 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_air_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_sub_air_doctrin_infantry"    position = { x = 405 y = 288 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_air_doctrin_infantry_TT" }
+		buttonType = { name = "hosttool_add_air_doctrin_artirellia"  position = { x = 442 y = 288 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_air_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_sub_air_doctrin_artirellia"  position = { x = 469 y = 288 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_air_doctrin_artirellia_TT" }
+		buttonType = { name = "hosttool_add_air_doctrin_armor"       position = { x = 506 y = 288 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_air_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_sub_air_doctrin_armor"       position = { x = 533 y = 288 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_air_doctrin_armor_TT" }
+		buttonType = { name = "hosttool_add_air_doctrin_operations"  position = { x = 570 y = 288 } spriteType = "GFX_hosttool_add_1" pdx_tooltip = "hosttool_add_air_doctrin_operations_TT" }
+		buttonType = { name = "hosttool_sub_air_doctrin_operations"  position = { x = 597 y = 288 } spriteType = "GFX_hosttool_sub_1" pdx_tooltip = "hosttool_sub_air_doctrin_operations_TT" }
+
+	############ Регионы: отметка и действия над отмеченными
+		buttonType = {
+			name = "toogle_mark"
+			position = { x = 378 y = 416 }
+			spriteType = "GFX_sort_button_100x29"
+			buttonText = "[HostTool_MarkText]"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "ST_STATE_MARK_FOR_TRANSFER"
+		}
+		buttonType = {
+			name = "clear_all_markings"
+			position = { x = 486 y = 414 }
+			spriteType = "GFX_global_alert_icons"
+			frame = 38
+			scale = 0.75
+			pdx_tooltip = "CLEAR_ALL_MARKINGS"
+		}
+		buttonType = { name = "award_states"   position = { x = 378 y = 458 } spriteType = "GFX_global_diplorequest_icons" frame = 13 scale = 0.9 pdx_tooltip = "TRANSFER_STATES" }
+		buttonType = { name = "annex_country"  position = { x = 428 y = 458 } spriteType = "GFX_global_diplorequest_icons" frame = 2  scale = 0.9 pdx_tooltip = "ANNEX_COUNTRY" }
+		buttonType = { name = "add_cores"      position = { x = 478 y = 458 } spriteType = "GFX_global_diplorequest_icons" frame = 6  scale = 0.9 pdx_tooltip = "ADD_CORES" }
+		buttonType = { name = "tpt_war_button" position = { x = 530 y = 459 } spriteType = "GFX_war_truce" scale = 0.7 pdx_tooltip = "TPT_WAR_TT" }
+
+		# подчинение
+		buttonType = { name = "hosttool_add_100_compliance" position = { x = 378 y = 534 } spriteType = "GFX_hosttol_add_100"  pdx_tooltip = "hosttool_add_100_compliance_TT" }
+		buttonType = { name = "hosttool_add_75_compliance"  position = { x = 408 y = 534 } spriteType = "GFX_hosttol_add_75"   pdx_tooltip = "hosttool_add_75_compliance_TT" }
+		buttonType = { name = "hosttool_add_50_compliance"  position = { x = 438 y = 534 } spriteType = "GFX_hosttol_add_50"   pdx_tooltip = "hosttool_add_50_compliance_TT" }
+		buttonType = { name = "hosttool_add_25_compliance"  position = { x = 468 y = 534 } spriteType = "GFX_hosttool_add_25"  pdx_tooltip = "hosttool_add_25_compliance_TT" }
+		buttonType = { name = "hosttool_sub_100_compliance" position = { x = 378 y = 564 } spriteType = "GFX_hosttol_sub_100"  pdx_tooltip = "hosttool_sub_100_compliance_TT" }
+		buttonType = { name = "hosttool_sub_75_compliance"  position = { x = 408 y = 564 } spriteType = "GFX_hosttol_sub_75"   pdx_tooltip = "hosttool_sub_75_compliance_TT" }
+		buttonType = { name = "hosttool_sub_50_compliance"  position = { x = 438 y = 564 } spriteType = "GFX_hosttol_sub_50"   pdx_tooltip = "hosttool_sub_50_compliance_TT" }
+		buttonType = { name = "hosttool_sub_25_compliance"  position = { x = 468 y = 564 } spriteType = "GFX_hosttool_sub_25"  pdx_tooltip = "hosttool_sub_25_compliance_TT" }
+		# сопротивление
+		buttonType = { name = "hosttool_add_100_compliance1" position = { x = 548 y = 534 } spriteType = "GFX_hosttol_add_100" pdx_tooltip = "hosttool_add_100_compliance1_TT" }
+		buttonType = { name = "hosttool_add_75_compliance1"  position = { x = 578 y = 534 } spriteType = "GFX_hosttol_add_75"  pdx_tooltip = "hosttool_add_75_compliance1_TT" }
+		buttonType = { name = "hosttool_add_50_compliance1"  position = { x = 608 y = 534 } spriteType = "GFX_hosttol_add_50"  pdx_tooltip = "hosttool_add_50_compliance1_TT" }
+		buttonType = { name = "hosttool_add_25_compliance1"  position = { x = 638 y = 534 } spriteType = "GFX_hosttool_add_25" pdx_tooltip = "hosttool_add_25_compliance1_TT" }
+		buttonType = { name = "hosttool_sub_100_compliance1" position = { x = 548 y = 564 } spriteType = "GFX_hosttol_sub_100" pdx_tooltip = "hosttool_sub_100_compliance1_TT" }
+		buttonType = { name = "hosttool_sub_75_compliance1"  position = { x = 578 y = 564 } spriteType = "GFX_hosttol_sub_75"  pdx_tooltip = "hosttool_sub_75_compliance1_TT" }
+		buttonType = { name = "hosttool_sub_50_compliance1"  position = { x = 608 y = 564 } spriteType = "GFX_hosttol_sub_50"  pdx_tooltip = "hosttool_sub_50_compliance1_TT" }
+		buttonType = { name = "hosttool_sub_25_compliance1"  position = { x = 638 y = 564 } spriteType = "GFX_hosttool_sub_25" pdx_tooltip = "hosttool_sub_25_compliance1_TT" }
+
+	############ Игроки (сетевая игра)
+		buttonType = { name = "change_host_nation" position = { x = 22  y = 634 } spriteType = "GFX_change_host_nation" scale = 0.65 pdx_tooltip = "CHANGE_HOST_NATION_TT" }
+		buttonType = { name = "observer"           position = { x = 72  y = 634 } spriteType = "GFX_observer_button"    scale = 0.65 pdx_tooltip = "OBSERVER" }
+		buttonType = { name = "ai_fix"             position = { x = 124 y = 638 } spriteType = "GFX_playerlobby_kick"   scale = 1.1  pdx_tooltip = "AI_FIX_TT" pdx_tooltip_delayed = "AI_FIX_TT_DELAYED" }
+
+	############ Настройки
+		instantTextboxType = {
+			name = "event_translet"
+			position = { x = 378 y = 640 }
+			font = "hoi_16mbs"
+			text = "event_translet"
+			maxWidth = 70
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "event_translet_horst_open"
+			quadTextureSprite = "GFX_generic_box_96"
+			position = { x = 445 y = 636 }
+			pdx_tooltip = "[event_translet_horst_TOOLTIP]"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		instantTextboxType = {
+			name = "title_event_translet_horst"
+			position = { x = 452 y = 640 }
+			font = "hoi_16mbs"
+			text = "[event_translet_horst_tooltip]"
+			maxWidth = 88
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+	############ Страница бафов/дебафов: переключатель
+		buttonType = {
+			name = "Debuffing_open"
+			quadTextureSprite = "GFX_browser_forward"
+			position = { x = 660 y = 716 }
+			pdx_tooltip = "[Debuffing_TOOLTIP]"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		buttonType = {
+			name = "Debuffing_close"
+			quadTextureSprite = "GFX_browser_back"
+			position = { x = 660 y = 716 }
+			pdx_tooltip = "[Debuffing_TOOLTIP]"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		instantTextboxType = {
+			name = "S3_text"
+			position = { x = 85 y = 72 }
+			font = "hoi_18mbs"
+			text = "S3"
+			maxWidth = 300
+			maxHeight = 23
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "S3"
+			position = { x = 75 y = 95 }
+			spriteType = "GFX_S3"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "S2_text"
+			position = { x = 85 y = 262 }
+			font = "hoi_18mbs"
+			text = "S2"
+			maxWidth = 300
+>>>>>>> Stashed changes
+			maxHeight = 23
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "S2"
+			position = { x = 75 y = 285 }
+			spriteType = "GFX_S2"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "S1_text"
+			position = { x = 85 y = 470 }
+			font = "hoi_18mbs"
+			text = "S1"
+			maxWidth = 300
+			maxHeight = 23
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "S1"
+			position = { x = 75 y = 493 }
+			spriteType = "GFX_S1"
+			alwaystransparent = yes
+		}
+		buttonType = { name = "debuf_industrial_plus"  position = { x = 20 y = 135 } spriteType = "GFX_plus"  pdx_tooltip = "debuf_industrial_plus_TT" }
+		buttonType = { name = "debuf_industrial_minys" position = { x = 20 y = 135 } spriteType = "GFX_minys" pdx_tooltip = "debuf_industrial_minys_TT" }
+		buttonType = { name = "debuf_politic_plus"     position = { x = 20 y = 320 } spriteType = "GFX_plus"  pdx_tooltip = "debuf_politic_plus_TT" }
+		buttonType = { name = "debuf_politic_minys"    position = { x = 20 y = 320 } spriteType = "GFX_minys" pdx_tooltip = "debuf_politic_minys_TT" }
+		buttonType = { name = "debuf_army_plus"        position = { x = 20 y = 543 } spriteType = "GFX_plus"  pdx_tooltip = "debuf_army_plus_TT" }
+		buttonType = { name = "debuf_army_minys"       position = { x = 20 y = 543 } spriteType = "GFX_minys" pdx_tooltip = "debuf_army_minys_TT" }
+		buttonType = { name = "add_dynamic_Hort_tool"  position = { x = 22  y = 700 } spriteType = "GFX_focus_focus_fra_liberte_egalite_solidarite" scale = 0.6 pdx_tooltip = "add_dynamic_Hort_tool_TT" }
+		buttonType = { name = "add_dynamic_Hort_tool1" position = { x = 90  y = 700 } spriteType = "GFX_focus_focus_fra_liberte_egalite_solidarite" scale = 0.6 pdx_tooltip = "add_dynamic_Hort_tool1_TT" }
+
+	################################################## Промышленная категория бафов/дебафов
+		buttonType = { name = "debuf_industrial_1"  position = { x = 80  y = 105 } spriteType = "GFX_horst_civ_factory"                        scale = 0.75 pdx_tooltip = "debuf_industrial_1_TT" }
+		buttonType = { name = "debuf_industrial_2"  position = { x = 130 y = 105 } spriteType = "GFX_horst_civ_factory_consumer_texticon"      scale = 0.75 pdx_tooltip = "debuf_industrial_2_TT" }
+		buttonType = { name = "debuf_industrial_3"  position = { x = 180 y = 105 } spriteType = "GFX_horst_construction_speed_texticon"        scale = 0.75 pdx_tooltip = "debuf_industrial_3_TT" }
+		buttonType = { name = "debuf_industrial_4"  position = { x = 230 y = 105 } spriteType = "GFX_horst_construction_speed_texticon_energy" scale = 0.75 pdx_tooltip = "debuf_industrial_4_TT" }
+		buttonType = { name = "debuf_industrial_5"  position = { x = 280 y = 105 } spriteType = "GFX_horst_consumer_goods_texticon"            scale = 0.75 pdx_tooltip = "debuf_industrial_5_TT" }
+		buttonType = { name = "debuf_industrial_6"  position = { x = 330 y = 105 } spriteType = "GFX_horst_dockyard_texticon"                  scale = 0.75 pdx_tooltip = "debuf_industrial_6_TT" }
+		buttonType = { name = "debuf_industrial_7"  position = { x = 380 y = 105 } spriteType = "GFX_horst_dockyard_texticon_energy"           scale = 0.75 pdx_tooltip = "debuf_industrial_7_TT" }
+		buttonType = { name = "debuf_industrial_8"  position = { x = 430 y = 105 } spriteType = "GFX_horst_efficiency_base_texticon"           scale = 0.75 pdx_tooltip = "debuf_industrial_8_TT" }
+		buttonType = { name = "debuf_industrial_9"  position = { x = 480 y = 105 } spriteType = "GFX_horst_efficiency_cap_texticon"            scale = 0.75 pdx_tooltip = "debuf_industrial_9_TT" }
+		buttonType = { name = "debuf_industrial_10" position = { x = 530 y = 105 } spriteType = "GFX_horst_efficiency_growth_texticon"         scale = 0.75 pdx_tooltip = "debuf_industrial_10_TT" }
+		buttonType = { name = "debuf_industrial_11" position = { x = 580 y = 105 } spriteType = "GFX_horst_production_efficiency_loss_texticon" scale = 0.75 pdx_tooltip = "debuf_industrial_11_TT" }
+		buttonType = { name = "debuf_industrial_12" position = { x = 80  y = 160 } spriteType = "GFX_horst_factory_output_texticon"            scale = 0.75 pdx_tooltip = "debuf_industrial_12_TT" }
+		buttonType = { name = "debuf_industrial_13" position = { x = 130 y = 160 } spriteType = "GFX_horst_factory_output_texticon_energy"     scale = 0.75 pdx_tooltip = "debuf_industrial_13_TT" }
+		buttonType = { name = "debuf_industrial_14" position = { x = 180 y = 160 } spriteType = "GFX_horst_rsabotaged_resource_texticon"       scale = 0.75 pdx_tooltip = "debuf_industrial_14_TT" }
+		buttonType = { name = "debuf_industrial_15" position = { x = 230 y = 160 } spriteType = "GFX_horst_sabotaged_resource_energy_texticon" scale = 0.75 pdx_tooltip = "debuf_industrial_15_TT" }
+
+	################################################## Политическая категория бафов/дебафов
+		buttonType = { name = "debuf_Politic_1"  position = { x = 80  y = 300 } spriteType = "GFX_horst_manpower_exiles_texticon"          scale = 0.75 pdx_tooltip = "debuf_Politic_1_TT" }
+		buttonType = { name = "debuf_Politic_2"  position = { x = 130 y = 300 } spriteType = "GFX_horst_manpower_noncore_texticon"         scale = 0.75 pdx_tooltip = "debuf_Politic_2_TT" }
+		buttonType = { name = "debuf_Politic_3"  position = { x = 180 y = 300 } spriteType = "GFX_horst_political_power_cost_texticon"     scale = 0.75 pdx_tooltip = "debuf_Politic_3_TT" }
+		buttonType = { name = "debuf_Politic_4"  position = { x = 230 y = 300 } spriteType = "GFX_horst_political_power_texticon"          scale = 0.75 pdx_tooltip = "debuf_Politic_4_TT" }
+		buttonType = { name = "debuf_Politic_5"  position = { x = 280 y = 300 } spriteType = "GFX_horst_war_support_modifiericons_texticon" scale = 0.75 pdx_tooltip = "debuf_Politic_5_TT" }
+		buttonType = { name = "debuf_Politic_6"  position = { x = 330 y = 300 } spriteType = "GFX_horst_rstability_texticon"               scale = 0.75 pdx_tooltip = "debuf_Politic_6_TT" }
+		buttonType = { name = "debuf_Politic_7"  position = { x = 380 y = 300 } spriteType = "GFX_horst_surrender_texticon"                scale = 0.75 pdx_tooltip = "debuf_Politic_7_TT" }
+		buttonType = { name = "debuf_Politic_8"  position = { x = 430 y = 300 } spriteType = "GFX_horst_trade_texticon"                    scale = 0.75 pdx_tooltip = "debuf_Politic_8_TT" }
+		buttonType = { name = "debuf_Politic_9"  position = { x = 480 y = 300 } spriteType = "GFX_horst_traded_goods_texticon"             scale = 0.75 pdx_tooltip = "debuf_Politic_9_TT" }
+		buttonType = { name = "debuf_Politic_10" position = { x = 530 y = 300 } spriteType = "GFX_horst_manpower_exiles_texticon"          scale = 0.75 pdx_tooltip = "debuf_Politic_10_TT" }
+		buttonType = { name = "debuf_Politic_11" position = { x = 580 y = 300 } spriteType = "GFX_horst_political_power_texticon"          scale = 0.75 pdx_tooltip = "debuf_Politic_11_TT" }
+
+	################################################## Армейская категория бафов/дебафов
+		buttonType = { name = "debuf_army_1"  position = { x = 80  y = 510 } spriteType = "GFX_horst_army_morale_texticon"                  scale = 0.75 pdx_tooltip = "debuf_army_1_TT" }
+		buttonType = { name = "debuf_army_2"  position = { x = 130 y = 510 } spriteType = "GFX_horst_attack_core_texticon"                  scale = 0.75 pdx_tooltip = "debuf_army_2_TT" }
+		buttonType = { name = "debuf_army_3"  position = { x = 180 y = 510 } spriteType = "GFX_horst_defence_core_texticon"                 scale = 0.75 pdx_tooltip = "debuf_army_3_TT" }
+		buttonType = { name = "debuf_army_4"  position = { x = 230 y = 510 } spriteType = "GFX_horst_attack_no_core_texticon"               scale = 0.75 pdx_tooltip = "debuf_army_4_TT" }
+		buttonType = { name = "debuf_army_5"  position = { x = 280 y = 510 } spriteType = "GFX_horst_defence_no_core_texticon"              scale = 0.75 pdx_tooltip = "debuf_army_5_TT" }
+		buttonType = { name = "debuf_army_6"  position = { x = 330 y = 510 } spriteType = "GFX_horst_rattack_disputed_territories_texticon" scale = 0.75 pdx_tooltip = "debuf_army_6_TT" }
+		buttonType = { name = "debuf_army_7"  position = { x = 380 y = 510 } spriteType = "GFX_horst_defence_disputed_territories_texticon" scale = 0.75 pdx_tooltip = "debuf_army_7_TT" }
+		buttonType = { name = "debuf_army_8"  position = { x = 430 y = 510 } spriteType = "GFX_horst_attack_texticon"                       scale = 0.75 pdx_tooltip = "debuf_army_8_TT" }
+		buttonType = { name = "debuf_army_9"  position = { x = 480 y = 510 } spriteType = "GFX_horst_defence_texticon"                      scale = 0.75 pdx_tooltip = "debuf_army_9_TT" }
+		buttonType = { name = "debuf_army_10" position = { x = 530 y = 510 } spriteType = "GFX_horst_attacker_speed_texticon"               scale = 0.75 pdx_tooltip = "debuf_army_10_TT" }
+		buttonType = { name = "debuf_army_11" position = { x = 580 y = 510 } spriteType = "GFX_horst_organization_texticon"                 scale = 0.75 pdx_tooltip = "debuf_army_11_TT" }
+		buttonType = { name = "debuf_army_12" position = { x = 80  y = 565 } spriteType = "GFX_horst_planning_max_texticon"                 scale = 0.75 pdx_tooltip = "debuf_army_12_TT" }
+		buttonType = { name = "debuf_army_13" position = { x = 130 y = 565 } spriteType = "GFX_horst_dig_in_max_texticon"                   scale = 0.75 pdx_tooltip = "debuf_army_13_TT" }
+
+
+
+
+
+
+		### HOSTCLR palette begin
+		instantTextboxType = { name = "pause_label" position = { x = 378 y = 676 } font = "hoi_16mbs" text = "HOSTTOOL_PAUSE_LABEL" maxWidth = 66 maxHeight = 20 alwaystransparent = yes }
+		instantTextboxType = { name = "sec_color" position = { x = 22 y = 684 } font = "hoi_18mbs" text = "HOSTTOOL_SEC_COLOR" maxWidth = 330 maxHeight = 20 alwaystransparent = yes }
+		buttonType = { name = "hostclr_open" position = { x = 22 y = 710 } spriteType = "GFX_generic_box_125" pdx_tooltip = "HOSTCLR_OPEN_TT" clicksound = click_ok }
+		instantTextboxType = { name = "hostclr_open_text" position = { x = 22 y = 714 } font = "hoi_16mbs" text = "[HostTool_PaletteButton]" maxWidth = 125 maxHeight = 20 format = centre alwaystransparent = yes }
+		instantTextboxType = { name = "hostclr_main_current_text" position = { x = 158 y = 714 } font = "hoi_16mbs" text = "HOSTCLR_CURRENT" maxWidth = 200 maxHeight = 20 format = left alwaystransparent = yes }
+		### HOSTCLR palette end
+
+	############ Выпадающие списки (в конце файла, чтобы рисовались поверх остального)
+		# Технологии (читы)
+		buttonType = {
+<<<<<<< Updated upstream
 			name = "toogle_mark" 
 			position = {x=20 y=35}
 			text = "Mark"
@@ -1224,6 +1759,192 @@ guiTypes = {
 		background = {
 			name = "Background"
 			spriteType = "GFX_tiled_window_transparent"
+=======
+			name = "add_cheat"
+			position = { x = 378 y = 351 }
+			spriteType = "GFX_horst_addcheat"
+			scale = 0.3
+			pdx_tooltip = "ADD_CHEAT"
+>>>>>>> Stashed changes
 		}
+		buttonType = { name = "cheat1" position = { x = 414 y = 352 } spriteType = "GFX_generic_box_125" }
+		buttonType = { name = "cheat2" position = { x = 414 y = 378 } spriteType = "GFX_generic_box_125" }
+		buttonType = { name = "cheat3" position = { x = 414 y = 404 } spriteType = "GFX_generic_box_125" }
+		buttonType = { name = "cheat4" position = { x = 414 y = 430 } spriteType = "GFX_generic_box_125" }
+		instantTextboxType = { name = "cheat1_text" position = { x = 419 y = 356 } font = "hoi_16mbs" text = "[cheat_selected]" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "cheat2_text" position = { x = 419 y = 382 } font = "hoi_16mbs" text = "CHEAT2" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "cheat3_text" position = { x = 419 y = 408 } font = "hoi_16mbs" text = "CHEAT3" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "cheat4_text" position = { x = 419 y = 434 } font = "hoi_16mbs" text = "CHEAT4" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+
+		# Пауза (список раскрывается вниз)
+		buttonType = { name = "pause_blocker_major" position = { x = 445 y = 672 } spriteType = "GFX_generic_box_125" pdx_tooltip = "pause_blocker_shield_tt" pdx_tooltip_delayed = "pause_blocker_shield_delayed_tt" }
+		buttonType = { name = "pause_blocker_all"   position = { x = 445 y = 698 } spriteType = "GFX_generic_box_125" }
+		buttonType = { name = "pause_blocker_host"  position = { x = 445 y = 724 } spriteType = "GFX_generic_box_125" }
+		instantTextboxType = { name = "pause_blocker_major_text" position = { x = 450 y = 676 } font = "hoi_16mbs" text = "[pause_selected]" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "pause_blocker_all_text"   position = { x = 450 y = 702 } font = "hoi_16mbs" text = "PAUSE1" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "pause_blocker_host_text"  position = { x = 450 y = 728 } font = "hoi_16mbs" text = "PAUSE2" maxWidth = 116 maxHeight = 20 format = left alwaystransparent = yes }
+
 	}
+
+	### HOSTCLR window begin
+	containerWindowType = {
+		name = "hosttool_color_window"
+		position = { x = -1506 y = 70 }
+		Orientation = UPPER_RIGHT
+		size = { width = 476 height = 382 }
+		moveable = yes
+		background = { name = "Background" quadTextureSprite = "GFX_tiled_window_2b_border" }
+		instantTextboxType = { name = "hostclr_win_title" position = { x = 24 y = 16 } font = "hoi_20bs" text = "HOSTCLR_WIN_TITLE" maxWidth = 396 maxHeight = 24 format = left alwaystransparent = yes }
+		instantTextboxType = { name = "hostclr_win_owner" position = { x = 24 y = 44 } font = "hoi_18mbs" text = "why_use_lel_lennard_tt" maxWidth = 396 maxHeight = 22 format = left alwaystransparent = yes }
+		buttonType = { name = "hostclr_close" position = { x = 428 y = 14 } quadTextureSprite = "GFX_closebutton" pdx_tooltip = "HOSTCLR_CLOSE_TT" clicksound = click_close }
+		instantTextboxType = { name = "hostclr_hint" position = { x = 24 y = 72 } font = "hoi_16mbs" text = "HOSTCLR_HINT" maxWidth = 428 maxHeight = 36 format = left alwaystransparent = yes }
+		buttonType = { name = "hostclr_37" position = { x = 24 y = 112 } spriteType = "GFX_hostclr_37" pdx_tooltip = "HOSTCLR_37_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_38" position = { x = 60 y = 112 } spriteType = "GFX_hostclr_38" pdx_tooltip = "HOSTCLR_38_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_39" position = { x = 96 y = 112 } spriteType = "GFX_hostclr_39" pdx_tooltip = "HOSTCLR_39_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_40" position = { x = 132 y = 112 } spriteType = "GFX_hostclr_40" pdx_tooltip = "HOSTCLR_40_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_41" position = { x = 168 y = 112 } spriteType = "GFX_hostclr_41" pdx_tooltip = "HOSTCLR_41_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_42" position = { x = 204 y = 112 } spriteType = "GFX_hostclr_42" pdx_tooltip = "HOSTCLR_42_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_43" position = { x = 240 y = 112 } spriteType = "GFX_hostclr_43" pdx_tooltip = "HOSTCLR_43_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_44" position = { x = 276 y = 112 } spriteType = "GFX_hostclr_44" pdx_tooltip = "HOSTCLR_44_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_45" position = { x = 312 y = 112 } spriteType = "GFX_hostclr_45" pdx_tooltip = "HOSTCLR_45_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_46" position = { x = 348 y = 112 } spriteType = "GFX_hostclr_46" pdx_tooltip = "HOSTCLR_46_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_47" position = { x = 384 y = 112 } spriteType = "GFX_hostclr_47" pdx_tooltip = "HOSTCLR_47_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_48" position = { x = 420 y = 112 } spriteType = "GFX_hostclr_48" pdx_tooltip = "HOSTCLR_48_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_9" position = { x = 24 y = 148 } spriteType = "GFX_hostclr_9" pdx_tooltip = "HOSTCLR_9_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_11" position = { x = 60 y = 148 } spriteType = "GFX_hostclr_11" pdx_tooltip = "HOSTCLR_11_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_13" position = { x = 96 y = 148 } spriteType = "GFX_hostclr_13" pdx_tooltip = "HOSTCLR_13_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_15" position = { x = 132 y = 148 } spriteType = "GFX_hostclr_15" pdx_tooltip = "HOSTCLR_15_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_18" position = { x = 168 y = 148 } spriteType = "GFX_hostclr_18" pdx_tooltip = "HOSTCLR_18_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_20" position = { x = 204 y = 148 } spriteType = "GFX_hostclr_20" pdx_tooltip = "HOSTCLR_20_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_23" position = { x = 240 y = 148 } spriteType = "GFX_hostclr_23" pdx_tooltip = "HOSTCLR_23_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_26" position = { x = 276 y = 148 } spriteType = "GFX_hostclr_26" pdx_tooltip = "HOSTCLR_26_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_28" position = { x = 312 y = 148 } spriteType = "GFX_hostclr_28" pdx_tooltip = "HOSTCLR_28_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_31" position = { x = 348 y = 148 } spriteType = "GFX_hostclr_31" pdx_tooltip = "HOSTCLR_31_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_33" position = { x = 384 y = 148 } spriteType = "GFX_hostclr_33" pdx_tooltip = "HOSTCLR_33_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_8" position = { x = 420 y = 148 } spriteType = "GFX_hostclr_8" pdx_tooltip = "HOSTCLR_8_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_1" position = { x = 24 y = 184 } spriteType = "GFX_hostclr_1" pdx_tooltip = "HOSTCLR_1_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_2" position = { x = 60 y = 184 } spriteType = "GFX_hostclr_2" pdx_tooltip = "HOSTCLR_2_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_3" position = { x = 96 y = 184 } spriteType = "GFX_hostclr_3" pdx_tooltip = "HOSTCLR_3_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_16" position = { x = 132 y = 184 } spriteType = "GFX_hostclr_16" pdx_tooltip = "HOSTCLR_16_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_19" position = { x = 168 y = 184 } spriteType = "GFX_hostclr_19" pdx_tooltip = "HOSTCLR_19_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_21" position = { x = 204 y = 184 } spriteType = "GFX_hostclr_21" pdx_tooltip = "HOSTCLR_21_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_24" position = { x = 240 y = 184 } spriteType = "GFX_hostclr_24" pdx_tooltip = "HOSTCLR_24_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_27" position = { x = 276 y = 184 } spriteType = "GFX_hostclr_27" pdx_tooltip = "HOSTCLR_27_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_29" position = { x = 312 y = 184 } spriteType = "GFX_hostclr_29" pdx_tooltip = "HOSTCLR_29_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_6" position = { x = 348 y = 184 } spriteType = "GFX_hostclr_6" pdx_tooltip = "HOSTCLR_6_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_7" position = { x = 384 y = 184 } spriteType = "GFX_hostclr_7" pdx_tooltip = "HOSTCLR_7_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_35" position = { x = 420 y = 184 } spriteType = "GFX_hostclr_35" pdx_tooltip = "HOSTCLR_35_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_49" position = { x = 24 y = 220 } spriteType = "GFX_hostclr_49" pdx_tooltip = "HOSTCLR_49_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_50" position = { x = 60 y = 220 } spriteType = "GFX_hostclr_50" pdx_tooltip = "HOSTCLR_50_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_51" position = { x = 96 y = 220 } spriteType = "GFX_hostclr_51" pdx_tooltip = "HOSTCLR_51_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_52" position = { x = 132 y = 220 } spriteType = "GFX_hostclr_52" pdx_tooltip = "HOSTCLR_52_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_53" position = { x = 168 y = 220 } spriteType = "GFX_hostclr_53" pdx_tooltip = "HOSTCLR_53_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_54" position = { x = 204 y = 220 } spriteType = "GFX_hostclr_54" pdx_tooltip = "HOSTCLR_54_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_55" position = { x = 240 y = 220 } spriteType = "GFX_hostclr_55" pdx_tooltip = "HOSTCLR_55_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_56" position = { x = 276 y = 220 } spriteType = "GFX_hostclr_56" pdx_tooltip = "HOSTCLR_56_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_57" position = { x = 312 y = 220 } spriteType = "GFX_hostclr_57" pdx_tooltip = "HOSTCLR_57_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_58" position = { x = 348 y = 220 } spriteType = "GFX_hostclr_58" pdx_tooltip = "HOSTCLR_58_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_59" position = { x = 384 y = 220 } spriteType = "GFX_hostclr_59" pdx_tooltip = "HOSTCLR_59_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_60" position = { x = 420 y = 220 } spriteType = "GFX_hostclr_60" pdx_tooltip = "HOSTCLR_60_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_10" position = { x = 24 y = 256 } spriteType = "GFX_hostclr_10" pdx_tooltip = "HOSTCLR_10_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_12" position = { x = 60 y = 256 } spriteType = "GFX_hostclr_12" pdx_tooltip = "HOSTCLR_12_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_14" position = { x = 96 y = 256 } spriteType = "GFX_hostclr_14" pdx_tooltip = "HOSTCLR_14_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_17" position = { x = 132 y = 256 } spriteType = "GFX_hostclr_17" pdx_tooltip = "HOSTCLR_17_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_4" position = { x = 168 y = 256 } spriteType = "GFX_hostclr_4" pdx_tooltip = "HOSTCLR_4_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_22" position = { x = 204 y = 256 } spriteType = "GFX_hostclr_22" pdx_tooltip = "HOSTCLR_22_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_25" position = { x = 240 y = 256 } spriteType = "GFX_hostclr_25" pdx_tooltip = "HOSTCLR_25_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_5" position = { x = 276 y = 256 } spriteType = "GFX_hostclr_5" pdx_tooltip = "HOSTCLR_5_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_30" position = { x = 312 y = 256 } spriteType = "GFX_hostclr_30" pdx_tooltip = "HOSTCLR_30_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_32" position = { x = 348 y = 256 } spriteType = "GFX_hostclr_32" pdx_tooltip = "HOSTCLR_32_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_34" position = { x = 384 y = 256 } spriteType = "GFX_hostclr_34" pdx_tooltip = "HOSTCLR_34_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_36" position = { x = 420 y = 256 } spriteType = "GFX_hostclr_36" pdx_tooltip = "HOSTCLR_36_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_61" position = { x = 24 y = 292 } spriteType = "GFX_hostclr_61" pdx_tooltip = "HOSTCLR_61_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_62" position = { x = 60 y = 292 } spriteType = "GFX_hostclr_62" pdx_tooltip = "HOSTCLR_62_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_63" position = { x = 96 y = 292 } spriteType = "GFX_hostclr_63" pdx_tooltip = "HOSTCLR_63_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_64" position = { x = 132 y = 292 } spriteType = "GFX_hostclr_64" pdx_tooltip = "HOSTCLR_64_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_65" position = { x = 168 y = 292 } spriteType = "GFX_hostclr_65" pdx_tooltip = "HOSTCLR_65_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_66" position = { x = 204 y = 292 } spriteType = "GFX_hostclr_66" pdx_tooltip = "HOSTCLR_66_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_67" position = { x = 240 y = 292 } spriteType = "GFX_hostclr_67" pdx_tooltip = "HOSTCLR_67_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_68" position = { x = 276 y = 292 } spriteType = "GFX_hostclr_68" pdx_tooltip = "HOSTCLR_68_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_69" position = { x = 312 y = 292 } spriteType = "GFX_hostclr_69" pdx_tooltip = "HOSTCLR_69_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_70" position = { x = 348 y = 292 } spriteType = "GFX_hostclr_70" pdx_tooltip = "HOSTCLR_70_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_71" position = { x = 384 y = 292 } spriteType = "GFX_hostclr_71" pdx_tooltip = "HOSTCLR_71_TT" clicksound = click_ok }
+		buttonType = { name = "hostclr_72" position = { x = 420 y = 292 } spriteType = "GFX_hostclr_72" pdx_tooltip = "HOSTCLR_72_TT" clicksound = click_ok }
+		iconType = { name = "hostclr_37_current" position = { x = 21 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_38_current" position = { x = 57 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_39_current" position = { x = 93 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_40_current" position = { x = 129 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_41_current" position = { x = 165 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_42_current" position = { x = 201 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_43_current" position = { x = 237 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_44_current" position = { x = 273 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_45_current" position = { x = 309 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_46_current" position = { x = 345 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_47_current" position = { x = 381 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_48_current" position = { x = 417 y = 109 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_9_current" position = { x = 21 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_11_current" position = { x = 57 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_13_current" position = { x = 93 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_15_current" position = { x = 129 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_18_current" position = { x = 165 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_20_current" position = { x = 201 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_23_current" position = { x = 237 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_26_current" position = { x = 273 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_28_current" position = { x = 309 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_31_current" position = { x = 345 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_33_current" position = { x = 381 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_8_current" position = { x = 417 y = 145 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_1_current" position = { x = 21 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_2_current" position = { x = 57 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_3_current" position = { x = 93 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_16_current" position = { x = 129 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_19_current" position = { x = 165 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_21_current" position = { x = 201 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_24_current" position = { x = 237 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_27_current" position = { x = 273 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_29_current" position = { x = 309 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_6_current" position = { x = 345 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_7_current" position = { x = 381 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_35_current" position = { x = 417 y = 181 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_49_current" position = { x = 21 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_50_current" position = { x = 57 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_51_current" position = { x = 93 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_52_current" position = { x = 129 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_53_current" position = { x = 165 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_54_current" position = { x = 201 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_55_current" position = { x = 237 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_56_current" position = { x = 273 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_57_current" position = { x = 309 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_58_current" position = { x = 345 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_59_current" position = { x = 381 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_60_current" position = { x = 417 y = 217 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_10_current" position = { x = 21 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_12_current" position = { x = 57 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_14_current" position = { x = 93 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_17_current" position = { x = 129 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_4_current" position = { x = 165 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_22_current" position = { x = 201 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_25_current" position = { x = 237 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_5_current" position = { x = 273 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_30_current" position = { x = 309 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_32_current" position = { x = 345 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_34_current" position = { x = 381 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_36_current" position = { x = 417 y = 253 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_61_current" position = { x = 21 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_62_current" position = { x = 57 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_63_current" position = { x = 93 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_64_current" position = { x = 129 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_65_current" position = { x = 165 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_66_current" position = { x = 201 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_67_current" position = { x = 237 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_68_current" position = { x = 273 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_69_current" position = { x = 309 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_70_current" position = { x = 345 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_71_current" position = { x = 381 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		iconType = { name = "hostclr_72_current" position = { x = 417 y = 289 } spriteType = "GFX_hostclr_current" alwaystransparent = yes }
+		instantTextboxType = { name = "hostclr_current_text" position = { x = 24 y = 342 } font = "hoi_16mbs" text = "HOSTCLR_CURRENT" maxWidth = 276 maxHeight = 20 format = left alwaystransparent = yes }
+		buttonType = { name = "hostclr_reset" position = { x = 327 y = 338 } spriteType = "GFX_generic_box_125" pdx_tooltip = "HOSTCLR_RESET_TT" clicksound = click_ok }
+		instantTextboxType = { name = "hostclr_reset_text" position = { x = 327 y = 342 } font = "hoi_16mbs" text = "HOSTCLR_RESET" maxWidth = 125 maxHeight = 20 format = centre alwaystransparent = yes }
+	}
+	### HOSTCLR window end
 }

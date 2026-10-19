@@ -1,0 +1,1419 @@
+GER_operation= {
+	GER_case_anton = {
+
+		icon = generic_operation
+
+		available = {
+			original_tag = GER
+			has_war = yes
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+				OR = {
+					is_subject_of = GER
+					has_focus_tree = vichy_french_focus
+				}
+				NOT = { has_war_with = GER }
+				NOT = { has_country_flag = case_anton }
+				custom_trigger_tooltip = {
+					tooltip = GER_case_anton_tt2
+					count_triggers = {
+						amount = 3 # lost control of ca half french north africa
+						458 = { CONTROLLER = { has_war_with = ROOT } }
+						459 = { CONTROLLER = { has_war_with = ROOT } }
+						460 = { CONTROLLER = { has_war_with = ROOT } }
+						461 = { CONTROLLER = { has_war_with = ROOT } }
+						462 = { CONTROLLER = { has_war_with = ROOT } }
+						513 = { CONTROLLER = { has_war_with = ROOT } }
+						665 = { CONTROLLER = { has_war_with = ROOT } }
+					}
+				}
+			}
+			divisions_in_state = { state = 31 size < 1 }
+			divisions_in_state = { state = 25 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 21 size < 1 }
+			divisions_in_state = { state = 851 size < 1 }
+			divisions_in_state = { state = 32 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 26 size < 1 }
+			divisions_in_state = { state = 33 size < 1 }
+			divisions_in_state = { state = 20 size < 1 }
+			OR = {
+				ITA = { owns_state = 735 }
+				divisions_in_state = { state = 735 size < 1 }
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		visible = {
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+				OR = {
+					is_subject_of = GER
+					has_focus_tree = vichy_french_focus
+				}
+				NOT = { has_war_with = GER }
+			}
+		}
+		ai_will_do = {
+			factor = 25
+
+			modifier = {
+				factor = 0
+				VIC = { is_ai = no }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = GER_case_anton_tt
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+						OR = {
+							is_subject_of = GER
+							has_focus_tree = vichy_french_focus
+						}
+					}
+					set_country_flag = case_anton
+					activate_mission = FRA_case_anton_mission
+				}
+			}
+		}
+	}
+	GER_taif = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			date > 1942.01.1
+			#225 = { is_controlled_by = GER }
+		    #193 = { is_controlled_by = GER }
+		    #241 = { is_controlled_by = GER }
+			#207 = { is_controlled_by = GER }
+			NOT = {
+				has_country_flag = GER_blau
+			}
+        }
+
+
+        #cost = 100
+        days_remove = 202
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 205
+            }
+            highlight_state_targets = { 
+                state = 243
+            }
+            highlight_state_targets = { 
+                state = 224
+            }
+            highlight_state_targets = { 
+                state = 222
+            }
+			 highlight_state_targets = { 
+                state = 242
+            }
+			 highlight_state_targets = { 
+                state = 223
+            }
+			 highlight_state_targets = { 
+                state = 219
+            }
+			 highlight_state_targets = { 
+                state = 247
+            }
+			 highlight_state_targets = { 
+                state = 246
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_taif_tt
+			242 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			hidden_effect = {
+			243 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			224 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			222 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			205 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			223 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			219 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			247 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			246 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 202
+				}
+			}
+			news_event = { id = news_ost_west.3 hours = 200 }
+			set_country_flag = GER_taif
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_taif
+	    }
+	}
+	GER_blau = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			date > 1942.06.20
+			#200 = { is_controlled_by = GER }
+		    #226 = { is_controlled_by = GER }
+		    #259 = { is_controlled_by = GER }
+			NOT = {
+				has_country_flag = GER_taif
+			}
+        }
+
+
+        #cost = 100
+        days_remove = 149
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 221
+            }
+            highlight_state_targets = { 
+                state = 227
+            }
+            highlight_state_targets = { 
+                state = 240
+            }
+            highlight_state_targets = { 
+                state = 220
+            }
+			 highlight_state_targets = { 
+                state = 228
+            }
+			 highlight_state_targets = { 
+                state = 218
+            }
+			 highlight_state_targets = { 
+                state = 245
+            }
+			 highlight_state_targets = { 
+                state = 238
+            }
+			 highlight_state_targets = { 
+                state = 235
+            }
+			 highlight_state_targets = { 
+                state = 234
+            }
+			 highlight_state_targets = { 
+                state = 260
+            }
+			 highlight_state_targets = { 
+                state = 217
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_blau_tt
+			227 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			hidden_effect = {
+			221 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			240 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			220 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			228 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			218 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			245 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			238 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			235 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			234 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			217 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			260 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 149
+				}
+			}
+			news_event = { id = news_ost_west.1 hours = 200 }
+			set_country_flag = GER_blau
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_blau
+	    }
+	}
+
+	GER_lenik = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			date > 1942.01.1
+			#810 = { is_controlled_by = GER }
+		    #210 = { is_controlled_by = GER }
+			NOT = {
+				has_country_flag = GER_balt
+			}
+        }
+
+
+        #cost = 100
+        days_remove = 83
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 191
+            }
+            highlight_state_targets = { 
+                state = 13
+            }
+            highlight_state_targets = { 
+                state = 811
+            }
+            highlight_state_targets = { 
+                state = 812
+            }
+			 highlight_state_targets = { 
+                state = 813
+            }
+			 highlight_state_targets = { 
+                state = 209
+            }
+			 highlight_state_targets = { 
+                state = 208
+            }
+			 highlight_state_targets = { 
+                state = 263
+            }
+			 highlight_state_targets = { 
+                state = 244
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_lenik_tt
+			191 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			hidden_effect = {
+			13 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			811 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			812 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			813 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			209 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			208 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			263 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			244 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			210 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			810 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 83
+				}
+			}
+			news_event = { id = news_ost_west.4 hours = 200 }
+			set_country_flag = GER_lenik
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_lenik
+	    }
+	}
+
+	GER_balt = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			date > 1942.01.1
+			#763 = { is_controlled_by = GER }
+		    NOT = {
+				has_country_flag = GER_lenik
+			}
+        }
+
+
+        #cost = 100
+        days_remove = 92
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 188
+            }
+            highlight_state_targets = { 
+                state = 814
+            }
+            highlight_state_targets = { 
+                state = 11
+            }
+            highlight_state_targets = { 
+                state = 815
+            }
+			 highlight_state_targets = { 
+                state = 190
+            }
+			 highlight_state_targets = { 
+                state = 809
+            }
+			 highlight_state_targets = { 
+                state = 784
+            }
+			 highlight_state_targets = { 
+                state = 96
+            }
+			 highlight_state_targets = { 
+                state = 95
+            }
+			 highlight_state_targets = { 
+                state = 97
+            }
+			 highlight_state_targets = { 
+                state = 5
+            }
+			 highlight_state_targets = { 
+                state = 763
+            }
+			 highlight_state_targets = { 
+                state = 810
+            }
+			 highlight_state_targets = { 
+                state = 808
+            }
+			 highlight_state_targets = { 
+                state = 12
+            }
+			 highlight_state_targets = { 
+                state = 811
+            }
+			 highlight_state_targets = { 
+                state = 13
+            }
+			 highlight_state_targets = { 
+                state = 812
+            }
+			 highlight_state_targets = { 
+                state = 813
+            }
+			 highlight_state_targets = { 
+                state = 191
+            }
+			 highlight_state_targets = { 
+                state = 189
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_balt_tt
+			188 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			hidden_effect = {
+			189 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			815 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			814 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			11 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			784 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			96 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			95 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			97 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			763 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			5 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			190 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			809 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			808 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			810 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			12 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			811 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			13 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			812 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			813 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			191 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 92
+				}
+			}
+			news_event = { id = news_ost_west.5 hours = 200 }
+			set_country_flag = GER_balt
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_balt
+	    }
+	}
+
+	GER_beni = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = USA
+        }
+
+
+        #cost = 100
+        days_remove = 60
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = USA
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 35
+            }
+            highlight_state_targets = { 
+                state = 977
+            }
+            highlight_state_targets = { 
+                state = 51
+            }
+            highlight_state_targets = { 
+                state = 42
+            }
+			 highlight_state_targets = { 
+                state = 8
+            }
+			 highlight_state_targets = { 
+                state = 980
+            }
+			 highlight_state_targets = { 
+                state = 34
+            }
+			 highlight_state_targets = { 
+                state = 6
+            }
+			 highlight_state_targets = { 
+                state = 29
+            }
+			 highlight_state_targets = { 
+                state = 785
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_beni_tt
+			35 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			hidden_effect = {
+			51 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			42 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			8 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			980 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			34 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			977 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			6 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			29 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 60
+				}
+			}
+			news_event = { id = news_ost_west.6 hours = 200 }
+			set_country_flag = GER_beni
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_beni
+	    }
+	}
+	GER_balaton = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			#4 = { is_controlled_by =GER }
+        }
+
+
+        #cost = 100
+        days_remove = 45
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 975
+            }
+            highlight_state_targets = { 
+                state = 109
+            }
+            highlight_state_targets = { 
+                state = 45
+            }
+            highlight_state_targets = { 
+                state = 764
+            }
+			 highlight_state_targets = { 
+                state = 155
+            }
+			 highlight_state_targets = { 
+                state = 974
+            }
+			 highlight_state_targets = { 
+                state = 43
+            }
+			 highlight_state_targets = { 
+                state = 973
+            }
+			 highlight_state_targets = { 
+                state = 154
+            }
+			 highlight_state_targets = { 
+                state = 664
+            }
+			 highlight_state_targets = { 
+                state = 70
+            }
+			 highlight_state_targets = { 
+                state = 71
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_balaton_tt
+			975 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			hidden_effect = {
+			109 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			45 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			764 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			974 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			43 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			973 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			154 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			664 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			70 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			71 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			news_event = { id = news_ost_west.8 hours = 200 }
+			set_country_flag = GER_balaton
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_balaton
+	    }
+	}
+
+	GER_pomerania = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			64 = { is_controlled_by =GER }
+        }
+
+
+        #cost = 100
+        days_remove = 45
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 64
+            }
+            highlight_state_targets = { 
+                state = 62
+            }
+            highlight_state_targets = { 
+                state = 63
+            }
+            highlight_state_targets = { 
+                state = 68
+            }
+			 highlight_state_targets = { 
+                state = 65
+            }
+			 highlight_state_targets = { 
+                state = 66
+            }
+			 highlight_state_targets = { 
+                state = 67
+            }
+			 highlight_state_targets = { 
+                state = 87
+            }
+			 highlight_state_targets = { 
+                state = 86
+            }
+			 highlight_state_targets = { 
+                state = 807
+            }
+			 highlight_state_targets = { 
+                state = 85
+            }
+			 highlight_state_targets = { 
+                state = 762
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_pomerania_tt
+			64 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			hidden_effect = {
+			62 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			65 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			66 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			63 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			68 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			67 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			86 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			87 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			807 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			86 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 45
+				}
+			}
+			news_event = { id = news_ost_west.9 hours = 200 }
+			set_country_flag = GER_pomerania
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_pomerania
+	    }
+	}
+	GER_ukroxa = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			#64 = { is_controlled_by =GER }
+        }
+
+
+        #cost = 100
+        days_remove = 150
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 766
+            }
+            highlight_state_targets = { 
+                state = 78
+            }
+            highlight_state_targets = { 
+                state = 834
+            }
+            highlight_state_targets = { 
+                state = 192
+            }
+			 highlight_state_targets = { 
+                state = 198
+            }
+			 highlight_state_targets = { 
+                state = 199
+            }
+			 highlight_state_targets = { 
+                state = 201
+            }
+			 highlight_state_targets = { 
+                state = 202
+            }
+			 highlight_state_targets = { 
+                state = 203
+            }
+			 highlight_state_targets = { 
+                state = 197
+            }
+			 highlight_state_targets = { 
+                state = 193
+            }
+			 highlight_state_targets = { 
+                state = 225
+            }
+			 highlight_state_targets = { 
+                state = 259
+            }
+			 highlight_state_targets = { 
+                state = 221
+            }
+			 highlight_state_targets = { 
+                state = 226
+            }
+			 highlight_state_targets = { 
+                state = 200
+            }
+			 highlight_state_targets = { 
+                state = 196
+            }
+			 highlight_state_targets = { 
+                state = 227
+            }
+			 highlight_state_targets = { 
+                state = 228
+            }
+			 highlight_state_targets = { 
+                state = 80
+            }
+			 highlight_state_targets = { 
+                state = 73
+            }
+			 highlight_state_targets = { 
+                state = 89
+            }
+			 highlight_state_targets = { 
+                state = 91
+            }
+			 highlight_state_targets = { 
+                state = 93
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_ukroxa_tt
+			78 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 150
+				}
+			}
+			hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 150
+				}
+			}
+			news_event = { id = news_ost_west.10 hours = 200 }
+			set_country_flag = GER_ukroxa
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_ukroxa
+	    }
+	}
+	GER_belarus = { 
+
+        icon = GFX_decision_generic_operation
+
+        available = {
+			NOT = { has_idea = GER_barbarossa }
+		    has_war_with = SOV
+			#64 = { is_controlled_by =GER }
+        }
+
+
+        #cost = 100
+        days_remove = 150
+
+        fire_only_once = yes
+
+        visible = {
+			has_country_flag = VUP_Hist_version
+			has_war_with = SOV
+        }
+
+        highlight_states = {
+            highlight_state_targets = { 
+                state = 97
+            }
+            highlight_state_targets = { 
+                state = 94
+            }
+            highlight_state_targets = { 
+                state = 95
+            }
+            highlight_state_targets = { 
+                state = 784
+            }
+			 highlight_state_targets = { 
+                state = 96
+            }
+			 highlight_state_targets = { 
+                state = 207
+            }
+			 highlight_state_targets = { 
+                state = 206
+            }
+			 highlight_state_targets = { 
+                state = 204
+            }
+			 highlight_state_targets = { 
+                state = 194
+            }
+			 highlight_state_targets = { 
+                state = 241
+            }
+        }
+		complete_effect = {
+			custom_effect_tooltip = GER_belarus_tt
+			784 = {
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 130
+				}
+			}
+			hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = BLR
+				}
+				add_dynamic_modifier = {
+					modifier = nastup
+					scope = GER
+					days = 130
+				}
+			}
+			news_event = { id = news_ost_west.11 hours = 200 }
+			set_country_flag = GER_belarus
+			}
+        }
+
+
+        remove_effect  = {
+			clr_country_flag = GER_belarus
+	    }
+	}
+}

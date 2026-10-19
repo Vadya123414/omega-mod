@@ -33,14 +33,10 @@ country_event = {
 
 news_event = {
 	id = horsttool.1
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал [Root.cheat_selected] для [From.From.Owner.Getname]"
+	desc = horsttool.1.d
 	picture = GFX_news_event_001
-
-	trigger = {
-		Root={NOT={has_global_flag = enabled_event_translet_horst}}
-	}
 
 	trigger = {
 		Root={NOT={has_global_flag = enabled_event_translet_horst}}
@@ -51,9 +47,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
-		clear_variable=this.selected_cheat 
-		clear_variable=this.target_country
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -61,9 +55,9 @@ news_event = {
 	
 	news_event = {
 	id = horsttool.11
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдан один военный завод для [From.From.Owner.Getname]"
+	desc = horsttool.11.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -75,15 +69,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.18
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалено один военный завод для [From.From.Owner.Getname]"
+	desc = horsttool.18.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -95,15 +89,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.12
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
+	desc = horsttool.12.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -115,15 +109,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 			news_event = {
 	id = horsttool.17
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
+	desc = horsttool.17.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -135,16 +129,16 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 
    	news_event = {
 	id = horsttool.13
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдана одна верфь для [From.From.Owner.Getname]"
+	desc = horsttool.13.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -156,15 +150,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.16
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] удалена одна верфь для [From.From.Owner.Getname]"
+	desc = horsttool.16.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -176,16 +170,16 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 
 	news_event = {
 	id = horsttool.14
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал дебаф на танки для [From.From.Owner.Getname]"
+	desc = horsttool.14.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -197,15 +191,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 	}
 
 	news_event = {
 	id = horsttool.15
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
-	desc = " [From.Getname] выдал дебаф на авиацию для [From.From.Owner.Getname]"
+	desc = horsttool.15.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -217,13 +211,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.40
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.1"
 	picture = GFX_news_event_001
@@ -237,13 +231,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.41
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.2"
 	picture = GFX_news_event_001
@@ -257,13 +251,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.42
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.3" 
 	picture = GFX_news_event_001
@@ -277,13 +271,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.43
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.4"
 	picture = GFX_news_event_001
@@ -297,13 +291,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.44
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.5"
 	picture = GFX_news_event_001
@@ -317,13 +311,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.45
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.6"
 	picture = GFX_news_event_001
@@ -337,13 +331,13 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 	news_event = {
 	id = horsttool.46
-	title = "Хост в здании"
+	title = horsttool_news_title
 	
 	desc = "horsttool.a.7"
 	picture = GFX_news_event_001
@@ -357,7 +351,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -365,9 +359,9 @@ news_event = {
 	
 	news_event = {
 	id = horsttool.30
-	title = "How to use Horsttool"
+	title = horsttool.30.t
 	
-	desc = "Click MARK STATE to mark all the states you which to be targeted by a certain effect and then click on the effect you wish to apply. The effect will then apply to the markeeted states and remove all previously marked states."
+	desc = horsttool.30.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -379,15 +373,15 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
 		news_event = {
 	id = horsttool.31
-	title = "Изменён цвет страны"
+	title = horsttool.31.t
 	
-	desc = "[From.Getname] изменил цвет [From.From.Owner.Getname] на [FROM.color_selected]"
+	desc = horsttool.31.d
 	picture = GFX_news_event_001
 
 	trigger = {
@@ -399,7 +393,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Пох?"
+		name = horsttool_news_ok
 		 }
 		
 	}
@@ -414,13 +408,9 @@ news_event = {
 		Root={NOT={has_global_flag = enabled_event_translet_horst}}
 	}
 
-   	trigger = {
-		Root={NOT={has_global_flag = enabled_event_translet_horst}}
-	}
-
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       
           news_event = {		
@@ -435,7 +425,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
              news_event = {		
    id = news.4004
@@ -449,7 +439,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
                 news_event = {		
    id = news.4005
@@ -463,7 +453,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
                    news_event = {		
    id = news.4006
@@ -477,7 +467,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
      news_event = {		
    id = news.4007
@@ -491,7 +481,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {	
    id = news.4008
@@ -505,7 +495,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4113
@@ -519,7 +509,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -534,7 +524,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -549,7 +539,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -564,7 +554,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -579,7 +569,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -594,7 +584,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4119
@@ -608,7 +598,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4120
@@ -622,7 +612,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
     news_event = {		
@@ -637,7 +627,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4122
@@ -651,7 +641,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4123
@@ -665,7 +655,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
     news_event = {		
    id = news.4124
@@ -679,7 +669,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4125
@@ -693,7 +683,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4126
@@ -707,7 +697,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4127
@@ -721,7 +711,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       news_event = {		
    id = news.4128
@@ -735,7 +725,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
       news_event = {		
    id = news.4129
@@ -749,7 +739,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4130
@@ -763,7 +753,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 	news_event = {		
    id = news.4131
@@ -777,7 +767,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4132
@@ -791,7 +781,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
    news_event = {		
@@ -806,7 +796,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4201
@@ -820,7 +810,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4202
@@ -834,7 +824,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4203
@@ -848,7 +838,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4204
@@ -862,7 +852,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4205
@@ -876,7 +866,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4206
@@ -890,7 +880,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4207
@@ -904,7 +894,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4208
@@ -918,7 +908,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4209
@@ -932,7 +922,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4210
@@ -946,7 +936,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4211
@@ -960,7 +950,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4212
@@ -974,7 +964,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
    news_event = {		
    id = news.4213
@@ -988,7 +978,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
       news_event = {		
@@ -999,7 +989,7 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
 
       news_event = {		
@@ -1010,5 +1000,995 @@ news_event = {
 
 		major =  yes
 		is_triggered_only = yes
-      option = { name = "Пох?"  }
+      option = { name = horsttool_news_ok  }
    }
+<<<<<<< Updated upstream
+=======
+   news_event = {		
+   id = news.4302
+   title = news.4302.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4303
+   title = news.4303.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4304
+   title = news.4304.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4305
+   title = news.4305.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4306
+   title = news.4306.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4307
+   title = news.4307.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+
+   news_event = {		
+   id = news.4308
+   title = news.4308.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4309
+   title = news.4309.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+
+   news_event = {		
+   id = news.4310
+   title = news.4310.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4311
+   title = news.4311.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4312
+   title = news.4312.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4313
+   title = news.4313.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4314
+   title = news.4314.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4315
+   title = news.4315.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4316
+   title = news.4316.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4317
+   title = news.4317.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4318
+   title = news.4318.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4319
+   title = news.4319.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4320
+   title = news.4320.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4321
+   title = news.4321.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+
+ ############################################
+
+   news_event = {		
+   id = news.4322
+   title = news.4322.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4323
+   title = news.4323.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4324
+   title = news.4324.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4325
+   title = news.4325.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4326
+   title = news.4326.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4327
+   title = news.4327.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4328
+   title = news.4328.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4329
+   title = news.4329.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4330
+   title = news.4330.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4331
+   title = news.4331.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4332
+   title = news.4332.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+	news_event = {		
+   id = news.4333
+   title = news.4333.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+##########################################
+   news_event = {		
+   id = news.4400
+   title = news.4400.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4401
+   title = news.4401.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4402
+   title = news.4403.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4404
+   title = news.4404.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4405
+   title = news.4405.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4406
+   title = news.4406.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4407
+   title = news.4407.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4408
+   title = news.4408.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4409
+   title = news.4409.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4410
+   title = news.4410.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4411
+   title = news.4411.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4412
+   title = news.4412.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4413
+   title = news.4413.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4414
+   title = news.4414.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4415
+   title = news.4415.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4416
+   title = news.4416.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4417
+   title = news.4417.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4418
+   title = news.4418.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4419
+   title = news.4419.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4420
+   title = news.4420.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4421
+   title = news.4421.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4422
+   title = news.4422.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4423
+   title = news.4423.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4424
+   title = news.4424.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4425
+   title = news.4425.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4426
+   title = news.4426.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4427
+   title = news.4427.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4428
+   title = news.4428.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4429
+   title = news.4429.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4430
+   title = news.4430.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4431
+   title = news.4431.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4432
+   title = news.4432.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4433
+   title = news.4433.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4434
+   title = news.4434.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4435
+   title = news.4435.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4436
+   title = news.4436.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4437
+   title = news.4437.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4438
+   title = news.4438.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4439
+   title = news.4439.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+   news_event = {		
+   id = news.4440
+   title = news.4440.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+   trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+		major =  yes
+		is_triggered_only = yes
+      option = { name = horsttool_news_ok  }
+   }
+
+
+news_event = {
+	id = news.4009
+	title = news.4009.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
+
+news_event = {
+	id = news.4010
+	title = news.4010.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
+
+news_event = {
+	id = news.4403
+	title = news.4403.t
+	desc = ""
+	picture = GFX_news_event_italian_tank_desert
+	trigger = {
+		Root={NOT={has_global_flag = enabled_event_translet_horst}}
+	}
+	major = yes
+	is_triggered_only = yes
+	option = { name = horsttool_news_ok }
+}
+>>>>>>> Stashed changes

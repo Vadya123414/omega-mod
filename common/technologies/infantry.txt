@@ -847,7 +847,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.7
+			factor = 0
 
 		}
 	}
@@ -1570,10 +1570,6 @@ technologies = {
 
 	support_weapons2 = {
 
-		field_guns = {
-			defense = 0.1
-			soft_attack = 0.1
-		}
 		fire_support = {
 			defense = 0.15
 			breakthrough = 0.15
@@ -1664,11 +1660,6 @@ technologies = {
 
 	support_weapons3 = {
 
-		field_guns = {
-			defense = 0.1
-			soft_attack = 0.1
-		}
-
 		fire_support = {
 			defense = 0.15
 			breakthrough = 0.15
@@ -1745,10 +1736,6 @@ technologies = {
 
 	support_weapons4 = {
 
-		field_guns = {
-			defense = 0.1
-			soft_attack = 0.1
-		}
 
 		fire_support = {
 			defense = 0.15
@@ -1842,11 +1829,6 @@ technologies = {
 
 		path = {
 			leads_to_tech = motorised_infantry
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = armored_car1
 			research_cost_coeff = 1
 		}
 
@@ -2003,6 +1985,199 @@ technologies = {
 		special_project_specialization = { specialization_land }
 	}
 
+	armored_car1 = {
+
+		enable_subunits = {
+			armored_car
+		}
+
+		enable_equipments = {
+			gw_armored_car_equipment
+		}
+		allow_branch = { has_dlc = "La Resistance" }
+		path = {
+			leads_to_tech = armored_car2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1914
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1924 }
+		}
+
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1938.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			modifier = {
+				is_major = no
+				factor = 0.5
+			}
+		}
+	}
+
+	armored_car2 = {
+
+		enable_equipments = {
+			armored_car_equipment_1
+		}
+
+		path = {
+			leads_to_tech = armored_car3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1940 }
+		}
+
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1940.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1941.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1942.1.1"
+			}
+			modifier = {
+				is_major = no
+				factor = 0.5
+			}
+		}
+	}
+
+	armored_car3 = {
+
+		enable_equipments = {
+			armored_car_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1942 }
+		}
+
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+		special_project_specialization = { specialization_land }
+
+		sub_technologies = {
+			armored_car_at_upgrade
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1942.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1944.1.1"
+			}
+			modifier = {
+				is_major = no
+				factor = 0.5
+			}
+		}
+	}
+
+	armored_car_at_upgrade = {
+
+		enable_equipments = {
+			armored_car_at_equipment
+		}
+		special_project_specialization = { specialization_land }
+
+		research_cost = 1
+		start_year = 1942
+		sub_tech_index = 1
+
+		categories = {
+			motorized_equipment
+			armor
+			cat_armored_cars
+		}
+
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1942.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1943.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1944.1.1"
+			}
+			modifier = {
+				is_major = no
+				factor = 0.5
+			}
+		}
+	}
+
  	SWE_lynx_armored_car = {
  		allow = { always = no }
 		enable_equipments = {
@@ -2122,32 +2297,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 3
-				tag = USA
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1941.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1942.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1943.1.1
-			}
+			factor = 0
 		}
 	}
 
@@ -2194,11 +2344,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = USA
-				factor = 5
-			}
+			factor = 0
 		}
 	}
 
@@ -2226,7 +2372,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 2
+			factor = 0
 		}
 	}
 
@@ -2262,11 +2408,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				original_tag = GER				
-			}
+			factor = 0
 		}
 	}
 
@@ -2300,9 +2442,8 @@ technologies = {
 			cat_mechanized_equipment
 		}
 		special_project_specialization = { specialization_land }
-
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 

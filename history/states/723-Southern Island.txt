@@ -11,6 +11,9 @@ state = {
 
 
 	history = {
+		victory_points = {
+			2203 1
+		}
 
 		owner = NZL
 		add_core_of = NZL

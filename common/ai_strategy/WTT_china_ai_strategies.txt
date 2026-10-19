@@ -1,3 +1,22 @@
+WTT_dont_stay_behind = {
+		allowed = {
+		}
+		enable = {
+			is_in_faction_with = CHI
+			has_war = yes
+		}
+			abort = {
+						has_war = no
+			}
+			
+	ai_strategy = {
+		type = front_unit_request
+		id = "JAP"
+		value = 500
+	}
+}
+
+
 WTT_add_infiltration_save_equipment = {
 	allowed = {
 		NOT = { has_dlc = "No Compromise, No Surrender"}

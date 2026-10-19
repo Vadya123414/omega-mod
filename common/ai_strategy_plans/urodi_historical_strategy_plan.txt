@@ -1,0 +1,75 @@
+BLR_KAZ_UKR_historical_plan = {
+	name = "BLR KAZ UKR Historical Plan"
+	desc = ""
+
+	allowed = {
+        or = {
+            original_tag = BLR
+            original_tag = KAZ
+            original_tag = UKR
+        }
+		
+	}
+	enable = {
+		is_historical_focus_on = yes 
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+        EAEU_temporary_boost
+        EAEU_research_cooperation
+        EAEU_technological_exchange
+        EAEU_economic_union
+        EAEU_materiel_design
+        EAEU_construction_developments
+        EAEU_civilian_industry
+        EAEU_civilian_contributions
+        EAEU_military_industry
+        EAEU_standarized_parts
+        EAEU_ad_hoc_military_industry
+        EAEU_trade_agreement
+        EAEU_industrial_integration
+        EAEU_economic_stability
+        EAEU_unified_command
+        EAEU_joint_airforce
+        EAEU_air_exercises
+        EAEU_vozduh_arta
+        EAEU_joint_army
+        EAEU_joint_military_exercises
+        EAEU_unified_recruitment
+        EAEU_spez_voina
+        EAEU_bunker_vostok
+        EAEU_shared_intelligence
+        EAEU_first_joint_institution
+        EAEU_second_institution
+        EAEU_eurasian_federation
+        EAEU_fill_infrastructure_gaps
+        EAEU_develop_resources
+        EAEU_industrial_hub
+
+
+
+
+	}
+
+	focus_factors = {
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

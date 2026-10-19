@@ -1,4 +1,4 @@
-BEL_historical_plan = {
+BEL_historical_plan_3 = {
 	name = "Belgium Historical Plan"
 	desc = "Historical behavior for Belgium"
 
@@ -29,55 +29,79 @@ BEL_historical_plan = {
 
 	ai_national_focuses = {
 		#1936
+
+		BEL_the_king_surrenders
+		BEL_unfit_to_reign
+		BEL_government_in_exile
+		BEL_moi_dabord
+		BEL_v_for_victory
+		BEL_democratic_homecoming
+		BEL_secretaries_general
+		BEL_the_secret_army
+		BEL_the_belgian_legion
+		BEL_develop_home_support
+		BEL_military_service_for_all_in_exile
+		BEL_free_belgian_forces
+
+
+
 		BEL_government_resigns
-		BEL_monetary_reconstruction
-		BEL_rebuild_wallonian_industry
-		BEL_gold_reserves
+		BEL_investigate_bribery_charges
 		BEL_perpetual_neutrality
 		BEL_independent_neutral_and_loyal
-
-		#1937
-		BEL_investigate_bribery_charges
+		BEL_repudiate_treaty_with_france
+		BEL_royal_intervention
+		BEL_monetary_reconstruction
 		CONGO_congo_investments
 		CONGO_societe_generale_de_belgique
-		BEL_royal_intervention
-		BEL_defense_bill
-		BEL_social_partners
-		BEL_plan_de_man
-		
-		#1938
-		BEL_repudiate_treaty_with_france
-		BEL_revive_coal_mining
-		BEL_economic_recovery
-		BEL_cockerill
-		BEL_increased_length_of_service
-		BEL_fn_herstal
-		
-		#1939
-		BEL_dyle_plan
-		BEL_adriaan_martens_crisis
-		BEL_minerva_imperia
-		BEL_defensive_neutrality
-		BEL_national_redoubt_at_antwerp
-		BEL_fortify_liege
-		BEL_eben_emael_fortress
-		BEL_belgian_gates
-
-		#1940
-		BEL_iron_wall
-		BEL_koningshooikt_wavre_line
-		CONGO_force_publique
-
-		#If Capitulated
-		BEL_unfit_to_reign
-		BEL_secretaries_general
-		BEL_government_in_exile
+		CONGO_cheap_labor
 		CONGO_requisition_funds
+
+		BEL_defense_bill
+		BEL_increased_length_of_service
+		BEL_royal_military_academy
+		BEL_junior_officer_training
+		BEL_strategic_doctrine_development
+		BEL_multi_language_courses
+		BEL_resist_and_bite
+		BEL_belgian_special_forces
+
+		BEL_dyle_plan
+		BEL_plan_de_man
+		BEL_economic_recovery
+		BEL_adriaan_martens_crisis
+		BEL_interpreters
+
+		CONGO_ccci
+		CONGO_prince_leopold_mine
+		CONGO_regional_specialization
+		CONGO_ruanda_urundi
+		CONGO_expand_tungsten_mines
+		CONGO_forminiere
+		CONGO_bakwanga_mine
+		CONGO_societe_miniere_de_bakwanga
+		CONGO_antwerp_diamond_district
 		CONGO_gold_and_diamonds
-
-		#Also Important
-		BEL_legacy_of_the_great_war
-
+		CONGO_expand_metallurgical_industry
+		CONGO_copper_cartridges
+		CONGO_jungle_industry
+		CONGO_force_publique
+		CONGO_modernize_force_publique
+		CONGO_jungle_fighting
+		CONGO_congo_army
+		CONGO_expand_force_publique_recruitment
+		CONGO_belgian_devaluation
+		CONGO_interfaith_school_subsidies
+		CONGO_separate_corporations_from_politics
+		
+		CONGO_humanitarian_aid
+		CONGO_purchasing_commission
+		CONGO_chefs_coutumiers
+		CONGO_develop_infrastructure
+		CONGO_new_vegetable_produce_markets
+		CONGO_improved_employment_contracts
+		CONGO_congos_place_in_the_world
+		CONGO_overseas_department_of_belgium
 	}
 
 	#Focuses never to take
@@ -90,7 +114,30 @@ BEL_historical_plan = {
 	}
 
 	ideas = {
-
+		army_chief_offensive_3 = 100
+		army_chief_offensive_2 = 95
+		army_chief_offensive_1 = 90 
+		army_chief_reform_3 = 10
+		army_chief_reform_2 = 9
+		army_chief_reform_1 = 8
+		army_chief_planning_3 = 10
+		army_chief_planning_2 = 9
+		army_chief_planning_1 = 8
+		army_chief_defensive_3 = 85
+		army_chief_defensive_2 = 80
+		army_chief_defensive_1 = 75
+		army_chief_maneuver_3 = 10
+		army_chief_maneuver_2 = 9
+		army_chief_maneuver_1 = 8
+		army_chief_organizational_3 = 50
+		army_chief_organizational_2 = 45
+		army_chief_organizational_1 = 40
+		army_chief_morale_3 = 70
+		army_chief_morale_2 = 65
+		army_chief_morale_1 = 60
+		army_chief_drill_3 = 7
+		army_chief_drill_2 = 6
+		army_chief_drill_1 = 5 
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

@@ -1,0 +1,35 @@
+GER_operation = {
+
+	icon = military_operation
+
+	picture = generic_army_support
+
+	scripted_gui = GER_opmap_ui
+
+	allowed = {
+		original_tag = GER
+	}
+
+	# operations are started from the map (GER_opmap_ui), so the category is shown even without decisions
+	visible = {
+		OR = {
+			GER_opmap_any_visible = yes
+			GER_opmap_any_active = yes
+			AND = { # GER_case_anton
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = FRA
+					has_government = fascism
+					OR = {
+						is_subject_of = GER
+						has_focus_tree = vichy_french_focus
+					}
+					NOT = { has_war_with = GER }
+				}
+			}
+		}
+	}
+	visible_when_empty = yes
+
+	priority = 99
+}

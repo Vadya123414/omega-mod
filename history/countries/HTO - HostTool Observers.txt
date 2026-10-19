@@ -1,0 +1,15 @@
+# Service tag of HOST Tool. It owns no states and never exists:
+# observers and "ghost" players of multiplayer games are parked here with change_tag_from.
+capital = 64
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.5
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}

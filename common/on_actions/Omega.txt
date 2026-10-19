@@ -4,9 +4,94 @@ on_actions = {
 			every_country = {
 				limit = {
 					is_ai = no
+					NOT = {has_country_flag = VUP_Hist_version}
 				}
 				country_event = { id = obuchenie.1 }
 		    }
         }
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = GER
+						original_tag = ITA
+						original_tag = ENG
+						original_tag = SOV
+					}
+
+					FROM = {
+						tag = FRA
+					}
+
+					FRA = {
+						has_completed_focus = FRA_proclaim_the_third_empire
+						check_variable = { capacity_factor_arms > 0.2 }
+					}
+				}
+				FRA = {
+					country_event = { id = my_coalition.6 }
+				}
+			}
+		}
+	}
+	on_monthly_FRA = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					date > 1936.1.1
+					has_completed_focus = FRA_proclaim_the_third_empire
+        			check_variable = { capacity_factor_arms > 0.14 }
+					num_of_factories > 250
+					NOT = { has_country_flag = fra_refused_to_capitulate_punishment } 
+				}
+				country_event = { id = my_coalition.7 }
+			}
+		}
+	}
+	on_monthly_FRA = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					is_in_war = yes 
+					check_variable = { war_goal_time > 4 } 
+				}
+				set_variable = { war_goal_time = 0 }
+			}
+		}
+	}
+	on_daily_SOV = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+					SOV = {
+						OR = {
+							AND = {
+								NOT = { controls_state = 249 }
+								NOT = { controls_state = 400 }
+								NOT = { controls_state = 250 }
+								NOT = { controls_state = 219 }
+								NOT = { controls_state = 217 }
+							}
+							AND = {
+								NOT = { controls_state = 236 }
+								NOT = { controls_state = 217 }
+								NOT = { controls_state = 239 }
+								NOT = { controls_state = 250 }
+								NOT = { controls_state = 219 }
+								NOT = { controls_state = 217 }
+							} 
+						}		
+					}
+				}
+				GER = {
+					country_event = { id = capcap_ger_sov.a hours = 1 }
+				}
+			}
+		}
 	}
 }
