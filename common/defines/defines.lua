@@ -25,7 +25,7 @@ NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 20 -- По умолчанию
 
 --Армия
 --NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72;
---NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 30;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 1;
@@ -49,6 +49,7 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войск
+--NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
@@ -242,6 +243,8 @@ NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- Скорость минир
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- Минимальная скорость минирования
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1 -- Глобальная скорость самолётов
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Скорость развёртки самолётов
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.1  --урон по грузовикам (ванила 0,2)
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.2 -- урон по грузовикам (ванила 0,5)
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Количество политических очков (pp) для найма ученого в зависимости от доступных ученых
 		25,			-- Стоимость в pp, если нет доступных ученых

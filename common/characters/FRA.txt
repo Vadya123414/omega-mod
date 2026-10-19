@@ -1190,6 +1190,9 @@ characters={
 			}
 		}
 		advisor={
+			available = {
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 			slot = high_command
 			idea_token = alfred_heurtaux
 			ledger = air

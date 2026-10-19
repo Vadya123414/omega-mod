@@ -1,0 +1,16 @@
+style = {
+	name = SNG_SOV_style
+
+	unavailable = GFX_focus_unavailable_joint_SOV
+	completed = GFX_focus_completed_joint_SOV
+	available = GFX_focus_can_start_joint_SOV
+	current = GFX_focus_current_joint_SOV
+}
+style = {
+	name = SNG_style
+
+	unavailable = GFX_focus_unavailable_joint_SNG
+	completed = GFX_focus_completed_joint_SNG
+	available = GFX_focus_can_start_joint_SNG
+	current = GFX_focus_current_joint_SNG
+}

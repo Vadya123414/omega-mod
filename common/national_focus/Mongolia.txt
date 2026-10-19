@@ -550,7 +550,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -679,7 +679,7 @@ focus = {
 		    SIK = { has_government = communism}
 			SIK = { is_ai = yes }
 			SIK = { NOT = {has_war_with = RAJ }}
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 			
 		}
 
@@ -722,7 +722,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = MON_rise_politic

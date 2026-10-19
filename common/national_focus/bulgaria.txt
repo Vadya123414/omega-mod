@@ -837,7 +837,7 @@ focus_tree = {
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -2599,7 +2599,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_power_to_the_tsar }
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -3366,7 +3366,7 @@ focus_tree = {
 		relative_position_id = BUL_soviet_bulgarian_treaty_of_mutual_assistance
 		x = 0
 		y = 4
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_balkan_federation_of_socialist_republics }
 
 		bypass = {
@@ -4476,7 +4476,7 @@ focus_tree = {
 		relative_position_id = BUL_treaty_of_perpetual_friendship
 		x = 0
 		y = 4
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_follow_the_stalinist_doctrine }
 
 		available = {
@@ -5402,7 +5402,7 @@ focus_tree = {
 		relative_position_id = BUL_the_salonika_agreement
 		x = 0
 		y = 4
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_join_the_allies focus = BUL_the_fate_of_the_balkans }
 
 		available = {
@@ -5468,6 +5468,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			country_exists = ENG
 			NOT = { has_war_with = ENG }
 			ENG = { 
@@ -5587,7 +5588,7 @@ focus_tree = {
 		relative_position_id = BUL_approach_the_united_kingdom
 		x = 0
 		y = 4
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_a_balkan_confederation focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_tripartite_pact }
 
 		bypass = {
@@ -6430,7 +6431,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_condemn_macedonian_organizations }
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -6512,6 +6513,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_cooperate_with_the_zveno }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = {	has_country_flag = BUL_zveno_destroyed_flag } #Zveno is not destroyed
 			hidden_trigger = {
 				NOT = { has_country_flag = BUL_zveno_coup_flag } #Zveno CW has not started
@@ -6576,7 +6578,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_appoint_right_wing_ministers }
 
 		available = {
-
+			
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -7071,7 +7073,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -7353,7 +7355,7 @@ focus_tree = {
 		relative_position_id = BUL_form_a_regency_council
 		x = 0
 		y = 2
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_join_the_tripartite_pact focus = BUL_join_the_allies focus = BUL_a_balkan_confederation }
 
 		available = {
@@ -7796,7 +7798,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_the_tsars_regime }
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -8333,7 +8335,7 @@ focus_tree = {
 		relative_position_id = BUL_bulgarian_irredentism
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 
 		bypass = {
 			OR = {
@@ -8493,7 +8495,7 @@ focus_tree = {
 		relative_position_id = BUL_approach_germany
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		bypass = {
 			OR = {
@@ -8598,7 +8600,7 @@ focus_tree = {
 		relative_position_id = BUL_approach_germany
 		x = 0
 		y = 4
-		cost = 5
+		cost = 2
 		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
 
 		bypass = {
@@ -8921,6 +8923,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_peaceful_development }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_government = fascism
 		}
 		

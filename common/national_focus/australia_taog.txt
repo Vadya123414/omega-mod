@@ -3495,6 +3495,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		bypass = {
@@ -7040,6 +7041,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		bypass = {

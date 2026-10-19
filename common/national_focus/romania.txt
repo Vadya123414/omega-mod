@@ -229,6 +229,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = ROM_ready_to_war }
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_war_with = SOV }
 			OR = {
 				
@@ -261,6 +262,7 @@ focus_tree = {
 		prerequisite = { focus = ROM_ready_to_war }
 		mutually_exclusive = {focus = ROM_sup_GER focus = ROM_sup_SOV}
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_war_with = ENG }
 			OR = {
 				
@@ -773,7 +775,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -805,13 +807,14 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_in_faction = no
 			SOV = {
 				exists = yes
@@ -845,7 +848,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -877,7 +880,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -923,7 +926,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1046,7 +1049,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ROM_trade_treaty_with_germany
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1183,6 +1186,15 @@ focus_tree = {
 				target = SOV
 				generator = { 834 }
 			}
+			192 = {
+				add_core_of = ROM
+			}
+			834 = {
+				add_core_of = ROM
+			}
+			198 = {
+				add_core_of = ROM
+			}
 		}
 	}
 
@@ -1201,6 +1213,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			POL = { 
 				exists = yes 
 				is_puppet = no
@@ -1429,7 +1442,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ROM_renew_the_romanian_polish_alliance
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2149,7 +2162,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		bypass = {
@@ -2934,6 +2947,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			SOV = {
 				is_faction_leader = yes
@@ -3531,6 +3545,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			OR = {
 				has_war = yes
@@ -3622,6 +3637,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			ENG = {
 				is_faction_leader = yes

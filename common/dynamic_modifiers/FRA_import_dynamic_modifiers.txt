@@ -49,3 +49,54 @@ FRA_la_deluge_army = {
 	army_core_defence_factor = army_core_defence_modifaer
 	enemy_justify_war_goal_time = war_goal_time
 }
+
+#СНГ
+
+RUS_ECONOMI = {
+    icon = GFX_idea_leningrad_polytechnical_institute
+    enable = { always = yes }
+
+    conscription = ludi
+	conscription_factor = factor_lud
+    research_speed_factor = ddresearch_speed_factor_tt
+    training_time_army_factor = trenirivka
+    production_factory_start_efficiency_factor = ddproduction_factory_start_efficiency_factor_tt
+    navy_org_factor = ddnavy_org_factor
+    war_support_factor = ws_factor
+    naval_coordination = ddnaval_coordination
+	naval_morale_factor = ddnaval_morale_factor
+    repair_speed_factor = ddrepair_speed_factor_tt
+    production_factory_max_efficiency_factor = ddproduction_factory_max_efficiency_factor_tt
+    production_factory_efficiency_gain_factor = ddproduction_factory_efficiency_gain_factor_tt
+    equipment_conversion_speed = ddequipment_conversion_speed_tt
+    production_speed_arms_factory_factor = ddproduction_speed_arms_factory_factor_tt
+    air_cas_present_factor = ddair_cas_present_factor_tt
+    air_strategic_bomber_bombing_factor = ddair_strategic_bomber_bombing_factor_tt
+    air_intercept_efficiency =  ddair_intercept_efficiency_tt
+    air_superiority_efficiency = ddair_superiority_efficiency_tt
+    industrial_capacity_factory = capacity_factor_arms
+	industrial_capacity_dockyard = capacity_factor_dockyard
+    experience_gain_army_factor = experience_army
+    land_mastery_gain_factor = land_mastery_gain
+	war_stability_factor = war_stability
+    army_leader_start_level = army_leader_start_level_modifaer
+	military_leader_cost_factor = military_leader_cost_modifaer
+	mobilization_speed = mobilization_speed_modifaer
+    global_building_slots_factor = global_building_slots
+    consumer_goods_factor = consumer_goods
+    army_core_attack_factor = army_core_attack_factor
+    army_core_defence_factor = army_core_defence_modifaer
+    trade_opinion_factor = ddtrade_opinion_factor
+}
+
+nastup = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_tank
+	
+	army_defence_factor = 0.05
+	army_attack_factor = 0.05
+	supply_factor = 0.1
+	out_of_supply_factor = -0.1
+	supply_consumption_factor = -0.05
+}
