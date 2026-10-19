@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 	    fix_production_idea = { 
-			modifier = { 
+			modifier = {  
 				production_factory_start_efficiency_factor = 1.2 
 			}
 		}

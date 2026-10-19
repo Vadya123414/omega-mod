@@ -1423,8 +1423,8 @@ BUL_AUS_danubian_state = {
 }
 
 antilles = {
-	color = rgb { 140 65 166 }
-	color_ui = rgb { 140 65 166 }
+	color = rgb { 51 153 255 }
+	color_ui = rgb { 0 89 179 }
 }
 
 latin_africa = {
