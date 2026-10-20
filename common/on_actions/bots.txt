@@ -1,43 +1,74 @@
 on_actions = {
 
-	on_startup = {
-        		effect = {	
-			every_country = {
-				limit = {
-					not = {
-						has_government = democratic
-					}
-				}
-				set_occupation_law_where_available = foreign_civilian_oversight
-			}
-			every_country = {
-				limit = {
-					has_government = democratic
-				}
-				set_occupation_law_where_available = autonomous_occupation
-			}
-                }
+     on_startup = {
+        effect = {	
+                            every_country = {
+                                    limit = {
+                                        not = {
+                                            has_government = democratic
+                                        }
+                                    }
+                                    set_occupation_law_where_available = foreign_civilian_oversight
+                            }
+                        every_country = {
+                            limit = {
+                                has_government = democratic
+                            }
+                            set_occupation_law_where_available = autonomous_occupation
+                        }
+            }
                     effect = { 
                                 every_country = {
-                                                    limit = { is_ai = yes}
+                                                    limit = { 
+                                                            is_ai = yes
+                                                        }
                                                     add_ideas = smart_bots
+                                                    add_ideas = supply_bot_fix_not_in_war
+                                                }
                                 }
-
-                    }
+                        effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = INS
+                                                        }
+                                                    }
+                                                    add_ideas = ins_training_fix
+                                                }
+                                 }
     }
 on_monthly = {
-    effect = { 
+        effect = { 
                  every_country = {
-                                    limit = { is_ai = yes NOT = { has_idea = smart_bots}}
+                                    limit = { 
+                                            is_ai = yes 
+                                         NOT = { 
+                                                has_idea = smart_bots
+                                                        }
+                                                }
                                     add_ideas = smart_bots
                                 }
-                every_country = {
-                                 limit = { is_ai = no has_idea = smart_bots}
-                                 remove_ideas = smart_bots
-                    }
-            }
-            }
-
-
-
+                }
+             effect = { 
+                 every_country = {
+                                    limit = { 
+                                            is_ai = yes 
+                                         NOT = { 
+                                                has_idea = supply_bot_fix_not_in_war
+                                                        }
+                                                }
+                                    add_ideas = supply_bot_fix_not_in_war
+                                }
+                     }
+                        effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                            is_ai = yes
+                                                            original_tag = INS
+                                                        }
+                                                    add_ideas = ins_training_fix
+                                                }
+                                 }   
+             }
 }

@@ -11,6 +11,9 @@ state = {
 	}
 
 	history = {
+		victory_points = {
+			1613 1
+		}
 
 		owner = URG
 		add_core_of = URG

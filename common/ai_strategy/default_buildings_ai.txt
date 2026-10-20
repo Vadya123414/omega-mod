@@ -31,6 +31,8 @@ sov_strategy_arms_factory_building = {
 MINOR_strategy_industrial_complex_building = {
 		enable = {
 			AND = {
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
 					not = {original_tag = USA}
 					not = {original_tag = ITA}
 					not = {original_tag = GER}
@@ -52,6 +54,8 @@ MINOR_strategy_industrial_complex_building = {
 MINOR_strategy_arms_factory_building = {
 		enable = {
 				AND = {
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
 						not = {original_tag = USA}
 						not = {original_tag = ITA}
 						not = {original_tag = GER}
@@ -59,7 +63,7 @@ MINOR_strategy_arms_factory_building = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
-				date < 1936.10.1
+				date > 1936.10.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -88,7 +92,64 @@ MAJOR_strategy_industrial_complex_building = {
 		value = 400
 	}
 }
-
+GER_strategy_liquefaction_building_1 = {
+		enable = {
+			AND = {
+				original_tag = GER
+				date > 1938.10.1
+				rubber < 60
+				}
+			}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_strategy_liquefaction_building_2 = {
+		enable = {
+				original_tag = GER
+				FRA = {has_capitulated = yes}
+				rubber < 150
+				}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_autarky_building_1 = {
+		allowed = {
+		original_tag = GER
+		}
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 105
+	}
+}
+GER_autarky_building_2 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = industrial_infrastructure
+		value = 1000000
+		target = 105
+	}
+}	
 MAJOR_strategy_arms_factory_building = {
 		enable = {
 			AND = {
@@ -98,7 +159,7 @@ MAJOR_strategy_arms_factory_building = {
 					original_tag = ENG
 					original_tag = FRA
 				}
-				date < 1937.10.1
+				date > 1937.10.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -155,21 +216,21 @@ JAP_dockyard_building = {
 		enable = {
 			AND = {
 				original_tag = JAP
-				date > 1939.6.15
+				date > 1938.5.15 
 			}
 		}
 		abort_when_not_enabled = yes
 		ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 1000
+		value = 400
 	}
 }
 JAP_arms_factory = {
 		enable = {
 			AND = {
 				original_tag = JAP
-				date > 1938.5.15
+				date > 1939.6.15
 				}
 		}
 		abort_when_not_enabled = yes
@@ -191,5 +252,78 @@ JAP_industrial_complex_building = {
 		type = building_target
 		id = industrial_complex
 		value = 1000
+	}
+}
+AST_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+					original_tag = AST
+					date < 1937.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+AST_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					original_tag = AST
+					date > 1937.10.1
+					num_of_military_factories < 12
+				}
+		}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+AST_Dockyard_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					original_tag = AST
+					num_of_military_factories > 12
+				}
+		}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 900
+	}
+}
+PHI_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				not = {has_completed_focus = PHI_national_defense_act}
+				original_tag = PHI
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+PHI_strategy_arms_factory_building = {
+		enable = {
+				AND = {
+					has_completed_focus = PHI_national_defense_act
+					original_tag = PHI
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
 	}
 }

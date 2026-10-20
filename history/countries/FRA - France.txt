@@ -15,6 +15,83 @@ if = {
 	set_oob = "FRA_1936_nsb"
 }
 
+1936.1.1.13 = {
+	29 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	785 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	15 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	14 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	30 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	16 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	24 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	18 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	17 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	28 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	27 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	20 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	735 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	851 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	21 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	32 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	22 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	26 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	33 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	23 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	25 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	19 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	806 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	31 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+	1 = {
+		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
+	}
+}
 starting_train_buffer = 2
 
 if = {
@@ -436,7 +513,9 @@ add_ideas = {
 	FRA_inefficient_economy_2
 }
 
-
+recruit_character = FRA_henri_de_man
+recruit_character = FRA_vadik48
+recruit_character = FRA_prince_bernhard
 recruit_character = FRA_philippe_petain
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval

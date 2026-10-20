@@ -77,21 +77,29 @@ garrison_generic = {
 	role = garrison
 	
 	upgrade_prio = {
-		base = 0
+		base = 0.5
 	}
 
 	garrison_generic = {
-		reinforce_prio = 0
+		reinforce_prio = 1
 		custom_icon = 7
 	
 		upgrade_prio = {
-			base = 0
+			base = 0.5
 		}
 		
 		target_template = {
+			
+			support = {
+				artillery = 1
+			}
 
+			regimental_support = {
+				fire_support = 3
+			}
+			
 			regiments = {
-				cavalry = 1
+				infantry = 9
 			}
 		}
 	}
@@ -101,12 +109,12 @@ suppression_generic = {
 	
 	role = suppression
 	upgrade_prio = {
-		base = 0
+		base = 1
 	}
 
 	suppression_generic = {
 	
-		reinforce_prio = 0
+		reinforce_prio = 1
 		custom_icon = 13
 	
 		upgrade_prio = {
@@ -166,11 +174,11 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 			
 			regiments = {
-				infantry = 14
+				infantry = 12
 			}
 		}
 		replace_at_match = 0.6
@@ -189,16 +197,16 @@ infantry_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-				rangers_support = 1 
+
 				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 			
 			regiments = {
-				infantry = 20
+				infantry = 15
 			}
 
 		}
@@ -235,17 +243,17 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 3
+				fire_support = 3
 			}
 
 			regiments = {
-				mountaineers = 10
+				mountaineers = 15
 			}
 
 		}
-		replace_at_match = 0.5
+		replace_at_match = 0.6
 		replace_with = mountaineers_late
-		target_min_match = 0.5
+		target_min_match = 0.6
 	}
 
 	mountaineers_late = {
@@ -266,11 +274,11 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {
-				mountaineers = 20
+				mountaineers = 12
 			}
 
 			}
@@ -308,11 +316,11 @@ marines_generic = {
 			}
 			
 			regimental_support = {
-				field_guns = 5
+				fire_support = 5
 			}
 
 			regiments = {
-				marine = 20
+				marine = 15
 			}
 		}
 	}

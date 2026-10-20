@@ -512,11 +512,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = {  }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 2
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
 			legacy_id = 3
 		}
 	}
@@ -681,14 +681,17 @@ characters = {
 				small = GFX_portrait_GER_fedor_von_bock_small
 			}
 		}
-		corps_commander = {
-			traits = { cavalry_officer harsh_leader brilliant_strategist }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 4
+		field_marshal = {
+			skill = 5
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 5
 			logistics_skill = 3
 			legacy_id = 9
+			traits = { cavalry_leader panzer_leader trait_mountaineer hill_fighter organizer }
+			visible = {
+				has_country_flag = VUP_Hist_version
+			}
 		}
 	}
 
@@ -819,18 +822,15 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless armor_officer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 2
 			legacy_id = 18
+			traits = { cavalry_leader panzer_leader trait_mountaineer hill_fighter organizer }
 			visible = {
-				OR = {
-					has_global_flag = GER_civil_war_has_started
-					has_completed_focus = GER_bribe_senior_officers
-				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 	}

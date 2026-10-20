@@ -803,12 +803,21 @@ focus_tree = {
 		}
 		relative_position_id = HON_democratic_path
 		available = {
+			USA = {
+				has_government = democratic
+			}
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		available_if_capitulated = yes
-		
+		bypass = {
+    		USA = {
+       			NOT = {
+            		has_government = democratic
+        		}
+    		}
+		}
 		x = 0
 		y = 1
 		

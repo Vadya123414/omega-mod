@@ -1,7 +1,7 @@
 GER_annex = {
 		
 		
-		GER_stupid_AI = {
+	GER_stupid_AI = {
 
 		icon = GFX_decision_ger_mefo_bills
 

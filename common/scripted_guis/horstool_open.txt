@@ -1,6 +1,6 @@
 scripted_gui = {
-		
-	tool_open= { 
+
+	tool_open= {
 		context_type = player_context
 		window_name = "horsttool_open_container"
 		visible = {	has_country_flag = host	}
@@ -20,19 +20,18 @@ scripted_gui = {
 				always = yes
 			}
 		}
-	} 
-	
-	
-	st_country_powers = {	
-		context_type = selected_state_context	
-		window_name = "horsttool_container"	
+	}
+
+	st_country_powers = {
+		context_type = selected_state_context
+		window_name = "horsttool_container"
 		visible = {
 			ROOT = {
 				has_country_flag = host
 				has_global_flag = transfer_enabled
 			}
-		}	
-		effects = { 
+		}
+		effects = {
 
 			Debuffing_open_click = {
 				owner = {
@@ -40,24 +39,30 @@ scripted_gui = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
 						ROOT = { set_global_flag = enabled_debuffing }
 					}
-				} 
+<<<<<<< Updated upstream
+					else_if = {
+=======
+				}
 			}
 			Debuffing_close_click = {
 				owner = {
 					if = {
 						limit = { ROOT = { has_global_flag = enabled_debuffing  } }
+>>>>>>> Stashed changes
 						ROOT = { clr_global_flag = enabled_debuffing }
 					}
-				} 
+				}
 			}
 
+<<<<<<< Updated upstream
+=======
 			debuf_industrial_plus_click = {
 				owner = {
 					if = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_industrial } } }
 						ROOT = { set_global_flag = enabled_industrial }
 					}
-				} 
+				}
 			}
 			debuf_industrial_minys_click = {
 				owner = {
@@ -65,7 +70,7 @@ scripted_gui = {
 						limit = { ROOT = { has_global_flag = enabled_industrial  } }
 						ROOT = { clr_global_flag = enabled_industrial }
 					}
-				} 
+				}
 			}
 
 			debuf_politic_plus_click = {
@@ -74,7 +79,7 @@ scripted_gui = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_politic } } }
 						ROOT = { set_global_flag = enabled_politic }
 					}
-				} 
+				}
 			}
 			debuf_politic_minys_click = {
 				owner = {
@@ -82,7 +87,7 @@ scripted_gui = {
 						limit = { ROOT = { has_global_flag = enabled_politic  } }
 						ROOT = { clr_global_flag = enabled_politic }
 					}
-				} 
+				}
 			}
 
 			debuf_army_plus_click = {
@@ -91,7 +96,7 @@ scripted_gui = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_army } } }
 						ROOT = { set_global_flag = enabled_army }
 					}
-				} 
+				}
 			}
 			debuf_army_minys_click = {
 				owner = {
@@ -99,27 +104,27 @@ scripted_gui = {
 						limit = { ROOT = { has_global_flag = enabled_army  } }
 						ROOT = { clr_global_flag = enabled_army }
 					}
-				} 
+				}
 			}
 
-
+>>>>>>> Stashed changes
 			event_translet_horst_open_click = {
 				owner = {
 					if = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_event_translet_horst } } }
-						news_event = { id = news.4300 }
+						save_global_event_target_as = hosttool_target news_event = { id = news.4300 }
 						ROOT = { set_global_flag = enabled_event_translet_horst }
 					}
-					else_if = {
-						news_event = { id = news.4301 }
-						ROOT = { clr_global_flag = enabled_event_translet_horst } 
+					else = {
+						ROOT = { clr_global_flag = enabled_event_translet_horst }
+						save_global_event_target_as = hosttool_target news_event = { id = news.4301 }
 					}
-				} 
+				}
 			}
 
-			States_resursed_steel_click = { 
+			States_resursed_steel_click = {
 				owner={
-					news_event = { id = news.4200 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4200 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -140,6 +145,8 @@ scripted_gui = {
 					}
 				}
 			}
+<<<<<<< Updated upstream
+=======
 		#################################################################### Доктрины армия
 			hosttool_add_lan_doctrin_infantry_click = {
 				owner={
@@ -147,7 +154,7 @@ scripted_gui = {
 						amount = 100
 						track = infantry
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_lan_doctrin_infantry_click = {
@@ -156,7 +163,7 @@ scripted_gui = {
 						amount = -100
 						track = infantry
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 
@@ -166,7 +173,7 @@ scripted_gui = {
 						amount = 100
 						track = combat_support
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_lan_doctrin_artirellia_click = {
@@ -175,7 +182,7 @@ scripted_gui = {
 						amount = -100
 						track = combat_support
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 
@@ -185,7 +192,7 @@ scripted_gui = {
 						amount = 100
 						track = armor
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_lan_doctrin_armor_click = {
@@ -194,7 +201,7 @@ scripted_gui = {
 						amount = -100
 						track = armor
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 
@@ -204,7 +211,7 @@ scripted_gui = {
 						amount = 100
 						track = operations
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_lan_doctrin_operations_click = {
@@ -213,7 +220,7 @@ scripted_gui = {
 						amount = -100
 						track = operations
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 		#################################################################### Доктрины флот
@@ -223,7 +230,7 @@ scripted_gui = {
 						amount = 100
 						track = submarines
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_naval_doctrin_infantry_click = {
@@ -232,7 +239,7 @@ scripted_gui = {
 						amount = -100
 						track = submarines
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_naval_doctrin_artirellia_click = {
@@ -241,7 +248,7 @@ scripted_gui = {
 						amount = 100
 						track = screens
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_naval_doctrin_artirellia_click = {
@@ -250,7 +257,7 @@ scripted_gui = {
 						amount = -100
 						track = screens
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_naval_doctrin_armor_click = {
@@ -259,7 +266,7 @@ scripted_gui = {
 						amount = 100
 						track = carriers
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_naval_doctrin_armor_click = {
@@ -268,7 +275,7 @@ scripted_gui = {
 						amount = -100
 						track = carriers
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_naval_doctrin_operations_click = {
@@ -277,7 +284,7 @@ scripted_gui = {
 						amount = 100
 						track = capital_ships
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_naval_doctrin_operations_click = {
@@ -286,7 +293,7 @@ scripted_gui = {
 						amount = -100
 						track = capital_ships
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 		#################################################################### Доктрины авиация
@@ -296,7 +303,7 @@ scripted_gui = {
 						amount = 100
 						track = fighter_aircraft
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_air_doctrin_infantry_click = {
@@ -305,7 +312,7 @@ scripted_gui = {
 						amount = -100
 						track = fighter_aircraft
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_air_doctrin_artirellia_click = {
@@ -314,7 +321,7 @@ scripted_gui = {
 						amount = 100
 						track = strike_aircraft
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_air_doctrin_artirellia_click = {
@@ -323,7 +330,7 @@ scripted_gui = {
 						amount = -100
 						track = strike_aircraft
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_air_doctrin_armor_click = {
@@ -332,7 +339,7 @@ scripted_gui = {
 						amount = 100
 						track = medium_aircraft
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_air_doctrin_armor_click = {
@@ -341,7 +348,7 @@ scripted_gui = {
 						amount = -100
 						track = medium_aircraft
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 			hosttool_add_air_doctrin_operations_click = {
@@ -350,7 +357,7 @@ scripted_gui = {
 						amount = 100
 						track = heavy_aircraft
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_air_doctrin_operations_click = {
@@ -359,7 +366,7 @@ scripted_gui = {
 						amount = -100
 						track = heavy_aircraft
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
 		#################################################################### Доктрины Спец
@@ -373,7 +380,7 @@ scripted_gui = {
 						amount = 60
 						track = special_forces_second
 					}
-					news_event = { id = news.4439 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4439 }
 				}
 			}
 			hosttool_sub_spec_click = {
@@ -386,13 +393,14 @@ scripted_gui = {
 						amount = -60
 						track = special_forces_second
 					}
-					news_event = { id = news.4440 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4440 }
 				}
 			}
-		############################################################## Ресурсы		
+		############################################################## Ресурсы
+>>>>>>> Stashed changes
 			States_resursed_rubber_click = {
 				owner={
-					news_event = { id = news.4201 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4201 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -415,7 +423,7 @@ scripted_gui = {
 			}
 			States_resursed_oil_click = {
 				owner={
-					news_event = { id = news.4202 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4202 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -438,7 +446,7 @@ scripted_gui = {
 			}
 			States_resursed_alu_click = {
 				owner={
-					news_event = { id = news.4203 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4203 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -461,7 +469,7 @@ scripted_gui = {
 			}
 			States_resursed_tungsten_click = {
 				owner={
-					news_event = { id = news.4204 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4204 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -484,7 +492,7 @@ scripted_gui = {
 			}
 			States_resursed_chromium_click = {
 				owner={
-					news_event = { id = news.4205 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4205 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -507,7 +515,7 @@ scripted_gui = {
 			}
 			States_resursed_coal_click = {
 				owner={
-					news_event = { id = news.4206 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4206 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -530,7 +538,7 @@ scripted_gui = {
 			}
 			States_resursed_steel1_click = {
 				owner={
-					news_event = { id = news.4207 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4207 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -553,7 +561,7 @@ scripted_gui = {
 			}
 			States_resursed_rubber1_click = {
 				owner={
-					news_event = { id = news.4208 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4208 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -576,7 +584,7 @@ scripted_gui = {
 			}
 			States_resursed_oil1_click = {
 				owner={
-					news_event = { id = news.4209 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4209 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -599,7 +607,7 @@ scripted_gui = {
 			}
 			States_resursed_alu1_click = {
 				owner={
-					news_event = { id = news.4210 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4210 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -622,7 +630,7 @@ scripted_gui = {
 			}
 			States_resursed_tungsten1_click = {
 				owner={
-					news_event = { id = news.4211 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4211 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -645,7 +653,7 @@ scripted_gui = {
 			}
 			States_resursed_chromium1_click = {
 				owner={
-					news_event = { id = news.4212 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4212 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -668,14 +676,14 @@ scripted_gui = {
 			}
 			States_resursed_coal1_click = {
 				owner={
-					news_event = { id = news.4213 }
-					set_temp_variable = { ROOT.taker = this}
-					for_each_loop={
-						array=ROOT.marked_states
-						value=state
-						var:state={ add_resource = {
-							type = coal
-							amount = 5
+					save_global_event_target_as = hosttool_target news_event = { id = news.4213 }
+						set_temp_variable = { ROOT.taker = this}
+						for_each_loop={
+							array=ROOT.marked_states
+							value=state
+							var:state={ add_resource = {
+								type = coal
+								amount = -5
 						}
 					}
 					}
@@ -689,158 +697,182 @@ scripted_gui = {
 					}
 				}
 			}
+<<<<<<< Updated upstream
+
+=======
 		#########################################################################
 			faction_initiativ_add_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_faction_initiative = 1 news_event = { id = news.4308 } }
+					var:marks = { add_faction_initiative = 1 save_global_event_target_as = hosttool_target news_event = { id = news.4308 } }
 				}
 			}
 			faction_initiative_remove_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_faction_initiative = -1 news_event = { id = news.4309 } }
+					var:marks = { add_faction_initiative = -1 save_global_event_target_as = hosttool_target news_event = { id = news.4309 } }
 				}
 			}
 			war_support_add_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_war_support = 0.01 news_event = { id = news.4302 } }
+					var:marks = { add_war_support = 0.01 save_global_event_target_as = hosttool_target news_event = { id = news.4302 } }
 				}
 			}
 			war_support_remove_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_war_support = -0.01 news_event = { id = news.4306 } }
+					var:marks = { add_war_support = -0.01 save_global_event_target_as = hosttool_target news_event = { id = news.4306 } }
 				}
 			}
 			stability_add_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_stability  = 0.01 news_event = { id = news.4303 } }
+					var:marks = { add_stability  = 0.01 save_global_event_target_as = hosttool_target news_event = { id = news.4303 } }
 				}
 			}
 			stability_remove_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_stability  = -0.01 news_event = { id = news.4307 } }
+					var:marks = { add_stability  = -0.01 save_global_event_target_as = hosttool_target news_event = { id = news.4307 } }
 				}
 			}
 			research_add_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_research_slot = 1 news_event = { id = news.4304 } }
+					var:marks = { add_research_slot = 1 save_global_event_target_as = hosttool_target news_event = { id = news.4304 } }
 				}
 			}
 			research_remove_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_research_slot = -1 news_event = { id = news.4305 } }
+					var:marks = { add_research_slot = -1 save_global_event_target_as = hosttool_target news_event = { id = news.4305 } }
 				}
 			}
+>>>>>>> Stashed changes
 			observer_click = {
-				owner = { 				
-				set_temp_variable = { ROOT.marks = this}	var:marks = { news_event = { id = news.4004 } }	DDR = {change_tag_from =var:marks}
-				}			
+				owner = {
+					save_global_event_target_as = hosttool_target news_event = { id = news.4004 }
+					HTO = { change_tag_from = PREV }	# HTO never exists, so the player becomes an observer
+				}
+			}
+			# MP fix: a player who left can stay "attached" to his country, so the AI never takes over.
+			# Moving that (ghost) player to the never-existing HTO tag frees the country for the AI and for hotjoin.
+			ai_fix_click = {
+				owner = {
+					HTO = { change_tag_from = PREV }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4010 }
+				}
+			}
+			close_tool_click = {
+				ROOT = { clr_global_flag = transfer_enabled clr_global_flag = hosttool_color_open }
 			}
 			change_host_nation_click = {
-				ROOT = { clr_country_flag = host		}
-				owner = { set_country_flag = host	news_event = { id = news.4005 }	  }
+				ROOT = { clr_country_flag = host }
+				owner = {
+					set_country_flag = host
+					set_variable = { global.host = THIS }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4005 }
+				}
 			}
+<<<<<<< Updated upstream
+			
+=======
 		################################################# Идеалогия
 			communism_group_bg_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { set_politics = { ruling_party = communism } news_event = { id = news.4322 } }
+					var:marks = { set_politics = { ruling_party = communism } save_global_event_target_as = hosttool_target news_event = { id = news.4322 } }
 				}
 			}
 			democratic_group_bg_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { set_politics = { ruling_party = democratic } news_event = { id = news.4323 } }
+					var:marks = { set_politics = { ruling_party = democratic } save_global_event_target_as = hosttool_target news_event = { id = news.4323 } }
 				}
 			}
 			fascism_group_bg_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { set_politics = { ruling_party = fascism } news_event = { id = news.4324 } }
+					var:marks = { set_politics = { ruling_party = fascism } save_global_event_target_as = hosttool_target news_event = { id = news.4324 } }
 				}
 			}
 			neutrality_group_bg_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { set_politics = { ruling_party = neutrality } news_event = { id = news.4325 } }
+					var:marks = { set_politics = { ruling_party = neutrality } save_global_event_target_as = hosttool_target news_event = { id = news.4325 } }
 				}
 			}
 			hosttool_add_5_party_communism_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = communism popularity = 0.05 } news_event = { id = news.4326 } }
+					var:marks = { add_popularity = { ideology = communism popularity = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4326 } }
 				}
 			}
 			hosttool_sub_5_party_communism_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = communism popularity = -0.05 } news_event = { id = news.4327 } }
+					var:marks = { add_popularity = { ideology = communism popularity = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4327 } }
 				}
 			}
 			hosttool_add_5_party_democratic_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = democratic popularity = 0.05 } news_event = { id = news.4328 } }
+					var:marks = { add_popularity = { ideology = democratic popularity = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4328 } }
 				}
 			}
 			hosttool_sub_5_party_democratic_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = democratic popularity = -0.05 } news_event = { id = news.4329 } }
+					var:marks = { add_popularity = { ideology = democratic popularity = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4329 } }
 				}
 			}
 			hosttool_add_5_party_fascism_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = fascism popularity = 0.05 } news_event = { id = news.4330 } }
+					var:marks = { add_popularity = { ideology = fascism popularity = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4330 } }
 				}
 			}
 			hosttool_sub_5_party_fascism_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = fascism popularity = -0.05 } news_event = { id = news.4331 } }
+					var:marks = { add_popularity = { ideology = fascism popularity = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4331 } }
 				}
 			}
 			hosttool_add_5_party_neutrality_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = neutrality popularity = 0.05 } news_event = { id = news.4332 } }
+					var:marks = { add_popularity = { ideology = neutrality popularity = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4332 } }
 				}
 			}
 			hosttool_sub_5_party_neutrality_group_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_popularity = { ideology = neutrality popularity = 0.05 } news_event = { id = news.4333 } }
+					var:marks = { add_popularity = { ideology = neutrality popularity = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4333 } }
 				}
 			}
 		#################################################
+>>>>>>> Stashed changes
 			addpp_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_political_power = 50 news_event = { id = news.4002 } }
+					var:marks = { add_political_power = 50 save_global_event_target_as = hosttool_target news_event = { id = news.4002 } }
 				}
 			}
 			remove_addpp_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
-					var:marks = { add_political_power = -50 news_event = { id = news.4008 } }
+					var:marks = { add_political_power = -50 save_global_event_target_as = hosttool_target news_event = { id = news.4008 } }
 				}
 			}
-			
+
 			whitepeace_click  = {
 
 				owner={
 					set_temp_variable = { ROOT.marks = this}
 					var:marks = {
-						declare_war_on = { target = COL type = annex_everything }
-						every_enemy_country = { white_peace = FROM }
+						every_enemy_country = { white_peace = PREV }
+						save_global_event_target_as = hosttool_target news_event = { id = news.4009 }
 					}
 				}
 			}
@@ -848,17 +880,18 @@ scripted_gui = {
 
 				owner={ set_variable = { ROOT.taker = this}}
 				var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this   } }}
-				if={	limit={check_variable={ROOT.target=ROOT.taker}}	}
-				else={
-					var:ROOT.target={
-							    declare_war_on = {
-						            target = FROM
-						            type = annex_everything
-					            }
+				if = {
+					limit = { NOT = { check_variable = { ROOT.target = ROOT.taker } } }
+					var:ROOT.taker = {
+						var:ROOT.target = {
+							declare_war_on = {
+								target = PREV
+								type = annex_everything
 							}
-						
+						}
+					}
 				}
-					
+
 				ROOT = {
 					for_each_scope_loop={
 						array=marked_states
@@ -869,9 +902,9 @@ scripted_gui = {
 					clear_variable=taker
 					clear_variable=first_marked_state
 				}
-				
+
 			}
-		
+
 			clear_all_markings_click = {
 				ROOT = {
 					for_each_scope_loop={
@@ -879,17 +912,18 @@ scripted_gui = {
 						clear_variable=mark_status
 					}
 					clear_array=marked_states
+					clear_variable=first_marked_state
 				}
 			}
-			
+
 			add_cores_click = {
 				owner={
-					news_event = { id = news.4131 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4131 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state={add_core_of=var:taker}
+						var:state={ add_core_of = PREV }
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -901,17 +935,20 @@ scripted_gui = {
 					}
 				}
 			}
+<<<<<<< Updated upstream
+			add_compliance_click = { 
+=======
 		############################################ шртрафы бафы Промышленность
 			debuf_industrial_1_click = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = 0.10 } news_event = { id = news.4400 }
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = 0.10 } save_global_event_target_as = hosttool_target news_event = { id = news.4400 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = -0.10 } news_event = { id = news.4400 }
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR = -0.10 } save_global_event_target_as = hosttool_target news_event = { id = news.4400 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -920,12 +957,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = 0.01 } news_event = { id = news.4401 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = 0.01 } save_global_event_target_as = hosttool_target news_event = { id = news.4401 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = -0.01 } news_event = { id = news.4401 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE = -0.01 } save_global_event_target_as = hosttool_target news_event = { id = news.4401 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -934,12 +971,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = 0.05 } news_event = { id = news.4402 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4402 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.05 } news_event = { id = news.4402 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4402 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -948,12 +985,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = 0.05 } news_event = { id = news.4403 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4403 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = -0.05 } news_event = { id = news.4403 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_SPEED_BUILDINGS_POWERED_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4403 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -962,12 +999,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = 0.05 } news_event = { id = news.4404 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4404 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = -0.05 } news_event = { id = news.4404 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSUMER_GOODS_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4404 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -976,12 +1013,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = 0.1 } news_event = { id = news.4405 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4405 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = -0.1 } news_event = { id = news.4405 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4405 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -990,12 +1027,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = 0.1 } news_event = { id = news.4406 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4406 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = -0.1 } news_event = { id = news.4406 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4406 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1004,12 +1041,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05 } news_event = { id = news.4407 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4407 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = -0.05 } news_event = { id = news.4407 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4407 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1018,12 +1055,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = 0.05 } news_event = { id = news.4408 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4408 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = -0.05 } news_event = { id = news.4408 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4408 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1032,12 +1069,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.1 } news_event = { id = news.4409 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4409 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = -0.1 } news_event = { id = news.4409 }
+						add_to_variable = { Horst_tool_MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4409 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1046,12 +1083,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = 0.1 } news_event = { id = news.4410 }
+						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4410 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = -0.1 } news_event = { id = news.4410 }
+						add_to_variable = { Horst_tool_MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4410 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1060,12 +1097,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = 0.05 } news_event = { id = news.4411 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4411 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = -0.05 } news_event = { id = news.4411 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4411 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1074,12 +1111,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = 0.05 } news_event = { id = news.4412 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4412 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = -0.05 } news_event = { id = news.4412 }
+						add_to_variable = { Horst_tool_MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4412 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1088,12 +1125,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = 0.1 } news_event = { id = news.4413 }
+						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4413 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = -0.1 } news_event = { id = news.4413 }
+						add_to_variable = { Horst_tool_MODIFIER_production_lack_of_resource_penalty_factor = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4413 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1102,12 +1139,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_industrial}}
-						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = 0.1 } news_event = { id = news.4414 }
+						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4414 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_industrial}
-						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = -0.1 } news_event = { id = news.4414 }
+						add_to_variable = { Horst_tool_MODIFIER_OUT_OF_POWER_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4414 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1117,12 +1154,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = 0.1 } news_event = { id = news.4415 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4415 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = -0.1 } news_event = { id = news.4415 }
+						add_to_variable = { Horst_tool_MODIFIER_CONSCRIPTION_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4415 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1131,12 +1168,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = 0.05 } news_event = { id = news.4416 }
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4416 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = -0.05 } news_event = { id = news.4416 }
+						add_to_variable = { Horst_tool_MODIFIER_GLOBAL_NON_CORE_MANPOWER = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4416 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1145,12 +1182,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = -0.2 } news_event = { id = news.4417 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = -0.2 } save_global_event_target_as = hosttool_target news_event = { id = news.4417 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = 0.2 } news_event = { id = news.4417 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_COST = 0.2 } save_global_event_target_as = hosttool_target news_event = { id = news.4417 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1159,12 +1196,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = 0.2 } news_event = { id = news.4418 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = 0.2 } save_global_event_target_as = hosttool_target news_event = { id = news.4418 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = -0.2 } news_event = { id = news.4418 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_GAIN = -0.2 } save_global_event_target_as = hosttool_target news_event = { id = news.4418 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1173,12 +1210,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = 0.005 } news_event = { id = news.4419 }
+						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = 0.005 } save_global_event_target_as = hosttool_target news_event = { id = news.4419 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = -0.005 } news_event = { id = news.4419 }
+						add_to_variable = { Horst_tool_MODIFIER_WAR_SUPPORT_WEEKLY_FACTOR = -0.005 } save_global_event_target_as = hosttool_target news_event = { id = news.4419 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1187,12 +1224,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = 0.005 } news_event = { id = news.4420 }
+						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = 0.005 } save_global_event_target_as = hosttool_target news_event = { id = news.4420 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = -0.005 } news_event = { id = news.4420 }
+						add_to_variable = { Horst_tool_MODIFIER_STABILITY_WEEKLY_FACTOR = -0.005 } save_global_event_target_as = hosttool_target news_event = { id = news.4420 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1201,12 +1238,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = 0.1 } news_event = { id = news.4421 }
+						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4421 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = -0.1 } news_event = { id = news.4421 }
+						add_to_variable = { Horst_tool_MODIFIER_FORCED_SURRENDER_LIMIT = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4421 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1215,12 +1252,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = 1 } news_event = { id = news.4422 }
+						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = 1 } save_global_event_target_as = hosttool_target news_event = { id = news.4422 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = -1 } news_event = { id = news.4422 }
+						add_to_variable = { Horst_tool_MODIFIER_RESOURCE_TRADE_COST_BONUS_PER_FACTORY = -1 } save_global_event_target_as = hosttool_target news_event = { id = news.4422 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1229,12 +1266,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = 0.1 } news_event = { id = news.4423 }
+						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4423 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = -0.1 } news_event = { id = news.4423 }
+						add_to_variable = { Horst_tool_MODIFIER_MIN_EXPORT_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4423 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1243,12 +1280,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_conscription = 0.01 } news_event = { id = news.4424 }
+						add_to_variable = { Horst_tool_MODIFIER_conscription = 0.01 } save_global_event_target_as = hosttool_target news_event = { id = news.4424 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_conscription = -0.01 } news_event = { id = news.4424 }
+						add_to_variable = { Horst_tool_MODIFIER_conscription = -0.01 } save_global_event_target_as = hosttool_target news_event = { id = news.4424 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1257,27 +1294,27 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_politic}}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = 0.1 } news_event = { id = news.4425 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4425 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_politic}
-						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = -0.1 } news_event = { id = news.4425 }
+						add_to_variable = { Horst_tool_MODIFIER_POLITICAL_POWER_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4425 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
 			}
-		##################################################шртрафы бафы армия 
+		##################################################шртрафы бафы армия
 			debuf_army_1_click = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = 0.15 } news_event = { id = news.4426 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = 0.15 } save_global_event_target_as = hosttool_target news_event = { id = news.4426 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = -0.15 } news_event = { id = news.4426 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_MORALE_FACTOR = -0.15 } save_global_event_target_as = hosttool_target news_event = { id = news.4426 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1286,12 +1323,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = 0.05 } news_event = { id = news.4427 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4427 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = -0.05 } news_event = { id = news.4427 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_ATTACK_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4427 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1300,12 +1337,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4428 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4428 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4428 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CORE_DEFENCE_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4428 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1314,12 +1351,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = 0.05 } news_event = { id = news.4429 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4429 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = -0.05 } news_event = { id = news.4429 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4429 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1328,12 +1365,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4430 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4430 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4430 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4430 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1342,12 +1379,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = 0.05 } news_event = { id = news.4431 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4431 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = -0.05 } news_event = { id = news.4431 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4431 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1356,12 +1393,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4432 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4432 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4432 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4432 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1370,12 +1407,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = 0.05 } news_event = { id = news.4433 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4433 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = -0.05 } news_event = { id = news.4433 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_ATTACK_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4433 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1384,12 +1421,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = 0.05 } news_event = { id = news.4434 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4434 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = -0.05 } news_event = { id = news.4434 }
+						add_to_variable = { Horst_tool_MODIFIERS_ARMY_DEFENCE_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4434 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1398,12 +1435,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = 0.05 } news_event = { id = news.4435 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4435 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = -0.05 } news_event = { id = news.4435 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_SPEED_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4435 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1412,12 +1449,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = 0.05 } news_event = { id = news.4436 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = 0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4436 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = -0.05 } news_event = { id = news.4436 }
+						add_to_variable = { Horst_tool_MODIFIER_ARMY_ORG_FACTOR = -0.05 } save_global_event_target_as = hosttool_target news_event = { id = news.4436 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1426,12 +1463,12 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = 0.1 } news_event = { id = news.4437 }
+						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4437 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = -0.1 } news_event = { id = news.4437 }
+						add_to_variable = { Horst_tool_MODIFIER_MAX_PLANNING_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4437 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
@@ -1440,25 +1477,26 @@ scripted_gui = {
 				owner={
 					if = {
 						limit = { NOT = { has_global_flag = enabled_army}}
-						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = 0.1 } news_event = { id = news.4438 }
+						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = 0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4438 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 					else_if = {
 						limit = { has_global_flag = enabled_army}
-						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = -0.1 } news_event = { id = news.4438 }
+						add_to_variable = { Horst_tool_MODIFIER_MAX_DIG_IN_FACTOR = -0.1 } save_global_event_target_as = hosttool_target news_event = { id = news.4438 }
 						add_dynamic_modifier = { modifier = Horst_tool_modifiers }
 					}
 				}
 			}
 		#################################################### Подчинение
-			hosttool_add_100_compliance_click = { 
+			hosttool_add_100_compliance_click = {
+>>>>>>> Stashed changes
 				owner={
-					news_event = { id = news.4130 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4130 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = 100 }
+						var:state = { add_compliance = 100}
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -1470,9 +1508,12 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_75_compliance_click = { 
+<<<<<<< Updated upstream
+			add_compliance1_click = { 
+=======
+			hosttool_add_75_compliance_click = {
 				owner={
-					news_event = { id = news.4316 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4316 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1489,9 +1530,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_50_compliance_click = { 
+			hosttool_add_50_compliance_click = {
 				owner={
-					news_event = { id = news.4318 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4318 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1508,9 +1549,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_25_compliance_click = { 
+			hosttool_add_25_compliance_click = {
 				owner={
-					news_event = { id = news.4320 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4320 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1527,14 +1568,15 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_100_compliance_click = { 
+			hosttool_sub_100_compliance_click = {
+>>>>>>> Stashed changes
 				owner={
-					news_event = { id = news.4129 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4129 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = -100 }
+						var:state = { add_compliance = -100}
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -1546,9 +1588,12 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_75_compliance_click = { 
+<<<<<<< Updated upstream
+			add_cover_click = { 
+=======
+			hosttool_sub_75_compliance_click = {
 				owner={
-					news_event = { id = news.4317 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4317 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1565,9 +1610,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_50_compliance_click = { 
+			hosttool_sub_50_compliance_click = {
 				owner={
-					news_event = { id = news.4319 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4319 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1584,9 +1629,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_25_compliance_click = { 
+			hosttool_sub_25_compliance_click = {
 				owner={
-					news_event = { id = news.4321 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4321 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1604,9 +1649,9 @@ scripted_gui = {
 				}
 			}
 		####################################################### сопротивление
-			hosttool_add_100_compliance1_click = { 
+			hosttool_add_100_compliance1_click = {
 				owner={
-					news_event = { id = news.4310 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4310 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1623,9 +1668,10 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_75_compliance1_click = { 
+			hosttool_add_75_compliance1_click = {
+>>>>>>> Stashed changes
 				owner={
-					news_event = { id = news.4132 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4132 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1642,9 +1688,12 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_50_compliance1_click = { 
+<<<<<<< Updated upstream
+			add_cover1_click = { 
+=======
+			hosttool_add_50_compliance1_click = {
 				owner={
-					news_event = { id = news.4312 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4312 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1661,9 +1710,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_add_25_compliance1_click = { 
+			hosttool_add_25_compliance1_click = {
 				owner={
-					news_event = { id = news.4314 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4314 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1680,9 +1729,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_100_compliance1_click = { 
+			hosttool_sub_100_compliance1_click = {
 				owner={
-					news_event = { id = news.4311 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4311 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1699,9 +1748,10 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_75_compliance1_click = { 
+			hosttool_sub_75_compliance1_click = {
+>>>>>>> Stashed changes
 				owner={
-					news_event = { id = news.4128 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4128 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1718,9 +1768,11 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_50_compliance1_click = { 
+<<<<<<< Updated upstream
+=======
+			hosttool_sub_50_compliance1_click = {
 				owner={
-					news_event = { id = news.4313 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4313 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1737,9 +1789,9 @@ scripted_gui = {
 					}
 				}
 			}
-			hosttool_sub_25_compliance1_click = { 
+			hosttool_sub_25_compliance1_click = {
 				owner={
-					news_event = { id = news.4315 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4315 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
@@ -1757,19 +1809,61 @@ scripted_gui = {
 				}
 			}
 		######################################################################
+>>>>>>> Stashed changes
 			annex_country_click = {
-				
+
 				owner={ set_variable = { ROOT.taker = this}}
-				var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this   } news_event = { id = news.4007 }  }}
-				if={	limit={check_variable={ROOT.target=ROOT.taker}}	}
-				else={
-					var:ROOT.target={
-						var:ROOT.taker={
-							annex_country={	target=PREV	transfer_troops=yes	}
-							add_to_variable = { paratrooper_div_cap = PREV.paratrooper_div_cap }
+				var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this   } save_global_event_target_as = hosttool_target news_event = { id = news.4007 }  }}
+				if = {
+					limit = { NOT = { check_variable = { ROOT.target = ROOT.taker } } }
+					var:ROOT.target = {
+						var:ROOT.taker = {
+							annex_country = { target = PREV transfer_troops = yes }
+						}
+					}
+				}
+
+				ROOT = {
+					for_each_scope_loop={
+						array=marked_states
+						clear_variable=mark_status
+					}
+					clear_array=marked_states
+					clear_variable=target
+					clear_variable=taker
+					clear_variable=first_marked_state
+				}
+			}
+
+			fix_production_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
+			fix_xp_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4113 } army_experience = 25 }  }
+			fix_xp2_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4114 } navy_experience = 25 }  }
+			fix_xp3_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4115 } air_experience = 25 }  }
+			convoy48_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4116 } add_equipment_to_stockpile = { type = convoy_1 amount = 50 } }  }
+			manpower_add_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4117 } add_manpower = 10000 }  }
+			manpower_NO_add_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4118 } add_manpower = -10000 }  }
+			add_autonomy_ratio_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4119 } add_autonomy_ratio = { value = 0.1 } }  }
+			add_NO_autonomy_ratio_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4120 } add_autonomy_ratio = { value = -0.1 } }  }
+			remove_fix_xp_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4121 } army_experience = -25 }  }
+			remove_fix_xp2_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4122 } navy_experience = -25 }  }
+			remove_fix_xp3_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4123 } air_experience = -25 }  }
+			remove_convoy48_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4124 } add_equipment_to_stockpile = { type = convoy_1 amount = -50 } }  }
+			add_dynamic_Hort_tool_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4126 } add_dynamic_modifier = { modifier = Horst_tool_modifiers } }  }
+			add_dynamic_Hort_tool1_click = { owner = { save_global_event_target_as = hosttool_target news_event = { id = news.4127 } remove_dynamic_modifier = { modifier = Horst_tool_modifiers } }  }
+
+            add_autonomy_free_click = {
+				owner = {
+					if = {
+						limit = { is_subject = yes }
+						save_global_event_target_as = hosttool_target news_event = { id = news.4125 }
+						overlord = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_free
 							}
 						}
 					}
+<<<<<<< Updated upstream
 					
 				ROOT = {
 					for_each_scope_loop={
@@ -1811,6 +1905,7 @@ scripted_gui = {
 							        autonomy_state = autonomy_free
 						        }
 							}
+						
 				}
 					
 				ROOT = {
@@ -1822,35 +1917,36 @@ scripted_gui = {
 					clear_variable=target
 					clear_variable=taker
 					clear_variable=first_marked_state
+=======
+>>>>>>> Stashed changes
 				}
 			}
 
 			award_states_click = {
 
 				owner={
-					news_event = { id = news.4006 }
+					save_global_event_target_as = hosttool_target news_event = { id = news.4006 }
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						transfer_state = state
-					}
-									for_each_loop={
-						array=ROOT.marked_states
-						value=state
-						var:state={add_core_of=var:taker}
-					}
-					ROOT = {
-						for_each_scope_loop={
-							array=marked_states
-							clear_variable=mark_status
+						var:state = {
+							PREV = { transfer_state = PREV }
+							add_core_of = PREV
 						}
-						clear_array=marked_states
 					}
-					
+				}
+				ROOT = {
+					for_each_scope_loop={
+						array=marked_states
+						clear_variable=mark_status
+					}
+					clear_array=marked_states
+					clear_variable=first_marked_state
 				}
 			}
 
 			add_cheat_click = {
+<<<<<<< Updated upstream
 				set_variable = { ROOT.taker = this}
 				var:taker = {
 				owner={
@@ -1859,16 +1955,26 @@ scripted_gui = {
 					if={limit={check_variable={Root.selected_cheat=2}} generic_bonus_3 = yes }
 					if={limit={check_variable={Root.selected_cheat=3}} generic_bonus_2y = yes }
 					if={limit={check_variable={Root.selected_cheat=4}} generic_bonus_999 = yes }
+					if={limit={check_variable={Root.selected_cheat=5}} add_stability  = 0.01 }
+					if={limit={check_variable={Root.selected_cheat=6}} add_war_support = 0.01 }
+					if={limit={check_variable={Root.selected_cheat=7}} add_research_slot = 1 }
+					if={limit={check_variable={Root.selected_cheat=10}} add_research_slot = -1 }
+					if={limit={check_variable={Root.selected_cheat=11}} add_war_support = -0.01 }
+					if={limit={check_variable={Root.selected_cheat=12}} add_stability  = -0.01 }
 					}
+=======
+				set_variable = { global.hosttool_last_cheat = ROOT.selected_cheat }
+				owner = {
+					if={limit={check_variable={ROOT.selected_cheat=1}} generic_bonus_1 = yes }
+					if={limit={check_variable={ROOT.selected_cheat=2}} generic_bonus_3 = yes }
+					if={limit={check_variable={ROOT.selected_cheat=3}} generic_bonus_2y = yes }
+					if={limit={check_variable={ROOT.selected_cheat=4}} generic_bonus_999 = yes }
+					save_global_event_target_as = hosttool_target news_event = { id = horsttool.1 }
+>>>>>>> Stashed changes
 				}
-				GER={
-					set_variable={this.target_country=Root.target_country}
-					set_variable={this.selected_cheat=Root.selected_cheat}
-					news_event={id=horsttool.1}
-				}
-				clear_variable = ROOT.taker
 			}
 
+<<<<<<< Updated upstream
 			add_debuff_click = {
 				set_variable = { ROOT.taker = this}
 				var:taker = {
@@ -1878,6 +1984,11 @@ scripted_gui = {
 					   if={owner={ news_event = { id = horsttool.15 days = 0}}limit={check_variable={Root.selected_debuff=2}} generic_debuff_2 = yes }
 					   if={owner={ news_event = { id = horsttool.40 days = 0}}limit={check_variable={Root.selected_debuff=3}} generic_debuff_3 = yes }
 					   if={owner={ news_event = { id = horsttool.41 days = 0}}limit={check_variable={Root.selected_debuff=4}} generic_debuff_4 = yes }
+					   if={owner={ news_event = { id = horsttool.42 days = 0}}limit={check_variable={Root.selected_debuff=5}} generic_debuff_5 = yes }
+					   if={owner={ news_event = { id = horsttool.43 days = 0}}limit={check_variable={Root.selected_debuff=6}} generic_debuff_6 = yes }
+					   if={owner={ news_event = { id = horsttool.44 days = 0}}limit={check_variable={Root.selected_debuff=7}} generic_debuff_7 = yes }
+					   if={owner={ news_event = { id = horsttool.45 days = 0}}limit={check_variable={Root.selected_debuff=8}} generic_debuff_8 = yes }
+					   if={owner={ news_event = { id = horsttool.46 days = 0}}limit={check_variable={Root.selected_debuff=9}} generic_debuff_9 = yes }
 				   }
 				}
 				GER={
@@ -1887,7 +1998,13 @@ scripted_gui = {
 				clear_variable = ROOT.taker
 			}
 			
+			
+			toogle_mark_click = {
+=======
+			
+
 			toogle_mark_click = { #sort_button_120x29
+>>>>>>> Stashed changes
 				if={
 					limit={check_variable={mark_status=0}}
 					set_variable={mark_status=2}
@@ -1898,112 +2015,82 @@ scripted_gui = {
 				set_variable={ROOT.first_marked_state=ROOT.marked_states^0}
 			}
 
-			pingtool_click = {  owner={ news_event = { id = horsttool.13 days = 0} add_offsite_building = { type = dockyard level = 1 }}}
-			mill_add_click = { owner={ news_event = { id = horsttool.11 days = 0} add_offsite_building = { type = arms_factory level = 1 }}} 
-			civ_add_click = { owner={ news_event = { id = horsttool.12 days = 0} add_offsite_building = { type = industrial_complex level = 1 }}}
+			pingtool_click = {  owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.13 days = 0} add_offsite_building = { type = dockyard level = 1 }}}
+			mill_add_click = { owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.11 days = 0} add_offsite_building = { type = arms_factory level = 1 }}}
+			civ_add_click = { owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.12 days = 0} add_offsite_building = { type = industrial_complex level = 1 }}}
 
-			remove_pingtool_click = {  owner={ news_event = { id = horsttool.16 days = 0} add_offsite_building = { type = dockyard level = -1 }}}
-			remove_mill_add_click = { owner={ news_event = { id = horsttool.18 days = 0} add_offsite_building = { type = arms_factory level = -1 }}} 
-			remove_civ_add_click = { owner={ news_event = { id = horsttool.17 days = 0} add_offsite_building = { type = industrial_complex level = -1 }}}
+			remove_pingtool_click = {  owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.16 days = 0} add_offsite_building = { type = dockyard level = -1 }}}
+			remove_mill_add_click = { owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.18 days = 0} add_offsite_building = { type = arms_factory level = -1 }}}
+			remove_civ_add_click = { owner={ save_global_event_target_as = hosttool_target news_event = { id = horsttool.17 days = 0} add_offsite_building = { type = industrial_complex level = -1 }}}
 
 			horsttool_helpbutton_click = { ROOT = { country_event = { id =  horsthelp.2 } } }
 
-			pause_blocker_all_click = { COL =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 1 } } ROOT={clr_global_flag=blocking_pauses} }#ALL CAN PAUSE
-			pause_blocker_host_click = { COL =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 2 } } ROOT={clr_global_flag=blocking_pauses } } #ONLY HOST CAN USE PAUSE BUTTON
+			pause_blocker_all_click = { set_variable = { global.pause_blocker_variable = 1 } ROOT={clr_global_flag=blocking_pauses} } #ALL CAN PAUSE
+			pause_blocker_host_click = { set_variable = { global.pause_blocker_variable = 2 } ROOT={clr_global_flag=blocking_pauses} } #ONLY HOST CAN USE PAUSE BUTTON
 			pause_blocker_major_click = {
 				if={
 					limit={
 						ROOT={has_global_flag=blocking_pauses}
-					} 
-					COL =  { 
-						clear_variable = pause_blocker_variable 
-						set_variable = { var = pause_blocker_variable value = 3 } 
-					}  
+					}
+					set_variable = { global.pause_blocker_variable = 3 }
 					ROOT={clr_global_flag=blocking_pauses}
-				} 
+				}
 				else = {
-					ROOT={set_global_flag = blocking_pauses } 
-				} 
+					ROOT={set_global_flag = blocking_pauses }
+				}
 			}
-			
-			wt_add_click = { COL = { add_threat = 1 } }
-			wt_remove_click = { COL = { add_threat = -1 } }
-			
-			remove_debuff_click = { owner={remove_ideas = { debuff_tanks_idea debuff_aviation_idea } } }
-			
-			cb_red_click ={if={limit={Root={has_global_flag=colorblindness}} set_variable={Root.selected_color=1} ROOT={clr_global_flag=colorblindness}} else={ROOT={set_global_flag=colorblindness}}	}
-			cb_orange_click={set_variable={Root.selected_color=2} ROOT={clr_global_flag=colorblindness}}
-			cb_yellow_click={set_variable={Root.selected_color=3} ROOT={clr_global_flag=colorblindness}}
-			cb_green_click={set_variable={Root.selected_color=4} ROOT={clr_global_flag=colorblindness}}
-			cb_blue_click={set_variable={Root.selected_color=5} ROOT={clr_global_flag=colorblindness}}
-			cb_purple_click={set_variable={Root.selected_color=6} ROOT={clr_global_flag=colorblindness}}
-			cb_pink_click={set_variable={Root.selected_color=7} ROOT={clr_global_flag=colorblindness}}
-			cb_teal_click={set_variable={Root.selected_color=8} ROOT={clr_global_flag=colorblindness}}
-			cb_remove_click={set_variable={Root.selected_color=9} ROOT={clr_global_flag=colorblindness}}
 
-			add_color_click = {
-				set_variable = { ROOT.taker = this}
-				var:taker = {
-				   owner={
-					   set_variable={Root.target_country = this}
-					   if={limit={check_variable={Root.selected_color=1}} set_cosmetic_tag = COLORBLIND_RED   }
-					   if={limit={check_variable={Root.selected_color=2}} set_cosmetic_tag = COLORBLIND_ORANGE }
-					   if={limit={check_variable={Root.selected_color=3}} set_cosmetic_tag = COLORBLIND_YELLOW }
-					   if={limit={check_variable={Root.selected_color=4}} set_cosmetic_tag = COLORBLIND_GREEN }
-					   if={limit={check_variable={Root.selected_color=5}} set_cosmetic_tag = COLORBLIND_BLUE }
-					   if={limit={check_variable={Root.selected_color=6}} set_cosmetic_tag = COLORBLIND_PURPLE }
-					   if={limit={check_variable={Root.selected_color=7}} set_cosmetic_tag = COLORBLIND_PINK }
-					   if={limit={check_variable={Root.selected_color=8}} set_cosmetic_tag = COLORBLIND_TEAL }	
-					   if={limit={check_variable={Root.selected_color=9}} drop_cosmetic_tag = yes }	
-				   }
-				}
-				GER={
-					set_variable={this.target_country=Root.target_country}
-					set_variable={this.selected_cheat=Root.selected_color}
-					news_event={id=horsttool.31} #change
-				}
-				clear_variable = ROOT.taker
-			}
+			### HOSTCLR effects begin
+			hostclr_open_click = { if = { limit = { has_global_flag = hosttool_color_open } clr_global_flag = hosttool_color_open } else = { set_global_flag = hosttool_color_open } }
+			### HOSTCLR effects end
+			wt_add_click = { ROOT = { add_threat = 1 } }
+			wt_remove_click = { ROOT = { add_threat = -1 } }
+
+			
+
+
 		    cheat1_click={if={limit={Root={has_global_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_global_flag=cheating}} else={ROOT={set_global_flag=cheating}}	}
 			cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_global_flag=cheating}}
 			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_global_flag=cheating}}
 			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_global_flag=cheating}}
+<<<<<<< Updated upstream
 			cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_global_flag=cheating}}
+			cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_global_flag=cheating}}
+			cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_global_flag=cheating}}
+			cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_global_flag=cheating}}
+			cheat11_click={set_variable={Root.selected_cheat=11} ROOT={clr_global_flag=cheating}}
+			cheat12_click={set_variable={Root.selected_cheat=12} ROOT={clr_global_flag=cheating}}
+=======
+			
+>>>>>>> Stashed changes
 
-				
-			debuff1_click={if={limit={Root={has_global_flag=debuffing}} set_variable={Root.selected_debuff=1} ROOT={clr_global_flag=debuffing}} else={ROOT={set_global_flag=debuffing}}	}
-			debuff2_click={set_variable={Root.selected_debuff=2} ROOT={clr_global_flag=debuffing}}
-			debuff3_click={set_variable={Root.selected_debuff=3} ROOT={clr_global_flag=debuffing}}
-			debuff4_click={set_variable={Root.selected_debuff=4} ROOT={clr_global_flag=debuffing}}
-			debuff5_click={set_variable={Root.selected_debuff=5} ROOT={clr_global_flag=debuffing}}
-			debuff6_click={set_variable={Root.selected_debuff=6} ROOT={clr_global_flag=debuffing}}
-			debuff7_click={set_variable={Root.selected_debuff=7} ROOT={clr_global_flag=debuffing}}
-			debuff8_click={set_variable={Root.selected_debuff=8} ROOT={clr_global_flag=debuffing}}
-			debuff9_click={set_variable={Root.selected_debuff=9} ROOT={clr_global_flag=debuffing}}
 		}
-			
-			
+
 		properties = {
 			toogle_mark={ frame = mark_status }
 		}
-		
+
 		triggers = {
 
-			Debuffing_open_click_enable = {
+			close_tool_click_enabled = { always = yes }
+			Debuffing_open_click_enabled = {
 				always = yes
 			}
 			event_translet_horst_open_click_enabled = {
 				always = yes
 			}
 
-			observer_click_enabled = { }	
-			observer_visible = {	}	
+			observer_click_enabled = { owner = { NOT = { has_country_flag = host } } }
+			ai_fix_click_enabled = { owner = { NOT = { has_country_flag = host } } }
+			ai_fix_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			control_status_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			owner_name_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
 
-			add_debuff_click_enabled = {check_variable={Root.selected_debuff>0}}
 			
-			cb_red_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+<<<<<<< Updated upstream
+			cb_red_visible ={	}
 			cb_orange_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_yellow_visible={ROOT={has_global_flag=colorblindness}}
 			cb_green_visible={ROOT={has_global_flag=colorblindness}}
@@ -2013,7 +2100,7 @@ scripted_gui = {
 			cb_teal_visible={ROOT={has_global_flag=colorblindness}}
 			cb_remove_visible={ROOT={has_global_flag=colorblindness}}
 				
-			cb_red_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			cb_red_text_visible ={	}
 			cb_orange_text_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_yellow_text_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_green_text_visible={ ROOT={has_global_flag=colorblindness}}
@@ -2022,31 +2109,61 @@ scripted_gui = {
 			cb_pink_text_visible={ ROOT={has_global_flag=colorblindness}}
 			cb_teal_text_visible={ROOT={has_global_flag=colorblindness}}
 			cb_remove_text_visible={ROOT={has_global_flag=colorblindness}}
+=======
 
-			pause_blocker_major_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+
+>>>>>>> Stashed changes
+
+			pause_blocker_major_visible ={  }
 			pause_blocker_all_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_visible ={ has_global_flag=blocking_pauses }
-			pause_blocker_major_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}	
-			pause_blocker_major1_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+<<<<<<< Updated upstream
+			pause_blocker_major_text_visible ={  }	
+			pause_blocker_major1_text_visible ={  }
+=======
+			pause_blocker_major_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			
+>>>>>>> Stashed changes
 			pause_blocker_all_text_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_text_visible ={ has_global_flag=blocking_pauses }
 
-			
 			annex_country_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 			tpt_war_button_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
+<<<<<<< Updated upstream
 			add_autonomy_free_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
+
+			cheat1_visible={}
+			cheat1_text_visible={}
+=======
+			add_autonomy_free_click_enabled = { owner = { is_subject = yes } }
 ################################################################### видимость текста чита
 			cheat1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			cheat1_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+>>>>>>> Stashed changes
 			cheat2_visible={ROOT={has_global_flag=cheating}}
 			cheat3_visible={ROOT={has_global_flag=cheating}}
 			cheat4_visible={ROOT={has_global_flag=cheating}}
 			cheat4_text_visible={ROOT={has_global_flag=cheating}}
 			cheat2_text_visible={ROOT={has_global_flag=cheating}}
 			cheat3_text_visible={ROOT={has_global_flag=cheating}}
+<<<<<<< Updated upstream
 			cheat5_visible={ROOT={has_global_flag=cheating}}
 			cheat5_text_visible={ROOT={has_global_flag=cheating}}
+			cheat6_visible={ROOT={has_global_flag=cheating}}
+			cheat6_text_visible={ROOT={has_global_flag=cheating}}
+			cheat7_visible={ROOT={has_global_flag=cheating}}
+			cheat7_text_visible={ROOT={has_global_flag=cheating}}
+			cheat10_visible={ROOT={has_global_flag=cheating}}
+			cheat10_text_visible={ROOT={has_global_flag=cheating}}
+			cheat11_visible={ROOT={has_global_flag=cheating}}
+			cheat11_text_visible={ROOT={has_global_flag=cheating}}
+			cheat12_visible={ROOT={has_global_flag=cheating}}
+			cheat12_text_visible={ROOT={has_global_flag=cheating}}
+
+=======
+			
 ######################################################################################
+>>>>>>> Stashed changes
 			award_states_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 
 			mill_add_click_enabled = { }
@@ -2054,14 +2171,14 @@ scripted_gui = {
 
 			pingtool_click_enabled = { 	}
 
-			change_host_nation_click_enabled ={  }
+			change_host_nation_click_enabled = { owner = { NOT = { has_country_flag = host } } }
 
 			fix_production_click_enabled ={  }
 
 			fix_xp_click_enabled ={  }
 			add_dynamic_Hort_tool_click_enabled = {  }
 
-			clear_all_markings_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }	
+			clear_all_markings_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 
 			add_cores_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 
@@ -2081,27 +2198,15 @@ scripted_gui = {
 			States_resursed_chromium1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_coal1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 
-			hosttool_add_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			
-			hosttool_add_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_add_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			hosttool_sub_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+<<<<<<< Updated upstream
+			add_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			add_cover_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			add_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			add_cover1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 
 			wt_add_click_enabled = {}
 			wt_remove_click_enabled = {}
-################################################################################################### Переход на след страницу
+
 			debuff1_visible={}
 			debuff2_visible={ROOT={has_global_flag=debuffing}}
 			debuff1_text_visible={}
@@ -2120,6 +2225,29 @@ scripted_gui = {
 			debuff8_text_visible={ROOT={has_global_flag=debuffing}}
 			debuff9_visible={ROOT={has_global_flag=debuffing}}
 			debuff9_text_visible={ROOT={has_global_flag=debuffing}}
+=======
+			hosttool_add_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_25_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+
+			hosttool_add_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_add_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_100_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_75_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_50_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+			hosttool_sub_25_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+
+			wt_add_click_enabled = {}
+			wt_remove_click_enabled = {}
+################################################################################################### Переход на след страницу
+>>>>>>> Stashed changes
 
 			fix_xp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			fix_xp2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2128,25 +2256,25 @@ scripted_gui = {
 			manpower_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			manpower_NO_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			add_NO_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_fix_xp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_fix_xp2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_fix_xp3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_convoy48_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			manpower_NO_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			add_NO_autonomy_ratio_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_fix_xp_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_fix_xp2_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_fix_xp3_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_convoy48_visible = {ROOT={has_global_flag=enabled_debuffing}}
 
 			pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			remove_pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_pingtool_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_mill_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_civ_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
 
 			addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_addpp_visible = {ROOT={has_global_flag=enabled_debuffing}}
 
-			remove_debuff_click_enabled = {}
+			
 
 			States_resursed_steel_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			States_resursed_rubber_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2156,19 +2284,25 @@ scripted_gui = {
 			States_resursed_chromium_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			States_resursed_coal_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			States_resursed_steel1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_rubber1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_oil1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_alu1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_tungsten1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_chromium1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			States_resursed_coal1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_steel1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_rubber1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_oil1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_alu1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_tungsten1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_chromium1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_coal1_visible = {ROOT={has_global_flag=enabled_debuffing}}
 
-			Debuffing_enable_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+<<<<<<< Updated upstream
+			Debuffing_enable_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
 			Debuffing_enable_text2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+=======
+			
+>>>>>>> Stashed changes
 
-			wt_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			wt_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
 			wt_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+<<<<<<< Updated upstream
+=======
 			war_support_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			war_support_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			stability_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2180,8 +2314,7 @@ scripted_gui = {
 			tpt_war_button_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_autonomy_free_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			add_cover_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			add_cover1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			
 
 			clear_all_markings_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_cores_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2222,7 +2355,7 @@ scripted_gui = {
 			faction_initiativ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			faction_initiative_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			st_state_manager_powers_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			
 			title_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			toogle_mark_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			clear_all_markings_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2230,24 +2363,38 @@ scripted_gui = {
 			award_states_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			whitepeace_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			observer_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			fuhrer_mana_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			event_translet_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			event_translet_horst_open_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			title_event_translet_horst_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			change_host_nation_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			add_color_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			pause_blocker_shield_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_cheat_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			textbox_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			textbox1_bg_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			Background4_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			
 
+			### HOSTCLR triggers begin
+			sec_color_visible = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
+			pause_label_visible = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
+			hostclr_open_visible = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
+			hostclr_open_text_visible = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
+			hostclr_main_current_text_visible = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
+			### HOSTCLR triggers end
 			Debuffing_open_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			Debuffing_close_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			#textbox_bg2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_resources_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_res_plus_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_res_minus_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_ideology_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_country_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_doctrines_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_tech_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_states_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_compliance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_resistance_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_players_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			sec_settings_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			marked_count_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			debuf_industrial_1_visible = {ROOT={has_global_flag=enabled_debuffing}}
 
 			S1_visible = {ROOT={has_global_flag=enabled_debuffing}}
@@ -2301,8 +2448,6 @@ scripted_gui = {
 			debuf_army_11_visible = {ROOT={has_global_flag=enabled_debuffing}}
 			debuf_army_12_visible = {ROOT={has_global_flag=enabled_debuffing}}
 			debuf_army_13_visible = {ROOT={has_global_flag=enabled_debuffing}}
-
-
 
 			Doctrin_lan_1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			Doctrin_lan_2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2359,19 +2504,178 @@ scripted_gui = {
 			#debuf_industrial_plus_visible = {ROOT={has_global_flag=enabled_industrial}}
 			#debuf_industrial_minys_visible = {ROOT={NOT={has_global_flag=enabled_industrial}}}
 
-
 ####################################################################################################################
+>>>>>>> Stashed changes
 		}
 	}
+		
 	pause_is_blocked = {
 		context_type = player_context
 		window_name = "pause_block_window"
 		parent_window_name = time_control_window
 		visible = {
 		    OR ={
-			   AND = { COL = { check_variable = { pause_blocker_variable = 2    } } NOT = { has_country_flag = host }     } 
-			   AND = { COL = { check_variable = { pause_blocker_variable = 3    } } NOT = { immune_to_pause_block = yes  }     } 
+			   AND = { check_variable = { global.pause_blocker_variable = 2 } NOT = { has_country_flag = host } }
+			   AND = { check_variable = { global.pause_blocker_variable = 3 } NOT = { immune_to_pause_block = yes } }
 		    }
 		}
 	}
+
+	### HOSTCLR gui begin
+	hosttool_colors = {
+		context_type = selected_state_context
+		window_name = "hosttool_color_window"
+		visible = { ROOT = { has_country_flag = host has_global_flag = transfer_enabled has_global_flag = hosttool_color_open } }
+		effects = {
+			hostclr_1_click = { set_variable = { global.hosttool_last_color = 1 } owner = { set_cosmetic_tag = COLORBLIND_RED save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_2_click = { set_variable = { global.hosttool_last_color = 2 } owner = { set_cosmetic_tag = COLORBLIND_ORANGE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_3_click = { set_variable = { global.hosttool_last_color = 3 } owner = { set_cosmetic_tag = COLORBLIND_YELLOW save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_4_click = { set_variable = { global.hosttool_last_color = 4 } owner = { set_cosmetic_tag = COLORBLIND_GREEN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_5_click = { set_variable = { global.hosttool_last_color = 5 } owner = { set_cosmetic_tag = COLORBLIND_BLUE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_6_click = { set_variable = { global.hosttool_last_color = 6 } owner = { set_cosmetic_tag = COLORBLIND_PURPLE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_7_click = { set_variable = { global.hosttool_last_color = 7 } owner = { set_cosmetic_tag = COLORBLIND_PINK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_8_click = { set_variable = { global.hosttool_last_color = 8 } owner = { set_cosmetic_tag = COLORBLIND_TEAL save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_9_click = { set_variable = { global.hosttool_last_color = 9 } owner = { set_cosmetic_tag = HOSTCLR_SALMON save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_10_click = { set_variable = { global.hosttool_last_color = 10 } owner = { set_cosmetic_tag = HOSTCLR_DARK_RED save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_11_click = { set_variable = { global.hosttool_last_color = 11 } owner = { set_cosmetic_tag = HOSTCLR_PEACH save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_12_click = { set_variable = { global.hosttool_last_color = 12 } owner = { set_cosmetic_tag = HOSTCLR_BROWN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_13_click = { set_variable = { global.hosttool_last_color = 13 } owner = { set_cosmetic_tag = HOSTCLR_CREAM save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_14_click = { set_variable = { global.hosttool_last_color = 14 } owner = { set_cosmetic_tag = HOSTCLR_OLIVE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_15_click = { set_variable = { global.hosttool_last_color = 15 } owner = { set_cosmetic_tag = HOSTCLR_LIGHT_LIME save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_16_click = { set_variable = { global.hosttool_last_color = 16 } owner = { set_cosmetic_tag = HOSTCLR_LIME save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_17_click = { set_variable = { global.hosttool_last_color = 17 } owner = { set_cosmetic_tag = HOSTCLR_SWAMP save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_18_click = { set_variable = { global.hosttool_last_color = 18 } owner = { set_cosmetic_tag = HOSTCLR_MINT save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_19_click = { set_variable = { global.hosttool_last_color = 19 } owner = { set_cosmetic_tag = HOSTCLR_GREEN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_20_click = { set_variable = { global.hosttool_last_color = 20 } owner = { set_cosmetic_tag = HOSTCLR_AQUAMARINE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_21_click = { set_variable = { global.hosttool_last_color = 21 } owner = { set_cosmetic_tag = HOSTCLR_TURQUOISE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_22_click = { set_variable = { global.hosttool_last_color = 22 } owner = { set_cosmetic_tag = HOSTCLR_DARK_TEAL save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_23_click = { set_variable = { global.hosttool_last_color = 23 } owner = { set_cosmetic_tag = HOSTCLR_LIGHT_SKY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_24_click = { set_variable = { global.hosttool_last_color = 24 } owner = { set_cosmetic_tag = HOSTCLR_SKY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_25_click = { set_variable = { global.hosttool_last_color = 25 } owner = { set_cosmetic_tag = HOSTCLR_SEA save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_26_click = { set_variable = { global.hosttool_last_color = 26 } owner = { set_cosmetic_tag = HOSTCLR_CORNFLOWER save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_27_click = { set_variable = { global.hosttool_last_color = 27 } owner = { set_cosmetic_tag = HOSTCLR_BLUE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_28_click = { set_variable = { global.hosttool_last_color = 28 } owner = { set_cosmetic_tag = HOSTCLR_LAVENDER save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_29_click = { set_variable = { global.hosttool_last_color = 29 } owner = { set_cosmetic_tag = HOSTCLR_VIOLET save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_30_click = { set_variable = { global.hosttool_last_color = 30 } owner = { set_cosmetic_tag = HOSTCLR_INDIGO save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_31_click = { set_variable = { global.hosttool_last_color = 31 } owner = { set_cosmetic_tag = HOSTCLR_LILAC save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_32_click = { set_variable = { global.hosttool_last_color = 32 } owner = { set_cosmetic_tag = HOSTCLR_PLUM save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_33_click = { set_variable = { global.hosttool_last_color = 33 } owner = { set_cosmetic_tag = HOSTCLR_LIGHT_PINK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_34_click = { set_variable = { global.hosttool_last_color = 34 } owner = { set_cosmetic_tag = HOSTCLR_BURGUNDY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_35_click = { set_variable = { global.hosttool_last_color = 35 } owner = { set_cosmetic_tag = HOSTCLR_GREY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_36_click = { set_variable = { global.hosttool_last_color = 36 } owner = { set_cosmetic_tag = HOSTCLR_BLACK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_37_click = { set_variable = { global.hosttool_last_color = 37 } owner = { set_cosmetic_tag = HOSTCLR_PALE_RED save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_38_click = { set_variable = { global.hosttool_last_color = 38 } owner = { set_cosmetic_tag = HOSTCLR_PALE_ORANGE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_39_click = { set_variable = { global.hosttool_last_color = 39 } owner = { set_cosmetic_tag = HOSTCLR_PALE_YELLOW save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_40_click = { set_variable = { global.hosttool_last_color = 40 } owner = { set_cosmetic_tag = HOSTCLR_PALE_LIME save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_41_click = { set_variable = { global.hosttool_last_color = 41 } owner = { set_cosmetic_tag = HOSTCLR_PALE_GREEN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_42_click = { set_variable = { global.hosttool_last_color = 42 } owner = { set_cosmetic_tag = HOSTCLR_PALE_TURQUOISE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_43_click = { set_variable = { global.hosttool_last_color = 43 } owner = { set_cosmetic_tag = HOSTCLR_PALE_SKY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_44_click = { set_variable = { global.hosttool_last_color = 44 } owner = { set_cosmetic_tag = HOSTCLR_PALE_BLUE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_45_click = { set_variable = { global.hosttool_last_color = 45 } owner = { set_cosmetic_tag = HOSTCLR_PALE_VIOLET save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_46_click = { set_variable = { global.hosttool_last_color = 46 } owner = { set_cosmetic_tag = HOSTCLR_PALE_MAGENTA save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_47_click = { set_variable = { global.hosttool_last_color = 47 } owner = { set_cosmetic_tag = HOSTCLR_PALE_PINK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_48_click = { set_variable = { global.hosttool_last_color = 48 } owner = { set_cosmetic_tag = HOSTCLR_LIGHT_GREY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_49_click = { set_variable = { global.hosttool_last_color = 49 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_RED save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_50_click = { set_variable = { global.hosttool_last_color = 50 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_ORANGE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_51_click = { set_variable = { global.hosttool_last_color = 51 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_YELLOW save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_52_click = { set_variable = { global.hosttool_last_color = 52 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_LIME save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_53_click = { set_variable = { global.hosttool_last_color = 53 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_GREEN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_54_click = { set_variable = { global.hosttool_last_color = 54 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_TURQUOISE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_55_click = { set_variable = { global.hosttool_last_color = 55 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_SKY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_56_click = { set_variable = { global.hosttool_last_color = 56 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_BLUE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_57_click = { set_variable = { global.hosttool_last_color = 57 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_VIOLET save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_58_click = { set_variable = { global.hosttool_last_color = 58 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_MAGENTA save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_59_click = { set_variable = { global.hosttool_last_color = 59 } owner = { set_cosmetic_tag = HOSTCLR_MUTED_PINK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_60_click = { set_variable = { global.hosttool_last_color = 60 } owner = { set_cosmetic_tag = HOSTCLR_DARK_GREY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_61_click = { set_variable = { global.hosttool_last_color = 61 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_RED save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_62_click = { set_variable = { global.hosttool_last_color = 62 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_ORANGE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_63_click = { set_variable = { global.hosttool_last_color = 63 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_YELLOW save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_64_click = { set_variable = { global.hosttool_last_color = 64 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_LIME save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_65_click = { set_variable = { global.hosttool_last_color = 65 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_GREEN save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_66_click = { set_variable = { global.hosttool_last_color = 66 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_TURQUOISE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_67_click = { set_variable = { global.hosttool_last_color = 67 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_SKY save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_68_click = { set_variable = { global.hosttool_last_color = 68 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_BLUE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_69_click = { set_variable = { global.hosttool_last_color = 69 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_VIOLET save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_70_click = { set_variable = { global.hosttool_last_color = 70 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_MAGENTA save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_71_click = { set_variable = { global.hosttool_last_color = 71 } owner = { set_cosmetic_tag = HOSTCLR_GREYISH_PINK save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_72_click = { set_variable = { global.hosttool_last_color = 72 } owner = { set_cosmetic_tag = HOSTCLR_BEIGE save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_reset_click = { set_variable = { global.hosttool_last_color = 0 } owner = { drop_cosmetic_tag = yes save_global_event_target_as = hosttool_target news_event = { id = horsttool.31 } } }
+			hostclr_close_click = { clr_global_flag = hosttool_color_open }
+		}
+		triggers = {
+			hostclr_1_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_RED } }
+			hostclr_2_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_ORANGE } }
+			hostclr_3_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_YELLOW } }
+			hostclr_4_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_GREEN } }
+			hostclr_5_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_BLUE } }
+			hostclr_6_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_PURPLE } }
+			hostclr_7_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_PINK } }
+			hostclr_8_current_visible = { owner = { has_cosmetic_tag = COLORBLIND_TEAL } }
+			hostclr_9_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_SALMON } }
+			hostclr_10_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_DARK_RED } }
+			hostclr_11_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PEACH } }
+			hostclr_12_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_BROWN } }
+			hostclr_13_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_CREAM } }
+			hostclr_14_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_OLIVE } }
+			hostclr_15_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_LIME } }
+			hostclr_16_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LIME } }
+			hostclr_17_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_SWAMP } }
+			hostclr_18_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MINT } }
+			hostclr_19_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREEN } }
+			hostclr_20_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_AQUAMARINE } }
+			hostclr_21_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_TURQUOISE } }
+			hostclr_22_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_DARK_TEAL } }
+			hostclr_23_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_SKY } }
+			hostclr_24_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_SKY } }
+			hostclr_25_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_SEA } }
+			hostclr_26_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_CORNFLOWER } }
+			hostclr_27_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_BLUE } }
+			hostclr_28_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LAVENDER } }
+			hostclr_29_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_VIOLET } }
+			hostclr_30_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_INDIGO } }
+			hostclr_31_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LILAC } }
+			hostclr_32_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PLUM } }
+			hostclr_33_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_PINK } }
+			hostclr_34_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_BURGUNDY } }
+			hostclr_35_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREY } }
+			hostclr_36_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_BLACK } }
+			hostclr_37_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_RED } }
+			hostclr_38_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_ORANGE } }
+			hostclr_39_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_YELLOW } }
+			hostclr_40_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_LIME } }
+			hostclr_41_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_GREEN } }
+			hostclr_42_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_TURQUOISE } }
+			hostclr_43_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_SKY } }
+			hostclr_44_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_BLUE } }
+			hostclr_45_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_VIOLET } }
+			hostclr_46_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_MAGENTA } }
+			hostclr_47_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_PALE_PINK } }
+			hostclr_48_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_LIGHT_GREY } }
+			hostclr_49_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_RED } }
+			hostclr_50_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_ORANGE } }
+			hostclr_51_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_YELLOW } }
+			hostclr_52_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_LIME } }
+			hostclr_53_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_GREEN } }
+			hostclr_54_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_TURQUOISE } }
+			hostclr_55_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_SKY } }
+			hostclr_56_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_BLUE } }
+			hostclr_57_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_VIOLET } }
+			hostclr_58_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_MAGENTA } }
+			hostclr_59_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_MUTED_PINK } }
+			hostclr_60_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_DARK_GREY } }
+			hostclr_61_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_RED } }
+			hostclr_62_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_ORANGE } }
+			hostclr_63_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_YELLOW } }
+			hostclr_64_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_LIME } }
+			hostclr_65_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_GREEN } }
+			hostclr_66_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_TURQUOISE } }
+			hostclr_67_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_SKY } }
+			hostclr_68_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_BLUE } }
+			hostclr_69_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_VIOLET } }
+			hostclr_70_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_MAGENTA } }
+			hostclr_71_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_GREYISH_PINK } }
+			hostclr_72_current_visible = { owner = { has_cosmetic_tag = HOSTCLR_BEIGE } }
+		}
+	}
+	### HOSTCLR gui end
 }

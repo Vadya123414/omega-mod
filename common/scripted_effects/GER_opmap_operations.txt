@@ -1,0 +1,759 @@
+# GER operations (former decisions from common/decisions/operations_ger.txt).
+# Started from the operations map GUI (GER_opmap_ui); conditions and effects are the original ones.
+
+GER_opmap_taif_start = {
+	custom_effect_tooltip = GER_taif_tt
+	242 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 202
+		}
+	}
+	hidden_effect = {
+		243 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		224 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		222 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		205 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		223 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		219 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		247 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		246 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 202
+			}
+		}
+		news_event = { id = news_ost_west.3 hours = 200 }
+		set_country_flag = GER_taif
+	}
+	set_country_flag = GER_opmap_done_taif
+	set_variable = { GER_opmap_days_taif = 202 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.1 days = 202 } }
+}
+GER_opmap_taif_end = {
+	clr_country_flag = GER_taif
+	clear_variable = GER_opmap_days_taif
+}
+
+GER_opmap_blau_start = {
+	custom_effect_tooltip = GER_blau_tt
+	227 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 149
+		}
+	}
+	hidden_effect = {
+		221 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		240 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		220 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		228 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		218 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		245 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		238 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		235 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		234 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		217 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		260 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 149
+			}
+		}
+		news_event = { id = news_ost_west.1 hours = 200 }
+		set_country_flag = GER_blau
+	}
+	set_country_flag = GER_opmap_done_blau
+	set_variable = { GER_opmap_days_blau = 149 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.2 days = 149 } }
+}
+GER_opmap_blau_end = {
+	clr_country_flag = GER_blau
+	clear_variable = GER_opmap_days_blau
+}
+
+GER_opmap_lenik_start = {
+	custom_effect_tooltip = GER_lenik_tt
+	191 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 83
+		}
+	}
+	hidden_effect = {
+		13 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		811 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		812 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		813 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		209 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		208 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		263 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		244 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		210 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		810 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 83
+			}
+		}
+		news_event = { id = news_ost_west.4 hours = 200 }
+		set_country_flag = GER_lenik
+	}
+	set_country_flag = GER_opmap_done_lenik
+	set_variable = { GER_opmap_days_lenik = 83 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.3 days = 83 } }
+}
+GER_opmap_lenik_end = {
+	clr_country_flag = GER_lenik
+	clear_variable = GER_opmap_days_lenik
+}
+
+GER_opmap_balt_start = {
+	custom_effect_tooltip = GER_balt_tt
+	188 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 92
+		}
+	}
+	hidden_effect = {
+		189 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		815 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		814 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		11 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		784 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		96 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		95 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		97 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		763 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		5 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		190 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		809 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		808 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		810 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		12 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		811 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		13 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		812 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		813 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		191 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 92
+			}
+		}
+		news_event = { id = news_ost_west.5 hours = 200 }
+		set_country_flag = GER_balt
+	}
+	set_country_flag = GER_opmap_done_balt
+	set_variable = { GER_opmap_days_balt = 92 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.4 days = 92 } }
+}
+GER_opmap_balt_end = {
+	clr_country_flag = GER_balt
+	clear_variable = GER_opmap_days_balt
+}
+
+GER_opmap_beni_start = {
+	custom_effect_tooltip = GER_beni_tt
+	35 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 60
+		}
+	}
+	hidden_effect = {
+		51 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		42 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		8 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		980 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		34 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		977 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		6 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		29 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 60
+			}
+		}
+		news_event = { id = news_ost_west.6 hours = 200 }
+		set_country_flag = GER_beni
+	}
+	set_country_flag = GER_opmap_done_beni
+	set_variable = { GER_opmap_days_beni = 60 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.5 days = 60 } }
+}
+GER_opmap_beni_end = {
+	clr_country_flag = GER_beni
+	clear_variable = GER_opmap_days_beni
+}
+
+GER_opmap_balaton_start = {
+	custom_effect_tooltip = GER_balaton_tt
+	975 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 45
+		}
+	}
+	hidden_effect = {
+		109 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		45 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		764 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		974 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		43 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		973 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		154 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		664 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		70 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		71 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		news_event = { id = news_ost_west.8 hours = 200 }
+		set_country_flag = GER_balaton
+	}
+	set_country_flag = GER_opmap_done_balaton
+	set_variable = { GER_opmap_days_balaton = 45 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.6 days = 45 } }
+}
+GER_opmap_balaton_end = {
+	clr_country_flag = GER_balaton
+	clear_variable = GER_opmap_days_balaton
+}
+
+GER_opmap_pomerania_start = {
+	custom_effect_tooltip = GER_pomerania_tt
+	64 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 45
+		}
+	}
+	hidden_effect = {
+		62 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		65 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		66 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		63 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		68 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		67 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		86 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		87 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		807 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		86 = {
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 45
+			}
+		}
+		news_event = { id = news_ost_west.9 hours = 200 }
+		set_country_flag = GER_pomerania
+	}
+	set_country_flag = GER_opmap_done_pomerania
+	set_variable = { GER_opmap_days_pomerania = 45 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.7 days = 45 } }
+}
+GER_opmap_pomerania_end = {
+	clr_country_flag = GER_pomerania
+	clear_variable = GER_opmap_days_pomerania
+}
+
+GER_opmap_ukroxa_start = {
+	custom_effect_tooltip = GER_ukroxa_tt
+	78 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 150
+		}
+	}
+	hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 150
+			}
+		}
+		news_event = { id = news_ost_west.10 hours = 200 }
+		set_country_flag = GER_ukroxa
+	}
+	set_country_flag = GER_opmap_done_ukroxa
+	set_variable = { GER_opmap_days_ukroxa = 150 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.8 days = 150 } }
+}
+GER_opmap_ukroxa_end = {
+	clr_country_flag = GER_ukroxa
+	clear_variable = GER_opmap_days_ukroxa
+}
+
+GER_opmap_belarus_start = {
+	custom_effect_tooltip = GER_belarus_tt
+	784 = {
+		add_dynamic_modifier = {
+			modifier = nastup
+			scope = GER
+			days = 130
+		}
+	}
+	hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = BLR
+			}
+			add_dynamic_modifier = {
+				modifier = nastup
+				scope = GER
+				days = 130
+			}
+		}
+		news_event = { id = news_ost_west.11 hours = 200 }
+		set_country_flag = GER_belarus
+	}
+	set_country_flag = GER_opmap_done_belarus
+	set_variable = { GER_opmap_days_belarus = 150 }   # days left, counted down in GER_opmap_on_actions
+	hidden_effect = { country_event = { id = GER_opmap.9 days = 150 } }
+}
+GER_opmap_belarus_end = {
+	clr_country_flag = GER_belarus
+	clear_variable = GER_opmap_days_belarus
+}

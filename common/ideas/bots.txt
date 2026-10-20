@@ -1,7 +1,7 @@
 ideas = {
     hidden_ideas = { 
+		
 		smart_bots = {
-			name = smart_bots
 
 			picture = eng_tackle_capitalism
 
@@ -15,13 +15,95 @@ ideas = {
                 mobilization_speed = 10
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
+				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		supply_bot_fix_not_in_war= {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			supply_consumption_factor = -1
+			unit_upkeep_attrition_factor = -1
 			}
 
 			cancel = {
 			or = {
 					is_ai = no
-					has_civil_war = yes
+					has_war = yes
 					}
+			}
+		}
+
+		ins_training_fix = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.45
+			}
+
+			cancel = {
+					is_ai = no
+			}
+		}
+		idea_RAJ_ordnance_sim = {
+			picture = generic_license_production
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				artillery_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				support_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
+
+				anti_air_equipment = {
+					reliability = -0.1
+					instant = yes
+				}
 			}
 		}
 	}

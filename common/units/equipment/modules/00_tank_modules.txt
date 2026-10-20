@@ -998,7 +998,6 @@ equipment_modules = {
 			build_cost_ic = 4
 			maximum_speed = -0.3
 			reliability = -0.2
-			breakthrough = -2
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1025,7 +1024,6 @@ equipment_modules = {
 			build_cost_ic = 5.5
 			maximum_speed = -0.4
 			reliability = -0.2
-			breakthrough = -2
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
@@ -1240,18 +1238,18 @@ equipment_modules = {
 			soft_attack = 30
 			hard_attack = 40
 			ap_attack = 170
-			build_cost_ic = 8
-			maximum_speed = -0.5
-			reliability = -0.3
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1
 		can_convert_from = {
 			module_category = tank_heavy_main_armament
-			convert_cost_ic = 8
+			convert_cost_ic = 7
 		}
 		build_cost_resources = {
-			tungsten = 3
+			tungsten = 2
 			chromium = 1
 			steel = 3
 		}
@@ -1268,9 +1266,8 @@ equipment_modules = {
 			hard_attack = 2
 			ap_attack = 60
 			build_cost_ic = 7
-			maximum_speed = -0.5
-			reliability = -0.3
-			breakthrough = -4
+			maximum_speed = -0.4
+			reliability = -0.25
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 1

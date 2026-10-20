@@ -1,0 +1,18 @@
+focus_tree = {
+	id = KAZ_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KAZ
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	shared_focus = RUS_raspad
+}

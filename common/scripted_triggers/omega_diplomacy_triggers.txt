@@ -6,14 +6,17 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
-    
-    OR = {
+    if = {
+        limit = {
+            is_ai = not
+        }
+        OR = {
         # Оправдание на ИИ с 1937
         AND = {
             FROM = {
                 is_ai = yes
             }
-            date > 1937.1.1
+            date > 1938.1.1
         }
         # Оправдание на игрока с 1939
         AND = {
@@ -41,6 +44,8 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
         }
         }
     }
+    }
+    
     custom_trigger_tooltip = {
 		tooltip = vuina_diploma
 	}
@@ -48,6 +53,10 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
+    if = {
+        limit = {
+            is_ai = not
+        }
     OR = {
             AND = {
                 FROM = { is_ai = yes }
@@ -78,11 +87,159 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
             }
             }
     }
+    }
     custom_trigger_tooltip = {
 		tooltip = vuina_diploma
 	}
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
-     date > 1938.7.1
+    date > 1938.7.1
+}
+
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+    NOT = {
+        OR = {
+            AND = {
+                tag = FRA
+                has_completed_focus = FRA_proclaim_the_third_empire
+            }
+            AND = {
+                FROM = { tag = FRA }
+                FRA = {
+                    has_completed_focus = FRA_proclaim_the_third_empire
+                }
+            }
+        }
+    }
+}
+
+EAEU_is_eaeu_member = {
+    OR = {
+        tag = SOV
+        tag = UKR
+        tag = BLR
+        tag = KAZ
+    }
+}
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
 }

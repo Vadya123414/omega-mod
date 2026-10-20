@@ -126,7 +126,9 @@ technologies = {
 			support_tech
 			engineers_tech
 		}
-
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		ai_will_do = {
 			base = 4
 
@@ -251,6 +253,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1939 }
@@ -318,7 +323,7 @@ technologies = {
 
 		light_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -326,7 +331,7 @@ technologies = {
 		}
 		medium_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -334,7 +339,7 @@ technologies = {
 		}
 		heavy_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -347,6 +352,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1942 }
@@ -395,7 +403,7 @@ technologies = {
 		assault_engineer = {
 			breakthrough = 0.1
 			urban = {
-				attack = 0.15
+				attack = 0.1
 			}
 		}
 
@@ -409,7 +417,7 @@ technologies = {
 
 		light_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -417,7 +425,7 @@ technologies = {
 		}
 		medium_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -425,7 +433,7 @@ technologies = {
 		}
 		heavy_flame_tank = {
 			urban = {
-				attack = 0.1
+				attack = 0.05
 			}
 			fort = {
 				attack = 0.1
@@ -433,6 +441,9 @@ technologies = {
 		}
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1945 }
@@ -494,6 +505,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1936 }
@@ -526,6 +540,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1939 }
@@ -562,6 +579,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1942 }
@@ -588,6 +608,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 2 y = @1945 }
@@ -639,6 +662,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1936 }
@@ -691,6 +717,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1939 }
@@ -727,6 +756,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1942 }
@@ -757,6 +789,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 4 y = @1945 }
@@ -822,6 +857,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1936 }
@@ -841,13 +879,25 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			
+			battalion_mult = {
+				category = category_all_armor
+				equipment_capture_factor = 0.01
+				add = yes
+				display_as_percentage = yes
+			}
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.05
 			recovery = 0.03
-			equipment_capture_factor = 0.1
+			
+			battalion_mult = {
+				category = category_all_armor
+				equipment_capture_factor = 0.02
+				add = yes
+				display_as_percentage = yes
+			}
 		}
 
 		enable_equipment_modules = {
@@ -862,6 +912,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1939 }
@@ -881,27 +934,13 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.01
-				add = yes
-				display_as_percentage = yes
-			}
-
+			equipment_capture_factor = 0.05
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.05
 			recovery = 0.03
-
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.02
-				add = yes
-				display_as_percentage = yes
-			}
-
+			equipment_capture_factor = 0.1
 		}
 
 		path = {
@@ -911,6 +950,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1942 }
@@ -933,13 +975,16 @@ technologies = {
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.05
 			recovery = 0.03
 			equipment_capture_factor = 0.1
 		}
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 6 y = @1945 }
@@ -981,6 +1026,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1936 }
@@ -994,22 +1042,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
+			factor = 0
 		}
 
 		on_research_complete = {
@@ -1037,8 +1070,8 @@ technologies = {
 		}
 
 		helicopter_field_hospital = {
-			casualty_trickleback = 0.12
-			experience_loss_factor = -0.08
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1375
 
 			battalion_mult = {
 				category = category_all_infantry
@@ -1053,6 +1086,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1939 }
@@ -1066,22 +1102,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1093,8 +1114,8 @@ technologies = {
 		}
 
 		helicopter_field_hospital = {
-			casualty_trickleback = 0.12
-			experience_loss_factor = -0.08
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1375
 
 			battalion_mult = {
 				category = category_all_infantry
@@ -1119,6 +1140,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1942 }
@@ -1132,22 +1156,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 	}
 	tech_field_hospital4 = {
@@ -1158,8 +1167,8 @@ technologies = {
 		}
 
 		helicopter_field_hospital = {
-			casualty_trickleback = 0.12
-			experience_loss_factor = -0.08
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1375
 
 			battalion_mult = {
 				category = category_all_infantry
@@ -1169,6 +1178,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @field_hospital_x y = @1945 }
@@ -1182,22 +1194,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1948.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1270,6 +1267,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1936 }
@@ -1295,7 +1295,8 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.125
+			fuel_consumption_factor = -0.075
 		}
 
 		path = {
@@ -1305,6 +1306,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1939 }
@@ -1318,27 +1322,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
+			factor = 0
 		}
 	}
 
@@ -1350,7 +1334,8 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.125
+			fuel_consumption_factor = -0.075
 		}
 
 		helicopter_brigade = {
@@ -1364,6 +1349,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1942 }
@@ -1377,22 +1365,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 	}
 	tech_logistics_company4 = {
@@ -1403,11 +1376,15 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.15
+			supply_consumption_factor = -0.125
+			fuel_consumption_factor = -0.075
 		}
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @logistic_x y = @1945 }
@@ -1421,22 +1398,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1948.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1468,6 +1430,9 @@ technologies = {
 
 		research_cost = 1.25
 		start_year = 1936
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1936 }
@@ -1480,13 +1445,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
-
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1497,11 +1456,7 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.14
 		}
 
 		path = {
@@ -1511,6 +1466,9 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1939
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1939 }
@@ -1523,22 +1481,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1549,11 +1492,7 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.14
 		}
 
 		path = {
@@ -1563,6 +1502,9 @@ technologies = {
 
 		research_cost = 2.0
 		start_year = 1942
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1942 }
@@ -1575,22 +1517,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
+			factor = 0
 		}
 	}
 	tech_signal_company4 = {
@@ -1600,16 +1527,15 @@ technologies = {
 		}
 
 		armored_signal = {
-			initiative = 0.08
-			battalion_mult = {
-				category = category_all_armor
-				breakthrough = 0.01
-			}
+			initiative = 0.14
 		}
 
 
 		research_cost = 2.0
 		start_year = 1945
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = @signal_x y = @1945 }
@@ -1622,22 +1548,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1948.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1668,25 +1579,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-			modifier = {
-				num_of_factories > 25
-				factor = 100 #might wanna get on that
-			}
-			modifier = {
-				factor = 1.2
-				date > "1936.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
+			factor = 1
 		}
 	}
 
@@ -1706,7 +1599,7 @@ technologies = {
 			}
 		}
 
-		research_cost = 1.5
+		research_cost = 2.25
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1719,7 +1612,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 1
+		modifier = {
+				factor = 0
+				is_major = no
+			}
 		}
 	}
 
@@ -1728,7 +1625,7 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1758,7 +1655,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1770,8 +1667,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
-
+			base = 1
+		modifier = {
+				factor = 0
+				is_major = no
+			}
 		}
 	}
 
@@ -1806,8 +1706,11 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 1 y = @1938 }
@@ -1832,22 +1735,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1860,8 +1748,11 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 7 y = @1938 }
@@ -1886,22 +1777,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1914,8 +1790,11 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 15 y = @1938 }
@@ -1945,22 +1824,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -1977,8 +1841,11 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 12 y = @1938 }
@@ -1995,17 +1862,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 3
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -2026,8 +1883,11 @@ technologies = {
 			helicopter_recon
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 3 y = @1938 }
@@ -2040,22 +1900,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 4
-				date > "1940.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -2072,8 +1917,11 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 10 y = @1938 }
@@ -2090,27 +1938,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 1.5
-				date > "1944.1.1"
-			}
+			factor = 0
 		}
 	}
 
@@ -2122,8 +1950,11 @@ technologies = {
 		force_use_small_tech_layout = yes
 		show_equipment_icon = yes
 
-		research_cost = 2.0
+		research_cost = 1.0
 		start_year = 1938
+		xp_research_type = army
+		xp_boost_cost = 70
+		xp_research_bonus = 0.50
 		folder = {
 			name = support_folder
 			position = { x = 5 y = @1938 }
@@ -2143,12 +1974,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 2
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
+			factor = 0
 		}
 	}
 

@@ -43,7 +43,7 @@ submarines = {
     icon = "GFX_doctrine_milestone_submarine_naval"
     icon_frame = "GFX_doctrine_decor_naval"
     mastery = {
-        multiplier = 10.0 # TODO - balance this number
+        multiplier = 7.0 # TODO - balance this number
         equipment = {
             submarine
         }

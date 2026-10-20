@@ -10,6 +10,9 @@ state = {
 	state_category = megalopolis #was metropolis, 2 slots diff
 	
 	history = {
+		victory_points = {
+			9522 1
+		}
 
 		owner = GER
 		add_core_of = GER

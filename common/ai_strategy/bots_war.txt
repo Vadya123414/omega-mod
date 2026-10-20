@@ -1,0 +1,10 @@
+boost_div_number = { 
+	enable = {
+		always = yes
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100000
+	}
+}

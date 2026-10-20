@@ -34,31 +34,34 @@ MAN_TSR_historical_plan = {
 
 	ai_national_focuses = {
 		MAN_tsr_pacify_the_countryside
-		CHI_sea_invite_foreign_investors
+		MAN_invite_foreign_investors
+		MAN_collaboration_with_the_japanese_plane
+		MAN_rapprochement_with_soviet_union
+		MAN_closer_ties_with_germany
+		MAN_tsr_invite_japanese_settlers
 		MAN_tsr_trade_delegation
+		MAN_tsr_expand_the_textile_industry
 		MAN_tsr_army_modernization
-		MAN_tsr_mukden_military_academy
 		MAN_tsr_law_university
 		MAN_tsr_obedience
 		MAN_tsr_first_five_year_plan
-		MAN_tsr_expand_the_textile_industry
-		MAN_tsr_hoankyoku
-		MAN_tsr_alliance_with_the_kwantung_army
-		MAN_tsr_expand_the_navy
 		MAN_tsr_invite_japanese_investors
-		MAN_tsr_strengthen_the_manchukuo_imperial_army
-		MAN_tsr_trading_illicit_goods
-		MAN_tsr_expand_the_railways
-		MAN_tsr_strengthen_ties_with_nissan
 		MAN_tsr_expand_showa_steel_works
-		MAN_tsr_further_mobilization
-		MAN_tsr_develop_aluminum_sources
-		MAN_tsr_the_question_of_leadership
-		MAN_tsr_mukden_arsenal
-		MAN_tsr_social_research_unit
+		MAN_tsr_strengthen_ties_with_nissan
 		MAN_tsr_mangyo
+		MAN_tsr_mukden_arsenal
+		MAN_tsr_alliance_with_the_kwantung_army
+		MAN_tsr_further_mobilization
+		MAN_tsr_strengthen_the_manchukuo_imperial_army
+		MAN_tsr_the_question_of_leadership
 		MAN_tsr_empire_of_manchukuo
-		MAN_tsr_research_and_education_department
+		MAN_tsr_embrace_state_shintoism
+		MAN_tsr_promote_manchu_identity
+		MAN_tsr_expand_the_navy
+		MAN_chinese_panzers
+		MAN_tank_plant
+		MAN_mission_to_germany
+		MAN_collaboration_with_the_japanese
 	}
 
 	focus_factors = {

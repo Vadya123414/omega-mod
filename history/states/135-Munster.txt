@@ -11,6 +11,12 @@ state={
 	state_category = town
 
 	history={
+		victory_points = {
+			11237 1
+		}
+		victory_points = {
+			9310 1
+		}
 		owner = IRE
 		buildings = {
 			infrastructure = 3 #was: 6

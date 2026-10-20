@@ -27,6 +27,20 @@ LAT_historical = {
 	}
 
 	ai_national_focuses = {
+		BALTIC_rejoin_the_railways
+		BALTIC_modernize_industry
+		BALTIC_attract_workers_to_capital
+		BALTIC_domestic_motors
+		BALTIC_renew_allied_trade
+		BALTIC_ford_motors
+		BALTIC_crossley_motors
+		BALTIC_original_designs
+		BALTIC_natural_resources
+		BALTIC_rebuild_forts
+		BALTIC_arm_the_nation
+		BALTIC_defence_of_our_nation
+		BALTIC_arms_industry
+
 		LAT_suspend_the_constitution
 		LAT_empower_paramilitarists
 		LAT_the_sun_shines_equally

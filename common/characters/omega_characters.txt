@@ -1,0 +1,74 @@
+characters = {
+	FRA_henri_de_man = {
+		name = FRA_henri_de_man
+		portraits={
+			civilian = {
+				large = GFX_portrait_BEL_henri_de_man 
+				small = GFX_portrait_BEL_henri_de_man_small 
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_henri_de_man
+			allowed = {
+				tag = FRA
+			}
+			visible = {
+				has_completed_focus = FRA_podgotovka2
+			}
+			traits = {
+				BEL_man_with_a_plan
+			}
+			cost = 150
+        }
+	}
+
+    FRA_vadik48 = {
+		name = FRA_vadik48
+		portraits = {
+				army = {
+					small = GFX_portrait_BEL_dieudonne_saive_small
+				}
+			}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_vadik48
+			allowed = {
+				tag = FRA
+			}
+			visible = {
+				has_completed_focus = FRA_podgotovka2
+			}
+			traits  = {
+					BEL_arms_designer 
+				}
+			cost = 150
+        }
+	}
+
+	FRA_prince_bernhard = {
+		name = FRA_prince_bernhard
+		portraits={
+			army={
+				small="GFX_idea_HOL_prince_bernhard"
+			}
+		}
+		
+		advisor = {
+            cost  = 100.000
+			slot = political_advisor
+			idea_token = FRA_prince_bernhard
+			allowed = {
+				tag = FRA
+			}
+			visible = {
+				has_completed_focus = FRA_podgotovka2
+			}
+			traits  = {
+				adventurous_daredevil 
+			}
+		}
+	}
+}

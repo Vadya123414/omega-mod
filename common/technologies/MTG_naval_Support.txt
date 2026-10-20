@@ -50,14 +50,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
 				OR = {
-					has_tech = early_ship_hull_light
-					has_tech = early_ship_hull_cruiser
-					has_tech = early_ship_hull_heavy
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 500
+				factor = 1
 			}
 		}
 
@@ -105,10 +106,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_tech = basic_ship_hull_light
-				factor = 20
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -167,33 +173,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 0
 			modifier = {
-				has_war = yes
-				factor = 10
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			
-			modifier = {
-				factor = 5
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = JAP
-					tag = ITA
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
+				factor = 1
 			}
-			
 		}
 		
 
@@ -241,30 +230,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_tech = improved_ship_hull_light
-				factor = 20
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
-			
-			modifier = {
-				factor = 3
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = ITA
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
+				factor = 1
 			}
 		}
 
@@ -322,28 +296,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_war = yes
-				factor = 10
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1942.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1943.1.1
-			}
-			
-			modifier = {
-				factor = 5
 				OR = {
-					tag = USA
-					tag = ENG
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
+				factor = 1
 			}
 		}
 
@@ -380,10 +341,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_tech = advanced_ship_hull_light
-				factor = 20
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -426,17 +392,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_tech = basic_ship_hull_heavy
-				factor = 20
-			}
+			factor = 0
 			modifier = {
 				OR = {
-					tag = GER
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 2
+				factor = 1
 			}
 		}
 
@@ -476,35 +440,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_tech = improved_ship_hull_heavy
-				factor = 20
-			}
+			factor = 0
 			modifier = {
 				OR = {
-					tag = GER
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 2
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
-			}
-
-			modifier = {
-				factor = 1.5
-				date > 1940.1.1
-			}
-			
-			modifier = {
-				factor = 3
-				OR = {
-					tag = USA
-					tag = ENG
-				}
+				factor = 1
 			}
 		}
 
@@ -539,17 +483,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_tech = advanced_ship_hull_heavy
-				factor = 20
-			}
+			factor = 0
 			modifier = {
 				OR = {
-					tag = GER
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 2
+				factor = 1
 			}
 		}
 
@@ -592,33 +534,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				is_major = yes
-				has_war = yes
-				factor = 5
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			
-			modifier = {
-				factor = 5
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = JAP
-					tag = ITA
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
+				factor = 1
 			}
-
 		}
 
 		categories = {
@@ -658,11 +583,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				is_major = yes
-				has_war = yes
-				factor = 5
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -702,14 +631,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 20
+				factor = 1
 			}
 		}
 
@@ -752,14 +682,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 20
+				factor = 1
 			}
 		}
 
@@ -798,14 +729,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 0
 			modifier = {
 				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 20
+				factor = 1
 			}
 		}
 
@@ -857,18 +789,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 0
+
 			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
-				factor = 3
 			}
 		}
 
@@ -929,22 +862,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 0
+
 			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
-				factor = 3
-			}
-			modifier = {
-				tag = JAP #Japan wants torpedoes EXTRA HARD
-				factor = 2
 			}
 		}
 
@@ -991,18 +921,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 0
+
 			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
-				factor = 3
 			}
 		}
 
@@ -1045,23 +976,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 0
+
 			modifier = {
-				tag = JAP
-				factor = 5
-			}
-			
-			modifier = {
-				factor = 1.5
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 1.5
-				date > 1939.1.1
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
 			}
 		}
 
@@ -1106,22 +1033,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
-			modifier = {
-				factor = 1.5
-				date > 1941.1.1
-			}
+			base = 0
 
 			modifier = {
-				factor = 1.5
-				date > 1942.1.1
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
 			}
 		}
-
 		categories = {
 			naval_equipment
 			ship_modules_tech
@@ -1156,10 +1082,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 0
+
 			modifier = {
-				tag = JAP
-				factor = 5
+			add = 2
+				or = {
+					original_tag = GER
+					original_tag = AST
+					original_tag = INS
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
 			}
 		}
 
@@ -1200,27 +1135,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				factor = 0
-				date < 1937.1.1
-			}
-			modifier = {
-				has_navy_size = { size < 10 }
-				factor = 0.1
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1255,23 +1178,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 0
 			modifier = {
-				factor = 0
-				date < 1939.1.1
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1307,23 +1222,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 0
 			modifier = {
-				factor = 0
-				date < 1941.1.1
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1372,35 +1279,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_navy_size = { size < 10 }
-				factor = 0.1
-			}
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			
-			modifier = {				
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = JAP
-					tag = ITA
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				factor = 5
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1939.1.1
+				factor = 1
 			}
 		}
 
@@ -1443,31 +1330,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			
-			modifier = {				
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = JAP
-					tag = ITA
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				date > 1939.1.1
-				factor = 5
-			}
-			
-			modifier = {
-				factor = 2
-				date > 1940.1.1
-			}
-
-			modifier = {
-				factor = 2
-				date > 1941.1.1
+				factor = 1
 			}
 		}
 
@@ -1514,24 +1385,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {				
 				OR = {
-					tag = USA
-					tag = ENG
-					tag = JAP
-					tag = ITA
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
 				}
-				date > 1941.1.1
-				factor = 5
-			}
-			modifier = {
-				factor = 0.1
-				original_tag = GER				
+				factor = 1
 			}
 		}
 
@@ -1553,6 +1415,483 @@ technologies = {
 #   #  #  #  # #     #
 #   # ### #  # ### ##
 
+	basic_naval_mines = {
+
+		research_cost = 2
+
+		start_year = 1922
+
+		enable_equipment_modules = {
+			ship_mine_layer_1
+		}
+
+		enable_equipment_modules = {
+			ship_mine_sweeper_1
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+					tag = SOV
+				}
+				factor = 6
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				is_major = no
+				factor = 2
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	submarine_mine_laying = {
+
+		research_cost = 2
+
+		start_year = 1922
+
+		path = {
+			leads_to_tech = improved_submarine_mine_laying
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			ship_mine_layer_sub
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 2 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+					tag = SOV
+				}
+				factor = 6
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+			ship_modules_tech
+			mio_cat_tech_all_submarine_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	improved_submarine_mine_laying = {
+
+		research_cost = 2
+
+		start_year = 1940
+
+		submarine = {
+			mines_planting = 0.2
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 2 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+					tag = SOV
+				}
+				factor = 6
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+			ship_modules_tech
+			mio_cat_tech_all_submarine_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	improved_naval_mines = {
+
+		research_cost = 2
+
+		start_year = 1936
+
+		path = {
+			leads_to_tech = advanced_naval_mines
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = degaussing
+			research_cost_coeff = 1
+		}
+
+
+
+		naval_mines_damage_factor = 0.3 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+					tag = SOV
+				}
+				factor = 4
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				is_major = no
+				factor = 2
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	degaussing = {
+
+		research_cost = 1
+
+		start_year = 1938
+
+		naval_mines_effect_reduction = 0.5
+
+
+		destroyer = {
+			sub_detection = 0.1
+			}
+		light_cruiser = {
+			sub_detection = 0.1
+			}
+		heavy_cruiser = {
+			sub_detection = 0.1
+			}
+			
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 1 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+					tag = SOV
+				}
+				factor = 5
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minesweeping
+			naval_equipment
+			mio_cat_tech_all_capital_ship_and_modules
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_submarine_and_modules
+			mio_cat_tech_all_carrier_and_modules
+			mio_cat_tech_all_cruiser_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	advanced_naval_mines = {
+
+		research_cost = 2
+
+		start_year = 1940
+
+		#path = {
+		#	leads_to_tech = modern_naval_mines
+		#	research_cost_coeff = 1
+		#}
+
+		path = {
+			leads_to_tech = airdrop_mines
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airdrop_mines_bba
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airsweep_mines_bba
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airsweep_mines
+			research_cost_coeff = 1
+		}
+
+		naval_mines_damage_factor = 0.3 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 13 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = USA
+					tag = ENG
+				}
+				factor = 5
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules
+			mio_cat_tech_all_destroyer_and_modules
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	airdrop_mines = {
+		allow_branch = {
+			NOT = { has_dlc = "By Blood Alone" }
+		}
+
+		research_cost = 2
+
+		start_year = 1942
+
+		category_nav_bomber = {
+			mines_planting = 0.05
+		}
+		category_tac_bomber = {
+			mines_planting = 0.08
+		}
+		category_strat_bomber = {
+			mines_planting = 0.13
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 2 y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+				}
+				factor = 7
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	airdrop_mines_bba = {
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+		}
+
+
+		research_cost = 1
+
+		start_year = 1942
+
+		enable_equipment_modules = {
+			airdropped_mines
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 2 y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = GER
+					tag = USA
+					tag = ENG
+				}
+				factor = 7
+			}
+		}
+
+		categories = {
+			naval_mines
+			naval_minelaying
+			naval_equipment
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	#modern_naval_mines = {
+
+	#	research_cost = 2
+
+	#	start_year = 1945
+
+	#	path = {
+	#		leads_to_tech = airsweep_mines
+	#		research_cost_coeff = 1
+	#	}
+	#	path = {
+	#		leads_to_tech = airsweep_mines_bba
+	#		research_cost_coeff = 1
+	#	}
+
+	#	naval_mines_damage_factor = 0.2 # more boom for the boom box
+	#	folder = {
+	#		name = mtgnavalsupportfolder
+	#		position = { x = 0 y = 19 }
+	#	}
+
+	#	ai_will_do = {
+	#		factor = 1
+	#		modifier = {
+	#			tag = USA
+	#			factor = 3
+	#		}
+	#	}
+
+	#	categories = {
+	#		naval_mines
+	#		naval_minelaying
+	#		naval_equipment
+	#		mio_cat_tech_all_screen_ship_and_modules
+	#		mio_cat_tech_all_cruiser_and_modules
+	#		mio_cat_tech_all_destroyer_and_modules
+	#	}
+	#	special_project_specialization = { specialization_naval }
+	#}
+
+	airsweep_mines = {
+		allow_branch = {
+			NOT = { has_dlc = "By Blood Alone" }
+		}
+
+		research_cost = 2
+
+		start_year = 1942
+
+		category_nav_bomber = {
+			mines_sweeping = 0.1
+		}
+
+		category_tac_bomber = {
+			mines_sweeping = 0.15
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_mines
+			naval_minesweeping
+			naval_equipment
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
+	airsweep_mines_bba = {
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+		}
+
+		research_cost = 1
+
+		start_year = 1942
+
+		enable_equipment_modules = {
+			demining_coil
+		}
+
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_mines
+			naval_minesweeping
+			naval_equipment
+		}
+		special_project_specialization = { specialization_naval }
+	}
+
 	mtg_transport = { 
 
 		transport_capacity = -0.33
@@ -1567,8 +1906,6 @@ technologies = {
 			}
 		}
 
-
-
 		path = {
 			leads_to_tech = mtg_landing_craft
 			research_cost_coeff = 1
@@ -1579,39 +1916,24 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 
-		research_cost = 0.25
+		research_cost = 0.5
 		start_year = 1922
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 1 }
+			position = { x = 0 y = 1 }
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			modifier = {
-				has_war_with = JAP
-				factor = 2
-			}
-
-			modifier = {
-				factor = 3
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1632,14 +1954,14 @@ technologies = {
 		#naval_invasion_capacity = 20
 
 		path = {
-			leads_to_tech = sp_improved_support_ship
-			research_cost_coeff = 1
-		}
-		path = {
 			leads_to_tech = mtg_tank_landing_craft
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = sp_improved_support_ship
+			research_cost_coeff = 1
+		}
 
 		enable_equipments = {
 			floating_harbor_equipment_1
@@ -1647,35 +1969,24 @@ technologies = {
 		force_use_small_tech_layout = yes
 		show_equipment_icon = yes
 
-		research_cost = 2
-		start_year = 1938
+		research_cost = 1.5
+		start_year = 1939
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 10 }
+			position = { x = 0 y = 13 }
 		}
 
 		ai_will_do = {
-			factor = 5
-
+			factor = 0
 			modifier = {
-				factor = 0.1
-				has_war = no
-			}
-
-			modifier = {
-				factor = 15
-				tag = USA				
-				date > 1942.1.1
-			}
-			modifier = {
-				factor = 15
-				tag = ENG				
-				date > 1941.6.1
-			}
-			modifier = {
-				factor = 15
-				tag = JAP
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1696,36 +2007,22 @@ technologies = {
 		#naval_invasion_capacity = 100
 
 		research_cost = 2
-		start_year = 1940
+		start_year = 1941
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 13 }
+			position = { x = 0 y = 16 }
 		}
 
 		ai_will_do = {
-			factor = 2
-
+			factor = 0
 			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-
-			modifier = {
-				factor = 20
-				tag = USA
-			}
-			modifier = {
-				factor = 2
-				has_war_with = JAP
-			}
-			modifier = {
-				factor = 3
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
+				OR = {
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+				factor = 1
 			}
 		}
 
@@ -1766,12 +2063,12 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 4 y = 10 }
+			position = { x = 1 y = 10 }
 		}
 
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = 10 }
+			position = { x = 1 y = 10 }
 		}		
 
 		categories = {
@@ -1799,15 +2096,15 @@ technologies = {
 		xp_boost_cost = 75
 		xp_research_bonus = 1.5
 		research_cost = 2.5
-		start_year = 1940
+		start_year = 1941
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 4 y = 13 }
+			position = { x = 1 y = 14 }
 		}
 
 		folder = {
 			name = naval_folder
-			position = { x = 4 y = 17 }
+			position = { x = 1 y = 17 }
 		}		
 
 		categories = {
@@ -1843,7 +2140,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 17 }
+			position = { x = -2 y = 17 }
 		}
 
 		categories = {

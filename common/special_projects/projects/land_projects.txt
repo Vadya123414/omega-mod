@@ -1090,9 +1090,9 @@ sp_land_self_propelled_super_heavy_howitzer = {
 		sp_land_super_heavy_howitzer
 	}
 	
-	prototype_time = sp_time.prototype.medium
+	prototype_time = sp_time.prototype.short
 
-	complexity = sp_complexity.medium
+	complexity = sp_complexity.small
 
 	breakthrough_cost = {
 		specialization_land = 1

@@ -6,6 +6,9 @@ state = {
 	state_category = rural
 
 	history = {
+		victory_points = {
+			11153 1
+		}
 
 		owner = SOV
 		add_core_of = SOV

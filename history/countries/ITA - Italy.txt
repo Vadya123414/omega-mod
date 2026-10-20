@@ -31,6 +31,12 @@ IF = {
 	}
 }
 
+1936.1.1.13 = {
+	add_ideas = {
+		no_farm_gen
+	}
+}
+
 add_ideas = {
 	vittorio_emanuele
 	vittoria_mutilata

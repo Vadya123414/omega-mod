@@ -1141,7 +1141,7 @@ technologies = {
 			}
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = electronics_folder
@@ -1149,7 +1149,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		categories = {
@@ -1172,15 +1172,15 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1938
+		research_cost = 1
+		start_year = 1937
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		categories = {
@@ -1194,15 +1194,15 @@ technologies = {
 
 		bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1940
+		research_cost = 1
+		start_year = 1939
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 10 }
+			position = { x = 0 y = 8 }
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		categories = {
@@ -1223,37 +1223,35 @@ technologies = {
 
 		coastal_bunker_max_level_terrain_limit = 1
 		
-		research_cost = 1.5
-		start_year = 1936
+		research_cost = 1
+		start_year = 1937
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 2 }
+			position = { x = 2 y = 4 }
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		categories = {
 			cat_fortification
 		}
-		
-
 	}
 
 	coastal_fort_tech_2 = {
 
 		coastal_bunker_max_level_terrain_limit = 2
 		
-		research_cost = 1.5
-		start_year = 1940
+		research_cost = 1
+		start_year = 1939
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 10 }
+			position = { x = 2 y = 8 }
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		categories = {
@@ -1419,21 +1417,23 @@ technologies = {
 			air_range = 0.25
 		}
 
-		rocket_artillery = {
+		#rocket_artillery = {
+		#	soft_attack = 0.1
+		#}
+		#rocket_artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		#mot_rocket_artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		#motorized_rocket_brigade = {
+		#	soft_attack = 0.1
+		#}
+		category_rocket_artillery = {
 			soft_attack = 0.1
 		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.1
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.1
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.1
-		}
-		
 		rocket_battery = {
-			soft_attack = 0.1
+			soft_attack = 0.05
 		}
 
 		research_cost = 1

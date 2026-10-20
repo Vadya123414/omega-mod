@@ -1,0 +1,1472 @@
+﻿add_namespace = debaf_pexa
+
+news_event = {
+	id = debaf_pexa.1
+	title = debaf_pexa.1.t
+	desc = debaf_pexa.1.desc
+	picture = GFX_news_event_soviet_soldiers_ruins
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = debaf_pexa.1.a
+		
+        add_ideas = debaf_pexa_ideas
+	}
+}
+
+add_namespace = obuchenie
+
+country_event = {
+	id = obuchenie.1
+	title = obuchenie.1.t
+	desc = obuchenie.1.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.1.a
+
+	}
+}
+
+add_namespace = napoleon
+
+news_event = {
+	id = napoleon.1
+	title = napoleon.1.t
+	desc = napoleon.1.desc
+	picture = GFX_news_event_047
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = napoleon.1.a
+	}
+}
+
+add_namespace = priglos_v_alik
+
+country_event = {
+	id = priglos_v_alik.1
+	title = priglos_v_alik.1.t
+	desc = priglos_v_alik.1.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Согласиться
+		name = generic.5.a
+		ai_chance = { base = 100 }
+
+		FROM = {
+			faction_leader = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+
+	option = { # Отказаться
+		name = priglos_v_alik.1.b
+		ai_chance = { base = 0 }
+		# Ничего не происходит
+	}
+}
+
+add_namespace = my_coalition
+
+# === Событие для Франции: уведомление о коалиции ===
+country_event = {
+    id = my_coalition.1
+    title = my_coalition.1.t
+    desc = my_coalition.1.d
+    picture = GFX_report_event_FIN_finnish_generals
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.1.a
+        # Ничего не делаем — просто уведомление
+    }
+}
+
+# === Событие для стран коалиции: появилось решение ===
+country_event = {
+    id = my_coalition.2
+    title = my_coalition.2.t
+    desc = my_coalition.2.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.2.a
+        # Просто уведомление
+		ROOT = {
+			set_country_flag = coalition_mission_active
+		}
+    }
+}
+
+# === Событие для СССР: появилась миссия ===
+country_event = {
+    id = my_coalition.3
+    title = my_coalition.3.t
+    desc = my_coalition.3.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.3.a
+		ROOT = {
+			set_country_flag = sov_coalition_mission_active
+		}
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии Франции ===
+country_event = {
+    id = my_coalition.4
+    title = my_coalition.4.t
+    desc = my_coalition.4.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.4.a
+    }
+}
+
+# === НОВОЕ: Событие при истечении миссии СССР (если не отказался) ===
+country_event = {
+    id = my_coalition.5
+    title = my_coalition.5.t
+    desc = my_coalition.5.d
+    picture = GFX_report_event_generic_political_action
+
+    is_triggered_only = yes
+
+    option = {
+        name = my_coalition.5.a
+		declare_war_on = {
+                target = FRA
+                type = annex_everything
+            }
+			add_ideas = FRA_coalition
+    }
+
+	option = {
+        name = my_coalition.5.b
+    }
+}
+
+country_event = {
+	id = my_coalition.6
+	title = my_coalition.6.t
+	desc = my_coalition.6.d
+	picture = GFX_report_event_industry_collapse 
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_coalition.6.a
+		add_to_variable = { capacity_factor_dockyard = -0.25 tooltip = industrial_capacity_dockyard_tt }
+		add_to_variable = { capacity_factor_arms = -0.25 tooltip = industrial_capacity_factory_tt }
+	}
+}
+
+country_event = {
+	id = my_coalition.7
+	title = my_coalition.7.t
+	desc = my_coalition.7.d
+	picture = GFX_report_event_industry_collapse
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_coalition.7.a
+		set_country_flag = fra_refused_to_capitulate_punishment
+        
+        custom_effect_tooltip = fra_la_deluge_change_tt
+        hidden_effect = {
+            set_variable = { capacity_factor_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+		    set_variable = { capacity_factor_arms = 0.15 tooltip = industrial_capacity_factory_tt }
+        }
+	}
+}
+
+
+add_namespace = fra_leave
+
+country_event = {
+    id = fra_leave.1
+    hidden = yes # Ивент скрыт от игрока, нет всплывающего окна
+
+    trigger = {
+        tag = FRA
+        has_completed_focus = FRA_proclaim_the_third_empire
+        is_in_faction = yes                                
+        is_faction_leader = no                          
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    immediate = {
+        leave_faction = yes
+    }
+}
+
+add_namespace = faterland
+
+country_event = { 
+    id = faterland.a 
+    desc = faterland.t
+    title = faterland.d
+    picture = GFX_report_event_GER_goebbels
+    
+    trigger = { 
+	    tag = GER 
+		
+		GER = {
+		  surrender_progress > 0.1
+		}
+        
+    }
+	
+	
+    mean_time_to_happen = { 
+        days = 10 
+    }
+	
+	
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 30 
+    hidden = no 
+
+    option = {
+		name = faterland.b
+	   add_ideas = GER_za_faterland
+   }
+}
+
+add_namespace = cumbek
+
+country_event = { 
+    id = cumbek.a
+    desc = cumbek.t
+    title = cumbek.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 208 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 208
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	264 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 24
+		}
+	}
+   }
+}
+add_namespace = cumbek2
+
+country_event = { 
+    id = cumbek2.a
+    desc = cumbek2.t
+    title = cumbek2.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 242 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 242
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek2.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	219 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 24
+		}
+	}
+    }
+}
+add_namespace = cumbek3
+
+country_event = { 
+    id = cumbek3.a
+    desc = cumbek3.t
+    title = cumbek3.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 220 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 220
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek3.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	257 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 24
+		}
+	}
+   }
+}
+add_namespace = cumbek4
+
+country_event = { 
+    id = cumbek4.a
+    desc = cumbek4.t
+    title = cumbek4.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 227 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 227
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek4.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	217 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 24
+		}
+	}
+   }
+}
+add_namespace = cumbek5
+
+country_event = { 
+    id = cumbek5.a
+    desc = cumbek5.t
+    title = cumbek5.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 200 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 200
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek5.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	218 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 6
+		}
+	}
+   }
+}
+
+add_namespace = cumbek6
+
+country_event = { 
+    id = cumbek6.a
+    desc = cumbek6.t
+    title = cumbek6.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 225 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 225
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek6.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	260 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 6
+		}
+	}
+   }
+}
+
+add_namespace = cumbek7
+
+country_event = { 
+    id = cumbek7.a
+    desc = cumbek7.t
+    title = cumbek7.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+		OR = {
+			GER = { controls_state = 224 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 224
+			}
+		}
+		OR = {
+			GER = { controls_state = 243 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 243
+			}
+		}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek7.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	205 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 6
+		}
+	}
+   }
+}
+
+add_namespace = cumbek8
+
+country_event = { 
+    id = cumbek8.a
+    desc = cumbek8.t
+    title = cumbek8.d
+
+
+    trigger = { 
+        tag = SOV
+		has_country_flag = VUP_Hist_version
+		OR = {
+			GER = { controls_state = 810 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 810
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = cumbek8.1.a
+	division_template = {
+		name = "Красногвардейцы" 	
+		division_names_group = FRA_ARM_01
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+		}
+		support = {
+			artillery = { x = 0 y = 1 }
+			engineer = { x = 0 y = 0 }
+			anti_tank = { x = 0 y = 2 }
+			anti_air = { x = 0 y = 3 }
+		}
+	}
+	208 = {
+		create_unit = {
+			division = "name = \"Красногвардейцы\" division_template = \"Красногвардейцы\" start_experience_factor = 0.55 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 6
+		}
+	}
+   }
+}
+
+add_namespace = ger_cumbek
+
+country_event = { 
+    id = ger_cumbek.a
+    desc = ger_cumbek.t
+    title = ger_cumbek.d
+
+
+    trigger = { 
+        tag = GER
+		has_country_flag = VUP_Hist_version
+		NOT = { has_idea = GER_barbarossa }
+		has_war_with = SOV
+		OR = {
+		5 = { is_controlled_by = SOV }
+		92 = { is_controlled_by = SOV }
+		85 = { is_controlled_by = SOV }
+		98 = { is_controlled_by = SOV }
+		10 = { is_controlled_by = SOV }
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = ger_cumbek.1.a
+	
+			division_template = {
+				name = "Фольксштурм" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		}
+				support = {
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 0 }
+					anti_tank = { x = 0 y = 2 }
+				}
+			}
+			87 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			86 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			63 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			762 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+   }
+}
+
+add_namespace = ger_cumbek1
+
+country_event = { 
+    id = ger_cumbek1.a
+    desc = ger_cumbek1.t
+    title = ger_cumbek1.d
+
+
+    trigger = { 
+        tag = GER
+		has_country_flag = VUP_Hist_version
+		NOT = { has_idea = GER_barbarossa }
+		has_war_with = SOV
+		91 = { is_controlled_by = SOV }
+		89 = { is_controlled_by = SOV }
+		90 = { is_controlled_by = SOV }
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = ger_cumbek1.1.a
+	
+			division_template = {
+				name = "Фольксштурм" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		}
+				support = {
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 0 }
+					anti_tank = { x = 0 y = 2 }
+				}
+			}
+			71 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			72 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			73 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+   }
+}
+
+add_namespace = ger_cumbek2
+
+country_event = { 
+    id = ger_cumbek2.a
+    desc = ger_cumbek2.t
+    title = ger_cumbek2.d
+
+
+    trigger = { 
+        tag = GER
+		has_country_flag = VUP_Hist_version
+		NOT = { has_idea = GER_barbarossa }
+		has_war_with = SOV
+		OR = {
+		78 = { is_controlled_by = SOV }
+		766 = { is_controlled_by = SOV }
+		80 = { is_controlled_by = SOV }
+		89 = { is_controlled_by = SOV }
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 20
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = ger_cumbek2.1.a
+	
+			division_template = {
+				name = "Фольксштурм" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		}
+				support = {
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 0 }
+					anti_tank = { x = 0 y = 2 }
+				}
+			}
+			46 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 12
+				}
+			}
+			76 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+   }
+}
+
+add_namespace = ger_cumbek3
+
+country_event = { 
+    id = ger_cumbek3.a
+    desc = ger_cumbek3.t
+    title = ger_cumbek3.d
+
+
+    trigger = { 
+        tag = GER
+		has_country_flag = VUP_Hist_version
+		NOT = { has_idea = GER_barbarossa }
+		has_war_with = SOV
+		OR = {
+			NOT = {
+				15 = { is_controlled_by = GER }
+		        16 = { is_controlled_by = GER }
+		        27 = { is_controlled_by = GER }
+			}
+		}
+    }
+
+
+    mean_time_to_happen = { 
+        days = 1
+    }
+
+
+    is_triggered_only = no
+    fire_only_once = yes
+    timeout_days = 5 
+    hidden = no 
+
+    option = {
+	name = ger_cumbek3.1.a
+	
+			division_template = {
+				name = "Фольксштурм" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		}
+				support = {
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 0 }
+					anti_tank = { x = 0 y = 2 }
+				}
+			}
+			28 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 12
+				}
+			}
+			8 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+			51 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 12
+				}
+			}
+			36 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 8
+				}
+			}
+			7 = {
+				create_unit = {
+					division = "name = \"Фольксштурм\" division_template = \"Фольксштурм\" start_experience_factor = 0.35 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 6
+				}
+			}
+   }
+}
+
+add_namespace = news_ost_west
+
+news_event = {
+	id = news_ost_west.1
+	title = news_ost_west.1.t
+	desc = news_ost_west.1.desc
+	picture = GFX_news_event_047
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.1.a
+	}
+	option = {
+		name = news_ost_west.1.b
+	}
+}
+
+news_event = {
+	id = news_ost_west.2
+	title = news_ost_west.2.t
+	desc = news_ost_west.2.desc
+	picture = GFX_news_event_008
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.2.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.3
+	title = news_ost_west.3.t
+	desc = news_ost_west.3.desc
+	picture = GFX_news_event_generic_panzer_attack
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.3.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.4
+	title = news_ost_west.4.t
+	desc = news_ost_west.4.desc
+	picture = GFX_news_event_GER_bombers
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.4.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.5
+	title = news_ost_west.5.t
+	desc = news_ost_west.5.desc
+	picture = GFX_news_event_hungarian_soldiers
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.5.a
+	}
+}
+news_event = {
+	id = news_ost_west.6
+	title = news_ost_west.6.t
+	desc = news_ost_west.6.desc
+	picture = GFX_news_event_FIN_continuation_war_murmansk
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.6.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.7
+	title = news_ost_west.7.t
+	desc = news_ost_west.7.desc
+	picture = GFX_news_event_SOV_invasion_iran
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.7.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.8
+	title = news_ost_west.8.t
+	desc = news_ost_west.8.desc
+	picture = GFX_news_event_generic_fall_of_budapest
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.8.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.9
+	title = news_ost_west.9.t
+	desc = news_ost_west.9.desc
+	picture = GFX_news_event_004
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.9.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.10
+	title = news_ost_west.10.t
+	desc = news_ost_west.10.desc
+	picture = news_ost_west.3
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.10.a
+	}
+}
+
+news_event = {
+	id = news_ost_west.11
+	title = news_ost_west.11.t
+	desc = news_ost_west.11.desc
+	picture = GFX_news_event_german_officers
+	
+    major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ost_west.11.a
+	}
+}
+
+add_namespace = capcap_ger_sov
+
+country_event = { 
+    id = capcap_ger_sov.a
+    desc = capcap_ger_sov.d
+    title = capcap_ger_sov.t
+	picture = GFX_report_event_SWE_defense_act
+
+
+    mean_time_to_happen = { 
+        days = 10 
+    }
+
+
+    is_triggered_only = yes
+    fire_only_once = yes
+    timeout_days = 30 
+    hidden = no  
+
+    option = {
+        name = capcap_ger_sov.1.a
+		ROM = {
+			transfer_state = 192
+			transfer_state = 834
+			transfer_state = 198
+			transfer_state = 80
+			transfer_state = 78
+			transfer_state = 766
+		} 
+		FIN = {
+			transfer_state = 146
+			transfer_state = 216
+			transfer_state = 215
+			transfer_state = 213
+			transfer_state = 147
+		}
+		transfer_state = 199
+		transfer_state = 201
+		transfer_state = 202
+		transfer_state = 203
+		transfer_state = 197
+		transfer_state = 196
+		transfer_state = 137
+		transfer_state = 200
+		transfer_state = 226
+		transfer_state = 259
+		transfer_state = 193
+		transfer_state = 194
+		transfer_state = 227
+		transfer_state = 218
+		transfer_state = 228
+		transfer_state = 221
+		transfer_state = 225
+		transfer_state = 220
+		transfer_state = 240
+		transfer_state = 260
+		transfer_state = 265
+		transfer_state = 245
+		transfer_state = 217
+		transfer_state = 236
+		transfer_state = 237
+		transfer_state = 238
+		transfer_state = 829
+		transfer_state = 880
+		transfer_state = 214
+		transfer_state = 243
+		transfer_state = 246
+		transfer_state = 879
+		transfer_state = 351
+		transfer_state = 264
+		transfer_state = 195
+		transfer_state = 244
+		transfer_state = 208
+		transfer_state = 209
+		transfer_state = 263
+		transfer_state = 247
+		transfer_state = 248
+		transfer_state = 253
+		transfer_state = 252
+		transfer_state = 256
+		transfer_state = 833
+		transfer_state = 250
+		transfer_state = 255
+		transfer_state = 239
+		transfer_state = 257
+		transfer_state = 254
+		transfer_state = 219
+		transfer_state = 242
+		transfer_state = 223
+		transfer_state = 205
+		transfer_state = 258
+		transfer_state = 222
+		transfer_state = 224
+		transfer_state = 241
+		transfer_state = 204
+		transfer_state = 206
+		transfer_state = 207
+		transfer_state = 210
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 232
+		transfer_state = 821
+		transfer_state = 828
+		transfer_state = 827
+		transfer_state = 233
+		transfer_state = 826
+		transfer_state = 231
+		transfer_state = 230
+		transfer_state = 229
+		
+		transfer_state = 813
+		transfer_state = 812
+		transfer_state = 811
+		transfer_state = 13
+		transfer_state = 191
+		transfer_state = 810
+		transfer_state = 12
+		transfer_state = 808
+		transfer_state = 809
+		transfer_state = 190
+
+		transfer_state = 189
+		transfer_state = 815
+		transfer_state = 11
+		transfer_state = 814
+		transfer_state = 784
+		transfer_state = 96
+
+		transfer_state = 95
+		transfer_state = 97
+		transfer_state = 94
+		transfer_state = 93
+		transfer_state = 91
+		transfer_state = 89
+
+		if = {
+			limit = {
+				SOV = {
+					has_war_with = JAP
+				}
+			}
+			JAP = {
+				transfer_state = 409
+				transfer_state = 408
+				transfer_state = 655
+				transfer_state = 657
+				transfer_state = 560
+				transfer_state = 562
+				transfer_state = 874
+				transfer_state = 822
+				transfer_state = 875
+				transfer_state = 637
+				transfer_state = 561
+			}
+		}
+		every_country = {
+			limit = {
+				has_war_with = SOV
+			}
+			white_peace = SOV
+		}
+   }
+}
+add_namespace = vichy_war
+
+# Ивент для Вишистской Франции
+country_event = {
+	id = vichy_war.1
+	title = vichy_war.1.t
+	desc = vichy_war.1.d
+	picture = GFX_report_event_french_soldiers
+
+	trigger = {
+		tag = VIC
+		FRA = { exists = yes } 
+		NOT = { has_war_with = FRA }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = vichy_war.1.a
+		ai_chance = {
+			base = 100 
+		}
+		declare_war_on = {
+			target = FRA
+			type = annex_everything
+		}
+	}
+}

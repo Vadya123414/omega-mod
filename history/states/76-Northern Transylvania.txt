@@ -6,6 +6,9 @@ state = {
 	state_category = town
 	
 	history = {
+		victory_points = {
+			3696 1
+		}
 
 		owner = ROM
 		add_core_of = ROM
