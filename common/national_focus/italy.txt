@@ -16629,6 +16629,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_global_flag = ITA_antifascist_civil_war_triggered_flag }
 			date < 1937.1.1
 			has_civil_war = no

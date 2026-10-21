@@ -6866,23 +6866,27 @@ default = no
 		completion_reward = {
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						NOT = { is_subject_of = ENG }
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_unified
 				news_event = { id = mtg_news.8 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						is_subject_of = ENG
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			custom_effect_tooltip = infa_annex_imperka
 			hidden_effect = {
 			if = {
