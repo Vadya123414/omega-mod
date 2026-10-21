@@ -28,9 +28,10 @@ sov_strategy_arms_factory_building = {
 	}
 
 }
-MINOR_strategy_industrial_complex_building = {
+MINOR_strategy_industrial_complex_building_nonhist = {
 		enable = {
 			AND = {
+					not = {has_global_flag = VUP_Hist_version}
 					not = {original_tag = AST}
 					not = {original_tag = PHI}
 					not = {original_tag = USA}
@@ -51,9 +52,10 @@ MINOR_strategy_industrial_complex_building = {
 	}
 }
 
-MINOR_strategy_arms_factory_building = {
+MINOR_strategy_arms_factory_building_nonhist  = {
 		enable = {
 				AND = {
+					not = {has_global_flag = VUP_Hist_version}
 					not = {original_tag = AST}
 					not = {original_tag = PHI}
 						not = {original_tag = USA}
@@ -64,6 +66,53 @@ MINOR_strategy_arms_factory_building = {
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
 				date > 1936.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+MINOR_strategy_industrial_complex_building_hist = {
+		enable = {
+			AND = {
+					has_global_flag = VUP_Hist_version
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
+					not = {original_tag = USA}
+					not = {original_tag = ITA}
+					not = {original_tag = GER}
+					not = {original_tag = ENG}
+					not = {original_tag = FRA}
+					not = {original_tag = SOV}
+					not = {original_tag = JAP}
+					date < 1937.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+MINOR_strategy_arms_factory_building_hist = {
+		enable = {
+				AND = {
+					has_global_flag = VUP_Hist_version
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
+						not = {original_tag = USA}
+						not = {original_tag = ITA}
+						not = {original_tag = GER}
+						not = {original_tag = ENG}
+						not = {original_tag = FRA}
+						not = {original_tag = SOV}
+						not = {original_tag = JAP}
+				date > 1937.10.1
 				}
 		}
 	abort_when_not_enabled = no

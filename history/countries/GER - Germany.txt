@@ -436,6 +436,7 @@ IF = {
 set_war_support = 0.3
 1936.1.1.13 = {
 	set_research_slots = 5
+	set_global_flag = VUP_Hist_version
 }
 
 
