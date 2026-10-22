@@ -2104,9 +2104,8 @@ focus_tree = {
 		id = YUG_invite_german_military_mission
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = YUG_join_axis }
-		x = 0
-		y = 2
-		relative_position_id = YUG_join_axis
+		x = 4
+		y = 9
 
 		cost = 5
 

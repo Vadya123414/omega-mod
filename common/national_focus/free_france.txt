@@ -174,6 +174,7 @@
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
+					has_resistance = yes
 					OR = {
 						state = 557
 						state = 272
@@ -226,6 +227,7 @@
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
+					has_resistance = yes
 					OR = {
 						state = 677
 						state = 680
@@ -274,6 +276,7 @@
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
+					has_resistance = yes
 					OR = {
 						state = 772
 						state = 539
@@ -331,7 +334,7 @@
 			VIC = { country_event = LaR_france_vichy_notification_events.6 }
 			transfer_state = 543
 			543 = {
-				add_compliance = 5
+				if = { limit = { has_resistance = yes } add_compliance = 5 }
 			}
 		}	
 	}
@@ -347,7 +350,6 @@
 		prerequisite = { 
 			focus = FRA_intervention_in_madagascar
 			focus = FRA_intervention_in_syria
-			focus = FRA_intervention_in_indochina
 			focus = FRA_intervention_in_north_africa
 			focus = FRA_intervention_in_west_africa
 			focus = FRA_intervention_in_central_africa

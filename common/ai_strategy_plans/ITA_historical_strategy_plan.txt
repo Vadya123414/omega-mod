@@ -90,13 +90,11 @@ ITA_historical_plan = {
 		#1941 (Apr -> Invasion of Yugoslavia)
 		ITA_milizia_marittima_di_artiglieria
 		ITA_supermarina #35 Jun 40
-		ITA_army_leaders_b
 		ITA_italian_tankettes
 		ITA_ministero_della_cultura_popolare #35
 		ITA_believe_obey_fight #35
 
 		#1942
-		ITA_self_propelled_guns_b
 		ITA_modernize_ansaldo_facilities
 
 		#1943

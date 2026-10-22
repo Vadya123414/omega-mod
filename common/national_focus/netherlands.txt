@@ -4330,7 +4330,6 @@ focus_tree = {
 				free_building_slots = {
 					building = fuel_silo
 					size > 1
-					include_locked = yes
 				}
 			}
 		}

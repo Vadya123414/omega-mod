@@ -3,6 +3,7 @@ boost_div_upgrades = {
 		always = yes
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = land_xp_spend_priority
 		id = division_template
@@ -16,6 +17,7 @@ default_air_production = {
 		has_tech = engines_3
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
@@ -42,6 +44,7 @@ default_air_production = {
 		always = yes
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = unit_ratio
 		id = armor
@@ -153,6 +156,7 @@ default_unit_production = {
 		always = yes
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = { 
 		type = railway_gun_divisions_ratio
 		value = 1
@@ -393,11 +397,9 @@ default_major_SF_marines = {
 
 default_garrison_production = {
 	enable = {
-		available = {
 			any_controlled_state = {
 				is_coastal = yes
 			}
-		}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
 	}
@@ -656,8 +658,8 @@ build_intelligence_agency_as_major = {
 }
 
 build_intelligence_agency = {
-	is_major = no
 	enable = {
+		is_major = no
 		OR = {
 			has_war = yes
 			date > 1938.6.1

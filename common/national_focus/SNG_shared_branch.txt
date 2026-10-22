@@ -3,9 +3,8 @@ joint_focus = {
 	icon = GFX_focus_SOV_freedom_for_all
 	prerequisite = { focus = RUS_reconstruction }
 	prerequisite = { focus = RUS_liberate }
-	x = 0
-	y = 2
-	relative_position_id = RUS_liberate
+	x = 136
+	y = 15
 	cost = 5
 	ai_will_do = {
 		factor = 1
@@ -434,7 +433,7 @@ joint_focus = {
             }
             create_corps_commander = {
                 name = "Viktar Herasimov"
-                traits = { guerrilla_fighter inspirational_leader }
+                traits = { guerilla_fighter inspirational_leader }
                 skill = 6
                 attack_skill = 6
                 defense_skill = 5
@@ -1357,9 +1356,8 @@ joint_focus = {
     icon = GFX_focus_research2
     prerequisite = { focus = EAEU_research_cooperation }
     prerequisite = { focus = EAEU_temporary_boost }
-    x = 1
-    y = 1
-    relative_position_id = EAEU_research_cooperation
+    x = 144
+    y = 17
     cost = 5
     text_icon = SNG_style
 
@@ -1558,9 +1556,8 @@ joint_focus = {
     id = EAEU_dal
     icon = GFX_focus_generic_advisors
     prerequisite = { focus = EAEU_second_institution }
-    x = 2
-    y = 1
-    relative_position_id = EAEU_second_institution
+    x = 134
+    y = 22
     cost = 5
     text_icon = SNG_style
 
@@ -2157,7 +2154,6 @@ joint_focus = {
     }
 
     completion_reward_joint_originator = {
-        add_dynamic_modifier = { modifier = EAEU_mil_industry_originator_dmod }
         random_owned_state = {
             limit = {
                 is_controlled_by = ROOT
@@ -2169,7 +2165,6 @@ joint_focus = {
     }
 
     completion_reward_joint_member = {
-        add_dynamic_modifier = { modifier = EAEU_mil_industry_member_dmod }
         random_owned_state = {
             limit = {
                 is_controlled_by = ROOT
@@ -2329,9 +2324,8 @@ joint_focus = {
     id = EAEU_naval_construction
     icon = GFX_goal_generic_construct_naval_dockyard
     prerequisite = { focus = EAEU_railway_expansion }
-    x = 0
-    y = 2
-    relative_position_id = EAEU_railway_expansion
+    x = 144
+    y = 21
     cost = 5
     text_icon = SNG_style
 

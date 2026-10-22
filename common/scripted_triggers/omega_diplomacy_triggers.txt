@@ -15,7 +15,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
     
     if = {
         limit = {
-            is_ai = not
+            is_ai = no
         }
         OR = {
         # Оправдание на ИИ с 1937
@@ -62,7 +62,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
     if = {
         limit = {
-            is_ai = not
+            is_ai = no
         }
     OR = {
             AND = {

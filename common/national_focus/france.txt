@@ -1108,11 +1108,10 @@
 	focus = {
 		id = FRA_division_cuirassee
 		icon = GFX_focus_generic_army_tanks2
-		x = -1
-		y = 1
+		x = 14
+		y = 8
 		
 		prerequisite = { focus = FRA_infantry_tanks focus = FRA_arta }
-		relative_position_id = FRA_infantry_tanks
 		cost = 10
 
 		ai_will_do = {
@@ -1135,11 +1134,10 @@
 	focus = { 
 		id = FRA_arta
 		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
-		x = -2
-		y = 1
+		x = 13
+		y = 7
 		
 		prerequisite = { focus = FRA_army_reform }
-		relative_position_id = FRA_army_reform
 		cost = 10
 
 		ai_will_do = {
@@ -1174,12 +1172,11 @@
 	focus = {
 		id = FRA_infantry_tanks
 		icon = GFX_focus_generic_combined_arms
-		x = 0
-		y = 1
+		x = 15
+		y = 7
 		
 		prerequisite = { focus = FRA_army_reform }
 		
-		relative_position_id = FRA_army_reform
 		cost = 5
 
 		ai_will_do = {
@@ -1214,12 +1211,11 @@
 	focus = {
 		id = FRA_special_forces
 		icon = GFX_goal_generic_special_forces
-		x = 2
-		y = 1
+		x = 17
+		y = 7
 		
 		prerequisite = { focus = FRA_army_reform }
 		mutually_exclusive = { }
-		relative_position_id = FRA_army_reform
 		cost = 5
 
 		ai_will_do = {
@@ -1537,7 +1533,6 @@
 		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { 
 			focus = FRA_light_medium_armor 
-			focus = FRA_heavy_armor_focus 
 			focus = FRA_extend_the_maginot_line
 			focus = FRA_flying_artillery
 		}
@@ -4409,9 +4404,9 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			If = {
+			if = {
 				limit = {
-					is_ai = No
+					is_ai = no
 				}
 				add_tech_bonus = {
 					name = FRA_laissez_faire
@@ -6911,13 +6906,12 @@
 	focus = {
 		id = FRA_royal_corpus
 		icon = GFX_focus_INS_evacuate_soldiers_to_australia
-		x = 2
-		y = 1
+		x = 66
+		y = 6
 		
 		prerequisite = {
 			focus = FRA_proclaim_the_third_empire
 		}
-		relative_position_id = FRA_the_legitimate_heir
 		cost = 5
 
 		available = {
@@ -6945,13 +6939,12 @@
 	focus = {
 		id = FRA_voina_budgetww
 		icon = GFX_focus_INS_economic_integration
-		x = -1
-		y = 1
+		x = 60
+		y = 6
 		
 		prerequisite = {
 			focus = FRA_orleanist_restoration
 		}
-		relative_position_id = FRA_orleanist_restoration
 		cost = 10
 
 		ai_will_do = {
@@ -7091,13 +7084,12 @@
 	focus = {
 		id = FRA_the_first_citizen_of_the_state
 		icon = GFX_focus_PER_constitutional_monarchy
-		x = 0
-		y = 1
+		x = 61
+		y = 8
 		
 		prerequisite = {
 			focus = FRA_counter_action
 		}
-		relative_position_id = FRA_counter_action
 		cost = 5
 
 		ai_will_do = {
@@ -7159,8 +7151,8 @@
 	focus = {
 		id = FRA_no_further_humiliations
 		icon = GFX_focus_SIA_the_midnight_meeting
-		x = -1
-		y = 1
+		x = 61
+		y = 10
 		
 		prerequisite = {
 			focus = FRA_public_welfare
@@ -7168,7 +7160,6 @@
 		prerequisite = {
 			focus = FRA_slum_clearing
 		}
-		relative_position_id = FRA_public_welfare
 		cost = 10
 
 		ai_will_do = {
@@ -7560,9 +7551,8 @@
 		id = HOL_lud
 		prerequisite = { focus = FRA_tree_crown focus = FRA_reorganize_the_dutch }
 		icon = GFX_focus_PER_strengthen_the_tudeh
-		x = 2
-		y = 1
-		relative_position_id = FRA_tree_crown
+		x = 66
+		y = 9
 		cost = 5
 
 		available_if_capitulated = yes
@@ -7826,8 +7816,8 @@
 	focus = {
 		id = FRA_podgotovka  
 		icon = GFX_focus_PER_increase_oil_sales
-		x = 3
-		y = 1
+		x = 71
+		y = 7
 		
 		prerequisite = {
 			focus = FRA_granic
@@ -7835,7 +7825,6 @@
 		prerequisite = {
 			focus = FRA_zakon
 		}
-		relative_position_id = FRA_granic
 		cost = 5
 
 		ai_will_do = {
@@ -7893,13 +7882,12 @@
 	focus = {
 		id = FRA_podgotovka2
 		icon = GFX_focus_BEL_interpreters
-		x = 0
-		y = 1
+		x = 68
+		y = 9
 		
 		prerequisite = {
 			focus = FRA_reorganize_the_dutch 
 		}
-		relative_position_id = FRA_reorganize_the_dutch
 		cost = 5
 
 		ai_will_do = {
@@ -7938,13 +7926,12 @@
 	focus = {
 		id = FRA_avenge_waterloo
 		icon = GFX_focus_BEL_dyle_plan
-		x = 1
-		y = 1
+		x = 69
+		y = 7
 		
 		prerequisite = {
 			focus = FRA_granic
 		}
-		relative_position_id = FRA_granic
 		cost = 5
 
 		ai_will_do = {

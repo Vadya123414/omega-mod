@@ -27,7 +27,6 @@ ROM_historical_weak = {
 	}
 
 	ai_national_focuses = {
-		ROM_oil_for_economic_investment
 		ROM_preserve_greater_romania
 		ROM_army_maneuvers
 		ROM_expand_the_air_force

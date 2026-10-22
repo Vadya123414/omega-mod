@@ -56,7 +56,7 @@ NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модиф�
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0; -- Орга когда двигаешь флот
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;      --100	-- Стоимость снятие гордости флота
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- Случайная поломка во время тренировки
-NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0.0-- Кол-во мин в рег
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0-- Кол-во мин в рег
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0	-- Скорость минирования
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
 NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0;    -- Шанс крита мин
@@ -237,7 +237,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0					-- Количество �
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.45
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.6 ---Размены в воздухе(ванила = 1)
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- Скорость минирования
-NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- Минимальная скорость минирования
+NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0.001 -- Минимальная скорость минирования
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1 -- Глобальная скорость самолётов
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Скорость развёртки самолётов
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.1  --урон по грузовикам (ванила 0,2)

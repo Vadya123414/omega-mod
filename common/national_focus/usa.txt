@@ -756,7 +756,6 @@ focus_tree = {
 				USA_congress_large_opposition = yes
 			}
 			USA_great_depression_level_down = yes
-			effect_tooltip = USA_communal_domain
 			unlock_decision_tooltip = { decision = USA_communal_domain show_effect_tooltip = yes }
 
 		}
@@ -3054,7 +3053,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -3076,7 +3074,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117

@@ -197,7 +197,7 @@ focus = {
 		relative_position_id = IRE_Vibori
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
-		    data > 1.1.1937
+		    date > 1937.1.1
 		}
 		available_if_capitulated = yes
 		

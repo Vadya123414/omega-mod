@@ -13755,10 +13755,13 @@ SOV_soviet_civil_war_dec_cat = {
 			custom_effect_tooltip = SOV_nkvd_cd_tt
 			add_to_variable = { SOV.SOV_nkvd_divisions = 5 }
 			hidden_effect = {
+				if = {
+					limit = { has_template = "NKVD Pogranichnaya Diviziya" }
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "division_template = \"NKVD Pogranichnaya Diviziya\" start_experience_factor = 0.2 start_equipment_factor = 1.0" owner = ROOT count = 5
 					}
+				}
 				}
 			}
 	    }
