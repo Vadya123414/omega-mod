@@ -113,5 +113,5 @@ Kefir_delat_plaki_plaki = { #STATE MODIFIER
 
 	icon = GFX_decision_generic_tank
 
-	army_attack_factor = -1
+	army_attack_factor = -0.4
 }
