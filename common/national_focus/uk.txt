@@ -30,6 +30,9 @@ default = no
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			126 = { is_controlled_by = ENG }
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -8044,6 +8047,12 @@ default = no
 	focus = {
 		id = uk_iraq_focus
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.4.1
+			}
 			IRQ = {
 				OR = { 
 					communism > 0.2
@@ -8112,6 +8121,12 @@ default = no
 		}
 		will_lead_to_war_with = PER
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.8.25
+			}
 			country_exists = PER
 			NOT = { has_war_with = PER }
 			is_subject = no

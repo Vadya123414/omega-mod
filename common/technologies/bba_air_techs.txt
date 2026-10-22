@@ -534,6 +534,15 @@ technologies = {
 			cv_small_plane_naval_bomber_airframe_3
 			cv_small_plane_suicide_airframe_3
 		}
+
+		allow = {
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1942.1.1 
+			}
+		}
 		
 		path = {
 			leads_to_tech = modern_small_airframe
@@ -1048,6 +1057,15 @@ technologies = {
 				PROJECT = sp_air_axial_jet_engine	
 			}
 		}
+
+		allow = {
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1942.1.1 
+			}
+		}
 		research_cost = 2
 		start_year = 1944
 		folder = {
@@ -1234,6 +1252,15 @@ technologies = {
 		path = {
 			leads_to_tech = modern_large_airframe
 			research_cost_coeff = 1
+		}
+
+		allow = {
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1942.1.1 
+			}
 		}
 
 		research_cost = 2
@@ -2011,6 +2038,15 @@ technologies = {
 			cannon_defense_turret
 			cannon_defense_turret_2x
 		}
+
+		allow = {
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1942.1.1 
+			}
+		}
 		
 		research_cost = 2
 		start_year = 1945
@@ -2474,6 +2510,15 @@ technologies = {
 		folder = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 8 }
+		}
+
+		allow = {
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1942.1.1 
+			}
 		}
 
 		path = {

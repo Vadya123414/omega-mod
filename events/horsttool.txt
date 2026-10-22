@@ -1002,8 +1002,6 @@ news_event = {
 		is_triggered_only = yes
       option = { name = horsttool_news_ok  }
    }
-<<<<<<< Updated upstream
-=======
    news_event = {		
    id = news.4302
    title = news.4302.t
@@ -1991,4 +1989,3 @@ news_event = {
 	is_triggered_only = yes
 	option = { name = horsttool_news_ok }
 }
->>>>>>> Stashed changes

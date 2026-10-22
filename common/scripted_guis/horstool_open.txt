@@ -39,23 +39,17 @@ scripted_gui = {
 						limit = { ROOT = { NOT = { has_global_flag = enabled_debuffing } } }
 						ROOT = { set_global_flag = enabled_debuffing }
 					}
-<<<<<<< Updated upstream
-					else_if = {
-=======
 				}
 			}
 			Debuffing_close_click = {
 				owner = {
 					if = {
 						limit = { ROOT = { has_global_flag = enabled_debuffing  } }
->>>>>>> Stashed changes
 						ROOT = { clr_global_flag = enabled_debuffing }
 					}
 				}
 			}
 
-<<<<<<< Updated upstream
-=======
 			debuf_industrial_plus_click = {
 				owner = {
 					if = {
@@ -107,7 +101,6 @@ scripted_gui = {
 				}
 			}
 
->>>>>>> Stashed changes
 			event_translet_horst_open_click = {
 				owner = {
 					if = {
@@ -145,8 +138,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-=======
 		#################################################################### Доктрины армия
 			hosttool_add_lan_doctrin_infantry_click = {
 				owner={
@@ -397,7 +388,6 @@ scripted_gui = {
 				}
 			}
 		############################################################## Ресурсы
->>>>>>> Stashed changes
 			States_resursed_rubber_click = {
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4201 }
@@ -697,9 +687,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-
-=======
 		#########################################################################
 			faction_initiativ_add_click = {
 				owner={
@@ -749,7 +736,6 @@ scripted_gui = {
 					var:marks = { add_research_slot = -1 save_global_event_target_as = hosttool_target news_event = { id = news.4305 } }
 				}
 			}
->>>>>>> Stashed changes
 			observer_click = {
 				owner = {
 					save_global_event_target_as = hosttool_target news_event = { id = news.4004 }
@@ -775,9 +761,6 @@ scripted_gui = {
 					save_global_event_target_as = hosttool_target news_event = { id = news.4005 }
 				}
 			}
-<<<<<<< Updated upstream
-			
-=======
 		################################################# Идеалогия
 			communism_group_bg_click = {
 				owner={
@@ -852,7 +835,6 @@ scripted_gui = {
 				}
 			}
 		#################################################
->>>>>>> Stashed changes
 			addpp_click = {
 				owner={
 					set_temp_variable = { ROOT.marks = this}
@@ -935,9 +917,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-			add_compliance_click = { 
-=======
 		############################################ шртрафы бафы Промышленность
 			debuf_industrial_1_click = {
 				owner={
@@ -1489,14 +1468,13 @@ scripted_gui = {
 			}
 		#################################################### Подчинение
 			hosttool_add_100_compliance_click = {
->>>>>>> Stashed changes
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4130 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = 100}
+						var:state = { add_compliance = 100 }
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -1508,9 +1486,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-			add_compliance1_click = { 
-=======
 			hosttool_add_75_compliance_click = {
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4316 }
@@ -1569,14 +1544,13 @@ scripted_gui = {
 				}
 			}
 			hosttool_sub_100_compliance_click = {
->>>>>>> Stashed changes
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4129 }
 					set_temp_variable = { ROOT.taker = this}
 					for_each_loop={
 						array=ROOT.marked_states
 						value=state
-						var:state = { add_compliance = -100}
+						var:state = { add_compliance = -100 }
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -1588,9 +1562,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-			add_cover_click = { 
-=======
 			hosttool_sub_75_compliance_click = {
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4317 }
@@ -1669,7 +1640,6 @@ scripted_gui = {
 				}
 			}
 			hosttool_add_75_compliance1_click = {
->>>>>>> Stashed changes
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4132 }
 					set_temp_variable = { ROOT.taker = this}
@@ -1688,9 +1658,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-			add_cover1_click = { 
-=======
 			hosttool_add_50_compliance1_click = {
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4312 }
@@ -1749,7 +1716,6 @@ scripted_gui = {
 				}
 			}
 			hosttool_sub_75_compliance1_click = {
->>>>>>> Stashed changes
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4128 }
 					set_temp_variable = { ROOT.taker = this}
@@ -1768,8 +1734,6 @@ scripted_gui = {
 					}
 				}
 			}
-<<<<<<< Updated upstream
-=======
 			hosttool_sub_50_compliance1_click = {
 				owner={
 					save_global_event_target_as = hosttool_target news_event = { id = news.4313 }
@@ -1809,7 +1773,6 @@ scripted_gui = {
 				}
 			}
 		######################################################################
->>>>>>> Stashed changes
 			annex_country_click = {
 
 				owner={ set_variable = { ROOT.taker = this}}
@@ -1863,62 +1826,6 @@ scripted_gui = {
 							}
 						}
 					}
-<<<<<<< Updated upstream
-					
-				ROOT = {
-					for_each_scope_loop={
-						array=marked_states
-						clear_variable=mark_status
-					}
-					clear_array=marked_states
-					clear_variable=target
-					clear_variable=taker
-					clear_variable=first_marked_state
-				}
-			}	
-
-			fix_production_click = { owner = { news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
-			fix_xp_click = { owner = { news_event = { id = news.4113 } army_experience = 25 }  }
-			fix_xp2_click = { owner = { news_event = { id = news.4114 } navy_experience = 25 }  }
-			fix_xp3_click = { owner = { news_event = { id = news.4115 } air_experience = 25 }  }
-			convoy48_click = { owner = { news_event = { id = news.4116 } add_equipment_to_stockpile = { type = convoy_1 amount = 50 } }  }
-			manpower_add_click = { owner = { news_event = { id = news.4117 } add_manpower = 10000 }  }
-			manpower_NO_add_click = { owner = { news_event = { id = news.4118 } add_manpower = -10000 }  }
-			add_autonomy_ratio_click = { owner = { news_event = { id = news.4119 } add_autonomy_ratio = { value = 0.1 } }  } 
-			add_NO_autonomy_ratio_click = { owner = { news_event = { id = news.4120 } add_autonomy_ratio = { value = -0.1 } }  }
-			remove_fix_xp_click = { owner = { news_event = { id = news.4121 } army_experience = -25 }  }
-			remove_fix_xp2_click = { owner = { news_event = { id = news.4122 } navy_experience = -25 }  }
-			remove_fix_xp3_click = { owner = { news_event = { id = news.4123 } air_experience = -25 }  }
-			remove_convoy48_click = { owner = { news_event = { id = news.4124 } add_equipment_to_stockpile = { type = convoy_1 amount = -50 } }  }
-			add_dynamic_Hort_tool_click = { owner = { news_event = { id = news.4126 } add_dynamic_modifier = { modifier = Horst_tool_modifiers } }  }
-			add_dynamic_Hort_tool1_click = { owner = { news_event = { id = news.4127 } remove_dynamic_modifier = { modifier = Horst_tool_modifiers } }  }
-
-
-            add_autonomy_free_click = {
-				owner={ set_variable = { ROOT.taker = this}}
-				var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this   }news_event = { id = news.4125 days = 0} }}
-				if={	limit={check_variable={ROOT.target=ROOT.taker}}	}
-				else={
-					var:ROOT.target={
-							    set_autonomy = {
-							        target = PREV
-							        autonomy_state = autonomy_free
-						        }
-							}
-						
-				}
-					
-				ROOT = {
-					for_each_scope_loop={
-						array=marked_states
-						clear_variable=mark_status
-					}
-					clear_array=marked_states
-					clear_variable=target
-					clear_variable=taker
-					clear_variable=first_marked_state
-=======
->>>>>>> Stashed changes
 				}
 			}
 
@@ -1946,23 +1853,6 @@ scripted_gui = {
 			}
 
 			add_cheat_click = {
-<<<<<<< Updated upstream
-				set_variable = { ROOT.taker = this}
-				var:taker = {
-				owner={
-					set_variable={Root.target_country = this}
-					if={limit={check_variable={Root.selected_cheat=1}} generic_bonus_1 = yes }
-					if={limit={check_variable={Root.selected_cheat=2}} generic_bonus_3 = yes }
-					if={limit={check_variable={Root.selected_cheat=3}} generic_bonus_2y = yes }
-					if={limit={check_variable={Root.selected_cheat=4}} generic_bonus_999 = yes }
-					if={limit={check_variable={Root.selected_cheat=5}} add_stability  = 0.01 }
-					if={limit={check_variable={Root.selected_cheat=6}} add_war_support = 0.01 }
-					if={limit={check_variable={Root.selected_cheat=7}} add_research_slot = 1 }
-					if={limit={check_variable={Root.selected_cheat=10}} add_research_slot = -1 }
-					if={limit={check_variable={Root.selected_cheat=11}} add_war_support = -0.01 }
-					if={limit={check_variable={Root.selected_cheat=12}} add_stability  = -0.01 }
-					}
-=======
 				set_variable = { global.hosttool_last_cheat = ROOT.selected_cheat }
 				owner = {
 					if={limit={check_variable={ROOT.selected_cheat=1}} generic_bonus_1 = yes }
@@ -1970,41 +1860,12 @@ scripted_gui = {
 					if={limit={check_variable={ROOT.selected_cheat=3}} generic_bonus_2y = yes }
 					if={limit={check_variable={ROOT.selected_cheat=4}} generic_bonus_999 = yes }
 					save_global_event_target_as = hosttool_target news_event = { id = horsttool.1 }
->>>>>>> Stashed changes
 				}
 			}
 
-<<<<<<< Updated upstream
-			add_debuff_click = {
-				set_variable = { ROOT.taker = this}
-				var:taker = {
-				   owner={
-					   set_variable={Root.target_country = this}
-					   if={owner={ news_event = { id = horsttool.14 days = 0}}limit={check_variable={Root.selected_debuff=1}} generic_debuff_1 = yes }
-					   if={owner={ news_event = { id = horsttool.15 days = 0}}limit={check_variable={Root.selected_debuff=2}} generic_debuff_2 = yes }
-					   if={owner={ news_event = { id = horsttool.40 days = 0}}limit={check_variable={Root.selected_debuff=3}} generic_debuff_3 = yes }
-					   if={owner={ news_event = { id = horsttool.41 days = 0}}limit={check_variable={Root.selected_debuff=4}} generic_debuff_4 = yes }
-					   if={owner={ news_event = { id = horsttool.42 days = 0}}limit={check_variable={Root.selected_debuff=5}} generic_debuff_5 = yes }
-					   if={owner={ news_event = { id = horsttool.43 days = 0}}limit={check_variable={Root.selected_debuff=6}} generic_debuff_6 = yes }
-					   if={owner={ news_event = { id = horsttool.44 days = 0}}limit={check_variable={Root.selected_debuff=7}} generic_debuff_7 = yes }
-					   if={owner={ news_event = { id = horsttool.45 days = 0}}limit={check_variable={Root.selected_debuff=8}} generic_debuff_8 = yes }
-					   if={owner={ news_event = { id = horsttool.46 days = 0}}limit={check_variable={Root.selected_debuff=9}} generic_debuff_9 = yes }
-				   }
-				}
-				GER={
-					set_variable={this.target_country=Root.target_country}
-					set_variable={this.selected_debuff=Root.selected_debuff}
-				}
-				clear_variable = ROOT.taker
-			}
-			
-			
-			toogle_mark_click = {
-=======
 			
 
 			toogle_mark_click = { #sort_button_120x29
->>>>>>> Stashed changes
 				if={
 					limit={check_variable={mark_status=0}}
 					set_variable={mark_status=2}
@@ -2053,16 +1914,7 @@ scripted_gui = {
 			cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_global_flag=cheating}}
 			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_global_flag=cheating}}
 			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_global_flag=cheating}}
-<<<<<<< Updated upstream
-			cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_global_flag=cheating}}
-			cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_global_flag=cheating}}
-			cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_global_flag=cheating}}
-			cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_global_flag=cheating}}
-			cheat11_click={set_variable={Root.selected_cheat=11} ROOT={clr_global_flag=cheating}}
-			cheat12_click={set_variable={Root.selected_cheat=12} ROOT={clr_global_flag=cheating}}
-=======
 			
->>>>>>> Stashed changes
 
 		}
 
@@ -2089,81 +1941,31 @@ scripted_gui = {
 			add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
 
 			
-<<<<<<< Updated upstream
-			cb_red_visible ={	}
-			cb_orange_visible={ ROOT={has_global_flag=colorblindness}}
-			cb_yellow_visible={ROOT={has_global_flag=colorblindness}}
-			cb_green_visible={ROOT={has_global_flag=colorblindness}}
-			cb_blue_visible={ROOT={has_global_flag=colorblindness}}
-			cb_purple_visible={ROOT={has_global_flag=colorblindness}}
-			cb_pink_visible={ROOT={has_global_flag=colorblindness}}
-			cb_teal_visible={ROOT={has_global_flag=colorblindness}}
-			cb_remove_visible={ROOT={has_global_flag=colorblindness}}
-				
-			cb_red_text_visible ={	}
-			cb_orange_text_visible={ ROOT={has_global_flag=colorblindness}}
-			cb_yellow_text_visible={ ROOT={has_global_flag=colorblindness}}
-			cb_green_text_visible={ ROOT={has_global_flag=colorblindness}}
-			cb_blue_text_visible={ROOT={has_global_flag=colorblindness}}
-			cb_purple_text_visible={ROOT={has_global_flag=colorblindness}}
-			cb_pink_text_visible={ ROOT={has_global_flag=colorblindness}}
-			cb_teal_text_visible={ROOT={has_global_flag=colorblindness}}
-			cb_remove_text_visible={ROOT={has_global_flag=colorblindness}}
-=======
 
 
->>>>>>> Stashed changes
 
-			pause_blocker_major_visible ={  }
+			pause_blocker_major_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			pause_blocker_all_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_visible ={ has_global_flag=blocking_pauses }
-<<<<<<< Updated upstream
-			pause_blocker_major_text_visible ={  }	
-			pause_blocker_major1_text_visible ={  }
-=======
 			pause_blocker_major_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			
->>>>>>> Stashed changes
 			pause_blocker_all_text_visible ={ has_global_flag=blocking_pauses }
 			pause_blocker_host_text_visible ={ has_global_flag=blocking_pauses }
 
 			annex_country_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 			tpt_war_button_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-<<<<<<< Updated upstream
-			add_autonomy_free_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-
-			cheat1_visible={}
-			cheat1_text_visible={}
-=======
 			add_autonomy_free_click_enabled = { owner = { is_subject = yes } }
 ################################################################### видимость текста чита
 			cheat1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			cheat1_text_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
->>>>>>> Stashed changes
 			cheat2_visible={ROOT={has_global_flag=cheating}}
 			cheat3_visible={ROOT={has_global_flag=cheating}}
 			cheat4_visible={ROOT={has_global_flag=cheating}}
 			cheat4_text_visible={ROOT={has_global_flag=cheating}}
 			cheat2_text_visible={ROOT={has_global_flag=cheating}}
 			cheat3_text_visible={ROOT={has_global_flag=cheating}}
-<<<<<<< Updated upstream
-			cheat5_visible={ROOT={has_global_flag=cheating}}
-			cheat5_text_visible={ROOT={has_global_flag=cheating}}
-			cheat6_visible={ROOT={has_global_flag=cheating}}
-			cheat6_text_visible={ROOT={has_global_flag=cheating}}
-			cheat7_visible={ROOT={has_global_flag=cheating}}
-			cheat7_text_visible={ROOT={has_global_flag=cheating}}
-			cheat10_visible={ROOT={has_global_flag=cheating}}
-			cheat10_text_visible={ROOT={has_global_flag=cheating}}
-			cheat11_visible={ROOT={has_global_flag=cheating}}
-			cheat11_text_visible={ROOT={has_global_flag=cheating}}
-			cheat12_visible={ROOT={has_global_flag=cheating}}
-			cheat12_text_visible={ROOT={has_global_flag=cheating}}
-
-=======
 			
 ######################################################################################
->>>>>>> Stashed changes
 			award_states_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
 
 			mill_add_click_enabled = { }
@@ -2198,34 +2000,6 @@ scripted_gui = {
 			States_resursed_chromium1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_coal1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 
-<<<<<<< Updated upstream
-			add_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_cover_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-			add_cover1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
-
-			wt_add_click_enabled = {}
-			wt_remove_click_enabled = {}
-
-			debuff1_visible={}
-			debuff2_visible={ROOT={has_global_flag=debuffing}}
-			debuff1_text_visible={}
-			debuff2_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff3_visible={ROOT={has_global_flag=debuffing}}
-			debuff3_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff4_visible={ROOT={has_global_flag=debuffing}}
-			debuff4_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff5_visible={ROOT={has_global_flag=debuffing}}
-			debuff5_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff6_visible={ROOT={has_global_flag=debuffing}}
-			debuff6_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff7_visible={ROOT={has_global_flag=debuffing}}
-			debuff7_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff8_visible={ROOT={has_global_flag=debuffing}}
-			debuff8_text_visible={ROOT={has_global_flag=debuffing}}
-			debuff9_visible={ROOT={has_global_flag=debuffing}}
-			debuff9_text_visible={ROOT={has_global_flag=debuffing}}
-=======
 			hosttool_add_100_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 			hosttool_add_75_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 			hosttool_add_50_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
@@ -2247,7 +2021,6 @@ scripted_gui = {
 			wt_add_click_enabled = {}
 			wt_remove_click_enabled = {}
 ################################################################################################### Переход на след страницу
->>>>>>> Stashed changes
 
 			fix_xp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			fix_xp2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2256,23 +2029,23 @@ scripted_gui = {
 			manpower_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			add_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			manpower_NO_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			add_NO_autonomy_ratio_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp2_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_fix_xp3_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_convoy48_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			manpower_NO_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			add_NO_autonomy_ratio_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_fix_xp3_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_convoy48_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			remove_pingtool_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_mill_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			remove_civ_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_pingtool_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_mill_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			remove_civ_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-			remove_addpp_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			remove_addpp_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
 			
 
@@ -2284,25 +2057,18 @@ scripted_gui = {
 			States_resursed_chromium_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			States_resursed_coal_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-			States_resursed_steel1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_rubber1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_oil1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_alu1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_tungsten1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_chromium1_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			States_resursed_coal1_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			States_resursed_steel1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_rubber1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_oil1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_alu1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_tungsten1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_chromium1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
+			States_resursed_coal1_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 
-<<<<<<< Updated upstream
-			Debuffing_enable_text_visible = {ROOT={has_global_flag=enabled_debuffing}}
-			Debuffing_enable_text2_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-=======
 			
->>>>>>> Stashed changes
 
-			wt_add_visible = {ROOT={has_global_flag=enabled_debuffing}}
+			wt_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			wt_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
-<<<<<<< Updated upstream
-=======
 			war_support_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			war_support_remove_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
 			stability_add_visible = {ROOT={NOT={has_global_flag=enabled_debuffing}}}
@@ -2505,10 +2271,8 @@ scripted_gui = {
 			#debuf_industrial_minys_visible = {ROOT={NOT={has_global_flag=enabled_industrial}}}
 
 ####################################################################################################################
->>>>>>> Stashed changes
 		}
 	}
-		
 	pause_is_blocked = {
 		context_type = player_context
 		window_name = "pause_block_window"

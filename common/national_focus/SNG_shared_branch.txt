@@ -24,7 +24,8 @@ joint_focus = {
 	
     allow_branch = {
         OR = { tag = SOV tag = UKR tag = BLR tag = KAZ }
-    } 
+        NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
+    }
 
     available = { 
         is_faction_leader = yes
