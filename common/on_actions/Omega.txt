@@ -63,7 +63,7 @@ on_actions = {
 			}
 		}
 	}
-	on_daily_SOV = {
+	on_monthly_SOV = {
 		effect = {
 			if = {
 				limit = {

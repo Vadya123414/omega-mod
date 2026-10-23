@@ -11033,35 +11033,35 @@ focus_tree = {
 						add_dynamic_modifier = {
 							modifier = Kefir_delat_plaki_plaki
 							scope = GER
-							days = 250
+							days = 170
 						}
 					}
 					42 = {
 						add_dynamic_modifier = {
 							modifier = Kefir_delat_plaki_plaki
 							scope = FRA
-							days = 250
+							days = 170
 						}
 					}
 					51 = {
 						add_dynamic_modifier = {
 							modifier = Kefir_delat_plaki_plaki
 							scope = FRA
-							days = 250
+							days = 170
 						}
 					}
 					35 = {
 						add_dynamic_modifier = {
 							modifier = Kefir_delat_plaki_plaki
 							scope = FRA
-							days = 250
+							days = 170
 						}
 					}
 					7 = {
 						add_dynamic_modifier = {
 							modifier = Kefir_delat_plaki_plaki
 							scope = FRA
-							days = 250
+							days = 170
 						}
 					}
 					ENG = {add_to_faction = POL}

@@ -112,7 +112,8 @@
 			factor = 1
 		}
 		available = {
-			FRA = {
+			ITA = {
+				NOT = {
 				controls_state = 448
 				controls_state = 661
 				controls_state = 449
@@ -122,6 +123,7 @@
 				controls_state = 451
 				controls_state = 665
 			}
+		}
 		}
 		
 		bypass = {
