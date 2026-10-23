@@ -145,7 +145,6 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_comandante_diavolo
 				ITA_il_sol_dell_avvenire
 				ITA_a_colonial_empire
 			}		
@@ -161,7 +160,6 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_comandante_diavolo
 				ITA_to_live_as_a_lion
 				ITA_a_colonial_empire
 			}		

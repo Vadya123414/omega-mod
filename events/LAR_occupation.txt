@@ -1,3 +1,11 @@
 ﻿
 add_namespace = occupied_countries
 
+# Vanila Reborn edit: collaboration governments are cut from this mod.
+# The vanilla compliance modifier (common/resistance_compliance_modifiers/compliance_modifiers.txt)
+# still fires this event at 80% compliance, so it exists as a hidden no-op instead of being missing.
+country_event = {
+	id = occupied_countries.1
+	hidden = yes
+	is_triggered_only = yes
+}

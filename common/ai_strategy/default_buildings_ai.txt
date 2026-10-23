@@ -67,6 +67,7 @@ MINOR_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
@@ -163,6 +164,7 @@ MAJOR_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
@@ -321,6 +323,7 @@ PHI_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory

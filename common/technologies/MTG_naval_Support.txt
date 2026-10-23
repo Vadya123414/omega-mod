@@ -1476,10 +1476,7 @@ technologies = {
 			ship_mine_layer_sub
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 1 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1514,10 +1511,7 @@ technologies = {
 			mines_planting = 0.2
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 13 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1.5
@@ -1561,10 +1555,7 @@ technologies = {
 
 
 		naval_mines_damage_factor = 0.3 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 6 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1617,10 +1608,7 @@ technologies = {
 			sub_detection = 0.1
 			}
 			
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 1 y = 10 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1678,10 +1666,7 @@ technologies = {
 		}
 
 		naval_mines_damage_factor = 0.3 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 13 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1724,10 +1709,7 @@ technologies = {
 			mines_planting = 0.13
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1763,10 +1745,7 @@ technologies = {
 			airdropped_mines
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1845,10 +1824,7 @@ technologies = {
 			mines_sweeping = 0.15
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1
@@ -1875,10 +1851,7 @@ technologies = {
 			demining_coil
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
 			factor = 1

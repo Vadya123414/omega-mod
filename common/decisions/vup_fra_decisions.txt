@@ -285,7 +285,7 @@ my_coalition_category = {
 		days_remove = 60
 		custom_cost_trigger = {
 			command_power > 24
-			political_power > 49
+			has_political_power > 49
 		}
 		custom_cost_text = decision_cost_CP_25_pp_50
 		modifier = {
@@ -301,10 +301,10 @@ my_coalition_category = {
 		}
 
 		remove_effect = {
-			15 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
-			14 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
-			23 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
-            19 = { add_building_construction = { type = fuel_silo level = 3 instant = yes } } 
+			15 = { add_building_construction = { type = fuel_silo level = 3 instant_build = yes } } 
+			14 = { add_building_construction = { type = fuel_silo level = 3 instant_build = yes } } 
+			23 = { add_building_construction = { type = fuel_silo level = 3 instant_build = yes } } 
+            19 = { add_building_construction = { type = fuel_silo level = 3 instant_build = yes } } 
             add_fuel = 1800000
         }
 	}

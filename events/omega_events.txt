@@ -1288,9 +1288,6 @@ country_event = {
 	picture = GFX_report_event_SWE_defense_act
 
 
-    mean_time_to_happen = { 
-        days = 10 
-    }
 
 
     is_triggered_only = yes

@@ -30,12 +30,11 @@ GER_annex = {
 				target = POL
 				value = 0.3
 			}
-		
+		}
 		
 		complete_effect = {
 		
 		}
-	}
 	}
 	
 	GER_annex_HUN = {

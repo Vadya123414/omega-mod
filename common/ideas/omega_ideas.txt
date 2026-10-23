@@ -835,7 +835,7 @@ ideas = {
 			}
 		}
 		
-		HON_USA_money = {
+		HON_USA_money_idea = {
 			
 			allowed = {
 				always = no
@@ -1716,14 +1716,12 @@ ideas = {
 			picture = generic_build_infrastructure
             modifier = {
                 production_speed_rail_way_factor = 0.25
-                railway_capacity_factor = 0.15
             }
         }
         EAEU_railway_expansion_member_ns = {
 			picture = generic_build_infrastructure
             modifier = {
                 production_speed_rail_way_factor = 0.15
-                railway_capacity_factor = 0.1
             }
         }
 		EAEU_temporary_boost_originator = {

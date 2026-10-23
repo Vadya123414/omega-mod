@@ -15,7 +15,6 @@ FRA_parallel_import_modifier = {
     country_resource_rubber = FRA_rubber_amount
 	country_resource_oil = FRA_oil_amount
     country_resource_tungsten = FRA_tungsten_amount
-    industrial_factory_donations = fabriki_SWI
     industrial_factory_donations = fabriki_FRA
 }
 

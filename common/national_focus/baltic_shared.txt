@@ -1223,12 +1223,6 @@ shared_focus = {
 				has_dlc = "Arms Against Tyranny"
 			}
 
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = ENG_crossley_motors_organization
-
-			mio:ENG_crossley_motors_organization = {
-				add_mio_size = 2
-			}
 
 		}
 

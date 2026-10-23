@@ -322,7 +322,15 @@ guiTypes = {
 		}
 
 		# Mine Laying
+		# Mine missions are cut from this mod. The engine still looks up btn_mission5/btn_mission6,
+		# so they exist but sit off-screen with no shortcut: the player can't see or press them.
 
+		buttonType = {
+			name = "btn_mission5"
+			position = {x=-10000 y=-10000}
+			spriteType = "GFX_NV_btn_convoy_escort"
+			hide = yes
+		}
 		iconType = {
 			name = "hint_highlight_mission_5"
 			position = {x=315 y=@nv_mission_btn_y}
@@ -339,6 +347,18 @@ guiTypes = {
 
 		# Mine Sweeping
 
+		buttonType = {
+			name = "btn_mission6"
+			position = {x=-10000 y=-10000}
+			spriteType = "GFX_NV_btn_convoy_escort"
+			hide = yes
+		}
+		iconType = {
+			name ="btn_mission6_warn"
+			spriteType = "GFX_btn_yellow_glow"
+			position = {x=-10000 y=-10000}
+			alwaystransparent = yes
+		}
 		iconType = {
 			name = "hint_highlight_mission_6"
 			position = {x=265 y=@nv_mission_btn_y}

@@ -1,7 +1,7 @@
 ﻿division_template = {
 	name = "Mountaineer-Division"
 			support = {
-				artillery = 1
+				artillery = { x = 0 y = 0 }
 			}
 
 			regimental_support = {
