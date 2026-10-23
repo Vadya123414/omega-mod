@@ -863,9 +863,9 @@ set_spec_doctrine_40 = {
         has_manpower > 300000
         is_ai = yes
         has_equipment = { infantry_equipment > 10000 }
-        has_equipment = { support_equipment > 275 }
-        has_equipment = { artillery_equipment > 60 }
-        has_equipment = { anti_air_equipment > 120 }
+        #has_equipment = { support_equipment > 275 }
+        #has_equipment = { artillery_equipment > 60 }
+        #has_equipment = { anti_air_equipment > 120 }
             }
 		visible = {
             is_ai = yes
