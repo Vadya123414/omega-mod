@@ -55,9 +55,9 @@ MINOR_strategy_industrial_complex_building_nonhist = {
 MINOR_strategy_arms_factory_building_nonhist  = {
 		enable = {
 				AND = {
-					not = {has_global_flag = VUP_Hist_version}
-					not = {original_tag = AST}
-					not = {original_tag = PHI}
+						not = {has_global_flag = VUP_Hist_version}
+						not = {original_tag = AST}
+						not = {original_tag = PHI}
 						not = {original_tag = USA}
 						not = {original_tag = ITA}
 						not = {original_tag = GER}
@@ -141,6 +141,53 @@ MAJOR_strategy_industrial_complex_building = {
 		value = 400
 	}
 }
+MAJOR_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				OR = {
+					original_tag = ITA
+					original_tag = GER
+					original_tag = ENG
+					original_tag = FRA
+				}
+				date > 1937.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+FRA_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				original_tag = FRA
+				date < 1936.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 400
+	}
+}
+FRA_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				original_tag = FRA
+				date > 1936.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
 GER_strategy_liquefaction_building_1 = {
 		enable = {
 			AND = {
@@ -199,25 +246,7 @@ GER_autarky_building_2 = {
 		target = 105
 	}
 }	
-MAJOR_strategy_arms_factory_building = {
-		enable = {
-			AND = {
-				OR = {
-					original_tag = ITA
-					original_tag = GER
-					original_tag = ENG
-					original_tag = FRA
-				}
-				date > 1937.10.1
-				}
-		}
-	abort_when_not_enabled = no
-		ai_strategy = {
-		type = building_target
-		id = arms_factory
-		value = 900
-	}
-}
+
 bots_usa_dockyard_building = {
 		enable = {
 			AND = {

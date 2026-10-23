@@ -91,10 +91,14 @@ NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не н�
 NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
 NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
 NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 1           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
+
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 1				-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 1    		-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during peace time
+
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 1 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- К скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок

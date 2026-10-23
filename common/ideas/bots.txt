@@ -13,11 +13,151 @@ ideas = {
 
 			modifier = {
                 mobilization_speed = 10
+				industrial_capacity_factory = -0.1
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
 				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		smart_bots_1 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 10
+				industrial_capacity_factory = -0.196
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
+				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		smart_bots_2 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 10
+				industrial_capacity_factory = -0.2
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
+				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		smart_bots_3 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 10
+				industrial_capacity_factory = -0.203
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
+				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		smart_bots_4 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 10
+				industrial_capacity_factory = -0.205
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9
+				
+			}
+
+			cancel = {
+			or = {
+				original_tag = INS
+					is_ai = no
+					has_civil_war = yes
+					}
+			}
+		}
+		smart_bots_5 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                mobilization_speed = 10
+				industrial_capacity_factory = -0.206
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
+				training_time_army_factor = -0.9		
 			}
 
 			cancel = {
@@ -62,11 +202,17 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				mobilization_speed = 10
+				industrial_capacity_factory = -0.05
+                production_factory_efficiency_gain_factor = 10
+                intel_network_gain_factor = 10
+				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.45
 			}
 
 			cancel = {
 					is_ai = no
+					has_civil_war = yes
 			}
 		}
 		idea_RAJ_ordnance_sim = {

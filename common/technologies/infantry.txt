@@ -623,20 +623,20 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
 			}
 
 			modifier = {
-				factor = 5
+				add = 5
 				tag = ENG
 			}
 		}
@@ -666,16 +666,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
+			}
+
+			modifier = {
+				add = 5
+				tag = ENG
 			}
 		}
 	}
@@ -699,16 +704,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
+			}
+
+			modifier = {
+				add = 5
+				tag = ENG
 			}
 		}
 	}
@@ -750,7 +760,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -779,7 +822,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -802,7 +878,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -847,8 +956,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
 
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
@@ -877,7 +1018,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
@@ -901,7 +1075,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
