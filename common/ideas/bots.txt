@@ -22,6 +22,7 @@ ideas = {
 			}
 
 			cancel = {
+				has_idea = smart_bots_1
 			or = {
 				original_tag = INS
 					is_ai = no
@@ -50,6 +51,7 @@ ideas = {
 			}
 
 			cancel = {
+				has_idea = smart_bots_2
 			or = {
 				original_tag = INS
 					is_ai = no
@@ -78,6 +80,7 @@ ideas = {
 			}
 
 			cancel = {
+				has_idea = smart_bots_3
 			or = {
 				original_tag = INS
 					is_ai = no
@@ -106,6 +109,7 @@ ideas = {
 			}
 
 			cancel = {
+				has_idea = smart_bots_4
 			or = {
 				original_tag = INS
 					is_ai = no
@@ -134,6 +138,7 @@ ideas = {
 			}
 
 			cancel = {
+				has_idea = smart_bots_5
 			or = {
 				original_tag = INS
 					is_ai = no
