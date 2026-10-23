@@ -1,0 +1,182 @@
+# GER operations (former decisions from common/decisions/operations_ger.txt).
+# Started from the operations map GUI (GER_opmap_ui); conditions and effects are the original ones.
+
+GER_opmap_taif_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_taif_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+	date > 1942.01.1
+	NOT = {
+		has_country_flag = GER_blau
+	}
+}
+GER_opmap_taif_startable = {
+	GER_opmap_taif_visible = yes
+	GER_opmap_taif_available = yes
+	NOT = { has_country_flag = GER_opmap_done_taif }
+	NOT = { has_country_flag = GER_taif }
+}
+
+GER_opmap_blau_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_blau_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+	date > 1942.06.20
+	NOT = {
+		has_country_flag = GER_taif
+	}
+}
+GER_opmap_blau_startable = {
+	GER_opmap_blau_visible = yes
+	GER_opmap_blau_available = yes
+	NOT = { has_country_flag = GER_opmap_done_blau }
+	NOT = { has_country_flag = GER_blau }
+}
+
+GER_opmap_lenik_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_lenik_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+	date > 1942.01.1
+	NOT = {
+		has_country_flag = GER_balt
+	}
+}
+GER_opmap_lenik_startable = {
+	GER_opmap_lenik_visible = yes
+	GER_opmap_lenik_available = yes
+	NOT = { has_country_flag = GER_opmap_done_lenik }
+	NOT = { has_country_flag = GER_lenik }
+}
+
+GER_opmap_balt_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_balt_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+	date > 1942.01.1
+	NOT = {
+		has_country_flag = GER_lenik
+	}
+}
+GER_opmap_balt_startable = {
+	GER_opmap_balt_visible = yes
+	GER_opmap_balt_available = yes
+	NOT = { has_country_flag = GER_opmap_done_balt }
+	NOT = { has_country_flag = GER_balt }
+}
+
+GER_opmap_beni_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = USA
+}
+GER_opmap_beni_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = USA
+}
+GER_opmap_beni_startable = {
+	GER_opmap_beni_visible = yes
+	GER_opmap_beni_available = yes
+	NOT = { has_country_flag = GER_opmap_done_beni }
+	NOT = { has_country_flag = GER_beni }
+}
+
+GER_opmap_balaton_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_balaton_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+}
+GER_opmap_balaton_startable = {
+	GER_opmap_balaton_visible = yes
+	GER_opmap_balaton_available = yes
+	NOT = { has_country_flag = GER_opmap_done_balaton }
+	NOT = { has_country_flag = GER_balaton }
+}
+
+GER_opmap_pomerania_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_pomerania_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+	64 = { is_controlled_by =GER }
+}
+GER_opmap_pomerania_startable = {
+	GER_opmap_pomerania_visible = yes
+	GER_opmap_pomerania_available = yes
+	NOT = { has_country_flag = GER_opmap_done_pomerania }
+	NOT = { has_country_flag = GER_pomerania }
+}
+
+GER_opmap_ukroxa_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_ukroxa_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+}
+GER_opmap_ukroxa_startable = {
+	GER_opmap_ukroxa_visible = yes
+	GER_opmap_ukroxa_available = yes
+	NOT = { has_country_flag = GER_opmap_done_ukroxa }
+	NOT = { has_country_flag = GER_ukroxa }
+}
+
+GER_opmap_belarus_visible = {
+	has_country_flag = VUP_Hist_version
+	has_war_with = SOV
+}
+GER_opmap_belarus_available = {
+	NOT = { has_idea = GER_barbarossa }
+	has_war_with = SOV
+}
+GER_opmap_belarus_startable = {
+	GER_opmap_belarus_visible = yes
+	GER_opmap_belarus_available = yes
+	NOT = { has_country_flag = GER_opmap_done_belarus }
+	NOT = { has_country_flag = GER_belarus }
+}
+
+GER_opmap_any_active = {
+	OR = {
+		has_country_flag = GER_taif
+		has_country_flag = GER_blau
+		has_country_flag = GER_lenik
+		has_country_flag = GER_balt
+		has_country_flag = GER_beni
+		has_country_flag = GER_balaton
+		has_country_flag = GER_pomerania
+		has_country_flag = GER_ukroxa
+		has_country_flag = GER_belarus
+	}
+}
+
+GER_opmap_any_visible = {
+	OR = {
+		GER_opmap_taif_visible = yes
+		GER_opmap_blau_visible = yes
+		GER_opmap_lenik_visible = yes
+		GER_opmap_balt_visible = yes
+		GER_opmap_beni_visible = yes
+		GER_opmap_balaton_visible = yes
+		GER_opmap_pomerania_visible = yes
+		GER_opmap_ukroxa_visible = yes
+		GER_opmap_belarus_visible = yes
+	}
+}

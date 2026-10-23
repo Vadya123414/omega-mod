@@ -30,6 +30,9 @@ default = no
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			126 = { is_controlled_by = ENG }
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -6863,23 +6866,27 @@ default = no
 		completion_reward = {
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						NOT = { is_subject_of = ENG }
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_unified
 				news_event = { id = mtg_news.8 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						is_subject_of = ENG
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			custom_effect_tooltip = infa_annex_imperka
 			hidden_effect = {
 			if = {
@@ -8044,6 +8051,12 @@ default = no
 	focus = {
 		id = uk_iraq_focus
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.4.1
+			}
 			IRQ = {
 				OR = { 
 					communism > 0.2
@@ -8112,6 +8125,12 @@ default = no
 		}
 		will_lead_to_war_with = PER
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.8.25
+			}
 			country_exists = PER
 			NOT = { has_war_with = PER }
 			is_subject = no

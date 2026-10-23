@@ -1,0 +1,67 @@
+# GER operations (former decisions from common/decisions/operations_ger.txt).
+# Started from the operations map GUI (GER_opmap_ui); conditions and effects are the original ones.
+
+add_namespace = GER_opmap
+
+country_event = {
+	id = GER_opmap.1
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_taif_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_blau_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.3
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_lenik_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.4
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_balt_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.5
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_beni_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.6
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_balaton_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.7
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_pomerania_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.8
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_ukroxa_end = yes }
+}
+
+country_event = {
+	id = GER_opmap.9
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { GER_opmap_belarus_end = yes }
+}

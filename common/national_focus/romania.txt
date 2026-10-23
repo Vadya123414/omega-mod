@@ -2658,6 +2658,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				has_country_flag = ROM_HUN_aligned
 				HUN = { is_subject_of = ROM }
