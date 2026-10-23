@@ -743,13 +743,13 @@ set_spec_doctrine_40 = {
             has_war = yes
             #is_minor = yes
             has_war_support > 0.81
+            has_idea = war_economy
             NOT = { 
                 OR = {
                     has_idea = undisturbed_isolation
                     has_idea = civilian_economy
                     has_idea = partial_economic_mobilisation
                     has_idea = low_economic_mobilisation
-                    has_idea =  war_economy
                     has_idea = tot_economic_mobilisation
                     has_idea = national_defense_state
                     has_idea = JAP_war_communism_idea
