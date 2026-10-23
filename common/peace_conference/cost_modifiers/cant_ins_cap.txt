@@ -1,0 +1,84 @@
+	
+peace_action_modifiers = {
+        EUR_annex_ins = {
+        category = events_or_focuses
+        peace_action_type = { take_states puppet force_government}
+        enable = {
+            ROOT = {
+                or = {
+                    original_tag = GER
+                    original_tag = BEL
+                    original_tag = FRA
+                    original_tag = ENG
+                    original_tag = LUX
+                }
+                
+            }
+            FROM = { 
+                    tag = INS
+                    tag = COG
+            }
+        }
+        cost_multiplier = 999.0
+    }
+        EUR_annex_ins = {
+        category = events_or_focuses
+        peace_action_type = { take_states puppet force_government}
+        enable = {
+            ROOT = {
+                    original_tag = GER
+                    is_in_faction_with = GER
+                } 
+            FROM = { 
+             tag = COG
+            }
+        }
+        cost_multiplier = 999.0
+    }
+        GER_annex_dom = {
+        category = events_or_focuses
+        peace_action_type = { take_states puppet force_government}
+        enable = {
+            ROOT = {
+                or = {
+                    original_tag = GER
+                    is_in_faction_with = GER
+                }  
+            }
+            FROM = { 
+                or = {
+                tag = AST
+                is_core_of = AST
+                tag = CAN
+                is_core_of = CAN
+                tag = SAF
+                is_core_of = SAF
+                tag = RAJ
+                is_core_of = RAJ
+                tag = NZL
+                is_core_of = NZL
+                }  
+            }
+        }
+        cost_multiplier = 999.0
+    }
+    annex_den = {
+        category = events_or_focuses
+        peace_action_type = { take_states puppet force_government}
+        enable = {
+            ROOT = {
+                or = {
+                    original_tag = GER
+                    is_in_faction_with = GER
+                }
+            }
+            FROM = { 
+                or = {
+                    state = 101
+                    state = 100
+                 }
+            }
+        }
+        cost_multiplier = 999.0
+    }
+}

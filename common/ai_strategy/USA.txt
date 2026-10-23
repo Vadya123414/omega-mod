@@ -1830,65 +1830,6 @@ USA_start_buffering_in_australia = {
 	}
 }
 
-USA_truck_export = { #GM
-	allowed = {
-		original_tag = USA
-	}
-	enable = {
-		has_dlc = "Arms Against Tyranny"
-		date > 1938.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = motorized_equipment
-		value = 1
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = motorized
-		value = 40
-	}
-	ai_strategy = {
-		type = equipment_market_for_sale_factor
-		id = motorized
-		value = 100
-	}
-}
-
-USA_fighter_export = { #GM
-	allowed = {
-		original_tag = USA
-	}
-	enable = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = 15
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = fighter
-		value = 1
-	}
-	ai_strategy = {
-		type = equipment_market_for_sale_factor
-		id = fighter
-		value = 300 #We mostly use CV fighters
-	}
-
-	ai_strategy = {
-		type = equipment_market_for_sale_threshold
-		id = fighter
-		value = -60
-	}
-}
-
 USA_90_division_gamble = {
 	allowed = { original_tag = USA }
 	enable = {
@@ -2359,26 +2300,6 @@ USA_dominate_the_home_islands = {
 		type = naval_dominance
 		id = home_islands_control_zone
 		value = 100
-	}
-}
-
-USA_build_tank_destroyers = {
-	allowed = { original_tag = USA }
-	enable = {
-		has_tech = basic_medium_tank_chassis
-		date > 1942.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = medium_tank_destroyer_chassis
-		value = 1
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = modern_tank_destroyer_chassis
-		value = 1
 	}
 }
 

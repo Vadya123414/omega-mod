@@ -762,32 +762,6 @@ ITA_stockpile_less_early_game = {
 	}
 }
 
-ITA_please_help_me_buget_this_my_country_is_dieing = {
-	allowed = {
-		original_tag = ITA
-	}
-	enable = {
-		has_government = fascism
-		date < 1937.6.1
-	}
-
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 35
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = artillery
-		value = 2
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = armor
-		value = 1
-	}
-}
 
 # Hold africa until we have enemies in our core territory!
 ITA_hold_africa = {

@@ -1,130 +1,130 @@
-on_actions = {
-     on_startup = {
-                    effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															not = {
-																or = {
-																	has_tech = basic_machine_tools
-																	has_tech = improved_machine_tools
-																	has_tech = advanced_machine_tools
-																	has_tech = assembly_line_production
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots
-                                                }
-                                }
-    }
-on_monthly = {
-                    effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															not = {
-																or = {
-																	has_tech = basic_machine_tools
-																	has_tech = improved_machine_tools
-																	has_tech = advanced_machine_tools
-																	has_tech = assembly_line_production
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots
-                                                }
-                                }
-					 effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															has_tech = basic_machine_tools
-															not = {
-																or = {
-																	has_tech = improved_machine_tools
-																	has_tech = advanced_machine_tools
-																	has_tech = assembly_line_production
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots_1
-                                                }
-                                }
-						effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															has_tech = basic_machine_tools
-															has_tech = improved_machine_tools
-															not = {
-																or = {
-																	has_tech = advanced_machine_tools
-																	has_tech = assembly_line_production
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots_2
-                                                }
-                                }
-						effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															has_tech = basic_machine_tools
-															has_tech = improved_machine_tools
-															has_tech = advanced_machine_tools
-															not = {
-																or = {
-																	has_tech = assembly_line_production
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots_3
-                                                }
-                                }
-						effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															has_tech = basic_machine_tools
-															has_tech = improved_machine_tools
-															has_tech = advanced_machine_tools
-															has_tech = assembly_line_production
-															not = {
-																or = {
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-																}
-                                                        }
-                                                    add_ideas = smart_bots_4
-                                                }
-                                }
-						effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-															has_tech = basic_machine_tools
-															has_tech = improved_machine_tools
-															has_tech = advanced_machine_tools
-															has_tech = assembly_line_production
-																or = {
-																	has_tech = flexible_line
-																	has_tech = streamlined_line
-																}
-                                                        }
-                                                    add_ideas = smart_bots_5
-                                                }
-                                }
-             }
-}
+#on_actions = {
+#     on_startup = {
+#                    effect = { 
+#                                every_country = {
+#                                                    limit = { 
+#                                                            is_ai = yes
+#															not = {
+#																or = {
+#																	has_tech = basic_machine_tools
+#																	has_tech = improved_machine_tools
+#																	has_tech = advanced_machine_tools
+#																	has_tech = assembly_line_production
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+#                                                        }
+#                                                    add_ideas = smart_bots
+#                                                }
+#                                }
+#    }
+#on_monthly = {
+#                    effect = { 
+#                                every_country = {
+#                                                    limit = { 
+#                                                            is_ai = yes
+#															not = {
+#																or = {
+#																	has_tech = basic_machine_tools
+#																	has_tech = improved_machine_tools
+#																	has_tech = advanced_machine_tools
+#																	has_tech = assembly_line_production
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+#                                                        }
+#                                                   add_ideas = smart_bots
+#                                                }
+#                                }
+#					 effect = { 
+ #                               every_country = {
+#                                                    limit = { 
+ #                                                           is_ai = yes
+#															has_tech = basic_machine_tools
+#															not = {
+#																or = {
+#																	has_tech = improved_machine_tools
+#																	has_tech = advanced_machine_tools
+#																	has_tech = assembly_line_production
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+#                                                        }
+ #                                                   add_ideas = smart_bots_1
+ #                                               }
+#                                }
+#						effect = { 
+ #                               every_country = {
+ #                                                   limit = { 
+ #                                                           is_ai = yes
+#															has_tech = basic_machine_tools
+#															has_tech = improved_machine_tools
+#															not = {
+#																or = {
+#																	has_tech = advanced_machine_tools
+#																	has_tech = assembly_line_production
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+  #                                                      }
+ #                                                   add_ideas = smart_bots_2
+ #                                               }
+ #                               }
+#						effect = { 
+ #                               every_country = {
+ #                                                   limit = { 
+#                                                            is_ai = yes
+#															has_tech = basic_machine_tools
+#															has_tech = improved_machine_tools
+#															has_tech = advanced_machine_tools
+#															not = {
+#																or = {
+#																	has_tech = assembly_line_production
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+ #                                                       }
+ #                                                   add_ideas = smart_bots_3
+ #                                               }
+#                                }
+#						effect = { 
+#                                every_country = {
+ #                                                   limit = { 
+ #                                                           is_ai = yes
+#															has_tech = basic_machine_tools
+#															has_tech = improved_machine_tools
+#															has_tech = advanced_machine_tools
+#															has_tech = assembly_line_production
+#															not = {
+#																or = {
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+#																}
+ #                                                       }
+ #                                                   add_ideas = smart_bots_4
+ #                                               }
+ #                               }
+#						effect = { 
+#                                every_country = {
+ #                                                   limit = { 
+ #                                                           is_ai = yes
+#															has_tech = basic_machine_tools
+#															has_tech = improved_machine_tools
+#															has_tech = advanced_machine_tools
+#															has_tech = assembly_line_production
+#																or = {
+#																	has_tech = flexible_line
+#																	has_tech = streamlined_line
+#																}
+ #                                                       }
+ #                                                   add_ideas = smart_bots_5
+#                                                }
+#                                }
+#             }
+#}

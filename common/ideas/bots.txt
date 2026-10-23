@@ -13,7 +13,7 @@ ideas = {
 
 			modifier = {
                 mobilization_speed = 10
-				industrial_capacity_factory = -0.1
+				industrial_capacity_factory = -0.9
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
@@ -21,9 +21,13 @@ ideas = {
 				
 			}
 
-			cancel = {
-				has_idea = smart_bots_1
+			cancel = {	
 			or = {
+				#has_idea = smart_bots_1
+				#has_idea = smart_bots_2
+				#has_idea = smart_bots_3
+				#has_idea = smart_bots_4
+				#has_idea = smart_bots_5
 				original_tag = INS
 					is_ai = no
 					has_civil_war = yes
@@ -50,9 +54,12 @@ ideas = {
 				
 			}
 
-			cancel = {
-				has_idea = smart_bots_2
+			cancel = {	
 			or = {
+				has_idea = smart_bots_2
+				has_idea = smart_bots_3
+				has_idea = smart_bots_4
+				has_idea = smart_bots_5
 				original_tag = INS
 					is_ai = no
 					has_civil_war = yes
@@ -80,8 +87,10 @@ ideas = {
 			}
 
 			cancel = {
-				has_idea = smart_bots_3
 			or = {
+				has_idea = smart_bots_3
+				has_idea = smart_bots_4
+				has_idea = smart_bots_5
 				original_tag = INS
 					is_ai = no
 					has_civil_war = yes
@@ -109,8 +118,9 @@ ideas = {
 			}
 
 			cancel = {
-				has_idea = smart_bots_4
 			or = {
+				has_idea = smart_bots_4
+				has_idea = smart_bots_5
 				original_tag = INS
 					is_ai = no
 					has_civil_war = yes
@@ -138,8 +148,8 @@ ideas = {
 			}
 
 			cancel = {
-				has_idea = smart_bots_5
 			or = {
+				has_idea = smart_bots_5
 				original_tag = INS
 					is_ai = no
 					has_civil_war = yes
