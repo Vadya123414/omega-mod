@@ -16,13 +16,13 @@ CHL_historical_plan = {
 				}
 			}
 			AND = {
-				is_historical_focus_on = no
 				has_game_rule = {
 					rule = CHL_ai_behavior
 					option = RANDOM
 				}
 				has_country_flag = CHL_AI_RANDOM_HISTORICAL
 			}
+			has_country_flag = CHL_AI_RANDOM_HISTORICAL
 			has_game_rule = {
 				rule = CHL_ai_behavior
 				option = HISTORICAL
@@ -35,98 +35,95 @@ CHL_historical_plan = {
 
 	# On average = five 70 days focuses per year
 
-	ai_national_focuses = {
+	ai_national_focuses = {		
+		CHL_reestablish_the_republican_guard
+		CHL_endorse_the_constitution
+		CHL_policies_of_arturo_alessandri
+		CHL_suppress_the_nacistas
+		CHL_construct_the_estadio_nacional
+		CHL_cooperation_with_the_falange
+		CHL_inflation_control_by_the_central_bank
+
 		#Things to do ASAP
-		CHL_reestablish_the_republican_guard # 14 (for incase you get attacked early on)
+		SMB_army
+		SMB_military_facilities
+		CHL_1938_chilean_presidential_election
+		CHL_establish_corfo
+		CHL_low_cost_housing
+		CHL_enact_universal_suffrage
+		CHL_strengthen_instituto_nacional
+		CHL_reapproach_america
 
-		#1936
-		CHL_endorse_the_constitution # 35
-		CHL_policies_of_arturo_alessandri # 35
-		CHL_construct_the_estadio_nacional # 70
-		CHL_inflation_control_by_the_central_bank # 70
-		CHL_suppress_the_nacistas # 35
-		CHL_public_works # 70
-		SMB_army # 35
+		SMB_army
+		SMB_military_facilities
 
-		#1937
-		CHL_cooperation_with_the_falange # 35
-		CHL_contract_efe # 35
-		CHL_devalue_the_peso # 35
-		SMB_navy # 35
-		SMB_construct_naval_bases # 70
-		CHL_expand_the_forestry # 70
-		SMB_army_academy # 70
 
-		#1938
-		SMB_regular_infantry # 70
-		SMB_artillery # 70
-		SMB_purchase_destroyers_and_subs # 35
-		SMB_expand_repair_yards # 35
-		SMB_foreign_designs # 35
-		SMB_foreign_advisors # 70
-		CHL_connect_the_northern_railways # 35
+		CHL_dissolve_covensa
+		CHL_we_must_dig_deeper
+		CHL_devalue_the_peso
+		CHL_public_works
+		CHL_expand_the_forestry
+		SMB_air_force
+		SMB_air_defense
+		CHL_kickstart_the_arsenal_of_democracy
+		CHL_development_inwards
+		CHL_enforce_stricter_secularism
+		CHL_socialist_youth
+		CHL_support_the_democracies
+		CHL_land_reforms
+		CHL_mapuche_reconcilliation_campaigns
+		CHL_found_national_steelworks
+		CHL_a_joint_application_to_the_allies
+		CHL_enact_stricter_labor_laws
 
-		#1939
-		CHL_establish_corfo # 70
-		CHL_privatize_national_industries # 70
-		CHL_strengthen_instituto_nacional # 70
-		CHL_host_spanish_refugees # 35
-		CHL_reapproach_america # 35
-		CHL_development_inwards # 70
+		CHL_expand_southern_infrastructure
+		CHL_impose_new_taxes
+		CHL_issue_bonds
+		CHL_utlilize_famae
+		CHL_domestic_production_of_the_willys_mb
+		CHL_advancements_in_telecommunications
+		CHL_establish_the_ministry_of_mining
+		CHL_the_nationalization_of_copper
+		CHL_high_quality_nitrate
+		CHL_strengthen_the_central_bank
 
-		#1940
-		CHL_expand_the_naval_arsenal # 70
-		CHL_utlilize_famae # 70
-		CHL_high_quality_nitrate # 70
-		CHL_counter_operation_bolivar # 35
-		CHL_invest_in_shipping # 70
-		SMB_military_facilities # 35
-
-		#1941
-		CHL_expand_the_investigations_police # 35
-		CHL_impose_new_taxes # 35
-		SMB_army_professionalism # 70
-		CHL_an_attempt_to_maintain_our_neutrality # 70
-		CHL_land_reforms # 70
-		CHL_found_national_steelworks # 70
+		SMB_regular_infantry
+		SMB_artillery
+		SMB_domestic_production
 		
-		#1942
-		SMB_naval_foreign_advisors # 70
-		CHL_enforce_stricter_secularism # 70
-		CHL_advancements_in_telecommunications # 70
-		SMB_department_of_propaganda # 70
-		SMB_air_academy # 35
-		SMB_domestic_designs # 35
+		SMB_air_defense
+		SMB_regular_infantry
+		SMB_domestic_production
+		SMB_foreign_advisors
+		SMB_army_professionalism
+		SMB_air_academy
+		SMB_domestic_designs
+		SMB_navy
+		SMB_construct_naval_bases
+		SMB_special_forces
+		SMB_special_forces_option_2
+		SMB_special_forces_option_2_continuation
+		SMB_atacama_training
+		SMB_a_land_of_mountains
+		SMB_army_academy
+		SMB_joint_operative_command
+		SMB_war_planning_office
+		SMB_women_in_aviation
+		SMB_construct_air_bases
+		SMB_jungle_warfare_training
+		SMB_brown_water_navy
+		SMB_establish_aircraft_industry
+		SMB_nimble_air_force
+		SMB_winning_the_air_war
+		SMB_air_modifier_boost_2
 
-		#1943
-		SMB_joint_operative_command # 70
-		SMB_special_forces # 35
-		SMB_special_forces_option_1 # 35
-		CHL_establish_the_ministry_of_mining # 70
-		CHL_found_the_contraloria_general_de_la_republica # 70
-		#CHL_socialist_youth # 70
-		SMB_establish_aircraft_industry # 70
-
-		#1944
-		SMB_merchant_marine # 70
-		CHL_a_joint_application_to_the_allies # 70
-		SMB_mountain_guns # 35
-		CHL_protect_the_easter_island # 35 - They will attempt to jointly join the allies together with ARG before going for the aggressive option, two focuses above  
-		SMB_special_forces_option_1_continuation # 35
-		SMB_atacama_training # 35
-		SMB_women_in_aviation # 35
-		CHL_domestic_production_of_the_willys_mb # 70
 		
-		#1945
-		SMB_nimble_air_force # 70
-		CHL_chilean_anti_communist_action_dem_version # 70
-		SMB_air_defense # 35
-		CHL_government_mandated_contracts # 35
-		CHL_law_of_permanent_defense_of_democracy # 70
-
-		#1946
-		CHL_the_nationalization_of_copper # 70
 		
+	}
+
+	focus_factors = {
+		CHL_dispute_over_tierra_del_fuego = 0
+		SMB_reescalate_the_naval_arms_race = 0
 	}
 
 	research = {
@@ -137,33 +134,7 @@ CHL_historical_plan = {
 
 	}
 	traits = {
-		army_chief_offensive_3 = 100
-		army_chief_offensive_2 = 95
-		army_chief_offensive_1 = 90 
-		army_chief_reform_3 = 10
-		army_chief_reform_2 = 9
-		army_chief_reform_1 = 8
-		army_chief_planning_3 = 10
-		army_chief_planning_2 = 9
-		army_chief_planning_1 = 8
-		army_chief_defensive_3 = 85
-		army_chief_defensive_2 = 80
-		army_chief_defensive_1 = 75
-		army_chief_maneuver_3 = 10
-		army_chief_maneuver_2 = 9
-		army_chief_maneuver_1 = 8
-		army_chief_organizational_3 = 50
-		army_chief_organizational_2 = 45
-		army_chief_organizational_1 = 40
-		army_chief_morale_3 = 70
-		army_chief_morale_2 = 65
-		army_chief_morale_1 = 60
-		army_chief_drill_3 = 7
-		army_chief_drill_2 = 6
-		army_chief_drill_1 = 5 
-		army_infantry_2 = 2
-		army_infantry_3 = 2
-		war_industrialist  = 5
+
 	}
 
 	
@@ -178,4 +149,3 @@ CHL_historical_plan = {
 	}
 
 }
-

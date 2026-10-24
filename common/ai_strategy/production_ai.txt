@@ -1,0 +1,4887 @@
+general_prod_1 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 0
+		num_of_military_factories < 5
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 1
+			num_of_military_factories > 4
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 5
+	}
+}
+
+general_prod_5 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 4
+		num_of_military_factories < 10
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 5
+			num_of_military_factories > 9
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 9
+	}
+}
+
+general_prod_10 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 9
+		num_of_military_factories < 20
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 10
+			num_of_military_factories > 19
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 6
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 2
+	}
+}
+
+general_prod_20 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 19
+		num_of_military_factories < 30
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 20
+			num_of_military_factories > 29
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 4
+	}
+}
+
+general_prod_30 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 29
+		num_of_military_factories < 40
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 30
+			num_of_military_factories > 39
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 6
+	}
+}
+
+general_prod_40 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 39
+		num_of_military_factories < 50
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 40
+			num_of_military_factories > 49
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 24
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 8
+	}
+}
+
+general_prod_50 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 49
+		num_of_military_factories < 60
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 50
+			num_of_military_factories > 59
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 29
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 10
+	}
+}
+
+general_prod_60 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 59
+		num_of_military_factories < 70
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 60
+			num_of_military_factories > 69
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 12
+	}
+}
+
+general_prod_70 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 69
+		num_of_military_factories < 80
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 70
+			num_of_military_factories > 79
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 41
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 15
+	}
+}
+
+general_prod_80 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 79
+		num_of_military_factories < 90
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 80
+			num_of_military_factories > 89
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 47
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 17
+	}
+}
+
+air_and_general_prod_80 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 79
+		num_of_military_factories < 90
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 80
+			num_of_military_factories > 89
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 6
+	}
+}
+
+general_prod_90 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 89
+		num_of_military_factories < 100
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 90
+			num_of_military_factories > 99
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 53
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 19
+	}
+}
+
+air_and_general_prod_90 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 89
+		num_of_military_factories < 100
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 90
+			num_of_military_factories > 99
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 45
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 19
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 7
+	}
+}
+
+general_prod_100 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 99
+		num_of_military_factories < 110
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 100
+			num_of_military_factories > 109
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 59
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 21
+	}
+}
+
+air_and_general_prod_100 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 99
+		num_of_military_factories < 110
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 100
+			num_of_military_factories > 109
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 22
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 8
+	}
+}
+
+general_prod_110 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 109
+		num_of_military_factories < 120
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 110
+			num_of_military_factories > 119
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 65
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 23
+	}
+}
+
+air_and_general_prod_110 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 109
+		num_of_military_factories < 120
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 110
+			num_of_military_factories > 119
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 55
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 24
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 8
+	}
+}
+
+general_prod_120 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 119
+		num_of_military_factories < 130
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 120
+			num_of_military_factories > 129
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 71
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 25
+	}
+}
+
+air_and_general_prod_120 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 119
+		num_of_military_factories < 130
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 120
+			num_of_military_factories > 129
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 60
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 26
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 9
+	}
+}
+
+general_prod_130 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 129
+		num_of_military_factories < 140
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 130
+			num_of_military_factories > 139
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 76
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 27
+	}
+}
+
+air_and_general_prod_130 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 129
+		num_of_military_factories < 140
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 130
+			num_of_military_factories > 139
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 65
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 28
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 10
+	}
+}
+
+general_prod_140 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 139
+		num_of_military_factories < 150
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 140
+			num_of_military_factories > 149
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 83
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 29
+	}
+}
+
+air_and_general_prod_140 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 139
+		num_of_military_factories < 150
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 140
+			num_of_military_factories > 149
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 70
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 11
+	}
+}
+
+general_prod_150 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 149
+		num_of_military_factories < 160
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 150
+			num_of_military_factories > 159
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 88
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 31
+	}
+}
+
+air_and_general_prod_150 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 149
+		num_of_military_factories < 160
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 150
+			num_of_military_factories > 159
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 75
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 32
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 11
+	}
+}
+
+general_prod_160 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 159
+		num_of_military_factories < 170
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 160
+			num_of_military_factories > 169
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 94
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 33
+	}
+}
+
+air_and_general_prod_160 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 159
+		num_of_military_factories < 170
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 160
+			num_of_military_factories > 169
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 80
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 16
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 12
+	}
+}
+
+general_prod_170 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 169
+		num_of_military_factories < 180
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 170
+			num_of_military_factories > 179
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 35
+	}
+}
+
+air_and_general_prod_170 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 169
+		num_of_military_factories < 180
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 170
+			num_of_military_factories > 179
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 85
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 36
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 13
+	}
+}
+
+general_prod_180 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 179
+		num_of_military_factories < 190
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 180
+			num_of_military_factories > 189
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 106
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 38
+	}
+}
+
+air_and_general_prod_180 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 179
+		num_of_military_factories < 190
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 180
+			num_of_military_factories > 189
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 90
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 18
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 38
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 14
+	}
+}
+
+general_prod_190 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 189
+		num_of_military_factories < 200
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 190
+			num_of_military_factories > 199
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 112
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 39
+	}
+}
+
+air_and_general_prod_190 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 189
+		num_of_military_factories < 200
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 190
+			num_of_military_factories > 199
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 95
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 19
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 41
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 15
+	}
+}
+
+general_prod_200 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 199
+		num_of_military_factories < 210
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 200
+			num_of_military_factories > 209
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 118
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 41
+	}
+}
+
+air_and_general_prod_200 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 199
+		num_of_military_factories < 210
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 200
+			num_of_military_factories > 209
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 44
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 15
+	}
+}
+
+general_prod_210 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 209
+		num_of_military_factories < 220
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 210
+			num_of_military_factories > 219
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 124
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 44
+	}
+}
+
+air_and_general_prod_210 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 209
+		num_of_military_factories < 220
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 210
+			num_of_military_factories > 219
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 105
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 21
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 45
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 16
+	}
+}
+
+general_prod_220 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 219
+		num_of_military_factories < 230
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 220
+			num_of_military_factories > 229
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 130
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 46
+	}
+}
+
+air_and_general_prod_220 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 219
+		num_of_military_factories < 230
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 220
+			num_of_military_factories > 229
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 110
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 22
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 48
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 17
+	}
+}
+
+general_prod_230 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 229
+		num_of_military_factories < 240
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 230
+			num_of_military_factories > 239
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 135
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 48
+	}
+}
+
+air_and_general_prod_230 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 229
+		num_of_military_factories < 240
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 230
+			num_of_military_factories > 239
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 115
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 23
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 18
+	}
+}
+
+general_prod_240 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 239
+		num_of_military_factories < 250
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 240
+			num_of_military_factories > 249
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 142
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 50
+	}
+}
+
+air_and_general_prod_240 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 239
+		num_of_military_factories < 250
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 240
+			num_of_military_factories > 249
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 120
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 24
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 52
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 18
+	}
+}
+
+general_prod_250 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 249
+		num_of_military_factories < 260
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 250
+			num_of_military_factories > 259
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 147
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 52
+	}
+}
+
+air_and_general_prod_250 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 249
+		num_of_military_factories < 260
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 250
+			num_of_military_factories > 259
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 125
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 54
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 19
+	}
+}
+
+general_prod_260 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 259
+		num_of_military_factories < 270
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 260
+			num_of_military_factories > 269
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 153
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 54
+	}
+}
+
+air_and_general_prod_260 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 259
+		num_of_military_factories < 270
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 260
+			num_of_military_factories > 269
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 130
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 26
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 56
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 20
+	}
+}
+
+general_prod_270 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 269
+		num_of_military_factories < 280
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 270
+			num_of_military_factories > 279
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 159
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 16
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 56
+	}
+}
+
+air_and_general_prod_270 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 269
+		num_of_military_factories < 280
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 270
+			num_of_military_factories > 279
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 135
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 27
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 58
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 21
+	}
+}
+
+general_prod_280 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 279
+		num_of_military_factories < 290
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 280
+			num_of_military_factories > 289
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 165
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 58
+	}
+}
+
+air_and_general_prod_280 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 279
+		num_of_military_factories < 290
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 280
+			num_of_military_factories > 289
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 140
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 28
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 61
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 21
+	}
+}
+
+general_prod_290 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 289
+		num_of_military_factories < 300
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 290
+			num_of_military_factories > 299
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 171
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 60
+	}
+}
+
+air_and_general_prod_290 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 289
+		num_of_military_factories < 300
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 290
+			num_of_military_factories > 299
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 145
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 29
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 63
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 22
+	}
+}
+
+general_prod_300 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 299
+		num_of_military_factories < 310
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 300
+			num_of_military_factories > 309
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 177
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 18
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 62
+	}
+}
+
+air_and_general_prod_300 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 299
+		num_of_military_factories < 310
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 300
+			num_of_military_factories > 309
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 150
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 65
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 23
+	}
+}
+
+general_prod_310 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 309
+		num_of_military_factories < 320
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 310
+			num_of_military_factories > 319
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 183
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 18
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 64
+	}
+}
+
+air_and_general_prod_310 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 309
+		num_of_military_factories < 320
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 310
+			num_of_military_factories > 319
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 155
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 31
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 67
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 24
+	}
+}
+
+general_prod_320 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 319
+		num_of_military_factories < 330
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 320
+			num_of_military_factories > 329
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 189
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 19
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 67
+	}
+}
+
+air_and_general_prod_320 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 319
+		num_of_military_factories < 330
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 320
+			num_of_military_factories > 329
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 160
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 32
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 70
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 25
+	}
+}
+
+general_prod_330 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 329
+		num_of_military_factories < 340
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 330
+			num_of_military_factories > 339
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 194
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 19
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 69
+	}
+}
+
+air_and_general_prod_330 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 329
+		num_of_military_factories < 340
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 330
+			num_of_military_factories > 339
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 165
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 33
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 71
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 25
+	}
+}
+
+general_prod_340 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 339
+		num_of_military_factories < 350
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 340
+			num_of_military_factories > 349
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 71
+	}
+}
+
+air_and_general_prod_340 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 339
+		num_of_military_factories < 350
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 340
+			num_of_military_factories > 349
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 170
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 34
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 73
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 26
+	}
+}
+
+general_prod_350 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 349
+		num_of_military_factories < 360
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 350
+			num_of_military_factories > 359
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 206
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 21
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 73
+	}
+}
+
+air_and_general_prod_350 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 349
+		num_of_military_factories < 360
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 350
+			num_of_military_factories > 359
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 175
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 76
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 27
+	}
+}
+
+general_prod_360 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 359
+		num_of_military_factories < 370
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 360
+			num_of_military_factories > 369
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 212
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 21
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 75
+	}
+}
+
+air_and_general_prod_360 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 359
+		num_of_military_factories < 370
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 360
+			num_of_military_factories > 369
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 180
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 36
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 78
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 27
+	}
+}
+
+general_prod_370 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 369
+		num_of_military_factories < 380
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 370
+			num_of_military_factories > 379
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 218
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 22
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 77
+	}
+}
+
+air_and_general_prod_370 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 369
+		num_of_military_factories < 380
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 370
+			num_of_military_factories > 379
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 185
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 37
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 80
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 28
+	}
+}
+
+general_prod_380 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 379
+		num_of_military_factories < 390
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 380
+			num_of_military_factories > 389
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 224
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 23
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 79
+	}
+}
+
+air_and_general_prod_380 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 379
+		num_of_military_factories < 390
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 380
+			num_of_military_factories > 389
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 190
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 38
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 83
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 29
+	}
+}
+
+general_prod_390 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 389
+		num_of_military_factories < 400
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 390
+			num_of_military_factories > 399
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 230
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 23
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 81
+	}
+}
+
+air_and_general_prod_390 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 389
+		num_of_military_factories < 400
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 390
+			num_of_military_factories > 399
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 195
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 39
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 85
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 30
+	}
+}
+
+general_prod_400 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 399
+		num_of_military_factories < 410
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 400
+			num_of_military_factories > 409
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 236
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 23
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 83
+	}
+}
+
+air_and_general_prod_400 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 399
+		num_of_military_factories < 410
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 400
+			num_of_military_factories > 409
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 87
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 31
+	}
+}
+
+general_prod_410 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 409
+		num_of_military_factories < 420
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 410
+			num_of_military_factories > 419
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 242
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 24
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 85
+	}
+}
+
+air_and_general_prod_410 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 409
+		num_of_military_factories < 420
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 410
+			num_of_military_factories > 419
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 205
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 41
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 89
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 31
+	}
+}
+
+general_prod_420 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 419
+		num_of_military_factories < 430
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 420
+			num_of_military_factories > 429
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 248
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 12
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 88
+	}
+}
+
+air_and_general_prod_420 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 419
+		num_of_military_factories < 430
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 420
+			num_of_military_factories > 429
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 210
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 42
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 91
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 32
+	}
+}
+
+general_prod_430 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 429
+		num_of_military_factories < 440
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 430
+			num_of_military_factories > 439
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 253
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 89
+	}
+}
+
+air_and_general_prod_430 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 429
+		num_of_military_factories < 440
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 430
+			num_of_military_factories > 439
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 215
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 43
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 93
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 33
+	}
+}
+
+general_prod_440 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 439
+		num_of_military_factories < 450
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 440
+			num_of_military_factories > 449
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 259
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 26
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 92
+	}
+}
+
+air_and_general_prod_440 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 439
+		num_of_military_factories < 450
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 440
+			num_of_military_factories > 449
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 220
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 44
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 96
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 9
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 34
+	}
+}
+
+general_prod_450 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 449
+		num_of_military_factories < 460
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 450
+			num_of_military_factories > 459
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 265
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 27
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 94
+	}
+}
+
+air_and_general_prod_450 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 449
+		num_of_military_factories < 460
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 450
+			num_of_military_factories > 459
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 225
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 45
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 97
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 34
+	}
+}
+
+general_prod_460 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 459
+		num_of_military_factories < 470
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 460
+			num_of_military_factories > 469
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 271
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 27
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 13
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 16
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 96
+	}
+}
+
+air_and_general_prod_460 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 459
+		num_of_military_factories < 470
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 460
+			num_of_military_factories > 469
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 230
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 46
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 35
+	}
+}
+
+general_prod_470 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 469
+		num_of_military_factories < 480
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 470
+			num_of_military_factories > 479
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 277
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 27
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 16
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 98
+	}
+}
+
+air_and_general_prod_470 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 469
+		num_of_military_factories < 480
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 470
+			num_of_military_factories > 479
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 235
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 47
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 102
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 36
+	}
+}
+
+general_prod_480 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 479
+		num_of_military_factories < 490
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 480
+			num_of_military_factories > 489
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 283
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 28
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 100
+	}
+}
+
+air_and_general_prod_480 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 479
+		num_of_military_factories < 490
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 480
+			num_of_military_factories > 489
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 240
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 48
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 104
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 37
+	}
+}
+
+general_prod_490 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 489
+		num_of_military_factories < 500
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 490
+			num_of_military_factories > 499
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 289
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 29
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 14
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 102
+	}
+}
+
+air_and_general_prod_490 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 489
+		num_of_military_factories < 500
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 490
+			num_of_military_factories > 499
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 245
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 49
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 106
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 38
+	}
+}
+
+general_prod_500 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 499
+	}
+	abort = {
+		OR = {
+			AND = {
+				has_tech = improved_small_airframe
+				has_tech = engines_3
+			}
+			num_of_military_factories < 500
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 295
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 29
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 17
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 104
+	}
+}
+
+air_and_general_prod_500 = {
+	allowed = { always = no }
+	enable = {
+		num_of_military_factories > 499
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort = {
+		OR = {
+			NOT = { has_tech = improved_small_airframe }
+			NOT = { has_tech = engines_3 }
+			num_of_military_factories < 500
+		}
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 250
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 109
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 11
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = rocket_artillery
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support_equipment
+		value = 38
+	}
+}

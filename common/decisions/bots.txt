@@ -142,7 +142,7 @@ BOTS = {
 
                         }
     }
-       set_sub_doctrine_37 = {
+set_sub_doctrine_37 = {
 
     fire_only_once = yes
 
@@ -179,7 +179,7 @@ BOTS = {
                             }
                         }
     }
-           set_sub_doctrine_38 = {
+set_sub_doctrine_38 = {
 
     fire_only_once = yes
 
@@ -215,7 +215,7 @@ BOTS = {
                             }
                         }
     }
-          set_sub_doctrine_39 = {
+set_sub_doctrine_39 = {
 
     fire_only_once = yes
 
@@ -256,7 +256,7 @@ BOTS = {
                             }
                         }
     }
-              set_spec_doctrine_40 = {
+set_spec_doctrine_40 = {
 
     fire_only_once = yes
 
@@ -317,13 +317,33 @@ BOTS = {
                 is_ai = yes
             }
                 complete_effect = {
-                    set_sub_doctrine = mountaineers_1 
+                    if = {limit = {
+                        or = {
+                            original_tag = SOV
+                            original_tag = GER
+                            original_tag = FRA
+                            original_tag = FIN
+                            original_tag = POL
+                            original_tag = FRA
+                            original_tag = BEL
+                            original_tag = HOL
+                        }
+                    }
+                        set_sub_doctrine = rangers_1 
                               add_mastery = {
                                 amount = 90
                                 folder = special_forces
                             }
                         }
-    }
+                    }
+                    else = {
+                        set_sub_doctrine = mountaineers_1 
+                              add_mastery = {
+                                amount = 90
+                                folder = special_forces
+                            }
+                        }
+                }
       set_grand_doctrine_test = {
 
     fire_only_once = yes
@@ -485,7 +505,6 @@ BOTS = {
 
             #add_war_support = 0.25
             add_command_power = -50
-            add_ideas = partial_economic_mobilisation
         }
     }
     
@@ -597,7 +616,6 @@ BOTS = {
 
             #add_war_support = 0.25
             add_command_power = -50
-           add_ideas = war_economy
         }
     }
         bots_low_economic_mobilisation = {
@@ -714,11 +732,18 @@ BOTS = {
 
 		icon = oppression
 		available = {
+					OR = {
+                        has_idea = extensive_conscription
+                        has_idea = scraping_the_barrel
+						has_idea = all_adults_serve
+						has_idea = service_by_requirement
+					}
             NOT ={has_idea = SPR_political_violence}
-            has_political_power > 50
+            has_political_power > 74
             has_war = yes
             #is_minor = yes
-            has_war_support < 0.81
+            has_war_support > 0.81
+            has_idea = war_economy
             NOT = { 
                 OR = {
                     has_idea = undisturbed_isolation
@@ -734,7 +759,8 @@ BOTS = {
             }
 		visible = {
                 NOT = {original_tag = JAP}
-            is_ai = yes
+                NOT = {original_tag = CHI}
+                is_ai = yes
 		}
         ai_will_do = {base = 100}
         cost = 0
@@ -784,6 +810,112 @@ BOTS = {
         complete_effect = {
             add_ideas = war_economy
             add_political_power = -75
+        }
+    } 
+    bot_fin_war = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            original_tag = FIN
+            has_war = yes
+            has_war_support > 0.81
+            }
+		visible = {
+                original_tag = FIN
+            is_ai = yes
+		}
+        ai_will_do = {base = 200}
+        cost = 0
+        complete_effect = {
+            add_ideas = all_adults_serve
+            add_political_power = -300
+        }
+    } 
+        bot_VUP_Hist_version = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+        always = no
+        is_ai = yes
+        has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 0}
+        cost = 9999
+        complete_effect = {
+        }
+    } 
+    bots_fast_division = {
+
+		#fire_only_once = yes
+        days_remove = 15
+
+		icon = oppression
+		available = {
+        date > 1939.1.1
+        has_manpower > 300000
+        is_ai = yes
+        has_equipment = { infantry_equipment > 10000 }
+        #has_equipment = { support_equipment > 275 }
+        #has_equipment = { artillery_equipment > 60 }
+        #has_equipment = { anti_air_equipment > 120 }
+            }
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1}
+        cost = 0
+        complete_effect = {
+            	division_template = {
+					name = "fast drop"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 4 y = 0 }
+
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 4 y = 1 }
+
+                        infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 4 y = 2 }
+					}
+                        support = {
+                            engineer = { x = 0 y = 0 }
+                            artillery = { x = 0 y = 1 }
+                        }
+                        regimental_support = {
+                            fire_support = { x = 0 y = 0 }
+                            fire_support = { x = 1 y = 0 }
+                            fire_support = { x = 2 y = 0 }
+                            fire_support = { x = 3 y = 0 }
+                            fire_support = { x = 4 y = 0 }
+                        }
+			    }
+
+				capital_scope = {
+					create_unit = {
+						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 0 start_equipment_factor = 0 start_manpower_factor = 0"
+                        owner = ROOT
+						allow_spawning_on_enemy_provs = no
+						count = 5 
+					}
+				}
         }
     } 
 }

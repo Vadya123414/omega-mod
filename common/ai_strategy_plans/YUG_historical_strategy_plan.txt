@@ -59,10 +59,8 @@ YUG_historical_weak = {
 		YUG_improve_light_industry
 		YUG_develop_slovenian_industry
 		YUG_local_self_management
-		YUG_join_axis #It is critical this stays early.
 		YUG_end_the_regency
 		YUG_royal_wedding
-		YUG_join_allies
 		YUG_expand_the_university_of_ljubljana
 		YUG_expand_the_sarajevo_arsenals
 		YUG_motorized_logistics
