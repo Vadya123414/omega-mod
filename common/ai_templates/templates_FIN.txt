@@ -94,7 +94,7 @@ rangers_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = tech_rangers
+				has_tech = rangers_tech
 			}
 		}
 	}

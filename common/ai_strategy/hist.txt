@@ -1,0 +1,76 @@
+POL_not_SOV = {
+	enable = {
+		original_tag = POL
+
+	}
+	abort = {
+        POL = { has_capitulated = yes}
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		id = SOV
+		value = -1000
+	}
+}
+POL_not_SOV = {
+	enable = {
+		original_tag = POL
+
+	}
+	abort = {
+        POL = { has_capitulated = yes}
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		id = LIT
+		value = -1000
+	}
+}
+FIN_not_SWI = {
+	enable = {
+		original_tag = FIN
+
+	}
+	abort = {
+        FIN = { has_capitulated = yes}
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		id = SWE
+		value = -1000
+	}
+}
+
+POL_not_SOV = {
+	enable = {
+		original_tag = POL
+
+	}
+	abort = {
+        POL = { has_capitulated = yes}
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 807
+		value = -80
+	}
+}
+FIN_not_SWI = {
+	enable = {
+		original_tag = FIN
+
+	}
+	abort = {
+        FIN = { has_capitulated = yes}
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 722
+		value = -80
+	}
+}

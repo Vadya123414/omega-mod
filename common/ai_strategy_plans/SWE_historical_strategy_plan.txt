@@ -25,8 +25,7 @@ SWE_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		SWE_the_aland_question
-		
+
 		#1936
 		SWE_defense_act
 		SWE_urbanization

@@ -75,6 +75,10 @@ PER_annex = {
 
 		timeout_effect = {
 		COL = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 10000
+			}
 		set_cosmetic_tag = COL_neutral_game
 		set_global_flag = COL_neutral_game
 		add_ideas = BAN_BAN
@@ -93,7 +97,7 @@ PER_annex = {
 		annex_country = { target = PAR }
 		annex_country = { target = TIB }
 		annex_country = { target = SAU }
-		annex_country = { target = AFG }
+		#annex_country = { target = AFG }
 		annex_country = { target = SWI }
 		
 			every_state = {
@@ -101,7 +105,7 @@ PER_annex = {
 					is_core_of = ECU
 					is_controlled_by = ECU
 					}
-				set_compliance = 100
+				set_compliance = 200
 			}
 			}
 			COL = {
@@ -151,7 +155,7 @@ PER_annex = {
 					is_core_of = ECU
 					is_controlled_by = ECU
 					}
-				set_compliance = 100
+				set_compliance = 200
 			}
 			}
 		}

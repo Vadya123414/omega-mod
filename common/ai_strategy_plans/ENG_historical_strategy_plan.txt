@@ -29,26 +29,33 @@ ENG_historical_plan = {
 
 	ai_national_focuses = {
 		limited_rearmament_focus
+		uk_empire_focus
+		uk_service_focus
+		uk_colonial_focus
+		uk_commonwealth_focus
+		uk_asia_focus
+		uk_india_focus
+		uk_australia_focus
+		uk_new_zealand_focus
+		uk_canada_focus
+		uk_south_africa_focus
+		general_rearmament_focus
+		air_rearmament_focus
+		fighter_command_focus
+		ENG_home_defence
+
 		shadow_scheme_focus
 		uk_industrial_focus
 		uk_extra_tech_slot
 		royal_ordinance_focus
-		ENG_vickers_experimental_facility_focus
-
-		general_rearmament_focus
+		ENG_vickers_experimental_facility_focu
 		uk_small_arms_focus
-		uk_empire_focus
-		uk_service_focus
 		ENG_steady_as_she_goes
-		air_rearmament_focus
-		fighter_command_focus
 		aircraft_production_focus
-		ENG_home_defence
+		
 		ENG_prepare_for_the_inevitable
 		ENG_issue_gasmasks
 		ENG_military_training_act
-		uk_colonial_focus
-		uk_commonwealth_focus
 		ENG_british_commonwealth_air_training_plan
 		ENG_embargo_germany
 		ENG_war_with_germany
@@ -66,10 +73,7 @@ ENG_historical_plan = {
 		uk_convoy_focus
 		ENG_secure_the_imperial_shipping_routes
 
-		uk_australia_focus
-		uk_new_zealand_focus
-		uk_canada_focus
-		uk_south_africa_focus
+
 		crypto_bomb_focus
 
 		tizard_mission_focus

@@ -12,13 +12,18 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.9
+                mobilization_speed = 1000
+				industrial_capacity_factory = -0.09
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1			
 			}
 
 			cancel = {	
@@ -51,6 +56,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1			
 				
 			}
 
@@ -83,6 +94,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 				
 			}
 
@@ -114,7 +131,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 			}
 
 			cancel = {
@@ -144,7 +166,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 			}
 
 			cancel = {
@@ -172,7 +199,13 @@ ideas = {
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9		
+				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1	
+				country_resource_rubber = 1						
 			}
 
 			cancel = {

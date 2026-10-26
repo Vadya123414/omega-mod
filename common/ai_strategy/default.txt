@@ -208,7 +208,7 @@ default_mountaineers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 100
+		value = 10000
 	}
 }
 default_marines_unit_production = {
@@ -226,6 +226,7 @@ default_marines_unit_production = {
 default_rangers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
+		or = {
 				original_tag = SOV
 				original_tag = GER
 				original_tag = FRA
@@ -235,11 +236,12 @@ default_rangers_unit_production = {
 				original_tag = BEL
 				original_tag = HOL
 		}
+	}
 	abort_when_not_enabled = no	
 	ai_strategy = {
 		type = role_ratio
 		id = rangers
-		value = 100
+		value = 10000
 	}
 }
 default_convoy_production = {
@@ -651,7 +653,76 @@ save_admiral_pp_for_later = {
 		value = -100
 	}
 }
+save_navy_chief_pp_for_later = {
+	enable = {
+			NOT = {
+			original_tag = AST
+			original_tag = USA
+			original_tag = ENG
+			original_tag = ITA
+			original_tag = JAP
+			original_tag = GER
+			}
+	}
+	abort = {
+		AND = {
+		OR = {
+			original_tag = AST
+			original_tag = USA
+			original_tag = ENG
+			original_tag = ITA
+			original_tag = JAP
+			original_tag = GER
+		}
+		has_political_power > 200
+		}
+	}
 
+	ai_strategy = {
+		type = pp_spend_priority
+		id = navy_chief
+		value = -1000
+	}
+}
+save_air_chief_pp_for_later = {
+	enable = {
+			NOT = {
+			original_tag = USA
+			original_tag = ENG
+			original_tag = JAP
+			original_tag = GER
+			}
+	}
+	abort = {
+		AND = {
+		OR = {
+			original_tag = USA
+			original_tag = ENG
+			original_tag = JAP
+			original_tag = GER
+		}
+		has_political_power > 200
+		}
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = air_chief
+		value = -1000
+	}
+}
+save_air_chief_pp_for_later = {
+	enable = {
+			always = yes
+	}
+
+abort_when_not_enabled = no
+	ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
+		value = -1000
+	}
+}
 do_not_waste_pp_if_saving_for_manpower_laws = {
 
 	enable = {

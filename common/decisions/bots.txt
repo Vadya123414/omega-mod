@@ -818,9 +818,11 @@ set_spec_doctrine_40 = {
 
 		icon = oppression
 		available = {
+            has_global_flag = VUP_Hist_version
             original_tag = FIN
             has_war = yes
             has_war_support > 0.81
+            date>1941.1.1
             }
 		visible = {
                 original_tag = FIN
@@ -829,8 +831,62 @@ set_spec_doctrine_40 = {
         ai_will_do = {base = 200}
         cost = 0
         complete_effect = {
-            add_ideas = all_adults_serve
-            add_political_power = -300
+            add_ideas = service_by_requirement
+            add_political_power = -150
+        }
+    } 
+        bot_fin_1939 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            has_global_flag = VUP_Hist_version
+            original_tag = FIN
+            date>1939.1.1
+            }
+		visible = {
+                original_tag = FIN
+            is_ai = yes
+		}
+        ai_will_do = {base = 200}
+        cost = 0
+        complete_effect = {
+            add_ideas = extensive_conscription
+            add_political_power = -150
+        }
+    } 
+    bot_chi_hist_front = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+        has_completed_focus = CHI_one_nation_undivided
+        original_tag = CHI
+        is_ai = yes
+        has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = CHI
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100}
+        cost = 0
+        complete_effect = {
+            add_to_faction = GDC
+            add_to_faction = GSX
+            add_to_faction = YUN
+            add_to_faction = SIC
+            add_to_faction = XSM
+            add_to_faction = GSM
+            add_to_faction = NXM
+            add_to_faction = SHX
+            add_to_faction = HBC
+            add_to_faction = SND
+            add_to_faction = GXC
+            add_to_faction = XIC
         }
     } 
         bot_VUP_Hist_version = {
@@ -910,7 +966,7 @@ set_spec_doctrine_40 = {
 
 				capital_scope = {
 					create_unit = {
-						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 0 start_equipment_factor = 0 start_manpower_factor = 0"
+						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 0.01 start_equipment_factor = 0.01 start_manpower_factor = 0.01"
                         owner = ROOT
 						allow_spawning_on_enemy_provs = no
 						count = 5 
