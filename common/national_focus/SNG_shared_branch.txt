@@ -1,0 +1,2568 @@
+joint_focus = { 
+    id = RUS_raspad
+	icon = GFX_focus_SOV_freedom_for_all
+	prerequisite = { focus = RUS_reconstruction }
+	prerequisite = { focus = RUS_liberate }
+	x = 136
+	y = 15
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	available_if_capitulated = no
+	
+	search_filters = {FOCUS_FILTER_POLITICAL }
+
+    offset = { x = 0   y = 0 trigger = { tag = SOV } }
+    offset = { x = -1000  y = -50 trigger = { tag = UKR } }
+    offset = { x = -1000  y = -50 trigger = { tag = BLR } }
+    offset = { x = -1000  y = -50 trigger = { tag = KAZ } }
+
+    cost = 5 
+    text_icon = SNG_SOV_style
+	
+    allow_branch = {
+        OR = { tag = SOV tag = UKR tag = BLR tag = KAZ }
+        NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
+    }
+
+    available = { 
+        is_faction_leader = yes
+        tag = SOV
+    }
+
+    ai_will_do = {
+        base = 1 
+        modifier = {
+            factor = 0
+            is_historical_focus_on = yes
+        }
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+    completion_reward = {
+        
+    }
+
+	completion_reward_joint_originator = {
+        add_stability = 0.11
+        add_political_power = 50
+        add_popularity = { ideology = democratic popularity = 0.1 }
+        remove_ideas = RUS_FULL
+
+        add_dynamic_modifier = { modifier = RUS_ECONOMI }
+        
+		custom_effect_tooltip = generic_skip_one_line_tt
+		release_autonomy = {
+			target = UKR
+			autonomy_state = autonomy_dominion
+			freedom_level = 0.5
+		}
+		
+		UKR = {
+        add_dynamic_modifier = { modifier = RUS_ECONOMI }
+		add_ideas = Russian_puppet_no_surrender
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		release_autonomy = {
+			target = BLR
+			autonomy_state = autonomy_dominion
+			freedom_level = 0.5
+		}
+		
+		BLR = {
+            add_dynamic_modifier = { modifier = RUS_ECONOMI }
+		add_ideas = Russian_puppet_no_surrender
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		release_autonomy = {
+			target = KAZ
+			autonomy_state = autonomy_dominion
+			freedom_level = 0.5
+		}
+		
+		KAZ = {
+            add_dynamic_modifier = { modifier = RUS_ECONOMI }
+		add_ideas = Russian_puppet_no_surrender
+		}
+    }
+
+    completion_reward_joint_member = {
+
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════════
+# ВОЕННАЯ ВЕТКА (слева)
+# ═══════════════════════════════════════════════════════════════════
+
+joint_focus = {
+    id = EAEU_unified_command
+    icon = GFX_focus_PRC_rebuild_28_bolshevik
+    prerequisite = { focus = RUS_raspad }
+    x = -8
+    y = 1
+    relative_position_id = RUS_raspad
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_stability > 0.5
+        has_war_support > 0.25
+        
+    }
+
+    search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        air_experience = 25
+        navy_experience = 25
+        army_experience = 25
+        add_command_power = 25
+        custom_effect_tooltip = generic_skip_one_line_tt
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
+		add_to_variable = { army_leader_start_level_modifaer = 2 tooltip = army_leader_start_level_tt }
+		add_to_variable = { military_leader_cost_modifaer = -0.2 tooltip = military_leader_cost_factor_tt }
+    }
+}
+
+joint_focus = {
+    id = EAEU_joint_army
+    dynamic = yes
+    icon = GFX_focus_PRC_reorganize_divisions
+    prerequisite = { focus = EAEU_unified_command }
+    x = 0
+    y = 1
+    relative_position_id = EAEU_unified_command
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+         has_war_support > 0.3
+        has_army_manpower = { size > 84999 }
+        num_divisions > 5
+    }
+
+    search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
+        add_to_variable = { experience_army = 0.05 tooltip = experience_gain_army_factor_tt }
+		add_to_variable = { land_mastery_gain = 0.15 tooltip = land_mastery_gain_factor_tt }
+        add_to_variable = { army_core_attack_factor = 0.05 tooltip = army_core_attack_factor_tt } 
+        add_to_variable = { army_core_defence_modifaer = 0.05 tooltip = army_core_defence_factor_tt } 
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_joint_military_exercises
+    icon = GFX_focus_SWE_varnplikt
+    prerequisite = { focus = EAEU_joint_army }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_joint_army
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_war_support > 0.4
+        has_army_manpower = { size > 89999 }
+        num_divisions > 14
+    }
+
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+
+    completion_reward_joint_originator = {
+            SOV = {
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 4
+					category = land_doctrine
+				}
+			}
+			
+			BLR = {
+			    
+			    add_doctrine_cost_reduction = {
+			    	name = land_doc_bonus
+			    	cost_reduction = 0.5
+			    	uses = 4
+			    	category = land_doctrine
+			    }
+            }
+
+			UKR = {
+			    
+			    add_doctrine_cost_reduction = {
+			    	name = land_doc_bonus
+			    	cost_reduction = 0.5
+			    	uses = 4
+			    	category = land_doctrine
+			    }
+            }
+			KAZ = {
+			    
+			    add_doctrine_cost_reduction = {
+			    	name = land_doc_bonus
+			    	cost_reduction = 0.5
+			    	uses = 4
+			    	category = land_doctrine
+			    }
+            }
+    }
+}
+
+joint_focus = {
+    id = EAEU_unified_recruitment
+    icon = GFX_focus_SIA_sideline_disloyal_officers
+    prerequisite = { focus = EAEU_joint_military_exercises }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_joint_military_exercises
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_war_support > 0.5
+        has_army_manpower = { size > 99999 }
+        num_divisions > 29
+    }
+
+    search_filters = { FOCUS_FILTER_MANPOWER }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ws_factor = -0.05 tooltip = war_support_factor_tt }
+        add_to_variable = { mobilization_speed_modifaer = 0.20 tooltip = mobilization_speed_tt }
+        add_to_variable = { ludi = 0.015 tooltip = conscription_tt }
+		add_to_variable = { factor_lud = 0.1 tooltip = conscription_factor_tt }
+		add_to_variable = { trenirivka = 0.15 tooltip = training_time_army_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+}
+
+joint_focus = { 
+    id = EAEU_rashprizivgenod
+    icon = GFX_focus_CZE_moravecs_bohemia
+    prerequisite = { focus = EAEU_joint_military_exercises }
+    x = -1
+    y = 1
+    relative_position_id = EAEU_joint_military_exercises
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_war_support > 0.5
+        has_army_manpower = { size > 129999 }
+        num_divisions > 24
+    }
+
+    search_filters = { FOCUS_FILTER_MANPOWER }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        
+    }
+
+    completion_reward_joint_originator = {
+        SOV = {
+			create_corps_commander = { 
+				name = "NKVD(Nikitka)"
+				traits = { infantry_leader}
+				skill = 6
+				attack_skill = 3
+				defense_skill = 6
+				planning_skill = 6
+				logistics_skill = 6
+			}
+		}
+        UKR = {
+            create_corps_commander = {
+                name = "Mykola Kovalchuk"
+                traits = { offensive_doctrine panzer_leader }
+                skill = 6
+                attack_skill = 7
+                defense_skill = 5
+                planning_skill = 6
+                logistics_skill = 4
+            }
+            create_corps_commander = {
+                name = "Oleksandr Syrotenko"
+                traits = { defensive_doctrine fortress_buster }
+                skill = 6
+                attack_skill = 4
+                defense_skill = 7
+                planning_skill = 5
+                logistics_skill = 5
+            }
+            create_corps_commander = {
+                name = "Hryhoriy Vasylenko"
+                traits = { adaptable organizer }
+                skill = 6
+                attack_skill = 5
+                defense_skill = 6
+                planning_skill = 6
+                logistics_skill = 5
+            }
+            create_corps_commander = { 
+			    name = "Vadya"
+			    traits = { career_officer engineer_officer}
+			    skill = 6
+			    attack_skill = 3
+			    defense_skill = 6
+			    planning_skill = 3
+			    logistics_skill = 3
+			}
+        }
+        KAZ = {
+            create_corps_commander = {
+                name = "Bauyrzhan Toktabayev"
+                traits = { desert_fox cavalry_officer }
+                skill = 6
+                attack_skill = 6
+                defense_skill = 5
+                planning_skill = 5
+                logistics_skill = 6
+            }
+            create_corps_commander = {
+                name = "Kasym Kuanyshev"
+                traits = { trickster commando }
+                skill = 6
+                attack_skill = 7
+                defense_skill = 4
+                planning_skill = 6
+                logistics_skill = 5
+            }
+            create_corps_commander = {
+                name = "Yerlan Sagadiyev"
+                traits = { logistics_wizard thorough_planner }
+                skill = 6
+                attack_skill = 4
+                defense_skill = 6
+                planning_skill = 7
+                logistics_skill = 7
+            }
+            create_corps_commander = { 
+			    name = "Sapr"
+			    traits = { adaptable  panzer_leader}
+			    skill = 6
+			    attack_skill = 6
+			    defense_skill = 3
+			    planning_skill = 3
+			    logistics_skill = 3
+			}
+        }
+        BLR = {
+            create_corps_commander = {
+                name = "Piatro Klimuk"
+                traits = { winter_specialist infantry_officer }
+                skill = 6
+                attack_skill = 5
+                defense_skill = 6
+                planning_skill = 5
+                logistics_skill = 6
+            }
+            create_corps_commander = {
+                name = "Mikalai Varabei"
+                traits = { career_officer engineer_officer }
+                skill = 6
+                attack_skill = 5
+                defense_skill = 6
+                planning_skill = 6
+                logistics_skill = 5
+            }
+            create_corps_commander = {
+                name = "Viktar Herasimov"
+                traits = { guerilla_fighter inspirational_leader }
+                skill = 6
+                attack_skill = 6
+                defense_skill = 5
+                planning_skill = 5
+                logistics_skill = 6
+            }
+            create_corps_commander = { 
+			    name = "Larion"
+			    traits = { adaptable  panzer_leader}
+			    skill = 6
+			    attack_skill = 7
+			    defense_skill = 4
+			    planning_skill = 5
+			    logistics_skill = 3
+			}
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_bunker_vostok
+    icon = GFX_focus_FIN_sissi
+    prerequisite = { focus = EAEU_joint_military_exercises }
+    x = 1
+    y = 1
+    relative_position_id = EAEU_joint_military_exercises
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+         has_war_support > 0.5
+        has_army_manpower = { size > 129999 }
+        num_divisions > 24
+    }
+
+    search_filters = { FOCUS_FILTER_MANPOWER }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+            custom_effect_tooltip = FIN_winter_warfare_battalion_tt
+
+			hidden_effect = {
+				set_technology = {
+					winter_logistics_support_tech = 1
+					popup = no
+				}
+			}
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_spez_voina
+    icon = GFX_focus_generic_hill_training
+    prerequisite = { focus = EAEU_unified_recruitment }
+    x = -8
+    y = 7
+    relative_position_id = RUS_raspad
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+       any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+       add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 1
+			category = special_forces_doctrine
+		}
+		add_ideas = NORDIC_joint_mountaineers_effort
+    }
+
+    completion_reward_joint_member = {
+        add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = special_forces_doctrine
+		}
+		add_ideas = NORDIC_joint_mountaineers_effort
+    }
+}
+
+joint_focus = {
+    id = EAEU_mechanized_army
+    icon = GFX_goal_generic_army_tanks
+    prerequisite = { focus = EAEU_unified_recruitment }
+    x = -1
+    y = 2
+    relative_position_id = EAEU_unified_recruitment
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        has_tech = motorised_infantry
+        has_army_size = { size > 7 type = motorized }
+    }
+
+    search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        add_tech_bonus = {
+            name = EAEU_mechanized_army
+            bonus = 0.75
+            uses = 1
+            category = cat_mechanized_equipment
+        }
+        add_tech_bonus = {
+            name = EAEU_mechanized_army
+            bonus = 0.75
+            uses = 1
+            category = armor
+        }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_infantry_first
+    icon = GFX_goal_generic_allies_build_infantry
+    prerequisite = { focus = EAEU_unified_recruitment }
+    x = 1
+    y = 2
+    relative_position_id = EAEU_unified_recruitment
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        has_army_size = { size > 30 type = infantry }
+        has_army_manpower = { size > 199999 }
+    }
+
+    search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+        add_tech_bonus = {
+            name = EAEU_infantry_first
+            bonus = 0.75
+            uses = 2
+            category = infantry_weapons
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_tech_bonus = {
+            name = EAEU_infantry_first
+            bonus = 0.5
+            uses = 1
+            category = infantry_weapons
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_joint_navy
+    dynamic = yes
+    icon = GFX_focus_BEL_antwerp_maritime_academy
+    prerequisite = { focus = EAEU_unified_command }
+    x = -2
+    y = 1
+    relative_position_id = EAEU_unified_command
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_navy_size = { size > 1 }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ddrepair_speed_factor_tt = 0.5 tooltip = repair_speed_factor_tt }
+        add_to_variable = { ddnaval_morale_factor = 0.5 tooltip = naval_morale_factor_tt }
+        add_to_variable = { ddnaval_coordination = 0.15 tooltip = naval_coordination_tt }
+         add_to_variable = { ddnavy_org_factor = 0.15 tooltip = navy_org_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+        add_command_power = 60
+    }
+
+    completion_reward_joint_member = {
+        
+        add_command_power = 40
+    }
+}
+
+joint_focus = {
+    id = EAEU_naval_exercises
+    icon = GFX_focus_generic_naval_discipline
+    prerequisite = { focus = EAEU_joint_navy }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_joint_navy
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_navy_size = { size > 2 }
+        num_of_naval_factories > 1
+    }
+
+    search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        
+    }
+
+    completion_reward_joint_originator = {
+        add_doctrine_cost_reduction = {
+            name = EAEU_naval_exercises
+            cost_reduction = 0.50
+            uses = 4
+            category = naval_doctrine
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_doctrine_cost_reduction = {
+            name = EAEU_naval_exercises
+            cost_reduction = 0.50
+            uses = 3
+            category = naval_doctrine
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_korabl_bereg
+    icon = GFX_focus_generic_destroyer
+    prerequisite = { focus = EAEU_joint_navy }
+    x = 1
+    y = 1
+    relative_position_id = EAEU_joint_navy
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_navy_size = { size > 2 }
+        num_of_naval_factories > 1
+    }
+
+    search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        set_technology = { coastal_defense_ships = 1 popup = no }
+		add_ideas = PHI_coastal_defense_ships_ns
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_joint_airforce
+    dynamic = yes
+    icon = GFX_focus_generic_tank_air_support
+    prerequisite = { focus = EAEU_unified_command }
+    x = 2
+    y = 1
+    relative_position_id = EAEU_unified_command
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        has_deployed_air_force_size = { size > 499 }
+    }
+
+    search_filters = { FOCUS_FILTER_AIR_XP }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ddair_cas_present_factor_tt = 0.1 tooltip = air_cas_present_factor_tt }
+		add_to_variable = { ddair_strategic_bomber_bombing_factor_tt = 0.35 tooltip = air_strategic_bomber_bombing_factor_tt }
+        
+    }
+
+    completion_reward_joint_originator = {
+    
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_vozduh_arta
+    dynamic = yes
+    icon = GFX_focus_generic_cas_aircraft
+    prerequisite = { focus = EAEU_joint_airforce }
+    x = 1
+    y = 2
+    relative_position_id = EAEU_unified_command
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        #has_deployed_air_force_size = { size > 99 }
+    }
+
+    search_filters = { FOCUS_FILTER_AIR_XP }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        add_ideas = MEX_aerial_artillery
+    }
+
+    completion_reward_joint_originator = {
+    
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_air_exercises
+    icon = GFX_focus_SOV_flying_clubs
+    prerequisite = { focus = EAEU_joint_airforce }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_joint_airforce
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        #has_deployed_air_force_size = { size > 349 }
+    }
+
+    search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { ddair_intercept_efficiency_tt = 0.05 tooltip = air_intercept_efficiency_tt } 
+        add_to_variable = { ddair_superiority_efficiency_tt = 0.05 tooltip = air_superiority_efficiency_tt } 
+    }
+
+    completion_reward_joint_originator = {
+        add_doctrine_cost_reduction = {
+            name = EAEU_air_exercises
+            cost_reduction = 0.5
+            uses = 3
+            category = air_doctrine
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_doctrine_cost_reduction = {
+            name = EAEU_air_exercises
+            cost_reduction = 0.5
+            uses = 2
+            category = air_doctrine
+        }
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════════
+# ПОЛИТИЧЕСКАЯ ВЕТКА (центр)
+# ═══════════════════════════════════════════════════════════════════
+
+joint_focus = {
+    id = EAEU_political_cooperation
+    icon = GFX_focus_BRA_rio_protocol
+    prerequisite = { focus = RUS_raspad }
+    x = 0
+    y = 1
+    relative_position_id = RUS_raspad
+    cost = 5
+    text_icon = SNG_SOV_style
+
+    available = {
+        tag = SOV
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { war_stability = 0.1 tooltip = war_stability_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        add_political_power = 50
+        add_stability = 0.05
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.1
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_political_power = 250
+        add_stability = 0.05
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.05
+        }
+    }
+}
+# ═══════════════════════════════════════════════════════════════════
+# ДИПЛОМАТИЧЕСКАЯ ВЕТКА (дружба с соседями) — только для SOV
+# ═══════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────
+# Дружба с Финляндией
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_fin_friend
+    icon = GFX_focus_FIN_viron_kansa
+    prerequisite = { focus = EAEU_political_cooperation }
+    relative_position_id = EAEU_political_cooperation
+    x = -2
+    y = 2
+    cost = 5
+    text_icon = SNG_SOV_style
+
+    available = {
+        tag = SOV
+        FIN = { NOT = { is_in_faction = yes } }
+    }
+
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = { }
+    ai_will_do = { factor = 1 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        FIN = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        if = {
+            limit = { FIN = { NOT = { is_in_faction = yes } } }
+            FIN = { country_event = priglos_v_alik.1 }
+        }
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# Дружба с Прибалтикой
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_pribaltic_friend
+    icon = GFX_focus_SOV_baltic_security
+    prerequisite = { focus = EAEU_political_cooperation }
+    relative_position_id = EAEU_political_cooperation
+    x = 0
+    y = 2
+    cost = 5
+    text_icon = SNG_SOV_style
+
+    available = {
+        tag = SOV
+        OR = {
+            EST = { NOT = { is_in_faction = yes } }
+            LIT = { NOT = { is_in_faction = yes } }
+            LAT = { NOT = { is_in_faction = yes } }
+        }
+    }
+
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = { }
+    ai_will_do = { factor = 1 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        EST = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        LIT = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        LAT = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        if = {
+            limit = { EST = { NOT = { is_in_faction = yes } } }
+            EST = { country_event = priglos_v_alik.1 }
+        }
+        if = {
+            limit = { LIT = { NOT = { is_in_faction = yes } } }
+            LIT = { country_event = priglos_v_alik.1 }
+        }
+        if = {
+            limit = { LAT = { NOT = { is_in_faction = yes } } }
+            LAT = { country_event = priglos_v_alik.1 }
+        }
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# Дружба с Востоком (Турция/Персия)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_east_friend
+    icon = GFX_focus_TUR_treaty_of_saadabad
+    prerequisite = { focus = EAEU_political_cooperation }
+    relative_position_id = EAEU_political_cooperation
+    x = 2
+    y = 2
+    cost = 5
+    text_icon = SNG_SOV_style
+
+    available = {
+        tag = SOV
+         
+        OR = {
+            TUR = { NOT = { is_in_faction = yes } }
+            PER = { NOT = { is_in_faction = yes } }
+        }
+    }
+
+    joint_trigger = {   }
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = { }
+    ai_will_do = { factor = 1 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        TUR = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        PER = { add_timed_idea = { idea = RUS_propagand days = 720 } }
+        if = {
+            limit = { TUR = { NOT = { is_in_faction = yes } } }
+            TUR = { country_event = priglos_v_alik.1 }
+        }
+        if = {
+            limit = { PER = { NOT = { is_in_faction = yes } } }
+            PER = { country_event = priglos_v_alik.1 }
+        }
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# Денацификация (варголы против фашизма)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_denazizm
+    icon = GFX_focus_YUG_zmaj
+    prerequisite = { focus = EAEU_fin_friend }
+    prerequisite = { focus = EAEU_pribaltic_friend }
+    prerequisite = { focus = EAEU_east_friend }
+    relative_position_id = EAEU_pribaltic_friend
+    x = 0
+    y = 1
+    cost = 5
+    text_icon = SNG_SOV_style
+
+    available = {
+        tag = SOV
+         has_war_support > 0.5
+    }
+
+    joint_trigger = {   }
+    will_lead_to_war_with = GER
+    will_lead_to_war_with = JAP
+    will_lead_to_war_with = ITA
+    will_lead_to_war_with = FRA
+    will_lead_to_war_with = ENG
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = { }
+    ai_will_do = { factor = 1 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        if = {
+            limit = { GER = { has_government = fascism } }
+            create_wargoal = {
+                target = GER
+                type = annex_everything
+                expire = 0
+            }
+        }
+        if = {
+            limit = { ITA = { has_government = fascism } }
+            create_wargoal = {
+                target = ITA
+                type = annex_everything
+                expire = 0
+            }
+        }
+        if = {
+            limit = { JAP = { has_government = fascism } }
+            create_wargoal = {
+                target = JAP
+                type = annex_everything
+                expire = 0
+            }
+        }
+        if = {
+            limit = { ENG = { has_government = fascism } }
+            create_wargoal = {
+                target = ENG
+                type = annex_everything
+                expire = 0
+            }
+        }
+        if = {
+            limit = { FRA = { has_government = fascism } }
+            create_wargoal = {
+                target = FRA
+                type = annex_everything
+                expire = 0
+            }
+        }
+        every_other_country = {
+            limit = { has_government = fascism }
+            add_stability = -0.05
+            add_war_support = -0.05
+        }
+    }
+}
+joint_focus = {
+    id = EAEU_shared_intelligence
+    icon = GFX_focus_RAJ_a_policy_of_silence
+    prerequisite = { focus = EAEU_political_cooperation }
+    x = -4
+    y = 1
+    relative_position_id = EAEU_political_cooperation
+    cost = 5
+    text_icon = SNG_style
+
+    available = {  
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+     }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        create_intelligence_agency = yes
+        upgrade_intelligence_agency = upgrade_training_centers
+        upgrade_intelligence_agency = upgrade_passive_defense
+        upgrade_intelligence_agency = upgrade_interrogation_techniques
+        upgrade_intelligence_agency = upgrade_form_department
+        upgrade_intelligence_agency = upgrade_army_department
+        upgrade_intelligence_agency = upgrade_blueprint_stealing 
+        upgrade_intelligence_agency = upgrade_suicide_pills
+        upgrade_intelligence_agency = upgrade_decryption_boost
+        upgrade_intelligence_agency = upgrade_crypto_strength
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = { 
+    id = EAEU_economic_union
+    icon = GFX_focus_BRA_reach_out_to_military_dem
+    prerequisite = { focus = EAEU_political_cooperation }
+    x = 4
+    y = 1
+    relative_position_id = EAEU_political_cooperation
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV } 
+        has_stability > 0.55
+        num_of_civilian_factories > 19
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+		add_to_variable = { consumer_goods = -0.05 tooltip = consumer_goods_factor_tt }
+    } 
+}
+
+# ───────────────────────────────────────────────────────────────────
+# НОВЫЙ: Торговое соглашение СНГ (targeted modifiers)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_trade_agreement
+    icon = GFX_focus_GER_customs_union
+    prerequisite = { focus = EAEU_economic_union }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_economic_union
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV } 
+        has_stability > 0.6
+    }
+
+    search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+		 custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { ddtrade_opinion_factor = 0.5 tooltip = trade_opinion_factor_tt }
+		add_to_variable = { consumer_goods = -0.05 tooltip = consumer_goods_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+		
+    }
+
+    completion_reward_joint_member = {
+		
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# НОВЫЙ: Промышленная интеграция (offsite buildings)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_industrial_integration
+    icon = GFX_focus_CHI_registry_of_property
+    prerequisite = { focus = EAEU_trade_agreement }
+    x = -2
+    y = 1
+    relative_position_id = EAEU_trade_agreement
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV } 
+        num_of_civilian_factories > 24
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        add_offsite_building = { type = industrial_complex level = 5 }
+        add_offsite_building = { type = arms_factory level = 5 }
+    }
+
+    completion_reward_joint_originator = {
+        #UKR = {
+		#	add_offsite_building = { type = industrial_complex level = 10 }
+        #    add_offsite_building = { type = arms_factory level = 15 }
+        #}
+        #BLR = {
+		#    add_offsite_building = { type = industrial_complex level = 10 }
+        #    add_offsite_building = { type = arms_factory level = 15 }
+        #}
+		#KAZ = {
+		#    add_offsite_building = { type = industrial_complex level = 10 }
+        #    add_offsite_building = { type = arms_factory level = 15 }
+        #}
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# НОВЫЙ: Технологический обмен (технологии)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_technological_exchange
+    icon = GFX_focus_research2
+    prerequisite = { focus = EAEU_research_cooperation }
+    prerequisite = { focus = EAEU_temporary_boost }
+    x = 144
+    y = 17
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+       any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        add_political_power = -50
+        # Базовые технологии для всех
+        set_technology = {
+            excavation1 = 1
+            construction1 = 1
+            construction2 = 1
+            basic_machine_tools = 1
+            improved_machine_tools = 1
+            concentrated_industry = 1
+            concentrated_industry2 = 1
+            improved_equipment_conversion = 1
+            gwtank_chassis = 1
+            basic_light_tank_chassis = 1
+            basic_heavy_tank_chassis = 1
+            basic_medium_tank_chassis = 1
+        }
+    }
+
+    completion_reward_joint_originator = {
+        add_tech_bonus = {
+            name = EAEU_technological_exchange
+            bonus = 0.5
+            uses = 3
+            category = industry
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_tech_bonus = {
+            name = EAEU_technological_exchange
+            bonus = 0.3
+            uses = 2
+            category = industry
+        }
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# НОВЫЙ: Экономическая стабильность (стабильность, PP, research)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_economic_stability
+    icon = GFX_focus_PRC_urbanization
+    prerequisite = { focus = EAEU_trade_agreement }
+    x = 2
+    y = 1
+    relative_position_id = EAEU_industrial_integration
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV } 
+        has_stability > 0.7
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { consumer_goods = -0.05 tooltip = consumer_goods_factor_tt }
+        add_research_slot = 1
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# НОВЫЙ: Временный экономический буст (Time_end idea)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_temporary_boost
+    icon = GFX_focus_CHI_planned_economy
+    prerequisite = { focus = RUS_raspad }
+    x = 9
+    y = 1
+    relative_position_id = RUS_raspad
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+        add_political_power = -75
+        add_timed_idea = { idea = EAEU_temporary_boost_originator days = 720 }
+        UKR = {
+			add_offsite_building = { type = industrial_complex level = 5 }
+            add_offsite_building = { type = arms_factory level = 5 }
+        }
+        BLR = {
+		    add_offsite_building = { type = industrial_complex level = 15 }
+            add_offsite_building = { type = arms_factory level = 10 }
+        }
+		KAZ = {
+		    add_offsite_building = { type = industrial_complex level = 10 }
+            add_offsite_building = { type = arms_factory level = 10 }
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_political_power = -50
+        add_timed_idea = { idea = EAEU_temporary_boost_member days = 720 }
+    }
+}
+
+joint_focus = {
+    id = EAEU_res
+    icon = GFX_focus_RAJ_red_in_the_shadows
+    prerequisite = { focus = EAEU_economic_stability }
+    x = -2
+    y = 1
+    relative_position_id = EAEU_economic_stability 
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        BLR = {
+            exists = yes 
+        }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        
+        
+    }
+
+    completion_reward_joint_originator = {
+        BLR = {
+		    add_country_leader_trait = veteran_guerrilla_fighter
+        }
+    }    
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_dal
+    icon = GFX_focus_generic_advisors
+    prerequisite = { focus = EAEU_second_institution }
+    x = 134
+    y = 22
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        UKR = {
+            exists = yes 
+        }
+        
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+       UKR = {
+		    add_country_leader_trait = BEL_mobilization_proponent
+        }
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_first_joint_institution
+    dynamic = yes
+    icon = GFX_focus_generic_improve_the_administration
+    prerequisite = { focus = EAEU_shared_intelligence }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_shared_intelligence
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+ 
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        
+		add_to_variable = { ddresearch_speed_factor_tt = 0.07 tooltip = research_speed_factor_tt }
+		add_to_variable = { ws_factor = -0.05 tooltip = war_support_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_procurement_fund
+    icon = GFX_focus_generic_stockpile_currency
+    prerequisite = { focus = EAEU_first_joint_institution }
+    x = 2
+    y = 1
+    relative_position_id = EAEU_first_joint_institution
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }   
+        has_stability > 0.55
+        num_of_civilian_factories > 19
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+        add_cic = 2000
+    }
+
+    completion_reward_joint_member = {
+        add_cic = 1500
+    }
+}
+
+joint_focus = {
+    id = EAEU_KAZpresident
+    icon = GFX_focus_PRC_adopt_sun_yat_sens_principles
+    prerequisite = { focus = EAEU_procurement_fund }
+    prerequisite = { focus = EAEU_industrial_integration }
+    x = 4
+    y = 2
+    relative_position_id = EAEU_first_joint_institution
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        has_stability > 0.69
+        num_of_civilian_factories > 14
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        KAZ = {
+            exists = yes 
+        }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+        KAZ = {
+		    add_country_leader_trait = BEL_man_with_a_plan
+        }
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_second_institution
+    dynamic = yes 
+    icon = GFX_focus_generic_improve_the_administration_2
+    prerequisite = { focus = EAEU_first_joint_institution }
+    x = -2
+    y = 1
+    relative_position_id = EAEU_procurement_fund
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        
+		add_to_variable = { ddresearch_speed_factor_tt = 0.07 tooltip = research_speed_factor_tt }
+		add_to_variable = { ws_factor = -0.05 tooltip = war_support_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════════
+# ПРОМЫШЛЕННАЯ ВЕТКА (справа)
+# ═══════════════════════════════════════════════════════════════════
+
+joint_focus = {
+    id = EAEU_research_cooperation
+    dynamic = yes
+    icon = GFX_focus_research2
+    prerequisite = { focus = RUS_raspad }
+    x = -2
+    y = 0
+    relative_position_id = EAEU_temporary_boost
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+       any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward_joint_originator = { 
+        add_to_tech_sharing_group = EAEU_research_tech_sharing
+    }
+
+    completion_reward_joint_member = {
+        add_to_tech_sharing_group = EAEU_research_tech_sharing
+    }
+}
+
+joint_focus = {
+    id = EAEU_materiel_design
+    icon = GFX_focus_generic_reorient_production
+    prerequisite = { focus = EAEU_technological_exchange }
+    #prerequisite = { focus = EAEU_temporary_boost }
+    x = 2
+    y = 1
+    relative_position_id = EAEU_technological_exchange
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        num_researched_technologies > 36
+    }
+
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { capacity_factor_arms = 0.05 tooltip = industrial_capacity_factory_tt }
+        add_to_variable = { capacity_factor_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+    }
+
+    completion_reward_joint_originator = {
+        add_tech_bonus = {
+            name = EAEU_materiel_design
+            bonus = 1
+            uses = 1
+            category = infantry_weapons
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_tech_bonus = {
+            name = EAEU_materiel_design
+            bonus = 0.5
+            uses = 1
+            category = infantry_weapons
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_construction_developments
+    icon = GFX_focus_AFG_a_modern_economy
+    prerequisite = { focus = EAEU_technological_exchange }
+    #prerequisite = { focus = EAEU_temporary_boost }
+    x = -2
+    y = 1
+    relative_position_id = EAEU_technological_exchange
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        num_researched_technologies > 36
+    }
+
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { ddproduction_speed_arms_factory_factor_tt = 0.1 tooltip = production_speed_arms_factory_factor_tt }
+		
+    }
+
+    completion_reward_joint_originator = {
+        add_tech_bonus = {
+            name = EAEU_construction_developments
+            bonus = 1
+            uses = 2
+            category = construction_tech
+        }
+    }
+
+    completion_reward_joint_member = {
+        add_tech_bonus = {
+            name = EAEU_construction_developments
+            bonus = 1.5
+            uses = 1
+            category = construction_tech
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_civilian_industry
+    dynamic = yes
+    icon = GFX_focus_CHL_enlarge_the_textile_industries
+    prerequisite = { focus = EAEU_construction_developments }
+    x = 0
+    y = 1
+    relative_position_id = EAEU_construction_developments
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        num_of_civilian_factories > 19
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+    }
+
+    completion_reward_joint_originator = {
+		every_state = {
+            limit = {
+				is_controlled_by = BLR
+                is_core_of = BLR
+                free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+             add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = UKR
+                is_core_of = UKR
+                free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+             add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = KAZ
+                is_core_of = KAZ
+                free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+             add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+        }
+    }
+
+    completion_reward_joint_member = {
+		
+    }
+}
+
+joint_focus = {
+    id = EAEU_civilian_contributions
+    icon = GFX_focus_SWI_issue_war_bonds
+    prerequisite = { focus = EAEU_civilian_industry }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_civilian_industry
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        num_of_civilian_factories > 24
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward_joint_originator = {
+        add_timed_idea = { idea = EAEU_development_fund_originator_ns days = 365 }
+    }
+
+    completion_reward_joint_member = {
+        add_timed_idea = { idea = EAEU_development_fund_member_ns days = 365 }
+    }
+}
+
+joint_focus = {
+    id = EAEU_fill_infrastructure_gaps
+    icon = GFX_goal_generic_construct_infrastructure
+    prerequisite = { focus = EAEU_civilian_contributions }
+    x = -1
+    y = 2
+    relative_position_id = EAEU_civilian_contributions
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        
+    }
+
+    completion_reward_joint_originator = {
+        every_state = {
+            limit = {
+				is_controlled_by = BLR
+                is_core_of = BLR
+                infrastructure < 3
+            }
+            random_select_amount = 4
+            add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = KAZ
+                is_core_of = KAZ
+                infrastructure < 3
+            }
+            random_select_amount = 4
+            add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = UKR
+                is_core_of = UKR
+                infrastructure < 3
+            }
+            random_select_amount = 4
+            add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+        }
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_develop_resources
+    icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+    prerequisite = { focus = EAEU_civilian_contributions }
+    x = 1
+    y = 2
+    relative_position_id = EAEU_civilian_contributions
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward_joint_originator = {
+		SOV = {give_resource_rights = { receiver = BLR state = 246 }}
+			SOV = {give_resource_rights = { receiver = BLR state = 222 }}
+			227 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+			831 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+			}
+			881 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+			881 = {
+				add_resource = {
+					type = tungsten
+					amount = 7
+				}
+			}
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_military_industry
+    dynamic = yes
+    icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+    prerequisite = { focus = EAEU_materiel_design }
+    x = 0
+    y = 1
+    relative_position_id = EAEU_materiel_design
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        num_of_military_factories > 14
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        set_variable = { EAEU_mil_industry_originator_production_speed_arms_factory_factor = 0 }
+        set_variable = { EAEU_mil_industry_originator_dmod_efficiency_gain_factor = 0 }
+        set_variable = { EAEU_mil_industry_originator_dmod_equipment_conversion_speed = 0 }
+        set_variable = { EAEU_mil_industry_originator_dmod_start_efficiency_factor = 0 }
+        set_variable = { EAEU_mil_industry_member_dmod_start_efficiency_factor = 0 }
+    }
+
+    completion_reward_joint_originator = {
+        random_owned_state = {
+            limit = {
+                is_controlled_by = ROOT
+                free_building_slots = { building = arms_factory size > 1 include_locked = yes }
+            }
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+        }
+    }
+
+    completion_reward_joint_member = {
+        random_owned_state = {
+            limit = {
+                is_controlled_by = ROOT
+                free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+        }
+    }
+}
+
+joint_focus = {
+    id = EAEU_standarized_parts
+    icon = GFX_focus_generic_tank_assembly
+    prerequisite = { focus = EAEU_military_industry }
+    x = 0
+    y = 2
+    relative_position_id = EAEU_military_industry
+    cost = 10
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        num_of_military_factories > 19
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { ddequipment_conversion_speed_tt = 0.1 tooltip = equipment_conversion_speed_tt }
+		add_to_variable = { ddproduction_factory_efficiency_gain_factor_tt = -0.15 tooltip = production_factory_efficiency_gain_factor_tt }
+        add_to_variable = { ddproduction_factory_start_efficiency_factor_tt = 0.1 tooltip = production_factory_start_efficiency_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_industrial_hub
+    icon = GFX_focus_GER_factories_for_resources
+    prerequisite = { focus = EAEU_standarized_parts }
+    x = -1
+    y = 2
+    relative_position_id = EAEU_standarized_parts
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        any_owned_state = { arms_factory > 6 }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { global_building_slots = 0.2 tooltip = global_building_slots_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        every_state = {
+            limit = {
+				is_controlled_by = BLR
+                is_core_of = BLR
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = UKR
+                is_core_of = UKR
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = KAZ
+                is_core_of = KAZ
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 1
+        }
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_ad_hoc_military_industry
+    icon = GFX_goal_generic_production
+    prerequisite = { focus = EAEU_standarized_parts }
+    x = 1
+    y = 2
+    relative_position_id = EAEU_standarized_parts
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        any_owned_state = { industrial_complex > 6 }
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+        add_to_variable = { capacity_factor_arms = 0.05 tooltip = industrial_capacity_factory_tt }
+        add_to_variable = { capacity_factor_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+		add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+    }
+
+    completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
+        
+    }
+}
+
+joint_focus = {
+    id = EAEU_naval_construction
+    icon = GFX_goal_generic_construct_naval_dockyard
+    prerequisite = { focus = EAEU_railway_expansion }
+    x = 144
+    y = 21
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+         any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+        num_of_naval_factories > 1
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward_joint_originator = {
+		every_state = {
+            limit = {
+				is_controlled_by = BLR
+                is_core_of = BLR
+                free_building_slots = { building = dockyard size > 1 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = dockyard level = 2 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = KAZ
+                is_core_of = KAZ
+                free_building_slots = { building = dockyard size > 1 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = dockyard level = 2 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = UKR
+                is_core_of = UKR
+                free_building_slots = { building = dockyard size > 1 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = dockyard level = 2 instant_build = yes }
+        }
+		every_state = {
+            limit = {
+				is_controlled_by = SOV
+                is_core_of = SOV
+                free_building_slots = { building = dockyard size > 1 include_locked = yes }
+            }
+            random_select_amount = 3
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = dockyard level = 2 instant_build = yes }
+        }
+    }
+
+    completion_reward_joint_member = {
+		
+    }
+}
+
+joint_focus = {
+    id = EAEU_railway_expansion
+    icon = GFX_focus_GER_kriegslokomotive
+    prerequisite = { focus = EAEU_construction_developments }
+	prerequisite = { focus = EAEU_materiel_design }
+    x = 2
+    y = 1
+    relative_position_id = EAEU_construction_developments
+    cost = 5
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ } 
+        NOT = { has_war_with = SOV }
+        num_of_civilian_factories > 14
+    }
+
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    joint_trigger = {   }
+
+    completion_reward_joint_originator = {
+        add_timed_idea = { idea = EAEU_railway_expansion_originator_ns days = 365 }
+    }
+
+    completion_reward_joint_member = {
+        add_timed_idea = { idea = EAEU_railway_expansion_member_ns days = 365 }
+    }
+}
+
+joint_focus = {
+    id = EAEU_transfer_crimea
+    icon = GFX_focus_POL_ukrainian_army
+    prerequisite = { focus = EAEU_political_cooperation }
+    relative_position_id = EAEU_political_cooperation
+    x = -1
+    y = 1
+    cost = 2
+    text_icon = SNG_SOV_style
+
+    available = {
+		tag = SOV
+         
+        SOV = { owns_state = 137 }
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+    }
+
+    joint_trigger = {   }
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = {
+        137 = { is_owned_by = UKR }
+    }
+    ai_will_do = { factor = 0 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        # SOV передаёт Крым Украине
+        if = {
+            limit = { tag = SOV }
+            UKR = { transfer_state = 137 }
+            137 = { add_core_of = UKR }
+        }
+    }
+}
+
+# ───────────────────────────────────────────────────────────────────
+# Передача Алтая Казахстану (joint_focus)
+# ───────────────────────────────────────────────────────────────────
+joint_focus = {
+    id = EAEU_transfer_altai
+    icon = GFX_focus_SOV_transcaucasian_republic
+    prerequisite = { focus = EAEU_political_cooperation }
+    relative_position_id = EAEU_political_cooperation
+    x = 1
+    y = 1
+    cost = 2
+    text_icon = SNG_SOV_style
+
+    available = {
+		tag = SOV
+         
+        SOV = { owns_state = 654 owns_state = 40 }
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+    }
+
+    joint_trigger = {   }
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+    bypass = {
+        654 = { is_owned_by = KAZ }
+        40 = { is_owned_by = KAZ }
+    }
+    ai_will_do = { factor = 0 }
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        if = {
+            limit = { tag = SOV }
+            KAZ = {
+                transfer_state = 654
+                transfer_state = 40
+            }
+            654 = { add_core_of = KAZ }
+            40 = { add_core_of = KAZ }
+        }
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════════
+# ФИНАЛ — Евразийская федерация
+# ═══════════════════════════════════════════════════════════════════
+joint_focus = {
+    id = EAEU_eurasian_federation
+    dynamic = yes
+    icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
+    prerequisite = { focus = EAEU_second_institution }
+	#prerequisite = { focus = EAEU_denazizm }
+	prerequisite = { focus = EAEU_economic_stability }
+    x = 4
+    y = 2
+    relative_position_id = EAEU_second_institution
+    cost = 20
+    text_icon = SNG_style
+
+    available = {
+        any_allied_country = {
+            EAEU_is_eaeu_member = yes
+        }
+        NOT = { has_war_with = UKR }
+        NOT = { has_war_with = BLR }
+        NOT = { has_war_with = KAZ }
+        NOT = { has_war_with = SOV }
+    }
+
+    joint_trigger = {
+         
+        OR = {
+            is_in_faction_with = SOV
+            is_in_faction_with = UKR
+            is_in_faction_with = BLR
+            is_in_faction_with = KAZ
+        }
+    }
+
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+        custom_effect_tooltip = SOV_SNG_infa 
+		add_to_variable = { ddresearch_speed_factor_tt = 0.05 tooltip = research_speed_factor_tt }
+		add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+    }
+}

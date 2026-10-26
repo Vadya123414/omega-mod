@@ -644,7 +644,7 @@ set_variable = { SOV_merge_designers_time = 180 } #The time to complete merge de
 
 #INDUSTRIAL RELOCATION
 set_variable = { SOV_industrial_relocation_max_factories = 4 } #Max amount of factories that will be relocated by a decision
-set_variable = { SOV_industrial_relocation_days = 60 } #Decision duration (can be halved by focus)
+set_variable = { SOV_industrial_relocation_days = 20 } #Decision duration (can be halved by focus)
 set_variable = { SOV_industrial_relocation_trains_focus = 120 } #Trains to be used by the focus (20 trains / factory)
 set_variable = { SOV_industrial_relocation_trains_focus_negative = -120 } #Trains to be used by the focus (20 trains / factory)
 set_variable = { SOV_industrial_relocation_trains_decision = 80 } #Trains to be used by the generic decision (20 trains / factory)
@@ -865,7 +865,7 @@ if = {
 
 set_country_flag = SOV_TEST_REMOVE_VANILLA_ADVISORS_flag
 
-add_ideas = {	
+add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
@@ -873,6 +873,12 @@ add_ideas = {
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
 
+1936.1.1.13 = {
+	add_ideas = {
+		no_farm_gen
+	}
+	set_research_slots = 4
+}
 
 1939.1.1 = {
 

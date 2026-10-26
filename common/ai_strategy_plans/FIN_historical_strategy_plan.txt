@@ -24,6 +24,7 @@ FIN_historical_plan = {
 	}
 
 	ai_national_focuses = {
+		FIN_militarized_society
 		NORDIC_form_joint_alliance
 		NORDIC_political_cooperation
 		NORDIC_economic_union

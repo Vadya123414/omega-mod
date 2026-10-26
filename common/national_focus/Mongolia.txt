@@ -217,7 +217,7 @@ focus_tree = {
 				category = synth_resources
 			}
 			817 = {
-					add_extra_state_shared_building_slots = 1
+					#add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 1
@@ -550,7 +550,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -573,7 +573,6 @@ focus = {
 		id = MON_Final
 		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
 		prerequisite = { focus = MON_Annex_Czinjan}
-		relative_position_id = MON_Annex_Czinjan
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -585,8 +584,8 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 0
-		y = 1
+		x = 4
+		y = 4
 		
 		completion_reward = {
 		
@@ -679,7 +678,7 @@ focus = {
 		    SIK = { has_government = communism}
 			SIK = { is_ai = yes }
 			SIK = { NOT = {has_war_with = RAJ }}
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 			
 		}
 
@@ -722,7 +721,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-			
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		relative_position_id = MON_rise_politic
@@ -957,10 +956,9 @@ focus = {
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = MON_anarchi
 		available_if_capitulated = yes
-		x = 1	
-		y = 1
+		x = 11
+		y = 7
 		
 		completion_reward = {
 			564 = { add_core_of = MON }

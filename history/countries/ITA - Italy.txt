@@ -31,6 +31,12 @@ IF = {
 	}
 }
 
+1936.1.1.13 = {
+	add_ideas = {
+		no_farm_gen
+	}
+}
+
 add_ideas = {
 	vittorio_emanuele
 	vittoria_mutilata
@@ -522,7 +528,7 @@ if = {
 	### FOCUS TREE ###
 	unlock_national_focus = ITA_solid_progress
 	#1936
-	complete_national_focus = ITA_ethiopian_war_logistics_bba #35
+	#complete_national_focus = ITA_ethiopian_war_logistics_bba #35
 	complete_national_focus = ITA_italian_highways_bba #35
 	complete_national_focus = ITA_servizio_informazione_militare
 	complete_national_focus = ITA_triumph_in_africa_bba

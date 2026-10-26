@@ -26,12 +26,16 @@ default = no
 	focus = {
 		id = ENG_ind
 		icon = GFX_focus_generic_british_trade
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			126 = { is_controlled_by = ENG }
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -49,7 +53,7 @@ default = no
 		id = ENG_scotland
 		icon = GFX_focus_generic_mining_industry
 		prerequisite = { focus = ENG_ind }
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 5
 		}
@@ -82,7 +86,7 @@ default = no
 		id = ENG_england
 		icon = GFX_focus_generic_aluminum
 		prerequisite = { focus = ENG_ind }
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 5
 		}
@@ -112,7 +116,7 @@ default = no
 		id = ENG_yels
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = ENG_ind }
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 5
 		}
@@ -142,7 +146,7 @@ default = no
 		id = ENG_north
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = ENG_ind }
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 5
 		}
@@ -2509,6 +2513,7 @@ default = no
 		mutually_exclusive = { focus = uk_rock_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			any_other_country = {
 				original_tag = SPR
 				exists = yes
@@ -2731,6 +2736,7 @@ default = no
 		prerequisite = { focus = uk_malta_focus }
 		icon = GFX_goal_generic_improve_relations
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_government = democratic
 		}
 		bypass = {
@@ -2866,6 +2872,7 @@ default = no
 		mutually_exclusive = { focus = uk_greece_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			TUR = {
 				exists = yes
 				has_war = no
@@ -2950,6 +2957,7 @@ default = no
 		mutually_exclusive = { focus = uk_turkey_focus }
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			GRE = {
 				exists = yes
 				has_war = no
@@ -3096,10 +3104,6 @@ default = no
 		available = { 
 			has_completed_focus = ENG_concessions_to_the_trade_unions
 			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		continue_if_invalid = yes
@@ -3410,7 +3414,7 @@ default = no
 		completion_reward = {
 			RAJ = {
 			add_stability = 0.1
-			remove_idea = RAJ_risk_of_famine
+			remove_ideas = RAJ_risk_of_famine
 		}
 	}
 	}
@@ -4356,6 +4360,7 @@ default = no
 		id = ENG_war_with_japan
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_offensive_war = no
 			JAP = {
 				ENG_focus_available_war = yes
@@ -5554,6 +5559,7 @@ default = no
 		available = {
 			CHI = { exists = yes }
 			has_government = democratic
+			NOT = {has_country_flag = VUP_Hist_version}
 		} 
 
 		cancel = {
@@ -6860,23 +6866,27 @@ default = no
 		completion_reward = {
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						NOT = { is_subject_of = ENG }
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_unified
 				news_event = { id = mtg_news.8 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = {
 				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
 					RAJ = {
 						is_subject_of = ENG
 					}
 				}
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			custom_effect_tooltip = infa_annex_imperka
 			hidden_effect = {
 			if = {
@@ -6885,7 +6895,21 @@ default = no
 						is_ai = yes
 						is_subject_of = ENG
 					}
+					AST = {
+						is_ai = yes
+						is_subject_of = ENG
+					}
 				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					CAN = {
+						is_ai = yes
+						is_subject_of = ENG
+					}
+				}
+				
 				CAN = {
 					every_unit_leader = {
 						set_nationality = ENG
@@ -6971,9 +6995,10 @@ default = no
 					}
 				}
 				MAL = {
-					is_ai = yes
+					if = { limit = { is_ai = yes }
 					every_unit_leader = {
 						set_nationality = ENG
+					}
 					}
 				}
 				annex_country = {
@@ -8027,6 +8052,12 @@ default = no
 	focus = {
 		id = uk_iraq_focus
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.4.1
+			}
 			IRQ = {
 				OR = { 
 					communism > 0.2
@@ -8095,6 +8126,12 @@ default = no
 		}
 		will_lead_to_war_with = PER
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1941.8.25
+			}
 			country_exists = PER
 			NOT = { has_war_with = PER }
 			is_subject = no
@@ -8178,6 +8215,7 @@ default = no
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			SOV = {
 				ENG_focus_available_embargo_sanction = yes
 			}			
@@ -8324,6 +8362,7 @@ default = no
 	focus = {
 		id = ENG_war_with_germany
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_war = no
 			GER = {
 				ENG_focus_available_war = yes
@@ -8358,6 +8397,7 @@ default = no
 	focus = {
 		id = uk_scandinavian_focus
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				SWE = { 
 					exists = yes
@@ -8620,6 +8660,7 @@ default = no
 	focus = {
 		id = ENG_benelux_intervention
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
 				BEL = {
 					exists = yes

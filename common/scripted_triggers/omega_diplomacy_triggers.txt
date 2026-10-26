@@ -8,7 +8,14 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
     if = {
         limit = {
-            is_ai = not
+            has_country_flag = VUP_Hist_version
+        }
+        NOT = {has_country_flag = VUP_Hist_version}
+    }
+    
+    if = {
+        limit = {
+            is_ai = no
         }
         OR = {
         # Оправдание на ИИ с 1937
@@ -16,7 +23,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
             FROM = {
                 is_ai = yes
             }
-            date > 1937.1.1
+            date > 1938.1.1
         }
         # Оправдание на игрока с 1939
         AND = {
@@ -55,7 +62,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
     if = {
         limit = {
-            is_ai = not
+            is_ai = no
         }
     OR = {
             AND = {
@@ -197,4 +204,49 @@ DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
             }
         }
     }
+}
+
+EAEU_is_eaeu_member = {
+    OR = {
+        tag = SOV
+        tag = UKR
+        tag = BLR
+        tag = KAZ
+    }
+}
+
+DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_MILACC_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_REVOKE_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
+}
+
+DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+	NOT = {has_country_flag = VUP_Hist_version}
 }

@@ -623,20 +623,20 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
 			}
 
 			modifier = {
-				factor = 5
+				add = 5
 				tag = ENG
 			}
 		}
@@ -666,16 +666,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
+			}
+
+			modifier = {
+				add = 5
+				tag = ENG
 			}
 		}
 	}
@@ -699,16 +704,21 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 0
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = USA
 			}
 
 			modifier = {
-				factor = 3
+				add = 3
 				tag = JAP
+			}
+
+			modifier = {
+				add = 5
+				tag = ENG
 			}
 		}
 	}
@@ -750,7 +760,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -779,7 +822,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -802,7 +878,40 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			base = 1
+
+			modifier = {
+				factor = 0
+				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = GER
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = POL
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+			}
+			modifier = {
+				factor = 0
+				tag = BEL
+			}
+			modifier = {
+				factor = 0
+				tag = HOL
+			}
 		}
 	}
 
@@ -847,8 +956,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
 
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
@@ -877,7 +1018,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
@@ -901,7 +1075,40 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+				add = 1
+				tag = SOV
+			}
+			modifier = {
+				add = 1
+				tag = GER
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = FIN
+			}
+			modifier = {
+				add = 1
+				tag = POL
+			}
+			modifier = {
+				add = 1
+				tag = FRA
+			}
+			modifier = {
+				add = 1
+				tag = BEL
+			}
+			modifier = {
+				add = 1
+				tag = HOL
+			}
 		}
 	}
 
@@ -2002,10 +2209,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1914
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1924 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment
@@ -2015,26 +2219,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -2051,10 +2236,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1940
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1940 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment
@@ -2064,26 +2246,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -2095,10 +2258,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1942
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1942 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment
@@ -2112,26 +2272,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 
@@ -2155,26 +2296,7 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
+			factor = 0
 		}
 	}
 

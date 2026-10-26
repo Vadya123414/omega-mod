@@ -1,7 +1,7 @@
 GER_annex = {
 		
 		
-		GER_stupid_AI = {
+	GER_stupid_AI = {
 
 		icon = GFX_decision_ger_mefo_bills
 
@@ -30,12 +30,11 @@ GER_annex = {
 				target = POL
 				value = 0.3
 			}
-		
+		}
 		
 		complete_effect = {
 		
 		}
-	}
 	}
 	
 	GER_annex_HUN = {

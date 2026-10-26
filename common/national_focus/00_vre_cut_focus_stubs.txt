@@ -1,0 +1,508 @@
+﻿# Vanila Reborn edit: placeholders for national focuses cut from this mod's focus trees.
+# Vanilla files (events, decisions, characters, AI plans, scripted localisation) still check them
+# with has_completed_focus; without a definition the game logs "Invalid focus scripted in trigger".
+# No country can get this tree (country factor 0) and no focus here can be taken (available = no),
+# so every check on these ids stays false: the focuses stay cut.
+focus_tree = {
+	id = vre_cut_focus_stubs
+	country = {
+		factor = 0
+	}
+	default = no
+
+	focus = {
+		id = FRA_agricultural_protectionism
+		icon = GFX_goal_unknown
+		x = 0
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = FRA_confirm_eastern_commitments
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = FRA_heavy_armor_focus
+		icon = GFX_goal_unknown
+		x = 4
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = FRA_invite_romania
+		icon = GFX_goal_unknown
+		x = 6
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = FRA_invite_yugoslavia
+		icon = GFX_goal_unknown
+		x = 8
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = FRA_strengthen_the_little_entente
+		icon = GFX_goal_unknown
+		x = 10
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_african_allies
+		icon = GFX_goal_unknown
+		x = 12
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_anti_soviet_pact
+		icon = GFX_goal_unknown
+		x = 14
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_asian_allies
+		icon = GFX_goal_unknown
+		x = 16
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_befriend_czechoslovakia
+		icon = GFX_goal_unknown
+		x = 18
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_befriend_turkey
+		icon = GFX_goal_unknown
+		x = 20
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_break_anglo_french_colonial_hegemony_ww
+		icon = GFX_goal_unknown
+		x = 22
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_closer_sino_germanic_relations
+		icon = GFX_goal_unknown
+		x = 24
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_czechoslovakia
+		icon = GFX_goal_unknown
+		x = 26
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_divide_and_conquer
+		icon = GFX_goal_unknown
+		x = 28
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_hungary
+		icon = GFX_goal_unknown
+		x = 30
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_influence_the_middle_east
+		icon = GFX_goal_unknown
+		x = 32
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_integrate_czechoslovakia
+		icon = GFX_goal_unknown
+		x = 34
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_poland
+		icon = GFX_goal_unknown
+		x = 36
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_request_the_return_of_qingdao
+		icon = GFX_goal_unknown
+		x = 38
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_second_vienna_award
+		icon = GFX_goal_unknown
+		x = 40
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_send_military_aid
+		icon = GFX_goal_unknown
+		x = 42
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = GER_spheres_of_influence
+		icon = GFX_goal_unknown
+		x = 44
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = IRQ_expand_camel_corps
+		icon = GFX_goal_unknown
+		x = 46
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = ITA_comandante_diavolo
+		icon = GFX_goal_unknown
+		x = 48
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = ITA_ethiopian_war_logistics_bba
+		icon = GFX_goal_unknown
+		x = 50
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = ITA_guarantee_austrian_independence
+		icon = GFX_goal_unknown
+		x = 52
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = ITA_strengthen_ascari_corps
+		icon = GFX_goal_unknown
+		x = 54
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = JAP_extensive_army_maneuvers
+		icon = GFX_goal_unknown
+		x = 56
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = JAP_extensive_navy_maneuvers
+		icon = GFX_goal_unknown
+		x = 58
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = JAP_mobilize_the_proletariat
+		icon = GFX_goal_unknown
+		x = 60
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = JAP_the_long_march_to_victory
+		icon = GFX_goal_unknown
+		x = 62
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = POL_artillery_modernisation
+		icon = GFX_goal_unknown
+		x = 64
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = POL_baltic_navy
+		icon = GFX_goal_unknown
+		x = 66
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SAF_establish_the_atomics_energy_board
+		icon = GFX_goal_unknown
+		x = 68
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SIA_asian_democratic_compact
+		icon = GFX_goal_unknown
+		x = 70
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SIA_pan_asian_weapon_standardization
+		icon = GFX_goal_unknown
+		x = 72
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SIA_southeast_asia_joint_command
+		icon = GFX_goal_unknown
+		x = 74
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SIA_the_hammers_that_strike
+		icon = GFX_goal_unknown
+		x = 76
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SIA_united_against_aggression
+		icon = GFX_goal_unknown
+		x = 78
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_autonomous_soviet_republics
+		icon = GFX_goal_unknown
+		x = 80
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_church_candidates
+		icon = GFX_goal_unknown
+		x = 82
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_for_the_common_good
+		icon = GFX_goal_unknown
+		x = 84
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_international_union_of_soviet_republics
+		icon = GFX_goal_unknown
+		x = 86
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_rebuild_the_nation
+		icon = GFX_goal_unknown
+		x = 88
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_regional_development
+		icon = GFX_goal_unknown
+		x = 90
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_socialist_humanism
+		icon = GFX_goal_unknown
+		x = 92
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_the_rightful_heir_to_the_empire
+		icon = GFX_goal_unknown
+		x = 94
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_the_third_rome
+		icon = GFX_goal_unknown
+		x = 96
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_victory_over_devastation
+		icon = GFX_goal_unknown
+		x = 98
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = SOV_war_measures_in_the_east
+		icon = GFX_goal_unknown
+		x = 100
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = YUG_defence_army_of_yugoslavia
+		icon = GFX_goal_unknown
+		x = 102
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = YUG_defence_league
+		icon = GFX_goal_unknown
+		x = 104
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = YUG_surrender_italian_claims
+		icon = GFX_goal_unknown
+		x = 106
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	focus = {
+		id = YUG_towards_independence
+		icon = GFX_goal_unknown
+		x = 108
+		y = 0
+		cost = 10
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+}

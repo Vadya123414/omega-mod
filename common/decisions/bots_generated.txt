@@ -16,9 +16,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Qafar Sefari"
-                disband = yes
+            if = {
+                limit = { has_template = "Qafar Sefari" }
+                delete_units = {
+                    division_template = "Qafar Sefari"
+                    disband = yes
+                }
             }
         }
     }
@@ -39,17 +42,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Royal Guard"
-                disband = yes
+            if = {
+                limit = { has_template = "Royal Guard" }
+                delete_units = {
+                    division_template = "Royal Guard"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Militia"
-                disband = yes
+            if = {
+                limit = { has_template = "Militia" }
+                delete_units = {
+                    division_template = "Militia"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Ferqhah"
-                disband = yes
+            if = {
+                limit = { has_template = "Ferqhah" }
+                delete_units = {
+                    division_template = "Ferqhah"
+                    disband = yes
+                }
             }
         }
     }
@@ -70,9 +82,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Këmbësori Pjesëtim"
-                disband = yes
+            if = {
+                limit = { has_template = "Këmbësori Pjesëtim" }
+                delete_units = {
+                    division_template = "Këmbësori Pjesëtim"
+                    disband = yes
+                }
             }
         }
     }
@@ -93,9 +108,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -116,17 +134,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada Montaña"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada Montaña" }
+                delete_units = {
+                    division_template = "Brigada Montaña"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -147,13 +174,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Armoured Division"
@@ -178,17 +211,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanterie Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanterie Division" }
+                delete_units = {
+                    division_template = "Infanterie Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alpenjäger Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Alpenjäger Division" }
+                delete_units = {
+                    division_template = "Alpenjäger Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Schnelle Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Schnelle Division" }
+                delete_units = {
+                    division_template = "Schnelle Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -209,33 +251,54 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Division d'Infanterie"
-                disband = yes
+            if = {
+                limit = { has_template = "Division d'Infanterie" }
+                delete_units = {
+                    division_template = "Division d'Infanterie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division de Cavalerie"
-                disband = yes
+            if = {
+                limit = { has_template = "Division de Cavalerie" }
+                delete_units = {
+                    division_template = "Division de Cavalerie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalerie Motorisée"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalerie Motorisée" }
+                delete_units = {
+                    division_template = "Cavalerie Motorisée"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division Coloniale"
-                disband = yes
+            if = {
+                limit = { has_template = "Division Coloniale" }
+                delete_units = {
+                    division_template = "Division Coloniale"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Chasseurs Ardennais"
-                disband = yes
+            if = {
+                limit = { has_template = "Chasseurs Ardennais" }
+                delete_units = {
+                    division_template = "Chasseurs Ardennais"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cycliste Frontière"
-                disband = yes
+            if = {
+                limit = { has_template = "Cycliste Frontière" }
+                delete_units = {
+                    division_template = "Cycliste Frontière"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Force Publique"
-                disband = yes
+            if = {
+                limit = { has_template = "Force Publique" }
+                delete_units = {
+                    division_template = "Force Publique"
+                    disband = yes
+                }
             }
         }
     }
@@ -256,9 +319,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -279,13 +345,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -306,9 +378,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -329,13 +404,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Divisão de Infantaria"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisão de Infantaria" }
+                delete_units = {
+                    division_template = "Divisão de Infantaria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisão de Cavalaria"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisão de Cavalaria" }
+                delete_units = {
+                    division_template = "Divisão de Cavalaria"
+                    disband = yes
+                }
             }
         }
     }
@@ -356,17 +437,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pekhotna Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Pekhotna Divizija" }
+                delete_units = {
+                    division_template = "Pekhotna Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Konna Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Konna Divizija" }
+                delete_units = {
+                    division_template = "Konna Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Tankov Polk"
-                disband = yes
+            if = {
+                limit = { has_template = "Tankov Polk" }
+                delete_units = {
+                    division_template = "Tankov Polk"
+                    disband = yes
+                }
             }
         }
     }
@@ -387,21 +477,30 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "District Militia"
-                disband = yes
+            if = {
+                limit = { has_template = "District Militia" }
+                delete_units = {
+                    division_template = "District Militia"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Militia"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Militia" }
+                delete_units = {
+                    division_template = "Cavalry Militia"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Armored-Division"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -422,25 +521,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Juntuán Reformed"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán Reformed" }
+                delete_units = {
+                    division_template = "Juntuán Reformed"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Motuo Hua Bubing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Motuo Hua Bubing Jun" }
+                delete_units = {
+                    division_template = "Motuo Hua Bubing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -461,25 +575,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Regimiento Escolta Presidencial"
-                disband = yes
+            if = {
+                limit = { has_template = "Regimiento Escolta Presidencial" }
+                delete_units = {
+                    division_template = "Regimiento Escolta Presidencial"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Regimiento de Carabineros"
-                disband = yes
+            if = {
+                limit = { has_template = "Regimiento de Carabineros" }
+                delete_units = {
+                    division_template = "Regimiento de Carabineros"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cuerpo de Gendarmería de Prisiones"
-                disband = yes
+            if = {
+                limit = { has_template = "Cuerpo de Gendarmería de Prisiones" }
+                delete_units = {
+                    division_template = "Cuerpo de Gendarmería de Prisiones"
+                    disband = yes
+                }
             }
         }
     }
@@ -500,17 +629,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Force Publique"
-                disband = yes
+            if = {
+                limit = { has_template = "Force Publique" }
+                delete_units = {
+                    division_template = "Force Publique"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Troupes du Katanga"
-                disband = yes
+            if = {
+                limit = { has_template = "Troupes du Katanga" }
+                delete_units = {
+                    division_template = "Troupes du Katanga"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Compagnie d'Artillerie et de Génie"
-                disband = yes
+            if = {
+                limit = { has_template = "Compagnie d'Artillerie et de Génie" }
+                delete_units = {
+                    division_template = "Compagnie d'Artillerie et de Génie"
+                    disband = yes
+                }
             }
         }
     }
@@ -531,9 +669,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada del Ejército"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada del Ejército" }
+                delete_units = {
+                    division_template = "Brigada del Ejército"
+                    disband = yes
+                }
             }
         }
     }
@@ -554,9 +695,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infantería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infantería" }
+                delete_units = {
+                    division_template = "División de Infantería"
+                    disband = yes
+                }
             }
         }
     }
@@ -577,13 +721,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -604,25 +754,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pesadijska Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Pesadijska Divizija" }
+                delete_units = {
+                    division_template = "Pesadijska Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alpine Odred"
-                disband = yes
+            if = {
+                limit = { has_template = "Alpine Odred" }
+                delete_units = {
+                    division_template = "Alpine Odred"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Konjièka Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Konjièka Divizija" }
+                delete_units = {
+                    division_template = "Konjièka Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Bataljon Bornih Kola"
-                disband = yes
+            if = {
+                limit = { has_template = "Bataljon Bornih Kola" }
+                delete_units = {
+                    division_template = "Bataljon Bornih Kola"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Hrvatsko domobranstvo"
-                disband = yes
+            if = {
+                limit = { has_template = "Hrvatsko domobranstvo" }
+                delete_units = {
+                    division_template = "Hrvatsko domobranstvo"
+                    disband = yes
+                }
             }
         }
     }
@@ -643,13 +808,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Volunteer Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Volunteer Brigade" }
+                delete_units = {
+                    division_template = "Volunteer Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Volunteer Cavalry"
-                disband = yes
+            if = {
+                limit = { has_template = "Volunteer Cavalry" }
+                delete_units = {
+                    division_template = "Volunteer Cavalry"
+                    disband = yes
+                }
             }
         }
     }
@@ -670,13 +841,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Infanteria" }
+                delete_units = {
+                    division_template = "Brigada de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Caballería" }
+                delete_units = {
+                    division_template = "Brigada de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -697,25 +874,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pěší divize"
-                disband = yes
+            if = {
+                limit = { has_template = "Pěší divize" }
+                delete_units = {
+                    division_template = "Pěší divize"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Horská divize"
-                disband = yes
+            if = {
+                limit = { has_template = "Horská divize" }
+                delete_units = {
+                    division_template = "Horská divize"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Jezdecká brigáda"
-                disband = yes
+            if = {
+                limit = { has_template = "Jezdecká brigáda" }
+                delete_units = {
+                    division_template = "Jezdecká brigáda"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Rychlá divize"
-                disband = yes
+            if = {
+                limit = { has_template = "Rychlá divize" }
+                delete_units = {
+                    division_template = "Rychlá divize"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Finanční Stráž"
-                disband = yes
+            if = {
+                limit = { has_template = "Finanční Stráž" }
+                delete_units = {
+                    division_template = "Finanční Stráž"
+                    disband = yes
+                }
             }
         }
     }
@@ -736,17 +928,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanteri Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanteri Division" }
+                delete_units = {
+                    division_template = "Infanteri Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binær Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Binær Division" }
+                delete_units = {
+                    division_template = "Binær Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kavaleri Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavaleri Brigade" }
+                delete_units = {
+                    division_template = "Kavaleri Brigade"
+                    disband = yes
+                }
             }
         }
     }
@@ -767,9 +968,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -790,9 +994,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Kavaleriyskaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavaleriyskaya Diviziya" }
+                delete_units = {
+                    division_template = "Kavaleriyskaya Diviziya"
+                    disband = yes
+                }
             }
         }
     }
@@ -813,9 +1020,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -836,9 +1046,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Infanteria" }
+                delete_units = {
+                    division_template = "Brigada de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -859,13 +1072,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Brigade" }
+                delete_units = {
+                    division_template = "Cavalry Brigade"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Tank Brigade"
@@ -875,21 +1094,33 @@ BOTS = {
                 division_template = "Motorised Division"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Colonial Garrison"
-                disband = yes
+            if = {
+                limit = { has_template = "Colonial Garrison" }
+                delete_units = {
+                    division_template = "Colonial Garrison"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armoured Car Company"
-                disband = yes
+            if = {
+                limit = { has_template = "Armoured Car Company" }
+                delete_units = {
+                    division_template = "Armoured Car Company"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Division (ME)"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division (ME)" }
+                delete_units = {
+                    division_template = "Infantry Division (ME)"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armour Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Armour Division" }
+                delete_units = {
+                    division_template = "Armour Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -910,25 +1141,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Kebur Zabagna"
-                disband = yes
+            if = {
+                limit = { has_template = "Kebur Zabagna" }
+                delete_units = {
+                    division_template = "Kebur Zabagna"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mountain Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Mountain Division" }
+                delete_units = {
+                    division_template = "Mountain Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mehal Sefari"
-                disband = yes
+            if = {
+                limit = { has_template = "Mehal Sefari" }
+                delete_units = {
+                    division_template = "Mehal Sefari"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Chitet Sefari"
-                disband = yes
+            if = {
+                limit = { has_template = "Chitet Sefari" }
+                delete_units = {
+                    division_template = "Chitet Sefari"
+                    disband = yes
+                }
             }
         }
     }
@@ -949,17 +1195,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Jalkaväkidivisioona"
-                disband = yes
+            if = {
+                limit = { has_template = "Jalkaväkidivisioona" }
+                delete_units = {
+                    division_template = "Jalkaväkidivisioona"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Erillinen Prikaati"
-                disband = yes
+            if = {
+                limit = { has_template = "Erillinen Prikaati" }
+                delete_units = {
+                    division_template = "Erillinen Prikaati"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Ratsuväkiprikaati"
-                disband = yes
+            if = {
+                limit = { has_template = "Ratsuväkiprikaati" }
+                delete_units = {
+                    division_template = "Ratsuväkiprikaati"
+                    disband = yes
+                }
             }
         }
     }
@@ -980,45 +1235,75 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Division d'Infanterie"
-                disband = yes
+            if = {
+                limit = { has_template = "Division d'Infanterie" }
+                delete_units = {
+                    division_template = "Division d'Infanterie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division Coloniale"
-                disband = yes
+            if = {
+                limit = { has_template = "Division Coloniale" }
+                delete_units = {
+                    division_template = "Division Coloniale"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division d'Infanterie Motorisée"
-                disband = yes
+            if = {
+                limit = { has_template = "Division d'Infanterie Motorisée" }
+                delete_units = {
+                    division_template = "Division d'Infanterie Motorisée"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division d'Infanterie Alpine"
-                disband = yes
+            if = {
+                limit = { has_template = "Division d'Infanterie Alpine" }
+                delete_units = {
+                    division_template = "Division d'Infanterie Alpine"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division de Cavalerie"
-                disband = yes
+            if = {
+                limit = { has_template = "Division de Cavalerie" }
+                delete_units = {
+                    division_template = "Division de Cavalerie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division Légère Mécanique"
-                disband = yes
+            if = {
+                limit = { has_template = "Division Légère Mécanique" }
+                delete_units = {
+                    division_template = "Division Légère Mécanique"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigade de Chars de Combat"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigade de Chars de Combat" }
+                delete_units = {
+                    division_template = "Brigade de Chars de Combat"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigade Coloniale"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigade Coloniale" }
+                delete_units = {
+                    division_template = "Brigade Coloniale"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Division Forteresse"
-                disband = yes
+            if = {
+                limit = { has_template = "Division Forteresse" }
+                delete_units = {
+                    division_template = "Division Forteresse"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigade Cuirassée"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigade Cuirassée" }
+                delete_units = {
+                    division_template = "Brigade Cuirassée"
+                    disband = yes
+                }
             }
         }
     }
@@ -1039,13 +1324,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -1066,53 +1357,89 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanterie-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanterie-Division" }
+                delete_units = {
+                    division_template = "Infanterie-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Panzer-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Panzer-Division" }
+                delete_units = {
+                    division_template = "Panzer-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infanterie-Division (mot.)"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanterie-Division (mot.)" }
+                delete_units = {
+                    division_template = "Infanterie-Division (mot.)"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Gebirgs-Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Gebirgs-Brigade" }
+                delete_units = {
+                    division_template = "Gebirgs-Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kavallerie-Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavallerie-Brigade" }
+                delete_units = {
+                    division_template = "Kavallerie-Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Gebirgs-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Gebirgs-Division" }
+                delete_units = {
+                    division_template = "Gebirgs-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Fallschirmjäger-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Fallschirmjäger-Division" }
+                delete_units = {
+                    division_template = "Fallschirmjäger-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Leichte Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Leichte Division" }
+                delete_units = {
+                    division_template = "Leichte Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "SS-Regiment"
-                disband = yes
+            if = {
+                limit = { has_template = "SS-Regiment" }
+                delete_units = {
+                    division_template = "SS-Regiment"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sicherungs-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Sicherungs-Division" }
+                delete_units = {
+                    division_template = "Sicherungs-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "SS-Sturmbrigade"
-                disband = yes
+            if = {
+                limit = { has_template = "SS-Sturmbrigade" }
+                delete_units = {
+                    division_template = "SS-Sturmbrigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Landsturmregiment"
-                disband = yes
+            if = {
+                limit = { has_template = "Landsturmregiment" }
+                delete_units = {
+                    division_template = "Landsturmregiment"
+                    disband = yes
+                }
             }
         }
     }
@@ -1133,17 +1460,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Trigonikó Pezikoú"
-                disband = yes
+            if = {
+                limit = { has_template = "Trigonikó Pezikoú" }
+                delete_units = {
+                    division_template = "Trigonikó Pezikoú"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Tetrágono Pezikoú"
-                disband = yes
+            if = {
+                limit = { has_template = "Tetrágono Pezikoú" }
+                delete_units = {
+                    division_template = "Tetrágono Pezikoú"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Merarchía Ippikoú"
-                disband = yes
+            if = {
+                limit = { has_template = "Merarchía Ippikoú" }
+                delete_units = {
+                    division_template = "Merarchía Ippikoú"
+                    disband = yes
+                }
             }
         }
     }
@@ -1164,17 +1500,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Juntuán Reformed"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán Reformed" }
+                delete_units = {
+                    division_template = "Juntuán Reformed"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -1195,9 +1540,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Infanteria" }
+                delete_units = {
+                    division_template = "Brigada de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -1218,21 +1566,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binary Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Binary Infantry" }
+                delete_units = {
+                    division_template = "Binary Infantry"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Triangular Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Triangular Infantry" }
+                delete_units = {
+                    division_template = "Triangular Infantry"
+                    disband = yes
+                }
             }
         }
     }
@@ -1253,9 +1613,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigade de Infanterie"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigade de Infanterie" }
+                delete_units = {
+                    division_template = "Brigade de Infanterie"
+                    disband = yes
+                }
             }
         }
     }
@@ -1276,17 +1639,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -1307,21 +1679,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanterie Divisie"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanterie Divisie" }
+                delete_units = {
+                    division_template = "Infanterie Divisie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Koloniaal Garnizoen"
-                disband = yes
+            if = {
+                limit = { has_template = "Koloniaal Garnizoen" }
+                delete_units = {
+                    division_template = "Koloniaal Garnizoen"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mariniersdivisie"
-                disband = yes
+            if = {
+                limit = { has_template = "Mariniersdivisie" }
+                delete_units = {
+                    division_template = "Mariniersdivisie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Lichte Divisie"
-                disband = yes
+            if = {
+                limit = { has_template = "Lichte Divisie" }
+                delete_units = {
+                    division_template = "Lichte Divisie"
+                    disband = yes
+                }
             }
         }
     }
@@ -1342,9 +1726,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Infanteria" }
+                delete_units = {
+                    division_template = "Brigada de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -1365,44 +1752,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Gyalogdandár"
-                disband = yes
+            if = {
+                limit = { has_template = "Gyalogdandár" }
+                delete_units = {
+                    division_template = "Gyalogdandár"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Huszár Dandár"
-                disband = yes
+            if = {
+                limit = { has_template = "Huszár Dandár" }
+                delete_units = {
+                    division_template = "Huszár Dandár"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Motorizált Dandár"
-                disband = yes
+            if = {
+                limit = { has_template = "Motorizált Dandár" }
+                delete_units = {
+                    division_template = "Motorizált Dandár"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Lovassági Társaság"
-                disband = yes
-            }
-        }
-    }
-
-    bots_ice_templates = {
-        fire_only_once = yes
-        icon = oppression
-        available = {
-            if = { date > 1936.1.1 }
-            original_tag = ICE
-            has_war = no
-            has_civil_war = no
-        }
-        visible = {
-            original_tag = ICE
-            is_ai = yes
-        }
-        ai_will_do = { base = 1000 }
-        cost = 0
-        complete_effect = {
-            delete_units = {
-                division_template = "Ríkislögreglan"
-                disband = yes
+            if = {
+                limit = { has_template = "Lovassági Társaság" }
+                delete_units = {
+                    division_template = "Lovassági Társaság"
+                    disband = yes
+                }
             }
         }
     }
@@ -1423,21 +1799,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanterie Divisie"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanterie Divisie" }
+                delete_units = {
+                    division_template = "Infanterie Divisie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "KNIL Koloniaal Garnizoen"
-                disband = yes
+            if = {
+                limit = { has_template = "KNIL Koloniaal Garnizoen" }
+                delete_units = {
+                    division_template = "KNIL Koloniaal Garnizoen"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "KNIL Field Division"
-                disband = yes
+            if = {
+                limit = { has_template = "KNIL Field Division" }
+                delete_units = {
+                    division_template = "KNIL Field Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "KNIL Garrison Division"
-                disband = yes
+            if = {
+                limit = { has_template = "KNIL Garrison Division" }
+                delete_units = {
+                    division_template = "KNIL Garrison Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -1458,9 +1846,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -1481,21 +1872,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Firqat Mushaa"
-                disband = yes
+            if = {
+                limit = { has_template = "Firqat Mushaa" }
+                delete_units = {
+                    division_template = "Firqat Mushaa"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alfurqat Aljabalia"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Aljabalia" }
+                delete_units = {
+                    division_template = "Alfurqat Aljabalia"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Silah Alfursan"
-                disband = yes
+            if = {
+                limit = { has_template = "Silah Alfursan" }
+                delete_units = {
+                    division_template = "Silah Alfursan"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alfurqat Almasha"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Almasha" }
+                delete_units = {
+                    division_template = "Alfurqat Almasha"
+                    disband = yes
+                }
             }
         }
     }
@@ -1516,77 +1919,128 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Divisione di Fanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione di Fanteria" }
+                delete_units = {
+                    division_template = "Divisione di Fanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Alpina"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Alpina" }
+                delete_units = {
+                    division_template = "Divisione Alpina"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Camicie Nere"
-                disband = yes
+            if = {
+                limit = { has_template = "Camicie Nere" }
+                delete_units = {
+                    division_template = "Camicie Nere"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Divisione Celere"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Reggimento di Cavalleria"
-                disband = yes
+            if = {
+                limit = { has_template = "Reggimento di Cavalleria" }
+                delete_units = {
+                    division_template = "Reggimento di Cavalleria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Coloniale"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Coloniale" }
+                delete_units = {
+                    division_template = "Divisione Coloniale"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Ascari Libica"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Ascari Libica" }
+                delete_units = {
+                    division_template = "Divisione Ascari Libica"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Ascari Eritrea"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Ascari Eritrea" }
+                delete_units = {
+                    division_template = "Divisione Ascari Eritrea"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Ascari Somala"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Ascari Somala" }
+                delete_units = {
+                    division_template = "Divisione Ascari Somala"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Banda Indigena Irregolare"
-                disband = yes
+            if = {
+                limit = { has_template = "Banda Indigena Irregolare" }
+                delete_units = {
+                    division_template = "Banda Indigena Irregolare"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Truppe Irregolari a Cavallo"
-                disband = yes
+            if = {
+                limit = { has_template = "Truppe Irregolari a Cavallo" }
+                delete_units = {
+                    division_template = "Truppe Irregolari a Cavallo"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Banda Irregolare Libica"
-                disband = yes
+            if = {
+                limit = { has_template = "Banda Irregolare Libica" }
+                delete_units = {
+                    division_template = "Banda Irregolare Libica"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Banda Irregolare Eritrea"
-                disband = yes
+            if = {
+                limit = { has_template = "Banda Irregolare Eritrea" }
+                delete_units = {
+                    division_template = "Banda Irregolare Eritrea"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Banda Irregolare Somala"
-                disband = yes
+            if = {
+                limit = { has_template = "Banda Irregolare Somala" }
+                delete_units = {
+                    division_template = "Banda Irregolare Somala"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Autotrasportabile"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Autotrasportabile" }
+                delete_units = {
+                    division_template = "Divisione Autotrasportabile"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Motorizzata"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Motorizzata" }
+                delete_units = {
+                    division_template = "Divisione Motorizzata"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Divisione Corazzata"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisione Corazzata" }
+                delete_units = {
+                    division_template = "Divisione Corazzata"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Raggruppamento Celere"
-                disband = yes
+            if = {
+                limit = { has_template = "Raggruppamento Celere" }
+                delete_units = {
+                    division_template = "Raggruppamento Celere"
+                    disband = yes
+                }
             }
         }
     }
@@ -1607,25 +2061,34 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Hohei Shidan"
-                disband = yes
+            if = {
+                limit = { has_template = "Hohei Shidan" }
+                delete_units = {
+                    division_template = "Hohei Shidan"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Dokuritsu Konsei Ryodan"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Kihei Shidan"
-                disband = yes
+            if = {
+                limit = { has_template = "Kihei Shidan" }
+                delete_units = {
+                    division_template = "Kihei Shidan"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Jidousha Shidan"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Rikusentai"
-                disband = yes
+            if = {
+                limit = { has_template = "Rikusentai" }
+                delete_units = {
+                    division_template = "Rikusentai"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Chuton-chi Shidan"
@@ -1639,17 +2102,26 @@ BOTS = {
                 division_template = "Kutei Shidan"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Chugata Hohei Shidan"
-                disband = yes
+            if = {
+                limit = { has_template = "Chugata Hohei Shidan" }
+                delete_units = {
+                    division_template = "Chugata Hohei Shidan"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Senshadan"
-                disband = yes
+            if = {
+                limit = { has_template = "Senshadan" }
+                delete_units = {
+                    division_template = "Senshadan"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Azad Hind Infantry Corps"
-                disband = yes
+            if = {
+                limit = { has_template = "Azad Hind Infantry Corps" }
+                delete_units = {
+                    division_template = "Azad Hind Infantry Corps"
+                    disband = yes
+                }
             }
         }
     }
@@ -1670,13 +2142,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Morit Diviziin"
-                disband = yes
+            if = {
+                limit = { has_template = "Morit Diviziin" }
+                delete_units = {
+                    division_template = "Morit Diviziin"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Khalimagiin Khaadyn Kharuuluud"
-                disband = yes
+            if = {
+                limit = { has_template = "Khalimagiin Khaadyn Kharuuluud" }
+                delete_units = {
+                    division_template = "Khalimagiin Khaadyn Kharuuluud"
+                    disband = yes
+                }
             }
         }
     }
@@ -1697,13 +2175,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -1724,13 +2208,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -1751,17 +2241,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Daehanminguk Yuk-gun"
-                disband = yes
+            if = {
+                limit = { has_template = "Daehanminguk Yuk-gun" }
+                delete_units = {
+                    division_template = "Daehanminguk Yuk-gun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binary Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Binary Infantry" }
+                delete_units = {
+                    division_template = "Binary Infantry"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Triangular Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Triangular Infantry" }
+                delete_units = {
+                    division_template = "Triangular Infantry"
+                    disband = yes
+                }
             }
         }
     }
@@ -1782,9 +2281,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Kavaleriyskaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavaleriyskaya Diviziya" }
+                delete_units = {
+                    division_template = "Kavaleriyskaya Diviziya"
+                    disband = yes
+                }
             }
         }
     }
@@ -1805,13 +2307,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Kumullik Militia"
-                disband = yes
+            if = {
+                limit = { has_template = "Kumullik Militia" }
+                delete_units = {
+                    division_template = "Kumullik Militia"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Uyghur Regiment"
-                disband = yes
+            if = {
+                limit = { has_template = "Uyghur Regiment" }
+                delete_units = {
+                    division_template = "Uyghur Regiment"
+                    disband = yes
+                }
             }
         }
     }
@@ -1832,13 +2340,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Dabeşa siwarî"
-                disband = yes
+            if = {
+                limit = { has_template = "Dabeşa siwarî" }
+                delete_units = {
+                    division_template = "Dabeşa siwarî"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Peyayên Kurd"
-                disband = yes
+            if = {
+                limit = { has_template = "Peyayên Kurd" }
+                delete_units = {
+                    division_template = "Peyayên Kurd"
+                    disband = yes
+                }
             }
         }
     }
@@ -1859,17 +2373,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Kajnieku Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Kajnieku Divizija" }
+                delete_units = {
+                    division_template = "Kajnieku Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Artilerijas Pulks"
-                disband = yes
+            if = {
+                limit = { has_template = "Artilerijas Pulks" }
+                delete_units = {
+                    division_template = "Artilerijas Pulks"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Aizsargi"
-                disband = yes
+            if = {
+                limit = { has_template = "Aizsargi" }
+                delete_units = {
+                    division_template = "Aizsargi"
+                    disband = yes
+                }
             }
         }
     }
@@ -1890,9 +2413,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Brigade" }
+                delete_units = {
+                    division_template = "Infantry Brigade"
+                    disband = yes
+                }
             }
         }
     }
@@ -1913,29 +2439,47 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pestininku Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Pestininku Divizija" }
+                delete_units = {
+                    division_template = "Pestininku Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Jalaväediviisi"
-                disband = yes
+            if = {
+                limit = { has_template = "Jalaväediviisi" }
+                delete_units = {
+                    division_template = "Jalaväediviisi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Ratsavägi"
-                disband = yes
+            if = {
+                limit = { has_template = "Ratsavägi" }
+                delete_units = {
+                    division_template = "Ratsavägi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Artilerija Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Artilerija Divizija" }
+                delete_units = {
+                    division_template = "Artilerija Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Valstybės Sienos Apsaugos Skyrius"
-                disband = yes
+            if = {
+                limit = { has_template = "Valstybės Sienos Apsaugos Skyrius" }
+                delete_units = {
+                    division_template = "Valstybės Sienos Apsaugos Skyrius"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kavalerijos Brigados"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavalerijos Brigados" }
+                delete_units = {
+                    division_template = "Kavalerijos Brigados"
+                    disband = yes
+                }
             }
         }
     }
@@ -1955,29 +2499,47 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pestininku Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Pestininku Divizija" }
+                delete_units = {
+                    division_template = "Pestininku Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Jalaväediviisi"
-                disband = yes
+            if = {
+                limit = { has_template = "Jalaväediviisi" }
+                delete_units = {
+                    division_template = "Jalaväediviisi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Ratsavägi"
-                disband = yes
+            if = {
+                limit = { has_template = "Ratsavägi" }
+                delete_units = {
+                    division_template = "Ratsavägi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Artilerija Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Artilerija Divizija" }
+                delete_units = {
+                    division_template = "Artilerija Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Valstybės Sienos Apsaugos Skyrius"
-                disband = yes
+            if = {
+                limit = { has_template = "Valstybės Sienos Apsaugos Skyrius" }
+                delete_units = {
+                    division_template = "Valstybės Sienos Apsaugos Skyrius"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kavalerijos Brigados"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavalerijos Brigados" }
+                delete_units = {
+                    division_template = "Kavalerijos Brigados"
+                    disband = yes
+                }
             }
         }
     }
@@ -1997,9 +2559,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Public Force"
-                disband = yes
+            if = {
+                limit = { has_template = "Public Force" }
+                delete_units = {
+                    division_template = "Public Force"
+                    disband = yes
+                }
             }
         }
     }
@@ -2020,9 +2585,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Malaya Infantry Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Malaya Infantry Brigade" }
+                delete_units = {
+                    division_template = "Malaya Infantry Brigade"
+                    disband = yes
+                }
             }
         }
     }
@@ -2043,21 +2611,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Huncheng Lu"
-                disband = yes
+            if = {
+                limit = { has_template = "Huncheng Lu" }
+                delete_units = {
+                    division_template = "Huncheng Lu"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Bubing Shi"
-                disband = yes
+            if = {
+                limit = { has_template = "Bubing Shi" }
+                delete_units = {
+                    division_template = "Bubing Shi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qu Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qu Jun" }
+                delete_units = {
+                    division_template = "Qu Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Shi"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Shi" }
+                delete_units = {
+                    division_template = "Qibing Shi"
+                    disband = yes
+                }
             }
         }
     }
@@ -2078,17 +2658,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Morit Diviziin"
-                disband = yes
+            if = {
+                limit = { has_template = "Morit Diviziin" }
+                delete_units = {
+                    division_template = "Morit Diviziin"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -2109,17 +2698,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada Agrarista"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada Agrarista" }
+                delete_units = {
+                    division_template = "Brigada Agrarista"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -2140,9 +2738,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Morit Diviziin"
-                disband = yes
+            if = {
+                limit = { has_template = "Morit Diviziin" }
+                delete_units = {
+                    division_template = "Morit Diviziin"
+                    disband = yes
+                }
             }
         }
     }
@@ -2163,9 +2764,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2186,13 +2790,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Paidala Dibhijana"
-                disband = yes
+            if = {
+                limit = { has_template = "Paidala Dibhijana" }
+                delete_units = {
+                    division_template = "Paidala Dibhijana"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Royal Nepalese Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Royal Nepalese Division" }
+                delete_units = {
+                    division_template = "Royal Nepalese Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2213,9 +2823,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Brigada de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Infanteria" }
+                delete_units = {
+                    division_template = "Brigada de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -2236,17 +2849,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infanteridivisjon"
-                disband = yes
+            if = {
+                limit = { has_template = "Infanteridivisjon" }
+                delete_units = {
+                    division_template = "Infanteridivisjon"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binærdivisjon"
-                disband = yes
+            if = {
+                limit = { has_template = "Binærdivisjon" }
+                delete_units = {
+                    division_template = "Binærdivisjon"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Dragonregiment"
-                disband = yes
+            if = {
+                limit = { has_template = "Dragonregiment" }
+                delete_units = {
+                    division_template = "Dragonregiment"
+                    disband = yes
+                }
             }
         }
     }
@@ -2267,13 +2889,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán Reformed"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán Reformed" }
+                delete_units = {
+                    division_template = "Juntuán Reformed"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -2294,21 +2922,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "District Force"
-                disband = yes
+            if = {
+                limit = { has_template = "District Force" }
+                delete_units = {
+                    division_template = "District Force"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armoured Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Armoured Division" }
+                delete_units = {
+                    division_template = "Armoured Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armored-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Armored-Division" }
+                delete_units = {
+                    division_template = "Armored-Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2329,9 +2969,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Alfurqat Almasha"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Almasha" }
+                delete_units = {
+                    division_template = "Alfurqat Almasha"
+                    disband = yes
+                }
             }
         }
     }
@@ -2352,13 +2995,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armoured Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Armoured Division" }
+                delete_units = {
+                    division_template = "Armoured Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2379,9 +3028,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -2402,9 +3054,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -2425,25 +3080,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Iranian Gendarmerie"
-                disband = yes
+            if = {
+                limit = { has_template = "Iranian Gendarmerie" }
+                delete_units = {
+                    division_template = "Iranian Gendarmerie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mixed Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Mixed Division" }
+                delete_units = {
+                    division_template = "Mixed Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Group"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Group" }
+                delete_units = {
+                    division_template = "Infantry Group"
+                    disband = yes
+                }
             }
         }
     }
@@ -2464,13 +3134,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Philippine Scouts Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Philippine Scouts Division" }
+                delete_units = {
+                    division_template = "Philippine Scouts Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2491,33 +3167,54 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Dywizja Piechoty"
-                disband = yes
+            if = {
+                limit = { has_template = "Dywizja Piechoty" }
+                delete_units = {
+                    division_template = "Dywizja Piechoty"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Dywizja Piechoty Górskiej"
-                disband = yes
+            if = {
+                limit = { has_template = "Dywizja Piechoty Górskiej" }
+                delete_units = {
+                    division_template = "Dywizja Piechoty Górskiej"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brygada Kawalerii"
-                disband = yes
+            if = {
+                limit = { has_template = "Brygada Kawalerii" }
+                delete_units = {
+                    division_template = "Brygada Kawalerii"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brygada Piechoty Górskiej"
-                disband = yes
+            if = {
+                limit = { has_template = "Brygada Piechoty Górskiej" }
+                delete_units = {
+                    division_template = "Brygada Piechoty Górskiej"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brygada Motorowej"
-                disband = yes
+            if = {
+                limit = { has_template = "Brygada Motorowej" }
+                delete_units = {
+                    division_template = "Brygada Motorowej"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Grupa Pancerna"
-                disband = yes
+            if = {
+                limit = { has_template = "Grupa Pancerna" }
+                delete_units = {
+                    division_template = "Grupa Pancerna"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brygada Ochrony Pogranicza"
-                disband = yes
+            if = {
+                limit = { has_template = "Brygada Ochrony Pogranicza" }
+                delete_units = {
+                    division_template = "Brygada Ochrony Pogranicza"
+                    disband = yes
+                }
             }
         }
     }
@@ -2538,17 +3235,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Divisão de Infantaria"
-                disband = yes
+            if = {
+                limit = { has_template = "Divisão de Infantaria" }
+                delete_units = {
+                    division_template = "Divisão de Infantaria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Força de Caçadores"
-                disband = yes
+            if = {
+                limit = { has_template = "Força de Caçadores" }
+                delete_units = {
+                    division_template = "Força de Caçadores"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada de Cavalaria"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Cavalaria" }
+                delete_units = {
+                    division_template = "Brigada de Cavalaria"
+                    disband = yes
+                }
             }
         }
     }
@@ -2569,17 +3275,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Renmin Jundui"
-                disband = yes
+            if = {
+                limit = { has_template = "Renmin Jundui" }
+                delete_units = {
+                    division_template = "Renmin Jundui"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Erjinzhi Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Erjinzhi Juntuán" }
+                delete_units = {
+                    division_template = "Erjinzhi Juntuán"
+                    disband = yes
+                }
             }
         }
     }
@@ -2600,13 +3315,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -2627,25 +3348,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "District Garrison"
-                disband = yes
+            if = {
+                limit = { has_template = "District Garrison" }
+                delete_units = {
+                    division_template = "District Garrison"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Armored-Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Armored-Division" }
+                delete_units = {
+                    division_template = "Armored-Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Rajput Regiment"
-                disband = yes
+            if = {
+                limit = { has_template = "Rajput Regiment" }
+                delete_units = {
+                    division_template = "Rajput Regiment"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Colonial Garrison"
-                disband = yes
+            if = {
+                limit = { has_template = "Colonial Garrison" }
+                delete_units = {
+                    division_template = "Colonial Garrison"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Armoured Division"
@@ -2670,9 +3406,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Vládní vojsko"
-                disband = yes
+            if = {
+                limit = { has_template = "Vládní vojsko" }
+                delete_units = {
+                    division_template = "Vládní vojsko"
+                    disband = yes
+                }
             }
         }
     }
@@ -2693,25 +3432,40 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Divizia de Infanterie"
-                disband = yes
+            if = {
+                limit = { has_template = "Divizia de Infanterie" }
+                delete_units = {
+                    division_template = "Divizia de Infanterie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada de Munte"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Munte" }
+                delete_units = {
+                    division_template = "Brigada de Munte"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Brigada de Cavalerie"
-                disband = yes
+            if = {
+                limit = { has_template = "Brigada de Cavalerie" }
+                delete_units = {
+                    division_template = "Brigada de Cavalerie"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Regimentul de Blindate"
-                disband = yes
+            if = {
+                limit = { has_template = "Regimentul de Blindate" }
+                delete_units = {
+                    division_template = "Regimentul de Blindate"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Blindata Brigada"
-                disband = yes
+            if = {
+                limit = { has_template = "Blindata Brigada" }
+                delete_units = {
+                    division_template = "Blindata Brigada"
+                    disband = yes
+                }
             }
         }
     }
@@ -2732,9 +3486,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Karpathian Sič"
-                disband = yes
+            if = {
+                limit = { has_template = "Karpathian Sič" }
+                delete_units = {
+                    division_template = "Karpathian Sič"
+                    disband = yes
+                }
             }
         }
     }
@@ -2755,25 +3512,37 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "District Force"
-                disband = yes
+            if = {
+                limit = { has_template = "District Force" }
+                delete_units = {
+                    division_template = "District Force"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "District Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "District Brigade" }
+                delete_units = {
+                    division_template = "District Brigade"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Armored-Division"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Democratic Defense Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Democratic Defense Brigade" }
+                delete_units = {
+                    division_template = "Democratic Defense Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Nationalist Partisans"
-                disband = yes
+            if = {
+                limit = { has_template = "Nationalist Partisans" }
+                delete_units = {
+                    division_template = "Nationalist Partisans"
+                    disband = yes
+                }
             }
         }
     }
@@ -2794,13 +3563,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Alfurqat Almasha"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Almasha" }
+                delete_units = {
+                    division_template = "Alfurqat Almasha"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alfurqat Alfursan"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Alfursan" }
+                delete_units = {
+                    division_template = "Alfurqat Alfursan"
+                    disband = yes
+                }
             }
         }
     }
@@ -2821,17 +3596,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -2852,13 +3636,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Royal Thai Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Royal Thai Division" }
+                delete_units = {
+                    division_template = "Royal Thai Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -2879,13 +3669,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -2906,9 +3702,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
         }
     }
@@ -2929,17 +3728,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pesi Divize"
-                disband = yes
+            if = {
+                limit = { has_template = "Pesi Divize" }
+                delete_units = {
+                    division_template = "Pesi Divize"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mobilná Skupina"
-                disband = yes
+            if = {
+                limit = { has_template = "Mobilná Skupina" }
+                delete_units = {
+                    division_template = "Mobilná Skupina"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Puska Brigáda"
-                disband = yes
+            if = {
+                limit = { has_template = "Puska Brigáda" }
+                delete_units = {
+                    division_template = "Puska Brigáda"
+                    disband = yes
+                }
             }
         }
     }
@@ -2960,13 +3768,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -2987,57 +3801,90 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Strelkovaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Strelkovaya Diviziya" }
+                delete_units = {
+                    division_template = "Strelkovaya Diviziya"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Gornostrelkovaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Gornostrelkovaya Diviziya" }
+                delete_units = {
+                    division_template = "Gornostrelkovaya Diviziya"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Motostrelkovaya Diviziya"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Kavaleriyskaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavaleriyskaya Diviziya" }
+                delete_units = {
+                    division_template = "Kavaleriyskaya Diviziya"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "NKVD Pogranichnaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "NKVD Pogranichnaya Diviziya" }
+                delete_units = {
+                    division_template = "NKVD Pogranichnaya Diviziya"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Mekhanizirovaniy Korpus"
                 disband = yes
             }
-            delete_units = {
-                division_template = "Vozdushno-Desantnaya Brigada"
-                disband = yes
+            if = {
+                limit = { has_template = "Vozdushno-Desantnaya Brigada" }
+                delete_units = {
+                    division_template = "Vozdushno-Desantnaya Brigada"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Vozdushno-Desantnaya"
-                disband = yes
+            if = {
+                limit = { has_template = "Vozdushno-Desantnaya" }
+                delete_units = {
+                    division_template = "Vozdushno-Desantnaya"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Tankovaya Korpus"
-                disband = yes
+            if = {
+                limit = { has_template = "Tankovaya Korpus" }
+                delete_units = {
+                    division_template = "Tankovaya Korpus"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Legko-Tankovaya Brigada"
-                disband = yes
+            if = {
+                limit = { has_template = "Legko-Tankovaya Brigada" }
+                delete_units = {
+                    division_template = "Legko-Tankovaya Brigada"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Tankovaya Brigada"
-                disband = yes
+            if = {
+                limit = { has_template = "Tankovaya Brigada" }
+                delete_units = {
+                    division_template = "Tankovaya Brigada"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Tyazolaya-Tankovaya Brigada"
-                disband = yes
+            if = {
+                limit = { has_template = "Tyazolaya-Tankovaya Brigada" }
+                delete_units = {
+                    division_template = "Tyazolaya-Tankovaya Brigada"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kazachya Kavaleryskaya Diviziya"
-                disband = yes
+            if = {
+                limit = { has_template = "Kazachya Kavaleryskaya Diviziya" }
+                delete_units = {
+                    division_template = "Kazachya Kavaleryskaya Diviziya"
+                    disband = yes
+                }
             }
         }
     }
@@ -3057,21 +3904,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Arméfördelning"
-                disband = yes
+            if = {
+                limit = { has_template = "Arméfördelning" }
+                delete_units = {
+                    division_template = "Arméfördelning"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Kavalleribrigaden"
-                disband = yes
+            if = {
+                limit = { has_template = "Kavalleribrigaden" }
+                delete_units = {
+                    division_template = "Kavalleribrigaden"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = " Pansarregemente"
-                disband = yes
+            if = {
+                limit = { has_template = " Pansarregemente" }
+                delete_units = {
+                    division_template = " Pansarregemente"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Militärområde"
-                disband = yes
+            if = {
+                limit = { has_template = "Militärområde" }
+                delete_units = {
+                    division_template = "Militärområde"
+                    disband = yes
+                }
             }
         }
     }
@@ -3217,9 +4076,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Strelkovaya Polk"
-                disband = yes
+            if = {
+                limit = { has_template = "Strelkovaya Polk" }
+                delete_units = {
+                    division_template = "Strelkovaya Polk"
+                    disband = yes
+                }
             }
         }
     }
@@ -3240,9 +4102,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuan"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuan" }
+                delete_units = {
+                    division_template = "Juntuan"
+                    disband = yes
+                }
             }
         }
     }
@@ -3263,21 +4128,33 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Piyade Tümeni"
-                disband = yes
+            if = {
+                limit = { has_template = "Piyade Tümeni" }
+                delete_units = {
+                    division_template = "Piyade Tümeni"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Dag Tugayi"
-                disband = yes
+            if = {
+                limit = { has_template = "Dag Tugayi" }
+                delete_units = {
+                    division_template = "Dag Tugayi"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Bogazi Tugay"
-                disband = yes
+            if = {
+                limit = { has_template = "Bogazi Tugay" }
+                delete_units = {
+                    division_template = "Bogazi Tugay"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Süvari Tümeni"
-                disband = yes
+            if = {
+                limit = { has_template = "Süvari Tümeni" }
+                delete_units = {
+                    division_template = "Süvari Tümeni"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Zirhli Tümeni"
@@ -3302,9 +4179,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
         }
     }
@@ -3325,29 +4205,47 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "National Guard Division"
-                disband = yes
+            if = {
+                limit = { has_template = "National Guard Division" }
+                delete_units = {
+                    division_template = "National Guard Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Garrison Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Garrison Brigade" }
+                delete_units = {
+                    division_template = "Garrison Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Marine Brigade"
-                disband = yes
+            if = {
+                limit = { has_template = "Marine Brigade" }
+                delete_units = {
+                    division_template = "Marine Brigade"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Mechanized Cavalry"
-                disband = yes
+            if = {
+                limit = { has_template = "Mechanized Cavalry" }
+                delete_units = {
+                    division_template = "Mechanized Cavalry"
+                    disband = yes
+                }
             }
         }
     }
@@ -3368,13 +4266,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Local Defense Volunteers"
-                disband = yes
+            if = {
+                limit = { has_template = "Local Defense Volunteers" }
+                delete_units = {
+                    division_template = "Local Defense Volunteers"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "State Defense Force"
-                disband = yes
+            if = {
+                limit = { has_template = "State Defense Force" }
+                delete_units = {
+                    division_template = "State Defense Force"
+                    disband = yes
+                }
             }
         }
     }
@@ -3395,13 +4299,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "División de Infanteria"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Infanteria" }
+                delete_units = {
+                    division_template = "División de Infanteria"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "División de Caballería"
-                disband = yes
+            if = {
+                limit = { has_template = "División de Caballería" }
+                delete_units = {
+                    division_template = "División de Caballería"
+                    disband = yes
+                }
             }
         }
     }
@@ -3422,13 +4332,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Cavalry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Cavalry Division" }
+                delete_units = {
+                    division_template = "Cavalry Division"
+                    disband = yes
+                }
             }
         }
     }
@@ -3449,13 +4365,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Sanjiao Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Sanjiao Jun" }
+                delete_units = {
+                    division_template = "Sanjiao Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
         }
     }
@@ -3476,29 +4398,47 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Qibing Jun"
-                disband = yes
+            if = {
+                limit = { has_template = "Qibing Jun" }
+                delete_units = {
+                    division_template = "Qibing Jun"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Juntuán Reformed"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán Reformed" }
+                delete_units = {
+                    division_template = "Juntuán Reformed"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binary Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Binary Infantry" }
+                delete_units = {
+                    division_template = "Binary Infantry"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Triangular Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Triangular Infantry" }
+                delete_units = {
+                    division_template = "Triangular Infantry"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Triangular Cavalry"
-                disband = yes
+            if = {
+                limit = { has_template = "Triangular Cavalry" }
+                delete_units = {
+                    division_template = "Triangular Cavalry"
+                    disband = yes
+                }
             }
         }
     }
@@ -3519,13 +4459,19 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Alfurqat Almasha"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Almasha" }
+                delete_units = {
+                    division_template = "Alfurqat Almasha"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Alfurqat Alfursan"
-                disband = yes
+            if = {
+                limit = { has_template = "Alfurqat Alfursan" }
+                delete_units = {
+                    division_template = "Alfurqat Alfursan"
+                    disband = yes
+                }
             }
         }
     }
@@ -3546,17 +4492,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Pesadijska Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Pesadijska Divizija" }
+                delete_units = {
+                    division_template = "Pesadijska Divizija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Gorska Pesadija"
-                disband = yes
+            if = {
+                limit = { has_template = "Gorska Pesadija" }
+                delete_units = {
+                    division_template = "Gorska Pesadija"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Konjička Divizija"
-                disband = yes
+            if = {
+                limit = { has_template = "Konjička Divizija" }
+                delete_units = {
+                    division_template = "Konjička Divizija"
+                    disband = yes
+                }
             }
             delete_unit_template_and_units = {
                 division_template = "Tenkovski Bataljon"
@@ -3581,17 +4536,26 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Juntuán"
-                disband = yes
+            if = {
+                limit = { has_template = "Juntuán" }
+                delete_units = {
+                    division_template = "Juntuán"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Binary Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Binary Infantry" }
+                delete_units = {
+                    division_template = "Binary Infantry"
+                    disband = yes
+                }
             }
-            delete_units = {
-                division_template = "Triangular Infantry"
-                disband = yes
+            if = {
+                limit = { has_template = "Triangular Infantry" }
+                delete_units = {
+                    division_template = "Triangular Infantry"
+                    disband = yes
+                }
             }
         }
     }
@@ -3612,9 +4576,12 @@ BOTS = {
         ai_will_do = { base = 1000 }
         cost = 0
         complete_effect = {
-            delete_units = {
-                division_template = "Infantry Division"
-                disband = yes
+            if = {
+                limit = { has_template = "Infantry Division" }
+                delete_units = {
+                    division_template = "Infantry Division"
+                    disband = yes
+                }
             }
         }
     }

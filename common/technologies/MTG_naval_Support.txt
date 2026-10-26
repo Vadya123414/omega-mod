@@ -1430,24 +1430,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1476,22 +1459,10 @@ technologies = {
 			ship_mine_layer_sub
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 1 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1514,22 +1485,10 @@ technologies = {
 			mines_planting = 0.2
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 13 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1561,30 +1520,10 @@ technologies = {
 
 
 		naval_mines_damage_factor = 0.3 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 6 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 4
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1617,22 +1556,10 @@ technologies = {
 			sub_detection = 0.1
 			}
 			
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 1 y = 10 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1678,20 +1605,10 @@ technologies = {
 		}
 
 		naval_mines_damage_factor = 0.3 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 13 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = USA
-					tag = ENG
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1724,21 +1641,10 @@ technologies = {
 			mines_planting = 0.13
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-				}
-				factor = 7
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1763,21 +1669,10 @@ technologies = {
 			airdropped_mines
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-				}
-				factor = 7
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -1845,13 +1740,10 @@ technologies = {
 			mines_sweeping = 0.15
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		categories = {
@@ -1875,13 +1767,10 @@ technologies = {
 			demining_coil
 		}
 
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 16 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		categories = {

@@ -96,7 +96,7 @@
 	focus = {
 		id = FRA_intervention_in_north_africa
 		icon = GFX_goal_generic_position_armies
-		x = -5
+		x = -4
 		y = 1
 		offset = {
 			x = 0
@@ -112,9 +112,18 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				FRA_controls_north_africa = yes
+			ITA = {
+				NOT = {
+				controls_state = 448
+				controls_state = 661
+				controls_state = 449
+				controls_state = 662
+				controls_state = 663
+				controls_state = 450
+				controls_state = 451
+				controls_state = 665
 			}
+		}
 		}
 		
 		bypass = {
@@ -125,14 +134,15 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
+			VIC = {
+				country_event = vichy_war.1
+			}
 		}
 	}
 	focus = {
 		id = FRA_intervention_in_west_africa
 		icon = GFX_goal_generic_position_armies
-		x = -3
+		x = -2
 		y = 1
 		offset = {
 			x = 0
@@ -161,15 +171,31 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_west_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_west_africa }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_west_africa }
+			VIC = { country_event = LaR_france_vichy_notification_events.4 }
+			FRA_transfer_western_africa_effect = yes
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_resistance = yes
+					OR = {
+						state = 557
+						state = 272
+						state = 556
+						state = 780
+						state = 779
+						state = 778
+						state = 781
+						state = 776
+					}
+				}
+				add_compliance = 5
+			}
 		}
 	}
 	focus = {
 		id = FRA_intervention_in_syria
 		icon = GFX_goal_generic_position_armies
-		x = -1
+		x = 0
 		y = 1
 		offset = {
 			x = 0
@@ -198,52 +224,27 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_syria }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_syria }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_syria }
-		}
-	}
-	focus = {
-		id = FRA_intervention_in_indochina
-		icon = GFX_goal_generic_position_armies
-		x = 1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = FRA_appeal_to_overseas_territories
-		}
-		relative_position_id = FRA_appeal_to_overseas_territories
-		
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			NOT = {
-				FRA_controls_indochina = yes
+			VIC = { country_event = LaR_france_vichy_notification_events.1 }
+			FRA_transfer_syria_effect = yes
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_resistance = yes
+					OR = {
+						state = 677
+						state = 680
+						state = 554
+						state = 553
+					}
+				}
+				add_compliance = 5
 			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_indochina }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_indochina }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_indochina }
 		}
 	}
 	focus = {
 		id = FRA_intervention_in_central_africa
 		icon = GFX_goal_generic_position_armies
-		x = 3
+		x = 2
 		y = 1
 		offset = {
 			x = 0
@@ -272,15 +273,28 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_central_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_central_africa }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_central_africa }
+			VIC = { country_event = LaR_france_vichy_notification_events.3 }
+			FRA_transfer_central_africa_effect = yes
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_resistance = yes
+					OR = {
+						state = 772
+						state = 539
+						state = 773
+						state = 660
+						state = 774
+					}
+				}
+				add_compliance = 5
+			}
 		}
 	}
 	focus = {
 		id = FRA_intervention_in_madagascar
 		icon = GFX_goal_generic_position_armies
-		x = 5
+		x = 4
 		y = 1
 		offset = {
 			x = 0
@@ -319,9 +333,12 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_madagascar }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_madagascar }
-		}
+			VIC = { country_event = LaR_france_vichy_notification_events.6 }
+			transfer_state = 543
+			543 = {
+				if = { limit = { has_resistance = yes } add_compliance = 5 }
+			}
+		}	
 	}
 	focus = {
 		id = FRA_form_the_national_committee
@@ -335,7 +352,6 @@
 		prerequisite = { 
 			focus = FRA_intervention_in_madagascar
 			focus = FRA_intervention_in_syria
-			focus = FRA_intervention_in_indochina
 			focus = FRA_intervention_in_north_africa
 			focus = FRA_intervention_in_west_africa
 			focus = FRA_intervention_in_central_africa

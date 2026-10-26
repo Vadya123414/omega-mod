@@ -7426,6 +7426,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_country_flag = JAP_harakiri_debate_has_taken_place_flag
 		}
 
@@ -11397,6 +11398,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_subject = MEN
 			JAP_army_faction_is_at_least_influential = yes
 		}
@@ -14184,6 +14186,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				date > 1941.6.1
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 			is_subject = no
 			IF = {
 				limit = {
@@ -14783,6 +14789,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			CHI = {
 				exists = yes
 				is_subject = no
@@ -15503,6 +15510,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			JAP_army_faction_is_at_least_influential = yes
 			IF = {
 				limit = {
@@ -15675,6 +15683,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			JAP_army_faction_is_at_least_influential = yes
 			IF = {
 				limit = {
@@ -16381,9 +16390,8 @@ focus_tree = {
 		id = JAP_sway_the_navy_moderates
 		icon = GFX_focus_generic_sway_navy
 		mutually_exclusive = { }
-		x = 3
-		y = -4
-		relative_position_id = JAP_return_of_the_manchukuo_exiles
+		x = 26
+		y = 5
 
 		prerequisite = { focus = JAP_mountain_village_operation_units focus = JAP_raise_support_within_the_proletarian_class focus = JAP_ensure_cross_party_support focus = JAP_gather_royal_pacifists_support} 
 
@@ -25134,7 +25142,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				if = {limit = {{is_ai = yes}
+				if = {limit = {is_ai = yes}
 					add_offsite_building = {
 					type = arms_factory
 					level = 8
@@ -25216,7 +25224,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_states = {
+			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = {
@@ -26047,7 +26055,7 @@ focus_tree = {
 						}
 					}
 					random_select_amount = 2
-					add_extra_state_shared_building_slots = 1
+					#add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 1

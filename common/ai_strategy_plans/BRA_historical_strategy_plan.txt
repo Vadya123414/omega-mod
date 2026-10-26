@@ -30,65 +30,51 @@ BRA_historical_plan = {
 	ai_national_focuses = {
 		
 		#1936
-		BRA_tribunal_de_seguranca_nacional
-		BRA_coffee_crisis_aftermath
-		BRA_ensure_continued_military_support
-		BRA_work_with_the_integralists
 		SMB_army
-		SMB_navy
-		BRA_desenvolvimentismo
-
-		#1937
+		BRA_tribunal_de_seguranca_nacional
+		BRA_ensure_continued_military_support
 		BRA_cohen_plan
 		BRA_estado_novo
-		BRA_promote_resource_extraction
 		BRA_the_polaca
-		BRA_stimulate_the_civilian_economy	
-		BRA_consolidation_of_labor_laws
-		
-		#1938
+		BRA_establish_psad
+		BRA_decree_no_37
+		BRA_coffee_crisis_aftermath
 		BRA_radio_nacional
 		BRA_deal_with_the_cangaceiro
-		BRA_establish_psad
-		BRA_autarky
+		BRA_stimulate_the_civilian_economy
+		BRA_domestic_arms_industry
+		BRA_companhia_siderurgica_nacional
+		BRA_desenvolvimentismo
+		BRA_corporatism
 		BRA_departamendo_de_propaganda
 		BRA_tech_slot_1
-
-		#1939
-		
-		BRA_ban_political_parties
-		BRA_decree_no_37
-		BRA_reward_army_loyalty
-		BRA_secure_our_borders
+		BRA_support_rural_folk
+		BRA_consolidation_of_labor_laws
+		BRA_reach_out_to_the_great_powers
+		BRA_invest_in_road_infrastructure
+		BRA_bonus_tech_slot
+		BRA_batalha_do_borracha
+		BRA_establish_companhia_vale_do_rio_doce
+		BRA_banco_do_brasil
+		BRA_federal_development
+		BRA_financial_stimulation
+		BRA_war_production
 		SMB_military_facilities
 		SMB_army_academy
-
-		#1940
-
-		BRA_cooperation_in_the_americas
-		BRA_companhia_siderurgica_nacional
-		BRA_batalha_do_borracha
+		SMB_regular_infantry
+		SMB_jungle_warfare_training
+		SMB_jungle_pioneers
+		BRA_national_petroleum_council
+		BRA_invest_in_railways
+		BRA_secure_our_borders
+		SMB_tank_warfare
+		SMB_domestic_production
+		SMB_foreign_advisors
+		SMB_conscription
+		SMB_logistics_department
 		SMB_air_force
-		#1941
-		
-		BRA_washington_accords
-		BRA_defense_spending
-
-		
-		#1942
-		
-		BRA_natal_naval_base	
-		SMB_construct_air_bases
-		BRA_potenji_river_conference
-		
-		#1943
-		BRA_disrupt_operation_bolivar
-		BRA_smoking_cobras
-		BRA_senta_a_pua
-		
-		#1944
-		
-		
+		SMB_air_academy
+		SMB_domestic_designs
 	}
 
 	focus_factors = {
@@ -100,6 +86,13 @@ BRA_historical_plan = {
 	}
 
 	ideas = {
+		BRA_benedito_valadres = 150
+		BRA_gustavo_barroso = 40
+		BRA_minervino_de_oliveira = 20
+
+
+
+
 		army_chief_offensive_3 = 100
 		army_chief_offensive_2 = 95
 		army_chief_offensive_1 = 90 

@@ -756,7 +756,6 @@ focus_tree = {
 				USA_congress_large_opposition = yes
 			}
 			USA_great_depression_level_down = yes
-			effect_tooltip = USA_communal_domain
 			unlock_decision_tooltip = { decision = USA_communal_domain show_effect_tooltip = yes }
 
 		}
@@ -1692,6 +1691,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			congress_high_support_trigger = yes 
 			has_government = democratic
 			NOT = { has_idea_with_trait = fascist_demagogue }
@@ -2134,9 +2134,19 @@ focus_tree = {
 		id = USA_manhattan_project
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
-		
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_neutrality_act
+			}
+		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 10
 		#ai_will_do = {
@@ -2150,7 +2160,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_manhattan_project
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = nuclear
 			}
 		}
@@ -2484,7 +2494,7 @@ focus_tree = {
 			factor = 8000
 		}
 		available = {
-			democratic > 0.95
+			democratic > 0.9
 		}
 		bypass = {
 			AND = {
@@ -2610,7 +2620,11 @@ focus_tree = {
 				has_war = yes
 				has_war_support > 0.3
 			}
-			democratic > 0.95
+			OR = {
+				date > 1938.3.1
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+			democratic > 0.90
 		}
 		continue_if_invalid = yes
 		x = 0
@@ -3039,7 +3053,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -3061,7 +3074,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -3393,7 +3405,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3450,7 +3462,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3914,7 +3926,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3950,7 +3962,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_powers_act }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4016,7 +4028,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4031,7 +4043,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_seize_cuba }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4068,7 +4080,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_manifest_destiny }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4126,7 +4138,7 @@ focus_tree = {
 		prerequisite = { focus = USA_the_canadian_corridor }
 		prerequisite = { focus = USA_eliminate_the_southern_threat }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4252,7 +4264,7 @@ focus_tree = {
 		y = 4
 		prerequisite = { focus = USA_north_american_dominion }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4390,7 +4402,7 @@ focus_tree = {
 		y = 5
 		prerequisite = { focus = USA_strategic_interests }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4497,7 +4509,7 @@ focus_tree = {
 		y = 4
 		prerequisite = { focus = USA_north_american_dominion }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4641,7 +4653,7 @@ focus_tree = {
 		y = 5
 		prerequisite = { focus = USA_pacific_pacification }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4779,7 +4791,7 @@ focus_tree = {
 		prerequisite = { focus = USA_secure_asia }
 		prerequisite = { focus = USA_protect_south_america }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

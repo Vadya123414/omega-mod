@@ -17,7 +17,7 @@ NDefines.NAir.TRANSPORT_DIVISION_FACTOR = 200 -- По умолчанию 30. Ч�
 NDefines.NNavy.NAVAL_ACCIDENTS_DAYS_TO_LIVE = 30 -- По умолчанию 120. Снижение лога аварий
 NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 30 -- По умолчанию 7. Думают дольше, например апнуть ли шаблон
 NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 14 -- По умолчанию 7. Думают дольше, например апнуть ли шаблон
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 30 -- По умолчанию 7. ИИ реже рассчитывает дизайн шаблонов.
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7 -- По умолчанию 7. ИИ реже рассчитывает дизайн шаблонов.
 NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 96 -- По умолчанию 24. Оценка дипломатии и торговли для ИИ ограничена частотой раз в 4 дня. ИИ реже отправляет дипломатические запросы.
 NDefines.NAI.REMOVE_OBSOLETE_TEMPLATE_DAYS = 90 -- По умолчанию 180. ИИ быстрее очищает пустые неиспользуемые шаблоны, чтобы сэкономить оперативную память.
 NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 90 -- По умолчанию 30. ИИ реже проверяет наличие улучшений доктрины.
@@ -25,7 +25,7 @@ NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 20 -- По умолчанию
 
 --Армия
 --NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72;
---NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 30;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 1;
@@ -48,7 +48,8 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- То же, что и PLANNING_CAP_COMMS_SCALING, но для активных способностей
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 168 --24 лимит спец войск
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 148 --24 лимит спец войск
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
@@ -90,10 +91,14 @@ NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не н�
 NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
 NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
 NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 1           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
+
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 1				-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 1    		-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during peace time
+
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 1 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- К скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
@@ -206,6 +211,9 @@ NDefines.NMilitary.PLAN_PROVINCE_AIRFIELD_LEVEL_FACTOR = 3      -- в ванил
 NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = 1000 -- в ванилле 0	-- for positive values of following defines, ai weights will take over of hardcoded ai scoring system
 NDefines.NAI.EXPORT_RESOURCE_TRADE_NEED_IMPORTANCE = 1 -- в ванилле 0.5 -- how important is each lost resource to overexport for trade law selection
 
+NDefines.NAI.PEACE_BID_FOLD_TURNS_AGAINST_OTHER_AI = 3  -- сколько раз ии будет спорить в мирной конференции с ии
+NDefines.NAI.PEACE_BID_FOLD_AGAINST_PLAYER_CHANCE = 0	--шанс того что ии спасует перед игроком
+
 NDefines.NAI.DEPLOY_MIN_TRAINING_SURRENDER_FACTOR = 1     -- Требуемый процент обучения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
 NDefines.NAI.DEPLOY_MIN_EQUIPMENT_SURRENDER_FACTOR = 0.9   -- Требуемый процент снаряжения (1.0 = 100%) для развертывания подразделения ИИ в военное время, когда прогресс капитуляции выше 0
 NDefines.NAI.DEPLOY_MIN_TRAINING_PEACE_FACTOR = 1       -- Требуемый процент обучения (1.0 = 100%) для развертывания подразделения ИИ в мирное время
@@ -239,6 +247,8 @@ NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_MULT = 0 -- Скорость минир
 NDefines.NAir.NAVAL_MINES_PLANTING_SPEED_LOWER_BOUND = 0 -- Минимальная скорость минирования
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1 -- Глобальная скорость самолётов
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Скорость развёртки самолётов
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.1  --урон по грузовикам (ванила 0,2)
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.2 -- урон по грузовикам (ванила 0,5)
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Количество политических очков (pp) для найма ученого в зависимости от доступных ученых
 		25,			-- Стоимость в pp, если нет доступных ученых

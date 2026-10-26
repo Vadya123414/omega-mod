@@ -164,7 +164,7 @@ focus = {
 		}
 		relative_position_id = IRE_Vibori
 		available = {
-		
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		available_if_capitulated = yes
 		
@@ -196,7 +196,8 @@ focus = {
 		}
 		relative_position_id = IRE_Vibori
 		available = {
-		 data > 1.1.1937
+			NOT = {has_country_flag = VUP_Hist_version}
+		    date > 1937.1.1
 		}
 		available_if_capitulated = yes
 		
@@ -944,7 +945,7 @@ focus = {
 		}
 		relative_position_id = IRE_rise_politic
 		available = {
-		
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		available_if_capitulated = yes
 		

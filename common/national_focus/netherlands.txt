@@ -175,7 +175,7 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -1494,7 +1494,7 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -4330,7 +4330,6 @@ focus_tree = {
 				free_building_slots = {
 					building = fuel_silo
 					size > 1
-					include_locked = yes
 				}
 			}
 		}

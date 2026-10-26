@@ -438,4 +438,631 @@ spriteTypes = {
 		noOfFrames = 2
 	
 	}
+
+	spriteType = {
+		name = "GFX_horst_pause_block"
+		texturefile = "gfx/horst_gui/horsttool/horst_pause_block.dds"
+	}
+
+	### HOSTCLR palette begin
+	spriteType = {
+		name = "GFX_hostclr_1"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_1.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_2"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_2.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_3"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_3.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_4"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_4.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_5"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_5.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_6"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_6.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_7"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_7.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_8"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_8.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_9"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_9.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_10"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_10.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_11"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_11.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_12"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_12.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_13"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_13.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_14"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_14.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_15"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_15.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_16"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_16.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_17"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_17.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_18"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_18.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_19"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_19.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_20"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_20.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_21"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_21.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_22"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_22.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_23"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_23.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_24"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_24.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_25"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_25.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_26"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_26.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_27"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_27.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_28"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_28.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_29"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_29.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_30"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_30.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_31"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_31.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_32"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_32.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_33"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_33.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_34"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_34.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_35"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_35.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_36"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_36.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_37"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_37.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_38"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_38.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_39"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_39.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_40"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_40.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_41"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_41.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_42"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_42.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_43"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_43.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_44"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_44.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_45"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_45.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_46"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_46.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_47"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_47.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_48"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_48.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_49"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_49.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_50"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_50.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_51"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_51.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_52"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_52.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_53"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_53.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_54"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_54.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_55"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_55.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_56"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_56.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_57"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_57.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_58"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_58.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_59"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_59.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_60"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_60.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_61"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_61.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_62"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_62.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_63"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_63.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_64"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_64.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_65"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_65.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_66"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_66.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_67"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_67.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_68"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_68.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_69"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_69.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_70"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_70.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_71"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_71.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_72"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_72.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostclr_current"
+		texturefile = "gfx/horst_gui/horsttool/palette/hostclr_current.dds"
+	}
+	### HOSTCLR palette end
+
+	### HOSTCOUNTRY icons begin
+	spriteType = {
+		name = "GFX_hostcountry_research_add"
+		texturefile = "gfx/horst_gui/horsttool/country/research_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_research_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/research_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_stability_add"
+		texturefile = "gfx/horst_gui/horsttool/country/stability_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_stability_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/stability_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_war_support_add"
+		texturefile = "gfx/horst_gui/horsttool/country/war_support_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_war_support_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/war_support_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_pol_power_add"
+		texturefile = "gfx/horst_gui/horsttool/country/pol_power_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_pol_power_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/pol_power_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_initiative_add"
+		texturefile = "gfx/horst_gui/horsttool/country/initiative_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_initiative_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/initiative_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_manpower_add"
+		texturefile = "gfx/horst_gui/horsttool/country/manpower_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_manpower_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/manpower_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_mil_factory_add"
+		texturefile = "gfx/horst_gui/horsttool/country/mil_factory_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_mil_factory_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/mil_factory_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_civ_factory_add"
+		texturefile = "gfx/horst_gui/horsttool/country/civ_factory_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_civ_factory_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/civ_factory_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_dockyard_add"
+		texturefile = "gfx/horst_gui/horsttool/country/dockyard_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_dockyard_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/dockyard_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_army_xp_add"
+		texturefile = "gfx/horst_gui/horsttool/country/army_xp_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_army_xp_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/army_xp_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_navy_xp_add"
+		texturefile = "gfx/horst_gui/horsttool/country/navy_xp_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_navy_xp_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/navy_xp_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_air_xp_add"
+		texturefile = "gfx/horst_gui/horsttool/country/air_xp_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_air_xp_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/air_xp_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_convoys_add"
+		texturefile = "gfx/horst_gui/horsttool/country/convoys_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_convoys_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/convoys_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_autonomy_add"
+		texturefile = "gfx/horst_gui/horsttool/country/autonomy_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_autonomy_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/autonomy_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_tension_add"
+		texturefile = "gfx/horst_gui/horsttool/country/tension_add.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_hostcountry_tension_remove"
+		texturefile = "gfx/horst_gui/horsttool/country/tension_remove.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	### HOSTCOUNTRY icons end
 }

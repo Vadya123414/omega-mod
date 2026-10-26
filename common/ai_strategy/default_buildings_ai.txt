@@ -28,9 +28,10 @@ sov_strategy_arms_factory_building = {
 	}
 
 }
-MINOR_strategy_industrial_complex_building = {
+MINOR_strategy_industrial_complex_building_nonhist = {
 		enable = {
 			AND = {
+					not = {has_global_flag = VUP_Hist_version}
 					not = {original_tag = AST}
 					not = {original_tag = PHI}
 					not = {original_tag = USA}
@@ -51,9 +52,60 @@ MINOR_strategy_industrial_complex_building = {
 	}
 }
 
-MINOR_strategy_arms_factory_building = {
+MINOR_strategy_arms_factory_building_nonhist  = {
 		enable = {
 				AND = {
+						not = {has_global_flag = VUP_Hist_version}
+						not = {original_tag = AST}
+						not = {original_tag = PHI}
+						not = {original_tag = USA}
+						not = {original_tag = ITA}
+						not = {original_tag = GER}
+						not = {original_tag = ENG}
+						not = {original_tag = FRA}
+						not = {original_tag = SOV}
+						not = {original_tag = JAP}
+				date > 1936.10.1
+				}
+		}
+	abort_when_not_enabled = no
+	abort = { always = no }
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+MINOR_strategy_industrial_complex_building_hist = {
+		enable = {
+			AND = {
+					has_global_flag = VUP_Hist_version
+					not = {original_tag = POL}
+					not = {original_tag = AST}
+					not = {original_tag = PHI}
+					not = {original_tag = USA}
+					not = {original_tag = ITA}
+					not = {original_tag = GER}
+					not = {original_tag = ENG}
+					not = {original_tag = FRA}
+					not = {original_tag = SOV}
+					not = {original_tag = JAP}
+					date < 1937.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}
+
+MINOR_strategy_arms_factory_building_hist = {
+		enable = {
+				AND = {
+					has_global_flag = VUP_Hist_version
+					not = {original_tag = POL}
 					not = {original_tag = AST}
 					not = {original_tag = PHI}
 						not = {original_tag = USA}
@@ -63,7 +115,7 @@ MINOR_strategy_arms_factory_building = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
-				date > 1936.10.1
+				date > 1937.10.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -90,6 +142,81 @@ MAJOR_strategy_industrial_complex_building = {
 		type = building_target
 		id = industrial_complex
 		value = 400
+	}
+}
+MAJOR_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				OR = {
+					original_tag = ITA
+					original_tag = GER
+					original_tag = ENG
+					original_tag = FRA
+				}
+				date > 1937.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+FRA_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				original_tag = FRA
+				date < 1936.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 400
+	}
+}
+FRA_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				original_tag = FRA
+				date > 1936.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+POL_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				original_tag = POL
+				date < 1936.10.1
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 400
+	}
+}
+POL_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				original_tag = POL
+				date > 1936.10.1
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
 	}
 }
 GER_strategy_liquefaction_building_1 = {
@@ -163,6 +290,7 @@ MAJOR_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
@@ -321,9 +449,202 @@ PHI_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
 		value = 900
+	}
+}
+BRA_autarky_building_1 = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_batalha_do_borracha}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 500
+	}
+}
+BRA_autarky_building_2 = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_batalha_do_borracha}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = industrial_infrastructure
+		value = 1000000
+		target = 500
+	}
+}
+BRA_autarky_building_3 = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_batalha_do_borracha}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 497
+	}
+}
+BRA_autarky_building_4 = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_batalha_do_borracha}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = industrial_infrastructure
+		value = 1000000
+		target = 497
+	}
+}
+BRA_reach_out_to_the_great_powers_to_GER = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
+	}
+	abort = {
+		or = {has_country_flag = ARG_german_loan_flag
+		OR = {
+			NOT = { country_exists = GER }
+			has_war_with = GER
+			GER = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 55
+					}
+					has_capitulated = yes
+					is_subject = yes
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GER
+		target = improve_relation
+		value = 200
+	}
+}
+BRA_reach_out_to_the_great_powers_to_USA = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
+	}
+	abort = {
+		or = {has_country_flag = ARG_usa_loan_flag
+		OR = {
+			NOT = { country_exists = USA }
+			has_war_with = USA
+			USA = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 55
+					}
+					has_capitulated = yes
+					is_subject = yes
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = diplo_action_desire
+		id = USA
+		target = improve_relation
+		value = 200
+	}
+}
+BRA_reach_out_to_the_great_powers_to_ENG = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
+	}
+	abort = {
+	or = {has_country_flag = ARG_british_loan_flag
+		OR = {
+			NOT = { country_exists = ENG }
+			has_war_with = ENG
+			ENG = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 55
+					}
+					has_capitulated = yes
+					is_subject = yes
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = improve_relation
+		value = 200
+	}
+}
+BRA_reach_out_to_the_great_powers_to_ITA = {
+	allowed = {
+		original_tag = BRA
+		}
+	enable = {
+		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
+	}
+	abort = {
+		or = {has_country_flag = ARG_italy_loan_flag
+		OR = {
+			NOT = { country_exists = ITA }
+			has_war_with = ITA
+			ITA = {
+				OR = {
+					has_opinion	= {
+						target = ROOT
+						value > 55
+					}
+					has_capitulated = yes
+					is_subject = yes
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ITA
+		target = improve_relation
+		value = 200
 	}
 }

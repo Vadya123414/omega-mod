@@ -6440,7 +6440,7 @@ RAJ_concessions_to_the_congress_cat = {
 			base = 0.1
 			modifier = { # Too low PP
 				factor = 2
-					date > 1939.1.1.
+					date > 1939.1.1
 			}
 			modifier = { #We have plenty of PP, avanti!
 				factor = 3

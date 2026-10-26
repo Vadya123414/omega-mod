@@ -204,7 +204,7 @@ focus_tree = {
         }
 
         available = {
-
+            NOT = {has_country_flag = VUP_Hist_version}
         }
         
         bypass = {
@@ -7170,7 +7170,7 @@ focus_tree = {
         }
 
         available = {
-
+            NOT = {has_country_flag = VUP_Hist_version}
         }
         
         bypass = {
@@ -19112,7 +19112,7 @@ focus = {
 				}
 			}
 			RAJ_GOE_jawaharlal_nehru = {
-				add_country_leader_trait = support_from_congress
+				#add_country_leader_trait = support_from_congress # trait does not exist in 1.19.3
 			}
 		}
 		else_if = {
@@ -24198,7 +24198,7 @@ focus = {
         
         bypass = {
             CHI = {OR = {
-                is_capitulated = yes
+                has_capitulated = yes
                 exists = no
                 }
             }

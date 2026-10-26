@@ -74,11 +74,11 @@ USA_historical_plan = {
 		USA_bureau_of_ships
 		USA_air_war_plans_division
 		USA_air_support
+		USA_rubber_reserve_company
 		USA_strategic_bombing
 		USA_TAC
 		USA_build_the_pentagon
 		USA_department_of_defense
-		
 	}
 
 	focus_factors = {

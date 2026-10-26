@@ -3,6 +3,7 @@ boost_div_upgrades = {
 		always = yes
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = land_xp_spend_priority
 		id = division_template
@@ -16,6 +17,7 @@ default_air_production = {
 		has_tech = engines_3
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
@@ -42,6 +44,7 @@ default_air_production = {
 		always = yes
 	}
 	abort_when_not_enabled = no
+	abort = { always = no }
 	ai_strategy = {
 		type = unit_ratio
 		id = armor
@@ -150,9 +153,10 @@ default_air_production = {
 default_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
-		always = yes
-	}
+
+		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = { 
 		type = railway_gun_divisions_ratio
 		value = 1
@@ -162,31 +166,11 @@ default_unit_production = {
 		id = infantry
 		value = 40
 	}
-
 	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
 		value = 2
 	}
-	# Land division factors
-	ai_strategy = {
-		type = role_ratio
-		id = paratroopers
-		value = 0
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = mountaineers
-		value = 100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 0
-	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
@@ -195,6 +179,70 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
+		value = 100
+	}
+}
+default_paratroopers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+		always = yes
+		}
+	abort_when_not_enabled = no			
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+}
+default_mountaineers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+				NOT = {
+				original_tag = SOV
+				original_tag = GER
+				original_tag = FRA
+				original_tag = FIN
+				original_tag = POL
+				original_tag = FRA
+				original_tag = BEL
+				original_tag = HOL
+			}
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 100
+	}
+}
+default_marines_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+		always = yes
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+}
+default_rangers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+				original_tag = SOV
+				original_tag = GER
+				original_tag = FRA
+				original_tag = FIN
+				original_tag = POL
+				original_tag = FRA
+				original_tag = BEL
+				original_tag = HOL
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = rangers
 		value = 100
 	}
 }
@@ -393,11 +441,9 @@ default_major_SF_marines = {
 
 default_garrison_production = {
 	enable = {
-		available = {
 			any_controlled_state = {
 				is_coastal = yes
 			}
-		}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
 	}
@@ -409,7 +455,7 @@ default_garrison_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 5
+		value = 1
 	}
 }
 #
@@ -656,8 +702,8 @@ build_intelligence_agency_as_major = {
 }
 
 build_intelligence_agency = {
-	is_major = no
 	enable = {
+		is_major = no
 		OR = {
 			has_war = yes
 			date > 1938.6.1

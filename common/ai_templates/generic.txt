@@ -132,7 +132,9 @@ suppression_generic = {
 
 infantry_generic = {
 	role = infantry
-	
+	blocked_for = {
+		FIN
+	}
 	upgrade_prio = {
 		base = 3
 	}
@@ -218,10 +220,12 @@ infantry_generic = {
 mountaineers_generic = {
 
 	role = mountaineers
-	
+		blocked_for = {
+		FIN
+	}
 	upgrade_prio = {
 		base = 2
-				modifier = {
+		modifier = {
 			factor = 0
 			NOT = {
 				has_tech = tech_mountaineers
@@ -286,7 +290,9 @@ mountaineers_generic = {
 }
 
 marines_generic = {
-
+	blocked_for = {
+		FIN
+	}
 	role = marines
 	
 	upgrade_prio = {
@@ -325,6 +331,78 @@ marines_generic = {
 		}
 	}
 }
+rangers_generic = {
+	blocked_for = {
+		FIN
+	}
+	role = rangers
+	
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = rangers_tech
+			}
+		}
+	}
+
+		rangers_early = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				artillery = 1
+
+			}
+			
+			regimental_support = {
+				fire_support = 3
+			}
+
+			regiments = {
+				rangers = 15
+			}
+
+		}
+		replace_at_match = 0.6
+		replace_with = rangers_late
+		target_min_match = 0.6
+	}
+
+	rangers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				fire_support = 5
+			}
+
+			regiments = {
+				rangers = 15
+			}
+
+			}
+	}
+}
+
 hq_generic = {
 	role = hq_role
 	

@@ -110,16 +110,37 @@ guiTypes = {
 
         containerWindowType = {
             name = "first_row"
-			position = { x=85 y=380 }
+			position = { x=88 y=380 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=60 y=0 }
+                position = { x=56 y=15 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"
                 web_link = "https://discord.gg/VBczbW7uXb"
                 scale = 0.9
             }
+            ButtonType = {
+                name = "homepage_button"
+                position = { x=0 y=0 }
+                quadTextureSprite ="homepage"
+                pdx_tooltip = "MENU_HOMEPAGE"
+                scale = 0.9
+                hide = yes
+            }
+            ButtonType = {
+                name = "privacy_policy_button"
+                position = { x=0 y=0 }
+                quadTextureSprite ="privacy"
+                pdx_tooltip = "MENU_PRIVACY_POLICY"
+                scale = 0.9
+                hide = yes
+            }
+        }
+        containerWindowType = {
+            name = "second_row"
+			position = { x=70 y=418 }
+			
         }
 
 		ButtonType = {
