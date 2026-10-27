@@ -36,6 +36,7 @@ EST_historical = {
 		BALTIC_natural_resources
 		BALTIC_axis_investments
 		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
 		BALTIC_eastwall
 		BALTIC_balticwall
 		BALTIC_rebuild_forts

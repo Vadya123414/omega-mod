@@ -177,6 +177,12 @@ default_unit_production = {
 		id = infantry
 		value = 100
 	}
+	
+		ai_strategy = {
+		type = role_ratio
+		id = suppression
+		value = -1000
+	}
 }
 default_paratroopers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
