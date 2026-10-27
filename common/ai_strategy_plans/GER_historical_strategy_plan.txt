@@ -53,6 +53,7 @@ German_historical_strong = {
 		GER_construct_the_reichsautobahn		#35
 		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
 		GER_develop_heraeus_facilities			#70		(whenever)
+		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38	
 		GER_build_the_rur_dam
 		GER_accelerate_the_rearmament_program	#35		AUG 36
 		
@@ -65,7 +66,7 @@ German_historical_strong = {
 		GER_dive_bombers						#35 
 		
 		#1938
-		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38		
+	
 		GER_bribe_senior_officers				#35
 		GER_autonomy_in_the_kriegsschulen
 		GER_coal_liquefaction					#35
@@ -188,7 +189,7 @@ German_historical_weak = {
 	desc = "Essentially historical behaviour for Germany"
 
 	allowed = {
-		original_tag = GER
+		#original_tag = GER
 	}
 	enable = {
 		always = no
