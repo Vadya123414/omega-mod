@@ -32,21 +32,36 @@ LIT_historical = {
 		BALTIC_modernize_industry
 		BALTIC_attract_workers_to_capital
 		BALTIC_domestic_motors
-		BALTIC_renew_allied_trade
-		BALTIC_ford_motors
-		BALTIC_crossley_motors
-		BALTIC_original_designs
 		BALTIC_natural_resources
+		BALTIC_axis_investments
+		BALTIC_german_war_economics
+		BALTIC_eastwall
+		BALTIC_balticwall
 		BALTIC_rebuild_forts
-		BALTIC_arm_the_nation
-		BALTIC_defence_of_our_nation
-		BALTIC_arms_industry
+
 
 		LIT_secure_a_loyal_cabinet
 		LIT_rastikis_military_reforms
+		LIT_patriotic_education
 		LIT_exile_voldemares
 		LIT_root_out_the_iron_wolf
+		LIT_lithuanian_activist_front
+		LIT_prepare_forest_brothers
 		LIT_lithuanian_preservationism
+		LIT_a_martial_prime_minister
+		LIT_the_nationalist_council
+		LIT_peasants_reform
+		LIT_the_nation_and_its_power
+		LIT_presidential_reform
+		LIT_expand_military_budget
+		LIT_state_media
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_original_designs
+		BALTIC_defence_of_our_nation
+		BALTIC_arms_industry
+
 		LIT_purge_popular_resistance
 		LIT_patriotic_education
 		LIT_a_martial_prime_minister

@@ -27,24 +27,42 @@ EST_historical = {
 		
 	}
 
+
 	ai_national_focuses = {
 		BALTIC_rejoin_the_railways
 		BALTIC_modernize_industry
 		BALTIC_attract_workers_to_capital
 		BALTIC_domestic_motors
-		BALTIC_renew_allied_trade
-		BALTIC_ford_motors
-		BALTIC_crossley_motors
-		BALTIC_original_designs
 		BALTIC_natural_resources
+		BALTIC_axis_investments
+		BALTIC_german_war_economics
+		BALTIC_eastwall
+		BALTIC_balticwall
 		BALTIC_rebuild_forts
-		BALTIC_arm_the_nation
-		BALTIC_defence_of_our_nation
-		BALTIC_arms_industry
+
+
 
 		EST_era_of_silence
 		EST_fight_the_vaps
 		EST_ismaaliit
+		EST_republican_defence_league
+		EST_womens_defence_league
+		EST_threat_on_our_border
+		EST_fortify_tallinn
+		EST_fight_against_communism
+		EST_hold_saaremaa
+		EST_establish_the_rahvuskogu
+		EST_national_council
+		EST_support_independent_militaries
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_original_designs
+		BALTIC_defence_of_our_nation
+		BALTIC_arms_industry
+		EST_chamber_of_deputies
+		EST_modernize_capital
+
+
 		BALTIC_rejoin_the_railways
 		BALTIC_renew_allied_trade
 		EST_establish_the_rahvuskogu

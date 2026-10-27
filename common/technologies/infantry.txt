@@ -784,10 +784,6 @@ technologies = {
 			}
 			modifier = {
 				factor = 0
-				tag = FRA
-			}
-			modifier = {
-				factor = 0
 				tag = BEL
 			}
 			modifier = {
@@ -846,10 +842,6 @@ technologies = {
 			}
 			modifier = {
 				factor = 0
-				tag = FRA
-			}
-			modifier = {
-				factor = 0
 				tag = BEL
 			}
 			modifier = {
@@ -899,10 +891,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				tag = POL
-			}
-			modifier = {
-				factor = 0
-				tag = FRA
 			}
 			modifier = {
 				factor = 0

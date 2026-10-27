@@ -31,19 +31,33 @@ LAT_historical = {
 		BALTIC_modernize_industry
 		BALTIC_attract_workers_to_capital
 		BALTIC_domestic_motors
-		BALTIC_renew_allied_trade
-		BALTIC_ford_motors
-		BALTIC_crossley_motors
-		BALTIC_original_designs
 		BALTIC_natural_resources
+		BALTIC_axis_investments
+		BALTIC_german_war_economics
+		BALTIC_eastwall
+		BALTIC_balticwall
 		BALTIC_rebuild_forts
-		BALTIC_arm_the_nation
-		BALTIC_defence_of_our_nation
-		BALTIC_arms_industry
 
 		LAT_suspend_the_constitution
 		LAT_empower_paramilitarists
 		LAT_the_sun_shines_equally
+		LAT_banish_clemens
+		LAT_aizsargi
+		LAT_supply_forest_brothers
+		LAT_womens_aizsargi
+		LAT_multicultural_latvia
+		LAT_martial_prime_minister
+		LAT_improve_military_life
+		LAT_military_dyarchy
+		LAT_military_dictatorship
+		LAT_threat_on_our_border
+
+		BALTIC_unchain_education
+		BALTIC_arm_the_nation
+		BALTIC_original_designs
+		BALTIC_defence_of_our_nation
+		BALTIC_arms_industry
+
 		BALTIC_rejoin_the_railways
 		BALTIC_renew_allied_trade
 		LAT_banish_clemens

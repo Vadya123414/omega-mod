@@ -134,6 +134,10 @@ infantry_generic = {
 	role = infantry
 	blocked_for = {
 		FIN
+		LAT
+        EST
+        LIT
+        DEN
 	}
 	upgrade_prio = {
 		base = 3
@@ -173,6 +177,8 @@ infantry_generic = {
 			
 			support = {
 				artillery = 1
+				field_hospital = 1
+				engineer = 1
 			}
 
 			regimental_support = {
@@ -199,12 +205,13 @@ infantry_generic = {
 				engineer = 1
 				artillery = 1
 				rocket_artillery = 1
-
+				field_hospital = 1
 				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 			
 			regiments = {
@@ -215,13 +222,20 @@ infantry_generic = {
 	}
 
 }
-
-
 mountaineers_generic = {
 
 	role = mountaineers
 		blocked_for = {
 		FIN
+		LAT
+        EST
+        LIT
+        DEN
+		SOV
+		GER
+		POL
+		BEL
+		HOL
 	}
 	upgrade_prio = {
 		base = 2
@@ -243,7 +257,8 @@ mountaineers_generic = {
 			
 			support = {
 				artillery = 1
-
+				field_hospital = 1
+				engineer = 1
 			}
 			
 			regimental_support = {
@@ -278,7 +293,8 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 
 			regiments = {
@@ -322,7 +338,8 @@ marines_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 
 			regiments = {
@@ -392,7 +409,8 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 
 			regiments = {

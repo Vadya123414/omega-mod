@@ -49,8 +49,16 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 148 --24 лимит спец войск
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальоны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
+
+
+--NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
+--NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
+--NDefines.NMilitary.UNIT_EXP_LEVELS = {0.1, 0.122, 0.1494, 0.1816, 0.2179, 0.2576, 0.3, 0.3526, 0.4191, 0.4936, 0.57, 0.6422, 0.7043, 0.75, 0.7849, 0.8175, 0.8465, 0.8708, 0.8891, 0.9}		-- опыт для лвл
+--NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
+--NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03
+
 
 --Флот
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0; -- Орга когда двигаешь флот

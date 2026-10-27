@@ -1,0 +1,40 @@
+infantry_generic = {
+	role = infantry
+	available_for = {
+		LAT
+        EST
+        LIT
+        DEN
+	}
+	upgrade_prio = {
+		base = 3
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+		base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				field_hospital = 1
+                anti_air = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+			}
+			
+			regiments = {
+				infantry = 8
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_mid
+		target_min_match = 0.6
+	}
+}

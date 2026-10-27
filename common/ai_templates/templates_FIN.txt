@@ -66,14 +66,14 @@ infantry_generic = {
 			support = {
 				engineer = 1
 				artillery = 1
-				rocket_artillery = 1
+				field_hospital = 1
                 winter_logistics_support = 1
                 long_range_patrol_support = 1
-				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 			
 			regiments = {
@@ -86,6 +86,10 @@ infantry_generic = {
 rangers_generic = {
 	available_for = {
 		FIN
+		LAT
+        EST
+        LIT
+        DEN
 	}
 	role = rangers
 	
@@ -109,7 +113,8 @@ rangers_generic = {
 			
 			support = {
 				artillery = 1
-
+				field_hospital = 1
+				engineer = 1
 			}
 			
 			regimental_support = {
@@ -138,14 +143,14 @@ rangers_generic = {
 			support = {
 				engineer = 1
 				artillery = 1
-				rocket_artillery = 1
+				field_hospital = 1
                 winter_logistics_support = 1
                 long_range_patrol_support = 1
-				super_heavy_artillery = 1
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				fire_support = 3
+				anti_air_battery = 2
 			}
 
 			regiments = {
