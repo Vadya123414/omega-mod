@@ -4643,7 +4643,10 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
+			if = {limit = { is_ai = yes}
+			hidden_effect = {add_ideas = air_research_25}
+		}
+				
 			add_tech_bonus = {
 				name = GER_aeronautical_research_institute
 				bonus = 0.25
@@ -4709,7 +4712,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-
+			if = {limit = { is_ai = yes}
+			hidden_effect = {add_ideas = air_research_50}
+		}
 			add_mastery_bonus = {
 				name = GER_dive_bombers
 				bonus = 0.05

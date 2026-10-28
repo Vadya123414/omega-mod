@@ -59,17 +59,21 @@ JAP_historical_plan = {
 		JAP_sea_state_general_mobilization_law # 35
 		JAP_enact_religious_organizations_law # 35
 		JAP_new_order_movement # 70
-		JAP_reinforce_the_beijing_garrison # 70
+		JAP_develop_new_fighters # 70
 		JAP_konoes_first_cabinet # 35
 		JAP_sea_national_spiritual_mobliization_movement # 35
 		JAP_form_the_central_economic_council # 35
 		JAP_expand_the_showa_research_association # 70
 		JAP_ministry_of_colonial_affairs # 35
 		JAP_increase_armament_spending # 35
+		JAP_manchuria_five_year_plan
+		JAP_reinforce_the_beijing_garrison # 70
+
 		# 1938
 		JAP_new_order_in_east_asia # 35
 		JAP_sea_guide_the_zaibatsus # 35
 		JAP_approach_mitsubishi #70
+		
 
 		# 1939
 		JAP_approach_yasuda #70(35)
@@ -92,7 +96,7 @@ JAP_historical_plan = {
 
 		# 1941
 		JAP_issue_the_senjinkun_military_code # 35
-		JAP_develop_new_fighters # 70
+
 		JAP_mengjiang_united_autonomous_government # 35
 		JAP_sea_tripartite_pact # 35 if bypassed, potentially moves later attack dates 35 das forward
 		JAP_soviet_japanese_neutrality_pact #35 April 1941

@@ -1547,6 +1547,9 @@ default = no
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+		if = {limit = { is_ai = yes}
+			hidden_effect = {add_ideas = air_research_100}
+		}
 			if = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }

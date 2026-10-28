@@ -100,15 +100,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			
 			modifier = {
 				factor = 6
 				has_war = yes
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
 			}
 			modifier = {
 				factor = 5
@@ -148,7 +144,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			
 			modifier = {
 				factor = 6
@@ -192,7 +188,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			
 			modifier = {
 				factor = 6

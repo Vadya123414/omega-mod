@@ -75,6 +75,9 @@ default_major = {
 	ai_strategy = {
 
 	}
+	ideas = {
+		industry_liasons_spirit = 50
+	}
 	traits = {
 		army_chief_offensive_3 = 100
 		army_chief_offensive_2 = 95
