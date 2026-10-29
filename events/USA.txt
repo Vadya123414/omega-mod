@@ -1497,19 +1497,7 @@ country_event = {
 	}
 
 	immediate = {
-		random_list = {
-			100 = { #investment opportunity
-				modifier = {
-					has_country_flag = USA_congress_investment
-					factor = 0
-				}
-				modifier = {
-					has_completed_focus = USA_wpa
-					factor = 1.5
-				} 
-				country_event = { id = usa.60 days = 120 random_days = 15 } 
-			} 
-		}
+		country_event = { id = usa.60 days = 120 random_days = 15 } 
 	}
 }
 

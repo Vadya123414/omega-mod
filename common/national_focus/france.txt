@@ -79,6 +79,19 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			if = {
+				limit = { 
+					635 = { is_controlled_by = ROOT }
+				}
+				635 ={
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			
 			random_owned_state = {
 				limit = { 
 					is_core_of = ROOT 
@@ -853,28 +866,45 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
+			if = {
+				limit ={
+					20 ={
+						is_controlled_by = ROOT
+					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+				20 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
+			else ={
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -895,8 +925,9 @@
 		}
 		completion_reward = {
 			add_ideas = SWE_defense_in_depth_0
-             custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = generic_skip_one_line_tt
 			add_command_power = 30
+			set_country_flag = FRA_defensive_focus
             custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maxime_weygand
@@ -1303,6 +1334,7 @@
 		}
 		completion_reward = {
 			army_experience = 25
+			set_country_flag = FRA_aggressive_focus
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maurice_gamelin
 		}
@@ -3004,14 +3036,42 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			22 ={
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			if ={
+				limit ={
+					22 ={
+						is_controlled_by = ROOT
+					}
+				}
+				22 ={
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}	
+					}
+					prioritize = { 16 24 15 20 31 }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}	
 				}	
 			}
+			
 			
 			custom_effect_tooltip = CHL_skip_one_line_tt
 			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_north show_effect_tooltip = no }
@@ -3052,21 +3112,58 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			26 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			if = {
+				limit ={
+					26 ={
+						is_controlled_by = ROOT
+					}
 				}
-
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+				26 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				} 
+			}
+			else ={
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
-			} 
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			
 			
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3148,7 +3245,7 @@
 			focus = FRA_general_work_council
 		}
 		relative_position_id = FRA_general_work_council
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3181,7 +3278,7 @@
 			focus = FRA_general_work_council
 		}
 		relative_position_id = FRA_general_work_council
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3200,74 +3297,98 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
+			if = {
+				limit ={
+					31 ={
+						is_controlled_by = ROOT
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
+				31 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
 			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
+			else ={
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
+			
 		}
 	}
 
@@ -3902,7 +4023,7 @@
 			focus = FRA_go_with_britain
 		}
 		relative_position_id = FRA_go_with_britain
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 1

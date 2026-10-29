@@ -1316,7 +1316,6 @@ ideas = {
 			picture = MTG_naval_treaty_adherent
 			
 			modifier = {
-				industrial_capacity_dockyard = -0.2
 				production_cost_max_ship_hull_cruiser = 5300
 				production_cost_max_ship_hull_heavy = 10000
 				production_cost_max_ship_hull_carrier = 9500
@@ -1337,7 +1336,6 @@ ideas = {
 			picture = MTG_naval_treaty_adherent_reduced
 			
 			modifier = {
-				industrial_capacity_dockyard = -0.2
 				production_cost_max_ship_hull_cruiser = 6000
 				production_cost_max_ship_hull_heavy = 12000
 				production_cost_max_ship_hull_carrier = 10500
@@ -1358,13 +1356,96 @@ ideas = {
 			picture = MTG_naval_treaty_adherent
 			
 			modifier = {
-				industrial_capacity_dockyard = -0.2
 				production_cost_max_ship_hull_cruiser = 5700
 				production_cost_max_ship_hull_heavy = 11500
 				production_cost_max_ship_hull_carrier = 10250
 			}
 		}
 		MTG_naval_treaty_cheating_reduced = {
+			name = MTG_naval_treaty_adherent_reduced
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = MTG_naval_treaty_adherent_reduced
+			
+			modifier = {
+				production_cost_max_ship_hull_cruiser = 6500
+				production_cost_max_ship_hull_heavy = 14000
+				production_cost_max_ship_hull_carrier = 10750
+			}
+		}
+
+		MTG_naval_treaty_adherent_HIST = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = MTG_naval_treaty_adherent
+			
+			modifier = {
+				industrial_capacity_dockyard = -0.2
+				production_cost_max_ship_hull_cruiser = 5300
+				production_cost_max_ship_hull_heavy = 10000
+				production_cost_max_ship_hull_carrier = 9500
+			}
+		}
+		MTG_naval_treaty_adherent_reduced_HIST = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = MTG_naval_treaty_adherent_reduced
+			
+			modifier = {
+				industrial_capacity_dockyard = -0.2
+				production_cost_max_ship_hull_cruiser = 6000
+				production_cost_max_ship_hull_heavy = 12000
+				production_cost_max_ship_hull_carrier = 10500
+			}
+		}
+		MTG_naval_treaty_cheating_HIST = {
+			name = MTG_naval_treaty_adherent
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = MTG_naval_treaty_adherent
+			
+			modifier = {
+				industrial_capacity_dockyard = -0.2
+				production_cost_max_ship_hull_cruiser = 5700
+				production_cost_max_ship_hull_heavy = 11500
+				production_cost_max_ship_hull_carrier = 10250
+			}
+		}
+		MTG_naval_treaty_cheating_reduced_HIST = {
 			name = MTG_naval_treaty_adherent_reduced
 			allowed = {
 				always = no
