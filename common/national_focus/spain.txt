@@ -10931,6 +10931,7 @@ focus_tree = {
 	focus = {
 		id = SPR_against_trotskyism_and_stalinism
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		bypass = {
 		}
@@ -11196,6 +11197,7 @@ focus_tree = {
 	focus = {
 		id = SPR_a_red_iberia
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		bypass = {
 			has_war_with = POR
@@ -11231,6 +11233,7 @@ focus_tree = {
 	focus = {
 		id = SPR_support_french_communists
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 		}
 		bypass = {
@@ -11277,6 +11280,7 @@ focus_tree = {
 	focus = {
 		id = SPR_avenge_foreign_interference
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		bypass = {
 		}
