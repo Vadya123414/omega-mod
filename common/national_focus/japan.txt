@@ -16390,9 +16390,8 @@ focus_tree = {
 		id = JAP_sway_the_navy_moderates
 		icon = GFX_focus_generic_sway_navy
 		mutually_exclusive = { }
-		x = 3
-		y = -4
-		relative_position_id = JAP_return_of_the_manchukuo_exiles
+		x = 26
+		y = 5
 
 		prerequisite = { focus = JAP_mountain_village_operation_units focus = JAP_raise_support_within_the_proletarian_class focus = JAP_ensure_cross_party_support focus = JAP_gather_royal_pacifists_support} 
 
@@ -25225,7 +25224,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_states = {
+			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					NOT = {

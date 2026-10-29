@@ -2197,10 +2197,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1914
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1924 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment
@@ -2227,10 +2224,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1940
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1940 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment
@@ -2252,10 +2246,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1942
-		folder = {
-			name = infantry_folder
-			position = { x = 4 y = @1942 }
-		}
+		# folder removed: branch is cut from the tech tree (no grid box)
 
 		categories = {
 			motorized_equipment

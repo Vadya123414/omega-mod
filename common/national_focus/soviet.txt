@@ -625,7 +625,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 						NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 					}
@@ -637,7 +636,6 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
-								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -648,7 +646,6 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
-								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -667,7 +664,6 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
-								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -3756,9 +3752,8 @@ focus_tree = {
 
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = SOV_naval_infantry }
-		x = 0
-		y = 1
-		relative_position_id = SOV_naval_infantry
+		x = 21
+		y = 6
 		cost = 5
 
 		available = {
@@ -6007,8 +6002,11 @@ focus_tree = {
 					}
 
 					#Cossack Infantry
-					create_unit = {
+					if = { # the AI may have deleted or renamed this template by now
+						limit = { ROOT = { has_template = "Strelkovaya Diviziya" } }
+						create_unit = {
 						division = "name = \"13ya Donskaya Kazachya Div.\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0" owner = ROOT
+					}
 					}
 				}
 			}
@@ -6811,9 +6809,12 @@ focus_tree = {
 
 			add_political_power = 25
 			add_stability = 0.05
-			set_division_template_lock = {
+			if = {
+				limit = { has_template = "NKVD Pogranichnaya Diviziya" }
+				set_division_template_lock = {
 				division_template = "NKVD Pogranichnaya Diviziya"
 				is_locked = no
+			}
 			}
 
 			SOV_paranoia_low_decrease_effect = yes
@@ -7347,7 +7348,6 @@ focus_tree = {
 
 		completion_reward = {
 				add_ideas = SOV_war_economy_lar 
-			}
 			if = {
 				limit = {
 					217 = {
@@ -7387,7 +7387,7 @@ focus_tree = {
 				}
 			}
 		}
-	
+	}
 
 	focus = {
 		id = SOV_the_military_conspiracy
@@ -15992,9 +15992,8 @@ ai_will_do = {
 		id = SOV_restore_the_glory_of_the_motherland
 		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_romanov_reconstruction }
-		x = 0
-		y = 1
-		relative_position_id = SOV_romanov_reconstruction
+		x = 106
+		y = 13
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -16611,9 +16610,8 @@ ai_will_do = {
 		id = SOV_vengeance_for_the_yoke
 		icon = GFX_focus_generic_attack_mongolia
 		prerequisite = { focus = SOV_reclaim_uryankhay_krai }
-		x = 0
-		y = 1
-		relative_position_id = SOV_reclaim_uryankhay_krai
+		x = 120
+		y = 16
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -16656,9 +16654,8 @@ ai_will_do = {
 
 		prerequisite = { focus = SOV_eastern_expansion }
 
-		x = 3
-		y = 1
-		relative_position_id = SOV_eastern_expansion
+		x = 120
+		y = 15
 
 		cost = 5
 		bypass = {
@@ -17841,9 +17838,8 @@ ai_will_do = {
 		id = SOV_modernize_the_far_eastern_fleet
 		icon = GFX_SOV_modernize_the_far_eastern_fleet_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_japanese_overtures focus = SOV_the_berlin_moscow_axis }
-		x = 0
-		y = 1
-		relative_position_id = SOV_japanese_overtures
+		x = 112
+		y = 16
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -18662,4 +18658,4 @@ ai_will_do = {
 			}
 		}
 	}
-	
+}

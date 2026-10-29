@@ -18748,7 +18748,7 @@ country_event = {
 			}
 		}
 		
-		limit = {
+		trigger = {
 			AUS = { exists = yes }
 		}
 
@@ -18772,7 +18772,7 @@ country_event = {
 			}
 		}
 		
-		limit = {
+		trigger = {
 			HUN = { exists = yes }
 		}
 

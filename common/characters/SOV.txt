@@ -1006,7 +1006,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			visible = { NOT = { SOV_markian_popov = { has_character_flag = SOV_exiled_flag } } }
 		}
 	}
 

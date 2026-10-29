@@ -3417,7 +3417,7 @@ default = no
 		completion_reward = {
 			RAJ = {
 			add_stability = 0.1
-			remove_idea = RAJ_risk_of_famine
+			remove_ideas = RAJ_risk_of_famine
 		}
 	}
 	}
@@ -6902,8 +6902,8 @@ default = no
 						is_ai = yes
 						is_subject_of = ENG
 					}
-					add_research_slot = 1
 				}
+				add_research_slot = 1
 			}
 			if = {
 				limit = {
@@ -6998,9 +6998,10 @@ default = no
 					}
 				}
 				MAL = {
-					is_ai = yes
+					if = { limit = { is_ai = yes }
 					every_unit_leader = {
 						set_nationality = ENG
+					}
 					}
 				}
 				annex_country = {

@@ -199,8 +199,9 @@ if = {
 #}
 
 1936.1.1.13 = {
-	add_ideas = {
-		no_farm_gen
+	add_timed_idea = {
+		idea = zakup_no
+		days = 1095
 	}
 }
 

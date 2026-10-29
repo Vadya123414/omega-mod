@@ -3658,16 +3658,6 @@ focus_tree = {
 					}
 				}
 			}
-			else = {
-				mio:GER_auto_union_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
-
-					unlock_mio_trait_tooltip = GER_mio_trait_schwerer_panzerspahwagen
-					#unlock_mio_trait_tooltip = 
-				}
-			}
 		}
 	}
 	
@@ -10294,9 +10284,8 @@ focus_tree = {
 
 		prerequisite = { focus = GER_around_maginot focus = GER_influence_the_benelux }
 		mutually_exclusive = { focus = GER_invade_italy }
-		x = -1
-		y = 1
-		relative_position_id = GER_influence_the_benelux
+		x = 71
+		y = 9
 		cost = 5
 		allow_branch = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -10369,9 +10358,8 @@ focus_tree = {
 		icon = GFX_focus_attack_italy
 		prerequisite = { focus = GER_around_maginot focus = GER_influence_the_benelux }
 		mutually_exclusive = { focus = GER_form_rome_berlin_axis }
-		x = 1
-		y = 1
-		relative_position_id = GER_influence_the_benelux
+		x = 73
+		y = 9
 		cost = 10
 
 		will_lead_to_war_with = ITA
@@ -11426,6 +11414,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				hidden_effect = {
+					ENG = {add_to_faction = HOL}
+					ENG = {add_to_faction = LUX}
+					ENG = {add_to_faction = BEL}
+				}
+			}
 			#limit wargoals to when it makes sense to give them. No faction, war or non exist
 			if = { 
 				limit = {
@@ -11616,7 +11614,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				hidden_effect = {
+					ENG = {add_to_faction = NOR}
+				}
+			}
 			if = {
 				limit = {
 					NOT = { DEN = { is_in_faction_with = GER } }
@@ -31784,9 +31789,8 @@ focus_tree = {
 		id = GER_our_place_in_the_sun_ww
 		icon = GFX_focus_GER_our_place_in_the_sun
 		prerequisite = { focus = GER_realize_mittelafrika }
-		x = 0
-		y = 1
-		relative_position_id = GER_realize_mittelafrika
+		x = 145
+		y = 10
 		cost = 5
 		available = {
 			is_subject = no

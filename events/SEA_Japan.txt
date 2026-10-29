@@ -12489,7 +12489,9 @@ country_event = {
 			base = 100
 		}
 
-		add_country_leader_role = {
+		if = { # Choibalsan is only recruited by the 1939.1.1 history block in this mod
+			limit = { has_character = MON_khorloogiin_choibalsan }
+			add_country_leader_role = {
 			character = MON_khorloogiin_choibalsan
 			promote_leader = yes
 			country_leader = {
@@ -12497,6 +12499,7 @@ country_event = {
 				expire = "1948.1.1.12"
 				traits = { MON_pan_mongolian_stalinist } 
 			}
+		}
 		}	
 
 	}

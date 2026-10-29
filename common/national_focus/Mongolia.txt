@@ -573,7 +573,6 @@ focus = {
 		id = MON_Final
 		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
 		prerequisite = { focus = MON_Annex_Czinjan}
-		relative_position_id = MON_Annex_Czinjan
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -585,8 +584,8 @@ focus = {
 		
 		available_if_capitulated = yes
 		
-		x = 0
-		y = 1
+		x = 4
+		y = 4
 		
 		completion_reward = {
 		
@@ -957,10 +956,9 @@ focus = {
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		relative_position_id = MON_anarchi
 		available_if_capitulated = yes
-		x = 1	
-		y = 1
+		x = 11
+		y = 7
 		
 		completion_reward = {
 			564 = { add_core_of = MON }

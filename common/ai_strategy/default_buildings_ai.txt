@@ -69,6 +69,7 @@ MINOR_strategy_arms_factory_building_nonhist  = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
@@ -275,7 +276,26 @@ GER_autarky_building_2 = {
 		target = 105
 	}
 }	
-
+MAJOR_strategy_arms_factory_building = {
+		enable = {
+			AND = {
+				OR = {
+					original_tag = ITA
+					original_tag = GER
+					original_tag = ENG
+					original_tag = FRA
+				}
+				date > 1937.10.1
+				}
+		}
+	abort_when_not_enabled = no
+	abort = { always = no }
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
 bots_usa_dockyard_building = {
 		enable = {
 			AND = {
@@ -458,6 +478,7 @@ PHI_strategy_arms_factory_building = {
 				}
 		}
 	abort_when_not_enabled = no
+	abort = { always = no }
 		ai_strategy = {
 		type = building_target
 		id = arms_factory

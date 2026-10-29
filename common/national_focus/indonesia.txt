@@ -5228,7 +5228,6 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 334 }
@@ -5398,7 +5397,6 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 673 }
@@ -5432,7 +5430,6 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 1056 }
@@ -7202,6 +7199,7 @@ focus_tree = {
 			add_stability = 0.05
 			INS_a_t_van_starkenborgh_stachouwer = {
 				swap_country_leader_traits = {
+					ideology = oligarchism
 					remove = TAOG_liberal_colonial_leader
 					add = TAOG_liberal_colonial_leader_2
 				}
@@ -7344,7 +7342,6 @@ focus_tree = {
 					free_building_slots = {
 						building = energy_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 1058 }
@@ -7361,7 +7358,6 @@ focus_tree = {
 					free_building_slots = {
 						building = energy_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 1051 }
@@ -7378,7 +7374,6 @@ focus_tree = {
 					free_building_slots = {
 						building = energy_infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				prioritize = { 335 }

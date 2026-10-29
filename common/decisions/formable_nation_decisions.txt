@@ -1552,7 +1552,7 @@ form_united_central_america_category = {
 			316 = { add_core_of = ROOT }
 			311 = { add_core_of = ROOT }
 			hidden_effect = {
-				news_event = { id = wtt_news.59 hours = 6 }
+				#news_event = { id = wtt_news.59 hours = 6 } # wtt_news.59 is cut from this mod
 				set_global_flag = form_united_central_america_flag
 			}
 		}
@@ -15964,10 +15964,10 @@ antilles_category = {
 			hidden_effect = {
 				set_global_flag = antilles_formed_flag
 
-				news_event = { 
-					id = south_american_news.20
-					hours = 6
-				}
+				#news_event = { # south_american_news.20 is cut from this mod 
+					#id = south_american_news.20
+					#hours = 6
+				#}
 
 			}
 		}

@@ -65,7 +65,6 @@ focus_tree = {
 		icon = GFX_focus_generic_truck
 		x = 6
 		y = 0
-		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
 		available = {
 			OR = {
@@ -138,7 +137,6 @@ focus_tree = {
 		id = ITA_ministry_of_italian_africa
 		icon = GFX_focus_ITA_ministry_of_italian_africa
 		prerequisite = { focus = ITA_italian_highways_bba }
-		prerequisite = { focus = ITA_ethiopian_war_logistics_bba }
 
 		x = -5
 		y = 1
@@ -4889,7 +4887,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 				}
@@ -4909,7 +4906,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 					prioritize = { 852 736 } #ISTRIA as main fallback
@@ -4929,7 +4925,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 				}
@@ -4949,7 +4944,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 					prioritize = { 157 162 } #ABRUZZO as main fallback
@@ -4969,7 +4963,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 				}
@@ -4989,7 +4982,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 					prioritize = { 156 114 } #CALABRIA as main fallback
@@ -13683,7 +13675,7 @@ focus_tree = {
 		id = ITA_pact_of_steel
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
-		mutually_exclusive = { focus = ITA_italy_first }
+		mutually_exclusive = { focus = ITA_italy_first focus = ITA_vallo_alpino_del_littorio }
 		x = -4
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
@@ -13936,7 +13928,7 @@ focus_tree = {
 		id = ITA_italy_first
 		icon = GFX_focus_generic_italy_first
 		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
-		mutually_exclusive = { focus = ITA_pact_of_steel }
+		mutually_exclusive = { focus = ITA_pact_of_steel focus = ITA_vallo_alpino_del_littorio }
 		x = 0
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
@@ -14899,7 +14891,6 @@ focus_tree = {
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = -6
 		y = 0
-		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
 		
 		allow_branch = {
@@ -15650,7 +15641,6 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		x = -6
 		y = 0
-		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
 		
 		allow_branch = {

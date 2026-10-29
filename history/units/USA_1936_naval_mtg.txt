@@ -347,7 +347,6 @@ instant_effect = {
 		requested_factories = 10
 		progress = 0.50
 		amount = 1
-		industrial_manufacturer = mio:USA_newport_news_shipbuilding_organization
 	}
 	add_equipment_production = {
 		equipment = {
@@ -358,7 +357,6 @@ instant_effect = {
 		requested_factories = 10
 		progress = 0.40
 		amount = 1
-		industrial_manufacturer = mio:USA_newport_news_shipbuilding_organization
 	}
 
 	# DD: Porter (x14) ("USS Porter" "USS Phelps" "USS Clark" "USS Moffett")

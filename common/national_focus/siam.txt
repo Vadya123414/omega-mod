@@ -6778,7 +6778,6 @@
 					free_building_slots = {
 						building = fuel_silo
 						size > 1
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2

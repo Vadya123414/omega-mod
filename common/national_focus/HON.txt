@@ -961,7 +961,7 @@ focus_tree = {
 		y = 1
 		
 		completion_reward = {
-			add_ideas = HON_USA_money
+			add_ideas = HON_USA_money_idea
 		}
 	}
 	
