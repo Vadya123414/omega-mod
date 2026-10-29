@@ -147,6 +147,10 @@ technologies = {
 					original_tag = JAP
 					has_completed_focus = JAP_develop_new_fighters	
 			}
+			modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 	
@@ -210,6 +214,10 @@ technologies = {
 			add = 10
 					original_tag = JAP
 					has_completed_focus = JAP_develop_new_fighters	
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -288,6 +296,10 @@ technologies = {
 					original_tag = JAP
 					has_completed_focus = JAP_develop_new_fighters	
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 	
@@ -363,6 +375,10 @@ technologies = {
 					original_tag = JAP
 					has_completed_focus = JAP_develop_new_fighters	
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 	
@@ -426,6 +442,10 @@ technologies = {
 		modifier = {
 			add = 1
 					original_tag = JAP
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -576,6 +596,10 @@ technologies = {
 			add = 10
 					original_tag = USA
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 	
@@ -629,6 +653,10 @@ technologies = {
 					original_tag = USA
 					has_completed_focus = USA_escort_fighters
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 	
@@ -670,6 +698,10 @@ technologies = {
 		modifier = {
 			add = 10
 					original_tag = USA
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -1169,6 +1201,10 @@ technologies = {
 			add = 40
 					original_tag = SOV	
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 
@@ -1215,7 +1251,10 @@ technologies = {
 			add = 40
 					original_tag = SOV	
 			}
-
+			modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 
@@ -1260,6 +1299,10 @@ technologies = {
 		modifier = {
 			add = 10
 					original_tag = SOV	
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -1446,6 +1489,10 @@ technologies = {
 			add = 10
 					original_tag = USA
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 
@@ -1511,6 +1558,10 @@ technologies = {
 			add = 10
 					original_tag = USA
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 
@@ -1575,6 +1626,10 @@ technologies = {
 		modifier = {
 			add = 10
 					original_tag = USA
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -1645,6 +1700,10 @@ technologies = {
 			add = 10
 					original_tag = USA
 			}
+						modifier = {
+				always = yes
+				add = -100000
+			}
 		}
 	}
 
@@ -1693,6 +1752,10 @@ technologies = {
 		modifier = {
 			add = 10
 					original_tag = USA
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
@@ -1745,6 +1808,10 @@ technologies = {
 		modifier = {
 			add = 10
 					original_tag = USA
+			}
+						modifier = {
+				always = yes
+				add = -100000
 			}
 		}
 	}
