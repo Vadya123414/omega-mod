@@ -199,8 +199,9 @@ if = {
 #}
 
 1936.1.1.13 = {
-	add_ideas = {
-		zakup_no
+	add_timed_idea = {
+		idea = zakup_no
+		days = 1095
 	}
 }
 
