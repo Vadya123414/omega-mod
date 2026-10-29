@@ -2225,26 +2225,6 @@ SOV_dont_send_all_convoys_on_holiday_to_vladivostok = {
 	}
 }
 
-SOV_convoys_are_needed_for_lendlease = {
-	allowed = { original_tag = SOV }
-	enable = {
-		has_equipment = {
-			convoy < 750
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = convoy
-		value = 100
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = convoy
-		value = 4
-	}
-}
 
 SOV_historical_dont_attack_poland_too_early = {
 	allowed = { original_tag = SOV }
@@ -2303,25 +2283,5 @@ SOV_aifc_linear_defence = {
 	ai_strategy = {
 		type = force_concentration_factor
 		value = -100  # Just don't
-	}
-}
-
-SOV_build_tank_destroyers = {
-	allowed = { original_tag = SOV }
-	enable = {
-		has_tech = basic_heavy_tank_chassis
-		date > 1942.6.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = heavy_tank_destroyer_chassis
-		value = 1
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = modern_tank_destroyer_chassis
-		value = 1
 	}
 }

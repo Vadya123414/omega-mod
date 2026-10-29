@@ -153,8 +153,8 @@ default_air_production = {
 default_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
-		always = yes
-	}
+
+		}
 	abort_when_not_enabled = no
 	abort = { always = no }
 		ai_strategy = { 
@@ -166,31 +166,11 @@ default_unit_production = {
 		id = infantry
 		value = 40
 	}
-
 	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
 		value = 2
 	}
-	# Land division factors
-	ai_strategy = {
-		type = role_ratio
-		id = paratroopers
-		value = 0
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = mountaineers
-		value = 100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 0
-	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor
@@ -199,6 +179,70 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
+		value = 100
+	}
+}
+default_paratroopers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+		always = yes
+		}
+	abort_when_not_enabled = no			
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+}
+default_mountaineers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+				NOT = {
+				original_tag = SOV
+				original_tag = GER
+				original_tag = FRA
+				original_tag = FIN
+				original_tag = POL
+				original_tag = FRA
+				original_tag = BEL
+				original_tag = HOL
+			}
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 100
+	}
+}
+default_marines_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+		always = yes
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+}
+default_rangers_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+				original_tag = SOV
+				original_tag = GER
+				original_tag = FRA
+				original_tag = FIN
+				original_tag = POL
+				original_tag = FRA
+				original_tag = BEL
+				original_tag = HOL
+		}
+	abort_when_not_enabled = no	
+	ai_strategy = {
+		type = role_ratio
+		id = rangers
 		value = 100
 	}
 }
@@ -411,7 +455,7 @@ default_garrison_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 5
+		value = 1
 	}
 }
 #

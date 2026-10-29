@@ -70,18 +70,17 @@ German_historical = {
 		GER_coal_liquefaction					#35
 		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
 		GER_develop_modern_maneuver_warfare
-		GER_the_prussian_legacy
 		GER_demand_sudetenland					#70 	SEP/OCT 38
 		GER_first_vienna_award					#35 	NOV 38
 		#At some point this year Speer will replace Todt via Industrailist Intrigue Event
 
 		#1939
-		
-		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
 		GER_fate_of_czechoslovakia				#70 	MAR 39
+		GER_the_prussian_legacy
+		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
+		
 		GER_reassert_eastern_claims				#35 	MAR 39
 		GER_molotov_ribbentrop_pact				#35 	AUG 39
-		GER_establish_the_reichswerke			#35 	JUL 37
 		GER_danzig_or_war						#70 	MAR 39 - Germany invaded in SEP 39 (complete on AUG 31st)
 		
 
@@ -96,6 +95,7 @@ German_historical = {
 		GER_demands_to_sweden
 		GER_seize_foreign_industries
 		GER_subsidize_hoesch_benzin
+		GER_establish_the_reichswerke			#35 	JUL 37
 		GER_autarky_achieved
 		GER_create_rustungsstab					#70 	AUG 44
 		GER_totaler_krieg						#35		FEB 43 - but comes after Rüstingsstab in the focus tree

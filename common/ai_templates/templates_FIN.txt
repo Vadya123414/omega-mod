@@ -1,0 +1,157 @@
+infantry_generic = {
+	role = infantry
+	available_for = {
+		FIN
+	}
+	upgrade_prio = {
+		base = 3
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+		base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+			}
+			
+			regiments = {
+				infantry = 8
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_mid
+		target_min_match = 0.6
+	}
+		infantry_mid = {
+	
+		upgrade_prio = {
+			base = 3
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				fire_support = 3
+			}
+			
+			regiments = {
+				infantry = 12
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_late
+		target_min_match = 0.6
+	}
+	infantry_late = {
+	
+		upgrade_prio = {
+			base = 4
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+                winter_logistics_support = 1
+                long_range_patrol_support = 1
+				super_heavy_artillery = 1
+			}
+
+			regimental_support = {
+				fire_support = 5
+			}
+			
+			regiments = {
+				infantry = 15
+			}
+
+		}
+	}
+}
+rangers_generic = {
+	available_for = {
+		FIN
+	}
+	role = rangers
+	
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_rangers
+			}
+		}
+	}
+
+		rangers_early = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				artillery = 1
+
+			}
+			
+			regimental_support = {
+				fire_support = 3
+			}
+
+			regiments = {
+				rangers = 15
+			}
+
+		}
+		replace_at_match = 0.6
+		replace_with = rangers_late
+		target_min_match = 0.6
+	}
+
+	rangers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+                winter_logistics_support = 1
+                long_range_patrol_support = 1
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				fire_support = 5
+			}
+
+			regiments = {
+				rangers = 15
+			}
+
+			}
+	}
+}
