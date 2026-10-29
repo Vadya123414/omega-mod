@@ -163,9 +163,11 @@ NOR_not_defend_SWI = {
         has_global_flag = VUP_Hist_version
 	}
 	abort = { has_capitulated = yes }
+	ai_strategy = {
 	type = dont_defend_ally_borders
 	id = SWI
 	value = 100  
+	}
 }
 SWI_bunker_1 = { 
 	enable = {

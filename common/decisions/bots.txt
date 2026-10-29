@@ -335,7 +335,6 @@ set_spec_doctrine_40 = {
                                 folder = special_forces
                             }
                         }
-                    }
                     else = {
                         set_sub_doctrine = mountaineers_1 
                               add_mastery = {
@@ -344,6 +343,7 @@ set_spec_doctrine_40 = {
                             }
                         }
                 }
+             }
       set_grand_doctrine_test = {
 
     fire_only_once = yes
@@ -974,26 +974,4 @@ set_spec_doctrine_40 = {
 				}
         }
     } 
-    bot_set_armoredcar_to_0 = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-        is_ai = yes
-            }
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 100}
-        cost = 0
-        complete_effect = {
-            set_technology = {
-                armored_car1 = 0
-                armored_car2 = 0
-                armored_car2 = 0
-            }
-        }
-    } 
-    
 }

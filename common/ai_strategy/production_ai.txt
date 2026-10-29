@@ -1,5 +1,5 @@
 general_prod_1 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 0
 		num_of_military_factories < 5
@@ -18,7 +18,7 @@ general_prod_1 = {
 }
 
 general_prod_5 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 4
 		num_of_military_factories < 10
@@ -31,7 +31,7 @@ general_prod_5 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 1
 	}
 	ai_strategy = {
@@ -42,7 +42,7 @@ general_prod_5 = {
 }
 
 general_prod_10 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 9
 		num_of_military_factories < 20
@@ -67,13 +67,13 @@ general_prod_10 = {
 
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 2
 	}
 }
 
 general_prod_20 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 19
 		num_of_military_factories < 30
@@ -102,18 +102,18 @@ general_prod_20 = {
 
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 4
 	}
 }
 
 general_prod_30 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 29
 		num_of_military_factories < 40
@@ -141,23 +141,23 @@ general_prod_30 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 6
 	}
 }
 
 general_prod_40 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 39
 		num_of_military_factories < 50
@@ -185,23 +185,23 @@ general_prod_40 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
 
 general_prod_50 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 49
 		num_of_military_factories < 60
@@ -229,23 +229,23 @@ general_prod_50 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 10
 	}
 }
 
 general_prod_60 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 59
 		num_of_military_factories < 70
@@ -273,23 +273,23 @@ general_prod_60 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 12
 	}
 }
 
 general_prod_70 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 69
 		num_of_military_factories < 80
@@ -317,23 +317,23 @@ general_prod_70 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
 
 general_prod_80 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 79
 		num_of_military_factories < 90
@@ -365,23 +365,23 @@ general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 17
 	}
 }
 
 air_and_general_prod_80 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 79
 		num_of_military_factories < 90
@@ -423,23 +423,23 @@ air_and_general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 6
 	}
 }
 
 general_prod_90 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 89
 		num_of_military_factories < 100
@@ -471,23 +471,23 @@ general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 19
 	}
 }
 
 air_and_general_prod_90 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 89
 		num_of_military_factories < 100
@@ -529,23 +529,23 @@ air_and_general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 7
 	}
 }
 
 general_prod_100 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 99
 		num_of_military_factories < 110
@@ -577,23 +577,23 @@ general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
 
 air_and_general_prod_100 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 99
 		num_of_military_factories < 110
@@ -635,23 +635,23 @@ air_and_general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
 
 general_prod_110 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 109
 		num_of_military_factories < 120
@@ -683,23 +683,23 @@ general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 23
 	}
 }
 
 air_and_general_prod_110 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 109
 		num_of_military_factories < 120
@@ -741,23 +741,23 @@ air_and_general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
 
 general_prod_120 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 119
 		num_of_military_factories < 130
@@ -789,23 +789,23 @@ general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
 
 air_and_general_prod_120 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 119
 		num_of_military_factories < 130
@@ -847,23 +847,23 @@ air_and_general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 9
 	}
 }
 
 general_prod_130 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 129
 		num_of_military_factories < 140
@@ -895,23 +895,23 @@ general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
 
 air_and_general_prod_130 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 129
 		num_of_military_factories < 140
@@ -953,23 +953,23 @@ air_and_general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 10
 	}
 }
 
 general_prod_140 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 139
 		num_of_military_factories < 150
@@ -1001,23 +1001,23 @@ general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 29
 	}
 }
 
 air_and_general_prod_140 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 139
 		num_of_military_factories < 150
@@ -1059,23 +1059,23 @@ air_and_general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 11
 	}
 }
 
 general_prod_150 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 149
 		num_of_military_factories < 160
@@ -1107,23 +1107,23 @@ general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
 
 air_and_general_prod_150 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 149
 		num_of_military_factories < 160
@@ -1165,23 +1165,23 @@ air_and_general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 11
 	}
 }
 
 general_prod_160 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 159
 		num_of_military_factories < 170
@@ -1213,23 +1213,23 @@ general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 33
 	}
 }
 
 air_and_general_prod_160 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 159
 		num_of_military_factories < 170
@@ -1271,23 +1271,23 @@ air_and_general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 12
 	}
 }
 
 general_prod_170 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 169
 		num_of_military_factories < 180
@@ -1319,23 +1319,23 @@ general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 35
 	}
 }
 
 air_and_general_prod_170 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 169
 		num_of_military_factories < 180
@@ -1377,23 +1377,23 @@ air_and_general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 13
 	}
 }
 
 general_prod_180 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 179
 		num_of_military_factories < 190
@@ -1425,23 +1425,23 @@ general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }
 
 air_and_general_prod_180 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 179
 		num_of_military_factories < 190
@@ -1483,23 +1483,23 @@ air_and_general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 14
 	}
 }
 
 general_prod_190 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 189
 		num_of_military_factories < 200
@@ -1531,23 +1531,23 @@ general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 39
 	}
 }
 
 air_and_general_prod_190 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 189
 		num_of_military_factories < 200
@@ -1589,23 +1589,23 @@ air_and_general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
 
 general_prod_200 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 199
 		num_of_military_factories < 210
@@ -1637,23 +1637,23 @@ general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 7
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 41
 	}
 }
 
 air_and_general_prod_200 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 199
 		num_of_military_factories < 210
@@ -1695,23 +1695,23 @@ air_and_general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
 
 general_prod_210 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 209
 		num_of_military_factories < 220
@@ -1743,23 +1743,23 @@ general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 7
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 44
 	}
 }
 
 air_and_general_prod_210 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 209
 		num_of_military_factories < 220
@@ -1801,23 +1801,23 @@ air_and_general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 16
 	}
 }
 
 general_prod_220 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 219
 		num_of_military_factories < 230
@@ -1849,23 +1849,23 @@ general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 46
 	}
 }
 
 air_and_general_prod_220 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 219
 		num_of_military_factories < 230
@@ -1907,23 +1907,23 @@ air_and_general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 17
 	}
 }
 
 general_prod_230 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 229
 		num_of_military_factories < 240
@@ -1955,23 +1955,23 @@ general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 48
 	}
 }
 
 air_and_general_prod_230 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 229
 		num_of_military_factories < 240
@@ -2013,23 +2013,23 @@ air_and_general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 18
 	}
 }
 
 general_prod_240 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 239
 		num_of_military_factories < 250
@@ -2061,23 +2061,23 @@ general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 50
 	}
 }
 
 air_and_general_prod_240 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 239
 		num_of_military_factories < 250
@@ -2119,23 +2119,23 @@ air_and_general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 18
 	}
 }
 
 general_prod_250 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 249
 		num_of_military_factories < 260
@@ -2167,23 +2167,23 @@ general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 52
 	}
 }
 
 air_and_general_prod_250 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 249
 		num_of_military_factories < 260
@@ -2225,23 +2225,23 @@ air_and_general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 19
 	}
 }
 
 general_prod_260 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 259
 		num_of_military_factories < 270
@@ -2273,23 +2273,23 @@ general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 54
 	}
 }
 
 air_and_general_prod_260 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 259
 		num_of_military_factories < 270
@@ -2331,23 +2331,23 @@ air_and_general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 20
 	}
 }
 
 general_prod_270 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 269
 		num_of_military_factories < 280
@@ -2379,23 +2379,23 @@ general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 56
 	}
 }
 
 air_and_general_prod_270 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 269
 		num_of_military_factories < 280
@@ -2437,23 +2437,23 @@ air_and_general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
 
 general_prod_280 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 279
 		num_of_military_factories < 290
@@ -2485,23 +2485,23 @@ general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 58
 	}
 }
 
 air_and_general_prod_280 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 279
 		num_of_military_factories < 290
@@ -2543,23 +2543,23 @@ air_and_general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
 
 general_prod_290 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 289
 		num_of_military_factories < 300
@@ -2591,23 +2591,23 @@ general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 60
 	}
 }
 
 air_and_general_prod_290 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 289
 		num_of_military_factories < 300
@@ -2649,23 +2649,23 @@ air_and_general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 22
 	}
 }
 
 general_prod_300 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 299
 		num_of_military_factories < 310
@@ -2697,23 +2697,23 @@ general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 62
 	}
 }
 
 air_and_general_prod_300 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 299
 		num_of_military_factories < 310
@@ -2755,23 +2755,23 @@ air_and_general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 23
 	}
 }
 
 general_prod_310 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 309
 		num_of_military_factories < 320
@@ -2803,23 +2803,23 @@ general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 64
 	}
 }
 
 air_and_general_prod_310 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 309
 		num_of_military_factories < 320
@@ -2861,23 +2861,23 @@ air_and_general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 24
 	}
 }
 
 general_prod_320 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 319
 		num_of_military_factories < 330
@@ -2909,23 +2909,23 @@ general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 67
 	}
 }
 
 air_and_general_prod_320 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 319
 		num_of_military_factories < 330
@@ -2967,23 +2967,23 @@ air_and_general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
 
 general_prod_330 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 329
 		num_of_military_factories < 340
@@ -3015,23 +3015,23 @@ general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 69
 	}
 }
 
 air_and_general_prod_330 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 329
 		num_of_military_factories < 340
@@ -3073,23 +3073,23 @@ air_and_general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
 
 general_prod_340 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 339
 		num_of_military_factories < 350
@@ -3121,23 +3121,23 @@ general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 71
 	}
 }
 
 air_and_general_prod_340 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 339
 		num_of_military_factories < 350
@@ -3179,23 +3179,23 @@ air_and_general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 26
 	}
 }
 
 general_prod_350 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 349
 		num_of_military_factories < 360
@@ -3227,23 +3227,23 @@ general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 73
 	}
 }
 
 air_and_general_prod_350 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 349
 		num_of_military_factories < 360
@@ -3285,23 +3285,23 @@ air_and_general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
 
 general_prod_360 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 359
 		num_of_military_factories < 370
@@ -3333,23 +3333,23 @@ general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 75
 	}
 }
 
 air_and_general_prod_360 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 359
 		num_of_military_factories < 370
@@ -3391,23 +3391,23 @@ air_and_general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
 
 general_prod_370 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 369
 		num_of_military_factories < 380
@@ -3439,23 +3439,23 @@ general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 77
 	}
 }
 
 air_and_general_prod_370 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 369
 		num_of_military_factories < 380
@@ -3497,23 +3497,23 @@ air_and_general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 28
 	}
 }
 
 general_prod_380 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 379
 		num_of_military_factories < 390
@@ -3545,23 +3545,23 @@ general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 79
 	}
 }
 
 air_and_general_prod_380 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 379
 		num_of_military_factories < 390
@@ -3603,23 +3603,23 @@ air_and_general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 29
 	}
 }
 
 general_prod_390 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 389
 		num_of_military_factories < 400
@@ -3651,23 +3651,23 @@ general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 81
 	}
 }
 
 air_and_general_prod_390 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 389
 		num_of_military_factories < 400
@@ -3709,23 +3709,23 @@ air_and_general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 30
 	}
 }
 
 general_prod_400 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 399
 		num_of_military_factories < 410
@@ -3757,23 +3757,23 @@ general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 83
 	}
 }
 
 air_and_general_prod_400 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 399
 		num_of_military_factories < 410
@@ -3815,23 +3815,23 @@ air_and_general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
 
 general_prod_410 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 409
 		num_of_military_factories < 420
@@ -3863,23 +3863,23 @@ general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 85
 	}
 }
 
 air_and_general_prod_410 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 409
 		num_of_military_factories < 420
@@ -3921,23 +3921,23 @@ air_and_general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
 
 general_prod_420 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 419
 		num_of_military_factories < 430
@@ -3969,23 +3969,23 @@ general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 88
 	}
 }
 
 air_and_general_prod_420 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 419
 		num_of_military_factories < 430
@@ -4027,23 +4027,23 @@ air_and_general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 32
 	}
 }
 
 general_prod_430 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 429
 		num_of_military_factories < 440
@@ -4075,23 +4075,23 @@ general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 89
 	}
 }
 
 air_and_general_prod_430 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 429
 		num_of_military_factories < 440
@@ -4133,23 +4133,23 @@ air_and_general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 33
 	}
 }
 
 general_prod_440 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 439
 		num_of_military_factories < 450
@@ -4181,23 +4181,23 @@ general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 92
 	}
 }
 
 air_and_general_prod_440 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 439
 		num_of_military_factories < 450
@@ -4239,23 +4239,23 @@ air_and_general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 34
 	}
 }
 
 general_prod_450 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 449
 		num_of_military_factories < 460
@@ -4287,23 +4287,23 @@ general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 94
 	}
 }
 
 air_and_general_prod_450 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 449
 		num_of_military_factories < 460
@@ -4345,23 +4345,23 @@ air_and_general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 34
 	}
 }
 
 general_prod_460 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 459
 		num_of_military_factories < 470
@@ -4393,23 +4393,23 @@ general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 16
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 96
 	}
 }
 
 air_and_general_prod_460 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 459
 		num_of_military_factories < 470
@@ -4451,23 +4451,23 @@ air_and_general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 35
 	}
 }
 
 general_prod_470 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 469
 		num_of_military_factories < 480
@@ -4499,23 +4499,23 @@ general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 16
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 98
 	}
 }
 
 air_and_general_prod_470 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 469
 		num_of_military_factories < 480
@@ -4557,23 +4557,23 @@ air_and_general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 36
 	}
 }
 
 general_prod_480 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 479
 		num_of_military_factories < 490
@@ -4605,23 +4605,23 @@ general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 17
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 100
 	}
 }
 
 air_and_general_prod_480 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 479
 		num_of_military_factories < 490
@@ -4663,23 +4663,23 @@ air_and_general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 37
 	}
 }
 
 general_prod_490 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 489
 		num_of_military_factories < 500
@@ -4711,23 +4711,23 @@ general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 17
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 102
 	}
 }
 
 air_and_general_prod_490 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 489
 		num_of_military_factories < 500
@@ -4769,23 +4769,23 @@ air_and_general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }
 
 general_prod_500 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 499
 	}
@@ -4815,23 +4815,23 @@ general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 17
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 104
 	}
 }
 
 air_and_general_prod_500 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 499
 		has_tech = improved_small_airframe
@@ -4871,17 +4871,17 @@ air_and_general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = motorized_equipment_1
+		id = motorized
 		value = 6
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }

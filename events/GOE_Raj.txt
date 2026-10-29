@@ -1,4 +1,4 @@
-###########################
+pp_sp###########################
 # RAJ GOE events Events
 ###########################
 
@@ -2752,7 +2752,7 @@ country_event = {
 		name = GOE_RAJ_partition.7.a #Intended
 
 		ai_chance = {
-			base = 10
+			base = 0
 		}
 
 		if = {
@@ -2790,11 +2790,7 @@ country_event = {
 		name =  GOE_RAJ_partition.7.b #Intended
 
 		ai_chance = {
-			base = 0
-			modifier = {
-				is_historical_focus_on = no
-				add = 10
-			}
+			base = 10
 		}
 
 		if = {

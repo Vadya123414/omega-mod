@@ -3266,8 +3266,7 @@ GER_hilfskreuzer_cat = {
 					equipment_variant = "Hilfskreuzer"
 					creator = ROOT
 				}
-			}
-			else = {
+			else_if = {
 				if = {
 					limit = {
 						NOT = { has_country_flag = GER_create_merchant_raider_variant }
@@ -3293,6 +3292,7 @@ GER_hilfskreuzer_cat = {
 			}
 		}
 	}
+}
 
 operations = {
 

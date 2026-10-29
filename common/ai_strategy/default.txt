@@ -161,10 +161,15 @@ default_unit_production = {
 		type = railway_gun_divisions_ratio
 		value = 1
 	}
-		ai_strategy = {
+	ai_strategy = {
 		type = role_ratio
-		id = suppression
-		value = -1000
+		id = armor
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
 	}
 }
 default_paratroopers_unit_production = {
@@ -197,7 +202,7 @@ default_mountaineers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 10000
+		value = 100
 	}
 }
 default_marines_unit_production = {
@@ -215,7 +220,6 @@ default_marines_unit_production = {
 default_rangers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
-		or = {
 				original_tag = SOV
 				original_tag = GER
 				original_tag = FRA
@@ -225,12 +229,11 @@ default_rangers_unit_production = {
 				original_tag = BEL
 				original_tag = HOL
 		}
-	}
 	abort_when_not_enabled = no	
 	ai_strategy = {
 		type = role_ratio
 		id = rangers
-		value = 10000
+		value = 100
 	}
 }
 default_convoy_production = {
@@ -444,6 +447,31 @@ at_start_we_need_manpower = {
 		value = -1000
 	}
 }
+RAJ_take_first_parlament = {
+	enable = {
+		original_tag = RAJ
+	}
+	abort = {
+		has_completed_focus = RAJ_the_indian_parlament
+		has_completed_focus = RAJ_expand_the_zamindari_system
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = army_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = political_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1000
+	}
+}
 default_major_SF_marines = {
 	enable = {
 		or = {
@@ -466,11 +494,13 @@ default_major_SF_marines = {
 
 default_garrison_production = {
 	enable = {
+		and = {
 			any_controlled_state = {
 				is_coastal = yes
 			}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
+		}
 	}
 	abort = {
 		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
@@ -597,34 +627,6 @@ default_area_priority_non_africa = {
         id = suez
         value = -40
     }
-}
-default_stockpile_management = {
-	enable = {
-		num_divisions > 150
-	}
-
-	abort = {
-		num_divisions < 130
-	}
-
-	ai_strategy = {
-		type = equipment_stockpile_surplus_ratio
-		value = 35 # add this to default PRODUCTION_EQUIPMENT_SURPLUS_FACTOR
-	}
-}
-
-
-default_market_convoy_purchases = {
-	enable = {
-		naval_base > 0  # not land-locked
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_market_buying_threshold
-		id = convoy
-		value = 30  # Consider buying if we have too few (less than 30) convoys. Also interacts with the EQUIPMENT_MARKET_WANTED_CONVOY_USAGE_RATIO define.
-	}
 }
 
 dont_build_capitals_if_on_treaty = {
@@ -812,7 +814,7 @@ upgrade_intelligence_agency = {
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 50
+		value = 500
 	}
 }
 
