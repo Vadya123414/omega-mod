@@ -54,6 +54,8 @@ FRA_historical_plan = {
 		FRA_military_factories
 
 		FRA_the_blum_viollette_proposal
+		FRA_extra_research_slot
+		FRA_dirigisme
 		FRA_expand_the_citizenship
 		FRA_encourage_immigration
 		
@@ -65,6 +67,12 @@ FRA_historical_plan = {
 		
 		FRA_extra_research_slot
 		FRA_extra_research_slot_2
+		FRA_invest_in_the_colonies
+		FRA_invest_in_west_africa
+		FRA_invest_in_indochina
+		FRA_invest_in_syria
+		FRA_colonial_industry
+		
 
 		FRA_appeal_to_the_french_nation
 		FRA_appeal_to_overseas_territories

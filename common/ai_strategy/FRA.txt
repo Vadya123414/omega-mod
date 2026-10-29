@@ -9,7 +9,7 @@ FRA_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = europe
-		value = 110 #more focus here
+		value = 1000 #more focus here
 	}
 
 	ai_strategy = {

@@ -45,39 +45,39 @@ default_air_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = armor
-		value = -1000
+		value = -10000
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = mobile
-		value = -1000
+		value = -10000
 	}
 		ai_strategy = {
 		type = template_prio
 		id = motorized
-		value = -1000
+		value = -10000
 	}
 		ai_strategy = {
 		type = template_prio
 		id = light_armor
-		value = -1000
+		value = -10000
 	}
 		ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = -1000
+		value = -10000
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = heavy_armor
-		value = -1000
+		value = -10000
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = paratroopers
-		value = -1000
+		value = -10000
 	}
 }
 default_air_production = {
@@ -157,25 +157,10 @@ default_unit_production = {
 		type = railway_gun_divisions_ratio
 		value = 1
 	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = infantry
-		value = 40
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 2
-	}
-	ai_strategy = {
+		ai_strategy = {
 		type = role_ratio
-		id = armor
-		value = -100
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 100
+		id = suppression
+		value = -1000
 	}
 }
 default_paratroopers_unit_production = {
@@ -259,10 +244,7 @@ default_convoy_production = {
 minor_default_naval_ratios = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
-		or = {
 			is_major = no
-			original_tag = GER
-		}	
 	}
 	abort = {
 		has_equipment = { convoy < 50}
@@ -332,6 +314,7 @@ minor_default_naval_ratios = {
 major_default_naval_ratios = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
+		not = {original_tag = GER}
 		is_major = yes	}
 	abort_when_not_enabled = yes
 
@@ -399,6 +382,18 @@ major_default_naval_ratios = {
 		value = -1000
 	}
 }
+default_convoy_production = {
+
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 1000
+	}
+}
 default_pp_spend_amount = {
 	enable = {
 		always = yes
@@ -415,6 +410,34 @@ default_pp_spend_amount = {
 		type = pp_spend_amount
 		id = decision
 		value = 100
+	}
+}
+at_start_we_need_manpower = {
+	enable = {
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = DEN
+		original_tag = BEL
+		original_tag = HOL
+	}
+	abort = {
+		has_idea = extensive_conscription
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = army_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = political_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1000
 	}
 }
 default_major_SF_marines = {
@@ -1285,11 +1308,24 @@ default_produce_some_trucks_for_buffer = {
 
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
-		id = motorized_equipment
+		id = motorized_equipment_1
 		value = 1
 	}
 }
+default_produce_some_trucks_for_buffer = {
+	enable = {
+		num_of_military_factories > 12
+		has_tech = tech_trucks
+		has_equipment = { motorized_equipment > 3000 }
+	}
+	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized_equipment_1
+		value = 1
+	}
+}
 default_produce_floating_harbors = {
 	enable = {
 		is_historical_focus_on = no

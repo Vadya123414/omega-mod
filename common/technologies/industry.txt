@@ -130,7 +130,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 40
 			
 			modifier = {
 				factor = 10
@@ -161,7 +161,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 40
 						
 			modifier = {
 				factor = 10
@@ -193,7 +193,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 40
 			
 			modifier = {
 				factor = 10
@@ -308,7 +308,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
+			factor = 40
 		}
 		
 		categories = {
@@ -343,7 +343,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 40
 						
 			modifier = {
 				factor = 10
@@ -384,7 +384,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 40
 			
 			modifier = {
 				factor = 10
@@ -424,7 +424,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 40
 						
 			modifier = {
 				factor = 10
@@ -458,7 +458,7 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 40
 			
 			modifier = {
 				factor = 5
@@ -1338,6 +1338,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1417,6 +1418,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1506,6 +1508,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1590,6 +1593,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				date > 1939.1.1
 				add = 5
 				OR = {
 					oil > 32
@@ -1667,6 +1671,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				date > 1939.1.1
 				add = 5
 				OR = {
 					oil > 32

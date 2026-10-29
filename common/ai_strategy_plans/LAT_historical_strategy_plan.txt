@@ -34,6 +34,7 @@ LAT_historical = {
 		BALTIC_natural_resources
 		BALTIC_axis_investments
 		BALTIC_german_war_economics
+		BALTIC_german_tank_licences
 		BALTIC_eastwall
 		BALTIC_balticwall
 		BALTIC_rebuild_forts
@@ -48,7 +49,7 @@ LAT_historical = {
 		LAT_multicultural_latvia
 		LAT_martial_prime_minister
 		LAT_improve_military_life
-		LAT_military_dyarchy
+		LAT_military_diarchy
 		LAT_military_dictatorship
 		LAT_threat_on_our_border
 

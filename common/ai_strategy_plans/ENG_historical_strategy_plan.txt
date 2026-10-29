@@ -28,6 +28,10 @@ ENG_historical_plan = {
 	}
 
 	ai_national_focuses = {
+		general_rearmament_focus
+		air_rearmament_focus
+		fighter_command_focus
+
 		limited_rearmament_focus
 		uk_empire_focus
 		uk_service_focus

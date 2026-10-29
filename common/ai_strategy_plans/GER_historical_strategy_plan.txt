@@ -31,7 +31,6 @@ German_historical_strong = {
 
 		#Focus 									#Days 	#Historical Daye
 		GER_loyalty_to_the_fuhrer				#		Do this if it's ever possible
-		GER_legion_condor						#35		Do this if it's ever possible
 		GER_the_triumphant_will					#35		Do this if it's ever possible
 		GER_ascension_of_todt					#14		(whenever)
 		GER_party_chancellor_hess				#14
@@ -50,9 +49,16 @@ German_historical_strong = {
 		GER_the_four_year_plan					#35 	AUG 36
 		GER_autarky_efforts						#35
 		GER_institute_price_controls			#35
+		GER_expanding_the_luftwaffe				#35
+		GER_aeronautical_research_institute		#35		Should be earlier, but we need to balance tank production
+		GER_dive_bombers						#35 
 		GER_construct_the_reichsautobahn		#35
 		GER_kdf_wagen_factories					#35 	construction started in 38, but GER needs dem Civs
 		GER_develop_heraeus_facilities			#70		(whenever)
+		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38	
+		GER_strengthen_the_kriegsmarine
+		GER_trade_interdiction
+		GER_cruiser_warfare
 		GER_build_the_rur_dam
 		GER_accelerate_the_rearmament_program	#35		AUG 36
 		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38		
@@ -61,21 +67,18 @@ German_historical_strong = {
 		#1937
 		GER_concentrated_armament_program		#35
 		GER_establish_production_targets		#35
-		GER_expanding_the_luftwaffe				#35
-		GER_aeronautical_research_institute		#35		Should be earlier, but we need to balance tank production
-		GER_dive_bombers						#35 
+
 		
 		#1938
-		
-		GER_bribe_senior_officers				#35
-		GER_autonomy_in_the_kriegsschulen
+	
+		#GER_bribe_senior_officers				#35
+		#GER_autonomy_in_the_kriegsschulen
 		GER_coal_liquefaction					#35
 		GER_establish_buna_werke				#35 	(works in 36 or 37) #MOVE DOWN TO MID-LATE 38+
 		GER_develop_modern_maneuver_warfare
 
 		#1939
 		GER_the_prussian_legacy
-		GER_anti_comintern_pact					#35 	NOV 36 (works in 37 too)
 		
 		GER_reassert_eastern_claims				#35 	MAR 39
 		GER_molotov_ribbentrop_pact				#35 	AUG 39
@@ -192,7 +195,7 @@ German_historical_weak = {
 	desc = "Essentially historical behaviour for Germany"
 
 	allowed = {
-		original_tag = GER
+		#original_tag = GER
 	}
 	enable = {
 		always = no

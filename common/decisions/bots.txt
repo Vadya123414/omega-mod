@@ -171,7 +171,7 @@ set_sub_doctrine_37 = {
                 is_ai = yes
             }
                 complete_effect = {
-                    set_sub_doctrine = large_unit_tactics
+                    set_sub_doctrine = defensive_postures
 
                                 add_mastery = {
                                 amount = 150
@@ -966,7 +966,7 @@ set_spec_doctrine_40 = {
 
 				capital_scope = {
 					create_unit = {
-						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 0.01 start_equipment_factor = 0.01 start_manpower_factor = 0.01"
+						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 1 start_equipment_factor = 0.01 start_manpower_factor = 0.01"
                         owner = ROOT
 						allow_spawning_on_enemy_provs = no
 						count = 5 
@@ -974,4 +974,26 @@ set_spec_doctrine_40 = {
 				}
         }
     } 
+    bot_set_armoredcar_to_0 = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+        is_ai = yes
+            }
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 100}
+        cost = 0
+        complete_effect = {
+            set_technology = {
+                armored_car1 = 0
+                armored_car2 = 0
+                armored_car2 = 0
+            }
+        }
+    } 
+    
 }

@@ -300,6 +300,69 @@ ideas = {
 				}
 			}
 		}
+		air_research_25 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 0.25
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
+		air_research_50 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 0.50
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
+		air_research_100 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 1
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
 
 				idea_RAJ_ordnance_sim = {
 			picture = generic_license_production

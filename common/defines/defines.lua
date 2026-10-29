@@ -114,6 +114,9 @@ NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_SHORTAGE_DAYS_TO_CANCEL = 7
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
 
+NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 10 		-- To which extent AI should care about ahead of time penalties to research
+NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10             -- Max ahead of time penalty AI will ever consider (this also includes BASE_YEAR_AHEAD_PENALTY_FACTOR, so not the raw time)
+
 -- Расчет желаемого количества дивизий
 	NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 5.00                        -- То, сколько подразделений хочет страна, частично зависит от объема доступной военной промышленности
 	--NDefines.NAI.WANTED_UNITS_THREAT_BASE = 10                             -- Если угрозы нет, умножить минимальное желаемое количество подразделений на это значение

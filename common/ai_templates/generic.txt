@@ -382,7 +382,7 @@ rangers_generic = {
 			}
 
 			regiments = {
-				rangers = 15
+				rangers = 9
 			}
 
 		}
