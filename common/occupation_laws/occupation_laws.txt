@@ -462,10 +462,12 @@ harsh_quotas_occupation = {
 		}
 
 		modifier = {
-			or = {
-			original_tag = GER
-			original_tag = JAP	
-			}
+					owner = {
+						OR = {
+							original_tag = GER
+							original_tag = JAP
+						}
+					}
 			date > 1940.6.1
 			OR ={
 				AND = {

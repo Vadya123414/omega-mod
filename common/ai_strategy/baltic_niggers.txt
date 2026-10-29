@@ -14,20 +14,13 @@ do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
 	abort = {
 		has_idea = all_adult_serve
 	}
-
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -9999
-	}
-
 	ai_strategy = {
 		type = pp_spend_priority
 		id = guarantee
 		value = -9999
 	}
 		ai_strategy = {
-		type = decision
+		type = pp_spend_priority
 		id = relation
 		value = -9999
 	}
@@ -131,7 +124,7 @@ NOR_airbase_1 = {
 	abort = { always = no }
 	ai_strategy = {
 		type = building_target
-        id = airbase
+        id = air_base
         target = 920
 		value = 10
 	}
@@ -145,7 +138,7 @@ NOR_airbase_2 = {
 	abort = { always = no }
 	ai_strategy = {
 		type = building_target
-        id = airbase
+        id = air_base
         target = 143
 		value = 10
 	}
@@ -158,7 +151,7 @@ NOR_defend_110 = {
 	abort = { has_capitulated = yes }
 	ai_strategy = {
 		type = building_target
-        id = airbase
+        id = air_base
         target = 920
 		value = 10
 	}

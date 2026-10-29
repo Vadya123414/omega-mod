@@ -27,7 +27,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 28
 		}
 		
 		categories = {
@@ -60,7 +60,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 						
 			modifier = {
 				factor = 10
@@ -92,7 +92,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 28
 						
 			modifier = {
 				factor = 10
@@ -130,7 +130,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 			
 			modifier = {
 				factor = 10
@@ -161,7 +161,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 0
 						
 			modifier = {
 				factor = 10
@@ -193,7 +193,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 			
 			modifier = {
 				factor = 10
@@ -308,7 +308,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 100
 		}
 		
 		categories = {
@@ -343,7 +343,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 100
 						
 			modifier = {
 				factor = 10
@@ -384,7 +384,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 			
 			modifier = {
 				factor = 10
@@ -424,7 +424,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 						
 			modifier = {
 				factor = 10
@@ -458,7 +458,7 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		ai_will_do = {
-			factor = 40
+			factor = 28
 			
 			modifier = {
 				factor = 5
@@ -928,7 +928,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 2
+			add = 10
 				or = {
 					original_tag = GER
 					original_tag = USA
@@ -1303,7 +1303,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			
 			modifier = {
 				factor = 5
@@ -1381,7 +1381,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			
 			modifier = {
 				factor = 10
@@ -1461,7 +1461,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 25
 			
 			modifier = {
 				factor = 1.5
@@ -1558,7 +1558,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 25
 			
 			modifier = {
 				factor = 10
@@ -1634,7 +1634,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 25
 			
 			modifier = {
 				factor = 10

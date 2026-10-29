@@ -102,10 +102,6 @@ infantry_generic = {
 rangers_generic = {
 	available_for = {
 		FIN
-		LAT
-        EST
-        LIT
-        DEN
 	}
 	role = rangers
 	
@@ -138,7 +134,7 @@ rangers_generic = {
 			}
 
 			regiments = {
-				rangers = 15
+				ranger_battalion = 9
 			}
 
 		}
@@ -169,7 +165,7 @@ rangers_generic = {
 			}
 
 			regiments = {
-				rangers = 15
+				ranger_battalion = 15
 			}
 
 			}

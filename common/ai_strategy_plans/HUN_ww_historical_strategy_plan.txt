@@ -9,13 +9,6 @@ HUN_ww_historical = {
 
 	enable = {
 		OR = {
-			has_global_flag = vanilla_history
-			AND = {
-				GER_is_oppose_hitler = yes
-				NOT = { has_completed_focus = wuw_HUN_undermine_the_admiral }
-			}
-		}
-		OR = {
 			AND = {
 				is_historical_focus_on = yes
 				has_game_rule = {
@@ -32,10 +25,7 @@ HUN_ww_historical = {
 	}
 
 	abort = {
-		OR = {
-			is_subject = yes
-			has_completed_focus = wuw_HUN_undermine_the_admiral
-		}
+
 	}
 
 	# On average = five 70 days focuses per year

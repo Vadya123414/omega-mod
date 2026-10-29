@@ -374,7 +374,7 @@ rangers_generic = {
 			
 			support = {
 				artillery = 1
-
+				engineer = 1
 			}
 			
 			regimental_support = {
@@ -382,7 +382,7 @@ rangers_generic = {
 			}
 
 			regiments = {
-				rangers = 9
+				ranger_battalion = 9
 			}
 
 		}
@@ -414,7 +414,7 @@ rangers_generic = {
 			}
 
 			regiments = {
-				rangers = 15
+				ranger_battalion = 15
 			}
 
 			}

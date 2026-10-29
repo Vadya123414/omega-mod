@@ -3293,7 +3293,6 @@ GER_hilfskreuzer_cat = {
 			}
 		}
 	}
-}
 
 operations = {
 
