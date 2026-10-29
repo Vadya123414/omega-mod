@@ -483,7 +483,7 @@ focus_tree = {
 				custom_effect_tooltip = BRA_modify_estado_moderno_ns_intro
 				add_to_variable = {
 					BRA_estado_moderno_production_factory_max_efficiency_factor = 0.05
-					tooltip = industrial_capacity_factory_tt
+					tooltip = production_factory_max_efficiency_factor_tt
 				}
 				add_to_variable = {
 					BRA_estado_moderno_consumer_goods_factor = -0.05
@@ -1543,12 +1543,15 @@ focus_tree = {
 			factor = 19
 		}
 		available = {
+			499 = {
+				is_owned_and_controlled_by = ROOT
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			capital_scope = {
+			499 = {
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = oil
@@ -1621,13 +1624,16 @@ focus_tree = {
 		relative_position_id = BRA_batalha_do_borracha
 		cost = 10
 		available = {
+			496 = {
+				is_controlled_by = ROOT
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 
-			capital_scope = {
+			496 = {
 				add_resource = {
 					type = steel
 					amount = 12
@@ -2479,8 +2485,8 @@ focus_tree = {
 			factor = 20
 		}
 		available = {	
-			any_other_country = {
-				original_tag = USA
+			any_country_with_original_tag = {
+				original_tag_to_check = USA
 				has_war_with_major = yes
 				has_government = democratic
 				NOT = {
@@ -2528,8 +2534,8 @@ focus_tree = {
 		
 		cost = 10
 		available = {
-			any_country = {
-				original_tag = GER
+			any_country_with_original_tag = {
+				original_tag_to_check = GER
 				NOT = {
 					has_government = BRA
 				}
@@ -3340,11 +3346,17 @@ focus_tree = {
 
 			navy_experience = 15
 
-			add_tech_bonus = {
+			add_mastery_bonus = {
 				name = BRA_german_sub_initiative
-				bonus = 0.75
+				bonus = 0.1
+				days = 180
+				track = submarines
+			}
+			add_doctrine_cost_reduction = {
+				name = BRA_german_sub_initiative
+				cost_reduction = 0.5
 				uses = 1
-				category = submarine_doctrine
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -7291,8 +7303,8 @@ focus_tree = {
 			}
 		}
 		available = {
-			any_other_country = {
-				original_tag = POR
+			any_country_with_original_tag = {
+				original_tag_to_check = POR
 				exists = yes
 				is_subject = no
 			}
@@ -7384,7 +7396,7 @@ focus_tree = {
 	focus = {
 		id = BRA_penal_battalions
 		icon = GFX_focus_SOV_penal_battalions
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = BRA_use_the_national_security_law
 		prerequisite = { focus = BRA_use_the_national_security_law }
@@ -7454,10 +7466,10 @@ focus_tree = {
 	focus = {
 		id = BRA_amazonian_settlement
 		icon = GFX_focus_BRA_amazon_colonization 
-		x = 3
+		x = 0
 		y = 1
-		relative_position_id = BRA_use_the_national_security_law
-		prerequisite = { focus = BRA_use_the_national_security_law }
+		relative_position_id = BRA_penal_battalions
+		prerequisite = { focus = BRA_penal_battalions }
 		#prerequisite = { focus = BRA_court_the_military }
 		cost = 5
 		ai_will_do = {
@@ -7558,8 +7570,8 @@ focus_tree = {
 			}
 		}
 		available = {
-			any_other_country = {
-				original_tag = BOL
+			any_country_with_original_tag = {
+				original_tag_to_check = BOL
 				exists = yes
 			}
 		}
@@ -7603,8 +7615,8 @@ focus_tree = {
 		}
 		will_lead_to_war_with = POR
 		available = {
-			any_other_country = {
-				original_tag = POR
+			any_country_with_original_tag = {
+				original_tag_to_check = POR
 				exists = yes
 			}
 		}
@@ -7650,8 +7662,8 @@ focus_tree = {
 		}
 		will_lead_to_war_with = POR
 		available = {
-			any_other_country = {
-				original_tag = POR
+			any_country_with_original_tag = {
+				original_tag_to_check = POR # Add other triggers as needed
 				exists = yes
 				OR = {
 					is_subject = no
@@ -8038,12 +8050,6 @@ focus_tree = {
 		completion_reward = {
 			set_cosmetic_tag = BRA_america_do_sul
 			custom_effect_tooltip = BRA_unify_south_america_tt
-			every_state = {
-				limit = {
-					is_on_continent = south_america
-				}
-				add_core_of = ROOT
-			}
 		}
 	}
 }
