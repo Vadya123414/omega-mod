@@ -92,6 +92,7 @@ garrison_generic = {
 			
 			support = {
 				artillery = 1
+				anti_air = 1
 			}
 
 			regimental_support = {
@@ -204,14 +205,13 @@ infantry_generic = {
 			support = {
 				engineer = 1
 				artillery = 1
-				rocket_artillery = 1
+				anti_air = 1
 				field_hospital = 1
 				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				fire_support = 3
-				anti_air_battery = 2
+				fire_support = 5
 			}
 			
 			regiments = {
@@ -259,6 +259,7 @@ mountaineers_generic = {
 				artillery = 1
 				field_hospital = 1
 				engineer = 1
+				anti_air = 1
 			}
 			
 			regimental_support = {
@@ -266,7 +267,7 @@ mountaineers_generic = {
 			}
 
 			regiments = {
-				mountaineers = 15
+				mountaineers = 9
 			}
 
 		}
@@ -286,15 +287,14 @@ mountaineers_generic = {
 			
 			support = {
 				engineer = 1
-				artillery = 1
+				anti_air = 1
 				rocket_artillery = 1
 				rangers_support = 1 
 				super_heavy_artillery = 1
 			}
 			
 			regimental_support = {
-				fire_support = 3
-				anti_air_battery = 2
+				fire_support = 5
 			}
 
 			regiments = {

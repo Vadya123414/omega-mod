@@ -43,7 +43,7 @@ ENG_historical_plan = {
 		air_rearmament_focus
 		fighter_command_focus
 		ENG_home_defence
-
+		ENG_prepare_for_the_inevitable
 		shadow_scheme_focus
 		uk_industrial_focus
 		uk_extra_tech_slot
@@ -53,7 +53,7 @@ ENG_historical_plan = {
 		ENG_steady_as_she_goes
 		aircraft_production_focus
 		
-		ENG_prepare_for_the_inevitable
+
 		ENG_issue_gasmasks
 		ENG_military_training_act
 		ENG_british_commonwealth_air_training_plan

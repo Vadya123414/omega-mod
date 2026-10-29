@@ -1,0 +1,10 @@
+NOR_home_fleet = {
+	required_taskforces = {
+		ENG_StrikeForce_1 = 1
+		ENG_PatrolReconForce_1 = 1
+	}	
+	optional_taskforces = {
+		ENG_StrikeForce_1 = 1
+		ENG_PatrolReconForce_1 = 1
+	}
+}

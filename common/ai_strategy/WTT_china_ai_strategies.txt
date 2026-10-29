@@ -15,6 +15,10 @@ WTT_dont_stay_behind = {
 		id = "JAP"
 		value = 50000
 	}
+		ai_strategy = {
+		type = garrison
+		value = -1000
+	}
 }
 
 

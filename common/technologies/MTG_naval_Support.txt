@@ -106,7 +106,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 			modifier = {
 				OR = {
 					original_tag = USA
@@ -114,7 +114,11 @@ technologies = {
 					original_tag = ENG
 					original_tag = ITA
 				}
-				factor = 1
+				add = 1
+			}
+			modifier = {
+				original_tag = NOR
+				add = 100
 			}
 		}
 
@@ -977,7 +981,10 @@ technologies = {
 
 		ai_will_do = {
 			base = 0
-
+			modifier = {
+				original_tag = NOR
+				add = 100
+			}
 			modifier = {
 			add = 2
 				or = {
@@ -991,7 +998,6 @@ technologies = {
 				}
 			}
 		}
-
 		categories = {
 			naval_equipment
 			ship_modules_tech

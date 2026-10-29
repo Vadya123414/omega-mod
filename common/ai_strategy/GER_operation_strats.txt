@@ -56,6 +56,64 @@ GER_collaboration_on_NOR = {
 		mission_target = NOR
 	}
 }
+GER_collaboration_on_POL= {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		NOR = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = GER }
+		}
+		# only try before end of 1941 (and continue if already doing)
+		OR = {
+			date < 1938.1.1
+			is_preparing_operation = {
+				operation = operation_collaboration_government
+				target = POL
+			}
+			is_running_operation = {
+				operation = operation_collaboration_government
+				target = POL
+			}
+		}
+		# do at most once or twice depending on date
+		OR = {
+			num_finished_operations = {
+				operation = operation_collaboration_government
+				target = POL
+				value < 1
+			}
+			AND = {
+				date > 1939.3.1
+				num_finished_operations = {
+					operation = operation_collaboration_government
+					target = POL
+					value < 2
+				}
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 600
+		operation_target = POL
+	}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 600
+		mission_target = POL
+	}
+}
 GER_collaboration_on_HOL = {
 	allowed = {
 		tag = GER
@@ -70,7 +128,7 @@ GER_collaboration_on_HOL = {
 		}
 		# only try before end of 1941 (and continue if already doing)
 		OR = {
-			date < 1938.6.1
+			date < 1938.1.1
 			is_preparing_operation = {
 				operation = operation_collaboration_government
 				target = HOL
@@ -88,7 +146,7 @@ GER_collaboration_on_HOL = {
 				value < 1
 			}
 			AND = {
-				date > 1938.6.1
+				date > 1939.6.1
 				num_finished_operations = {
 					operation = operation_collaboration_government
 					target = HOL
@@ -128,7 +186,7 @@ GER_collaboration_on_BEL = {
 		}
 		# only try before end of 1941 (and continue if already doing)
 		OR = {
-			date < 1938.6.1
+			date < 1938.1.1
 			is_preparing_operation = {
 				operation = operation_collaboration_government
 				target = BEL
@@ -146,7 +204,7 @@ GER_collaboration_on_BEL = {
 				value < 1
 			}
 			AND = {
-				date > 1938.6.1
+				date > 1939.6.1
 				num_finished_operations = {
 					operation = operation_collaboration_government
 					target = BEL
@@ -186,7 +244,7 @@ GER_collaboration_on_YUG = {
 		}
 		# only try before end of 1941 (and continue if already doing)
 		OR = {
-			date < 1938.6.1
+			date < 1940.1.1
 			is_preparing_operation = {
 				operation = operation_collaboration_government
 				target = YUG
@@ -204,7 +262,7 @@ GER_collaboration_on_YUG = {
 				value < 1
 			}
 			AND = {
-				date > 1938.6.1
+				date > 1941.1.1
 				num_finished_operations = {
 					operation = operation_collaboration_government
 					target = YUG
@@ -220,13 +278,13 @@ GER_collaboration_on_YUG = {
 		type = operative_operation
 		operation = operation_collaboration_government
 		value = 1200
-		operation_target = NOR
+		operation_target = YUG
 	}
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
 		value = 1200
-		mission_target = NOR
+		mission_target = YUG
 	}
 }

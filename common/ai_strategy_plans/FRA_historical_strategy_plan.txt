@@ -42,8 +42,9 @@ FRA_historical_plan = {
 
 		FRA_general_work_council
 		FRA_national_champions
+		FRA_dirigisme
 		FRA_go_with_britain
-		FRA_aggressive_focus
+		FRA_defense_focus
 		FRA_devalue_the_franc
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france
@@ -53,15 +54,17 @@ FRA_historical_plan = {
 		FRA_military_factories
 
 		FRA_the_blum_viollette_proposal
-		FRA_extra_research_slot
-		FRA_extra_research_slot_2
-		FRA_battle_of_maneuver
-		FRA_motorized_focus
-		FRA_mechanized_focus
-
-		FRA_army_reform
 		FRA_expand_the_citizenship
 		FRA_encourage_immigration
+		
+		FRA_methodical_battle
+		FRA_fortification_focus
+		FRA_alpine_forts
+		FRA_extend_the_maginot_line
+		FRA_army_reform
+		
+		FRA_extra_research_slot
+		FRA_extra_research_slot_2
 
 		FRA_appeal_to_the_french_nation
 		FRA_appeal_to_overseas_territories

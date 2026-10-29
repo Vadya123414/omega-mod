@@ -365,6 +365,16 @@ ideas = {
 					has_idea = volunteer_only
 					factor = 201
 				}
+					modifier = {
+						or = {
+							tag = LIT
+							tag = LAT
+							tag = EST
+							tag = DEN
+							tag = NOR
+						}
+					factor = 201
+				}
 				modifier = {
 					factor = 0
 					NOT = { has_idea = volunteer_only }
@@ -668,7 +678,16 @@ ideas = {
 					has_war = yes
 					has_manpower < 1000000
 				}
-
+					modifier = {
+						or = {
+							tag = LIT
+							tag = LAT
+							tag = EST
+							tag = DEN
+							tag = NOR
+						}
+					factor = 201
+				}
 				modifier = {
 					factor = 0
 					NOT = { has_idea = limited_conscription }
@@ -983,7 +1002,16 @@ ideas = {
 					factor = 0
 					NOT = { has_idea = extensive_conscription }
 				}
-
+					modifier = {
+						or = {
+							tag = LIT
+							tag = LAT
+							tag = EST
+							tag = DEN
+							tag = NOR
+						}
+					factor = 201
+				}
 				modifier = {
 					factor = 100
 					OR = {
@@ -1247,7 +1275,16 @@ ideas = {
 					factor = 0
 					NOT = { has_idea = service_by_requirement }
 				}
-
+					modifier = {
+						or = {
+							tag = LIT
+							tag = LAT
+							tag = EST
+							tag = DEN
+							tag = NOR
+						}
+					factor = 201
+				}
 				modifier = {
 					original_tag = JAP
 					has_idea = service_by_requirement
@@ -1497,7 +1534,16 @@ ideas = {
 					factor = 0
 					NOT = { has_idea = all_adults_serve }
 				}
-
+					modifier = {
+						or = {
+							tag = LIT
+							tag = LAT
+							tag = EST
+							tag = DEN
+							tag = NOR
+						}
+					factor = 201
+				}
 				modifier = {
 					original_tag = JAP
 					has_idea = all_adults_serve

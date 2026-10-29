@@ -12770,7 +12770,13 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			or = {
+				AND = {
+				is_ai = yes
+				has_country_flag = VUP_Hist_version
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 		}
 		
 		bypass = {

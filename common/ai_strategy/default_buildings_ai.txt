@@ -89,7 +89,7 @@ MINOR_strategy_industrial_complex_building_hist = {
 					not = {original_tag = FRA}
 					not = {original_tag = SOV}
 					not = {original_tag = JAP}
-					date < 1937.10.1
+					date < 1937.8.1
 				}
 		}
 		abort_when_not_enabled = yes
@@ -103,10 +103,10 @@ MINOR_strategy_industrial_complex_building_hist = {
 MINOR_strategy_arms_factory_building_hist = {
 		enable = {
 				AND = {
-					has_global_flag = VUP_Hist_version
-					not = {original_tag = POL}
-					not = {original_tag = AST}
-					not = {original_tag = PHI}
+						has_global_flag = VUP_Hist_version
+						not = {original_tag = POL}
+						not = {original_tag = AST}
+						not = {original_tag = PHI}
 						not = {original_tag = USA}
 						not = {original_tag = ITA}
 						not = {original_tag = GER}
@@ -114,7 +114,7 @@ MINOR_strategy_arms_factory_building_hist = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
-				date > 1937.10.1
+				date > 1937.8.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -133,7 +133,7 @@ MAJOR_strategy_industrial_complex_building = {
 					original_tag = ENG
 					original_tag = FRA
 				}
-				date < 1937.10.1
+				date < 1937.8.1
 				}
 		}
 		abort_when_not_enabled = yes
@@ -150,9 +150,8 @@ MAJOR_strategy_arms_factory_building = {
 					original_tag = ITA
 					original_tag = GER
 					original_tag = ENG
-					original_tag = FRA
 				}
-				date > 1937.10.1
+				date > 1937.8.1
 				}
 		}
 	abort_when_not_enabled = no
@@ -247,11 +246,11 @@ GER_strategy_liquefaction_building_2 = {
 	}
 }
 GER_autarky_building_1 = {
-		allowed = {
+	allowed = {
 		original_tag = GER
 		}
 	enable = {
-		original_tag = GER
+		controls_state = 105
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
@@ -266,7 +265,7 @@ GER_autarky_building_2 = {
 		original_tag = GER
 		}
 	enable = {
-		original_tag = GER
+		controls_state = 105
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
@@ -288,7 +287,7 @@ bots_usa_dockyard_building = {
 		ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 1000
+		value = 500
 	}
 }
 bots_usa_arms_factory_building = {
@@ -302,6 +301,36 @@ bots_usa_arms_factory_building = {
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
+		value = 500
+	}
+}
+bots_usa_synthetic_refinery_building = {
+		enable = {
+			AND = {
+				original_tag = USA
+				date > 1940.6.1
+				rubber < 300
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1000
+	}
+}
+bots_usa_synthetic_refinery_building = {
+		enable = {
+			AND = {
+				has_global_flag = VUP_Hist_version
+				original_tag = USA
+				has_tech = synth_oil_experiments
+				}
+		}
+		abort = { has_completed_focus = USA_the_giant_wakes}
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
 		value = 1000
 	}
 }
@@ -433,197 +462,5 @@ PHI_strategy_arms_factory_building = {
 		type = building_target
 		id = arms_factory
 		value = 900
-	}
-}
-BRA_autarky_building_1 = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_batalha_do_borracha}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		value = 1000000
-		target = 500
-	}
-}
-BRA_autarky_building_2 = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_batalha_do_borracha}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		value = 1000000
-		target = 500
-	}
-}
-BRA_autarky_building_3 = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_batalha_do_borracha}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		value = 1000000
-		target = 497
-	}
-}
-BRA_autarky_building_4 = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_batalha_do_borracha}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		value = 1000000
-		target = 497
-	}
-}
-BRA_reach_out_to_the_great_powers_to_GER = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
-	}
-	abort = {
-		or = {has_country_flag = ARG_german_loan_flag
-		OR = {
-			NOT = { country_exists = GER }
-			has_war_with = GER
-			GER = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 55
-					}
-					has_capitulated = yes
-					is_subject = yes
-					}
-				}
-			}
-		}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = diplo_action_desire
-		id = GER
-		target = improve_relation
-		value = 200
-	}
-}
-BRA_reach_out_to_the_great_powers_to_USA = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
-	}
-	abort = {
-		or = {has_country_flag = ARG_usa_loan_flag
-		OR = {
-			NOT = { country_exists = USA }
-			has_war_with = USA
-			USA = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 55
-					}
-					has_capitulated = yes
-					is_subject = yes
-					}
-				}
-			}
-		}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = diplo_action_desire
-		id = USA
-		target = improve_relation
-		value = 200
-	}
-}
-BRA_reach_out_to_the_great_powers_to_ENG = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
-	}
-	abort = {
-	or = {has_country_flag = ARG_british_loan_flag
-		OR = {
-			NOT = { country_exists = ENG }
-			has_war_with = ENG
-			ENG = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 55
-					}
-					has_capitulated = yes
-					is_subject = yes
-					}
-				}
-			}
-		}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = diplo_action_desire
-		id = ENG
-		target = improve_relation
-		value = 200
-	}
-}
-BRA_reach_out_to_the_great_powers_to_ITA = {
-	allowed = {
-		original_tag = BRA
-		}
-	enable = {
-		BRA = {has_completed_focus = BRA_reach_out_to_the_great_powers}
-	}
-	abort = {
-		or = {has_country_flag = ARG_italy_loan_flag
-		OR = {
-			NOT = { country_exists = ITA }
-			has_war_with = ITA
-			ITA = {
-				OR = {
-					has_opinion	= {
-						target = ROOT
-						value > 55
-					}
-					has_capitulated = yes
-					is_subject = yes
-					}
-				}
-			}
-		}
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = diplo_action_desire
-		id = ITA
-		target = improve_relation
-		value = 200
 	}
 }

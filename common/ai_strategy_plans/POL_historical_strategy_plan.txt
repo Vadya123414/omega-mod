@@ -35,6 +35,7 @@ POL_historical_plan = {
 
 
 
+
 		POL_the_four_year_plan
 		POL_additional_research_slot1
 		POL_central_region_strategy
@@ -46,9 +47,15 @@ POL_historical_plan = {
 		#1937
 		POL_agrarian_reform
 		POL_invest_in_eastern_poland
-		POL_complete_april_constitution
+		POL_start_central_industrial_region
+		POL_expand_central_industrial_region
+		#POL_develop_polish_ship_building
+		#POL_attract_poles_to_gdynia
+		#POL_study_foreign_built_ships
+		#POL_expand_gdynia_seaport 1.6 ляма без складов
 		POL_polish_militarism
 		POL_national_defense_fund
+		POL_complete_april_constitution
 		#1938
 		POL_consolidate_sanation_government
 		POL_the_sanation_right
@@ -60,15 +67,13 @@ POL_historical_plan = {
 		#1939
 		POL_second_man_of_the_state
 		POL_ozon
-		POL_start_central_industrial_region
-		POL_expand_central_industrial_region
 		POL_prepare_for_the_next_war
 		POL_plan_west
 		POL_sabotage_polish_industry
 		POL_central_defence_of_poland
-		POL_expand_katowice_mines
 		POL_additional_research_slot2
 		POL_ideological_fanaticism
+		POL_expand_katowice_mines
 		POL_expand_poznan_forts
 		POL_hel_fortified_area
 		

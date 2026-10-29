@@ -13,24 +13,18 @@ generic_dominance_fleet_1 = {
 
 generic_raiding_fleet_2 = {
 	required_taskforces = {
-		ConvoyRaiding_1 = 2
+		ConvoyRaiding_1 = 999
 	}	
 	optional_taskforces = {
-		ConvoyRaiding_1 = 2
+		ConvoyRaiding_1 = 999
 	}
 }
 
 generic_escort_fleet_3 = {
 	required_taskforces = {
-		ConvoyEscort_1 = 2
+		ConvoyEscort_1 = 999
 	}
 	optional_taskforces = {
-		ConvoyEscort_1 = 1
-	}
-}
-
-generic_minelaying_fleet_4 = {
-	optional_taskforces = {
-		MineLaying_1 = 1
+		ConvoyEscort_1 = 999
 	}
 }

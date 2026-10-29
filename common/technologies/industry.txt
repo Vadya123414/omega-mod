@@ -1111,10 +1111,12 @@ technologies = {
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		ai_research_weights = {
@@ -1153,15 +1155,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		
@@ -1201,15 +1206,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		
@@ -1243,15 +1251,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}					
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		

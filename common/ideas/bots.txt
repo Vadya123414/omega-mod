@@ -300,5 +300,28 @@ ideas = {
 				}
 			}
 		}
+
+				idea_RAJ_ordnance_sim = {
+			picture = generic_license_production
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		cancel = {
+			or = {
+					is_ai = no
+					date > 1939.6.1
+					}
+			}
+			modifier = {
+				navy_fuel_consumption_factor = -0.9
+
+			}
+		}
 	}
 }

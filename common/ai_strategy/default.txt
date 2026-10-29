@@ -711,7 +711,7 @@ save_air_chief_pp_for_later = {
 		value = -1000
 	}
 }
-save_air_chief_pp_for_later = {
+save_theorist_pp_for_later = {
 	enable = {
 			always = yes
 	}
@@ -739,13 +739,6 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 			}
 		}
 	}
-
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -9999
-	}
-
 	ai_strategy = {
 		type = pp_spend_priority
 		id = guarantee
@@ -766,48 +759,16 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 		id = navy_chief
 		value = -9999
 	}
-		ai_strategy = {
+	ai_strategy = {
 		type = pp_spend_priority
-		id = army_chief
+		id = political_advisor
 		value = -9999
 	}
-
-}
-do_not_waste_pp_if_saving_for_manpower_laws_2 = {
-
-	enable = {
-		manpower_per_military_factory < 500
-	}
-	abort = {
-		OR = {
-			manpower_per_military_factory > 500
-			AND = {
-				original_tag = ETH
-				is_government_in_exile = yes
-			}
-		}
-	}
-		ai_strategy = {
+	ai_strategy = {
 		type = pp_spend_priority
-		id = decision
+		id = army_advisor
 		value = -9999
 	}
-		ai_strategy = {
-		type = pp_spend_priority
-		id = air_chief
-		value = -9999
-	}
-		ai_strategy = {
-		type = pp_spend_priority
-		id = navy_chief
-		value = -9999
-	}
-		ai_strategy = {
-		type = pp_spend_priority
-		id = army_chief
-		value = -9999
-	}
-	
 }
 build_intelligence_agency_as_major = {
 	enable = {

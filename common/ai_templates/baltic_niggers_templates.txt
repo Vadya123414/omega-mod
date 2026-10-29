@@ -5,6 +5,7 @@ infantry_generic = {
         EST
         LIT
         DEN
+		NOR
 	}
 	upgrade_prio = {
 		base = 3
@@ -26,11 +27,11 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 2
+				fire_support = 3
 			}
 			
 			regiments = {
-				infantry = 8
+				infantry = 9
 			}
 		}
 		replace_at_match = 0.6

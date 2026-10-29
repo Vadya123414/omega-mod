@@ -55,6 +55,7 @@ German_historical_strong = {
 		GER_develop_heraeus_facilities			#70		(whenever)
 		GER_build_the_rur_dam
 		GER_accelerate_the_rearmament_program	#35		AUG 36
+		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38		
 		
 
 		#1937
@@ -65,7 +66,7 @@ German_historical_strong = {
 		GER_dive_bombers						#35 
 		
 		#1938
-		GER_reorganize_the_wehrmacht			#35 	JAN-FEB 38		
+		
 		GER_bribe_senior_officers				#35
 		GER_autonomy_in_the_kriegsschulen
 		GER_coal_liquefaction					#35
@@ -79,6 +80,9 @@ German_historical_strong = {
 		GER_reassert_eastern_claims				#35 	MAR 39
 		GER_molotov_ribbentrop_pact				#35 	AUG 39
 		GER_danzig_or_war						#70 	MAR 39 - Germany invaded in SEP 39 (complete on AUG 31st)
+		GER_demand_slovenia
+		GER_first_ljubljana_award
+		GER_fate_of_yugoslavia
 		
 
 
@@ -290,6 +294,7 @@ German_historical_weak = {
 
 		#1941
 		GER_subjugate_romanian_economy			#35 	(whenever in 40)
+		GER_fate_of_yugoslavia
 		GER_the_swiss_gold
 		GER_uplift_the_rosenberg_office			#35 	
 		GER_instill_auftragstaktik

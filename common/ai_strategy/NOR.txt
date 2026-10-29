@@ -1,0 +1,14 @@
+NOR_the_home_fleet  = {
+	allowed = { original_tag = NOR }
+
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 207 # north sea
+		value = 1000
+	}
+}

@@ -1,7 +1,7 @@
 StrikeForce_1 = {
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 	}
 	keep_updated = yes
 	mission = { naval_strike }
@@ -35,7 +35,7 @@ StrikeForce_1 = {
 
 PatrolReconForce_1 = {
 	ai_will_do = {
-		factor = 5
+		factor = 10
 	}
 	mission = { naval_patrol }
 	min_composition = {
@@ -136,7 +136,7 @@ PatrolDominanceForce_BC_1 = {
 ConvoyRaiding_1 = {
 
 	ai_will_do = {
-		factor = 1
+		factor = 3
 	}
 	keep_updated = yes
 	mission = { convoy_raiding }
@@ -156,7 +156,7 @@ ConvoyRaiding_1 = {
 ConvoySurfaceRaiding_1 = {
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 	keep_updated = yes
 	mission = { convoy_raiding }
@@ -191,7 +191,7 @@ ConvoySurfaceRaiding_1 = {
 ConvoyEscort_1 = {
 
 	ai_will_do = {
-		factor = 5
+		factor = 1
 	}	
 	mission = { convoy_escort }
 	min_composition = {

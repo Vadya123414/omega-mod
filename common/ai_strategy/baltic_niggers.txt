@@ -1,0 +1,189 @@
+do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
+
+	enable = {
+		or = {
+			original_tag = NOR
+			original_tag = DEN
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+		}
+		date > 1939.1.1
+		has_global_flag = VUP_Hist_version
+	}
+	abort = {
+		has_idea = all_adult_serve
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+		ai_strategy = {
+		type = decision
+		id = relation
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = air_chief
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = navy_chief
+		value = -9999
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = political_advisor
+		value = -9999
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = army_advisor
+		value = -9999
+	}
+}
+NOR_bunker_1 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9174
+		value = 3
+	}
+}
+NOR_bunker_2 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 6151
+		value = 2
+	}
+}
+NOR_bunker_3 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9096
+		value = 3
+	}
+}
+NOR_bunker_4 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 11176
+		value = 3
+	}
+}
+NOR_bunker_5 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9296
+		value = 3
+	}
+}
+NOR_airbase_1 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = airbase
+        target = 920
+		value = 10
+	}
+}
+NOR_airbase_2 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = airbase
+        target = 143
+		value = 10
+	}
+}
+NOR_defend_110 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = airbase
+        target = 920
+		value = 10
+	}
+}
+
+NOR_not_defend_SWI = {
+    	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	type = dont_defend_ally_borders
+	id = SWI
+	value = 100  
+}
+SWI_bunker_1 = { 
+	enable = {
+		original_tag = SWI
+        date > 1938.1.1
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 6345
+		value = 6
+	}
+}

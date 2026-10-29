@@ -110,32 +110,6 @@ no_garrison = {
 
 	ai_will_do = {
 		base = 0
-
-		modifier = {
-			FROM = {
-				has_government = democratic
-			}
-			has_active_resistance = no
-			add = 200
-		}
-		# if losing, get manpower & equipment back
-		modifier = {
-			FROM = {
-				surrender_progress > 0.15
-			}
-			add = 100
-		}
-		modifier = {
-			FROM = {
-				surrender_progress > 0.4
-			}
-			add = 500
-		}
-
-		modifier = {
-			check_variable  = { uncapped_resistance_target > -0.4 }
-			add = -60
-		}
 	}
 }
 
@@ -155,7 +129,7 @@ autonomous_occupation = {
 	}
 
 	ai_will_do = {
-		base = 300
+		base = 200
 
 		modifier = {
 			set_temp_variable = { resistance_limit = 30 }
@@ -165,6 +139,24 @@ autonomous_occupation = {
 			}
 			resistance < autonomous_occupation # if we are under base resistance try to build compliance instead
 			add = 500
+		}
+		modifier = {
+			FROM = {
+				has_capitulated = yes
+				has_government = democratic
+			}
+			add = 1000
+		}
+		modifier = {
+			OR = {
+				FROM = {
+					has_war = no
+					has_government = democratic
+				}
+				resistance < 10
+				compliance > 80 #we can sustain this
+			}
+			add = 5000
 		}
 	}
 }
@@ -186,8 +178,58 @@ foreign_civilian_oversight = {
 	ai_will_do = {
 		base = 120
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.25}
+			check_variable  = { resistance_target_without_law > 0.4}
 			add = 100
+		}
+		modifier = {
+			compliance > 80
+			add = 200
+		}
+		
+		modifier = {
+			FROM = { 
+				tag = BUL
+				NOT = { has_government = democratic }  
+			}
+			BUL_is_balkan_state = yes
+			add = 20000
+		}
+
+		modifier = {
+			FROM = {
+				original_tag = SPR
+			}
+			date < 1943.1.1
+
+			add = 2000
+		}
+		modifier = {
+			FROM = { 
+				tag = RAJ
+				has_completed_focus = RAJ_his_majestys_loyal_government
+				NOT = { has_completed_focus = RAJ_the_government_of_india_act } 
+			}
+			add = 20000
+		}
+		modifier = {
+			add = 9999
+			FROM = {
+				tag = RAJ
+				is_subject = yes	
+				OR = {
+					has_completed_focus = RAJ_forward_bloc
+					has_country_flag = RAJ_AI_RANDOM_INDIA_BOSE
+					has_game_rule = {
+						rule = RAJ_ai_behavior
+						option = GOE_INDIA_FASCISM_BOSE
+					}
+					has_country_flag = RAJ_AI_RANDOM_INDIA_HINDUTVA
+					has_game_rule = {
+						rule = RAJ_ai_behavior
+						option = GOE_INDIA_FASCISM_HINDUTVA
+					}
+				}
+			}
 		}
 	}
 }
@@ -210,22 +252,8 @@ local_police_force_garrison = {
 	ai_will_do = {
 		base = 100
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.3}
+			check_variable  = { resistance_target_without_law > 0.55}
 			add = 200
-		}
-
-
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.34}
-
-			set_temp_variable = { requirement_limit = 0.25 }
-			if = {
-				limit = { occupation_law = local_police_force_garrison }
-				set_temp_variable = { requirement_limit = 0.45 }
-			}
-			check_variable = { garrison_min_support_ratio < requirement_limit }
-
-			add = 350
 		}
 	}
 }
@@ -244,6 +272,13 @@ secret_police_oversight = {
 		enemy_operative_detection_chance_over_occupied_tag = 1 # offset detection chance by +1%
 		enemy_intel_network_gain_factor_over_occupied_tag = -0.25 # -25% scaled by the number of occupied states and the ratio of the network covering those occupied states
 		# todo + spy defense
+	}
+		ai_will_do = {
+		base = 100
+		modifier = {
+			check_variable  = { resistance_target_without_law > 0.70}
+			add = 200
+		}
 	}
 }
 
@@ -283,37 +318,6 @@ military_governor_occupation = {
 	}
 	ai_will_do = {
 		base = 0
-
-		#modifier = {
-			#set_temp_variable = { num_factory = building_level@arms_factory }
-			#add_to_temp_variable = { num_factory = building_level@industrial_complex }
-			#check_variable = { num_factory < 1 }
-
-			#add = 50
-		#}
-		#modifier = {
-		#	is_core_of = FROM
-
-		#	add = 150
-		#}
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.5}
-			add = 400
-		}
-		
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.34}
-
-			set_temp_variable = { requirement_limit = 0.25 }
-			if = {
-				limit = { occupation_law = military_governor_occupation }
-				set_temp_variable = { requirement_limit = 0.45 }
-			}
-			check_variable = { garrison_min_support_ratio < requirement_limit }
-
-			add = 400
-		}
-		
 	}
 }
 
@@ -334,7 +338,7 @@ martial_law_occupation = {
 		base = 0
 
 		modifier = {
-			check_variable = { resistance_target_without_law > 0.6}
+			check_variable = { resistance_target_without_law > 1}
 
 			set_temp_variable = { resistance_limit = 40 }
 			set_temp_variable = { requirement_limit = 0.65 }
@@ -381,20 +385,6 @@ forced_labor_occupation = {
 			}
 			check_variable = { garrison_min_support_ratio < requirement_limit }
 			factor = 0
-		}
-
-		modifier = {
-			set_temp_variable = { num_damaged = damaged_building_level@infrastructure }
-
-			check_variable = { num_damaged > 0 }
-			clamp_temp_variable = { var = num_damaged max = 8 }
-			multiply_temp_variable = { num_damaged = 80 }
-			add_to_temp_variable = { num_damaged = 200 }
-			FROM = {
-				has_war = yes
-				add_to_temp_variable = { num_damaged = 100 }
-			}
-			add = num_damaged
 		}
 
 		modifier = {
@@ -463,15 +453,76 @@ harsh_quotas_occupation = {
 		base = 0
 
 		modifier = {
-			set_temp_variable = { num_damaged = damaged_building_level@arms_factory }
-			add_to_temp_variable = { num_damaged = damaged_building_level@industrial_complex }
+			FROM = {
+				original_tag = SPR
+			}
+			date < 1943.1.1
 
-			check_variable = { num_damaged > 0 }
-			clamp_temp_variable = { var = num_damaged max = 4 }
-			multiply_temp_variable = { num_damaged = 50 }
-			add_to_temp_variable = { num_damaged = 150 }
+			add = -9999
+		}
 
-			add = num_damaged
+		modifier = {
+			or = {
+			original_tag = GER
+			original_tag = JAP	
+			}
+			date > 1940.6.1
+			OR ={
+				AND = {
+					check_variable = { building_level@arms_factory = 2 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 2 compare = greater_than }
+				}
+				AND = {
+					check_variable = { building_level@arms_factory = 3 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 1 compare = greater_than }
+				}
+				AND = {
+					check_variable = { building_level@arms_factory = 1 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 3 compare = greater_than }
+				}
+				check_variable = { building_level@arms_factory = 4 compare = greater_than }
+				check_variable = { building_level@industrial_complex = 4 compare = greater_than }
+			}
+			
+			
+			FROM  = {
+				NOT = { has_government = communism } #we get better occupation law
+			}
+
+			add = 4000
+		}
+
+		modifier = {
+			compliance > 95
+			OR ={
+				AND = {
+					check_variable = { building_level@arms_factory = 2 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 2 compare = greater_than }
+				}
+				AND = {
+					check_variable = { building_level@arms_factory = 3 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 1 compare = greater_than }
+				}
+				AND = {
+					check_variable = { building_level@arms_factory = 1 compare = greater_than }
+					check_variable = { building_level@industrial_complex = 3 compare = greater_than }
+				}
+				check_variable = { building_level@arms_factory = 4 compare = greater_than }
+				check_variable = { building_level@industrial_complex = 4 compare = greater_than }
+			}
+			
+			
+			FROM  = {
+				NOT = { has_government = communism }
+			}
+
+			add = 4000
+		}
+		modifier = {
+			OR = {
+				has_dynamic_modifier = { modifier = idea_RAJ_aden_treaty_port }
+			}
+			add = 9999
 		}
 	}
 }
@@ -497,7 +548,7 @@ brutally_oppressive_occupation = {
 		base = 0
 
 		modifier = {
-			check_variable  = { resistance_target_without_law > 0.84 }
+			check_variable  = { resistance_target_without_law > 1.4 }
 
 			set_temp_variable = { resistance_limit = 40 }
 			set_temp_variable = { requirement_limit = 2.0 }
@@ -1191,20 +1242,6 @@ FRA_man_powers = {
 		original_tag = FRA
 	}
 	ai_will_do = {
-		# enabled if has damaged factories
-		# gets higher score if more are damaged
-		base = 0
-
-		modifier = {
-			set_temp_variable = { num_damaged = damaged_building_level@arms_factory }
-			add_to_temp_variable = { num_damaged = damaged_building_level@industrial_complex }
-
-			check_variable = { num_damaged > 0 }
-			clamp_temp_variable = { var = num_damaged max = 4 }
-			multiply_temp_variable = { num_damaged = 50 }
-			add_to_temp_variable = { num_damaged = 150 }
-
-			add = num_damaged
-		}
+		base = 10000
 	}
 }
