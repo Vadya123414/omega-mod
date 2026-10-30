@@ -6437,9 +6437,9 @@ RAJ_concessions_to_the_congress_cat = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 0.1
+			base = 0
 			modifier = { # Too low PP
-				factor = 2
+				add = 10
 					date > 1939.1.1
 			}
 			modifier = { #We have plenty of PP, avanti!
@@ -6468,7 +6468,7 @@ RAJ_concessions_to_the_congress_cat = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 0.1
+			base = 0
 		}
 
 		complete_effect = {
@@ -6491,7 +6491,7 @@ RAJ_concessions_to_the_congress_cat = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 0.5
+			base = 10
 
 			modifier = { 
 				factor = 3
@@ -6528,7 +6528,7 @@ RAJ_concessions_to_the_congress_cat = {
 		fire_only_once = no
 
 		ai_will_do = {
-			base = 0.1
+			base = 0
 		}
 
 		complete_effect = {

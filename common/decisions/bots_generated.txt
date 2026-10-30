@@ -1251,7 +1251,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Division d'Infanterie Motorisée" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Division d'Infanterie Motorisée"
                     disband = yes
                 }
@@ -1272,7 +1272,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Division Légère Mécanique" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Division Légère Mécanique"
                     disband = yes
                 }
@@ -1366,14 +1366,14 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Panzer-Division" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Panzer-Division"
                     disband = yes
                 }
             }
             if = {
                 limit = { has_template = "Infanterie-Division (mot.)" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Infanterie-Division (mot.)"
                     disband = yes
                 }
@@ -1935,7 +1935,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Camicie Nere" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Camicie Nere"
                     disband = yes
                 }
@@ -1946,7 +1946,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Reggimento di Cavalleria" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Reggimento di Cavalleria"
                     disband = yes
                 }
@@ -2074,7 +2074,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Kihei Shidan" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Kihei Shidan"
                     disband = yes
                 }
@@ -4221,7 +4221,7 @@ BOTS = {
             }
             if = {
                 limit = { has_template = "Cavalry Division" }
-                delete_units = {
+                delete_unit_template_and_units = {
                     division_template = "Cavalry Division"
                     disband = yes
                 }

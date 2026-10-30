@@ -973,4 +973,35 @@ set_spec_doctrine_40 = {
 				}
         }
     } 
+    bot_GER_VUP_Hist_version = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            original_tag = GER
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100}
+        cost = 0
+        complete_effect = {
+           	reduce_focus_completion_cost = {
+				focus = { GER_demand_slovenia }
+				cost = 34
+			}
+        	reduce_focus_completion_cost = {
+				focus = { GER_first_ljubljana_award }
+				cost = 20
+			}
+            reduce_focus_completion_cost = {
+				focus = { GER_fate_of_yugoslavia }
+				cost = 65
+			}
+        }
+    }
 }

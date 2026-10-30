@@ -18,12 +18,16 @@ GER_spy_on_FRA = {
 			value < 2
 		}
 	}
-	
+
 	abort = {
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
 			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = FRA
 		}
 	}
 	
@@ -48,7 +52,36 @@ GER_spy_on_FRA = {
 		value = 50
 	}
 }
+GER_not_spy_on_FRA = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = FRA
+			value > 1
+		}
+		
+	}
 
+		abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+		}
+		}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = -1000
+		mission_target = FRA
+	}
+}
 GER_spy_on_POL = {
 	allowed = {
 		tag = GER
@@ -75,7 +108,17 @@ GER_spy_on_POL = {
 		}
 	}
 	
-	abort_when_not_enabled = yes
+		abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = POL
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = POL
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
@@ -96,7 +139,35 @@ GER_spy_on_POL = {
 		value = 50
 	}
 }
+GER_not_spy_on_POL = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = POL
+			value > 1
+		}
+	}
 
+		abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+			}
+		}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = -1000
+		mission_target = POL
+	}
+}
 GER_spy_on_HOL = {
 	allowed = {
 		tag = GER
@@ -128,7 +199,17 @@ GER_spy_on_HOL = {
 		}
 	}
 	
-	abort_when_not_enabled = yes
+			abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = HOL
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = HOL
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
@@ -149,7 +230,35 @@ GER_spy_on_HOL = {
 		value = 50
 	}
 }
+GER_not_spy_on_HOL = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = HOL
+			value > 1
+		}
+	}
 
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+			}
+		}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = -1000
+		mission_target = HOL
+	}
+}
 GER_spy_on_BEL = {
 	allowed = {
 		tag = GER
@@ -186,7 +295,17 @@ GER_spy_on_BEL = {
 		}
 	}
 	
-	abort_when_not_enabled = yes
+				abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = BEL
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = BEL
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
@@ -205,6 +324,35 @@ GER_spy_on_BEL = {
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
 		value = 50
+	}
+}
+GER_not_spy_on_BEL = {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = BEL
+			value > 1
+		}
+	}
+
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+			}
+		}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = -1000
+		mission_target = BEL
 	}
 }
 GER_spy_on_YUG = {
@@ -248,7 +396,17 @@ GER_spy_on_YUG = {
 		}
 	}
 	
-	abort_when_not_enabled = yes
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = YUG
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
@@ -315,7 +473,17 @@ GER_spy_on_NOR = {
 		}
 	}
 	
-	abort_when_not_enabled = yes
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = NOR
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = NOR
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
@@ -329,6 +497,73 @@ GER_spy_on_NOR = {
 		operation = operation_collaboration_government
 		value = 1000
 		operation_target = NOR
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 50
+	}
+}
+GER_spy_on_SOV= {
+	allowed = {
+		tag = GER
+	}
+	
+	enable = {
+		tag = GER
+		#NOT = { has_completed_focus = GER_the_four_year_plan }
+		date > 1938.1.1
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = FRA
+			value > 1
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = POL
+			value > 1
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = HOL
+			value > 1
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = BEL
+			value > 1
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = YUG
+			value > 1
+		}
+		SOV = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = GER }
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = SOV
+			value < 2
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = SOV
+	}
+	
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 1000
+		operation_target = SOV
 	}
 
 	ai_strategy = {
