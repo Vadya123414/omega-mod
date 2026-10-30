@@ -262,7 +262,7 @@
 		x = -3
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style
 
@@ -764,7 +764,7 @@
 		x = 0
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
@@ -894,7 +894,7 @@
 		x = 2
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -1079,7 +1079,7 @@
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -1167,7 +1167,7 @@
 		x = -6
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
@@ -2721,7 +2721,7 @@
 		x = 9
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			OR = {
@@ -3014,7 +3014,7 @@
 		x = -0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -3316,7 +3316,7 @@
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -4292,7 +4292,7 @@
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -4387,7 +4387,7 @@
 		x = 4
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -4504,7 +4504,7 @@
 		x = 4
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -4769,7 +4769,7 @@
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -4949,7 +4949,7 @@
 		x = 1
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style
 
@@ -5061,7 +5061,7 @@
 		x = 0
 		y = 3
 
-		cost = 12
+		cost = 10
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -6008,7 +6008,7 @@
 		x = -1
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 			OR = {
@@ -6098,7 +6098,7 @@
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -6193,7 +6193,7 @@
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -6335,7 +6335,7 @@
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -7020,7 +7020,7 @@
 		x = 1
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -7214,7 +7214,7 @@
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -7299,7 +7299,7 @@
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style
 
@@ -7378,7 +7378,7 @@
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -8276,7 +8276,7 @@
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
@@ -8381,7 +8381,7 @@
 		x = 2
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY }
 
@@ -8484,7 +8484,7 @@
 		x = 4
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -8584,7 +8584,7 @@
 		x = -2
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -8708,7 +8708,7 @@
 		x = 0
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -8808,7 +8808,7 @@
 		x = 0
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style
 
@@ -8872,7 +8872,7 @@
 		x = 0
 		y = 4
 
-		cost = 12
+		cost = 10
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -8981,7 +8981,7 @@
 		x = 5
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -9051,7 +9051,7 @@
 		x = 3
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_COG_focus_style
 
@@ -9998,7 +9998,7 @@
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_BEL_focus_style
 
@@ -10112,7 +10112,7 @@
 		x = 2
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style
 
@@ -10224,7 +10224,7 @@
 		x = 4
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		text_icon = CONGO_COG_focus_style 
 

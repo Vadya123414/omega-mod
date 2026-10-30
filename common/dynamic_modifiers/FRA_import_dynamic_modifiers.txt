@@ -104,7 +104,6 @@ FRA_fabriki = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_military_plans
 	local_building_slots_factor = -5
-	production_speed_naval_base_factor = -1
 }
 
 Kefir_delat_plaki_plaki = { #STATE MODIFIER

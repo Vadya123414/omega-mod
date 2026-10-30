@@ -59,6 +59,22 @@ ideas = {
 				country_resource_rubber = 20
             }
 	    }
+
+		SNG_mountaineers_effort = {
+
+			picture = generic_mountain_warfare
+
+			cancel = {
+				NORDIC_basic_joint_trigger = no 
+			}
+
+			modifier = {
+				mountaineers_special_forces_contribution_factor = -0.25
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
+				modifier_army_sub_unit_mountaineers_speed_factor = 0.05
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.1
+			} 
+		}
 		
 			USA_civil_war = {	
 				allowed = {
