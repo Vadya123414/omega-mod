@@ -1,5 +1,5 @@
 air_and_general_prod_0 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 0
 		num_of_military_factories < 10
@@ -27,7 +27,7 @@ air_and_general_prod_0 = {
 }
 
 air_and_general_prod_10 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 9
 		num_of_military_factories < 20
@@ -55,7 +55,7 @@ air_and_general_prod_10 = {
 }
 
 air_and_general_prod_20 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 19
 		num_of_military_factories < 30
@@ -83,7 +83,7 @@ air_and_general_prod_20 = {
 }
 
 air_and_general_prod_30 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 29
 		num_of_military_factories < 40
@@ -111,7 +111,7 @@ air_and_general_prod_30 = {
 }
 
 air_and_general_prod_40 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 39
 		num_of_military_factories < 50
@@ -139,7 +139,7 @@ air_and_general_prod_40 = {
 }
 
 air_and_general_prod_50 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 49
 		num_of_military_factories < 60
@@ -167,7 +167,7 @@ air_and_general_prod_50 = {
 }
 
 air_and_general_prod_60 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 59
 		num_of_military_factories < 70
@@ -195,7 +195,7 @@ air_and_general_prod_60 = {
 }
 
 air_and_general_prod_70 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 69
 		num_of_military_factories < 80
@@ -222,7 +222,7 @@ air_and_general_prod_70 = {
 	}
 }
 air_and_general_prod_80 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 79
 		num_of_military_factories < 90
@@ -250,7 +250,7 @@ air_and_general_prod_80 = {
 }
 
 air_and_general_prod_90 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 89
 		num_of_military_factories < 100
@@ -278,7 +278,7 @@ air_and_general_prod_90 = {
 }
 
 air_and_general_prod_100 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 99
 		num_of_military_factories < 110
@@ -306,7 +306,7 @@ air_and_general_prod_100 = {
 }
 
 air_and_general_prod_110 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 109
 		num_of_military_factories < 120
@@ -334,7 +334,7 @@ air_and_general_prod_110 = {
 }
 
 air_and_general_prod_120 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 119
 		num_of_military_factories < 130
@@ -362,7 +362,7 @@ air_and_general_prod_120 = {
 }
 
 air_and_general_prod_130 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 129
 		num_of_military_factories < 140
@@ -390,7 +390,7 @@ air_and_general_prod_130 = {
 }
 
 air_and_general_prod_140 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 139
 		num_of_military_factories < 150
@@ -418,7 +418,7 @@ air_and_general_prod_140 = {
 }
 
 air_and_general_prod_150 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 149
 		num_of_military_factories < 160
@@ -446,7 +446,7 @@ air_and_general_prod_150 = {
 }
 
 air_and_general_prod_160 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 159
 		num_of_military_factories < 170
@@ -474,7 +474,7 @@ air_and_general_prod_160 = {
 }
 
 air_and_general_prod_170 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 169
 		num_of_military_factories < 180
@@ -502,7 +502,7 @@ air_and_general_prod_170 = {
 }
 
 air_and_general_prod_180 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 179
 		num_of_military_factories < 190
@@ -530,7 +530,7 @@ air_and_general_prod_180 = {
 }
 
 air_and_general_prod_190 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 189
 		num_of_military_factories < 200
@@ -558,7 +558,7 @@ air_and_general_prod_190 = {
 }
 
 air_and_general_prod_200 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 199
 		num_of_military_factories < 210
@@ -586,7 +586,7 @@ air_and_general_prod_200 = {
 }
 
 air_and_general_prod_210 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 209
 		num_of_military_factories < 220
@@ -614,7 +614,7 @@ air_and_general_prod_210 = {
 }
 
 air_and_general_prod_220 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 219
 		num_of_military_factories < 230
@@ -642,7 +642,7 @@ air_and_general_prod_220 = {
 }
 
 air_and_general_prod_230 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 229
 		num_of_military_factories < 240
@@ -670,7 +670,7 @@ air_and_general_prod_230 = {
 }
 
 air_and_general_prod_240 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 239
 		num_of_military_factories < 250
@@ -698,7 +698,7 @@ air_and_general_prod_240 = {
 }
 
 air_and_general_prod_250 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 249
 		num_of_military_factories < 260
@@ -726,7 +726,7 @@ air_and_general_prod_250 = {
 }
 
 air_and_general_prod_260 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 259
 		num_of_military_factories < 270
@@ -754,7 +754,7 @@ air_and_general_prod_260 = {
 }
 
 air_and_general_prod_270 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 269
 		num_of_military_factories < 280
@@ -782,7 +782,7 @@ air_and_general_prod_270 = {
 }
 
 air_and_general_prod_280 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 279
 		num_of_military_factories < 290
@@ -810,7 +810,7 @@ air_and_general_prod_280 = {
 }
 
 air_and_general_prod_290 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 289
 		num_of_military_factories < 300
@@ -838,7 +838,7 @@ air_and_general_prod_290 = {
 }
 
 air_and_general_prod_300 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 299
 		num_of_military_factories < 310
@@ -866,7 +866,7 @@ air_and_general_prod_300 = {
 }
 
 air_and_general_prod_310 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 309
 		num_of_military_factories < 320
@@ -894,7 +894,7 @@ air_and_general_prod_310 = {
 }
 
 air_and_general_prod_320 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 319
 		num_of_military_factories < 330
@@ -922,7 +922,7 @@ air_and_general_prod_320 = {
 }
 
 air_and_general_prod_330 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 329
 		num_of_military_factories < 340
@@ -950,7 +950,7 @@ air_and_general_prod_330 = {
 }
 
 air_and_general_prod_340 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 339
 		num_of_military_factories < 350
@@ -978,7 +978,7 @@ air_and_general_prod_340 = {
 }
 
 air_and_general_prod_350 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 349
 		num_of_military_factories < 360
@@ -1006,7 +1006,7 @@ air_and_general_prod_350 = {
 }
 
 air_and_general_prod_360 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 359
 		num_of_military_factories < 370
@@ -1034,7 +1034,7 @@ air_and_general_prod_360 = {
 }
 
 air_and_general_prod_370 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 369
 		num_of_military_factories < 380
@@ -1062,7 +1062,7 @@ air_and_general_prod_370 = {
 }
 
 air_and_general_prod_380 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 379
 		num_of_military_factories < 390
@@ -1090,7 +1090,7 @@ air_and_general_prod_380 = {
 }
 
 air_and_general_prod_390 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 389
 		num_of_military_factories < 400
@@ -1118,7 +1118,7 @@ air_and_general_prod_390 = {
 }
 
 air_and_general_prod_400 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 399
 		num_of_military_factories < 410
@@ -1146,7 +1146,7 @@ air_and_general_prod_400 = {
 }
 
 air_and_general_prod_410 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 409
 		num_of_military_factories < 420
@@ -1174,7 +1174,7 @@ air_and_general_prod_410 = {
 }
 
 air_and_general_prod_420 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 419
 		num_of_military_factories < 430
@@ -1202,7 +1202,7 @@ air_and_general_prod_420 = {
 }
 
 air_and_general_prod_430 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 429
 		num_of_military_factories < 440
@@ -1230,7 +1230,7 @@ air_and_general_prod_430 = {
 }
 
 air_and_general_prod_440 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 439
 		num_of_military_factories < 450
@@ -1258,7 +1258,7 @@ air_and_general_prod_440 = {
 }
 
 air_and_general_prod_450 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 449
 		num_of_military_factories < 460
@@ -1286,7 +1286,7 @@ air_and_general_prod_450 = {
 }
 
 air_and_general_prod_460 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 459
 		num_of_military_factories < 470
@@ -1314,7 +1314,7 @@ air_and_general_prod_460 = {
 }
 
 air_and_general_prod_470 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 469
 		num_of_military_factories < 480
@@ -1342,7 +1342,7 @@ air_and_general_prod_470 = {
 }
 
 air_and_general_prod_480 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 479
 		num_of_military_factories < 490
@@ -1370,7 +1370,7 @@ air_and_general_prod_480 = {
 }
 
 air_and_general_prod_490 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 489
 		num_of_military_factories < 500
@@ -1398,7 +1398,7 @@ air_and_general_prod_490 = {
 }
 
 air_and_general_prod_500 = {
-	allowed = { always = yes }
+	allowed = { always = no }
 	enable = {
 		num_of_military_factories > 499
 		has_tech = improved_small_airframe

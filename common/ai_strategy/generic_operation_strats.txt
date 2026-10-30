@@ -80,7 +80,7 @@ run_generic_rescue_operation = {
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 900
+		value = 90000
 		mission_target = var:rescue_operative_from
 	}
 }

@@ -98,21 +98,22 @@ RAJ_GOE_historical = {
 	}
 
 	ideas = {
-		all_india_muslim_league_leader = 1000
-		popular_figurehead = 500
-		well_mannered_iman = 300
+		idea_RAJ_the_reserve_bank_of_india = 100
+		all_india_muslim_league_leader = 50
+		popular_figurehead = 30
+		well_mannered_iman = 15
 		army_chief_offensive_2 = 400
-		army_infantry_2 = 100
+		army_infantry_2 = 10
 		surveyor = 10
 		army_entrenchment_3 = 10
 	}
 
 	traits = {
-		all_india_muslim_league_leader = 1000
-		popular_figurehead = 500
-		well_mannered_iman = 300
+		all_india_muslim_league_leader = 50
+		popular_figurehead = 30
+		well_mannered_iman = 15
 		army_chief_offensive_2 = 400
-		army_infantry_2 = 100
+		army_infantry_2 = 10
 		surveyor = 10
 		army_entrenchment_3 = 10
 	}
@@ -131,4 +132,3 @@ RAJ_GOE_historical = {
 	}
 
 }
-

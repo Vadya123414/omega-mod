@@ -1,4 +1,5 @@
 boost_div_upgrades = { 
+	allowed = {always = yes}
 	enable = {
 		always = yes
 	}
@@ -11,6 +12,7 @@ boost_div_upgrades = {
 	}
 }
 default_air_production = {
+	allowed = {always = yes}
 	enable = {
 		is_major = yes
 		has_tech = improved_small_airframe
@@ -40,6 +42,7 @@ default_air_production = {
 	}
 }
 	default_armor_production = {
+		allowed = {always = yes}
 	enable = {
 		always = yes
 	}
@@ -84,6 +87,7 @@ default_air_production = {
 	}
 }
 default_air_production = {
+	allowed = {always = yes}
 		enable = {
 		NOT = {
 			AND = {
@@ -151,9 +155,9 @@ default_air_production = {
 	}
 }
 default_unit_production = {
-	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	allowed = {always = yes}
 	enable = {
-
+		always = yes
 		}
 	abort_when_not_enabled = no
 	abort = { always = no }
@@ -170,6 +174,11 @@ default_unit_production = {
 		type = role_ratio
 		id = infantry
 		value = 100
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -100
 	}
 }
 default_paratroopers_unit_production = {
@@ -390,9 +399,11 @@ major_default_naval_ratios = {
 	}
 }
 default_convoy_production = {
-
-	enable = {
+	allowed = {
 		original_tag = GER
+	}
+	enable = {
+		always = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -419,35 +430,11 @@ default_pp_spend_amount = {
 		value = 100
 	}
 }
-at_start_we_need_manpower = {
-	enable = {
-		original_tag = LIT
-		original_tag = LAT
-		original_tag = DEN
-		original_tag = BEL
-		original_tag = HOL
-	}
-	abort = {
-		has_idea = extensive_conscription
-	}
 
-	ai_strategy = {
-		type = pp_spend_amount
-		id = army_advisor
-		value = -1000
-	}
-		ai_strategy = {
-		type = pp_spend_amount
-		id = political_advisor
-		value = -1000
-	}
-		ai_strategy = {
-		type = pp_spend_amount
-		id = decision
-		value = -1000
-	}
-}
 RAJ_take_first_parlament = {
+	allowed = {
+		original_tag = RAJ
+	}
 	enable = {
 		original_tag = RAJ
 	}
@@ -455,21 +442,15 @@ RAJ_take_first_parlament = {
 		has_completed_focus = RAJ_the_indian_parlament
 		has_completed_focus = RAJ_expand_the_zamindari_system
 	}
-
-	ai_strategy = {
-		type = pp_spend_amount
-		id = army_advisor
-		value = -1000
-	}
 		ai_strategy = {
 		type = pp_spend_amount
 		id = political_advisor
-		value = -1000
+		value = -10000
 	}
 		ai_strategy = {
 		type = pp_spend_amount
 		id = decision
-		value = -1000
+		value = -10000
 	}
 }
 default_major_SF_marines = {

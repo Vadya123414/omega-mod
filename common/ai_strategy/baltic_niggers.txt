@@ -182,3 +182,34 @@ SWI_bunker_1 = {
 		value = 6
 	}
 }
+at_start_we_need_manpower = {
+	allowed = {
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = DEN
+		original_tag = BEL
+		original_tag = HOL
+	}
+	enable = {
+		not = {has_idea = extensive_conscription}
+	}
+	abort = {
+		has_idea = extensive_conscription
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = army_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = political_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1000
+	}
+}

@@ -19,7 +19,7 @@ GER_fighter = {
 	# kept as a fallback past engines_4 in case the 30mm hub cannon for the D-12 isn't researched yet; the D-12's higher match_value supersedes it once buildable
 	fw_190_a5 = {
 		priority = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -56,7 +56,7 @@ GER_fighter = {
 	# Fw 190 D-12 - inline "Dora" with 30mm hub cannon (1945)
 	fw_190_d12 = {
 		priority = {
-			factor = 10
+			factor = 2000
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -107,7 +107,6 @@ GER_cas = {
 		priority = {
 			factor = 2000
 			modifier = { 
-				date < 1939.12.1
 				factor = 0
 			}
 		}
