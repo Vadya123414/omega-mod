@@ -822,7 +822,6 @@ set_spec_doctrine_40 = {
             original_tag = FIN
             has_war = yes
             has_war_support > 0.81
-            date>1941.1.1
             }
 		visible = {
                 original_tag = FIN

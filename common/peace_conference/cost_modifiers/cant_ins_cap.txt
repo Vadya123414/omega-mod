@@ -1,4 +1,3 @@
-	
 peace_action_modifiers = {
         EUR_annex_ins = {
         category = events_or_focuses
