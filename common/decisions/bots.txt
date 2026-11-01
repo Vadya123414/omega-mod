@@ -739,9 +739,6 @@ set_spec_doctrine_40 = {
 
 		icon = oppression
 		available = {
-            if = {limit = {original_tag = NOR}
-            not = {has_completed_focus = }
-        }
             NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             #is_minor = yes
