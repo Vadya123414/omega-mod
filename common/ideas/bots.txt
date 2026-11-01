@@ -364,7 +364,7 @@ ideas = {
 			}
 		}
 
-				idea_RAJ_ordnance_sim = {
+			JAP_bot_fix_fuel= {
 			picture = generic_license_production
 			allowed = {
 				original_tag = JAP
@@ -378,11 +378,33 @@ ideas = {
 		cancel = {
 			or = {
 					is_ai = no
-					date > 1939.6.1
+					date > 1941.1.1
 					}
 			}
 			modifier = {
-				navy_fuel_consumption_factor = -0.9
+				navy_fuel_consumption_factor = -0.99
+
+			}
+		}
+		BOL_bot_fix_pp= {
+			picture = generic_license_production
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		cancel = {
+			or = {
+					is_ai = no
+					date > 1941.1.1
+					}
+			}
+			modifier = {
+				political_power_cost = 1
 
 			}
 		}

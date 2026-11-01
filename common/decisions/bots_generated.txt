@@ -425,6 +425,7 @@ BOTS = {
         fire_only_once = yes
         icon = oppression
         available = {
+            not = { has_idea  = BUL_army_restrictions_aat }
             if = { date > 1936.1.1 }
             original_tag = BUL
             has_war = no

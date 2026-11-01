@@ -1,9 +1,9 @@
 ITA_dominance_fleet_1 = {
 	required_taskforces = {
-		ITA_PatrolReconForce_1 = 1
+		ITA_PatrolReconForce_1 = 999
 	}
 	optional_taskforces = {
-		ITA_PatrolDominanceForce_1 = 1
+		ITA_PatrolDominanceForce_1 = 999
 	}
 }
 
@@ -18,6 +18,6 @@ ITA_raiding_fleet_2 = {
 
 ITA_escort_fleet_3 = {
 	optional_taskforces = {
-		ITA_ConvoyEscort_1 = 1
+		ITA_ConvoyEscort_1 = 999
 	}
 }

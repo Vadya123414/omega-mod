@@ -22,19 +22,22 @@ JAP_StrikeForce_1 = {
 	
 	optimal_composition = {
 		carrier = {
-			amount = 2
+			amount = 999
 		}
 		battleship = {
-			amount = 2
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
 		}
 		heavy_cruiser = {
-			amount = 2
+			amount = 999
 		}
 		light_cruiser = {
-			amount = 4
+			amount = 999
 		}
 		destroyer = {
-			amount = 26
+			amount = 999
 
 		}
 	}
@@ -58,19 +61,22 @@ JAP_KidoButai_1 = {
 	
 	optimal_composition = {
 		carrier = {
-			amount = 4
-		}
-		battle_cruiser = {
-			amount = 3
+			amount = 999
 		}
 		battleship = {
-			amount = 3
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
 		}
 		light_cruiser = {
-			amount = 4
+			amount = 999
 		}
 		destroyer = {
-			amount = 20
+			amount = 999
 
 		}
 	}
@@ -90,11 +96,24 @@ JAP_PatrolReconForce_1 = {
 		}
 	}	
 	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
 		light_cruiser = {
-			amount = 3
+			amount = 999
 		}
 		destroyer = {
-			amount = 1
+			amount = 999
+
 		}
 	}
 }
@@ -117,14 +136,24 @@ JAP_PatrolDominanceForce_1 = {
 	}
 
 	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
 		heavy_cruiser = {
-			amount = 2
+			amount = 999
 		}
 		light_cruiser = {
-			amount = 1
+			amount = 999
 		}
 		destroyer = {
-			amount = 8
+			amount = 999
+
 		}
 	}
 }
@@ -144,14 +173,24 @@ JAP_NavalInvasionSupport_1 = {
 	}
 
 	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
 		battleship = {
-			amount = 1
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
 		}
 		heavy_cruiser = {
-			amount = 2
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
 		}
 		destroyer = {
-			amount = 8
+			amount = 999
+
 		}
 	}
 }
@@ -167,13 +206,13 @@ JAP_ConvoyRaiding_1 = {
 	mission = { convoy_raiding }
 	min_composition = {
 		submarine = {
-			amount = 4
+			amount = 5
 		}
 	}
 
 	optimal_composition = {
 		submarine = {
-			amount = 8
+			amount = 5
 		}
 	}
 }
@@ -193,36 +232,24 @@ JAP_ConvoyEscort_1 = {
 	}
 	
 	optimal_composition = {
-		destroyer = {
-			amount = 8
+		carrier = {
+			amount = 999
 		}
-	}
-}
-
-JAP_MineLaying_1 = {
-	allowed = {
-		original_tag = JAP
-	}
-	ai_will_do = {
-		factor = 1
-	}
-	mission = { mines_planting }
-	min_composition = {
-		destroyer = {
-			amount = 1
-			role = 4
+		battleship = {
+			amount = 999
 		}
-	}
-	
-	optimal_composition = {
-		destroyer = {
-			amount = 4
-			role = 4
+		battle_cruiser = {
+			amount = 999
 		}
-		
+		heavy_cruiser = {
+			amount = 999
+		}
 		light_cruiser = {
-			amount = 1
-			role = 4
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
 		}
 	}
 }

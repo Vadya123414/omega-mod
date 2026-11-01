@@ -739,6 +739,9 @@ set_spec_doctrine_40 = {
 
 		icon = oppression
 		available = {
+            if = {limit = {original_tag = NOR}
+            not = {has_completed_focus = }
+        }
             NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             #is_minor = yes
@@ -985,72 +988,6 @@ set_spec_doctrine_40 = {
         ai_will_do = {base = 0}
         cost = 9999
         complete_effect = {
-        }
-    } 
-    bots_fast_division = {
-
-		#fire_only_once = yes
-        days_remove = 15
-
-		icon = oppression
-		available = {
-        date > 1939.1.1
-        has_manpower > 300000
-        is_ai = yes
-        has_equipment = { infantry_equipment > 10000 }
-        #has_equipment = { support_equipment > 275 }
-        #has_equipment = { artillery_equipment > 60 }
-        #has_equipment = { anti_air_equipment > 120 }
-            }
-		visible = {
-            is_ai = yes
-		}
-        ai_will_do = {base = 1}
-        cost = 0
-        complete_effect = {
-            	division_template = {
-					name = "fast drop"
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 3 y = 0 }
-						infantry = { x = 4 y = 0 }
-
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 3 y = 1 }
-						infantry = { x = 4 y = 1 }
-
-                        infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 2 }
-						infantry = { x = 3 y = 2 }
-						infantry = { x = 4 y = 2 }
-					}
-                        support = {
-                            engineer = { x = 0 y = 0 }
-                            artillery = { x = 0 y = 1 }
-                        }
-                        regimental_support = {
-                            fire_support = { x = 0 y = 0 }
-                            fire_support = { x = 1 y = 0 }
-                            fire_support = { x = 2 y = 0 }
-                            fire_support = { x = 3 y = 0 }
-                            fire_support = { x = 4 y = 0 }
-                        }
-			    }
-
-				capital_scope = {
-					create_unit = {
-						division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 1 start_equipment_factor = 0.01 start_manpower_factor = 0.01"
-                        owner = ROOT
-						allow_spawning_on_enemy_provs = no
-						count = 5 
-					}
-				}
         }
     } 
     bot_GER_VUP_Hist_version = {
