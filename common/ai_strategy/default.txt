@@ -31,12 +31,6 @@ default_unit_production = {
 		always = yes
 	}
 	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 80
-	}
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = convoy
@@ -50,9 +44,8 @@ default_unit_production = {
 }
 
 default_air_production = {
-	allowed = {always = yes}
+	allowed = {always = no}
 	enable = {
-		always = yes
 		is_major = yes
 		has_tech = improved_small_airframe
 		has_tech = engines_3
@@ -80,6 +73,7 @@ default_air_production = {
 	}
 }
 default_air_production = {
+	allowed = {always = no}
 	enable = {
 		is_major = yes
 		has_tech = improved_small_airframe
@@ -199,7 +193,6 @@ default_unit_production = {
 		always = yes
 		}
 	abort_when_not_enabled = no
-	abort = { always = no }
 		ai_strategy = { 
 		type = railway_gun_divisions_ratio
 		value = 1
@@ -250,7 +243,7 @@ default_mountaineers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 100
+		value = 10000
 	}
 }
 default_marines_unit_production = {
@@ -281,7 +274,7 @@ default_rangers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = rangers
-		value = 100
+		value = 10000
 	}
 }
 default_convoy_production = {
@@ -370,7 +363,8 @@ major_default_naval_ratios = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
 		not = {original_tag = GER}
-		is_major = yes	}
+		is_major = yes	
+	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -531,6 +525,21 @@ default_garrison_production = {
 		type = role_ratio
 		id = garrison
 		value = 1
+	}
+}
+default_air_production = {
+	allowed = {
+		original_tag = RAJ
+	}
+	enable = {
+		always = yes
+
+	}
+	abort_when_not_enabled = no
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 100
 	}
 }
 #

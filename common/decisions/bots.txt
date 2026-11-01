@@ -142,6 +142,58 @@ BOTS = {
 
                         }
     }
+          set_grand_doctrine_JAP_GER = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+             available = {
+                 always = no
+                is_ai = yes
+                 has_war = no
+                has_civil_war = no
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
+            }
+            visible = {
+                always = no
+            }
+                complete_effect = {
+                    set_grand_doctrine = new_operational_integrity 
+                    set_grand_doctrine = superior_firepower
+                    set_grand_doctrine = new_convoy_raiding
+                    set_sub_doctrine = capital_hunters
+                    set_sub_doctrine = torpedo_primacy
+                    set_sub_doctrine = light_task_forces
+                    set_sub_doctrine = line_of_battle
+                    set_sub_doctrine = air_subdoctrine_tactical_flexibility
+                    set_sub_doctrine = air_subdoctrine_dive_bombers
+                    set_sub_doctrine = air_subdoctrine_operational_air_support
+                    set_sub_doctrine = air_subdoctrine_deep_air_raids
+                            add_mastery = {
+                                amount = 150
+                                folder = air
+                            }
+                                add_mastery = {
+                                amount = 150
+                                folder = naval
+                            }
+
+                        }
+    }
 set_sub_doctrine_37 = {
 
     fire_only_once = yes
@@ -172,6 +224,47 @@ set_sub_doctrine_37 = {
             }
                 complete_effect = {
                     set_sub_doctrine = defensive_postures
+
+                                add_mastery = {
+                                amount = 150
+                                track = infantry
+                            }
+                        }
+    }
+    set_sub_doctrine_37_jap_ger = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                if = {date > 1937.1.1}
+                is_ai = yes
+                has_civil_war = no
+                or = {
+                    original_tag = GER
+                    original_tag = JAP
+                }
+                            NOT = {
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+                }
+            }
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                    set_sub_doctrine = large_unit_tactics
 
                                 add_mastery = {
                                 amount = 150
@@ -256,6 +349,46 @@ set_sub_doctrine_39 = {
                             }
                         }
     }
+    set_spec_doctrine_40_jap = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                is_ai = yes
+                has_civil_war = no
+                    original_tag = JAP
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                    set_grand_doctrine = special_forces_quality
+                        }
+    }
+        set_spec_doctrine_41_jap = {
+
+    fire_only_once = yes
+
+     ai_will_do = {base = 1000}
+
+            icon = oppression
+
+            available = {
+                is_ai = yes
+                has_civil_war = no
+                original_tag = JAP
+            }
+            visible = {
+                is_ai = yes
+            }
+                complete_effect = {
+                        set_sub_doctrine = mountaineers_2 
+                        }
+                }
 set_spec_doctrine_40 = {
 
     fire_only_once = yes
@@ -270,6 +403,7 @@ set_spec_doctrine_40 = {
                 has_civil_war = no
                             NOT = {
                 or = {
+                    original_tag = JAP
                     original_tag = CHI
                     original_tag = PRC
                     original_tag = GXC
@@ -302,6 +436,7 @@ set_spec_doctrine_40 = {
                 has_civil_war = no
                             NOT = {
                 or = {
+                    original_tag = JAP
                     original_tag = CHI
                     original_tag = PRC
                     original_tag = GXC
@@ -336,7 +471,7 @@ set_spec_doctrine_40 = {
                             }
                         }
                     else = {
-                        set_sub_doctrine = mountaineers_1 
+                        set_sub_doctrine = mountaineers_2 
                               add_mastery = {
                                 amount = 90
                                 folder = special_forces
@@ -344,62 +479,7 @@ set_spec_doctrine_40 = {
                         }
                 }
              }
-      set_grand_doctrine_test = {
 
-    fire_only_once = yes
-
-     ai_will_do = {base = 1000}
-
-            icon = oppression
-
-            available = {
-                always = no
-            }
-            visible = {
-               always = no
-            }
-                complete_effect = {
-                    set_grand_doctrine = new_battlefield_support
-                    set_grand_doctrine = superior_firepower
-                    set_grand_doctrine = new_convoy_raiding
-                    set_grand_doctrine = special_forces_quality
-                    set_sub_doctrine = large_unit_tactics
-                    set_sub_doctrine = rapid_domination
-                    set_sub_doctrine = siege_artillery
-                    set_sub_doctrine = streamlined_deployment
-                    set_sub_doctrine = capital_hunters
-                    set_sub_doctrine = torpedo_primacy
-                    set_sub_doctrine = light_task_forces
-                    set_sub_doctrine = line_of_battle
-                    set_sub_doctrine = mountaineers_1 
-                    #set_sub_doctrine = rangers_2
-                    set_sub_doctrine = air_subdoctrine_dogfighting_mastery
-                    set_sub_doctrine = air_subdoctrine_dive_bombers
-                    set_sub_doctrine = air_subdoctrine_operational_air_support
-                    set_sub_doctrine = air_subdoctrine_heavy_aircraft_focus
-                                add_mastery = {
-                                amount = 150
-                                folder = land
-                            }
-                            add_mastery = {
-                                amount = 200
-                                folder = air
-                            }
-                                add_mastery = {
-                                amount = 150
-                                folder = naval
-                            }
-                                add_mastery = {
-                                amount = 90
-                                folder = special_forces
-                            }
-                      if = { limit = {is_major = yes}
-                    complete_special_project = {
-						project = sp:sp_land_super_heavy_howitzer
-					}
-                }
-                        }
-    }
         bots_spr_attache_dem_neut = {
 
 		fire_only_once = yes

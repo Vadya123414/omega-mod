@@ -73,7 +73,7 @@
 #	}
 		
 garrison_generic = {
-
+	
 	role = garrison
 	
 	upgrade_prio = {
@@ -107,7 +107,7 @@ garrison_generic = {
 }
 
 suppression_generic = {
-	
+		
 	role = suppression
 	upgrade_prio = {
 		base = 1
@@ -139,7 +139,10 @@ infantry_generic = {
         EST
         LIT
         DEN
+		GER
+		JAP
 	}
+		
 	upgrade_prio = {
 		base = 3
 	}
@@ -164,9 +167,9 @@ infantry_generic = {
 				infantry = 8
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = infantry_mid
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 		infantry_mid = {
 	
@@ -190,9 +193,9 @@ infantry_generic = {
 				infantry = 12
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = infantry_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 	infantry_late = {
 	
@@ -223,7 +226,7 @@ infantry_generic = {
 
 }
 mountaineers_generic = {
-
+	
 	role = mountaineers
 		blocked_for = {
 		FIN
@@ -271,9 +274,9 @@ mountaineers_generic = {
 			}
 
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = mountaineers_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 
 	mountaineers_late = {
@@ -309,6 +312,7 @@ marines_generic = {
 	blocked_for = {
 		FIN
 	}
+		
 	role = marines
 	
 	upgrade_prio = {
@@ -352,6 +356,7 @@ rangers_generic = {
 	blocked_for = {
 		FIN
 	}
+	
 	role = rangers
 	
 	upgrade_prio = {
@@ -378,17 +383,17 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 3
+				fire_support = 2
 			}
 
 			regiments = {
-				ranger_battalion = 9
+				ranger_battalion = 8
 			}
 
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = rangers_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 
 	rangers_late = {
@@ -397,7 +402,6 @@ rangers_generic = {
 			base = 1
 			
 		}
-
 		target_template = {
 			
 			support = {
@@ -409,21 +413,19 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 3
-				anti_air_battery = 2
+				fire_support = 5
 			}
 
 			regiments = {
 				ranger_battalion = 15
 			}
-
-			}
+		}
 	}
 }
 
 hq_generic = {
 	role = hq_role
-	
+		
 	upgrade_prio = {
 		base = 0.1
 	}

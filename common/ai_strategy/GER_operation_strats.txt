@@ -1,3 +1,822 @@
+ger_not_collab= {
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = SOV
+			value > 1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = counter_intelligence
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = quiet_network
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = boost_ideology
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = propaganda
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = root_out_resistance
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = control_trade
+		value = -100
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = diplomatic_pressure
+		value = -100
+	}
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_infiltrate_civilian
+		value = -2000
+		operation_target = FRA
+	}
+		ai_strategy = {
+		type = operative_operation
+		operation = operation_fake_intel
+		value = -2000
+		operation_target = FRA
+	}
+			ai_strategy = {
+		type = operative_operation
+		operation = operation_capture_cipher
+		value = -2000
+		operation_target = FRA
+	}
+			ai_strategy = {
+		type = operative_operation
+		operation = operation_infiltrate_armed_forces_army
+		value = -2000
+		operation_target = FRA
+	}
+			ai_strategy = {
+		type = operative_operation
+		operation = operation_infiltrate_armed_forces_navy
+		value = -2000
+		operation_target = FRA
+	}
+			ai_strategy = {
+		type = operative_operation
+		operation = operation_infiltrate_armed_forces_airforce
+		value = -2000
+		operation_target = FRA
+	}
+			ai_strategy = {
+		type = operative_operation
+		operation = operation_coup_government
+		value = -2000
+		operation_target = FRA
+	}
+				ai_strategy = {
+		type = operative_operation
+		operation = operation_boost_resistance
+		value = -2000
+		operation_target = FRA
+	}
+				ai_strategy = {
+		type = operative_operation
+		operation = operation_make_resistance_contacts
+		value = -2000
+		operation_target = FRA
+	}
+				ai_strategy = {
+		type = operative_operation
+		operation = operation_coordinated_strike
+		value = -2000
+		operation_target = FRA
+	}
+				ai_strategy = {
+		type = operative_operation
+		operation = operation_steal_tech_civilian
+		value = -2000
+		operation_target = FRA
+	}
+				ai_strategy = {
+		type = operative_operation
+		operation = operation_targeted_sabotage_industry
+		value = -2000
+		operation_target = FRA
+	}
+					ai_strategy = {
+		type = operative_operation
+		operation = operation_targeted_sabotage_infrastructure
+		value = -2000
+		operation_target = FRA
+	}
+					ai_strategy = {
+		type = operative_operation
+		operation = operation_targeted_sabotage_resources
+		value = -2000
+		operation_target = FRA
+	}
+					ai_strategy = {
+		type = operative_operation
+		operation = operation_steal_tech_army
+		value = -2000
+		operation_target = FRA
+	}
+					ai_strategy = {
+		type = operative_operation
+		operation = operation_steal_tech_navy
+		value = -2000
+		operation_target = FRA
+	}
+					ai_strategy = {
+		type = operative_operation
+		operation = operation_targeted_sabotage_industry
+		value = -2000
+		operation_target = FRA
+	}
+						ai_strategy = {
+		type = operative_operation
+		operation = operation_steal_tech_airforce
+		value = -2000
+		operation_target = FRA
+	}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = BEL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = POL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = HOL
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = NOR
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = YUG
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_civilian
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_fake_intel
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_capture_cipher
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_army
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_navy
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_infiltrate_armed_forces_airforce
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coup_government
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_boost_resistance
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_make_resistance_contacts
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_coordinated_strike
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_civilian
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_infrastructure
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_resources
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_army
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_navy
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_targeted_sabotage_industry
+    value = -2000
+    operation_target = SOV
+}
+ai_strategy = {
+    type = operative_operation
+    operation = operation_steal_tech_airforce
+    value = -2000
+    operation_target = SOV
+}
+}
+
 GER_spy_on_FRA = {
 	allowed = {
 		tag = GER
@@ -881,12 +1700,10 @@ SOV_spy_on_EST = {
 	}
 	
 	enable = {
-		is_historical_focus_on = yes
-		NOT = { has_global_flag = SOV_welfare_disabled }
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = EST
-			value < 3
+			value < 2
 		}
 		EST = {
 			exists = yes
@@ -913,7 +1730,7 @@ SOV_spy_on_EST = {
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 15
+		value = 50
 	}
 }
 
@@ -924,12 +1741,10 @@ SOV_spy_on_LAT = {
 	}
 	
 	enable = {
-		is_historical_focus_on = yes
-		NOT = { has_global_flag = SOV_welfare_disabled }
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = LAT
-			value < 3
+			value < 2
 		}
 		LAT = {
 			exists = yes
@@ -965,8 +1780,6 @@ SOV_spy_on_GER_infiltrate = {
 	}
 	
 	enable = {
-		is_historical_focus_on = yes
-		NOT = { has_global_flag = SOV_welfare_disabled }
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = LAT
@@ -975,7 +1788,7 @@ SOV_spy_on_GER_infiltrate = {
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = EST
-			value > 2
+			value < 2
 		}
 	}
 	

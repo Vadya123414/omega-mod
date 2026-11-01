@@ -3,6 +3,14 @@ infantry_generic = {
 	available_for = {
 		FIN
 	}
+		blocked_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
+	}
 	upgrade_prio = {
 		base = 3
 	}
@@ -24,25 +32,32 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 2
+				fire_support = 2
 			}
 			
 			regiments = {
-				infantry = 8
+				infantry = 6
+				artillery_brigade = 3
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = infantry_mid
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 		infantry_mid = {
 	
 	upgrade_prio = {
-		base = 0
+		base = 10
 
 		modifier = {
-			add = 10
-			has_idea = service_by_requirement
+			factor = 0
+			NOT = {
+				or = {
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+				has_idea = service_by_requirement
+				}
+			}	
 		}
 	}
 		target_template = {
@@ -60,24 +75,29 @@ infantry_generic = {
 			}
 			
 			regiments = {
-				infantry = 12
+				infantry = 9
+				artillery_brigade = 3
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = infantry_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 	infantry_late = {
 	
-	upgrade_prio = {
-		base = 0
+		upgrade_prio = {
+		base = 10
 
 		modifier = {
-			add = 10
-			has_idea = all_adults_serve
+			factor = 0
+			NOT = {
+				or = {
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
 		}
-	}
-		
+	}	
 		target_template = {
 			
 			support = {
@@ -93,7 +113,9 @@ infantry_generic = {
 			}
 			
 			regiments = {
-				infantry = 15
+				infantry = 9
+				artillery_brigade = 4
+				anti_air = 2
 			}
 
 		}
@@ -102,6 +124,14 @@ infantry_generic = {
 rangers_generic = {
 	available_for = {
 		FIN
+	}
+		blocked_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
 	}
 	role = rangers
 	
@@ -130,17 +160,18 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 3
+				fire_support = 2
 			}
 
 			regiments = {
-				ranger_battalion = 9
+				ranger_battalion = 8
+				artillery_brigade = 3
 			}
 
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = rangers_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 
 	rangers_late = {
@@ -165,7 +196,8 @@ rangers_generic = {
 			}
 
 			regiments = {
-				ranger_battalion = 15
+				ranger_battalion = 9
+				artillery_brigade = 6
 			}
 
 			}

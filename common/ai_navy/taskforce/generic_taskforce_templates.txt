@@ -201,8 +201,23 @@ ConvoyEscort_1 = {
 	}
 	
 	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
 		destroyer = {
-			amount = 8
+			amount = 999
 		}
 	}
 }
