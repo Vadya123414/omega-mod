@@ -1,0 +1,256 @@
+ITA_StrikeForce_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	keep_updated = yes
+	mission = { naval_strike }
+	min_composition = {
+		battleship = {
+			amount = 1
+		}
+		heavy_cruiser = {
+			amount = 1
+		}
+	}
+	
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}
+ITA_StrikeForceCarrier_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	keep_updated = yes
+	mission = { naval_strike }
+	min_composition = {
+		carrier = {
+			amount = 1
+		}
+		battleship = {
+			amount = 1
+		}
+		heavy_cruiser = {
+			amount = 1
+		}
+	}
+	
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}
+
+ITA_PatrolReconForce_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	mission = { naval_patrol }
+	min_composition = {
+		destroyer = {
+			amount = 2
+		}
+	}	
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}
+
+ITA_PatrolDominanceForce_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_patrol }
+	min_composition = {
+		heavy_cruiser = {
+			amount = 1
+		}
+		destroyer = {
+			amount = 2
+
+		}
+	}
+
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}
+
+ITA_ConvoyRaiding_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	keep_updated = yes
+	mission = { convoy_raiding }
+	min_composition = {
+		submarine = {
+			amount = 5
+		}
+	}
+	optimal_composition = {
+		submarine = {
+			amount = 5
+		}
+	}
+}
+
+ITA_ConvoySurfaceRaiding_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	keep_updated = yes
+	mission = { convoy_raiding }
+	min_composition = {
+		battle_cruiser = {
+			amount = 1
+		}
+	}
+
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}
+
+ITA_ConvoyEscort_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { convoy_escort }
+	min_composition = {
+		destroyer = {
+			amount = 3
+		}
+	}
+	
+	optimal_composition = {
+		carrier = {
+			amount = 999
+		}
+		battleship = {
+			amount = 999
+		}
+		battle_cruiser = {
+			amount = 999
+		}
+		heavy_cruiser = {
+			amount = 999
+		}
+		light_cruiser = {
+			amount = 999
+		}
+		destroyer = {
+			amount = 999
+
+		}
+	}
+}

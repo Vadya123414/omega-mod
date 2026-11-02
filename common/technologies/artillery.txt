@@ -115,7 +115,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -168,7 +176,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -217,7 +233,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -264,7 +288,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -304,7 +336,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -347,7 +387,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			factor = 0
+			base = 0 
+				modifier = {
+					add = 10
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -407,7 +455,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 0
 		}
 
 		categories = {

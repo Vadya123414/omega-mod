@@ -1509,7 +1509,11 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
+			if = {limit = {has_global_flag = VUP_Hist_version}
 			add_country_leader_trait = rearmer
+			}
+			ELSE = {
+				add_country_leader_trait = rearmer
 
 			effect_tooltip = {
 				ENG = {
@@ -1520,6 +1524,7 @@ focus_tree = {
 
 			hidden_effect = {
 				ENG = { country_event = { id = AST_diplomatic_events.68 hours = 3 } }
+			}
 			}
 		}
 

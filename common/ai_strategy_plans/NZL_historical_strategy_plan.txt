@@ -28,6 +28,7 @@ NZL_historical = {
 	}
 
 	ai_national_focuses = {
+		NZL_support_allies_with_meat
 		NZL_bureau_of_industry
 		NZL_ministry_of_public_works
 		NZL_direct_the_coal_industry

@@ -1,0 +1,26 @@
+FRA_dominance_fleet_1 = {
+	required_taskforces = {
+		FRA_PatrolDominanceForce_1 = 999
+	}	
+	optional_taskforces = {
+		FRA_PatrolReconForce_1 = 999
+	}
+}
+
+FRA_raiding_fleet_2 = {
+	required_taskforces = {
+		FRA_ConvoyRaiding_1 = 999
+	}	
+	optional_taskforces = {
+		FRA_ConvoyRaiding_1 = 999
+	}
+}
+
+FRA_escort_fleet_3 = {
+	required_taskforces = {
+		FRA_ConvoyEscort_1 = 999
+	}
+	optional_taskforces = {
+		FRA_ConvoyEscort_1 = 999
+	}
+}

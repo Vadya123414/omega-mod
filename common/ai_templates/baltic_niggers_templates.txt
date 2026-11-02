@@ -1,0 +1,87 @@
+infantry_generic = {
+	role = infantry
+	available_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		NOR
+	}
+		blocked_for = {
+		FIN
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
+	}
+	upgrade_prio = {
+		base = 3
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+		base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				field_hospital = 1
+                anti_air = 1
+			}
+
+			regimental_support = {
+				fire_support = 3
+			}
+			
+			regiments = {
+				infantry = 9
+			}
+		}
+		replace_at_match = 0.8
+		replace_with = infantry_mid
+		target_min_match = 0.4
+	}
+		infantry_late= {
+	
+	upgrade_prio = {
+		base = 10
+
+		modifier = {
+			factor = 0
+			or = {
+				not = {has_idea = all_adults_serve}
+				not = {has_idea = scraping_the_barrel}
+				not = {has_idea = service_by_requirement}
+			}
+			
+		}
+	}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				field_hospital = 1
+                anti_air = 1
+			}
+
+			regimental_support = {
+				fire_support = 5
+			}
+			
+			regiments = {
+				infantry = 15
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_mid
+		target_min_match = 0.4
+	}
+}

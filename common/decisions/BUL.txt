@@ -6115,25 +6115,11 @@ BUL_purchase_equipment = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.1
+			base = 0
 			modifier = {
-				factor = 2
-				is_in_faction_with = FROM
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					num_of_civilian_factories < 10
-					stockpile_ratio = { 
-		  				archetype = infantry_equipment
-		  				ratio > 0.75
-		  			}
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { is_in_faction_with = FROM }
-			}
+				add = 10
+				has_political_power > 150
+			}	
 		}
 		modifier = {
 			civilian_factory_use = 1
@@ -6264,35 +6250,11 @@ BUL_purchase_equipment = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.1
+			base = 0
 			modifier = {
-				factor = 2
-				is_in_faction_with = FROM
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					num_of_civilian_factories < 10
-					AND = {
-						stockpile_ratio = { 
-			  				archetype = artillery_equipment
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = anti_air_equipment
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = anti_tank_equipment
-			  				ratio > 0.75
-			  			}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { is_in_faction_with = FROM }
-			}
+				add = 10
+				has_political_power > 150
+			}	
 		}
 
 		modifier = {
@@ -6623,28 +6585,7 @@ BUL_purchase_equipment = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.1
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { is_in_faction_with = FROM }
-					num_of_civilian_factories < 10
-					AND = {
-						stockpile_ratio = { 
-			  				archetype = light_tank_chassis
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = medium_tank_chassis
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = heavy_tank_chassis
-			  				ratio > 0.75
-			  			}
-					}
-				}
-			}
+			base = 0	
 		}
 
 		modifier = {
@@ -6812,31 +6753,7 @@ BUL_purchase_equipment = {
 		fire_only_once = no
 
 		ai_will_do = {
-			factor = 0.1
-			modifier = {
-				factor = 2
-				is_in_faction_with = FROM
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					num_of_civilian_factories < 10
-					AND = {
-						stockpile_ratio = { 
-			  				archetype = small_plane_airframe
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = small_plane_naval_bomber_airframe
-			  				ratio > 0.75
-			  			}
-			  			stockpile_ratio = { 
-			  				archetype = medium_plane_airframe
-			  				ratio > 0.75
-			  			}
-					}
-				}
-			}
+			base = 0
 		}
 
 		modifier = {

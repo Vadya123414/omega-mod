@@ -31,7 +31,7 @@ general_prod_5 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 1
 	}
 	ai_strategy = {
@@ -67,7 +67,7 @@ general_prod_10 = {
 
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 2
 	}
 }
@@ -107,7 +107,7 @@ general_prod_20 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 4
 	}
 }
@@ -141,7 +141,7 @@ general_prod_30 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -151,7 +151,7 @@ general_prod_30 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 6
 	}
 }
@@ -185,7 +185,7 @@ general_prod_40 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -195,7 +195,7 @@ general_prod_40 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
@@ -229,7 +229,7 @@ general_prod_50 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -239,7 +239,7 @@ general_prod_50 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 10
 	}
 }
@@ -273,7 +273,7 @@ general_prod_60 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -283,7 +283,7 @@ general_prod_60 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 12
 	}
 }
@@ -317,7 +317,7 @@ general_prod_70 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -327,7 +327,7 @@ general_prod_70 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
@@ -365,7 +365,7 @@ general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -375,7 +375,7 @@ general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 17
 	}
 }
@@ -423,7 +423,7 @@ air_and_general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -433,7 +433,7 @@ air_and_general_prod_80 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 6
 	}
 }
@@ -471,7 +471,7 @@ general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -481,7 +481,7 @@ general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 19
 	}
 }
@@ -529,7 +529,7 @@ air_and_general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -539,7 +539,7 @@ air_and_general_prod_90 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 7
 	}
 }
@@ -577,7 +577,7 @@ general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -587,7 +587,7 @@ general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
@@ -635,7 +635,7 @@ air_and_general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -645,7 +645,7 @@ air_and_general_prod_100 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
@@ -683,7 +683,7 @@ general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -693,7 +693,7 @@ general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 23
 	}
 }
@@ -741,7 +741,7 @@ air_and_general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -751,7 +751,7 @@ air_and_general_prod_110 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 8
 	}
 }
@@ -789,7 +789,7 @@ general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -799,7 +799,7 @@ general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
@@ -847,7 +847,7 @@ air_and_general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -857,7 +857,7 @@ air_and_general_prod_120 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 9
 	}
 }
@@ -895,7 +895,7 @@ general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -905,7 +905,7 @@ general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
@@ -953,7 +953,7 @@ air_and_general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -963,7 +963,7 @@ air_and_general_prod_130 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 10
 	}
 }
@@ -1001,7 +1001,7 @@ general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -1011,7 +1011,7 @@ general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 29
 	}
 }
@@ -1059,7 +1059,7 @@ air_and_general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 1
 	}
 	ai_strategy = {
@@ -1069,7 +1069,7 @@ air_and_general_prod_140 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 11
 	}
 }
@@ -1107,7 +1107,7 @@ general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -1117,7 +1117,7 @@ general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
@@ -1165,7 +1165,7 @@ air_and_general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1175,7 +1175,7 @@ air_and_general_prod_150 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 11
 	}
 }
@@ -1213,7 +1213,7 @@ general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -1223,7 +1223,7 @@ general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 33
 	}
 }
@@ -1271,7 +1271,7 @@ air_and_general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1281,7 +1281,7 @@ air_and_general_prod_160 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 12
 	}
 }
@@ -1319,7 +1319,7 @@ general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -1329,7 +1329,7 @@ general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 35
 	}
 }
@@ -1377,7 +1377,7 @@ air_and_general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1387,7 +1387,7 @@ air_and_general_prod_170 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 13
 	}
 }
@@ -1425,7 +1425,7 @@ general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -1435,7 +1435,7 @@ general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }
@@ -1483,7 +1483,7 @@ air_and_general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1493,7 +1493,7 @@ air_and_general_prod_180 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 14
 	}
 }
@@ -1531,7 +1531,7 @@ general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
@@ -1541,7 +1541,7 @@ general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 39
 	}
 }
@@ -1589,7 +1589,7 @@ air_and_general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1599,7 +1599,7 @@ air_and_general_prod_190 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
@@ -1637,7 +1637,7 @@ general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
@@ -1647,7 +1647,7 @@ general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 41
 	}
 }
@@ -1695,7 +1695,7 @@ air_and_general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1705,7 +1705,7 @@ air_and_general_prod_200 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 15
 	}
 }
@@ -1743,7 +1743,7 @@ general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
@@ -1753,7 +1753,7 @@ general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 44
 	}
 }
@@ -1801,7 +1801,7 @@ air_and_general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1811,7 +1811,7 @@ air_and_general_prod_210 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 16
 	}
 }
@@ -1849,7 +1849,7 @@ general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 6
 	}
 	ai_strategy = {
@@ -1859,7 +1859,7 @@ general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 46
 	}
 }
@@ -1907,7 +1907,7 @@ air_and_general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -1917,7 +1917,7 @@ air_and_general_prod_220 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 17
 	}
 }
@@ -1955,7 +1955,7 @@ general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
@@ -1965,7 +1965,7 @@ general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 48
 	}
 }
@@ -2013,7 +2013,7 @@ air_and_general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 2
 	}
 	ai_strategy = {
@@ -2023,7 +2023,7 @@ air_and_general_prod_230 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 18
 	}
 }
@@ -2061,7 +2061,7 @@ general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
@@ -2071,7 +2071,7 @@ general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 50
 	}
 }
@@ -2119,7 +2119,7 @@ air_and_general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2129,7 +2129,7 @@ air_and_general_prod_240 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 18
 	}
 }
@@ -2167,7 +2167,7 @@ general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 7
 	}
 	ai_strategy = {
@@ -2177,7 +2177,7 @@ general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 52
 	}
 }
@@ -2225,7 +2225,7 @@ air_and_general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2235,7 +2235,7 @@ air_and_general_prod_250 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 19
 	}
 }
@@ -2273,7 +2273,7 @@ general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
@@ -2283,7 +2283,7 @@ general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 54
 	}
 }
@@ -2331,7 +2331,7 @@ air_and_general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2341,7 +2341,7 @@ air_and_general_prod_260 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 20
 	}
 }
@@ -2379,7 +2379,7 @@ general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
@@ -2389,7 +2389,7 @@ general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 56
 	}
 }
@@ -2437,7 +2437,7 @@ air_and_general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2447,7 +2447,7 @@ air_and_general_prod_270 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
@@ -2485,7 +2485,7 @@ general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
@@ -2495,7 +2495,7 @@ general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 58
 	}
 }
@@ -2543,7 +2543,7 @@ air_and_general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2553,7 +2553,7 @@ air_and_general_prod_280 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 21
 	}
 }
@@ -2591,7 +2591,7 @@ general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 8
 	}
 	ai_strategy = {
@@ -2601,7 +2601,7 @@ general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 60
 	}
 }
@@ -2649,7 +2649,7 @@ air_and_general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2659,7 +2659,7 @@ air_and_general_prod_290 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 22
 	}
 }
@@ -2697,7 +2697,7 @@ general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
@@ -2707,7 +2707,7 @@ general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 62
 	}
 }
@@ -2755,7 +2755,7 @@ air_and_general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2765,7 +2765,7 @@ air_and_general_prod_300 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 23
 	}
 }
@@ -2803,7 +2803,7 @@ general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
@@ -2813,7 +2813,7 @@ general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 64
 	}
 }
@@ -2861,7 +2861,7 @@ air_and_general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2871,7 +2871,7 @@ air_and_general_prod_310 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 24
 	}
 }
@@ -2909,7 +2909,7 @@ general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 9
 	}
 	ai_strategy = {
@@ -2919,7 +2919,7 @@ general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 67
 	}
 }
@@ -2967,7 +2967,7 @@ air_and_general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 3
 	}
 	ai_strategy = {
@@ -2977,7 +2977,7 @@ air_and_general_prod_320 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
@@ -3015,7 +3015,7 @@ general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
@@ -3025,7 +3025,7 @@ general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 69
 	}
 }
@@ -3073,7 +3073,7 @@ air_and_general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3083,7 +3083,7 @@ air_and_general_prod_330 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 25
 	}
 }
@@ -3121,7 +3121,7 @@ general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
@@ -3131,7 +3131,7 @@ general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 71
 	}
 }
@@ -3179,7 +3179,7 @@ air_and_general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3189,7 +3189,7 @@ air_and_general_prod_340 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 26
 	}
 }
@@ -3227,7 +3227,7 @@ general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 10
 	}
 	ai_strategy = {
@@ -3237,7 +3237,7 @@ general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 73
 	}
 }
@@ -3285,7 +3285,7 @@ air_and_general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3295,7 +3295,7 @@ air_and_general_prod_350 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
@@ -3333,7 +3333,7 @@ general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
@@ -3343,7 +3343,7 @@ general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 75
 	}
 }
@@ -3391,7 +3391,7 @@ air_and_general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3401,7 +3401,7 @@ air_and_general_prod_360 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 27
 	}
 }
@@ -3439,7 +3439,7 @@ general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
@@ -3449,7 +3449,7 @@ general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 77
 	}
 }
@@ -3497,7 +3497,7 @@ air_and_general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3507,7 +3507,7 @@ air_and_general_prod_370 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 28
 	}
 }
@@ -3545,7 +3545,7 @@ general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
@@ -3555,7 +3555,7 @@ general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 79
 	}
 }
@@ -3603,7 +3603,7 @@ air_and_general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3613,7 +3613,7 @@ air_and_general_prod_380 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 29
 	}
 }
@@ -3651,7 +3651,7 @@ general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 11
 	}
 	ai_strategy = {
@@ -3661,7 +3661,7 @@ general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 81
 	}
 }
@@ -3709,7 +3709,7 @@ air_and_general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3719,7 +3719,7 @@ air_and_general_prod_390 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 30
 	}
 }
@@ -3757,7 +3757,7 @@ general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
@@ -3767,7 +3767,7 @@ general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 83
 	}
 }
@@ -3815,7 +3815,7 @@ air_and_general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3825,7 +3825,7 @@ air_and_general_prod_400 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
@@ -3863,7 +3863,7 @@ general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
@@ -3873,7 +3873,7 @@ general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 85
 	}
 }
@@ -3921,7 +3921,7 @@ air_and_general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 4
 	}
 	ai_strategy = {
@@ -3931,7 +3931,7 @@ air_and_general_prod_410 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 31
 	}
 }
@@ -3969,7 +3969,7 @@ general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 12
 	}
 	ai_strategy = {
@@ -3979,7 +3979,7 @@ general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 88
 	}
 }
@@ -4027,7 +4027,7 @@ air_and_general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4037,7 +4037,7 @@ air_and_general_prod_420 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 32
 	}
 }
@@ -4075,7 +4075,7 @@ general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
@@ -4085,7 +4085,7 @@ general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 89
 	}
 }
@@ -4133,7 +4133,7 @@ air_and_general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4143,7 +4143,7 @@ air_and_general_prod_430 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 33
 	}
 }
@@ -4181,7 +4181,7 @@ general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
@@ -4191,7 +4191,7 @@ general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 92
 	}
 }
@@ -4239,7 +4239,7 @@ air_and_general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4249,7 +4249,7 @@ air_and_general_prod_440 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 34
 	}
 }
@@ -4287,7 +4287,7 @@ general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
@@ -4297,7 +4297,7 @@ general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 94
 	}
 }
@@ -4345,7 +4345,7 @@ air_and_general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4355,7 +4355,7 @@ air_and_general_prod_450 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 34
 	}
 }
@@ -4393,7 +4393,7 @@ general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 13
 	}
 	ai_strategy = {
@@ -4403,7 +4403,7 @@ general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 96
 	}
 }
@@ -4451,7 +4451,7 @@ air_and_general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4461,7 +4461,7 @@ air_and_general_prod_460 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 35
 	}
 }
@@ -4499,7 +4499,7 @@ general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
@@ -4509,7 +4509,7 @@ general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 98
 	}
 }
@@ -4557,7 +4557,7 @@ air_and_general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4567,7 +4567,7 @@ air_and_general_prod_470 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 36
 	}
 }
@@ -4605,7 +4605,7 @@ general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
@@ -4615,7 +4615,7 @@ general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 100
 	}
 }
@@ -4663,7 +4663,7 @@ air_and_general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4673,7 +4673,7 @@ air_and_general_prod_480 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 37
 	}
 }
@@ -4711,7 +4711,7 @@ general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 14
 	}
 	ai_strategy = {
@@ -4721,7 +4721,7 @@ general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 102
 	}
 }
@@ -4769,7 +4769,7 @@ air_and_general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4779,7 +4779,7 @@ air_and_general_prod_490 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }
@@ -4815,7 +4815,7 @@ general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 15
 	}
 	ai_strategy = {
@@ -4825,7 +4825,7 @@ general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 104
 	}
 }
@@ -4871,7 +4871,7 @@ air_and_general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = rocket_artillery
+		id = rocket
 		value = 5
 	}
 	ai_strategy = {
@@ -4881,7 +4881,7 @@ air_and_general_prod_500 = {
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = support_equipment
+		id = support
 		value = 38
 	}
 }

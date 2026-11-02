@@ -12,13 +12,18 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.9
+                mobilization_speed = 1000
+				industrial_capacity_factory = -0.09
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1			
 			}
 
 			cancel = {	
@@ -51,6 +56,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1			
 				
 			}
 
@@ -83,6 +94,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 				
 			}
 
@@ -114,7 +131,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 			}
 
 			cancel = {
@@ -144,7 +166,12 @@ ideas = {
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
 				training_time_army_factor = -0.9
-				
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1
+				country_resource_rubber = 1							
 			}
 
 			cancel = {
@@ -172,7 +199,13 @@ ideas = {
                 production_factory_efficiency_gain_factor = 10
                 intel_network_gain_factor = 10
 				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9		
+				training_time_army_factor = -0.9
+				country_resource_chromium = 1
+				country_resource_steel = 1
+				country_resource_tungsten = 1
+				country_resource_aluminium = 1
+				country_resource_coal = 1	
+				country_resource_rubber = 1						
 			}
 
 			cancel = {
@@ -265,6 +298,114 @@ ideas = {
 					reliability = -0.1
 					instant = yes
 				}
+			}
+		}
+		air_research_25 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 0.25
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
+		air_research_50 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 0.50
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
+		air_research_100 = {
+
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				is_ai = yes
+			}
+
+			removal_cost = -1
+
+		research_bonus = {
+				light_air = 1
+			}
+
+			cancel = {
+				or = {
+					is_ai = no
+					has_tech = improved_small_airframe
+				}
+			}
+		}
+
+			JAP_bot_fix_fuel= {
+			picture = generic_license_production
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		cancel = {
+			or = {
+					is_ai = no
+					date > 1941.1.1
+					}
+			}
+			modifier = {
+				navy_fuel_consumption_factor = -0.99
+
+			}
+		}
+		BOL_bot_fix_pp= {
+			picture = generic_license_production
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		cancel = {
+			or = {
+					is_ai = no
+					date > 1941.1.1
+					}
+			}
+			modifier = {
+				political_power_cost = 1
+
 			}
 		}
 	}

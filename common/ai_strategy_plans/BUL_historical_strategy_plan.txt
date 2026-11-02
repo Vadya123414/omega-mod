@@ -37,6 +37,7 @@ BUL_historical_plan_weak = {
 		BUL_negotiate_bulgarian_rearmament #Short focus
 		BUL_the_tsars_regime
 		BUL_improve_the_road_system
+		BUL_cooperate_with_the_zveno
 		#1937
 		BUL_restore_the_tarnovo_constitution
 		BUL_freedom_of_press
@@ -47,10 +48,9 @@ BUL_historical_plan_weak = {
 		BUL_expand_sofia_university
 		BUL_bulgarian_irredentism
 		BUL_approach_germany
-		BUL_national_military_academy
 		BUL_illusions_of_a_non_partisan_system
+		BUL_condemn_macedonian_organizations
 		#1939
-		BUL_war_logistics
 		BUL_georgi_benkovski_aircraft_repair_facilities
 		BUL_national_railway_lines #Short focus
 		BUL_light_metal_exploitation #Short focus
@@ -70,7 +70,6 @@ BUL_historical_plan_weak = {
 		BUL_peaceful_development
 		BUL_vasil_levsky_national_military_university
 		BUL_contract_foreign_companies #Short Focus
-		BUL_kaproni_bulgarski
 		BUL_bulgarian_administration_of_the_balkans ### Long focus
 		#1942
 		BUL_darzhavna_voenna_fabrika
@@ -89,17 +88,6 @@ BUL_historical_plan_weak = {
 	}
 
 	focus_factors = {
-		BUL_plot_against_boris = 0
-		BUL_total_war = 0
-		BUL_cooperate_with_the_zveno = 0
-		BUL_condemn_macedonian_organizations = 0
-		BUL_restrained_paramilitary_organizations = 0
-		BUL_appoint_right_wing_ministers = 0
-		BUL_strengthen_the_royal_dictatorship = 0
-		BUL_the_third_bulgarian_empire = 0
-		BUL_the_return_of_ferdinand_i = 0
-		BUL_the_fate_of_the_balkans = 0
-		BUL_dominance_in_the_black_sea = 0
 	}
 
 	research = {

@@ -37,6 +37,26 @@ on_actions = {
                                                     add_ideas = ins_training_fix
                                                 }
                                  }
+                    effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                            is_ai = yes
+                                                        }
+                                                    add_ideas = smart_bots
+                                                    add_ideas = supply_bot_fix_not_in_war
+                                                }
+                                }
+                        effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = JAP
+                                                        }
+                                                    }
+                                                    add_ideas = JAP_bot_fix_fuel
+                                                }
+                                 }
     }
 on_monthly = {
         effect = { 

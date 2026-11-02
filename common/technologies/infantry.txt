@@ -784,10 +784,6 @@ technologies = {
 			}
 			modifier = {
 				factor = 0
-				tag = FRA
-			}
-			modifier = {
-				factor = 0
 				tag = BEL
 			}
 			modifier = {
@@ -846,10 +842,6 @@ technologies = {
 			}
 			modifier = {
 				factor = 0
-				tag = FRA
-			}
-			modifier = {
-				factor = 0
 				tag = BEL
 			}
 			modifier = {
@@ -899,10 +891,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				tag = POL
-			}
-			modifier = {
-				factor = 0
-				tag = FRA
 			}
 			modifier = {
 				factor = 0
@@ -1729,49 +1717,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			# All participants in this war will want to have this tech as early as possible
-			modifier = {
-				factor = 15
-				OR = {
-					original_tag = CHI
-					original_tag = PRC
-					original_tag = XSM
-					original_tag = SIK
-					original_tag = GXC
-					original_tag = SHX
-					original_tag = YUN
-					original_tag = MAN
-					original_tag = MEN
-					original_tag = JAP
-					original_tag = GSM
-					original_tag = NXM
-					original_tag = HBC
-					original_tag = SND
-					original_tag = GDC
-					original_tag = KHM
+			base = 1
+				modifier = {
+					factor = 0
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
 				}
-			}
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 	}
 
@@ -1824,44 +1778,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
+			base = 1
+				modifier = {
+					factor = 0
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
 				}
-			}
-			modifier = {
-				factor = 2
-				date > "1938.1.6"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 	}
 
@@ -1913,31 +1838,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1940.1.6"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			base = 1
+				modifier = {
+					factor = 0
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 
@@ -1984,31 +1893,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			base = 1
+				modifier = {
+					factor = 0
+					or = {
+						original_tag = GER
+						original_tag = JAP
+						original_tag = FIN
+					}
+				}
 		}
 	}
 

@@ -24,6 +24,45 @@ generic_historical = {
 		infrastructure_effort_2
 		construction_effort_3	
 		naval_effort
+		ah_political_effort
+
+		ah_collectivist_ethos
+		ah_nationalism_focus
+		ah_militarism
+		ah_military_youth
+		ah_paramilitarism
+		ah_ideological_fanaticism
+		ah_technology_sharing
+
+		ah_internationalism_focus
+		ah_political_correctness
+		ah_indoctrination_focus
+		ah_political_commissars
+		ah_ideological_fanaticism
+		ah_technology_sharing
+
+		ah_liberty_ethos
+		ah_neutrality_focus
+		ah_deterrence
+		ah_why_we_fight
+		ah_technology_sharing
+
+		ah_army_effort
+		ah_equipment_effort
+		ah_equipment_effort_2
+		ah_equipment_effort_3
+		ah_doctrine_effort
+		ah_doctrine_effort_2
+		ah_motorization_effort
+		ah_mechanization_effort
+		ah_armor_effort
+		ah_special_forces
+
+		ah_aviation_effort
+		ah_fighter_focus
+		ah_aviation_effort_2
+
+
 	}
 
 	research = {

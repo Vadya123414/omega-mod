@@ -36,13 +36,13 @@ enable_operative_missions = {
 #	ai_strategy = {
 #		type = operative_mission
 #		mission = boost_ideology
-#		value = 100
+#		value = 0
 #	}
 
 #	ai_strategy = {
 #		type = operative_mission
 #		mission = propaganda
-#		value = 100
+#		value = 0
 #	}
 
 	ai_strategy = {
