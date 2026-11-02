@@ -886,6 +886,186 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 		no_farm_gen
 	}
 	set_research_slots = 4
+	584 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	405 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	587 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	823 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	831 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	832 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	830 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	742 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	732 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	404 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	402 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	586 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	589 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	582 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	573 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	581 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	398 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	579 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	580 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	653 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	572 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	583 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	881 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	590 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	403 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	577 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	824 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	516 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	576 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	578 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	571 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	882 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	40 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	654 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	570 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	569 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	329 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	568 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	567 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	566 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	564 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	575 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	878 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	876 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	574 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	565 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	563 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	561 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	877 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	644 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	562 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	874 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	822 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	875 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	637 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	560 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	657 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	409 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	408 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
+	655 = {
+		add_dynamic_modifier = { modifier = sov_fabriki }
+	}
 }
 
 1939.1.1 = {

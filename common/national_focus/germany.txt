@@ -8000,6 +8000,17 @@ focus_tree = {
 				}
 			}
 		}
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		x = 33
 		y = 0
@@ -8078,6 +8089,17 @@ focus_tree = {
 					option = HIDE
 				}
 				has_completed_focus = GER_oppose_hitler_ww
+			}
+		}
+		offset = {
+			x = -15
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 		offset = {
@@ -8208,7 +8230,15 @@ focus_tree = {
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+					OR = {
+						has_completed_focus = GER_oppose_hitler_ww
+						has_completed_focus = GER_oppose_hitler
+					}
+				}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -8347,6 +8377,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "La Resistance"
 			if = {
 				limit = {
@@ -8455,6 +8486,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 10
+		offset = {
+			x = 5
+			y = 2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -8743,7 +8785,7 @@ focus_tree = {
 			}
 		}
 	}
-
+ 
 	focus = {
 		id = GER_bribe_senior_officers
 		icon = GFX_goal_generic_dangerous_deal
@@ -8755,6 +8797,17 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
+		offset = {
+			x = 7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -8763,63 +8816,8 @@ focus_tree = {
 			add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.25 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					has_character = GER_gunther_von_kluge
-					
-				}
-				if = {
-					limit = {
-						GER_gunther_von_kluge = {
-							NOT = { 
-								has_trait = politically_connected
-							}
-						}
-					}
-					GER_gunther_von_kluge = {
-						add_trait = { trait = politically_connected }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_character = GER_albert_kesselring
-					
-				}
-				if = {
-					limit = {
-						GER_albert_kesselring = {
-							NOT = { 
-								has_trait = politically_connected
-							}
-						}
-					}
-					GER_albert_kesselring = {
-						add_trait = { trait = politically_connected }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_character = GER_wilhelm_ritter_von_leeb
-					
-				}
-				if = {
-					limit = {
-						GER_wilhelm_ritter_von_leeb = {
-							NOT = { 
-								has_trait = politically_connected
-							}
-						}
-					}
-					GER_wilhelm_ritter_von_leeb = {
-						add_trait = { trait = politically_connected }
-					}
-				}
-			}
 
 			show_unit_leaders_tooltip = GER_walter_model
-			show_unit_leaders_tooltip = GER_hermann_hoth
 		}
 	}
 	
@@ -8827,96 +8825,22 @@ focus_tree = {
 		id = GER_army_indoctrination
 		icon = GFX_focus_GER_subdue_the_wehrmacht
 		alternate_icon = GFX_focus_GER_subdue_the_wehrmacht_historical
-		prerequisite = { focus = GER_bribe_senior_officers }
-		mutually_exclusive = { focus = GER_autonomy_in_the_kriegsschulen }
+		prerequisite = { focus = GER_totaler_krieg }
 		x = -1
 		y = 1
-		relative_position_id = GER_bribe_senior_officers
+		relative_position_id = GER_totaler_krieg
 		cost = 5
 		available = {
 		}
-
+		allow_branch = {
+			has_government = fascism
+		}
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
 			GER_modify_army_modifier = yes
-			add_to_variable = { GER_military_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
+			add_to_variable = { GER_military_mobilization_speed = 0.3 tooltip = mobilization_speed_tt }
 			add_to_variable = { GER_military_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
-
-			if = {
-				limit = {
-					has_character = GER_walter_model
-					GER_walter_model = {
-						is_field_marshal = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				GER_walter_model = {
-					promote_leader = yes
-				}
-				if = {
-					limit = {
-						GER_walter_model = {
-							NOT = { 
-								has_trait = offensive_doctrine
-							}
-						}
-					}
-					GER_walter_model = {
-						add_trait = { trait = offensive_doctrine }
-					}
-				}
-				else_if = {
-					limit = {
-						GER_walter_model = {
-							has_trait = defensive_doctrine
-							NOT = { 
-								has_trait = unyielding_defender
-							}
-						}
-					}
-					GER_walter_model = {
-						add_trait = { trait = unyielding_defender }
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_character = GER_alfred_jodl
-					
-				}
-				if = {
-					limit = {
-						GER_alfred_jodl = {
-							NOT = { 
-								has_trait = politically_connected
-							}
-						}
-					}
-					GER_alfred_jodl = {
-						add_trait = { trait = politically_connected }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_character = GER_hermann_hoth
-					
-				}
-				if = {
-					limit = {
-						GER_hermann_hoth = {
-							NOT = { 
-								has_trait = politically_connected
-							}
-						}
-					}
-					GER_hermann_hoth = {
-						add_trait = { trait = politically_connected }
-					}
-				}
-			}
 		}
 	}
 
@@ -8924,15 +8848,17 @@ focus_tree = {
 		id = GER_strafbataillon
 		icon = GFX_focus_GER_strafbataillon
 
-		prerequisite = { focus = GER_army_indoctrination }
+		prerequisite = { focus = GER_totaler_krieg }
 
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = GER_army_indoctrination
+		relative_position_id = GER_totaler_krieg
 		cost = 5
 		available = {
+		} 
+		allow_branch = {
+			has_government = fascism
 		}
-
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -8995,8 +8921,7 @@ focus_tree = {
 		id = GER_autonomy_in_the_kriegsschulen
 		icon = GFX_focus_GER_appease_the_wehrmacht
 		prerequisite = { focus = GER_bribe_senior_officers }
-		mutually_exclusive = { focus = GER_army_indoctrination }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = GER_bribe_senior_officers
 		cost = 5
@@ -9101,11 +9026,11 @@ focus_tree = {
 		#icon = GFX_goal_generic_secret_weapon
 		#icon = GFX_focus_generic_army_tanks2
 
-		prerequisite = { focus = GER_army_indoctrination focus = GER_autonomy_in_the_kriegsschulen }
+		prerequisite = { focus = GER_develop_heraeus_facilities }
 
-		x = 1
-		y = 2
-		relative_position_id = GER_army_indoctrination
+		x = 0
+		y = 1
+		relative_position_id = GER_develop_heraeus_facilities
 		cost = 10
 		available = {
 			has_war_with_major = yes
@@ -9151,6 +9076,17 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = fascism
+		}
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
@@ -9333,6 +9269,17 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_anschluss
+		offset = {
+			x = 0
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		cost = 10
 
@@ -9917,6 +9864,17 @@ focus_tree = {
 				add = 1
 			}
 		}
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		allow_branch = {
 			has_dlc = "Peace For Our Time"
@@ -10019,7 +9977,6 @@ focus_tree = {
 		relative_position_id = GER_anschluss
 		cost = 5
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			surrender_progress < 0.1
 			custom_trigger_tooltip = { 
 				tooltip = GER_demonstration_of_military_achievements_trigger
@@ -10027,6 +9984,17 @@ focus_tree = {
 					num_subjects > 2
 					check_variable = { GER_occupied_states_europe > 19 }
 				}
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 
@@ -10173,9 +10141,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 	
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			custom_trigger_tooltip = {
 				tooltip = GER_improve_national_spirit_tooltip
 				OR = {
@@ -10261,10 +10237,19 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = GER_anschluss
-		cost = 5
+		cost = 4
+
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			AUS = {
 				all_core_state = {
@@ -10282,10 +10267,10 @@ focus_tree = {
 				value = 1
 			}
 			848 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -10315,6 +10300,17 @@ focus_tree = {
 			188 = { is_owned_by = GER }
 			85 = { is_owned_by = GER }
 			86 = { is_owned_by = GER }
+		}
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
 		}
 		
 		available = { 
@@ -10380,7 +10376,15 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_reassert_eastern_claims
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		cost = 10
 
 		will_lead_to_war_with = EST
@@ -10488,7 +10492,15 @@ focus_tree = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -10629,6 +10641,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_influence_the_benelux
 		cost = 5
+		offset = {
+			x = 0
+			y = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		bypass = {
 			OR = {
@@ -10647,7 +10670,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_faction_leader = yes
 			is_subject = no
 			NOT = { has_war_with = ITA }
@@ -10705,7 +10727,15 @@ focus_tree = {
 		cost = 10
 
 		will_lead_to_war_with = ITA
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
@@ -10762,7 +10792,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_form_rome_berlin_axis
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		bypass = { 
 			any_country_with_original_tag = {
 				original_tag_to_check = SPR
@@ -10771,6 +10809,7 @@ focus_tree = {
 		}
 		
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_faction_leader = yes
 			is_subject = no
 			if = {
@@ -10944,8 +10983,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_form_rome_berlin_axis
 		cost = 10
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			any_country_with_original_tag = {
 				original_tag_to_check = SPR
@@ -11200,7 +11248,15 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_fate_of_czechoslovakia
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -11270,6 +11326,17 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_reassert_eastern_claims
 		cost = 10
+		offset = {
+			x = 0
+			y = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		will_lead_to_war_with = POL
 
@@ -11565,6 +11632,17 @@ focus_tree = {
 			}
 
 		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 
@@ -11612,7 +11690,15 @@ focus_tree = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -12160,6 +12246,17 @@ focus_tree = {
 		cost = 10
 
 		cancel_if_invalid = yes
+		offset = {
+			x = -4
+			y = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		
 		available = {
 			is_subject = no
@@ -12249,7 +12346,15 @@ focus_tree = {
 		will_lead_to_war_with = SWI
 		
 		cancel_if_invalid = yes
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
@@ -12332,7 +12437,6 @@ focus_tree = {
 		relative_position_id = GER_war_with_france
 		cost = 5
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			SWI = {
 				exists = yes
 				has_war = no
@@ -12341,6 +12445,17 @@ focus_tree = {
 					tooltip = GER_alone_or_peace_faction_tt
 					is_alone_or_in_faction_at_peace_with_GER = yes
 				}
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 
@@ -12383,7 +12498,7 @@ focus_tree = {
 					tooltip = subversive_activites_upkeep_tt
 				}
 			}
-		}
+		} 
 	}
 	
 	focus = {
@@ -12398,7 +12513,15 @@ focus_tree = {
 		relative_position_id = GER_utilize_the_nordliche_gesellschaft
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -12481,12 +12604,23 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			
 			has_war_with = ENG
 			has_army_manpower = { size > 999999 }
 			custom_trigger_tooltip = {
 			 	tooltip = GER_sea_lion_eq_trigger_tt
 			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 90 }
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 
@@ -12541,7 +12675,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_operation_sea_lion
 		cost = 4
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -12632,8 +12774,17 @@ focus_tree = {
 		cost = 5
 
 		cancel_if_invalid = yes
-		
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = GER_crossing_the_atlantic_trigger_tt
@@ -13085,6 +13236,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
+
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		
 		bypass = {
 			OR = {
@@ -13322,7 +13483,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			NOT = { is_in_faction_with = YUG }
 			NOT = { YUG = { has_non_aggression_pact_with = GER } }
@@ -14066,7 +14226,17 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
-
+		offset = {
+			x = -7
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
@@ -14159,13 +14329,24 @@ focus_tree = {
 		icon = GFX_focus_GER_hegemony_of_the_ss
 		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 
-		x = -4
+		x = -7
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 4
 
 		available = {
 			is_subject = no
+		}
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -14200,6 +14381,17 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		
 		bypass = {
 			SOU = {
@@ -14276,7 +14468,17 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_anti_comintern_pact
 		cost = 5
-
+		offset = {
+			x = -1
+			y = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		will_lead_to_war_with = SOV
 
 		bypass = {
@@ -14420,6 +14622,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		
 		available = {
 			is_subject = no
@@ -14747,7 +14960,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_treaty_with_the_ussr
 		cost = 5
-		
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		bypass = {
 			SOV = {
 				is_in_faction_with = GER
@@ -14877,7 +15098,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available_if_capitulated = yes
 		
 		available = {
@@ -15006,7 +15235,15 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_befriend_china
 		cost = 5
-		
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
+				}
+			}
+		}
 		available_if_capitulated = yes
 
 		available = {
@@ -17465,6 +17702,17 @@ focus_tree = {
 				}
 			}
 			GFX_focus_GER_support_the_fuhrer = yes
+		}
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
 		}
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
@@ -20801,6 +21049,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "Gotterdammerung" 
 			if = {
 				limit = {
@@ -21134,6 +21383,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "Gotterdammerung"
 			if = {
 				limit = {
@@ -23927,6 +24177,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "Gotterdammerung"
 			if = {
 				limit = {
@@ -24065,6 +24316,7 @@ focus_tree = {
 		cost = 2
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "Gotterdammerung"
 			if = {
 				limit = {

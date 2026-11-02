@@ -6,7 +6,7 @@ news_event = {
 	desc = debaf_pexa.1.desc
 	picture = GFX_news_event_soviet_soldiers_ruins
 	
-	major = yes
+	#major = yes
 
 	is_triggered_only = yes
 

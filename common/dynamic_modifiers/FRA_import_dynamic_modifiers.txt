@@ -113,3 +113,9 @@ Kefir_delat_plaki_plaki = { #STATE MODIFIER
 
 	army_attack_factor = -0.4
 }
+
+sov_fabriki = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans
+	local_building_slots_factor = 0.40
+}
