@@ -116,7 +116,7 @@ focus_tree = {
         icon = GFX_focus_RAJ_indianisation_of_army
         x = 0
         y = 0
-        #mutually_exclusive = { focus = RAJ_keep_british_generals }
+        mutually_exclusive = { focus = RAJ_keep_british_generals }
         cost = 5
 
         offset = {
@@ -586,7 +586,29 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNATIONAL_TRADE}
 
         completion_reward = { #Note: the equipment is ACTUALLY ADDED in RAJ_mughal_uprising, if you want to change the amount, you need to do it here and TWICE in the RAJ_Mughal_uprising
+            IF = {
+                limit = {
+                    has_dlc = "Arms Against Tyranny"
+                }
+                add_equipment_subsidy = {
+                    cic = 1000
+                    equipment_type = infantry_equipment
+                    seller_tags = { SOV GER JAP ITA } 
+                }
+                add_equipment_subsidy = {
+                    cic = 1000
+                    equipment_type = artillery_equipment
+                    seller_tags = { SOV GER JAP ITA }
+                }
+                add_equipment_subsidy = {
+                    cic = 1000
+                    equipment_type = light_tank_chassis
+                    seller_tags = { SOV GER JAP ITA } 
+                }
+            }
+            ELSE = {
                 set_country_flag = RAJ_mughal_no_aat_give_equipment
+                effect_tooltip = {
                     add_equipment_to_stockpile = { 
                         type = infantry_equipment
                         amount = 4000
@@ -597,11 +619,62 @@ focus_tree = {
                         amount = 800
                         producer = SOV
                     }
-                    add_equipment_to_stockpile = { 
-                        type = support_equipment
-                        amount = 800
+                }
+            }
+
+            effect_tooltip = {
+                add_equipment_to_stockpile = { 
+                    type = infantry_equipment
+                    amount = 2000
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = { 
+                    type = artillery_equipment
+                    amount = 500
+                    producer = SOV
+                }
+            }
+            IF = {
+                limit = {
+                    has_dlc = "No Step Back"
+                }
+                create_equipment_variant = {
+                    name = "BT-7"
+                    type = light_tank_chassis_2
+
+                   upgrades = {       
+                       tank_nsb_engine_upgrade = 10
+                       tank_nsb_armor_upgrade = 2 
+                   }
+                    modules={
+                        main_armament_slot=tank_small_cannon_2
+                        engine_type_slot=tank_gasoline_engine
+                        turret_type_slot=tank_light_two_man_tank_turret
+                        suspension_type_slot=tank_christie_suspension
+                        armor_type_slot=tank_welded_armor
+                    }
+                    
+                    model = "SOV_light_armor_entity"
+                    icon = "GFX_SOV_improved_light_tank_medium" 
+                }
+                effect_tooltip = {
+                    add_equipment_to_stockpile = {
+                        type =  light_tank_chassis
+                        variant_name = "BT-7"
+                        amount = 100
                         producer = SOV
                     }
+                }
+            }
+            ELSE = {
+                effect_tooltip = {
+                    add_equipment_to_stockpile = { 
+                        type = light_tank_equipment_1 
+                        amount = 100 
+                        producer = SOV 
+                    }
+                }
+            }
 			custom_effect_tooltip = newline_tt
 			custom_effect_tooltip = MUGHAL_divisions_spawned
             custom_effect_tooltip = newline_tt
@@ -1512,7 +1585,7 @@ focus_tree = {
                     limit = {
                         can_construct_building = air_facility
                     }
-                    prioritize = { 291 }
+                    prioritize = { 439 }
                     construct_building_in_random_province = {
                         air_facility = 1
                     }
@@ -1659,30 +1732,13 @@ focus_tree = {
 
         completion_reward = {
             try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
-			if = {
-				limit = {
-					has_idea = civilian_economy
-				}
-				add_ideas = low_economic_mobilisation
-			}
-			else_if = {
-				limit = {
-					has_idea = low_economic_mobilisation
-				}
-				add_ideas = partial_economic_mobilisation
-			}
-			else_if = {
-				limit = {
-					has_idea = partial_economic_mobilisation
-				}
-				add_ideas = war_economy
-			}
-			else_if = {
-				limit = {
-					has_idea = war_economy
-				}
-				add_ideas = tot_economic_mobilisation
-			}
+            if = {
+                limit = {
+                    has_idea = civilian_economy
+                }
+
+                add_ideas = low_economic_mobilisation
+            }
 
             add_ideas = idea_RAJ_reviving_the_workshop_of_the_world
 
@@ -7748,6 +7804,10 @@ focus_tree = {
             }
 
             hidden_effect = {
+                country_event = {
+                    id = GOE_RAJ.53
+                    hours = 6
+                }
                 if = {
                     limit = {
                         has_game_rule = {
@@ -7813,6 +7873,10 @@ focus_tree = {
             custom_effect_tooltip = RAJ_league_against_gandhism_tt
             add_political_power = 30
             hidden_effect = {
+                country_event = {
+                    id = GOE_RAJ.54
+                    hours = 6
+                }
                 if = {
                     limit = {
                         has_game_rule = {
@@ -7903,6 +7967,9 @@ focus_tree = {
             custom_effect_tooltip = generic_skip_one_line_tt
             try_build_civ_in_core_otherwise_build_in_controlled = yes
             
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = RAJ_b_p_sitaramayya
         }
     }
 
@@ -7975,6 +8042,7 @@ focus_tree = {
             custom_effect_tooltip = generic_skip_one_line_tt
             custom_effect_tooltip = available_political_advisor
             show_ideas_tooltip = RAJ_bhimrao_ramji_ambedkar
+            show_ideas_tooltip = RAJ_GOE_vallabhbhai_patel
         }
     }
 
@@ -8338,7 +8406,7 @@ focus_tree = {
 
             custom_effect_tooltip = generic_skip_one_line_tt
 
-            #add_ideas = idea_RAJ_government_budget_shortfall
+            add_ideas = idea_RAJ_government_budget_shortfall
         }
     }
 
@@ -8665,33 +8733,95 @@ focus_tree = {
 
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
-        completion_reward = {
-  		every_owned_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-                is_core_of = RAJ
-				infrastructure < 4
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
-			}
-			random_select_amount = 2
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-                    }     
+        complete_tooltip = {
+            every_owned_state = {
+                limit = { has_state_flag = agcoop_built_infra }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+      
+            }
+
+            every_owned_state = { #Need to loop through twice beccause sometimes you can build a civ but not an infra if you already had a 5 infra in a state
+                limit = { has_state_flag = agcoop_built_civ }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
         }
+
+        completion_reward = {
+            custom_effect_tooltip = RAJ_agricultural_cooperatives_tt
+
+            #effect_tooltip = {
+            #    every_owned_state = {
+            #        limit = {
+            #            is_controlled_by = ROOT
+            #            industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
+            #            infrastructure < 5
+            #        }
+#
+            #        add_building_construction = {
+            #            type = infrastructure
+            #            level = 1
+            #            instant_build = yes
+            #        }
+            #    }
+            #}
+
+            set_variable = { agcoop_infra_build_counter = 0 }
+            set_variable = { agcoop_civ_build_counter = 0 }
+            for_each_scope_loop = {
+                array = owned_states_at_game_start
+                
+                 if = {
+                     limit = {
+                        is_controlled_by = ROOT
+                        industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
+                    }     
+                    ROOT = { add_to_variable = { agcoop_infra_build_counter = 1 } } #Count infra if state requirements are correct, even if one isnt build because you already technically fulfilled the requirements
+                    if = {
+                        limit = {
+                            infrastructure < 5
+                        }
+
+                        add_building_construction = {
+                            type = infrastructure
+                            level = 1
+                            instant_build = yes
+                        }
+                        set_state_flag = agcoop_built_infra #used for complete tooltip
+                    }
+
+                    log = "INFRA BUILT: [?ROOT.agcoop_infra_build_counter]"
+                    set_temp_variable = { t_infra_build_counter  = ROOT.agcoop_infra_build_counter }
+
+                    modulo_temp_variable = { var = t_infra_build_counter value = 2 } #every other infra counts as a civ
+
+                    if = {
+                        limit = {
+                            check_variable = { t_infra_build_counter = 1 } 
+                            check_variable = { ROOT.agcoop_civ_build_counter < 10 } #Max roof
+                        }
+#
+                        
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+                        set_state_flag = agcoop_built_civ
+                        add_to_variable = { ROOT.agcoop_civ_build_counter = 1 }
+                    }     
+                }
+            }
+        }
+    }
 
     focus = {
         id = RAJ_tea_exports
@@ -13121,6 +13251,10 @@ focus_tree = {
                 show_modifiers = yes # default is no
             }
 
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = available_political_advisor
+            show_ideas_tooltip = RAJ_GOE_subbier_appadurai_ayer
+
 
 
 
@@ -15457,6 +15591,11 @@ focus_tree = {
                         exists = yes
                     }
                 }
+                custom_trigger_tooltip = {
+                    tooltip = RAJ_hedgemony_pakistan_assessed_tt
+                    has_variable = pak_factories
+                    has_variable = pak_researched_techs
+                }
                 OR = {
                     check_variable = { RAJ.num_of_factories >  pak_factories tooltip = pak_factories_tt }
                     check_variable = { RAJ.num_researched_technologies > pak_researched_techs tooltip = pak_tech_tt }
@@ -17154,6 +17293,12 @@ focus = {
 		set_variable = { RAJ_local_leaders_infra_chance = 0 }
 		set_variable = { RAJ_local_leaders_civs_chance = 0.6 }
 		set_variable = { RAJ_local_leaders_mils_chance = 0.4 }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = RAJ_GOE_j_r_d_tata
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = RAJ_GOE_g_d_birla
 	}
 }
 
@@ -19112,7 +19257,7 @@ focus = {
 				}
 			}
 			RAJ_GOE_jawaharlal_nehru = {
-				#add_country_leader_trait = support_from_congress # trait does not exist in 1.19.3
+				add_country_leader_trait = support_from_congress
 			}
 		}
 		else_if = {
@@ -23532,6 +23677,50 @@ focus = {
                     amount = 24
                 }
             }
+        }
+    } 
+
+    focus = {
+        id = RAJ_establish_the_alupuram_works
+        icon = GFX_focus_generic_aluminum
+        prerequisite = { focus = RAJ_bombay_baroda_and_central_india_railway }
+        x = 2
+        y = 1
+        relative_position_id = RAJ_bombay_baroda_and_central_india_railway
+        
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available = {
+            controls_state = 982 
+        }
+        
+        bypass = {
+
+        }
+
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+
+        completion_reward = {
+            982 = {
+                add_resource = {
+                    type = aluminium
+                    amount = 15  
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            unlock_decision_tooltip = {
+                decision = establish_jaykaynagar_aliminium_smelters
+                show_effect_tooltip = yes # default is no
+                show_modifiers = no 
+            }   
         }
     }
 

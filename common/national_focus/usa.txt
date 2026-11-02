@@ -314,7 +314,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
 			set_politics = { ruling_party = communism elections_allowed = yes } #good and nice communism has elections
 			add_popularity = { ideology = communism popularity = 0.25 }
 			hidden_effect = {
@@ -989,6 +988,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 
 		available = {
@@ -1001,6 +1004,9 @@ focus_tree = {
 				event_target:WTT_communist_china = {
 					is_faction_leader = yes
 				}
+			}
+			event_target:WTT_communist_china = {
+				has_rule = can_join_factions
 			}
 		}
 		
@@ -1168,8 +1174,7 @@ focus_tree = {
 							has_completed_focus = ITA_new_colonial_policies
 						}
 					}
-					any_state = {
-						is_controlled_by = ITA
+					any_controlled_state = {
 						NOT = { is_core_of = ITA }
 					}
 				}
@@ -1177,8 +1182,7 @@ focus_tree = {
 					exists = yes
 					NOT = { has_war_with = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					any_state = {
-						is_controlled_by = FRA
+					any_controlled_state = {
 						NOT = { is_core_of = FRA }
 					}
 				}
@@ -1186,8 +1190,7 @@ focus_tree = {
 					exists = yes
 					NOT = { has_war_with = ROOT }
 					NOT = { is_in_faction_with = ROOT }
-					any_state = {
-						is_controlled_by = GER
+					any_controlled_state = {
 						NOT = { is_core_of = GER }
 					}
 				}
@@ -1234,8 +1237,7 @@ focus_tree = {
 						exists = yes
 						NOT = { has_war_with = ROOT }
 						NOT = { is_in_faction_with = ROOT }
-						any_state = {
-							is_controlled_by = ITA
+						any_controlled_state = {
 							NOT = { is_core_of = ITA }
 						}
 						OR = {
@@ -1269,8 +1271,7 @@ focus_tree = {
 						exists = yes
 						NOT = { has_war_with = ROOT }
 						NOT = { is_in_faction_with = ROOT }
-						any_state = {
-							is_controlled_by = FRA
+						any_controlled_state = {
 							NOT = { is_core_of = FRA }
 						}
 					}
@@ -1297,8 +1298,7 @@ focus_tree = {
 						exists = yes
 						NOT = { has_war_with = ROOT }
 						NOT = { is_in_faction_with = ROOT }
-						any_state = {
-							is_controlled_by = GER
+						any_controlled_state = {
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1722,8 +1722,8 @@ focus_tree = {
 					}
 				}
 			}
-			add_ideas = USA_limited_intervention
 			set_rule = { can_send_volunteers = yes }
+			add_ideas = USA_limited_intervention
 			USA_congress_medium_opposition = yes
 			
 			hidden_effect = {
@@ -2157,11 +2157,31 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
 			add_tech_bonus = {
 				name = USA_manhattan_project
 				bonus = 1.0
 				uses = 1
 				category = nuclear
+			}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+				add_ideas = USA_manhattan_project_ns
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+				add_ideas = USA_manhattan_project_ns
 			}
 		}
 	}
@@ -2268,6 +2288,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_lend_lease_act_neutrality_tt
 			hidden_effect = {
 				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
+				set_country_flag = USA_passed_neutrality_pact_flag
 			}
 			hidden_effect = {
 				if = {
@@ -2346,7 +2367,17 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = USA_lend_lease_act_neutrality_tt
 			}
-			
+			if = {
+				limit = {
+					has_completed_focus = USA_neutrality_act
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = ROOT
+					has_war = yes
+					surrender_progress > 0
+				}
+			}
 		}
 		
 		bypass = {
@@ -2694,6 +2725,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = wartime_industry_focus
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
 		}
@@ -2742,7 +2774,9 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
 			army_experience = 10
 			random_owned_controlled_state = {
@@ -3023,7 +3057,9 @@ focus_tree = {
 			}
 			add_ideas = extensive_conscription
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -3090,11 +3126,15 @@ focus_tree = {
 				}
 				set_state_flag = USA_USACE_projects_3Inf
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			air_experience = 50
 			navy_experience = 50
 			army_experience = 10			
 		}
 	}
+
 ###  ## ###  ##  ###  #   ###  ## #  #     ### #  # ###      ##   ##  #   ###       ## ###  ##  #  # ###   ##  ###  ###  
 #   #    #  #  # #  # #    #  #   #  #      #  #  # #       #    #  # #   #  #     #    #  #  # ## # #  # #  # #  # #  # 
 ##   #   #  #### ###  #    #   #  ####      #  #### ##      # ## #  # #   #  #      #   #  #### # ## #  # #### ###  #  # 
@@ -3247,7 +3287,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			
 			add_timed_idea = { idea = USA_adjusted_compensation_payment days = 180 }
 			USA_great_depression_level_down = yes
 			if = {
@@ -4282,6 +4321,18 @@ focus_tree = {
 							CONTROLLER = { has_war_with = ROOT }
 						}	
 					}
+					1065 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
+					1031 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
 					326 = {
 						OR = {
 							is_controlled_by = ROOT
@@ -4737,6 +4788,7 @@ focus_tree = {
 							controls_state = 670
 							controls_state = 286
 							controls_state = 741
+							controls_state = 1017
 							not = { has_war_with = ROOT }
 						} 
 					}
@@ -5133,7 +5185,10 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = USA_hemisphere_defense_faction
+				create_faction_from_template = {
+					template = faction_template_pan_american
+					name = USA_hemisphere_defense_faction
+				}
 			}
 			if = {
 				limit = {
@@ -5635,6 +5690,11 @@ focus_tree = {
 				exists = yes
 				NOT = { has_government = ROOT }
 			}
+			any_state_of = {
+				target = {650 631 532 638 642}
+
+				is_fully_controlled_by = ROOT
+			}
 		}
 		will_lead_to_war_with = JAP
 		x = 0
@@ -5645,6 +5705,8 @@ focus_tree = {
 		#	factor = 1
 		#}
 		completion_reward = {
+			if = {
+				limit = { 650 = { is_fully_controlled_by = ROOT } }
 			650 = {
 				#Fortify naval bases
 				add_building_construction = {
@@ -5660,6 +5722,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+
+			if = {
+				limit = { 631 = { is_fully_controlled_by = ROOT } }
 			631 = {
 				#Fortify naval bases
 				add_building_construction = {
@@ -5675,6 +5741,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+			
+			if = { 
+				limit = { 632 = {is_fully_controlled_by = ROOT}} 
 			632 = {
 				#Fortify naval bases
 				add_building_construction = {
@@ -5690,6 +5760,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+			
+			if = {
+				limit = { 638 = { is_fully_controlled_by = ROOT} }
 			638 = {
 				#Fortify naval bases
 				add_building_construction = {
@@ -5705,6 +5779,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+			
+			if = {
+				limit = { 642 = { is_fully_controlled_by = ROOT}}
 			642 = {
 				#Fortify naval bases
 				add_building_construction = {
@@ -5720,6 +5798,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+			
 		}
 	}
 
@@ -5896,6 +5976,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_george_s_patton = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -5966,6 +6050,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_army_of_the_united_states
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_omar_bradley = {
+				add_skill_level = 1
+			}
+			USA_mark_clark = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -6022,6 +6113,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = USA_tank_experiments
 		icon = GFX_goal_generic_army_tanks
@@ -6048,6 +6140,10 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = USA_tank_experiments
 				uses = 1
@@ -6608,6 +6704,10 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_ernest_king = {
+				add_skill_level = 1
+			}
 		}
 	}
 	focus = {
@@ -6680,6 +6780,13 @@ focus_tree = {
 				limit = { has_idea = bureau_of_ordnance_spirit }
 				remove_ideas = bureau_of_ordnance_spirit
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_chester_w_nimitz = {
+				add_skill_level = 1
+			}
+			USA_william_halsey_jr = {
+				add_skill_level = 1
+			}
 		}
 	}
 	
@@ -6700,6 +6807,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
 			add_tech_bonus = {
 				name = USA_battleship_primacy
 				bonus = 1.0
@@ -6725,11 +6836,12 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = USA_advanced_mahanian_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_base_strike
+				bonus = 0.1
+				days = 180
+				track = capital_ships
 			}
 		}
 	}
@@ -6805,12 +6917,35 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
 			add_tech_bonus = {
 				name = USA_carrier_primacy
 				bonus = 1.0
 				uses = 2
 				category = cv_tech
 			}
+
+			create_equipment_variant = {
+				name = "Essex Class"				
+				name_group = USA_CV_HISTORICAL
+				type = ship_hull_carrier_2
+				allow_without_tech = no
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					fixed_ship_secondaries_slot = empty
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_armor_carrier_deck
+				}
+				design_team = mio:USA_newport_news_shipbuilding_organization
+			}
+
+
 		}
 	}
 
@@ -6839,6 +6974,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = USA_naval_radar
 		icon = GFX_goal_generic_radar
@@ -6866,6 +7002,16 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = USA_naval_radar
 				uses = 2
@@ -6892,7 +7038,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
-			
 		}
 	}
 
@@ -6913,11 +7058,41 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
+			add_mastery = {
+				amount = 50
+				track = screens
+			}
+			add_mastery_bonus = {
 				name = USA_convoy_tactics
-				cost_reduction = 0.35
-				uses = 2
-				category = convoy_defense_tree
+				bonus = 0.1
+				days = 180
+				track = screens
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				create_equipment_variant = {
+					name = "Casablanca Class"
+					allow_without_tech = no 
+					type = ship_hull_escort_carrier
+					modules = {
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_deck_slot_1 = ship_escort_deck_space
+						fixed_ship_deck_slot_2 = ship_escort_deck_space
+						front_1_custom_slot = empty
+						mid_1_custom_slot = empty
+						fixed_ship_radar_slot = empty
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = empty
+						fixed_ship_anti_air_slot = ship_anti_air_1
+					}
+					design_team = mio:USA_newport_news_shipbuilding_organization
+					name_group = USA_CVL_HISTORICAL
+				}
 			}
 		}
 	}
@@ -6935,11 +7110,7 @@ focus_tree = {
 		}
 
 		available = {
-
-		}
-		
-		bypass = {
-
+			is_special_project_completed = sp:sp_naval_cruiser_submarine
 		}
 
 		cancel_if_invalid = yes
@@ -6954,11 +7125,20 @@ focus_tree = {
 				uses = 2
 				category = ss_tech
 			}
-			if = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+
+			IF = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				set_technology = { cruiser_submarines = 1 }
+				add_ideas = fleet_submarine_specialization_mtg
+			}
+			ELSE = {
+				add_ideas = fleet_submarine_specialization
 			}
 		}
 	}

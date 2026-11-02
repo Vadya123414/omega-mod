@@ -1332,6 +1332,10 @@
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
 			swap_ideas = {
 				remove_idea = SAF_abandon_westminster
 				add_idea = SAF_abandon_westminster_communism
@@ -2610,7 +2614,13 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 50
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				name = SAF_special_service_battalion
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -2720,7 +2730,13 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 50
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				name = SAF__south_african_military_college
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 

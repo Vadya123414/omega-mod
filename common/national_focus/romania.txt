@@ -2076,7 +2076,7 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 17
+					amount = 24
 				}
 			}
 		}
@@ -4102,9 +4102,20 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_tech = fighter3
-				has_tech = heavy_fighter3
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				NOT = {
+					has_tech = advanced_small_airframe
+					has_tech = advanced_medium_airframe
+				}
+			}
+			else = {
+				NOT = {
+					has_tech = fighter3
+					has_tech = heavy_fighter3
+				}
 			}
 			OR = {
 				GER = {

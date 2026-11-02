@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = manchukuo_focus_tsr
 	
 	country = {
@@ -2206,12 +2206,7 @@
 		}
 
 		available = {
-			JAP = {
-				or = {
-					has_completed_focus = JAP_okadas_military_purge_speech
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-				}
-			}
+
 		}
 
 		bypass = {
@@ -2364,9 +2359,7 @@
 		}
 
 		available = {
-			JAP = {
-					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
-			}
+
 		}
 
 		bypass = {
@@ -2607,9 +2600,7 @@
 		}
 
 		available = {
-			JAP = {
-					has_completed_focus = JAP_okadas_military_purge_speech
-			}
+
 		}
 
 		bypass = {
@@ -3078,6 +3069,47 @@
 				}	
 			}
 			
+
+			hidden_effect = { set_variable = { MAN_independence_target = OVERLORD } } #We're using a variable here because the saved event target becomes invalidated deep in ScopedEventTarget 
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+			effect_tooltip = {		
+				if = {
+					limit = {
+						is_in_faction_with = OVERLORD
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = OVERLORD
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_in_faction_with = var:MAN_independence_target
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = var:MAN_independence_target 
+					type = puppet_wargoal_focus
+				}
+			}
+			IF = {
+				limit = {
+					has_war_with = event_target:WTT_current_china_leader
+				}
+				every_country = {
+					limit = {
+						has_war_with = MAN
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					white_peace = {
+						tag = MAN
+					}
+				}
+			}
 			IF = {
 				limit = {
 					has_completed_focus = MAN_tsr_persuade_the_IMPRP
@@ -3123,9 +3155,8 @@
 		}
 
 		available = {
-				NOT = {
-				has_war_with = JAP
-			}
+			has_war = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -3164,10 +3195,7 @@
 		}
 
 		available = {
-			JAP = {
-					has_completed_focus = 	JAP_organize_a_general_election
-				}
-		
+			is_subject = no
 		}
 
 		bypass = {
@@ -3431,7 +3459,7 @@
 		}
 
 		available = {
-			always = no
+
 		}
 
 		bypass = {
@@ -3538,9 +3566,7 @@
 		}
 
 		available = {
-			JAP = {
-				has_completed_focus = JAP_a_red_sun_rises_for_a_new_era
-			}
+			is_subject = no
 		}
 
 		bypass = {
@@ -4039,9 +4065,50 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			hidden_effect = { set_variable = { MAN_independence_target = OVERLORD } } #We're using a variable here because the saved event target becomes invalidated deep in ScopedEventTarget
+			if = {
+				limit = {
+					is_subject = yes
+				}
 				add_country_leader_trait = nationalist_symbol
 			}
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+			effect_tooltip = {		
+				if = {
+					limit = {
+						is_in_faction_with = OVERLORD
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = OVERLORD
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_in_faction_with = var:MAN_independence_target
+					}
+					leave_faction = yes
+				}
+				declare_war_on = {
+					target = var:MAN_independence_target 
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.48 days = 2 }
+				IF = {
+					limit = {
+						has_country_flag = MAN_xingan_government
+					}
+					retire_character = MAN_urzhin_garmaev
+					retire_character = MAN_jonjurjab
+				}
+			}
 		}
+	}
 
 	focus = {
 		id = MAN_tsr_imperial_divinity
@@ -4698,10 +4765,7 @@
 				KHM = {
 					XSM_ma_hongbin = {
 						set_nationality = ROOT
-						clr_character_flag = yes
-						remove_trait = {
-							trait = XSM_dubious_loyalty
-						}
+						CHI_clear_dubious_loyalty_effect = yes
 					}
 				}
 			}
@@ -4714,10 +4778,7 @@
 				NXM = {
 					XSM_ma_hongbin = {
 						set_nationality = ROOT
-						clr_character_flag = yes
-						remove_trait = {
-							trait = XSM_dubious_loyalty
-						}
+						CHI_clear_dubious_loyalty_effect = yes
 					}
 				}
 			}
@@ -4730,10 +4791,7 @@
 				XSM = {
 					XSM_ma_hongbin = {
 						set_nationality = ROOT
-						clr_character_flag = yes
-						remove_trait = {
-							trait = XSM_dubious_loyalty
-						}
+						CHI_clear_dubious_loyalty_effect = yes
 					}
 				}
 			}
@@ -4746,10 +4804,7 @@
 				GSM = {
 					XSM_ma_hongbin = {
 						set_nationality = ROOT
-						clr_character_flag = yes
-						remove_trait = {
-							trait = XSM_dubious_loyalty
-						}
+						CHI_clear_dubious_loyalty_effect = yes
 					}
 				}
 			}
