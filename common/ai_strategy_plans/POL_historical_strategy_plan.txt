@@ -54,7 +54,7 @@ POL_historical_plan = {
 		#POL_study_foreign_built_ships
 		#POL_expand_gdynia_seaport 1.6 ляма без складов
 		POL_polish_militarism
-		POL_national_defense_fund
+		POL_national_defence_fund
 		POL_complete_april_constitution
 		#1938
 		POL_consolidate_sanation_government

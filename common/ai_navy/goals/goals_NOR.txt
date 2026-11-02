@@ -38,8 +38,8 @@ NOR_naval_dominance = {
         NOR
     }
 
-    min_priority = 1
-    max_priority = 8
+    min_priority = 15
+    max_priority = 20
 }
 
 NOR_training = {

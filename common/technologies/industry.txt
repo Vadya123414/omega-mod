@@ -92,7 +92,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 28
+			factor = 5
 						
 			modifier = {
 				factor = 10
@@ -130,7 +130,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 28
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -193,7 +193,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 28
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -227,10 +227,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 
 			modifier = {
-				factor = 5
+				add = 5
 				energy_ratio < 0.9
 			}
 		}
@@ -256,10 +256,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 0
 			
 			modifier = {
-				factor = 5
+				add = 5
 			
 				has_resources_in_country = {
 					resource = coal
@@ -269,7 +269,7 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 5
+				add = 5
 				energy_ratio < 0.9
 			}
 		}
@@ -384,7 +384,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 28
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -424,7 +424,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 28
+			factor = 5
 						
 			modifier = {
 				factor = 10
@@ -458,7 +458,7 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		ai_will_do = {
-			factor = 28
+			factor = 5
 			
 			modifier = {
 				factor = 5
@@ -1461,7 +1461,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
+			factor = 5
 			
 			modifier = {
 				factor = 1.5
@@ -1558,7 +1558,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -1634,7 +1634,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
+			factor = 5
 			
 			modifier = {
 				factor = 10

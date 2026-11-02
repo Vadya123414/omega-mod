@@ -239,6 +239,7 @@ mountaineers_generic = {
 		POL
 		BEL
 		HOL
+		JAP
 	}
 	upgrade_prio = {
 		base = 2
@@ -354,7 +355,7 @@ marines_generic = {
 }
 rangers_generic = {
 	blocked_for = {
-		FIN
+		FIN GER JAP
 	}
 	
 	role = rangers

@@ -32,7 +32,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 2
+				field_guns = 2
 			}
 			
 			regiments = {
@@ -71,7 +71,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 3
+				field_guns = 3
 			}
 			
 			regiments = {
@@ -109,7 +109,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 			
 			regiments = {
@@ -160,7 +160,7 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 2
+				field_guns = 2
 			}
 
 			regiments = {
@@ -192,7 +192,7 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 
 			regiments = {

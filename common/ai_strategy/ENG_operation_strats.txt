@@ -22,7 +22,7 @@ Allies_boost_french_resistance = {
 	enable = {
 		date > 1939.1.1
 		num_of_operatives > 1
-		nor = {is_in_faction_with = GER}
+		not = {is_in_faction_with = GER}
 	}
 	abort = {
 		num_finished_operations = {
@@ -86,7 +86,7 @@ Allies_boost_french_resistance_make_contant = {
 	
 	enable = {
 		date > 1939.1.1
-		nor = {is_in_faction_with = GER}
+		not = {is_in_faction_with = GER}
 		num_of_operatives > 1
 			
 		num_finished_operations = {

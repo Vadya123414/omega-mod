@@ -1,14 +1,195 @@
-NOR_the_home_fleet  = {
+NOR_the_defend_ENG  = {
 	allowed = { original_tag = NOR }
 
 	enable = {
-		has_war = yes
+		has_global_flag = VUP_Hist_version
 	}
 	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = naval_dominance
+		id = 18
+		value = 1000
+	}
+}
+NOR_in_danger = {
+	allowed = { original_tag = NOR }
+	enable = {
+		has_global_flag = VUP_Hist_version
+	}
+	abort = {
+		has_capitulated = yes
+	}
 
 	ai_strategy = {
-		type = strike_force_home_base
-		id = 207 # north sea
+		type = naval_avoid_region
+		id = 173 #adriatic
+		value = 500
+	}
+			ai_strategy = {
+		type = naval_avoid_region
+		id = 174 #adriatic
+		value = 500
+	}
+}
+	NOR_hist_defend = { 
+		allowed = {
+			original_tag = NOR
+		}
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1939.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			110
+			921
+			922
+		}
+		ratio = 0.9
+		area = europe
+		subtract_invasions_from_need = yes
+		subtract_fronts_from_need = no
+	}
+}
+NOR_bunker_1 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9174
+		value = 700
+	}
+}
+NOR_bunker_2 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 6151
+		value = 710
+	}
+}
+NOR_bunker_3 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.6.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9096
+		value = 720
+	}
+}
+NOR_bunker_4 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 11176
+		value = 730
+	}
+}
+NOR_bunker_5 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = coastal_bunker
+        target = 9296
+		value = 740
+	}
+}
+NOR_airbase_1 = { 
+	allowed = {
+		original_tag = NOR
+	}
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = air_base
+        target = 920
 		value = 1000
+	}
+}
+NOR_airbase_2 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+        date > 1938.1.1
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = air_base
+        target = 143
+		value = 1000
+	}
+}
+NOR_defend_110 = { 
+	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = building_target
+        id = air_base
+        target = 920
+		value = 1000
+	}
+}
+
+NOR_not_defend_SWI = {
+    	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = SWI
+	value = 100  
+	}
+}
+NOR_not_defend_FIN = {
+    	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = FIN
+	value = 100  
 	}
 }

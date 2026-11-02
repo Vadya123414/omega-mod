@@ -3206,11 +3206,10 @@ GER_hilfskreuzer_cat = {
 		remove_effect = {
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					is_ai = no
 				}
 				if = {
 					limit = {
-						is_ai = no
 						NOT = { has_country_flag = GER_create_merchant_raider_variant }
 					}
 					set_country_flag = GER_create_merchant_raider_variant
@@ -3234,7 +3233,14 @@ GER_hilfskreuzer_cat = {
 						obsolete = yes
 					}
 				}
-				else_if = {
+				create_ship = {
+					type = ship_hull_cruiser_1
+					equipment_variant = "Hilfskreuzer"
+					creator = ROOT
+				}
+			}
+			ELSE = {
+				IF = {
 					limit = {
 						is_ai = yes
 						NOT = { has_country_flag = GER_create_merchant_raider_variant }
@@ -3246,46 +3252,22 @@ GER_hilfskreuzer_cat = {
 						name_group = GER_MR_HISTORICAL #Merchant Raider names
 						parent_version = 0
 						modules = {
-							fixed_ship_battery_slot = ship_light_medium_battery_2
+							fixed_ship_battery_slot = ship_medium_battery_2
 							fixed_ship_anti_air_slot = ship_anti_air_2
 							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 							fixed_ship_radar_slot = empty
 							fixed_ship_engine_slot = cruiser_ship_engine_2
 							fixed_ship_armor_slot = ship_armor_cruiser_2
 							fixed_ship_secondaries_slot = dp_ship_secondaries_2
-							mid_1_custom_slot = ship_light_medium_battery_2
-							mid_2_custom_slot = ship_light_medium_battery_2
-							rear_1_custom_slot = ship_light_medium_battery_2
+							mid_1_custom_slot = ship_medium_battery_2
+							mid_2_custom_slot = ship_medium_battery_2
+							rear_1_custom_slot = ship_medium_battery_2
 						}
 						obsolete = yes
 					}
-				}
 				}
 				create_ship = {
 					type = ship_hull_cruiser_1
-					equipment_variant = "Hilfskreuzer"
-					creator = ROOT
-				}
-			else_if = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = GER_create_merchant_raider_variant }
-					}
-					set_country_flag = GER_create_merchant_raider_variant
-					create_equipment_variant = {
-						name = "Hilfskreuzer"
-						type = light_cruiser_1
-						upgrades = {
-							ship_reliability_upgrade = 0
-							ship_engine_upgrade = 0
-							ship_gun_upgrade = 0
-							ship_anti_air_upgrade = 0
-						}
-						obsolete = yes
-					}
-				}
-				create_ship = {
-					type = light_cruiser_1
 					equipment_variant = "Hilfskreuzer"
 					creator = ROOT
 				}
@@ -3293,7 +3275,6 @@ GER_hilfskreuzer_cat = {
 		}
 	}
 }
-
 operations = {
 
 	GER_barbarossa_mission = {
