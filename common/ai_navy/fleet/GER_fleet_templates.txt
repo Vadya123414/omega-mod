@@ -1,13 +1,26 @@
-GER_raiding_fleet_2 = {
+GER_dominance_fleet_1 = {
 	required_taskforces = {
-		GER_ConvoyRaiding_1 = 5
+		GER_PatrolDominanceForce_1 = 999
 	}	
 	optional_taskforces = {
-		GER_ConvoyRaiding_1 = 4
+		GER_PatrolReconForce_1 = 999
 	}
 }
-GER_minelaying_fleet_4 = {
+
+GER_raiding_fleet_2 = {
+	required_taskforces = {
+		GER_ConvoyRaiding_1 = 999
+	}	
 	optional_taskforces = {
-		GER_MineLaying_1 = 1
+		GER_ConvoyRaiding_1 = 999
+	}
+}
+
+GER_escort_fleet_3 = {
+	required_taskforces = {
+		GER_ConvoyEscort_1 = 999
+	}
+	optional_taskforces = {
+		GER_ConvoyEscort_1 = 999
 	}
 }

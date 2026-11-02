@@ -1301,7 +1301,7 @@ early_ship_hull_carrier = {
 			modifier = {
 			add = 2
 				or = {
-					original_tag = GER
+					#original_tag = GER
 					original_tag = AST
 					original_tag = INS
 				}
@@ -1364,7 +1364,7 @@ early_ship_hull_carrier = {
 			modifier = {
 			add = 2
 				or = {
-					original_tag = GER
+					#original_tag = GER
 					original_tag = AST
 					original_tag = INS
 				}
@@ -1415,7 +1415,7 @@ early_ship_hull_carrier = {
 			modifier = {
 			add = 2
 				or = {
-					original_tag = GER
+					#original_tag = GER
 					original_tag = AST
 					original_tag = INS
 				}
@@ -1489,7 +1489,7 @@ early_ship_hull_carrier = {
 			modifier = {
 			add = 2
 				or = {
-					original_tag = GER
+					#original_tag = GER
 					original_tag = AST
 					original_tag = INS
 				}
@@ -1533,7 +1533,7 @@ early_ship_hull_carrier = {
 			modifier = {
 			add = 2
 				or = {
-					original_tag = GER
+					#original_tag = GER
 					original_tag = AST
 					original_tag = INS
 				}

@@ -1,35 +1,26 @@
 USA_dominance_fleet_1 = {
 	required_taskforces = {
-		USA_StrikeForce_1 = 2
-		USA_PatrolReconForce_1 = 10
-		USA_NavalInvasionSupport_1 = 2
+		USA_PatrolReconForce_1 = 999
 	}	
 	optional_taskforces = {
-		USA_PatrolDominanceForce_1 = 1
-		USA_PatrolReconForce_1 = 2		
+		USA_PatrolReconForce_1 = 999	
 	}
 }
 
 USA_raiding_fleet_1 = {
 	required_taskforces = {
-		USA_ConvoyRaiding_1 = 5
+		USA_ConvoyRaiding_1 = 999
 	}	
 	optional_taskforces = {
-		USA_ConvoyRaiding_1 = 3
+		USA_ConvoyRaiding_1 = 999
 	}
 }
 
 USA_escort_fleet_1 = {
 	required_taskforces = {
-		USA_ConvoyEscort_1 = 6
+		USA_ConvoyEscort_1 = 999
 	}
 	optional_taskforces = {
-		USA_ConvoyEscort_1 = 4
-	}
-}
-
-USA_minelaying_fleet_4 = {
-	optional_taskforces = {
-		USA_MineLaying_1 = 1
+		USA_ConvoyEscort_1 = 999
 	}
 }

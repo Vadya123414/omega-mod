@@ -1,0 +1,275 @@
+infantry_generic = {
+	role = infantry
+	available_for = {
+		GER
+		JAP
+	}
+	upgrade_prio = {
+		base = 3
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+		base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+			}
+			
+			regiments = {
+				infantry = 8
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_mid
+		target_min_match = 0.6
+	}
+		infantry_mid = {
+	
+		upgrade_prio = {
+			base = 3
+		}
+		
+		target_template = {
+			
+			support = {
+				artillery = 1
+				field_hospital = 1
+				engineer = 1
+			}
+
+			regimental_support = {
+				field_guns = 3
+			}
+			
+			regiments = {
+				infantry = 12
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = infantry_late
+		target_min_match = 0.6
+	}
+	infantry_late = {
+	
+		upgrade_prio = {
+			base = 4
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_air = 1
+				field_hospital = 1
+				super_heavy_artillery = 1
+			}
+
+			regimental_support = {
+				field_guns = 5
+			}
+			
+			regiments = {
+				infantry = 15
+			}
+
+		}
+	}
+
+}
+mountaineers_jap = {
+	
+	role = mountaineers
+available_for = {
+	JAP
+}
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_mountaineers
+			}
+		}
+	}
+
+		mountaineers_early = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				artillery = 1
+				field_hospital = 1
+				engineer = 1
+				anti_air = 1
+			}
+			
+			regimental_support = {
+				field_guns = 3
+			}
+
+			regiments = {
+				mountaineers = 9
+			}
+
+		}
+		replace_at_match = 0.8
+		replace_with = mountaineers_late
+		target_min_match = 0.4
+	}
+
+	mountaineers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				anti_air = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				field_guns = 5
+			}
+
+			regiments = {
+				mountaineers = 12
+			}
+
+			}
+	}
+}
+rangers_generic = {
+available_for = {
+	GER
+}
+	
+	role = rangers
+	
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = rangers_tech
+			}
+		}
+	}
+
+		rangers_early = {
+	
+		upgrade_prio = {
+			base = 1
+		}
+
+		target_template = {
+			
+			support = {
+				artillery = 1
+				engineer = 1
+			}
+			
+			regimental_support = {
+				field_guns = 2
+			}
+
+			regiments = {
+				ranger_battalion = 8
+			}
+
+		}
+		replace_at_match = 0.8
+		replace_with = rangers_late
+		target_min_match = 0.4
+	}
+
+	rangers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				rocket_artillery = 1
+				rangers_support = 1 
+				super_heavy_artillery = 1
+			}
+			
+			regimental_support = {
+				field_guns = 5
+			}
+
+			regiments = {
+				ranger_battalion = 15
+			}
+		}
+	}
+}
+# Non-complete list of sub-units
+
+# REGIMENTS:
+# - infantry
+# - light_armor
+# - medium_armor
+# - heavy_armor
+# - super_heavy_armor
+# - modern_armor
+# - cavalry
+# - motorized
+# - mechanized
+# - marine
+# - mountaineers
+# - paratrooper
+# - artillery_brigade
+# - anti_air_brigade
+# - anti_tank_brigade
+# - light_tank_destroyer_brigade
+# - medium_tank_destroyer_brigade
+# - heavy_tank_destroyer_brigade
+# - super_heavy_tank_destroyer_brigade
+# - modern_tank_destroyer_brigade
+# - light_sp_anti_air_brigade
+# - light_sp_artillery_brigade
+
+# SUPPORT:
+# - engineer
+# - recon
+# - signal_company
+# - maintenance_company
+# - artillery
+# - field_hospital
+# - logistics_company
+# - military_police
+# - rocket_artillery
+
+# SUPPORT (REGIMENTAL):
+# - anti_air
+# - anti_tank
+# - field_guns
+# - fire_support
+# - mot_fire_support
+# - rocket_battery

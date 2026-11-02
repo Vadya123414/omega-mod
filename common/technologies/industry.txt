@@ -27,7 +27,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 28
 		}
 		
 		categories = {
@@ -60,7 +60,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 28
 						
 			modifier = {
 				factor = 10
@@ -92,7 +92,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 5
 						
 			modifier = {
 				factor = 10
@@ -130,7 +130,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -161,7 +161,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 0
 						
 			modifier = {
 				factor = 10
@@ -193,7 +193,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -227,10 +227,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 
 			modifier = {
-				factor = 5
+				add = 5
 				energy_ratio < 0.9
 			}
 		}
@@ -256,10 +256,10 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 0
 			
 			modifier = {
-				factor = 5
+				add = 5
 			
 				has_resources_in_country = {
 					resource = coal
@@ -269,7 +269,7 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 5
+				add = 5
 				energy_ratio < 0.9
 			}
 		}
@@ -308,7 +308,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 25
+			factor = 100
 		}
 		
 		categories = {
@@ -343,7 +343,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 100
 						
 			modifier = {
 				factor = 10
@@ -384,7 +384,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -424,7 +424,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 5
 						
 			modifier = {
 				factor = 10
@@ -458,7 +458,7 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 5
 			
 			modifier = {
 				factor = 5
@@ -928,7 +928,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 2
+			add = 10
 				or = {
 					original_tag = GER
 					original_tag = USA
@@ -1111,10 +1111,12 @@ technologies = {
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		ai_research_weights = {
@@ -1153,15 +1155,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		
@@ -1201,15 +1206,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		
@@ -1243,15 +1251,18 @@ technologies = {
 			cat_synth_rubber
 		}
 		
+		
 		ai_will_do = {
 			base = 0
 
 			modifier = {
 			add = 1
-			OR = {
 				original_tag = GER
+			}
+			modifier = {
+			add = 10
 				original_tag = USA
-				}					
+				has_completed_focus = USA_rubber_reserve_company
 			}
 		}
 		
@@ -1292,7 +1303,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			
 			modifier = {
 				factor = 5
@@ -1327,6 +1338,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1369,7 +1381,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			
 			modifier = {
 				factor = 10
@@ -1406,6 +1418,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1448,7 +1461,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 5
 			
 			modifier = {
 				factor = 1.5
@@ -1495,6 +1508,7 @@ technologies = {
 			base = 0
 			modifier = {
 				add = 5
+				date > 1939.1.1
 				OR = {
 					oil > 32
 					aluminium > 32
@@ -1544,7 +1558,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -1579,6 +1593,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				date > 1939.1.1
 				add = 5
 				OR = {
 					oil > 32
@@ -1619,7 +1634,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 5
 			
 			modifier = {
 				factor = 10
@@ -1656,6 +1671,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
+				date > 1939.1.1
 				add = 5
 				OR = {
 					oil > 32

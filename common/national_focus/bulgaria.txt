@@ -6816,6 +6816,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
+		hidden_effect = {
+			IF = {
+				limit = {
+						is_ai = yes
+				}
+			deactivate_advisor = BUL_dimitrana_ivanova
+			activate_advisor = BUL_bogdan_filov
+			}
+		}
 			add_stability = 0.1
 			swap_ideas = {
 				remove_idea = BUL_tsar_boris_positive_01
@@ -6844,6 +6853,14 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
+			hidden_effect = {
+			IF = {
+				limit = {
+						is_ai = yes
+				}
+			activate_advisor = BUL_dimitrana_ivanova
+			}
+		}
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.15

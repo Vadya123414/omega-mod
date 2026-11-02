@@ -29,9 +29,8 @@ SOV_historical_plan = {
 		SOV_lessons_of_war #35
 		SOV_the_road_of_life #35
 		SOV_desperate_measures #35 (DO THIS ASAP)
-		SOV_the_collectivization_process_b
-		SOV_organization_centralization_discipline_b
-		SOV_war_economy_b
+		SOV_the_collectivization_process
+		SOV_war_economy
 		SOV_fourth_five_year_plan # (FYP)
 		SOV_recover_the_kuril_islands #35 (As soon as AI has completed Prepare a War with Japan focus ~mid 1945)
 		SOV_found_the_comecon

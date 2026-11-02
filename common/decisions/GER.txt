@@ -3209,23 +3209,11 @@ GER_hilfskreuzer_cat = {
 		icon = GFX_decision_generic_merge_plant_ship
 
 		ai_will_do = {
-			base = 10
+			base = 0
 			modifier = {
-				factor = 1.5
+				add= 10
 				has_equipment = {
-	   				convoy > 200
-		  		}
-			}
-			modifier = {
-				factor = 2
-				has_equipment = {
-	   				convoy > 300
-		  		}
-			}
-			modifier = {
-				factor = 2
-				has_equipment = {
-	   				convoy > 500
+	   				convoy > 120
 		  		}
 			}
 		}
@@ -3264,7 +3252,7 @@ GER_hilfskreuzer_cat = {
 		remove_effect = {
 			IF = {
 				limit = {
-					has_dlc = "Man the Guns"
+					is_ai = no
 				}
 				IF = {
 					limit = {
@@ -3300,23 +3288,32 @@ GER_hilfskreuzer_cat = {
 			ELSE = {
 				IF = {
 					limit = {
+						is_ai = yes
 						NOT = { has_country_flag = GER_create_merchant_raider_variant }
 					}
 					set_country_flag = GER_create_merchant_raider_variant
 					create_equipment_variant = {
-						name = "Hilfskreuzer"
-						type = light_cruiser_1
-						upgrades = {
-							ship_reliability_upgrade = 0
-							ship_engine_upgrade = 0
-							ship_gun_upgrade = 0
-							ship_anti_air_upgrade = 0
+						name = "Hilfskreuzer"				
+						type = ship_hull_cruiser_1
+						name_group = GER_MR_HISTORICAL #Merchant Raider names
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_medium_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_2
+							fixed_ship_armor_slot = ship_armor_cruiser_2
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							mid_1_custom_slot = ship_medium_battery_2
+							mid_2_custom_slot = ship_medium_battery_2
+							rear_1_custom_slot = ship_medium_battery_2
 						}
 						obsolete = yes
 					}
 				}
 				create_ship = {
-					type = light_cruiser_1
+					type = ship_hull_cruiser_1
 					equipment_variant = "Hilfskreuzer"
 					creator = ROOT
 				}
@@ -3324,7 +3321,6 @@ GER_hilfskreuzer_cat = {
 		}
 	}
 }
-
 operations = {
 
 	GER_barbarossa_mission = {

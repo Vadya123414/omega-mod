@@ -26,6 +26,10 @@ NOR_historical_plan = {
 	}
 
 	ai_national_focuses = {
+		NOR_the_royal_norwegian_navy
+		NOR_convert_merchant_ships
+
+
 		NOR_the_kings_no
 		NOR_replace_laake
 		NOR_reform_the_army
@@ -33,6 +37,14 @@ NOR_historical_plan = {
 		NOR_improved_training
 		NOR_offensive_doctrines
 		
+		NOR_approach_kretsen
+		NOR_approach_the_coordinating_committee
+		NOR_empower_sivorg
+		NOR_esteblish_milorg
+		NOR_use_xu
+		NOR_recruit_norwegian_refugees
+		NOR_prepare_the_return_to_norway
+
 		NOR_quislings_coup
 		NOR_get_rid_of_quisling
 		NOR_crackdown_on_civilian_life
@@ -61,6 +73,14 @@ NOR_historical_plan = {
 		NOR_the_neutrality_guard
 		NOR_rearm_for_defense
 		NOR_building_an_independent_norway
+		NOR_hurtigruten
+
+		NOR_expand_Haeren
+		NOR_improved_weapons
+		NOR_drobak_coastal_fort
+		NOR_modernize_fortifications
+		NOR_coastal_defense
+		NOR_fortify_norway
 
 		NOR_norges_tekniske_hogskole
 		NOR_increase_research_funding
@@ -107,7 +127,10 @@ NOR_historical_plan = {
 	}
 
 	ideas = {
-
+		NOR_trygve_halvdan_lie = 30
+		NOR_peder_anker_wedel_jarlsberg = 30
+		NOR_kirsten_hansteen = 20
+		NOR_martin_tranmael = -30
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

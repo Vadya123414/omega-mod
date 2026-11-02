@@ -86,6 +86,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			is_subject = no
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
@@ -5383,6 +5384,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			threat > 0.55
 			has_war = no
@@ -5526,6 +5528,7 @@ focus_tree = {
 		relative_position_id = FIN_moderate_politics
 		cost = 5
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			threat > 0.5
 			has_war = no
@@ -6736,6 +6739,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			OR = {
 				has_government = fascism
@@ -7179,6 +7183,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT }

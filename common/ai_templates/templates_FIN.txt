@@ -3,6 +3,14 @@ infantry_generic = {
 	available_for = {
 		FIN
 	}
+		blocked_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
+	}
 	upgrade_prio = {
 		base = 3
 	}
@@ -16,7 +24,11 @@ infantry_generic = {
 		target_template = {
 			
 			support = {
-				artillery = 1
+				engineer = 1
+				anti_air = 1
+				field_hospital = 1
+                winter_logistics_support = 1
+                long_range_patrol_support = 1
 			}
 
 			regimental_support = {
@@ -24,60 +36,86 @@ infantry_generic = {
 			}
 			
 			regiments = {
-				infantry = 8
+				infantry = 6
+				artillery_brigade = 3
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = infantry_mid
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 		infantry_mid = {
 	
-		upgrade_prio = {
-			base = 3
-		}
-		
-		target_template = {
-			
-			support = {
-				artillery = 1
-			}
+	upgrade_prio = {
+		base = 10
 
-			regimental_support = {
-				fire_support = 3
-			}
-			
-			regiments = {
-				infantry = 12
-			}
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+				has_idea = service_by_requirement
+				}
+			}	
 		}
-		replace_at_match = 0.6
-		replace_with = infantry_late
-		target_min_match = 0.6
 	}
-	infantry_late = {
-	
-		upgrade_prio = {
-			base = 4
-		}
-		
 		target_template = {
 			
 			support = {
 				engineer = 1
-				artillery = 1
-				rocket_artillery = 1
+				anti_air = 1
+				field_hospital = 1
                 winter_logistics_support = 1
                 long_range_patrol_support = 1
-				super_heavy_artillery = 1
 			}
 
 			regimental_support = {
-				fire_support = 5
+				field_guns = 3
 			}
 			
 			regiments = {
-				infantry = 15
+				infantry = 9
+				artillery_brigade = 3
+			}
+		}
+		replace_at_match = 0.8
+		replace_with = infantry_late
+		target_min_match = 0.4
+	}
+	infantry_late = {
+	
+		upgrade_prio = {
+		base = 10
+
+		modifier = {
+			factor = 0
+			NOT = {
+				or = {
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+		}
+	}	
+		target_template = {
+			
+			support = {
+				engineer = 1
+				anti_air = 1
+				field_hospital = 1
+                winter_logistics_support = 1
+                long_range_patrol_support = 1
+			}
+
+			regimental_support = {
+				field_guns = 5
+			}
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 4
+				anti_air = 2
 			}
 
 		}
@@ -87,6 +125,14 @@ rangers_generic = {
 	available_for = {
 		FIN
 	}
+		blocked_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
+	}
 	role = rangers
 	
 	upgrade_prio = {
@@ -94,7 +140,7 @@ rangers_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = tech_rangers
+				has_tech = rangers_tech
 			}
 		}
 	}
@@ -109,21 +155,23 @@ rangers_generic = {
 			
 			support = {
 				artillery = 1
-
+				field_hospital = 1
+				engineer = 1
 			}
 			
 			regimental_support = {
-				fire_support = 3
+				field_guns = 2
 			}
 
 			regiments = {
-				rangers = 15
+				ranger_battalion = 8
+				artillery_brigade = 3
 			}
 
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.8
 		replace_with = rangers_late
-		target_min_match = 0.6
+		target_min_match = 0.4
 	}
 
 	rangers_late = {
@@ -137,19 +185,19 @@ rangers_generic = {
 			
 			support = {
 				engineer = 1
-				artillery = 1
-				rocket_artillery = 1
+				anti_air = 1
+				field_hospital = 1
                 winter_logistics_support = 1
                 long_range_patrol_support = 1
-				super_heavy_artillery = 1
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				field_guns = 5
 			}
 
 			regiments = {
-				rangers = 15
+				ranger_battalion = 9
+				artillery_brigade = 6
 			}
 
 			}

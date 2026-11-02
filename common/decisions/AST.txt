@@ -1659,9 +1659,12 @@ AST_cabinet_trust_cat = {
 		icon = GFX_decision_generic_civil_support
 
 		visible = {
+			and = {
+			not = {has_global_flag = VUP_Hist_version}
 			OR = {
 				has_completed_focus = AST_war_is_coming
 				has_completed_focus = AST_against_war_and_fascism
+			}
 			}
 		}
 
@@ -2034,8 +2037,7 @@ AST_australian_demands_cat = {
 		desc = AST_aid_australian_military_construction_desc
 		icon = GFX_generic_industry 
 
-		visible = {
-		}
+visible = {not	= {has_global_flag = VUP_Hist_version}}
 
 		available = {
 		}
@@ -2074,9 +2076,16 @@ AST_australian_demands_cat = {
 		desc = AST_japanese_war_mission_desc
 		icon = GFX_decision_ignite_civil_war  
 
-		available = {  
+		available = { 
+			if = {
+				limit = {
+					has_global_flag = VUP_Hist_version
+					}
+						always=no
+					}
 		}
 
+		visible = {not	= {has_global_flag = VUP_Hist_version}}
 		is_good = no
 
 		selectable_mission = yes

@@ -52,6 +52,14 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 148 --24 лимит спец войс
 --NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
+
+--NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
+--NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
+--NDefines.NMilitary.UNIT_EXP_LEVELS = {0.1, 0.122, 0.1494, 0.1816, 0.2179, 0.2576, 0.3, 0.3526, 0.4191, 0.4936, 0.57, 0.6422, 0.7043, 0.75, 0.7849, 0.8175, 0.8465, 0.8708, 0.8891, 0.9}		-- опыт для лвл
+--NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
+--NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03
+
+
 --Флот
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0; -- Орга когда двигаешь флот
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0;      --100	-- Стоимость снятие гордости флота
@@ -91,20 +99,23 @@ NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не н�
 NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
 NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
 NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99           -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95          -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
 
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 1				-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during war time
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 1    		-- deployment will try to buffer a ratio of deployed manpower (for reinforcements) during peace time
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.4			-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время войны
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.2   		-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время мира
 
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.95 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- К скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
 NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0
 NDefines.NAI.EQUIPMENT_MARKET_SHORTAGE_DAYS_TO_CANCEL = 7
 NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.0
+
+NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 10 		-- To which extent AI should care about ahead of time penalties to research
+NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10             -- Max ahead of time penalty AI will ever consider (this also includes BASE_YEAR_AHEAD_PENALTY_FACTOR, so not the raw time)
 
 -- Расчет желаемого количества дивизий
 	NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 5.00                        -- То, сколько подразделений хочет страна, частично зависит от объема доступной военной промышленности

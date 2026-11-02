@@ -24,7 +24,6 @@ FIN_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		FIN_militarized_society
 		NORDIC_form_joint_alliance
 		NORDIC_political_cooperation
 		NORDIC_economic_union
@@ -85,7 +84,6 @@ FIN_historical_plan = {
 		
 		FIN_janiskoski_power_plant
 		FIN_expand_imatra_hydropower_plant
-		FIN_oy_alkoholiliike
 		FIN_take_over_the_suojeluskunta
 		FIN_national_unity
 		FIN_arm_the_lotta_svard
@@ -99,7 +97,7 @@ FIN_historical_plan = {
 		FIN_moderate_politics
 
 		FIN_salvaged_and_retooled
-
+		FIN_oy_alkoholiliike
 		FIN_military_promotions
 		FIN_integrate_oy_tikkakoski
 		FIN_industrial_upgrade_in_harjavalta
@@ -117,7 +115,6 @@ FIN_historical_plan = {
 		FIN_national_firepower
 
 		FIN_bank_of_aland
-		FIN_suomen_akatemia
 	}
 
 	#Focuses never to take
@@ -134,7 +131,11 @@ FIN_historical_plan = {
 	}
 
 	ideas = {
-
+		FIN_tampella = 3
+		FIN_antti_hackzell = 5
+		FIN_ernst_von_born = 5
+		FIN_miina_sillanpaa = 5
+		FIN_johan_arajuuri = 2
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
