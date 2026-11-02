@@ -1,5 +1,4 @@
 do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
-
 	enable = {
 		or = {
 			original_tag = NOR
@@ -44,6 +43,16 @@ do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
 		id = army_advisor
 		value = -9999
 	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
+		value = -9999
+	}
 }
 NOR_the_HOME_defend  = {
 	allowed = { original_tag = NOR }
@@ -54,7 +63,7 @@ NOR_the_HOME_defend  = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = naval_dominance
+		type = convoy_raiding
 		id = 207
 		value = 1000
 	}
@@ -70,7 +79,7 @@ NOR_the_defend_ENG  = {
 	}
 
 	ai_strategy = {
-		type = naval_dominance
+		type = convoy_raiding
 		id = 18
 		value = 1000
 	}
@@ -222,6 +231,18 @@ NOR_not_defend_SWI = {
 	value = 100  
 	}
 }
+NOR_not_defend_FIN = {
+    	enable = {
+		original_tag = NOR
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = FIN
+	value = 100  
+	}
+}
 SWI_bunker_1 = { 
 	enable = {
 		original_tag = SWI
@@ -263,6 +284,11 @@ at_start_we_need_manpower = {
 		ai_strategy = {
 		type = pp_spend_amount
 		id = decision
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
 		value = -1000
 	}
 }
