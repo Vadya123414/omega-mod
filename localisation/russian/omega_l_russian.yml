@@ -1155,3 +1155,15 @@ smart_bots_4:0 "smart_bots_4"
 smart_bots_5:0 "smart_bots_5"
 supply_bot_fix_not_in_war:0 "supply_bot_fix_not_in_war"
 ins_training_fix:0 "ins_training_fix"
+
+FRA_anti_tank:0 "Противотанковая оборона"
+FRA_anti_tank_desc:0 "Растущая мощь вражеских танковых клиньев представляет смертельную угрозу для нашей республики. Мы обязаны ускорить разработку передового противотанкового вооружения, чтобы эффективно сдерживать любой натиск бронетехники."
+FRA_autoroutes_cap: "Автомагистрали"
+FRA_global_integration_cap: "Глобальная интеграция"
+FRA_fusiliers_marine_cap: "Морская пехота"
+FRA_special_forces_cap: "Войска специального назначения"
+
+occupied_countries.1.c_tt: "Мы больше не будем получать уведомления о готовности оккупированных стран создать §Yколлаборационистское правительство§!."
+
+
+

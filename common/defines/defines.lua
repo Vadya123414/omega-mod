@@ -24,7 +24,7 @@ NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 90 -- По умолчанию 30
 NDefines.NAI.RESEARCH_DAYS_BETWEEN_WEIGHT_UPDATE = 20 -- По умолчанию 7. Выбирает теху дольше 
 
 --Армия
---NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72;
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 30;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 30;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 1;
 --NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 1;
@@ -33,9 +33,9 @@ NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 30;
 --NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5;	-- Анлок 5 ячейки в столбце шаблона дивизии 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
-NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999;
-NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999;
-NDefines.NMilitary.MAX_AIR_EXPERIENCE  = 999;
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999;
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999;
+NDefines.NMilitary.MAX_AIR_EXPERIENCE  = 9999;
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;  --  Какая часть людских ресурсов возвращается в ваш общий пул при ручном расформировании подразделения, находящегося в окружении.
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0;	-- Скоростью накопления бонусов планирования для неподвижных дивок
 NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- Значение по индексу J — это масштаб, применяемый к лимиту планирования, когда штаб находится на J провинций позади линии фронта
@@ -49,7 +49,7 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 148 --24 лимит спец войск
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
+--NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 --Флот
