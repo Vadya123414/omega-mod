@@ -11826,7 +11826,10 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 		
 		mutually_exclusive = { focus = SOV_policy_of_individual_security }
@@ -12504,7 +12507,10 @@ ai_will_do = {
 		cost = 10
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 
 		ai_will_do = {
@@ -12679,7 +12685,10 @@ ai_will_do = {
 		cost = 10
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 
 		ai_will_do = {
@@ -13101,7 +13110,10 @@ ai_will_do = {
 		cost = 5
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 
 		ai_will_do = {
@@ -13318,7 +13330,10 @@ ai_will_do = {
 		relative_position_id = SOV_respect_baltic_self_determination
 		cost = 5
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 
 		offset = {
@@ -13498,7 +13513,10 @@ ai_will_do = {
 		cost = 5
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 
 		ai_will_do = {
@@ -14075,7 +14093,10 @@ ai_will_do = {
 		relative_position_id = SOV_baltic_security
 		cost = 5
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -14450,7 +14471,10 @@ ai_will_do = {
 		}
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 		
 		mutually_exclusive = { focus = SOV_reconcile_japan }
@@ -15148,7 +15172,10 @@ ai_will_do = {
 		}
 
 		allow_branch = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
 		}
 		
 		mutually_exclusive = { focus = SOV_the_threat_from_the_land_of_the_rising_sun }
@@ -16273,9 +16300,10 @@ ai_will_do = {
 		id = SOV_restore_the_glory_of_the_motherland
 		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_romanov_reconstruction }
-		x = 106
-		y = 13
+		x = 0
+		y = 1
 		cost = 5
+		relative_position_id = SOV_romanov_reconstruction
 		ai_will_do = {
 			factor = 1
 		}
@@ -16960,9 +16988,10 @@ ai_will_do = {
 		id = SOV_vengeance_for_the_yoke
 		icon = GFX_focus_generic_attack_mongolia
 		prerequisite = { focus = SOV_reclaim_uryankhay_krai }
-		x = 120
-		y = 16
+		x = 0
+		y = 1
 		cost = 5
+		relative_position_id = SOV_reclaim_uryankhay_krai
 		ai_will_do = {
 			factor = 1
 		}
@@ -17004,8 +17033,9 @@ ai_will_do = {
 
 		prerequisite = { focus = SOV_eastern_expansion }
 
-		x = 120
-		y = 15
+		x = 3
+		y = 1
+		relative_position_id = SOV_eastern_expansion
 
 		cost = 5
 		bypass = {
@@ -18188,9 +18218,10 @@ ai_will_do = {
 		id = SOV_modernize_the_far_eastern_fleet
 		icon = GFX_SOV_modernize_the_far_eastern_fleet_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_japanese_overtures focus = SOV_the_berlin_moscow_axis }
-		x = 112
-		y = 16
+		x = 0
+		y = 1
 		cost = 5
+		relative_position_id = SOV_japanese_overtures
 		ai_will_do = {
 			factor = 1
 		}

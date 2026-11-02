@@ -442,7 +442,7 @@ focus = {
 			factor = 5
 		}
 		available = {
-			
+			is_subject = no
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -551,6 +551,7 @@ focus = {
 		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
+			is_subject = no
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		

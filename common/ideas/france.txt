@@ -1291,6 +1291,7 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			modifier = {
+				production_speed_naval_base_factor = -5
 				conscription = -0.003
 				war_support_factor = -0.05
 				land_doctrine_cost_factor = 0.5

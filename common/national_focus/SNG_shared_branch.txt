@@ -3,17 +3,19 @@ joint_focus = {
 	icon = GFX_focus_SOV_freedom_for_all
 	prerequisite = { focus = RUS_reconstruction }
 	prerequisite = { focus = RUS_liberate }
-	x = 136
-	y = 15
+	x = 2
+	y = 1
 	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
+
+    relative_position_id = RUS_reconstruction
 	available_if_capitulated = no
 	
 	search_filters = {FOCUS_FILTER_POLITICAL }
 
-    offset = { x = 0   y = 0 trigger = { tag = SOV } }
+    #offset = { x = 0   y = 0 trigger = { tag = SOV } }
     offset = { x = -1000  y = -50 trigger = { tag = UKR } }
     offset = { x = -1000  y = -50 trigger = { tag = BLR } }
     offset = { x = -1000  y = -50 trigger = { tag = KAZ } }
@@ -86,6 +88,29 @@ joint_focus = {
             add_dynamic_modifier = { modifier = RUS_ECONOMI }
 		add_ideas = Russian_puppet_no_surrender
 		}
+        hidden_effect = {
+            every_state = {
+				limit = {
+					is_fully_controlled_by = UKR
+					is_core_of = UKR
+				}	
+				add_core_of  = SOV
+			}
+            every_state = {
+				limit = {
+					is_fully_controlled_by = BLR
+					is_core_of = BLR
+				}	
+				add_core_of  = SOV
+			}
+            every_state = {
+				limit = {
+					is_fully_controlled_by = KAZ
+					is_core_of = KAZ
+				}	
+				add_core_of  = SOV
+			}
+        }
     }
 
     completion_reward_joint_member = {
@@ -157,8 +182,8 @@ joint_focus = {
         NOT = { has_war_with = KAZ }
         NOT = { has_war_with = SOV }
          has_war_support > 0.3
-        has_army_manpower = { size > 84999 }
-        num_divisions > 5
+        has_army_manpower = { size > 49999 }
+        num_divisions > 3
     }
 
     search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
@@ -202,8 +227,8 @@ joint_focus = {
         NOT = { has_war_with = KAZ }
         NOT = { has_war_with = SOV }
         has_war_support > 0.4
-        has_army_manpower = { size > 89999 }
-        num_divisions > 14
+        has_army_manpower = { size > 99999 }
+        num_divisions > 9
     }
 
     search_filters = { FOCUS_FILTER_RESEARCH }
@@ -271,8 +296,8 @@ joint_focus = {
         NOT = { has_war_with = KAZ }
         NOT = { has_war_with = SOV }
         has_war_support > 0.5
-        has_army_manpower = { size > 99999 }
-        num_divisions > 29
+        has_army_manpower = { size > 199999 }
+        num_divisions > 24
     }
 
     search_filters = { FOCUS_FILTER_MANPOWER }
@@ -286,9 +311,22 @@ joint_focus = {
         add_to_variable = { ludi = 0.015 tooltip = conscription_tt }
 		add_to_variable = { factor_lud = 0.1 tooltip = conscription_factor_tt }
 		add_to_variable = { trenirivka = 0.15 tooltip = training_time_army_factor_tt }
+
+        BLR = {
+            custom_effect_tooltip = SOV_SNG_infa 
+            add_to_variable = { ludi = 0.03 tooltip = conscription_tt }
+        }
+        KAZ = {
+            custom_effect_tooltip = SOV_SNG_infa 
+            add_to_variable = { ludi = 0.015 tooltip = conscription_tt }
+        }
     }
 
     completion_reward_joint_originator = {
+        
+    }
+
+    completion_reward_joint_member = {
         
     }
 }
@@ -313,7 +351,7 @@ joint_focus = {
         NOT = { has_war_with = SOV }
         has_war_support > 0.5
         has_army_manpower = { size > 129999 }
-        num_divisions > 24
+        num_divisions > 14
     }
 
     search_filters = { FOCUS_FILTER_MANPOWER }
@@ -473,7 +511,7 @@ joint_focus = {
         NOT = { has_war_with = SOV }
          has_war_support > 0.5
         has_army_manpower = { size > 129999 }
-        num_divisions > 24
+        num_divisions > 14
     }
 
     search_filters = { FOCUS_FILTER_MANPOWER }
@@ -529,7 +567,7 @@ joint_focus = {
 			uses = 1
 			category = special_forces_doctrine
 		}
-		add_ideas = NORDIC_joint_mountaineers_effort
+		add_ideas = SNG_mountaineers_effort
     }
 
     completion_reward_joint_member = {
@@ -538,7 +576,7 @@ joint_focus = {
 			uses = 1
 			category = special_forces_doctrine
 		}
-		add_ideas = NORDIC_joint_mountaineers_effort
+		add_ideas = SNG_mountaineers_effort
     }
 }
 
@@ -793,7 +831,7 @@ joint_focus = {
         NOT = { has_war_with = BLR }
         NOT = { has_war_with = KAZ }
         NOT = { has_war_with = SOV }
-        has_deployed_air_force_size = { size > 499 }
+        has_deployed_air_force_size = { size > 199 }
     }
 
     search_filters = { FOCUS_FILTER_AIR_XP }
@@ -835,7 +873,7 @@ joint_focus = {
         NOT = { has_war_with = BLR }
         NOT = { has_war_with = KAZ }
         NOT = { has_war_with = SOV }
-        #has_deployed_air_force_size = { size > 99 }
+        has_deployed_air_force_size = { size > 299 }
     }
 
     search_filters = { FOCUS_FILTER_AIR_XP }
@@ -873,7 +911,7 @@ joint_focus = {
         NOT = { has_war_with = BLR }
         NOT = { has_war_with = KAZ } 
         NOT = { has_war_with = SOV }
-        #has_deployed_air_force_size = { size > 349 }
+        has_deployed_air_force_size = { size > 299 }
     }
 
     search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
@@ -1247,7 +1285,7 @@ joint_focus = {
 
     completion_reward = {
         custom_effect_tooltip = SOV_SNG_infa 
-		add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+		#add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
 		add_to_variable = { consumer_goods = -0.05 tooltip = consumer_goods_factor_tt }
     } 
 }
@@ -1356,9 +1394,10 @@ joint_focus = {
     icon = GFX_focus_research2
     prerequisite = { focus = EAEU_research_cooperation }
     prerequisite = { focus = EAEU_temporary_boost }
-    x = 144
-    y = 17
+    x = 1
+    y = 1
     cost = 5
+    relative_position_id = EAEU_research_cooperation
     text_icon = SNG_style
 
     available = {
@@ -1488,7 +1527,7 @@ joint_focus = {
 
     completion_reward_joint_originator = {
         add_political_power = -75
-        add_timed_idea = { idea = EAEU_temporary_boost_originator days = 720 }
+        add_timed_idea = { idea = EAEU_temporary_boost_originator days = 365 }
         UKR = {
 			add_offsite_building = { type = industrial_complex level = 5 }
             add_offsite_building = { type = arms_factory level = 5 }
@@ -1505,7 +1544,7 @@ joint_focus = {
 
     completion_reward_joint_member = {
         add_political_power = -50
-        add_timed_idea = { idea = EAEU_temporary_boost_member days = 720 }
+        add_timed_idea = { idea = EAEU_temporary_boost_member days = 365 }
     }
 }
 
@@ -1556,10 +1595,11 @@ joint_focus = {
     id = EAEU_dal
     icon = GFX_focus_generic_advisors
     prerequisite = { focus = EAEU_second_institution }
-    x = 134
-    y = 22
+    x = 2
+    y = 1
     cost = 5
     text_icon = SNG_style
+    relative_position_id = EAEU_second_institution
 
     available = {
         any_allied_country = {
@@ -1724,7 +1764,7 @@ joint_focus = {
     x = -2
     y = 1
     relative_position_id = EAEU_procurement_fund
-    cost = 5
+    cost = 10
     text_icon = SNG_style
 
     available = {
@@ -2068,7 +2108,7 @@ joint_focus = {
     x = 1
     y = 2
     relative_position_id = EAEU_civilian_contributions
-    cost = 5
+    cost = 10
     text_icon = SNG_style
 
     available = {
@@ -2204,7 +2244,7 @@ joint_focus = {
     completion_reward = {
         custom_effect_tooltip = SOV_SNG_infa 
 		add_to_variable = { ddequipment_conversion_speed_tt = 0.1 tooltip = equipment_conversion_speed_tt }
-		add_to_variable = { ddproduction_factory_efficiency_gain_factor_tt = -0.15 tooltip = production_factory_efficiency_gain_factor_tt }
+		add_to_variable = { ddproduction_factory_efficiency_gain_factor_tt = -0.2 tooltip = production_factory_efficiency_gain_factor_tt }
         add_to_variable = { ddproduction_factory_start_efficiency_factor_tt = 0.1 tooltip = production_factory_start_efficiency_factor_tt }
     }
 
@@ -2306,8 +2346,8 @@ joint_focus = {
 
     completion_reward = {
         custom_effect_tooltip = SOV_SNG_infa 
-        add_to_variable = { capacity_factor_arms = 0.05 tooltip = industrial_capacity_factory_tt }
-        add_to_variable = { capacity_factor_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+        #add_to_variable = { capacity_factor_arms = 0.05 tooltip = industrial_capacity_factory_tt }
+        #add_to_variable = { capacity_factor_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
 		add_to_variable = { ddproduction_factory_max_efficiency_factor_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
     }
 
@@ -2324,9 +2364,10 @@ joint_focus = {
     id = EAEU_naval_construction
     icon = GFX_goal_generic_construct_naval_dockyard
     prerequisite = { focus = EAEU_railway_expansion }
-    x = 144
-    y = 21
+    x = 16
+    y = 2
     cost = 5
+    relative_position_id = EAEU_joint_military_exercises
     text_icon = SNG_style
 
     available = {
@@ -2419,11 +2460,11 @@ joint_focus = {
     joint_trigger = {   }
 
     completion_reward_joint_originator = {
-        add_timed_idea = { idea = EAEU_railway_expansion_originator_ns days = 365 }
+        add_timed_idea = { idea = EAEU_railway_expansion_originator_ns days = 720 }
     }
 
     completion_reward_joint_member = {
-        add_timed_idea = { idea = EAEU_railway_expansion_member_ns days = 365 }
+        add_timed_idea = { idea = EAEU_railway_expansion_member_ns days = 720 }
     }
 }
 
