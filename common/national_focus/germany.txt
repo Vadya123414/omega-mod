@@ -10708,9 +10708,8 @@ focus_tree = {
 
 		prerequisite = { focus = GER_around_maginot focus = GER_influence_the_benelux }
 		mutually_exclusive = { focus = GER_invade_italy }
-		x = -1
-		y = 1
-		relative_position_id = GER_influence_the_benelux
+		x = 71
+		y = 9
 		cost = 5
 		allow_branch = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -10783,9 +10782,8 @@ focus_tree = {
 		icon = GFX_focus_attack_italy
 		prerequisite = { focus = GER_around_maginot focus = GER_influence_the_benelux }
 		mutually_exclusive = { focus = GER_form_rome_berlin_axis }
-		x = 1
-		y = 1
-		relative_position_id = GER_influence_the_benelux
+		x = 73
+		y = 9
 		cost = 10
 
 		will_lead_to_war_with = ITA
@@ -32169,9 +32167,8 @@ focus_tree = {
 		id = GER_our_place_in_the_sun_ww
 		icon = GFX_focus_GER_our_place_in_the_sun
 		prerequisite = { focus = GER_realize_mittelafrika }
-		x = 0
-		y = 1
-		relative_position_id = GER_realize_mittelafrika
+		x = 145
+		y = 10
 		cost = 5
 		available = {
 			is_subject = no
