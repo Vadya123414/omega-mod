@@ -651,6 +651,7 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
+							include_locked = yes
 						}
 						NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 					}
@@ -662,6 +663,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -672,6 +674,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -690,6 +693,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -7004,6 +7008,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 
 	focus = {
 		id = SOV_the_centre
@@ -13881,6 +13886,7 @@ ai_will_do = {
 				}
 			}
 		}
+		
 
 		will_lead_to_war_with = ROM
 		
@@ -13944,6 +13950,7 @@ ai_will_do = {
 				}
 			}
 		}
+	}
 	}
 
 	focus = {
@@ -17672,7 +17679,7 @@ ai_will_do = {
 #					    target = PREV
 #					}
 #				}
-    		}
+			}
 		}
 	}
 
@@ -19002,3 +19009,4 @@ ai_will_do = {
 		}
 	}
 }
+
