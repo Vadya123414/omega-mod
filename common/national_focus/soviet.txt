@@ -191,6 +191,20 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
+		complete_tooltip = {
+			every_state = {
+				limit = { 
+					has_state_flag = SOV_finish_five_year_plan_2IC 
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
 			IF = {
 				limit = {
@@ -320,6 +334,18 @@ focus_tree = {
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = SOV_finish_five_year_plan_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -625,6 +651,7 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
+							include_locked = yes
 						}
 						NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 					}
@@ -636,6 +663,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -646,6 +674,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -664,6 +693,7 @@ focus_tree = {
 							free_building_slots = {
 								building = fuel_silo
 								size > 0
+								include_locked = yes
 							}
 							NOT = { has_state_flag = SOV_increase_state_reserves_flag }
 						}
@@ -909,7 +939,7 @@ focus_tree = {
 					has_full_control_of_state = 260 #VORONEZH
 				}
 				260 = { #VORONEZH
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 1
@@ -932,7 +962,7 @@ focus_tree = {
 					has_full_control_of_state = 223 #TULA
 				}
 				223 = { #TULA
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = synthetic_refinery
 						level = 1
@@ -1177,6 +1207,11 @@ focus_tree = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				has_completed_focus = SOV_curtailment_of_the_collective_farms 
+			}
+			ELSE = {
+				hidden_trigger = {
+					always = no
+				}
 			}
 		}
 		
@@ -4246,6 +4281,107 @@ focus_tree = {
 				uses = 2
 				category = armor
 			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				#T-34 tank template
+				if = {
+					limit = {
+						OR = {
+							has_tech = artillery3
+							has_tech = antitank3
+						}
+					}
+					create_equipment_variant = {
+						name = "T-34"
+						type = medium_tank_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_medium_cannon_2
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 7
+						}
+						icon = "GFX_SOV_improved_medium_tank_medium"
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_tech = artillery1
+							has_tech = antitank1
+						}
+					}
+					create_equipment_variant = {
+						name = "T-34"
+						type = medium_tank_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_medium_cannon
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 7
+							tank_nsb_armor_upgrade = 5
+						}
+						icon = "GFX_SOV_improved_medium_tank_medium"
+					}
+				}
+				else_if = { #Why? You ruined your T-34
+					limit = {
+						has_tech = interwar_artillery
+					}
+					create_equipment_variant = {
+						name = "T-34"
+						type = medium_tank_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_small_cannon_2
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 5
+							tank_nsb_armor_upgrade = 5
+						}
+						icon = "GFX_SOV_improved_medium_tank_medium"
+					}
+				}
+				else = { #Don't do this to yourself dude
+					create_equipment_variant = {
+						name = "T-34"
+						type = medium_tank_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_small_cannon
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 5
+							tank_nsb_armor_upgrade = 3
+						}
+						icon = "GFX_SOV_improved_medium_tank_medium"
+					}
+				}
+			}
 		}
 	}
 
@@ -4362,6 +4498,171 @@ focus_tree = {
 
 			add_ideas = SOV_defense_industry_artillery_bonus
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				#SU-85/100 tank template (AT)
+				if = {
+					limit = {
+						has_tech = antitank5
+					}
+					create_equipment_variant = {
+						name = "SU-100"
+						type = medium_tank_destroyer_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_high_velocity_cannon_3
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_advanced_medium_td_medium"
+					}
+				}
+				else_if = {
+					limit = {
+						has_tech = antitank4
+					}
+					create_equipment_variant = {
+						name = "SU-100"
+						type = medium_tank_destroyer_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_high_velocity_cannon_2
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_advanced_medium_td_medium"
+					}
+				}
+				else_if = { #You really should invest some time in research AT...
+					limit = {
+						has_tech = interwar_antitank
+					}
+					create_equipment_variant = {
+						name = "SU-85"
+						type = medium_tank_destroyer_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_high_velocity_cannon
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_improved_medium_td_medium"
+					}
+				}
+				else = { #This is just blasphemy
+					create_equipment_variant = {
+						name = "SU-85"
+						type = medium_tank_destroyer_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_heavy_cannon
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_christie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_improved_medium_td_medium"
+					}
+				}
+
+				#SU-122 tank template (SPG)
+				if = {
+					limit = {
+						has_tech = artillery4
+					}
+					create_equipment_variant = {
+						name = "SU-122"
+						type = medium_tank_artillery_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_heavy_howitzer
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_improved_medium_art_medium"
+					}
+				}
+				else_if = {
+					limit = {
+						has_tech = artillery1
+					}
+					create_equipment_variant = {
+						name = "SU-122"
+						type = medium_tank_artillery_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_medium_howitzer_2
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_improved_medium_art_medium"
+					}
+				}
+				else = { #You really need some arty research
+					create_equipment_variant = {
+						name = "SU-122"
+						type = medium_tank_artillery_chassis_2
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_medium_howitzer
+							turret_type_slot = tank_medium_fixed_superstructure_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = sloped_armor
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 10
+							tank_nsb_armor_upgrade = 8
+						}
+						icon = "GFX_SOV_improved_medium_art_medium"
+					}
+				}
+			}
 		}
 	}
 
@@ -4612,7 +4913,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_defense_industry_production_speed_coastal_bunker_factor = 0.05 }
 			add_to_variable = { SOV_defense_industry_production_speed_bunker_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_max_dig_in_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_max_dig_in = 2 }
 			custom_effect_tooltip = SOV_military_engineering_university_ns_tt
 		}
 	}
@@ -5019,39 +5320,17 @@ focus_tree = {
 
 		available = {
 			OR = {
-				188 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				189 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				814 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				97 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				94 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				93 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				91 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				89 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				80 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				78 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				766 = {
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
+				has_full_control_of_state = 188
+				has_full_control_of_state = 189
+				has_full_control_of_state = 814
+				has_full_control_of_state = 97
+				has_full_control_of_state = 94
+				has_full_control_of_state = 93
+				has_full_control_of_state = 91
+				has_full_control_of_state = 89
+				has_full_control_of_state = 80
+				has_full_control_of_state = 78
+				has_full_control_of_state = 766
 			}
 		}
 		
@@ -5062,7 +5341,9 @@ focus_tree = {
 
 			### LITHUANIA ###
 			if = { #If Memel is controlled, then add forts in Memel, if not, then go to Zemaitija
-				limit = { 188 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes } }
+				limit = {
+					188 = { is_fully_controlled_by = ROOT }
+				}
 				custom_effect_tooltip = SOV_molotov_line_forts_3
 				hidden_effect = {
 					188 = {
@@ -5080,7 +5361,7 @@ focus_tree = {
 			else = {
 				189 = { #ZEMAITIJA
 					if = {
-						limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+						limit = { is_fully_controlled_by = ROOT }
 						custom_effect_tooltip = SOV_molotov_line_forts_3
 						hidden_effect = {
 							add_building_construction = {
@@ -5099,7 +5380,7 @@ focus_tree = {
 			}
 			814 = { #Suduva
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5118,7 +5399,7 @@ focus_tree = {
 			### POLAND ###
 			97 = { #Bialystok
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_6
 					hidden_effect = {
 						add_building_construction = {
@@ -5139,7 +5420,7 @@ focus_tree = {
 			}
 			94 = { #Polesie
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5156,7 +5437,7 @@ focus_tree = {
 			}
 			93 = { #Wolyn
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5173,7 +5454,7 @@ focus_tree = {
 			}
 			91 = { #Lwow
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5190,7 +5471,7 @@ focus_tree = {
 			}
 			89 = { #Stanislawow
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_4
 					hidden_effect = {
 						add_building_construction = {
@@ -5211,7 +5492,7 @@ focus_tree = {
 			### ROMANIA ###
 			80 = { #Bucovina
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5229,7 +5510,7 @@ focus_tree = {
 			### ROMANIA ###
 			78 = { #Bessarabia
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_5
 					hidden_effect = {
 						add_building_construction = {
@@ -5249,7 +5530,7 @@ focus_tree = {
 			}
 			766 = { #Southern Bessarabia
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
 					hidden_effect = {
 						add_building_construction = {
@@ -5280,30 +5561,14 @@ focus_tree = {
 
 		available = {
 			OR = {
-    			209 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			210 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			207 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			206 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			202 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			203 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			834 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
-    			192 = { 
-    			    state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-    			}
+				has_full_control_of_state = 209
+				has_full_control_of_state = 210
+				has_full_control_of_state = 207
+				has_full_control_of_state = 206
+				has_full_control_of_state = 202
+				has_full_control_of_state = 203
+				has_full_control_of_state = 834
+				has_full_control_of_state = 192
 			}
 		}
 		
@@ -5312,7 +5577,7 @@ focus_tree = {
 		completion_reward = {
 						209 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 6
@@ -5323,7 +5588,7 @@ focus_tree = {
 			}
 			210 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5334,7 +5599,7 @@ focus_tree = {
 			}
 			207 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5357,7 +5622,7 @@ focus_tree = {
 			}
 			206 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5368,7 +5633,7 @@ focus_tree = {
 			}
 			202 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -5382,10 +5647,11 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+
 			}
 			203 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -5394,9 +5660,9 @@ focus_tree = {
 					}
 				}
 			}
-			834 = {
+			834 ={
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -5413,7 +5679,7 @@ focus_tree = {
 			}
 			192 = {
 				if = {
-					limit = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -5570,15 +5836,9 @@ focus_tree = {
 
 		available = {
 			OR = {
-				195 = { #LENINGRAD
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				208 = { #LUGA
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
-				137 = { #CRIMEA
-					state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-				}
+				has_full_control_of_state = 195 #LENINGRAD
+				has_full_control_of_state = 208 #LUGA
+				has_full_control_of_state = 137 #CRIMEA
 			}
 		}
 		
@@ -5586,7 +5846,9 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { 195 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes } } #LENINGRAD
+				limit = {
+					has_full_control_of_state = 195 #LENINGRAD
+				}
 				195 = { #LENINGRAD
 					add_building_construction = {
 						type = anti_air_building
@@ -5615,7 +5877,9 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { 208 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes } } #LUGA
+				limit = {
+					has_full_control_of_state = 208 #LUGA
+				}
 				208 = { #LUGA
 					add_building_construction = {
 						type = anti_air_building
@@ -5637,8 +5901,11 @@ focus_tree = {
 					add_dynamic_modifier = { modifier = SOV_seraya_loshad_battery scope = SOV }
 				}
 			}
+
 			if = {
-				limit = { 137 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes } } #CRIMEA
+				limit = {
+					has_full_control_of_state = 137 #CRIMEA
+				}
 				137 = { #CRIMEA
 					add_building_construction = {
 						type = anti_air_building
@@ -6002,11 +6269,8 @@ focus_tree = {
 					}
 
 					#Cossack Infantry
-					if = { # the AI may have deleted or renamed this template by now
-						limit = { ROOT = { has_template = "Strelkovaya Diviziya" } }
-						create_unit = {
+					create_unit = {
 						division = "name = \"13ya Donskaya Kazachya Div.\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0" owner = ROOT
-					}
 					}
 				}
 			}
@@ -6694,7 +6958,6 @@ focus_tree = {
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		x = 16
 		y = 0
-		
 		offset = {
 			x = -8
 			y = 0
@@ -6745,6 +7008,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 
 	focus = {
 		id = SOV_the_centre
@@ -6752,7 +7016,6 @@ focus_tree = {
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
 		x = -8
 		y = 1
-		
 		offset = {
 			x = 8
 			y = 1
@@ -6809,12 +7072,9 @@ focus_tree = {
 
 			add_political_power = 25
 			add_stability = 0.05
-			if = {
-				limit = { has_template = "NKVD Pogranichnaya Diviziya" }
-				set_division_template_lock = {
+			set_division_template_lock = {
 				division_template = "NKVD Pogranichnaya Diviziya"
 				is_locked = no
-			}
 			}
 
 			SOV_paranoia_low_decrease_effect = yes
@@ -7025,6 +7285,7 @@ focus_tree = {
 			add_to_variable = { SOV_the_politburo_mobilization_laws_cost_factor = -0.2 }
 			custom_effect_tooltip = SOV_secure_the_administration_ns_tt
 
+			add_political_power = 50
 
 			SOV_paranoia_medium_decrease_effect = yes
 		}
@@ -7341,13 +7602,13 @@ focus_tree = {
 		cost = 5
 
 		available = {
-		has_war_with_major = yes
+			has_war_with_major = yes
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-				add_ideas = SOV_war_economy_lar 
+			add_ideas = SOV_war_economy_lar 
 			if = {
 				limit = {
 					217 = {
@@ -8001,7 +8262,6 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_centre }
 		x = 2
 		y = 1
-		
 		offset = {
 			x = -7
 			y = 0
@@ -9100,7 +9360,6 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
-		
 		mutually_exclusive = { focus = SOV_the_left_opposition focus = SOV_the_centre}
 		x = 15
 		y = 0
@@ -9469,6 +9728,13 @@ focus_tree = {
 		cost = 2
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over 
+			custom_trigger_tooltip = {
+				tooltip = SOV_poum_exists_tt
+				SPC = { 
+					exists = yes 
+					has_completed_focus = SPR_the_anti_fascist_workers_revolution
+				}
+			}
 		}
 
 		search_filters = {}
@@ -10799,7 +11065,6 @@ focus_tree = {
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
 		x = 24
 		y = 1
-		
 		offset = {
 			x = -7
 			y = 0
@@ -11267,7 +11532,6 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
-		
 
 		available = {
 
@@ -11467,8 +11731,9 @@ focus_tree = {
 				}
 			}
 			else = {
-				any_other_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					exists = yes
+					original_tag_to_check = SPR
 					has_civil_war = yes
 					NOT = { has_war_with = ROOT }
 					OR = {
@@ -11589,7 +11854,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			activate_advisor = SOV_maksim_litvinov
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_maksim_litvinov
 
 		}
 	}
@@ -11807,7 +12073,8 @@ ai_will_do = {
 		
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
+			any_collection_element = {
+				collection = game:all_majors
 				OR = {
 					tag = ENG
 					tag = FRA
@@ -11815,7 +12082,6 @@ ai_will_do = {
 					tag = ITA
 				}
 				has_government = fascism
-				is_major = yes
 			}
 			is_subject = no
 		}
@@ -11920,7 +12186,8 @@ ai_will_do = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			activate_advisor = SOV_vyacheslav_molotov
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_vyacheslav_molotov
 
 		}
 	}
@@ -12257,7 +12524,9 @@ ai_will_do = {
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
+
+			any_collection_element = {
+				collection = game:all_majors
 				OR = {
 					tag = ENG
 					tag = FRA
@@ -12265,7 +12534,6 @@ ai_will_do = {
 					tag = ITA
 				}
 				has_government = democratic
-				is_major = yes
 				is_subject = no
 			}
 		}
@@ -12937,7 +13205,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-			
 			# Estonia
 			custom_effect_tooltip = SOV_estonian_claimed_states_tt
 			hidden_effect = {
@@ -13585,8 +13852,8 @@ ai_will_do = {
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
-			any_country = {
-				owns_state = 78
+			78 = {
+				owner = {
 				controls_state = 78
 			}
 		}
@@ -13594,33 +13861,50 @@ ai_will_do = {
 		bypass = {
 			OR = {
 				AND = {
-					OR = {
-						owns_state = 78 #Bessarabia
-						78 = {
-							owner = { is_in_faction_with = ROOT }
+					78 = { #Bessarabia
+						owner = {
+							OR = {
+								tag = ROOT
+								AND = {
+									is_in_faction_with = ROOT
+									NOT = { tag = ROOT}
+								}
+							}
 						}
 					}
-					OR = {
-						owns_state = 80 #Bucovina
-						80 = {
-							owner = { is_in_faction_with = ROOT }
+					80 = { #Bucovina
+						owner = {
+							OR = {
+								tag = ROOT
+								AND = {
+									is_in_faction_with = ROOT
+									NOT = { tag = ROOT}
+								}
+							}
 						}
 					}
-					OR = {
-						owns_state = 766 #Southern Bessarabia
-						766 = {
-							owner = { is_in_faction_with = ROOT }
+					766 = { #Southern Bessarabia
+						owner = {
+							OR = {
+								tag = ROOT
+								AND = {
+									is_in_faction_with = ROOT
+									NOT = { tag = ROOT}
 						}
 					}
 				}
-				any_country = {
-					owns_state = 78
-					owns_state = 80
-					owns_state = 766
+					}
+				}
+				78 = { #Besserabia
+					owner = {
+						owns_state = 80 #Bucovina
+						owns_state = 766 #Southern Bessarabia
 					has_war_with = ROOT
+					}
 				}
 			}
 		}
+		
 
 		will_lead_to_war_with = ROM
 		
@@ -13684,6 +13968,7 @@ ai_will_do = {
 				}
 			}
 		}
+	}
 	}
 
 	focus = {
@@ -13937,8 +14222,6 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_middle_east_diplomacy
 		cost = 10
-
-		
 
 		ai_will_do = {
 			factor = 1
@@ -14660,7 +14943,6 @@ ai_will_do = {
 				limit = {
 					is_in_faction_with = ROOT
 					SOV_is_chinese_tag = yes
-					is_in_faction_with = ROOT
 				}
 				hidden_effect = {
 					country_event = NSB_soviet_foreign_politics_events.251
@@ -15125,7 +15407,6 @@ ai_will_do = {
 				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 		}
-		
 		offset = {
 			x = -10
 			y = 0
@@ -16493,11 +16774,80 @@ ai_will_do = {
 				}
 			}
 			195 = {
-				add_extra_state_shared_building_slots = 7
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 5
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 4
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
 				add_building_construction = {
 					type = anti_air_building
@@ -17359,7 +17709,7 @@ ai_will_do = {
 #					    target = PREV
 #					}
 #				}
-    		}
+			}
 		}
 	}
 
@@ -18690,3 +19040,4 @@ ai_will_do = {
 		}
 	}
 }
+

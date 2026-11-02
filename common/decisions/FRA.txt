@@ -260,6 +260,20 @@ FRA_vichy_france = {
 						}
 					}
 				}
+
+				every_country = {
+					limit = {
+						is_subject_of = ROOT 
+					}
+					GER = {
+						puppet = {
+						    target = PREV
+						    end_wars = no
+						    end_civil_wars = no 
+						}
+					}
+				}
+
 				GER = { annex_country = { target = ROOT } }
 			}
 
@@ -286,9 +300,7 @@ FRA_vichy_france = {
 		available = {
 			country_exists = VIC
 			VIC = {
-				NOT = {
-					has_war_with = ROOT
-				}
+				FRA_vichy_can_rejoin_free_france = yes
 			}
 			controls_state = 16 #Paris
 		}
@@ -608,6 +620,7 @@ FRA_weapons_purchases_category = {
 				add_equipment_to_stockpile = {
 					type = light_tank_chassis
 					amount = 50
+					producer = USA
 				}
 				if = {
 					limit = {
@@ -634,6 +647,7 @@ FRA_weapons_purchases_category = {
 				add_equipment_to_stockpile = {
 					type = medium_tank_chassis
 					amount = 50
+					producer = USA
 				}
 				if = {
 					limit = {
@@ -1343,21 +1357,53 @@ economy_decisions = {
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAN_formed
-			22 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			if = {
+				limit ={
+					22 ={
+						is_controlled_by = FRA
+					}
+				}
+				22 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
+			else ={
+				random_owned_state = {
+					limit = { 
+						OR = {
+							state = 29 
+							state = 785 
+							state = 15 
+							state = 16
+						}
+						is_fully_controlled_by = ROOT 
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:FRA_amiot_organization = {
 					set_mio_name_key = SNCAN
-					add_mio_size = 1
+					add_mio_size = 2
 					add_mio_funds_gain_factor = 0.05
 					
 				}
@@ -1384,12 +1430,42 @@ economy_decisions = {
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAO_formed
-			22 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			if = {
+				limit ={
+					22 ={
+						is_controlled_by = FRA
+					}
+				}
+				22 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else ={
+				random_owned_state = {
+					limit = { 
+						OR = {
+							state = 30
+							state = 14
+							state = 23
+						}
+						is_fully_controlled_by = ROOT 
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 			IF = {
@@ -1398,7 +1474,7 @@ economy_decisions = {
 				}
 				mio:FRA_bloch_organization = {
 					set_mio_name_key = SNCAO
-					add_mio_size = 1
+					add_mio_size = 2
 					add_mio_funds_gain_factor = 0.05
 					
 				}
@@ -1424,14 +1500,47 @@ economy_decisions = {
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCAC_formed
-			25 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			if ={
+				limit ={
+					25 = {
+						is_controlled_by = ROOT
+					}
+				}
+				25 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
+			else = {
+				random_owned_state = {
+					limit = { 
+						OR = {
+							state = 24
+							state = 33
+							state = 27
+							state = 26
+							state = 25
+						}
+						is_fully_controlled_by = ROOT 
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -1458,12 +1567,44 @@ economy_decisions = {
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCASE_formed
-			25 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			if ={
+				limit ={
+					25 = {
+						is_controlled_by = ROOT
+					}
+				}
+				25 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = { 
+						OR = {
+							state = 735
+							state = 32
+							state = 20
+							state = 21
+							state = 851
+						}
+						is_fully_controlled_by = ROOT 
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 			IF = {
@@ -1472,9 +1613,8 @@ economy_decisions = {
 				}
 				mio:FRA_morane_saulnier_organization = {
 					set_mio_name_key = SNCASE
-					add_mio_size = 1
+					add_mio_size = 2
 					add_mio_funds_gain_factor = 0.05
-					
 				}
 				hidden_effect = {
 					mio:FRA_morane_saulnier_organization = {
@@ -1498,12 +1638,43 @@ economy_decisions = {
 
 		remove_effect = { 
 			set_country_flag = FRA_SNCASO_formed
-			25 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			if ={
+				limit ={
+					25 = {
+						is_controlled_by = ROOT
+					}
+				}
+				25 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = { 
+						OR = {
+							state = 22
+							state = 31
+							state = 19
+							state = 25
+						}
+						is_fully_controlled_by = ROOT 
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 			IF = {
@@ -1512,7 +1683,7 @@ economy_decisions = {
 				}
 				mio:FRA_levasseur_organization = {
 					set_mio_name_key = SNCASO
-					add_mio_size = 1
+					add_mio_size = 2
 					add_mio_funds_gain_factor = 0.05
 				}
 				hidden_effect = {
@@ -1537,7 +1708,7 @@ political_actions = {
 
 		visible = { 
 			has_completed_focus = FRA_utilize_the_leagues 
-			NOT = { has_government = fascism }
+			NOT = { has_government = fascism has_government = neutrality } #the right branch ends in either, same as FRA_utilize_the_leagues' own bypass
 		}
 
 		days_re_enable = 60
@@ -1566,7 +1737,7 @@ political_actions = {
 
 		visible = { 
 			has_completed_focus = FRA_utilize_the_leagues 
-			NOT = { has_government = fascism }
+			NOT = { has_government = fascism has_government = neutrality } #the right branch ends in either, same as FRA_utilize_the_leagues' own bypass
 		}
 		days_re_enable = 30
 		complete_effect = {

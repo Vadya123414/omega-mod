@@ -3944,8 +3944,19 @@ focus_tree = {
 		cost = 10
 	
 		bypass = {
-			NOR = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OR = {
+					overlord = {
+						is_ally_with = NOR
+					}
+					is_ally_with = NOR
+				}
+			}
+			else = {
+				is_ally_with = NOR
 			}
 		}
 	
@@ -4029,9 +4040,69 @@ focus_tree = {
 	
 		available = {
 			OR = {
-				100 = { NOT = {	is_controlled_by = ROOT }}
-				101 = { NOT = {	is_controlled_by = ROOT }}
-				337 = { NOT = {	is_controlled_by = ROOT }}
+				100 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
+				101 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
+				337 = {
+					controller = {
+						NOT = {
+							tag = ROOT
+							is_ally_with = ROOT
+							if = {
+								limit = {
+									ROOT = {
+										is_subject = yes
+									}
+								}
+								is_ally_with = ROOT.overlord
+								else = {
+									hidden_trigger = {
+										always = no
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	
@@ -4049,13 +4120,20 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					ICE = {
-						exists = no
-					}
 					NOT = {
-						100 = {is_controlled_by = ROOT }
-						any_allied_country = {
-							controls_state = 100
+						100 = {
+							controller = {
+								OR = {
+									tag = ROOT
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4070,26 +4148,23 @@ focus_tree = {
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						NOT = {
-							any_allied_country = {
-								has_subject = ICE
-							}
-						}
-					}
-					declare_war_on = {
-					    target = ICE
-					    type = annex_everything
-					}
-				}
 			}
 			if = {
 				limit = {
 					101 = { NOT = {	is_controlled_by = ROOT }}
 					NOT = {
-						any_allied_country = {
-							controls_state = 101
+						101 = {
+							controller = {
+								OR = {
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4109,8 +4184,18 @@ focus_tree = {
 				limit = {
 					337 = { NOT = {	is_controlled_by = ROOT }}
 					NOT = {
-						any_allied_country = {
-							controls_state = 337
+						337 = {
+							controller = {
+								OR = {
+									is_ally_with = ROOT
+									ROOT = {
+										is_subject = yes
+										overlord = {
+											has_subject = PREV.PREV
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -4142,8 +4227,19 @@ focus_tree = {
 		cost = 10
 	
 		bypass = {
-			SWE = {
-				is_in_faction_with = ROOT
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OR = {
+					overlord = {
+						is_ally_with = SWE
+					}
+					is_ally_with = SWE
+				}
+			}
+			else = {
+				is_ally_with = SWE
 			}
 		}
 	
@@ -4225,9 +4321,20 @@ focus_tree = {
 		}
 	
 		available = {
-			FIN = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
 				NOT = {
-					is_in_faction_with = ROOT
+					overlord = {
+						is_ally_with = FIN
+					}
+					is_ally_with = FIN
+				}
+			}
+			else = {
+				NOT = {
+					is_ally_with = FIN
 				}
 			}
 		}
@@ -9749,6 +9856,13 @@ focus_tree = {
 				unlock_mio_trait_tooltip = DEN_mio_trait_big_guns
 			}
 
+			add_tech_bonus = {
+				name = DEN_expand_haerens_tekniske_korps
+				bonus = 0.25
+				uses = 2
+				category = artillery
+			}
+
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -9958,9 +10072,10 @@ focus_tree = {
 				}
 				add_tech_bonus = {
 					name = DEN_convert_automobile_production
-					bonus = 1
-					uses = 1
-					category = cat_mechanized_equipment
+					bonus = 0.5
+					uses = 2
+					category = cat_armored_cars
+					category = motorized_equipment
 				}
 			}
 			else = {
@@ -10164,6 +10279,7 @@ focus_tree = {
 				bonus = 0.5
 				uses = 2
 				category = armor
+				category = cat_mechanized_equipment
 			}
 
 			random_core_state = {
@@ -11629,6 +11745,56 @@ focus_tree = {
 			mio:DEN_flyvemaskinevaerksted_organization = {
 				add_mio_size = 1
 				add_mio_funds_gain_factor = 0.1
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = { 
+					name = "Marinejager" 
+					type = small_plane_airframe_1
+					allow_without_tech = no
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+					}
+					icon = "GFX_DEN_basic_small_fighter_2"
+					model = "DEN_light_plane_1_entity"
+				}
+				create_equipment_variant = {
+					name = "Marinebomber"
+					type = small_plane_cas_airframe_1
+					allow_without_tech = no
+					modules = {
+						fixed_main_weapon_slot = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = light_mg_2x
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = dive_brakes_small
+						special_type_slot_2 = empty 
+					}
+					icon = "GFX_DEN_basic_small_cas_2"
+					model = "DEN_light_plane_1_var_1_entity"
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "Marinejager"
+					type = fighter_equipment_1
+					allow_without_tech = no
+					upgrades = {
+						plane_gun_upgrade = 1
+					}
+				}
+				create_equipment_variant = {
+					name = "Marinebomber"
+					type = cas_equipment_1
+					allow_without_tech = no
+					upgrades = {
+						plane_cas_upgrade = 1
+					}
+				}
 			}
 
 			add_tech_bonus = {

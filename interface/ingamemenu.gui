@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "ingamemenu"
 		position = { x = 0 y = 0 }	
-		size = { width = 320 height = 475}
+		size = { width = 320 height = 435}
 		Orientation = center
 		Origo = center		
 		fade_time = 500
@@ -110,10 +110,10 @@ guiTypes = {
 
         containerWindowType = {
             name = "first_row"
-			position = { x=88 y=380 }
+			position = { x=85 y=380 }
             ButtonType = {
                 name = "discord_button"
-                position = { x=56 y=15 }
+                position = { x=60 y=0 }
                 quadTextureSprite ="discord"
                 #clicksound = click_default
                 pdx_tooltip = "MENU_DISCORD"

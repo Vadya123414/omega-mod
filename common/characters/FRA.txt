@@ -186,7 +186,7 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_aggressive_focus
+				has_country_flag = FRA_aggressive_focus
 			}
 			visible = {
 				NOT = {
@@ -261,7 +261,7 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = FRA_defensive_focus
+					has_country_flag = FRA_defensive_focus
 					has_country_flag = vichy_france
 				}
 			}

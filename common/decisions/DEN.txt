@@ -4056,8 +4056,7 @@ DEN_overlord_category = {
 					DEN = {
 						has_government = communism
 					}
-					any_country = {
-						has_war_with = ROOT
+					any_enemy_country = {
 						has_government = communism
 					}
 				}
@@ -4065,8 +4064,7 @@ DEN_overlord_category = {
 					DEN = {
 						has_government = fascism
 					}
-					any_country = {
-						has_war_with = ROOT
+					any_enemy_country = {
 						has_government = fascism
 					}
 				}
@@ -4114,8 +4112,7 @@ DEN_overlord_category = {
 			DEN = {
 				NOT = { has_government = communism }
 			}
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				has_government = communism
 			}
 		}
@@ -4127,8 +4124,7 @@ DEN_overlord_category = {
 				NOT = { has_government = communism }
 				NOT = { has_country_flag = DEN_banned_communism_flag }
 			}
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				has_government = communism
 			}
 		}
@@ -4155,8 +4151,7 @@ DEN_overlord_category = {
 			DEN = {
 				NOT = { has_government = fascism }
 			}
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				has_government = fascism
 			}
 		}
@@ -4168,8 +4163,7 @@ DEN_overlord_category = {
 				NOT = { has_government = fascism }
 				NOT = { has_country_flag = DEN_banned_fascism_flag }
 			}
-			any_country = {
-				has_war_with = ROOT
+			any_enemy_country = {
 				has_government = fascism
 			}
 		}
