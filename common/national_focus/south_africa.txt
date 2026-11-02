@@ -30,7 +30,7 @@
 #			factor = 1
 #		}
 #
-#		available = {
+#		available = { 
 #
 #		}
 #		
@@ -183,7 +183,7 @@
 		y = 4
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -213,12 +213,11 @@
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
-		mutually_exclusive = { focus = SAF_outlaw_strikes }
 		x = 0
 		y = 5
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -245,12 +244,11 @@
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SAF_work_for_all_poor }
-		mutually_exclusive = { focus = SAF_expand_the_cape_corps }
 		x = 2
 		y = 5
 		relative_position_id = SAF_war_measures_act
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -569,7 +567,7 @@
 		y = 4
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2086,10 +2084,10 @@
 				limit = {
 					has_state_flag = SAF_expand_the_mining_industry_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2614,13 +2612,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF_special_service_battalion
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 50
 		}
 	}
 
@@ -2632,7 +2624,7 @@
 		y = 1
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2655,7 +2647,7 @@
 			add_tech_bonus = {
 				name = SAF_improve_the_three_oh_three
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = infantry_weapons
 			}
 		}
@@ -2694,8 +2686,6 @@
 				bonus = 1.0
 				uses = 2
 				technology = motorised_infantry
-				technology = tech_logistics_company
-				technology = tech_logistics_company2
 				technology = tech_logistics_company3
 				technology = tech_logistics_company4
 			}
@@ -2730,13 +2720,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF__south_african_military_college
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 50
 		}
 	}
 
@@ -2771,7 +2755,7 @@
 			add_tech_bonus = {
 				name = SAF_expand_the_south_african_artillery
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = artillery
 			}
 		}
@@ -2883,7 +2867,7 @@
 			add_tech_bonus = {
 				name = SAF_mechanization_effort
 				bonus = 1.0
-				uses = 1
+				uses = 3
 				category = cat_mechanized_equipment
 			}
 		}
@@ -3004,7 +2988,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
-			air_experience = 25
+			air_experience = 100
 			random_state = {				
 				limit = {
 					has_state_flag = SAF_commit_to_the_five_year_plan_AB
@@ -3134,7 +3118,7 @@
 		y = 2
 		relative_position_id = SAF_commit_to_the_five_year_plan
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -3307,23 +3291,8 @@
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_RESEARCH }
 
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = SAF_seaward_defence_force_DY
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 100
 			random_owned_controlled_state = {
 				prioritize = { 681 719 }
 				limit = {
@@ -3334,10 +3303,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SAF_seaward_defence_force_DY
@@ -3460,32 +3429,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = SAF_expand_the_simons_town_base_DY
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = SAF_expand_the_simons_town_base_NB
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = coastal_bunker
-					province = 12589
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 681 }
@@ -3497,10 +3440,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = SAF_expand_the_simons_town_base_DY
@@ -3511,7 +3454,7 @@
 					add_building_construction = {
 						type = coastal_bunker
 						province = 12589
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 					set_state_flag = SAF_expand_the_simons_town_base_NB
@@ -3684,7 +3627,7 @@
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -3693,7 +3636,7 @@
 						all_provinces = yes							
 						limit_to_naval_base = yes
 					}
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}

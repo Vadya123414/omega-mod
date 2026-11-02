@@ -7021,13 +7021,13 @@
 	focus = {
 		id = FRA_royal_corpus
 		icon = GFX_focus_INS_evacuate_soldiers_to_australia
-		x = 66
-		y = 6
-		
+		x = -2
+		y = 1
+		relative_position_id = FRA_proclaim_the_third_empire
 		prerequisite = {
 			focus = FRA_proclaim_the_third_empire
 		}
-		cost = 5
+		cost = 3
 
 		available = {
 			is_subject = no
@@ -7054,8 +7054,9 @@
 	focus = {
 		id = FRA_voina_budgetww
 		icon = GFX_focus_INS_economic_integration
-		x = 60
-		y = 6
+		x = -1
+		y = 1
+		relative_position_id = FRA_orleanist_restoration
 		
 		prerequisite = {
 			focus = FRA_orleanist_restoration
@@ -7199,9 +7200,9 @@
 	focus = {
 		id = FRA_the_first_citizen_of_the_state
 		icon = GFX_focus_PER_constitutional_monarchy
-		x = 61
-		y = 8
-		
+		x = 0
+		y = 1
+		relative_position_id = FRA_counter_action
 		prerequisite = {
 			focus = FRA_counter_action
 		}
@@ -7266,9 +7267,9 @@
 	focus = {
 		id = FRA_no_further_humiliations
 		icon = GFX_focus_SIA_the_midnight_meeting
-		x = 61
-		y = 10
-		
+		x = 1
+		y = 1
+		relative_position_id = FRA_slum_clearing
 		prerequisite = {
 			focus = FRA_public_welfare
 		}
@@ -7666,10 +7667,10 @@
 		id = HOL_lud
 		prerequisite = { focus = FRA_tree_crown focus = FRA_reorganize_the_dutch }
 		icon = GFX_focus_PER_strengthen_the_tudeh
-		x = 66
-		y = 9
+		x = 2
+		y = 1
 		cost = 5
-
+		relative_position_id = FRA_tree_crown
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -7931,9 +7932,9 @@
 	focus = {
 		id = FRA_podgotovka  
 		icon = GFX_focus_PER_increase_oil_sales
-		x = 71
-		y = 7
-		
+		x = 1
+		y = 1
+		relative_position_id = FRA_zakon
 		prerequisite = {
 			focus = FRA_granic
 		}
@@ -7997,9 +7998,9 @@
 	focus = {
 		id = FRA_podgotovka2
 		icon = GFX_focus_BEL_interpreters
-		x = 68
-		y = 9
-		
+		x = 0
+		y = 1
+		relative_position_id = FRA_reorganize_the_dutch
 		prerequisite = {
 			focus = FRA_reorganize_the_dutch 
 		}
@@ -8041,9 +8042,9 @@
 	focus = {
 		id = FRA_avenge_waterloo
 		icon = GFX_focus_BEL_dyle_plan
-		x = 69
-		y = 7
-		
+		x = 1
+		y = 1
+		relative_position_id = FRA_granic
 		prerequisite = {
 			focus = FRA_granic
 		}
@@ -8241,7 +8242,7 @@
 			focus = FRA_royal_corpus
 		}
 		relative_position_id = FRA_royal_corpus
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -8609,7 +8610,7 @@
 			focus = FRA_royal_corpus
 		}
 		relative_position_id = FRA_granic
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1

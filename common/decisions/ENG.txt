@@ -9316,63 +9316,63 @@ political_actions = {
 		}
 	}
 
-	ENG_invoke_the_alliance_of_1373 = {
-
-		icon = generic_prepare_civil_war
-	
-		allowed = {
-			tag = ENG
-		}
-		
-		available = {
-			has_war = yes
-			has_government = democratic
-			POR = {
-				OR = {
-					has_government = ROOT
-					has_government = neutrality
-				}
-			}
-			POR = { is_in_faction = no }
-			is_faction_leader = yes
-		}
-
-		cost = 100
-		
-		visible = {
-			has_war = yes
-			NOT = { has_war_with = POR }
-			POR = { is_in_faction = no }
-		}
-		
-		complete_effect = {
-			ENG = {
-				hidden_effect = {
-					save_event_target_as = alliance_inviter
-				}
-			}
-
-			POR = {
-				country_event = generic.5
-				country_event = {
-					id = generic.5
-					hours = 6
-				}	
-			}
-		}
-
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 0
-				NOT = {
-					any_enemy_country = {
-						original_tag = SPR
-					}
-				}
-			}
-		}
-	}
+	#ENG_invoke_the_alliance_of_1373 = {
+	#	
+	#	icon = generic_prepare_civil_war
+	#
+	#	allowed = {
+	#		tag = ENG
+	#	}
+	#	
+	#	available = {
+	#		has_war = yes
+	#		has_government = democratic
+	#		POR = {
+	#			OR = {
+	#				has_government = ROOT
+	#				has_government = neutrality
+	#			}
+	#		}
+	#		POR = { is_in_faction = no }
+	#		is_faction_leader = yes
+	#	}
+#
+	#	cost = 100
+	#	
+	#	visible = {
+	#		has_war = yes
+	#		NOT = { has_war_with = POR }
+	#		POR = { is_in_faction = no }
+	#	}
+	#	
+	#	complete_effect = {
+	#		ENG = {
+	#			hidden_effect = {
+	#				save_event_target_as = alliance_inviter
+	#			}
+	#		}
+#
+	#		POR = {
+	#			country_event = generic.5
+	#			country_event = {
+	#				id = generic.5
+	#				hours = 6
+	#			}	
+	#		}
+	#	}
+#
+	#	ai_will_do = {
+	#		base = 2
+	#		modifier = {
+	#			factor = 0
+	#			NOT = {
+	#				any_enemy_country = {
+	#					original_tag = SPR
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
 
 	ENG_request_azores_lease = {
 	
