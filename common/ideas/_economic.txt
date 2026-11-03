@@ -1113,9 +1113,11 @@ ideas = {
 
 				modifier = {
 					factor = 300
-
+					OR = {
 					tag = BRA
-					date > 1943.1.1 # at this point we can probably cash in on rubber lack in the world
+					tag = COG
+					}
+					date > 1940.1.1 # at this point we can probably cash in on rubber lack in the world
 				}
 
 				modifier = {

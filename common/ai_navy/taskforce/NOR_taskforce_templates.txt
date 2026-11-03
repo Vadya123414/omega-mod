@@ -212,5 +212,4 @@ NOR_ConvoyEscort_1 = {
 		}
 	}
 	}
-}
 

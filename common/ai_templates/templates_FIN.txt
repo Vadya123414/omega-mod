@@ -114,8 +114,8 @@ infantry_generic = {
 			
 			regiments = {
 				infantry = 9
-				artillery_brigade = 4
-				anti_air = 2
+				artillery_brigade = 3
+				anti_air_brigade = 3
 			}
 
 		}
@@ -164,8 +164,8 @@ rangers_generic = {
 			}
 
 			regiments = {
-				ranger_battalion = 8
-				artillery_brigade = 3
+				ranger_battalion = 6
+				artillery_brigade = 1
 			}
 
 		}
@@ -197,7 +197,8 @@ rangers_generic = {
 
 			regiments = {
 				ranger_battalion = 9
-				artillery_brigade = 6
+				artillery_brigade = 3
+				anti_air_brigade = 3
 			}
 
 			}

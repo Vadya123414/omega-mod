@@ -212,5 +212,4 @@ ENG_ConvoyEscort_1 = {
 		}
 	}
 	}
-}
 

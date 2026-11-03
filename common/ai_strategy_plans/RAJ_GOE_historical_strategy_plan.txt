@@ -73,6 +73,7 @@ RAJ_GOE_historical = {
 		RAJ_overlords_railway_investment
 		RAJ_exploit_the_frontier
 		RAJ_tata_steel_dlc
+		RAJ_establish_the_alupuram_works
 		RAJ_indian_states_force
 		RAJ_specialized_dietary_requirement
 		RAJ_legacy_of_military_service

@@ -87,7 +87,9 @@ POL_historical_plan = {
 	}
 
 	ideas = {
-
+		POL_kazimierz_sosnkowski = 10
+		POL_eugeniusz_kwiatkowiski = -100
+		POL_jozef_beck = -100
 	}
 	traits = {
 		captain_of_industry = 5

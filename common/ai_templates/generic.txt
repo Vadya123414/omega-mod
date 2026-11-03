@@ -160,11 +160,11 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 2
+				field_guns = 3
 			}
 			
 			regiments = {
-				infantry = 8
+				infantry = 9
 			}
 		}
 		replace_at_match = 0.8
@@ -186,7 +186,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 3
+				fire_support = 4
 			}
 			
 			regiments = {
@@ -223,7 +223,6 @@ infantry_generic = {
 
 		}
 	}
-
 }
 mountaineers_generic = {
 	
@@ -298,11 +297,12 @@ mountaineers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 5
+				fire_support = 4
 			}
 
 			regiments = {
 				mountaineers = 12
+				anti_air_brigade = 1
 			}
 
 			}
@@ -384,11 +384,11 @@ rangers_generic = {
 			}
 			
 			regimental_support = {
-				fire_support = 2
+				fire_support = 3
 			}
 
 			regiments = {
-				ranger_battalion = 8
+				ranger_battalion = 9
 			}
 
 		}

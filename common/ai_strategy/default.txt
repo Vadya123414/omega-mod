@@ -1,5 +1,4 @@
 boost_div_upgrades = { 
-	allowed = {always = yes}
 	enable = {
 		always = yes
 	}
@@ -26,26 +25,34 @@ boost_div_upgrades = {
 	}
 }
 default_unit_production = {
-	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	allowed = {always = yes}
 	enable = {
 		always = yes
-	}
-	abort_when_not_enabled = yes
+		}
+	abort_when_not_enabled = no
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = convoy
 		value = 1
 	}
+	ai_strategy = { 
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 40
+		value = 10
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
 	}
 }
-
 default_air_production = {
-	allowed = {always = no}
 	enable = {
+		always = no
 		is_major = yes
 		has_tech = improved_small_airframe
 		has_tech = engines_3
@@ -73,11 +80,10 @@ default_air_production = {
 	}
 }
 default_air_production = {
-	allowed = {always = no}
 	enable = {
-		is_major = yes
-		has_tech = improved_small_airframe
-		has_tech = engines_3
+		always = no
+		not ={has_tech = improved_small_airframe}
+		not ={has_tech = engines_3}
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -102,7 +108,6 @@ default_air_production = {
 	}
 }
 	default_armor_production = {
-		allowed = {always = yes}
 	enable = {
 		always = yes
 	}
@@ -187,32 +192,6 @@ default_air_production = {
 		value = -100
 	}
 }
-default_unit_production = {
-	allowed = {always = yes}
-	enable = {
-		always = yes
-		}
-	abort_when_not_enabled = no
-		ai_strategy = { 
-		type = railway_gun_divisions_ratio
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = -100
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 100
-	}
-		ai_strategy = {
-		type = role_ratio
-		id = cavalry
-		value = -100
-	}
-}
 default_paratroopers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
@@ -222,7 +201,7 @@ default_paratroopers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
-		value = 0
+		value = -100
 	}
 }
 default_mountaineers_unit_production = {
@@ -243,7 +222,7 @@ default_mountaineers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 10000
+		value = 1000
 	}
 }
 default_marines_unit_production = {
@@ -255,7 +234,7 @@ default_marines_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = marines
-		value = -10
+		value = -100
 	}
 }
 default_rangers_unit_production = {
@@ -274,7 +253,7 @@ default_rangers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = rangers
-		value = 10000
+		value = 1000
 	}
 }
 default_convoy_production = {
@@ -486,26 +465,6 @@ RAJ_take_first_parlament = {
 		value = -10000
 	}
 }
-default_major_SF_marines = {
-	enable = {
-		or = {
-		original_tag = ENG
-		original_tag = USA
-		original_tag = JAP
-		}
-		OR = {
-			has_doctrine = marines_1
-			has_doctrine = marines_2
-		}
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 2
-	}
-}
-
 default_garrison_production = {
 	enable = {
 		and = {
@@ -527,44 +486,6 @@ default_garrison_production = {
 		value = 1
 	}
 }
-default_air_production = {
-	allowed = {
-		original_tag = RAJ
-	}
-	enable = {
-		always = yes
-
-	}
-	abort_when_not_enabled = no
-	ai_strategy = {
-		type = unit_ratio
-		id = fighter
-		value = 100
-	}
-}
-#
-#default_marines_production = {
-#	enable = {
-#		NOT = { original_tag = GER }
-#		ai_wants_divisions > 49
-#	}
-#	abort = {
-#		ai_wants_divisions < 50
-#	}
-#
-#	ai_strategy = {
-#		type = role_ratio
-#		id = marines
-#		value = 0
-#	}
-#
-#	#ai_strategy = {
-#	#	type = role_ratio
-#	#	id = infantry
-#	#	value = 0
-#	#}
-#}
-
 default_area_priority = {
 	enable = {
 		NOT = { original_tag = GER }
@@ -831,7 +752,7 @@ upgrade_intelligence_agency = {
 		or = {
 			and = {
 				date > 1937.1.1
-				num_of_civilian_factories > 20
+				num_of_civilian_factories > 15
 			}
 			OR = {
 				original_tag = GER
@@ -871,7 +792,7 @@ upgrade_intelligence_agency_as_spy_master = {
 	enable = {
 		OR = {
 			has_war = no
-			num_of_civilian_factories > 20
+			num_of_civilian_factories > 15
 		}
 	}
 	abort = {
@@ -879,7 +800,7 @@ upgrade_intelligence_agency_as_spy_master = {
 	}
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 100
+		value = 5000
 	}
 }
 

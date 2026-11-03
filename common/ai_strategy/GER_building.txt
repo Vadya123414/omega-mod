@@ -1,0 +1,119 @@
+
+GER_strategy_liquefaction_building_1 = {
+		enable = {
+			AND = {
+				original_tag = GER
+				date > 1938.10.1
+				rubber < 60
+				}
+			}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_strategy_liquefaction_building_2 = {
+		enable = {
+				original_tag = GER
+				FRA = {has_capitulated = yes}
+				rubber < 150
+				}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2000
+	}
+}
+GER_autarky_building_1 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		controls_state = 105
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 105
+	}
+}
+GER_autarky_building_2 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		controls_state = 105
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = industrial_infrastructure
+		value = 1000000
+		target = 105
+	}
+}	
+GER_infrastructure_1 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		date < 1937.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 55
+	}
+}
+GER_infrastructure_2 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		date < 1937.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 42
+	}
+}
+GER_infrastructure_3 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		has_completed_focus = GER_build_the_rur_dam
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 51
+	}
+}
+GER_infrastructure_3 = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		date < 1937.1.1
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		value = 1000000
+		target = 57
+	}
+}
