@@ -19,6 +19,7 @@ GRE_befriend_balkan_countries_YUG = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = YUG }
 			has_war_with = YUG
@@ -81,6 +82,7 @@ GRE_befriend_balkan_countries_ROM = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = ROM }
 			has_war_with = ROM
@@ -141,6 +143,7 @@ GRE_befriend_balkan_countries_BUL = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = BUL }
 			has_war_with = BUL
@@ -201,6 +204,7 @@ GRE_befriend_balkan_countries_TUR = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = TUR }
 			has_war_with = TUR
@@ -247,6 +251,7 @@ GRE_befriend_balkan_countries_ALB = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = ALB }
 			has_war_with = ALB
@@ -309,6 +314,7 @@ GRE_befriend_balkan_countries_HUN = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = HUN }
 			has_war_with = HUN
@@ -369,6 +375,7 @@ GRE_befriend_balkan_countries_CZE = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = CZE }
 			has_war_with = CZE
@@ -428,6 +435,7 @@ GRE_befriend_balkan_countries_AUS = {
 		
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = AUS }
 			has_war_with = AUS
@@ -489,6 +497,7 @@ GRE_befriend_major_investors = {
 		}
 	}
 	abort = {
+		has_political_power < 50
 		OR = {
 			NOT = { country_exists = ENG }
 			has_war_with = ENG

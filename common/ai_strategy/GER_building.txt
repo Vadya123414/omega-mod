@@ -36,10 +36,11 @@ GER_autarky_building_1 = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = infrastructure
-		value = 1000000
 		target = 105
+		value = 1
+		
 	}
 }
 GER_autarky_building_2 = {
@@ -51,10 +52,11 @@ GER_autarky_building_2 = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = industrial_infrastructure
-		value = 1000000
 		target = 105
+		value = 1
+		
 	}
 }	
 GER_infrastructure_1 = {
@@ -66,10 +68,11 @@ GER_infrastructure_1 = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = infrastructure
-		value = 1000000
 		target = 55
+		value = 1
+		
 	}
 }
 GER_infrastructure_2 = {
@@ -81,10 +84,11 @@ GER_infrastructure_2 = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = infrastructure
-		value = 1000000
 		target = 42
+		value = 1
+		
 	}
 }
 GER_infrastructure_3 = {
@@ -92,14 +96,15 @@ GER_infrastructure_3 = {
 		original_tag = GER
 		}
 	enable = {
-		has_completed_focus = GER_build_the_rur_dam
+		GER={has_completed_focus = GER_build_the_rur_dam}
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = infrastructure
-		value = 1000000
 		target = 51
+		value = 1
+		
 	}
 }
 GER_infrastructure_3 = {
@@ -111,9 +116,10 @@ GER_infrastructure_3 = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = infrastructure
-		value = 1000000
 		target = 57
+		value = 1
+		
 	}
 }

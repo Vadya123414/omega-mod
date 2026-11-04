@@ -28,9 +28,9 @@ infantry_generic = {
 				infantry = 8
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.9
 		replace_with = infantry_mid
-		target_min_match = 0.6
+		target_min_match = 0.9
 	}
 		infantry_mid = {
 	
@@ -54,9 +54,9 @@ infantry_generic = {
 				infantry = 12
 			}
 		}
-		replace_at_match = 0.6
+		replace_at_match = 0.9
 		replace_with = infantry_late
-		target_min_match = 0.6
+		target_min_match = 0.9
 	}
 	infantry_late = {
 	
@@ -126,9 +126,9 @@ available_for = {
 			}
 
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = mountaineers_late
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 
 	mountaineers_late = {
@@ -198,9 +198,9 @@ available_for = {
 			}
 
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = rangers_late
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 
 	rangers_late = {

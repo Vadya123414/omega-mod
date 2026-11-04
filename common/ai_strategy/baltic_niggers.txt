@@ -61,7 +61,7 @@ SWI_bunker_1 = {
 	}
 	abort = { always = no }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 6345
 		value = 1000
@@ -76,6 +76,7 @@ at_start_we_need_manpower = {
 		original_tag = HOL
 	}
 	enable = {
+		not = {has_global_flag = VUP_Hist_version}
 		not = {has_idea = extensive_conscription}
 	}
 	abort = {
@@ -101,5 +102,117 @@ at_start_we_need_manpower = {
 		type = pp_spend_priority
 		id = theorist
 		value = -1000
+	}
+}
+at_start_we_need_manpower_hist = {
+	allowed = {
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = DEN
+		original_tag = BEL
+		original_tag = HOL
+		original_tag = YUG
+		original_tag = GRE
+	}
+	enable = {
+		has_global_flag = VUP_Hist_version
+		date >1938.1.1
+		not = {has_idea = extensive_conscription}
+	}
+	abort = {
+		has_idea = extensive_conscription
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = army_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = political_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
+		value = -1000
+	}
+}
+EST_not_defend_LAT = {
+    	enable = {
+		original_tag = EST
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = LAT
+	value = 100  
+	}
+}
+LAT_not_defend_EST = {
+    	enable = {
+		original_tag = LAT
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = EST
+	value = 100  
+	}
+}
+LAT_not_defend_LIT = {
+    	enable = {
+		original_tag = LAT
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = LIT
+	value = 100  
+	}
+}
+LIT_not_defend_LAT = {
+    	enable = {
+		original_tag = LIT
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = LAT
+	value = 100  
+	}
+}
+FIN_not_defend_SWI = {
+    	enable = {
+		original_tag = FIN
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = SWI
+	value = 100  
+	}
+}
+FIN_not_defend_NOR = {
+    	enable = {
+		original_tag = FIN
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = NOR
+	value = 100  
 	}
 }

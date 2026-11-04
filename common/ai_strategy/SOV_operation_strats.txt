@@ -15,7 +15,7 @@ SOV_build_intel_network_in_MEX_strat = {
 	}
 	
 	abort = {
-		has_ideas = trotskyite_plot_purged
+		has_idea = trotskyite_plot_purged
 	}
 		
 	ai_strategy = {
@@ -43,7 +43,7 @@ SOV_raid_trotskys_villa_strat = {
 	}
 	
 		abort = {
-		has_ideas = trotskyite_plot_purged
+		has_idea = trotskyite_plot_purged
 	}
 	
 	ai_strategy = {
@@ -69,7 +69,7 @@ SOV_murder_trotsky_strat = {
 	}
 	
 		abort = {
-		has_ideas = trotskyite_plot_purged
+		has_idea = trotskyite_plot_purged
 	}
 	
 	ai_strategy = {
@@ -87,26 +87,38 @@ SOV_spy_on_EST = {
 	}
 	
 	enable = {
+		has_global_flag = VUP_Hist_version
+		tag = SOV
+		date > 1937.6.1
+		#NOT = { has_completed_focus = GER_the_four_year_plan }
+		EST = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = SOV }
+		}
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = EST
 			value < 2
 		}
-		EST = {
-			exists = yes
-			has_war = no
-			is_in_faction = no
+	}
+
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = EST
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = EST
 		}
 	}
-	
-	abort_when_not_enabled = yes
-	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
 		value = 1000
 		mission_target = EST
-		num_operatives = 1
 	}
 	
 	ai_strategy = {
@@ -129,26 +141,44 @@ SOV_spy_on_LAT = {
 	}
 	
 	enable = {
+		has_global_flag = VUP_Hist_version
+		tag = SOV
+		date > 1937.6.1
+		#NOT = { has_completed_focus = GER_the_four_year_plan }
+		LAT = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = SOV }
+		}
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = LAT
 			value < 2
 		}
-		LAT = {
-			exists = yes
-			has_war = no
-			is_in_faction = no
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = EST
+			value > 1
 		}
 	}
-	
-	abort_when_not_enabled = yes
+
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = LAT
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = LAT
+		}
+	}
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
 		value = 1000
 		mission_target = LAT
-		num_operatives = 1
 	}
 	
 	ai_strategy = {
@@ -163,32 +193,56 @@ SOV_spy_on_LAT = {
 		value = 15
 	}
 }
-SOV_spy_on_LAT = {
+SOV_spy_on_LIT = {
 	allowed = {
 		tag = SOV
 	}
 	
 	enable = {
+		has_global_flag = VUP_Hist_version
+		tag = SOV
+		date > 1937.6.1
+		#NOT = { has_completed_focus = GER_the_four_year_plan }
+		LIT = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = SOV }
+		}
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = LIT
 			value < 2
 		}
-		LAT = {
-			exists = yes
-			has_war = no
-			is_in_faction = no
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = LAT
+			value > 1
+		}
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = EST
+			value > 1
+		}
+
+	}
+
+	abort = {
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = LIT
+			value > 1
+		}
+		is_running_operation = {
+			operation = operation_collaboration_government
+			target = LIT
 		}
 	}
-	
-	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
 		value = 1000
 		mission_target = LIT
-		num_operatives = 1
 	}
 	
 	ai_strategy = {
@@ -196,46 +250,6 @@ SOV_spy_on_LAT = {
 		operation = operation_collaboration_government
 		value = 500
 		operation_target = LIT
-	}
-
-	ai_strategy = {
-		type = intelligence_agency_usable_factories
-		value = 15
-	}
-}
-SOV_spy_on_GER_infiltrate = {
-	allowed = {
-		original_tag = SOV
-	}
-	
-	enable = {
-		num_finished_operations = {
-			operation = operation_collaboration_government
-			target = LAT
-			value > 2
-		}
-		num_finished_operations = {
-			operation = operation_collaboration_government
-			target = EST
-			value < 2
-		}
-	}
-	
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = operative_mission
-		mission = build_intel_network
-		value = 1000
-		mission_target = GER
-		num_operatives = 1
-	}
-	
-	ai_strategy = {
-		type = operative_operation
-		operation = operation_infiltrate_armed_forces_army
-		value = 2000
-		operation_target = GER
 	}
 
 	ai_strategy = {

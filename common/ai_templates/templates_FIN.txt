@@ -40,9 +40,9 @@ infantry_generic = {
 				artillery_brigade = 3
 			}
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = infantry_mid
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 		infantry_mid = {
 	
@@ -79,9 +79,9 @@ infantry_generic = {
 				artillery_brigade = 3
 			}
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = infantry_late
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 	infantry_late = {
 	
@@ -169,9 +169,9 @@ rangers_generic = {
 			}
 
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = rangers_late
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 
 	rangers_late = {

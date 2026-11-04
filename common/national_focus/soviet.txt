@@ -13247,9 +13247,7 @@ ai_will_do = {
 			activate_targeted_decision = { target = LIT decision = SOV_send_ultimatum_to_country_baltic }
 			if = {
 				limit = {
-					ROOT = {
 						is_ai = yes
-					}
 				}
 				add_collaboration = {
 				target = EST

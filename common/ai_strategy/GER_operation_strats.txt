@@ -944,7 +944,6 @@ GER_spy_on_POL = {
 		mission = build_intel_network
 		value = 1000
 		mission_target = POL
-		num_operatives = 1
 	}
 	
 	ai_strategy = {
@@ -1036,7 +1035,6 @@ GER_spy_on_HOL = {
 		mission = build_intel_network
 		value = 1000
 		mission_target = HOL
-		num_operatives = 1
 	}
 	
 	ai_strategy = {
@@ -1235,7 +1233,6 @@ GER_spy_on_YUG = {
 		mission = build_intel_network
 		value = 1000
 		mission_target = YUG
-		num_operatives = 1
 	}
 	
 	ai_strategy = {

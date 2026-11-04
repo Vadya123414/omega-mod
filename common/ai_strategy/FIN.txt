@@ -1,3 +1,26 @@
+	FIN_hist_defend = { 
+		allowed = {
+			original_tag = FIN
+		}
+	enable = {
+		original_tag = FIN
+        has_global_flag = VUP_Hist_version
+        date > 1939.1.1
+		controls_state = 146 
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			146 
+			150 
+			929
+		}
+		ratio = 0.8
+		subtract_invasions_from_need = yes
+		subtract_fronts_from_need = yes
+	}
+}
 FIN_alone_in_the_north = {
 	enable = {
 		original_tag = FIN

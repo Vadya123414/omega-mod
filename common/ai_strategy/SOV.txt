@@ -1,3 +1,39 @@
+SOV_not_defend_AFG= {
+    	enable = {
+		original_tag = SOV
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = AFG
+	value = 100  
+	}
+}
+SOV_not_defend_TUR = {
+    	enable = {
+		original_tag = SOV
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = TUR
+	value = 100  
+	}
+}
+SOV_not_defend_PER = {
+    	enable = {
+		original_tag = SOV
+        has_global_flag = VUP_Hist_version
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+	type = dont_defend_ally_borders
+	id = PER
+	value = 100  
+	}
+}
 SOV_market_management = {
 	allowed = {
 		original_tag = SOV

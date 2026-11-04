@@ -116,6 +116,8 @@ BEL_historical_plan_3 = {
 	}
 
 	ideas = {
+		extensive_conscription = 30
+		limited_conscription = 10
 		BEL_charles_count_of_flanders_person = 500
 		BEL_henri_de_man = 200
 		BEL_achille_van_acker = 150

@@ -48,7 +48,7 @@ MINOR_strategy_industrial_complex_building_nonhist = {
 		ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 100
+		value = 1000
 	}
 }
 
@@ -97,7 +97,7 @@ MINOR_strategy_industrial_complex_building_hist = {
 		ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 100
+		value = 1000
 	}
 }
 
@@ -201,8 +201,8 @@ FRA_autarky_building_2 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 635
+		value = 10000
 	}
 }	
 FRA_infrastructure_1 = {
@@ -216,8 +216,8 @@ FRA_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 635
+		value = 10000
 	}
 }
 POL_strategy_industrial_complex_building = {
@@ -294,21 +294,6 @@ bots_usa_arms_factory_building = {
 		type = building_target
 		id = arms_factory
 		value = 500
-	}
-}
-bots_usa_synthetic_refinery_building = {
-		enable = {
-			AND = {
-				original_tag = USA
-				date > 1940.6.1
-				rubber < 300
-				}
-		}
-		abort_when_not_enabled = yes
-		ai_strategy = {
-		type = building_target
-		id = synthetic_refinery
-		value = 1000
 	}
 }
 bots_usa_synthetic_refinery_building = {
@@ -409,8 +394,8 @@ JAP_autarky_building_2 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 537
+		value = 100000
 	}
 }	
 JAP_infrastructure_1 = {
@@ -424,8 +409,8 @@ JAP_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 537
+		value = 1000000	
 	}
 }
 AST_strategy_arms_factory_building = {
@@ -468,8 +453,8 @@ AST_autarky_building_2 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 285
+		value = 100000
 	}
 }	
 AST_infrastructure_1 = {
@@ -483,8 +468,8 @@ AST_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 285
+		value = 1000000
 	}
 }
 GER_infrastructure_1 = {
@@ -498,8 +483,8 @@ GER_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 285
+		value = 1000000
 	}
 }
 PHI_strategy_industrial_complex_building = {
@@ -513,7 +498,7 @@ PHI_strategy_industrial_complex_building = {
 		ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 100
+		value = 1000
 	}
 }
 
@@ -543,8 +528,8 @@ RAJ_industrial_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 429
+		value = 100000
 	}
 }	
 RAJ_infrastructure_1 = {
@@ -558,8 +543,8 @@ RAJ_infrastructure_1 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 429
+		value = 1000000
 	}
 }
 RAJ_industrial_infrastructure_2 = {
@@ -573,8 +558,8 @@ RAJ_industrial_infrastructure_2 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 427
+		value = 100000
 	}
 }	
 RAJ_infrastructure_2 = {
@@ -588,8 +573,8 @@ RAJ_infrastructure_2 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 427
+		value = 1000000
 	}
 }
 RAJ_industrial_infrastructure_3 = {
@@ -603,8 +588,8 @@ RAJ_industrial_infrastructure_3 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 431
+		value = 100000
 	}
 }	
 RAJ_infrastructure_3 = {
@@ -618,8 +603,8 @@ RAJ_infrastructure_3 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 431
+		value = 1000000
 	}
 }
 RAJ_industrial_infrastructure_4 = {
@@ -633,8 +618,8 @@ RAJ_industrial_infrastructure_4 = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_infrastructure
-		value = 100000
 		target = 426
+		value = 100000
 	}
 }	
 RAJ_infrastructure_4 = {
@@ -648,7 +633,7 @@ RAJ_infrastructure_4 = {
 	ai_strategy = {
 		type = build_building
 		id = infrastructure
-		value = 1000000
 		target = 426
+		value = 1000000
 	}
 }

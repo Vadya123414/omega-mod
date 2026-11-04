@@ -77,12 +77,13 @@ ROM_historical_weak = {
 	}
 
 	ideas = {
-		
+		extensive_conscription = 10
+		army_infantry_2 = 3
 	}
 
 	traits = {
-		captain_of_industry = 5
-		war_industrialist = 5
+		silent_workhorse = 50
+		captain_of_industry = 20
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

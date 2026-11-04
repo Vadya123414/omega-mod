@@ -55,6 +55,9 @@ NOR_in_danger = {
 	}
 }
 NOR_bunker_1 = { 
+		allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
@@ -62,27 +65,30 @@ NOR_bunker_1 = {
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 9174
 		value = 700
 	}
 }
 NOR_bunker_2 = { 
-	enable = {
+	allowed = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
         date > 1938.1.1
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 6151
 		value = 710
 	}
 }
 NOR_bunker_3 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
@@ -90,13 +96,16 @@ NOR_bunker_3 = {
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 9096
 		value = 720
 	}
 }
 NOR_bunker_4 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
@@ -104,13 +113,16 @@ NOR_bunker_4 = {
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 11176
 		value = 730
 	}
 }
 NOR_bunker_5 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
@@ -118,13 +130,16 @@ NOR_bunker_5 = {
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = coastal_bunker
         target = 9296
 		value = 740
 	}
 }
 NOR_airbase_1 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	allowed = {
 		original_tag = NOR
 	}
@@ -133,36 +148,66 @@ NOR_airbase_1 = {
         has_global_flag = VUP_Hist_version
         date > 1938.1.1
 	}
-	abort = { has_capitulated = yes }
+	abort = { 
+		or = {
+			has_capitulated = yes 
+			920 = {
+				air_base > 9
+			}
+		}
+		
+	}
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = air_base
         target = 920
 		value = 1000
 	}
 }
 NOR_airbase_2 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
         date > 1938.1.1
 	}
-	abort = { has_capitulated = yes }
+	abort = { 
+		or = {
+			has_capitulated = yes 
+			143 = {
+				air_base > 9
+			}
+		}
+		
+	}
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = air_base
         target = 143
 		value = 1000
 	}
 }
 NOR_defend_110 = { 
+			allowed = {
+			original_tag = NOR
+		}
 	enable = {
 		original_tag = NOR
         has_global_flag = VUP_Hist_version
 	}
-	abort = { has_capitulated = yes }
+	abort = { 
+		or = {
+			has_capitulated = yes 
+			920 = {
+				air_base > 9
+			}
+		}
+		
+	}
 	ai_strategy = {
-		type = building_target
+		type = build_building
         id = air_base
         target = 920
 		value = 1000

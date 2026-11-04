@@ -52,7 +52,7 @@ HOL_historical_plan = {
 
 		HOL_form_new_government
 		HOL_gateway_to_europe
-		HOL_obtain_foreign_colonial_investments
+		HOL_obtain_foreign_colonial_investments_taog
 		HOL_abandon_the_gold_standard
 		HOL_overturn_military_budget_cuts
 		HOL_continue_the_public_works
