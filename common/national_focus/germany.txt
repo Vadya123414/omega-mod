@@ -12252,7 +12252,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 		offset = {
-			x = -4
+			x = -2
 			y = -1
 			trigger = {
 				has_game_rule = {
@@ -12449,6 +12449,15 @@ focus_tree = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
 					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+			}
+		}
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = {
+				OR = {
+					has_completed_focus = GER_oppose_hitler_ww
+					has_completed_focus = GER_oppose_hitler
 				}
 			}
 		}
@@ -14371,6 +14380,38 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_SS_occupation_effects_tt 
+		}
+	}
+
+	focus = {
+		id = GER_yug_capcap
+		icon = GFX_focus_GER_fate_of_yugoslavia
+		prerequisite = { focus = GER_war_with_france }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_war_with_france
+		cost = 4
+
+		available = {
+			date > 1941.3.1
+			is_subject = no
+		}
+		allow_branch = {
+			has_country_flag = VUP_Hist_version
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}
+			ITA = {
+				add_offsite_building = { type = industrial_complex level = -25 }
+        		add_offsite_building = { type = arms_factory level = -7 }
+			}
 		}
 	}
 

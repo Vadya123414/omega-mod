@@ -13676,6 +13676,7 @@ focus_tree = {
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
 		available = {
+			date > 1937.4.1
 		}
 
 		search_filters = {}
@@ -13685,9 +13686,21 @@ focus_tree = {
 			add_state_claim = 853 #LJUBLJANA
 			add_state_claim = 103 #DALMATIA
 			add_state_claim = 105 #MONTENEGRO
-			create_wargoal = {
-				type = annex_everything
-				target = YUG
+			if = {
+				limit = {
+					NOT = {has_country_flag = VUP_Hist_version}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YUG
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				add_offsite_building = { type = industrial_complex level = 25 }
+        		add_offsite_building = { type = arms_factory level = 7 }
 			}
 			if = {
 				limit = {
@@ -15311,6 +15324,12 @@ focus_tree = {
 		}
 
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1939.9.1
+			}
 			is_subject = no
 			GRE = { exists = yes }
 			NOT = { is_in_faction_with = GRE }

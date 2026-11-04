@@ -11572,7 +11572,7 @@ focus_tree = {
 		cost = 5
 
 		offset = {
-			x = 2
+			x = 0
 			y = 0
 			trigger = {
 				has_country_flag = VUP_Hist_version
@@ -11684,7 +11684,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 2
+			x = 0
 			y = 0
 			trigger = {
 				has_country_flag = VUP_Hist_version
@@ -12162,6 +12162,14 @@ ai_will_do = {
 				factor = 0
 				has_civil_war = yes
 			}	
+		}
+
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_country_flag = VUP_Hist_version
+			}
 		}
 		
 		mutually_exclusive = { focus = SOV_policy_of_collective_security }
@@ -12991,7 +12999,7 @@ ai_will_do = {
 		id = SOV_baltic_security
 		icon = GFX_focus_SOV_baltic_security
 		prerequisite = { focus = SOV_the_comintern }
-		x = 3
+		x = 5
 		y = -1
 		relative_position_id = SOV_anti_capitalist_policies
 		cost = 3
@@ -13022,9 +13030,8 @@ ai_will_do = {
 		}
 
 		available = {
-			OR = {
-				NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			}
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			
 			is_subject = no
 		}
 		
@@ -13184,7 +13191,7 @@ ai_will_do = {
 
 		available = {
 			OR = {
-				date > 1940.4.1
+				date > 1940.5.1
 				NOT = {has_country_flag = VUP_Hist_version}
 			}
 			is_subject = no
@@ -13245,76 +13252,17 @@ ai_will_do = {
 			activate_targeted_decision = { target = EST decision = SOV_send_ultimatum_to_country_baltic }
 			activate_targeted_decision = { target = LAT decision = SOV_send_ultimatum_to_country_baltic }
 			activate_targeted_decision = { target = LIT decision = SOV_send_ultimatum_to_country_baltic }
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = yes
-					}
-				}
-				add_collaboration = {
-				target = EST
-				value = 0.5
-			}
-			add_collaboration = {
-				target = LAT
-				value = 0.5
-			}
-			add_collaboration = {
-				target = LIT
-				value = 0.5
-			}
-				annex_country = {
-				    target = LIT
-				    transfer_troops = yes
-				}
-				annex_country = {
-				    target = EST
-				    transfer_troops = yes
-				}
-				annex_country = { 
-				    target = LAT
-				    transfer_troops = yes
-				}
-			}
 
-			if = {
-				limit = { 78 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+			if ={
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
 				add_state_claim = 78
 				transfer_state = 78
-			}
-			if = {
-				limit = { 766 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
 				add_state_claim = 766
 				transfer_state = 766
-			}
-			if = {
-				limit = { 80 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
 				add_state_claim = 80
 				transfer_state = 80
-			}
-			
-			add_state_claim = 146 # Karjala
-
-			if= {
-				limit = {
-					146 = {
-						controller = {
-							NOT = { has_war_with = ROOT }
-						}
-					}
-				}
-				146 = {
-					controller = {
-						set_country_flag = SOV_ultimatum_sent_flag #Add it for AI strats reasons
-						add_timed_idea = {
-							idea = communist_pressure
-							days = 365
-						}
-						country_event = { id = finland.1 hours = 16 random_hours = 8 }
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				event_option_tooltip = soviet.12.a
 			}
 
 			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
@@ -13324,20 +13272,20 @@ ai_will_do = {
 	focus = {
 		id = SOV_secure_leningrad
 		icon = GFX_focus_generic_attack_finland
-		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
-		x = 0
+		prerequisite = { focus = SOV_the_comintern }
+		x = 5
 		y = 1
-		relative_position_id = SOV_respect_baltic_self_determination
+		relative_position_id = SOV_the_comintern
 		cost = 5
 		allow_branch = {
 			NOT = {
-				has_country_flag = VUP_Hist_version
+				#has_country_flag = VUP_Hist_version
 				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 		}
 
 		offset = {
-			x = 1
+			x = -2
 			y = 0
 			trigger = {
 				has_country_flag = VUP_Hist_version
@@ -13354,6 +13302,12 @@ ai_will_do = {
 		dynamic = yes 
 
 		available = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				date > 1939.9.1
+			}
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
@@ -13405,7 +13359,12 @@ ai_will_do = {
 		relative_position_id = SOV_secure_leningrad
 		cost = 5
 
-		
+		allow_branch = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -13507,7 +13466,7 @@ ai_will_do = {
 		id = SOV_claims_on_poland
 		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_claims_in_baltic
 		cost = 5
@@ -15393,7 +15352,7 @@ ai_will_do = {
 	focus = {
 		id = SOV_beaten_but_not_defeated
 		icon = GFX_SOV_beaten_but_not_defeated_ccp_2d_sov_compatibility
-		x = 61
+		x = 64
 		y = 0
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		offset = {

@@ -14,6 +14,9 @@ FRA_renault_organization = {
 	icon = GFX_idea_renault
 	allowed = {	
 		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
 			tag = FRA 
 			AND = {
 				tag = ETH 
@@ -112,9 +115,13 @@ FRA_renault_organization = {
 FRA_hotchkiss_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+	allowed = {
+		OR = {
+			tag = FRA 
+			tag = HON
+			tag = IRE
+			tag = CUB
+		}
 	}
 	add_trait = { 
 		token = FRA_mio_trait_l_35
@@ -244,8 +251,12 @@ FRA_morane_saulnier_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_morane_saulnier
 	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
+			tag = FRA 
+		}
 	}
 }
 
@@ -254,6 +265,9 @@ FRA_bloch_organization = {
 	icon = GFX_idea_bloch
 	allowed = {	
 		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
 			tag = FRA 
 			AND = {
 				tag = ETH 
@@ -311,9 +325,13 @@ FRA_bloch_organization = {
 FRA_amiot_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_amiot
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+	allowed = {
+		or = {
+			tag = HON
+			tag = IRE
+			tag = CUB
+			tag = FRA 
+		}
 	}
 }
 
