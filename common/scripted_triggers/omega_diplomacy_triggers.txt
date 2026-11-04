@@ -18,12 +18,12 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
             is_ai = no
         }
         OR = {
-        # Оправдание на ИИ с 1937
+        # Оправдание на ИИ с июня 1938
         AND = {
             FROM = {
                 is_ai = yes
             }
-            date > 1938.1.1
+            date > 1938.6.1
         }
         # Оправдание на игрока с 1939
         AND = {
@@ -31,49 +31,6 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
             date > 1939.1.1
         }
         hidden_trigger = {
-        AND = {
-            # Цель находится в Азии, Южной Америке или Австралии
-            FROM = {
-                OR = {
-                    capital_scope = { is_on_continent = asia }
-                    capital_scope = { is_on_continent = australia }
-                    capital_scope = { is_on_continent = south_america }
-                }
-            }
-            # Нападающий с одного из этих же континентов
-            ROOT = {
-                OR = {
-                    capital_scope = { is_on_continent = asia }
-                    capital_scope = { is_on_continent = australia }
-                    capital_scope = { is_on_continent = south_america }
-                }
-            }
-        }
-        }
-    }
-    }
-    
-    custom_trigger_tooltip = {
-		tooltip = vuina_diploma
-	}
-
-}
-
-DIPLOMACY_WAR_ENABLE_TRIGGER = {
-    if = {
-        limit = {
-            is_ai = no
-        }
-    OR = {
-            AND = {
-                FROM = { is_ai = yes }
-                date > 1937.1.1
-            }
-            AND = {
-                FROM = { is_ai = no }
-                date > 1938.1.1
-            }
-            hidden_trigger = {
             AND = {
                 # Цель находится в Азии, Южной Америке или Австралии
                 FROM = {
@@ -92,8 +49,51 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
                     }
                 }
             }
-            }
+        }
     }
+    }
+    
+    custom_trigger_tooltip = {
+		tooltip = vuina_diploma
+	}
+
+}
+
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+    if = {
+        limit = {
+            is_ai = no
+        }
+        OR = {
+            AND = {
+                FROM = { is_ai = yes }
+                date > 1938.1.1
+            }
+            AND = {
+                FROM = { is_ai = no }
+                date > 1938.6.1
+            }
+            hidden_trigger = {
+                AND = {
+                    # Цель находится в Азии, Южной Америке или Австралии
+                    FROM = {
+                        OR = {
+                            capital_scope = { is_on_continent = asia }
+                            capital_scope = { is_on_continent = australia }
+                            capital_scope = { is_on_continent = south_america }
+                        }
+                    }
+                    # Нападающий с одного из этих же континентов
+                    ROOT = {
+                        OR = {
+                            capital_scope = { is_on_continent = asia }
+                            capital_scope = { is_on_continent = australia }
+                            capital_scope = { is_on_continent = south_america }
+                        }
+                    }
+                }
+            }
+        }
     }
     custom_trigger_tooltip = {
 		tooltip = vuina_diploma

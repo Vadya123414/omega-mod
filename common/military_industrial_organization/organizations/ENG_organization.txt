@@ -17,6 +17,9 @@ ENG_vickers_armstrong_eng_organization = {
 			tag = ENG
 			tag = CAN
 			tag = SAF
+			tag = HON
+			tag = IRE
+			tag = CUB
 			AND = {
 				tag = GRE
 				has_dlc = "Battle for the Bosporus"
@@ -132,6 +135,9 @@ ENG_vauxhall_organization = {
 			tag = ENG
 			tag = CAN
 			tag = SAF
+			tag = HON
+			tag = IRE
+			tag = CUB
 			AND = {
 				tag = POL # If Poland sets up a local one
 				OR = {
@@ -253,9 +259,12 @@ ENG_harland_wolff_organization = {
 	
 	allowed = {	
 		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
 			AND = {
-		tag = ENG
-		has_dlc = "Arms Against Tyranny"
+				tag = ENG
+				has_dlc = "Arms Against Tyranny"
 			}
 
 			AND = {
@@ -344,6 +353,9 @@ ENG_cammell_laird_organization = {
 	allowed = {	
 		has_dlc = "Arms Against Tyranny"
 		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
 			tag = ENG
 			AND = {
 				tag = BRA
@@ -524,6 +536,9 @@ ENG_supermarine_organization = {
 	icon = GFX_idea_supermarine
 	
 	allowed = {	
+		tag = HON
+		tag = IRE
+		tag = CUB
 		tag = ENG
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -618,6 +633,9 @@ ENG_hawker_organization = {
 	icon = GFX_idea_hawker
 	allowed = {	
 		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
 			tag = ENG
 			tag = SAF
 		}

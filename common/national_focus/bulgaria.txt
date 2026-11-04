@@ -702,7 +702,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_acquire_modern_tools }
 		icon = GFX_goal_generic_air_production
 		relative_position_id = BUL_acquire_modern_tools
-		x = -5
+		x = -4
 		y = 1
 		cost = 10
 
@@ -734,6 +734,7 @@ focus_tree = {
 		id = BUL_pilot_training_program
 
 		prerequisite = { focus = BUL_georgi_benkovski_aircraft_repair_facilities }
+		prerequisite = { focus = BUL_negotiate_bulgarian_rearmament }
 		icon = GFX_goal_generic_air_doctrine
 		relative_position_id = BUL_georgi_benkovski_aircraft_repair_facilities
 		x = 0
@@ -793,7 +794,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_acquire_modern_tools }
 		icon = GFX_focus_generic_combined_arms
 		relative_position_id = BUL_acquire_modern_tools
-		x = 0
+		x = 2
 		y = 1
 		cost = 5
 
@@ -832,7 +833,7 @@ focus_tree = {
 		icon = GFX_focus_generic_tank_production
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 
 		available = {
@@ -867,14 +868,11 @@ focus_tree = {
 		id = BUL_darzhavna_aeroplanna_rabotilnitsa
 
 		prerequisite = { focus = BUL_pilot_training_program }
-		prerequisite = { focus = BUL_reorganize_the_military_industry }
 		icon = GFX_goal_generic_air_fighter
 		relative_position_id = BUL_pilot_training_program
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		cost = 10
-		mutually_exclusive = { focus = BUL_foreign_aircraft_designers }
-
 		available = {
 			48 = {
 				is_owned_by = BUL
@@ -918,10 +916,10 @@ focus_tree = {
 	focus = {
 		id = BUL_darzhavna_samoletna_fabrika
 
-		prerequisite = { focus = BUL_darzhavna_aeroplanna_rabotilnitsa }
+		prerequisite = { focus = BUL_pilot_training_program }
 		icon = GFX_goal_expand_the_luftwaffe
 		relative_position_id = BUL_darzhavna_aeroplanna_rabotilnitsa
-		x = 0
+		x = 1
 		y = 1
 		cost = 10
 
@@ -951,64 +949,64 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BUL_foreign_aircraft_designers
-
-		prerequisite = { focus = BUL_reorganize_the_military_industry }
-		icon = GFX_goal_generic_air_fighter2
-		relative_position_id = BUL_darzhavna_aeroplanna_rabotilnitsa
-		x = 2
-		y = 0
-		cost = 5
-		mutually_exclusive = { focus = BUL_darzhavna_aeroplanna_rabotilnitsa }
-
-		available = {
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			effect_tooltip = {
-				if = {
-					limit = {
-						country_exists = GER
-						NOT = { has_war_with = GER }
-						GER = { BUL_is_valid_subject = yes }
-					}
-					activate_targeted_decision = { target = GER decision = BUL_aircraft_agreements }
-				}
-				if = {
-					limit = {
-						country_exists = ENG
-						NOT = { has_war_with = ENG }
-						ENG = { BUL_is_valid_subject = yes }
-					}
-					activate_targeted_decision = { target = ENG decision = BUL_aircraft_agreements }
-				}
-				if = {
-					limit = {
-						country_exists = SOV
-						NOT = { has_war_with = SOV }
-						SOV = { BUL_is_valid_subject = yes }
-					}
-					activate_targeted_decision = { target = SOV decision = BUL_aircraft_agreements }
-				}
-			}
-			hidden_effect = {
-				activate_targeted_decision = { target = GER decision = BUL_aircraft_agreements }
-				activate_targeted_decision = { target = ENG decision = BUL_aircraft_agreements }
-				activate_targeted_decision = { target = SOV decision = BUL_aircraft_agreements }
-			}
-		}
-	}
+	#focus = {
+	#	id = BUL_foreign_aircraft_designers
+#
+	#	prerequisite = { focus = BUL_reorganize_the_military_industry }
+	#	icon = GFX_goal_generic_air_fighter2
+	#	relative_position_id = BUL_darzhavna_aeroplanna_rabotilnitsa
+	#	x = 2
+	#	y = 0
+	#	cost = 5
+	#	mutually_exclusive = { focus = BUL_darzhavna_aeroplanna_rabotilnitsa }
+#
+	#	available = {
+	#	}
+	#	
+	#	search_filters = {FOCUS_FILTER_INDUSTRY}
+	#	completion_reward = {
+	#		effect_tooltip = {
+	#			if = {
+	#				limit = {
+	#					country_exists = GER
+	#					NOT = { has_war_with = GER }
+	#					GER = { BUL_is_valid_subject = yes }
+	#				}
+	#				activate_targeted_decision = { target = GER decision = BUL_aircraft_agreements }
+	#			}
+	#			if = {
+	#				limit = {
+	#					country_exists = ENG
+	#					NOT = { has_war_with = ENG }
+	#					ENG = { BUL_is_valid_subject = yes }
+	#				}
+	#				activate_targeted_decision = { target = ENG decision = BUL_aircraft_agreements }
+	#			}
+	#			if = {
+	#				limit = {
+	#					country_exists = SOV
+	#					NOT = { has_war_with = SOV }
+	#					SOV = { BUL_is_valid_subject = yes }
+	#				}
+	#				activate_targeted_decision = { target = SOV decision = BUL_aircraft_agreements }
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			activate_targeted_decision = { target = GER decision = BUL_aircraft_agreements }
+	#			activate_targeted_decision = { target = ENG decision = BUL_aircraft_agreements }
+	#			activate_targeted_decision = { target = SOV decision = BUL_aircraft_agreements }
+	#		}
+	#	}
+	#}
 
 	focus = {
 		id = BUL_kaproni_bulgarski
 
-		prerequisite = { focus = BUL_reorganize_the_military_industry }
+		prerequisite = { focus = BUL_pilot_training_program }
 		icon = GFX_goal_generic_air_bomber
 		relative_position_id = BUL_foreign_aircraft_designers
-		x = 2
-		y = 0
+		x = 9
+		y = 3
 		cost = 10
 
 		available = {
@@ -1058,7 +1056,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_reorganize_the_military_industry }
 		icon = GFX_goal_generic_construct_mil_factory
 		relative_position_id = BUL_reorganize_the_military_industry
-		x = 1
+		x = -2
 		y = 1
 		cost = 10
 
@@ -1109,7 +1107,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_darzhavna_voenna_fabrika }
 		icon = GFX_goal_generic_army_artillery
 		relative_position_id = BUL_darzhavna_voenna_fabrika
-		x = 0
+		x = 1
 		y = 1
 		cost = 10
 
@@ -1159,7 +1157,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_reorganize_the_military_industry }
 		icon = GFX_focus_generic_license_production
 		relative_position_id = BUL_reorganize_the_military_industry
-		x = 3
+		x = 0
 		y = 1
 		cost = 5
 
@@ -1226,7 +1224,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_reorganize_the_military_industry }
 		icon = GFX_focus_generic_little_entente
 		relative_position_id = BUL_reorganize_the_military_industry
-		x = 5
+		x = 2
 		y = 1
 		cost = 10
 
@@ -1301,7 +1299,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_found_dvf_sopot }
 		icon = GFX_focus_BUL_prussia_of_the_balkans
 		relative_position_id = BUL_vasil_levsky_national_military_university
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 
@@ -1363,7 +1361,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_negotiate_bulgarian_rearmament }
 		icon = GFX_focus_generic_military_academy
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
-		x = 7
+		x = 6
 		y = 1
 		cost = 5
 
@@ -1517,7 +1515,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_negotiate_bulgarian_rearmament }
 		icon = GFX_focus_generic_destroyer
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
-		x = 12
+		x = 11
 		y = 1
 		cost = 5
 
@@ -1753,7 +1751,7 @@ focus_tree = {
 		icon = GFX_focus_BUL_supremacy_on_the_bosporus
 		relative_position_id = BUL_defensive_lines
 		x = 1
-		y = 2
+		y = 1
 		cost = 5
 
 		available = {
@@ -1902,7 +1900,7 @@ focus_tree = {
 		prerequisite = { focus = BUL_supremacy_on_the_bosporus }
 		icon = GFX_focus_generic_black_sea_focus
 		relative_position_id = BUL_prussia_of_the_balkans
-		x = 2
+		x = 3
 		y = 1
 		cost = 10
 
@@ -5467,6 +5465,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			country_exists = ENG
 			NOT = { has_war_with = ENG }
 			ENG = { 
@@ -6575,7 +6574,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_appoint_right_wing_ministers }
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
+			
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -7811,7 +7810,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BUL_the_tsars_regime }
 
 		available = {
-
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -8380,6 +8379,12 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				add_offsite_building = { type = industrial_complex level = 2 }
+        	}
 			add_opinion_modifier = { 
 				target = GER
 				modifier = BUL_strengthened_relations_with_us
@@ -8538,6 +8543,12 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				add_offsite_building = { type = industrial_complex level = 2 }
+        	}
 			ITA =  { country_event = { id = bftb_bulgaria_italian_influence.1 hours = 6 random_hours = 2 } } #Research Sharing 
 
 			add_opinion_modifier = { 
@@ -9303,6 +9314,7 @@ focus_tree = {
 				limit = {
 					NOT = { has_wargoal_against = TUR }
 					NOT = { is_in_faction_with = TUR }
+					NOT = {has_country_flag = VUP_Hist_version}
 				}
 				create_wargoal = {
 					type = annex_everything
