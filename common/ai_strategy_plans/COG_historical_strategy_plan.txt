@@ -42,7 +42,8 @@ COG_historical_plan = {
 		COG_congolese_bussinessowners # 70
 		COG_desgregate_the_universites # 70
 		COG_shatter_the_roof # 35
-
+		COG_invest_in_urban_centers # 70
+		COG_promote_marcel_maquet_to_provincial_commisioner
 
 		#
 
@@ -54,15 +55,16 @@ COG_historical_plan = {
 		CONGO_rawji_group
 		CONGO_the_heart_of_africa # 70
 		CONGO_expand_villages
-		COG_allow_local_autonomy # 35
+		COG_attempt_to_centralize_the_state
 		COG_closer_cooperation_with_eugene_jungers # 70
 		COG_establish_new_sabena_air_routes
 		COG_improve_colonial_lawmaking
 
-		CONGO_ccci
-		CONGO_prince_leopold_mine
 		CONGO_forminiere
 		CONGO_bakwanga_mine
+		CONGO_ccci
+		CONGO_prince_leopold_mine
+		
 
 
 
@@ -70,14 +72,13 @@ COG_historical_plan = {
 
 		#1936
 		CONGO_rawji_group # 35
-		COG_invest_in_urban_centers # 70
-		CONGO_jungle_industry # 70
+
 
 		#1937
 		COG_strengthen_the_banque_du_congo_belge # 70
 		COG_cooperate_with_the_comite_special_du_katanga # 70
 		COG_establish_new_sabena_air_routes # 70
-		COG_uplift_the_apostolic_vicar_of_leopoldville # 35
+
 		COG_contract_the_empain_group # 35
 
 		#1938
@@ -92,7 +93,12 @@ COG_historical_plan = {
 		CONGO_forminiere # 70
 		CONGO_bakwanga_mine  #70
 		CONGO_societe_miniere_de_bakwanga # 70
+		CONGO_smuggle_diamonds
+		CONGO_research_grants
+		CONGO_jungle_industry # 70
 		CONGO_ruanda_urundi # 70
+		CONGO_expanded_rubber_plantations # 70
+		CONGO_rubber_plantations # 70
 
 		#1940 
 		COG_emergency_powers_for_pierre_ryckmans # 35
@@ -103,7 +109,7 @@ COG_historical_plan = {
 		CONGO_research_grants # 70
 
 		#1941
-		CONGO_rubber_plantations # 70
+		
 		COG_prepare_for_offensive_action # 35
 		COG_raf_and_saaf_cooperation # 70
 		COG_utilize_sabena_for_military_purposes # 70
@@ -131,7 +137,7 @@ COG_historical_plan = {
 		COG_endorse_force_publique_mutinies # 70
 		COG_central_bank_of_congo_ruanda_urundi # 70
 		CONGO_congolese_generals # 70
-		CONGO_expanded_rubber_plantations # 70
+
 		CONGO_congos_place_in_the_world # 70
 
 		#1945
@@ -159,6 +165,10 @@ COG_historical_plan = {
 	}
 
 	ideas = {
+		COG_ccci = 80
+		COG_marcel_maquet = 300
+		COG_alexandre_safiannikoff = 150
+		COG_armand_huyghe = 200
 		army_chief_offensive_3 = 100
 		army_chief_offensive_2 = 95
 		army_chief_offensive_1 = 90 

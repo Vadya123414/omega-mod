@@ -7388,7 +7388,6 @@ default = no
 						is_core_of = CAN
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 				# Для Южной Африки
@@ -7398,7 +7397,6 @@ default = no
 						NOT = { state = 275 }
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 				# Для Индии
@@ -7407,7 +7405,6 @@ default = no
 						is_core_of = RAJ 
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 				# Для Австралии
@@ -7416,7 +7413,6 @@ default = no
 						is_core_of = AST
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 				# Для Новой Зеландии
@@ -7425,7 +7421,6 @@ default = no
 						is_core_of = NZL
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 				# Для Малайзии
@@ -7434,7 +7429,6 @@ default = no
 						is_core_of = MAL
 						is_controlled_by = ENG
 					}
-					transfer_troops = yes
 					set_compliance = 100
 				}
 			}		

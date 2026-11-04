@@ -5396,7 +5396,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 10
 		}
 
 		fire_only_once = yes
@@ -5458,21 +5458,18 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
+			base = 0
 			modifier = { # Too low PP
-				factor = 0.5
+				factor = 0
 					has_political_power < 80
 			}
 			modifier = { #We have plenty of PP, avanti!
-				factor = 3
+				add = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = rubber
-					amount < 1
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 
@@ -5531,7 +5528,7 @@ prospect_for_resources = {
 		}
 
 		ai_will_do = {
-			base = 0.3
+			base = 0
 			modifier = { #Too low MP we need to save PP for the laws
 				factor = 0
 				has_manpower < 10000
@@ -5542,15 +5539,12 @@ prospect_for_resources = {
 					has_political_power < 80
 			}
 			modifier = { #We have plenty of PP, avanti!
-				factor = 3
+				add = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 
@@ -5618,12 +5612,9 @@ prospect_for_resources = {
 				factor = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = tungsten
-					amount < 1
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 
@@ -5691,12 +5682,9 @@ prospect_for_resources = {
 				factor = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = steel
-					amount < 1
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 
@@ -5764,18 +5752,9 @@ prospect_for_resources = {
 				factor = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				OR = {
-					has_resources_in_country = {
-						resource = steel
-						amount < 1
-					}
-					has_resources_in_country = {
-						resource = chromium
-						amount < 1
-					}
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 
@@ -5851,18 +5830,9 @@ prospect_for_resources = {
 				factor = 3
 				has_political_power > 200
 			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				OR = {
-					has_resources_in_country = {
-						resource = steel
-						amount < 1
-					}
-					has_resources_in_country = {
-						resource = chromium
-						amount < 1
-					}
-				}
+			modifier = {
+				add = 10
+				date > 1939.1.1
 			}
 		}
 

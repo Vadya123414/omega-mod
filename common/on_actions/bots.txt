@@ -31,26 +31,6 @@ on_actions = {
                                                     limit = { 
                                                         AND = {
                                                             is_ai = yes
-                                                            original_tag = INS
-                                                        }
-                                                    }
-                                                    add_ideas = ins_training_fix
-                                                }
-                                 }
-                    effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-                                                        }
-                                                    add_ideas = smart_bots
-                                                    add_ideas = supply_bot_fix_not_in_war
-                                                }
-                                }
-                        effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                        AND = {
-                                                            is_ai = yes
                                                             original_tag = JAP
                                                         }
                                                     }
@@ -74,21 +54,11 @@ on_monthly = {
                  every_country = {
                                     limit = { 
                                             is_ai = yes 
-                                         NOT = { 
-                                                has_idea = supply_bot_fix_not_in_war
-                                                        }
+                                            has_war = no
+                                            NOT = {  has_idea = supply_bot_fix_not_in_war}
                                                 }
                                     add_ideas = supply_bot_fix_not_in_war
                                 }
-                     }
-                        effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                            is_ai = yes
-                                                            original_tag = INS
-                                                        }
-                                                    add_ideas = ins_training_fix
-                                                }
-                                 }   
+                     }  
              }
 }

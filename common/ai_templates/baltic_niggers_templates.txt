@@ -7,15 +7,6 @@ infantry_generic = {
         DEN
 		NOR
 	}
-		blocked_for = {
-		FIN
-		LAT
-        EST
-        LIT
-        DEN
-		GER
-		JAP
-	}
 	upgrade_prio = {
 		base = 3
 	}

@@ -13816,7 +13816,7 @@ ai_will_do = {
 				controls_state = 78
 			}
 		}
-
+	}
 		bypass = {
 			OR = {
 				AND = {
@@ -13927,7 +13927,6 @@ ai_will_do = {
 				}
 			}
 		}
-	}
 	}
 
 	focus = {

@@ -29,7 +29,7 @@ BEL_historical_plan_3 = {
 
 	ai_national_focuses = {
 		#1936
-
+		CONGO_expand_metallurgical_industry
 		BEL_the_king_surrenders
 		BEL_unfit_to_reign
 		BEL_government_in_exile
@@ -42,35 +42,37 @@ BEL_historical_plan_3 = {
 		BEL_develop_home_support
 		BEL_military_service_for_all_in_exile
 		BEL_free_belgian_forces
+		CONGO_symbiotic_industrialization
 
-
-
-		BEL_government_resigns
-		BEL_investigate_bribery_charges
+		BEL_monetary_reconstruction
+		BEL_rebuild_wallonian_industry
 		BEL_perpetual_neutrality
 		BEL_independent_neutral_and_loyal
-		BEL_repudiate_treaty_with_france
-		BEL_royal_intervention
-		BEL_monetary_reconstruction
-		CONGO_congo_investments
-		CONGO_societe_generale_de_belgique
-		CONGO_cheap_labor
-		CONGO_requisition_funds
-
 		BEL_defense_bill
-		BEL_increased_length_of_service
+		BEL_repudiate_treaty_with_france
+		BEL_government_resigns
+		BEL_investigate_bribery_charges
+		BEL_royal_intervention
+		CONGO_congo_investments
+		BEL_social_partners
+		BEL_40_hour_workweek
+		BEL_revive_coal_mining
+		BEL_cockerill
+		BEL_railway_expansion
+		CONGO_symbiotic_industrialization
+		BEL_engine_of_the_economy
 		BEL_royal_military_academy
-		BEL_junior_officer_training
-		BEL_strategic_doctrine_development
+		BEL_increased_length_of_service
 		BEL_multi_language_courses
-		BEL_resist_and_bite
-		BEL_belgian_special_forces
-
-		BEL_dyle_plan
+		BEL_department_of_telecommunications
+		BEL_center_for_advanced_military_studies
 		BEL_plan_de_man
 		BEL_economic_recovery
 		BEL_adriaan_martens_crisis
-		BEL_interpreters
+		BEL_tripartite_government
+		BEL_fn_herstal
+		BEL_poudreries_reunies_de_belgique
+		BEL_minerva_imperia
 
 		CONGO_ccci
 		CONGO_prince_leopold_mine
@@ -114,6 +116,10 @@ BEL_historical_plan_3 = {
 	}
 
 	ideas = {
+		BEL_charles_count_of_flanders_person = 500
+		BEL_henri_de_man = 200
+		BEL_achille_van_acker = 150
+		BEL_cockerill_industrial = 20
 		army_chief_offensive_3 = 100
 		army_chief_offensive_2 = 95
 		army_chief_offensive_1 = 90 

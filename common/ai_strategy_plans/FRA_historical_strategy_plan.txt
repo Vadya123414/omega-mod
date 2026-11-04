@@ -95,7 +95,7 @@ FRA_historical_plan = {
 	}
 
 	ideas = {
-
+		FRA_henri_marie_auguste_bineau = 100
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
