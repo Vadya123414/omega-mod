@@ -13676,7 +13676,7 @@ focus_tree = {
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
 		available = {
-			date > 1937.4.1
+			if = {limit = {has_global_flag = VUP_Hist_version}date > 1937.4.1}
 		}
 
 		search_filters = {}

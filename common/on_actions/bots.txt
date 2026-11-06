@@ -37,6 +37,20 @@ on_actions = {
                                                     add_ideas = JAP_bot_fix_fuel
                                                 }
                                  }
+                            effect = { 
+                                every_country = {
+                                    limit = {
+                                        has_global_flag = VUP_Hist_version
+                                        is_ai = yes
+                                        original_tag = POL
+                                    }
+                                        add_equipment_to_stockpile = { 
+                                            type = convoy_1
+                                            amount = 100
+                                            producer = POL
+                                        }
+                                    }
+                            }
     }
 on_monthly = {
         effect = { 
