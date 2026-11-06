@@ -1576,7 +1576,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = VUP_Hist_version
 			662 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 			}
@@ -1585,6 +1584,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			if = {
+				limit = {has_global_flag = VUP_Hist_version}
 			add_resource = {
 				type = oil
 				amount = 8
@@ -1621,7 +1622,35 @@ focus_tree = {
 				}
 			}
 		}
+		else = {
+		add_resource = {
+				type = oil
+				amount = 8
+				state = 662
+			}	
+
+			662 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = sirte_oil_developed
+			}
+			if = {
+				limit = {
+					449 = {
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				449 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = fuel_silo
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
 	}
+}
 
 	focus = {
 		id = ITA_libyan_refineries
@@ -1646,6 +1675,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			if = {
+				limit = {has_global_flag = VUP_Hist_version}
 			add_resource = {
 				type = oil
 				amount = 9
@@ -1723,8 +1754,25 @@ focus_tree = {
 			}	
 		
 		}
+		else = {
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 450
+			}
+			450 = {
+				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}
+		}
 	}
-
 	focus = {
 		id = ITA_polizia_dell_africa_italiana
 		icon = GFX_goal_generic_military_sphere
