@@ -4,10 +4,136 @@ on_actions = {
 			every_country = {
 				limit = {
 					is_ai = no
-					NOT = {has_country_flag = VUP_Hist_version}
+					NOT = {
+						has_country_flag = VUP_Hist_version
+						tag = MON
+						tag = IRE
+						tag = HON
+						tag = CAN
+						tag = ROM
+						tag = JAP
+						tag = GER
+						tag = SOV
+						tag = ITA
+						tag = FRA
+						tag = ENG
+                    	capital_scope = { is_on_continent = south_america }
+					}
 				}
 				country_event = { id = obuchenie.1 }
 		    }
+			CAN = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.can }
+				}
+			}
+
+			ROM = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.rom }
+				}
+			}
+
+			SOV = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.sov }
+				}
+			}
+
+			GER = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.ger }
+				}
+			}
+
+			ENG = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.eng }
+				}
+			}
+
+			ITA = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.ita }
+				}
+			}
+
+			FRA = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.fra }
+				}
+			}
+
+			JAP = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = {
+							has_country_flag = VUP_Hist_version
+						}
+					}
+					country_event = { id = obuchenie.jap }
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = VUP_Hist_version
+				}
+				666 = {
+					add_resource = {
+						type = steel
+						amount = 25
+					}
+				}
+				42 = {
+					add_resource = {
+						type = steel
+						amount = -25
+					}
+				}
+			}
         }
 	}
 	on_capitulation = {

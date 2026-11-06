@@ -35,6 +35,138 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = obuchenie.fra
+	title = obuchenie.fra.t
+	desc = obuchenie.fra.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.fra.a
+	}
+}
+
+country_event = {
+	id = obuchenie.sov
+	title = obuchenie.sov.t
+	desc = obuchenie.sov.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.sov.a
+	}
+}
+
+country_event = {
+	id = obuchenie.eng
+	title = obuchenie.eng.t
+	desc = obuchenie.eng.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.eng.a
+	}
+}
+
+country_event = {
+	id = obuchenie.ger
+	title = obuchenie.ger.t
+	desc = obuchenie.ger.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.ger.a
+	}
+}
+
+country_event = {
+	id = obuchenie.ita
+	title = obuchenie.ita.t
+	desc = obuchenie.ita.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.ita.a
+	}
+}
+
+country_event = {
+	id = obuchenie.rom
+	title = obuchenie.rom.t
+	desc = obuchenie.rom.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.rom.a
+	}
+}
+
+country_event = {
+	id = obuchenie.jap
+	title = obuchenie.jap.t
+	desc = obuchenie.jap.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.jap.a
+	}
+}
+
+country_event = {
+	id = obuchenie.can
+	title = obuchenie.can.t
+	desc = obuchenie.can.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.can.a
+	}
+}
+
+add_namespace = vup
+
+country_event = {
+	id = vup.pravila_hist
+	title = vup.pravila_hist.t
+	desc = vup.pravila_hist.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = vup.pravila_hist.a
+	}
+}
+
+country_event = {
+	id = vup.pravila_non_hist
+	title = vup.pravila_non_hist.t
+	desc = vup.pravila_non_hist.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = vup.pravila_non_hist.a
+	}
+}
+
 add_namespace = napoleon
 
 news_event = {
