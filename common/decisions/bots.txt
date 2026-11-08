@@ -844,7 +844,7 @@ set_spec_doctrine_40 = {
 
 		icon = oppression
 		available = {
-            if = {limit = {original_tag = NOR} has_completed_focus = NOR_restore_public_trust_in_the_storting}
+            if = {limit = {original_tag = NOR} has_completed_focus = NOR_leaving_the_hard_thirties_behind}
             NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             #is_minor = yes
@@ -882,6 +882,7 @@ set_spec_doctrine_40 = {
             NOT ={has_idea = SPR_political_violence}
             has_political_power > 50
             has_war = yes
+            date > 1937.1.1
             #is_minor = yes
                     has_war_support > 0.51
             NOT = { 
@@ -1020,18 +1021,19 @@ set_spec_doctrine_40 = {
             add_political_power = -150
         }
     } 
-        bot_fin_1939 = {
+    bot_fin_war = {
 
 		fire_only_once = yes
 
 		icon = oppression
 		available = {
             has_global_flag = VUP_Hist_version
-            original_tag = FIN
-            date>1939.1.1
+            original_tag = FRA
+            has_war = yes
+            has_war_support > 0.81
             }
 		visible = {
-                original_tag = FIN
+            original_tag = FRA
             is_ai = yes
 		}
         ai_will_do = {base = 200}
@@ -1040,7 +1042,7 @@ set_spec_doctrine_40 = {
             add_ideas = extensive_conscription
             add_political_power = -150
         }
-    } 
+    }   
     bot_chi_hist_front = {
 
 		fire_only_once = yes
@@ -1093,35 +1095,356 @@ set_spec_doctrine_40 = {
         complete_effect = {
         }
     } 
-    bot_GER_VUP_Hist_version = {
+            bot_dem_switch_spirit = {
 
 		fire_only_once = yes
 
 		icon = oppression
 		available = {
-            original_tag = GER
-            is_ai = yes
-            has_global_flag = VUP_Hist_version
+        always = no
+        is_ai = yes
+        has_global_flag = VUP_Hist_version
             }
 		visible = {
             is_ai = yes
             has_global_flag = VUP_Hist_version
 		}
-        ai_will_do = {base = 100}
-        cost = 0
+        ai_will_do = {base = 0}
+        cost = 9999
         complete_effect = {
-           	reduce_focus_completion_cost = {
-				focus = { GER_demand_slovenia }
-				cost = 34
-			}
-        	reduce_focus_completion_cost = {
-				focus = { GER_first_ljubljana_award }
-				cost = 20
-			}
-            reduce_focus_completion_cost = {
-				focus = { GER_fate_of_yugoslavia }
-				cost = 65
-			}
         }
-    }
+    } 
+
+	MAN_develop_kirin_aluminium_deposits_ai = { #328
+		
+		icon = aluminium
+
+		allowed = {
+			 original_tag = MAN
+		}
+
+		available = {
+			has_tech = excavation1
+             is_ai = yes
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 328
+			} 
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = MAN_develop_aluminum_sources
+				has_completed_focus = MAN_tsr_develop_aluminum_sources
+			}
+			controls_state = 328
+			328 = {
+				NOT = {
+					has_state_flag = kirin_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = { 
+			328 = { set_state_flag = kirin_aluminium_developed } 
+			328 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}	
+	}
+
+	MAN_develop_liaotung_iron_ore_deposits_ai = { #716
+		
+		icon = steel
+
+		allowed = {
+             original_tag = MAN
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 716
+			} 
+		}
+
+		available = {
+			has_tech = construction2
+			has_tech = excavation1
+             is_ai = yes
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = MAN_expand_showa_steel_works
+				has_completed_focus = MAN_tsr_expand_showa_steel_works
+			}
+			controls_state = 716
+			716 = {
+				NOT = {
+					has_state_flag = liaotung_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			716 = { set_state_flag = liaotung_steel_developed }
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	MAN_establish_the_erdaojiang_special_steel_experimental_plant_ai = { #328
+		
+		icon = steel
+
+		allowed = {
+            original_tag = MAN
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			} 
+		}
+
+		available = {
+			has_tech = construction2
+			has_tech = excavation1
+             is_ai = yes
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = MAN_tsr_expand_showa_steel_works
+			}
+			controls_state = 328
+			328 = {
+				NOT = {
+					has_state_flag = erdaojiang_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			328 = { set_state_flag = erdaojiang_steel_developed }
+			328 = {
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+    develop_liaotung_iron_ore_deposits_ai  = { #716
+
+		icon = steel
+
+		allowed = {
+            original_tag = MAN
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 716
+			}
+		}
+
+		available = {
+			has_tech = construction3
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+			owns_state = 716
+			controls_state = 716
+             is_ai = yes
+		}
+
+		visible = {
+			owns_state = 716
+			controls_state = 716
+			716 = {
+				NOT = {
+					has_state_flag = liaotung_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			716 = { set_state_flag = liaotung_steel_developed }
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+	}
+    develop_kirin_aluminium_deposits_ai = { #328
+
+		icon = aluminium
+
+		allowed = {
+			NOT = { tag = MAN }
+		}
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 328
+			controls_state = 328
+              is_ai = yes
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 328
+			}
+		}
+
+		visible = {
+			owns_state = 328
+			controls_state = 328
+			328 = {
+				NOT = {
+					has_state_flag = kirin_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = aluminium
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			328 = { set_state_flag = kirin_aluminium_developed }
+			328 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}
+	}
 }

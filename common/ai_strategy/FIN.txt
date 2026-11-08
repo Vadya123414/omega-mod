@@ -4,9 +4,8 @@
 		}
 	enable = {
 		original_tag = FIN
-        has_global_flag = VUP_Hist_version
-        date > 1939.1.1
 		controls_state = 146 
+		has_defensive_war_with = SOV
 	}
 	abort = { has_capitulated = yes }
 	ai_strategy = {
@@ -15,10 +14,21 @@
 			146 
 			150 
 			929
+			722
 		}
 		ratio = 0.8
 		subtract_invasions_from_need = yes
 		subtract_fronts_from_need = yes
+	}
+			ai_strategy = {
+	 	type = front_unit_request
+		state = 148
+		value = -1000
+	}
+				ai_strategy = {
+	 	type = front_unit_request
+		state = 722
+		value = -1000
 	}
 }
 FIN_alone_in_the_north = {

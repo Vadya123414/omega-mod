@@ -52,8 +52,10 @@ BEL_historical_plan_3 = {
 		BEL_repudiate_treaty_with_france
 		BEL_government_resigns
 		BEL_investigate_bribery_charges
-		BEL_royal_intervention
 		CONGO_congo_investments
+		CONGO_societe_generale_de_belgique
+		BEL_royal_intervention
+		CONGO_symbiotic_industrialization
 		BEL_social_partners
 		BEL_40_hour_workweek
 		BEL_revive_coal_mining

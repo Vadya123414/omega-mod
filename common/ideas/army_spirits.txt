@@ -460,7 +460,11 @@ ideas = {
 				army_advisor_cost_factor = -0.5
 			}
 			ai_will_do = {
-				base = 50
+				base = 500
+				modifier = {
+					add = -1000
+					surrender_progress > 0.1
+				}
 			}
 		}
 

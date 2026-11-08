@@ -1,3 +1,48 @@
+GRE_dont_defend_frakia = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			184
+		}
+		ratio = 0
+		area = europe
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+gre_dont_spend_pp = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+			always = yes
+	}
+		abort_when_not_enabled = no
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = army_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_amount
+		id = political_advisor
+		value = -1000
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
+		value = -1000
+	}
+}
 GRE_befriend_balkan_countries_YUG = {
 	allowed = {
 		original_tag = GRE

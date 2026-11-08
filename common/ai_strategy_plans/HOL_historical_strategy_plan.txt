@@ -34,6 +34,7 @@ HOL_historical_plan = {
 	}
 
 	ai_national_focuses = {
+		HOL_wilhelminism
 		HOL_replace_the_defeatist_government
 		HOL_the_only_man_in_the_dutch_government
 		HOL_de_vernieuwing
@@ -42,7 +43,6 @@ HOL_historical_plan = {
 		HOL_a_new_dutch_unity
 		HOL_de_vaarplicht
 		HOL_request_allied_favors
-		HOL_wilhelminism
 		HOL_revive_the_buffer_state_proposal
 
 
@@ -86,7 +86,10 @@ HOL_historical_plan = {
 		HOL_jacob_adriaan_de_wilde = 100
 		
 	}
-
+	focus_factors = {
+		INSHOL_industrialized_colony = 0
+		INSHOL_netherlands_indonesia_union = 0
+	}
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {

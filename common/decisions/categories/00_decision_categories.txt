@@ -361,12 +361,18 @@ economy_decisions = {
 
 prospect_for_resources = {
 	icon = generic_prospect_for_resources
-
+	visible = {
+		NOT = {
+		AND = {
+			original_tag = MAN
+			is_ai = yes
+		}
+	}
+	}
 	allowed = {
 		has_dlc = "Waking the Tiger"
 	}
 }
-
 special_projects = {
 	
 	icon = generic_prospect_for_resources

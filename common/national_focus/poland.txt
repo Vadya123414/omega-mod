@@ -2873,6 +2873,7 @@ focus_tree = {
 		}
 
 		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 		}
 
 		
@@ -2975,6 +2976,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			OR = {
 				AND = {
 					LIT = {
@@ -4711,6 +4713,7 @@ focus_tree = {
 		}
 		
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			is_in_faction = yes
 		}
 
@@ -4813,6 +4816,7 @@ focus_tree = {
 			}			
 		}
 		available = {
+		if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			is_subject = no 
 			LIT = { 
 				exists = yes
@@ -4945,6 +4949,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			OR = {
 				has_idea = POL_looming_peasants_strike
 				has_idea = POL_great_peasants_strike
@@ -7416,6 +7421,7 @@ focus_tree = {
 		mutually_exclusive = { focus = POL_complete_april_constitution focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution }
 		
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 		}
 
 		x = 77
@@ -11246,7 +11252,7 @@ focus_tree = {
 		allow_branch = { has_dlc = "No Step Back" }
 
 		available = {
-			
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 		}
 
 		mutually_exclusive = { focus = POL_complete_april_constitution  focus = POL_organize_the_peasants_strike focus = POL_assemble_the_regency_council }
@@ -13355,6 +13361,7 @@ focus_tree = {
 		id = POL_the_between_the_seas_concept
 		icon = GFX_goal_anschluss
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			is_subject = no
 			OR = {
 				is_major = yes

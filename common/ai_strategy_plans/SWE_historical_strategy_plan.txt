@@ -46,7 +46,6 @@ SWE_historical_plan = {
 		SWE_winter_drill
 
 		SWE_varnplikt
-		SWE_form_rfsu
 		SWE_totalforsvar
 		SWE_government_weapons_contract
 		SWE_standardize_equipment
@@ -57,6 +56,7 @@ SWE_historical_plan = {
 		SWE_volvo
 		SWE_form_saab
 
+		SWE_per_albin_bus
 		SWE_norma_projektilfabrik
 		SWE_as_the_barometer_falls
 		SWE_defense_in_depth
@@ -94,6 +94,9 @@ SWE_historical_plan = {
 	}
 
 	ideas = {
+		SWE_thorwald_bergquist = 10.0
+		SWE_per_edvin_skold = 7.0
+		SWE_king_gustaf_v = 5.0
 		SWE_ivar_holmquist = 5.0
 		SWE_ernst_linder = 3.0
 		SWE_archibald_douglas = 3.0

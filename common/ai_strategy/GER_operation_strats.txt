@@ -41,13 +41,6 @@ ger_not_collab= {
 		mission = propaganda
 		value = -100
 	}
-
-	ai_strategy = {
-		type = operative_mission
-		mission = root_out_resistance
-		value = -100
-	}
-
 	ai_strategy = {
 		type = operative_mission
 		mission = control_trade
@@ -824,7 +817,7 @@ GER_spy_on_FRA = {
 	
 	enable = {
 		tag = GER
-		date > 1936.1.1
+		num_of_operatives > 1
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
 		FRA = {
 			exists = yes
@@ -909,7 +902,7 @@ GER_spy_on_POL = {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1937.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
@@ -995,7 +988,7 @@ GER_spy_on_HOL = {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1938.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
@@ -1086,7 +1079,7 @@ GER_spy_on_BEL = {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1938.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
@@ -1183,7 +1176,7 @@ GER_spy_on_YUG = {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1938.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
@@ -1255,7 +1248,7 @@ GER_spy_on_NOR = {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1938.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
@@ -1333,7 +1326,7 @@ GER_spy_on_SOV= {
 	enable = {
 		tag = GER
 		#NOT = { has_completed_focus = GER_the_four_year_plan }
-		date > 1938.1.1
+		num_of_operatives > 1
 		num_finished_operations = {
 			operation = operation_collaboration_government
 			target = FRA
