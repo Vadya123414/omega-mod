@@ -71,8 +71,58 @@ infantry_generic = {
 				infantry = 15
 			}
 		}
-		replace_at_match = 0.6
-		replace_with = infantry_mid
-		target_min_match = 0.4
+	}
+}
+rangers_generic = {
+	available_for = {
+		FIN LAT EST LIT DEN SWI
+	}
+		blocked_for = {
+		LAT
+        EST
+        LIT
+        DEN
+		GER
+		JAP
+	}
+	role = rangers
+	
+	upgrade_prio = {
+		base = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = rangers_tech
+			}
+		}
+	}
+	rangers_late = {
+	
+		upgrade_prio = {
+			base = 1
+			
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				anti_air = 1
+				field_hospital = 1
+                winter_logistics_support = 1
+                long_range_patrol_support = 1
+			}
+			
+			regimental_support = {
+				field_guns = 5
+			}
+
+			regiments = {
+				ranger_battalion = 9
+				artillery_brigade = 3
+				anti_air_brigade = 3
+			}
+
+			}
 	}
 }

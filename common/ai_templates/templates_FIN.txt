@@ -71,7 +71,7 @@ infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 3
+				field_guns = 4
 			}
 			
 			regiments = {
@@ -144,36 +144,6 @@ rangers_generic = {
 			}
 		}
 	}
-
-		rangers_early = {
-	
-		upgrade_prio = {
-			base = 1
-		}
-
-		target_template = {
-			
-			support = {
-				artillery = 1
-				field_hospital = 1
-				engineer = 1
-			}
-			
-			regimental_support = {
-				field_guns = 2
-			}
-
-			regiments = {
-				ranger_battalion = 6
-				artillery_brigade = 1
-			}
-
-		}
-		replace_at_match = 0.9
-		replace_with = rangers_late
-		target_min_match = 0.9
-	}
-
 	rangers_late = {
 	
 		upgrade_prio = {

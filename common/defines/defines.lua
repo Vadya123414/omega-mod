@@ -241,8 +241,19 @@ NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = { 	1,   4,   7,   10,   13,
 NDefines.NProduction.MILITARY_FACTORY_COHERENCY_BONUS = 15
 
 -- <start> приоритеты строительства
-NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 1 --в ванилле 0.2                         -- Базовый приоритет для инфраструктуры в очереди строительства
-NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 2 --в ванилле 1.1                       -- Базовый приоритет для зданий снабжения (узлы снабжения, порты) в очереди строительства
+	-- <start> construction prioritization
+	CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue
+	CONSTRUCTION_PRIO_CIV_FACTORY = 0.80                                       -- base prio for civilian factories in the construction queue
+	CONSTRUCTION_PRIO_MIL_FACTORY = 0.70                                       -- base prio for military factories in the construction queue
+	CONSTRUCTION_PRIO_SUPPLY_BUILDING = 1.10                                  -- base prio for supply buildings (supply hubs, ports) in the construction queue
+	CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- base prio for railways in the construction queue
+	CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- base prio for railway gun repairs in the construction queue
+	CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- base prio for unspecified buildings (none of the categories above) in the construction queue
+	CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- factor prio with this if occupied territory
+	CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                              -- factor prio with this if owned non-core territory
+	CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- factor prio with this if owned core territory
+	CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                  -- factor prio with this if building is being repaired
+	-- <end> construction prioritization
 -- <end> приоритеты строительства
 
 

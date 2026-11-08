@@ -1,0 +1,108 @@
+do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
+	enable = {
+			original_tag = YUG
+	}
+	abort = {
+		has_completed_focus = YUG_concessions_for_macedonians
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = air_chief
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = navy_chief
+		value = -9999
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = political_advisor
+		value = -9999
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = army_advisor
+		value = -9999
+	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = theorist
+		value = -9999
+	}
+}
+	YUG_defend = { 
+		allowed = {
+			original_tag = YUG
+		}
+	enable = {
+		has_capitulated = no
+	}
+	abort = { has_capitulated = yes }
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			45 
+			764
+			106
+			970
+			803
+			802
+			102
+			853
+		}
+		ratio = 0
+		subtract_invasions_from_need = yes
+		subtract_fronts_from_need = yes
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 45
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 764
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 106
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 970
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 803
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 802
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 102
+		value = -1000
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 853
+		value = -1000
+	}
+}

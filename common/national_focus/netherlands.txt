@@ -3107,6 +3107,7 @@ focus_tree = {
 	focus = {
 		id = HOL_protect_against_britain
 		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			threat > 0.1
 			has_full_control_of_state = 7
 			has_full_control_of_state = 36
@@ -4650,6 +4651,7 @@ focus_tree = {
 		prerequisite = { focus = HOL_gateway_to_europe }
 		mutually_exclusive = { focus = HOL_maintain_trade_neutrality focus = HOL_cave_to_the_british }
 		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			custom_trigger_tooltip = {
 				tooltip = HOL_cave_to_the_germans2_tt
 				check_variable = { var = GER.ger_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
@@ -5876,7 +5878,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOL_maintain_trade_neutrality
 		cost = 10
-
+		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}always = no}
+		}
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -7995,7 +7999,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOL_unity_through_democracy
 		cost = 10
-
+		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}always = no}
+		}
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 

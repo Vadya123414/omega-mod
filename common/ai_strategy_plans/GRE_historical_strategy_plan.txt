@@ -36,23 +36,21 @@ GRE_historical_plan = {
 		GRE_reevaluating_the_drachma #March 10 1936
 		GRE_utilize_our_strengths
 		GRE_open_foreign_subsidized_factories
-		GRE_connecting_our_prefectures
 		GRE_exporting_more_luxury_commodoties
 
-		GRE_increase_our_mining_operations
-		GRE_mobilise_our_economy
+		GRE_expand_our_tobacco_industry
+		GRE_encourage_tourism
+		GRE_rejuvenating_athens
 		GRE_the_kings_government #May 20 1936
 		GRE_metaxism_focus
+		GRE_four_year_plan
 		GRE_the_hellenic_spirit
 		GRE_the_national_youth_organisation
 
 		GRE_crack_down_on_the_republicans
 		GRE_use_the_military
-
 		GRE_rejuvenating_athens
-		GRE_sophistry_and_science
 		GRE_cooperate_with_foreign_monopolies
-		GRE_academy_of_athens
 
 		GRE_an_orthodox_state
 		GRE_third_hellenic_civilization
@@ -72,7 +70,12 @@ GRE_historical_plan = {
 		GRE_our_traditional_allies_in_the_aegean
 		GRE_the_greater_enosis
 
+		GRE_the_backbone_of_our_army
+		GRE_sophistry_and_science
+		GRE_connecting_our_prefectures
 		GRE_expansion_of_athens_university
+		GRE_academy_of_athens
+
 		GRE_protectors_of_the_mediterranean
 	}
 
@@ -82,6 +85,7 @@ GRE_historical_plan = {
 
 	ideas = {
 		GRE_alexandros_papagos = 10
+		extensive_conscription = 8
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

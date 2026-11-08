@@ -6141,7 +6141,7 @@ focus_tree = {
 		id = INS_realign_supply_chains
 		icon = GFX_focus_BRA_north_and_south_america
 
-		available = {}
+		available = {			if = {limit = {has_global_flag = VUP_Hist_version}always = no}}
 		prerequisite = { focus = INS_recovering_from_the_great_depression }
 		mutually_exclusive = { focus = INS_first_come_first_serve }
 
