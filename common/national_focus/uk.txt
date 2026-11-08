@@ -7240,10 +7240,8 @@ default = no
 		completion_reward = {
 			if = {
 				limit = {
-					NOT = {has_country_flag = VUP_Hist_version}
-					RAJ = {
-						NOT = { is_subject_of = ENG }
-					}
+					NOT = { has_country_flag = VUP_Hist_version }
+					RAJ = { NOT = { is_subject_of = ENG } }
 				}
 				set_cosmetic_tag = ENG_imperial_federation_unified
 				news_event = { id = mtg_news.8 days = 1 }
@@ -7251,187 +7249,24 @@ default = no
 			}
 			if = {
 				limit = {
-					NOT = {has_country_flag = VUP_Hist_version}
-					RAJ = {
-						is_subject_of = ENG
-					}
+					NOT = { has_country_flag = VUP_Hist_version }
+					RAJ = { is_subject_of = ENG }
 				}
 				set_cosmetic_tag = ENG_imperial_federation_india_unified
 				news_event = { id = mtg_news.9 days = 1 }
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			
-			custom_effect_tooltip = infa_annex_imperka
-			hidden_effect = {
 			if = {
 				limit = {
-					CAN = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-					AST = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
+					CAN = { is_ai = yes is_subject_of = ENG }
+					AST = { is_ai = yes is_subject_of = ENG }
 				}
 				add_research_slot = 1
 			}
-			if = {
-				limit = {
-					CAN = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-				}
-				
-				CAN = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = CAN
-				    transfer_troops = yes
-				}
-			}
-			if = {
-				limit = {
-					SAF = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-				}
-				SAF = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = SAF
-				    transfer_troops = yes
-				}
-			}
-			if = {
-				limit = {
-					RAJ = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-				}
-				RAJ = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = RAJ
-				    transfer_troops = yes
-				}
-			}
-			if = {
-				limit = {
-					AST = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-				}
-				AST = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = AST
-				    transfer_troops = yes
-				}
-			}
-			if = {
-				limit = {
-					NZL = {
-						is_ai = yes
-						is_subject_of = ENG
-					}
-				}
-				NZL = {
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-				}
-				annex_country = {
-				    target = NZL
-				    transfer_troops = yes
-				}
-			}
-			if = {
-				limit = {
-					MAL = {
-						is_subject_of = ENG
-					}
-				}
-				MAL = {
-					if = { limit = { is_ai = yes }
-					every_unit_leader = {
-						set_nationality = ENG
-					}
-					}
-				}
-				annex_country = {
-				    target = MAL
-				    transfer_troops = yes
-				}
-			}
 
-			
-				# Для Канады
-				every_state = {
-					limit = {
-						is_core_of = CAN
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-				# Для Южной Африки
-				every_state = {
-					limit = {
-						is_core_of = SAF
-						NOT = { state = 275 }
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-				# Для Индии
-				every_state = {
-					limit = {
-						is_core_of = RAJ 
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-				# Для Австралии
-				every_state = {
-					limit = {
-						is_core_of = AST
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-				# Для Новой Зеландии
-				every_state = {
-					limit = {
-						is_core_of = NZL
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-				# Для Малайзии
-				every_state = {
-					limit = {
-						is_core_of = MAL
-						is_controlled_by = ENG
-					}
-					set_compliance = 100
-				}
-			}		
+			custom_effect_tooltip = infa_annex_imperka
+			# Запуск цепочки событий выборочной аннексии
+			country_event = { id = imperial_annex.1 days = 1 }
 		}
 	}
 

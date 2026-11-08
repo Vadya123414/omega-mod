@@ -4018,7 +4018,7 @@
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4033,7 +4033,6 @@
 			FRA = {
 				exists = yes 
 				has_capitulated = no
-				has_government = democratic
 				is_puppet = no  
 			}
 		}
@@ -4422,7 +4421,7 @@
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

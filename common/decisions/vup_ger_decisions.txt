@@ -78,47 +78,6 @@ GER_annex = {
 				}			
 		}
 	}
-	
-	GER_HUN_SLO = {
-	
-		icon = generic_army_support
-
-		visible = {
-		    has_country_flag = VUP_Hist_version
-		}
-         
-		available = {
-			any_other_country = {
-				original_tag = HUN
-				exists = yes
-			}
-			any_other_country = {
-				original_tag = SLO
-				exists = yes
-			}
-                        
-		}
-
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = SLO
-				}
-			}
-		}
-
-		fire_only_once = yes
-		days_remove    = -1
-		
-		complete_effect = {
-			HUN = { 
-			annex_country = { target = SLO }
-            70 = {add_core_of = HUN}
-            71 = {add_core_of = HUN}
-            73 = {add_core_of = HUN}			
-		}
-	}
-	}
 
 	GER_annex_ROM = {
 	

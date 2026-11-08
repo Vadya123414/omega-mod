@@ -1291,11 +1291,41 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			modifier = {
-				production_speed_naval_base_factor = -5
+					limit = {
+						has_global_flag = VUP_Hist_version
+					}
+					production_speed_naval_base_factor = -5
+				
 				conscription = -0.003
 				war_support_factor = -0.05
 				land_doctrine_cost_factor = 0.5
 				land_mastery_gain_factor = -0.15
+			}
+		}
+
+		FRA_ne_stroit_bazi_mor = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			cancel = {
+				FRA = {
+					has_capitulated = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = BEL_cockerill_shipyards_organization
+			
+			modifier = {
+				production_speed_naval_base_factor = -5
 			}
 		}
 

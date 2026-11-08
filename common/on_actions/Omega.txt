@@ -1,6 +1,37 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			GER = {
+				if = {
+					limit = {
+						has_country_flag = VUP_Hist_version
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_around_maginot }
+						cost = 7
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_operation_weserubung }
+						cost = 7
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_form_rome_berlin_axis }
+						cost = 21
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_fuhrerprinzip }
+						cost = 7
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_war_with_france }
+						cost = 63
+					}
+					reduce_focus_completion_cost = {
+						focus = { GER_reintegrate_luxemburg_and_alsace_lorraine }
+						cost = 35
+					}
+				}
+			}
 			every_country = {
 				limit = {
 					is_ai = no

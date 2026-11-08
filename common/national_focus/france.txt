@@ -5265,7 +5265,7 @@
 			}
 			add_timed_idea = {
 				idea = SWE_independent_economy
-				days = 210
+				days = 365
 			}
 		}
 	}	
@@ -7668,9 +7668,9 @@
 		prerequisite = { focus = FRA_tree_crown focus = FRA_reorganize_the_dutch }
 		icon = GFX_focus_PER_strengthen_the_tudeh
 		x = 2
-		y = 1
+		y = 4
 		cost = 5
-		relative_position_id = FRA_tree_crown
+		relative_position_id = FRA_the_legitimate_heir
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -7755,13 +7755,13 @@
 		id = FRA_exproet_resurse
 		icon = GFX_focus_DEN_fromandskorpset
 		x = 0
-		y = 1
+		y = 4
 		
 		prerequisite = {
 			focus = FRA_tree_crown
 		}
 		
-		relative_position_id = FRA_tree_crown
+		relative_position_id = FRA_the_legitimate_heir
 		cost = 5
 
 		ai_will_do = {
@@ -7932,9 +7932,9 @@
 	focus = {
 		id = FRA_podgotovka  
 		icon = GFX_focus_PER_increase_oil_sales
-		x = 1
-		y = 1
-		relative_position_id = FRA_zakon
+		x = 3
+		y = 2
+		relative_position_id = FRA_proclaim_the_third_empire
 		prerequisite = {
 			focus = FRA_granic
 		}
@@ -8195,7 +8195,8 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			custom_effect_tooltip = FRA_hard_path_tooltip
+			custom_effect_tooltip = FRA_coalition_path_tooltip
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = FRA_la_deluge_infa
 			add_to_variable = { ws_factor = 0.05 tooltip = war_support_factor_tt }
 			every_state = {
@@ -8265,7 +8266,7 @@
 			add_to_variable = { ARMY_CLAIM_ATTACK = 0.1 tooltip = MODIFIERS_ARMY_CLAIM_ATTACK_FACTOR_tt }
 			add_to_variable = { ARMY_CLAIM_DEFENCE = 0.05 tooltip = MODIFIERS_ARMY_CLAIM_DEFENCE_FACTOR_tt }
 			add_to_variable = { army_speed = 0.05 tooltip = army_speed_factor_tt }
-			add_to_variable = { army_core_defence_modifaer = 0.1 tooltip = army_core_defence_factor_tt }
+			add_to_variable = { army_core_defence_modifaer = 0.2 tooltip = army_core_defence_factor_tt }
 			army_experience = 100
 		}
 	}
@@ -8273,7 +8274,7 @@
 	focus = {
 		id = FRA_retribution_for_sedan
 		icon = GFX_focus_attack_germany
-		x = 1
+		x = 1 
 		y = 1
 		
 		prerequisite = {
@@ -8326,7 +8327,7 @@
 			focus = FRA_retribution_for_sedan
 		}
 		relative_position_id = FRA_retribution_for_sedan
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -8687,7 +8688,7 @@
 			focus = FRA_retribution_for_sedan
 		}
 		relative_position_id = FRA_retribution_for_sedan
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -8725,7 +8726,7 @@
 			focus = FRA_sov_alik
 		}
 		relative_position_id = FRA_return_to_borodino
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
