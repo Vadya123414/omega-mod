@@ -51,7 +51,6 @@ HOL_historical_plan = {
 		HOL_symbol_of_resistance
 
 		HOL_form_new_government
-		HOL_gateway_to_europe
 		HOL_obtain_foreign_colonial_investments_taog
 		HOL_abandon_the_gold_standard
 		HOL_overturn_military_budget_cuts
@@ -61,6 +60,7 @@ HOL_historical_plan = {
 		HOL_prepare_the_inundation_lines
 		HOL_germany_is_the_greater_threat
 		HOL_war_on_pacifism
+		HOL_gateway_to_europe
 		INSHOL_east_indies_investments
 		INSHOL_expand_shell
 		HOL_expand_the_artillerieinrichtingen
@@ -73,7 +73,14 @@ HOL_historical_plan = {
 		INSHOL_agricultural_subsidies
 		INSHOL_import_sugar
 		INSHOL_import_lumber
-
+		HOL_philips_focus
+		HOL_expand_RD_facilities
+		HOL_the_western_possessions_taog
+		HOL_expand_curacao_oil_refineries_taog
+		HOL_appoint_new_supreme_commander
+		HOL_modernize_our_infantry_equipment
+		HOL_secret_staff_talks
+		HOL_lessons_from_the_last_war
 
 
 	}
@@ -89,6 +96,7 @@ HOL_historical_plan = {
 	focus_factors = {
 		INSHOL_industrialized_colony = 0
 		INSHOL_netherlands_indonesia_union = 0
+		HOL_curtail_colonial_autonomy_taog = 0
 	}
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans

@@ -805,7 +805,7 @@ set_spec_doctrine_40 = {
     }
         bots_low_economic_mobilisation = {
 
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		icon = oppression
 		available = {
@@ -840,7 +840,7 @@ set_spec_doctrine_40 = {
     }
      bots_partial_economic_mobilisation = {
 
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		icon = oppression
 		available = {
@@ -875,7 +875,7 @@ set_spec_doctrine_40 = {
         }
     }
         bots_war_economy = {
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		icon = oppression
 		available = {
@@ -915,7 +915,7 @@ set_spec_doctrine_40 = {
     }
     bots_total_economy = {
 
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		icon = oppression
 		available = {
@@ -960,7 +960,7 @@ set_spec_doctrine_40 = {
     }
     bots_war_economy_fas_comm = {
 
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		icon = oppression
 		available = {
