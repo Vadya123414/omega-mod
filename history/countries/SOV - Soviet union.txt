@@ -882,9 +882,9 @@ add_ideas = {
 }
 add_ideas = SOV_second_five_year_plan_fake_1936_ns
 1936.1.1.13 = {
-	add_ideas = {
-		no_farm_gen
-	}
+	#add_ideas = {
+	#	no_farm_gen
+	#}
 	set_research_slots = 4
 	584 = {
 		add_dynamic_modifier = { modifier = sov_fabriki }
