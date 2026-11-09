@@ -35,6 +35,138 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = obuchenie.fra
+	title = obuchenie.fra.t
+	desc = obuchenie.fra.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.fra.a
+	}
+}
+
+country_event = {
+	id = obuchenie.sov
+	title = obuchenie.sov.t
+	desc = obuchenie.sov.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.sov.a
+	}
+}
+
+country_event = {
+	id = obuchenie.eng
+	title = obuchenie.eng.t
+	desc = obuchenie.eng.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.eng.a
+	}
+}
+
+country_event = {
+	id = obuchenie.ger
+	title = obuchenie.ger.t
+	desc = obuchenie.ger.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.ger.a
+	}
+}
+
+country_event = {
+	id = obuchenie.ita
+	title = obuchenie.ita.t
+	desc = obuchenie.ita.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.ita.a
+	}
+}
+
+country_event = {
+	id = obuchenie.rom
+	title = obuchenie.rom.t
+	desc = obuchenie.rom.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.rom.a
+	}
+}
+
+country_event = {
+	id = obuchenie.jap
+	title = obuchenie.jap.t
+	desc = obuchenie.jap.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.jap.a
+	}
+}
+
+country_event = {
+	id = obuchenie.can
+	title = obuchenie.can.t
+	desc = obuchenie.can.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = obuchenie.can.a
+	}
+}
+
+add_namespace = vup
+
+country_event = {
+	id = vup.pravila_hist
+	title = vup.pravila_hist.t
+	desc = vup.pravila_hist.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = vup.pravila_hist.a
+	}
+}
+
+country_event = {
+	id = vup.pravila_non_hist
+	title = vup.pravila_non_hist.t
+	desc = vup.pravila_non_hist.d
+	picture = GFX_report_event_AST_winston_platypus_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = vup.pravila_non_hist.a
+	}
+}
+
 add_namespace = napoleon
 
 news_event = {
@@ -1465,5 +1597,248 @@ country_event = {
 			target = FRA
 			type = annex_everything
 		}
+	}
+}
+
+add_namespace = imperial_annex
+
+country_event = {
+	id = imperial_annex.1
+	title = imperial_annex.1.t
+	desc = imperial_annex.1.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = { # Аннексия
+		name = imperial_annex.1.a
+		trigger = {
+			CAN = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		CAN = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = CAN transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = CAN
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+		hidden_effect = {
+			country_event = { id = imperial_annex.2 days = 1 }
+		}
+	}
+	option = { # Оставить доминионом
+		name = imperial_annex.1.b
+		ai_will_do = { factor = 1 }
+		hidden_effect = {
+			country_event = { id = imperial_annex.2 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = imperial_annex.2
+	title = imperial_annex.2.t
+	desc = imperial_annex.2.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = {
+		name = imperial_annex.2.a
+		trigger = {
+			SAF = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		SAF = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = SAF transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = SAF
+				NOT = { state = 275 }
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+		hidden_effect = {
+			country_event = { id = imperial_annex.3 days = 1 }
+		}
+	}
+	option = {
+		name = imperial_annex.2.b
+		ai_will_do = { factor = 1 }
+		hidden_effect = {
+			country_event = { id = imperial_annex.3 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = imperial_annex.3
+	title = imperial_annex.3.t
+	desc = imperial_annex.3.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = {
+		name = imperial_annex.3.a
+		trigger = {
+			RAJ = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		RAJ = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = RAJ transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = RAJ
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+		hidden_effect = {
+			country_event = { id = imperial_annex.4 days = 1 }
+		}
+	}
+	option = {
+		name = imperial_annex.3.b
+		ai_will_do = { factor = 1 }
+		hidden_effect = {
+			country_event = { id = imperial_annex.4 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = imperial_annex.4
+	title = imperial_annex.4.t
+	desc = imperial_annex.4.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = {
+		name = imperial_annex.4.a
+		trigger = {
+			AST = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		AST = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = AST transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = AST
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+		hidden_effect = {
+			country_event = { id = imperial_annex.5 days = 1 }
+		}
+	}
+	option = {
+		name = imperial_annex.4.b
+		ai_will_do = { factor = 1 }
+		hidden_effect = {
+			country_event = { id = imperial_annex.5 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = imperial_annex.5
+	title = imperial_annex.5.t
+	desc = imperial_annex.5.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = {
+		name = imperial_annex.5.a
+		trigger = {
+			NZL = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		NZL = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = NZL transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = NZL
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+		hidden_effect = {
+			country_event = { id = imperial_annex.6 days = 1 }
+		}
+	}
+	option = {
+		name = imperial_annex.5.b
+		ai_will_do = { factor = 1 }
+		hidden_effect = {
+			country_event = { id = imperial_annex.6 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = imperial_annex.6
+	title = imperial_annex.6.t
+	desc = imperial_annex.6.d
+	is_triggered_only = yes
+	picture = GFX_report_event_canada_treaty
+
+	option = {
+		name = imperial_annex.6.a
+		trigger = {
+			MAL = {
+				exists = yes
+				is_ai = yes
+				is_subject_of = ENG
+			}
+		}
+		ai_will_do = { factor = 100 }
+		MAL = {
+			every_unit_leader = { set_nationality = ENG }
+		}
+		annex_country = { target = MAL transfer_troops = yes }
+		every_state = {
+			limit = {
+				is_core_of = MAL
+				is_controlled_by = ENG
+			}
+			set_compliance = 100
+		}
+	}
+	option = {
+		name = imperial_annex.6.b
+		ai_will_do = { factor = 1 }
 	}
 }

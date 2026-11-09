@@ -2201,10 +2201,6 @@ focus_tree = {
 		relative_position_id = GER_coal_liquefaction
 		cost = 5
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
-			}
 			has_tech = oil_processing
 		}
 
@@ -2279,10 +2275,6 @@ focus_tree = {
 		relative_position_id = GER_coal_liquefaction
 		cost = 5
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_industrial_consumer_goods_factor_limit_tt
-				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
-			}
 			has_tech = rubber_processing
 		}
 

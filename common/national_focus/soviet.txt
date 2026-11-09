@@ -397,7 +397,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -2301,7 +2301,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_merge_aircraft_plants
-		cost = 10
+		cost = 3
 
 		available = {
 
@@ -2589,7 +2589,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_increase_aircraft_production
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
@@ -2621,7 +2621,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_intensify_pilot_training_program
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_ground_support }
 
@@ -3331,7 +3331,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 
@@ -3384,7 +3384,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_submarine_warfare }
 
@@ -3433,7 +3433,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_surface_warfare }
 
@@ -4946,7 +4946,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_leningrad_polytechnical_institute
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -10878,9 +10878,8 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			# Modify Factionalism - change tooltip if changing values!!!
-			custom_effect_tooltip = SOV_return_democracy_to_the_party_factionalism_tt
-			add_to_variable = { SOV_factionalism_political_power_factor = -0.05 }
+			custom_effect_tooltip = SOV_left_right_purges_factionalism_tt
+			set_variable = { SOV_factionalism_political_power_factor = 0 }
 			IF = {
 				limit = { SOV_is_left_opposition = yes }
 				custom_effect_tooltip = SOV_return_democracy_to_the_party_unlock_right_tt 

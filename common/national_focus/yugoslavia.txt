@@ -160,6 +160,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			ENG = {
 				NOT = { has_war_with = ROOT }
 				exists = yes
@@ -378,6 +379,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			is_subject = no
 		}
 
@@ -1787,6 +1789,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			ITA = {
 				NOT = { has_war_with = ROOT }
 				exists = yes
@@ -1914,6 +1917,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 
 		}
 
@@ -2066,6 +2070,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			BUL = {
 				NOT = { has_war_with = ROOT }
 				exists = yes
@@ -2170,6 +2175,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			OR = {
 				GER = {
 					NOT = { has_war_with = ROOT }
@@ -2597,12 +2603,12 @@ focus_tree = {
 				promote_character = {ideology = despotism }
 				promote_character = {ideology = conservatism }
 			}
-			if = {
+		if = {
 				limit = {
 					date > 1941.09.06
 				}
 				YUG_peter_ii = {
-					swap_country_leader_traits = { remove = underage_monarch add = legitimate_heir }
+					remove_trait = {trait = underage_monarch} add_trait = {trait = legitimate_heir }
 				}
 				hidden_effect = { set_country_flag = peter_is_of_age }
 			}
@@ -3035,6 +3041,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 		}
 
 		bypass = {
@@ -3189,6 +3196,7 @@ focus_tree = {
 		}
 
 		available = {
+						if = {limit = {has_global_flag = VUP_Hist_version}always = no}
 			SOU = {
 				NOT = { has_war_with = ROOT }
 				exists = yes

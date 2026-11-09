@@ -58,6 +58,7 @@ SWI_bunker_1 = {
 	enable = {
 		original_tag = SWI
         date > 1938.1.1
+		has_global_flag = VUP_hist_upgrade
 	}
 	abort = { always = no }
 	ai_strategy = {
@@ -69,11 +70,13 @@ SWI_bunker_1 = {
 }
 at_start_we_need_manpower = {
 	allowed = {
+		or = {
 		original_tag = LIT
 		original_tag = LAT
 		original_tag = DEN
 		original_tag = BEL
 		original_tag = HOL
+		}
 	}
 	enable = {
 		not = {has_global_flag = VUP_Hist_version}
@@ -106,6 +109,7 @@ at_start_we_need_manpower = {
 }
 at_start_we_need_manpower_hist = {
 	allowed = {
+		or = {
 		original_tag = LIT
 		original_tag = LAT
 		original_tag = DEN
@@ -113,6 +117,7 @@ at_start_we_need_manpower_hist = {
 		original_tag = HOL
 		original_tag = YUG
 		original_tag = GRE
+		}
 	}
 	enable = {
 		has_global_flag = VUP_Hist_version

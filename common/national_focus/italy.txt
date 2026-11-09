@@ -13724,7 +13724,7 @@ focus_tree = {
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
 		available = {
-			date > 1937.4.1
+			if = {limit = {has_global_flag = VUP_Hist_version}date > 1937.4.1}
 		}
 
 		search_filters = {}
@@ -15376,7 +15376,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = VUP_Hist_version
 				}
-				date > 1939.9.1
+				GER = {OWNS_STATE = 16}
 			}
 			is_subject = no
 			GRE = { exists = yes }
@@ -15391,6 +15391,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			if = {limit = {has_global_flag = VUP_hist_version}}
 			GRE = {
 				every_owned_state = {
 					limit = {

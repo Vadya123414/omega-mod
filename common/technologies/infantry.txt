@@ -758,13 +758,31 @@ technologies = {
 			mountaineers_tech
 			cat_special_forces_generic
 		}
-
 		ai_will_do = {
 			base = 1
-
 			modifier = {
 				factor = 0
 				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = LAT
+			}
+			modifier= {
+				factor = 0
+				tag = EST
+			}
+			modifier = {
+				factor = 0
+				tag = LIT
 			}
 			modifier = {
 				factor = 0
@@ -819,10 +837,29 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
 			modifier = {
 				factor = 0
 				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = LAT
+			}
+			modifier= {
+				factor = 0
+				tag = EST
+			}
+			modifier = {
+				factor = 0
+				tag = LIT
 			}
 			modifier = {
 				factor = 0
@@ -871,10 +908,29 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
 			modifier = {
 				factor = 0
 				tag = SOV
+			}
+			modifier = {
+				factor = 0
+				tag = SWI
+			}
+			modifier = {
+				factor = 0
+				tag = FIN
+			}
+			modifier = {
+				factor = 0
+				tag = LAT
+			}
+			modifier= {
+				factor = 0
+				tag = EST
+			}
+			modifier = {
+				factor = 0
+				tag = LIT
 			}
 			modifier = {
 				factor = 0
@@ -978,6 +1034,26 @@ technologies = {
 				add = 1
 				tag = HOL
 			}
+			modifier = {
+				factor = 1
+				tag = SWI
+			}
+			modifier = {
+				factor = 1
+				tag = FIN
+			}
+			modifier = {
+				factor = 1
+				tag = LAT
+			}
+			modifier= {
+				factor = 1
+				tag = EST
+			}
+			modifier = {
+				factor = 1
+				tag = LIT
+			}
 		}
 	}
 
@@ -1040,6 +1116,26 @@ technologies = {
 				add = 1
 				tag = HOL
 			}
+						modifier = {
+				factor = 1
+				tag = SWI
+			}
+			modifier = {
+				factor = 1
+				tag = FIN
+			}
+			modifier = {
+				factor = 1
+				tag = LAT
+			}
+			modifier= {
+				factor = 1
+				tag = EST
+			}
+			modifier = {
+				factor = 1
+				tag = LIT
+			}
 		}
 	}
 
@@ -1096,6 +1192,26 @@ technologies = {
 			modifier = {
 				add = 1
 				tag = HOL
+			}
+						modifier = {
+				factor = 1
+				tag = SWI
+			}
+			modifier = {
+				factor = 1
+				tag = FIN
+			}
+			modifier = {
+				factor = 1
+				tag = LAT
+			}
+			modifier= {
+				factor = 1
+				tag = EST
+			}
+			modifier = {
+				factor = 1
+				tag = LIT
 			}
 		}
 	}

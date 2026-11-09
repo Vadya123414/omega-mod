@@ -15,4 +15,3 @@ BOTS = {
 	is_ai = yes
 	}
 }
-

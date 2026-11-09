@@ -1,0 +1,17 @@
+gaid_non_hist = {
+	icon = GFX_decision_category_generic
+	priority = 67
+	visible = {
+		NOT = {
+			has_country_flag = VUP_Hist_version
+		}
+	}
+}
+
+gaid_hist = {
+	icon = GFX_decision_category_generic
+	priority = 67
+	visible = {
+		has_country_flag = VUP_Hist_version
+	}
+}

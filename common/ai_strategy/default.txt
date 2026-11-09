@@ -49,6 +49,17 @@ default_unit_production = {
 		id = infantry
 		value = 100
 	}
+		ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -100
+	}
 }
 default_air_production = {
 	enable = {
@@ -240,6 +251,7 @@ default_marines_unit_production = {
 default_rangers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
+		or = {
 				original_tag = SOV
 				original_tag = GER
 				original_tag = FRA
@@ -248,6 +260,7 @@ default_rangers_unit_production = {
 				original_tag = FRA
 				original_tag = BEL
 				original_tag = HOL
+			}
 		}
 	abort_when_not_enabled = no	
 	ai_strategy = {
@@ -764,7 +777,7 @@ upgrade_intelligence_agency = {
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 100
+		value = 10000
 	}
 }
 
@@ -796,11 +809,11 @@ upgrade_intelligence_agency_as_spy_master = {
 		}
 	}
 	abort = {
-		num_of_civilian_factories < 20
+		num_operative_slots > 1
 	}
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
-		value = 5000
+		value = 50000
 	}
 }
 

@@ -16,6 +16,7 @@ if = {
 }
 
 1936.1.1.13 = {
+	add_ideas = FRA_ne_stroit_bazi_mor
 	29 = {
 		add_dynamic_modifier = { modifier = FRA_fabriki days = 1322 }
 	}
