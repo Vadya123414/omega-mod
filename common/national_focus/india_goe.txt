@@ -8405,8 +8405,7 @@ focus_tree = {
             }
 
             custom_effect_tooltip = generic_skip_one_line_tt
-
-            add_ideas = idea_RAJ_government_budget_shortfall
+            add_timed_idea = { idea = idea_RAJ_government_budget_shortfall days = 90 }
         }
     }
 
@@ -15665,7 +15664,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            add_stability = -0.5
+            add_stability = -0.075
             add_political_power = 150
             set_country_flag = RAJ_allow_release_states
         }

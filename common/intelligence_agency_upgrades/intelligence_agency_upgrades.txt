@@ -100,7 +100,7 @@ branch_defense = {
 		sound = Spy_Agency_Defense_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 10
 		}
 		
 		modifiers_during_progress = {
@@ -140,6 +140,15 @@ branch_defense = {
 		
 		ai_will_do = {
 			factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+			original_tag = GER
+			original_tag = ITA
+			original_tag = RAJ
+			original_tag = JAP
+			}
+		}
 		}
 		
 		modifiers_during_progress = {
@@ -237,7 +246,28 @@ branch_operation = {
 		sound = Spy_Agency_Operations_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 0
+			base = 0
+			modifier = {
+				add = 100
+				or = {
+						original_tag = ENG
+						original_tag = FRA
+						original_tag = BEL
+						original_tag = HOL
+						original_tag = SAF
+						original_tag = CAN
+						original_tag = AST
+						original_tag = USA
+						original_tag = POL
+						original_tag = YUG
+						original_tag = GRE
+						original_tag = RAJ
+						original_tag = INS
+						original_tag = COG
+						original_tag = NZL
+						original_tag = SOV
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -259,7 +289,7 @@ branch_operation = {
 		sound = Spy_Agency_Operations_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		
 		modifiers_during_progress = {
@@ -333,7 +363,16 @@ branch_operative = {
 		sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
 
 		ai_will_do = {
-			factor = 1
+			base = 1
+		modifier = {
+			add = 5
+			OR = {
+				original_tag = GER
+				original_tag = ITA
+				original_tag = RAJ
+				original_tag = JAP
+			}
+		}
 		}
 		
 		modifiers_during_progress = {
@@ -380,7 +419,7 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 100
 		}
 		
 		modifiers_during_progress = {
@@ -403,7 +442,7 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 4
 		}
 		
 		available = {

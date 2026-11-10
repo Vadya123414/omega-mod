@@ -37,6 +37,39 @@ on_actions = {
                                                     add_ideas = JAP_bot_fix_fuel
                                                 }
                                  }
+                        effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = BOL
+                                                        }
+                                                    }
+                                                    add_ideas = BOL_bot_fix_pp
+                                                }
+                                 }
+                            effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = INS
+                                                        }
+                                                    }
+                                                    add_ideas = 55_training_fix
+                                                }
+                                 }
+                             effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = JAP
+                                                        }
+                                                    }
+                                                    add_ideas = JAP_bot_fix_fuel
+                                                }
+                                 }
                             effect = { 
                                 every_country = {
                                     limit = {
@@ -73,6 +106,31 @@ on_monthly = {
                                                 }
                                     add_ideas = supply_bot_fix_not_in_war
                                 }
-                     }  
+                     } 
+                effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = INS
+                                                            NOT ={has_idea = 55_training_fix}
+                                                        }
+                                                    }
+                                                    add_ideas = 55_training_fix
+                                                }
+                                 }
+                effect = { 
+                                every_country = {
+                                                    limit = { 
+                                                        AND = {
+                                                            is_ai = yes
+                                                            original_tag = BOL
+                                                            NOT ={has_idea = BOL_bot_fix_pp}
+                                                            date < 1939.1.1
+                                                        }
+                                                    }
+                                                    add_ideas = BOL_bot_fix_pp
+                                                }
+                                 } 
              }
 }

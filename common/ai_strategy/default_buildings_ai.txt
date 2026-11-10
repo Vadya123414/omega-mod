@@ -41,6 +41,7 @@ MINOR_strategy_industrial_complex_building_nonhist = {
 					not = {original_tag = FRA}
 					not = {original_tag = SOV}
 					not = {original_tag = JAP}
+					not = {original_tag = SIA}
 					date < 1936.10.1
 				}
 		}
@@ -65,6 +66,7 @@ MINOR_strategy_arms_factory_building_nonhist  = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
+						not = {original_tag = SIA}
 				date > 1936.10.1
 				}
 		}
@@ -90,6 +92,7 @@ MINOR_strategy_industrial_complex_building_hist = {
 					not = {original_tag = FRA}
 					not = {original_tag = SOV}
 					not = {original_tag = JAP}
+					not = {original_tag = SIA}
 					date < 1937.8.1
 				}
 		}
@@ -115,6 +118,7 @@ MINOR_strategy_arms_factory_building_hist = {
 						not = {original_tag = FRA}
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
+						not = {original_tag = SIA}
 				date > 1937.8.1
 				}
 		}
@@ -635,5 +639,50 @@ RAJ_infrastructure_4 = {
 		id = infrastructure
 		target = 426
 		value = 1000000
+	}
+}
+SIA_infrastructure = {
+	allowed = {
+		original_tag = SIA
+		}
+	enable = {
+		1076 = { infrastructure < 5 }
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 1076
+		value = 1000
+	}
+}
+SIA_industrial_complex = {
+	allowed = {
+		original_tag = SIA
+		}
+	enable = {
+		1076 = { infrastructure < 5 }
+		SIA = {NOT = {has_completed_focus = SIA_the_army_of_siam}}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_target
+		id = industrial_complex
+		value = 1000
+	}
+}
+SIA_arms_factory = {
+	allowed = {
+		original_tag = SIA
+		}
+	enable = {
+		1076 = { infrastructure > 5 }
+		SIA = {has_completed_focus = SIA_the_army_of_siam}
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_target
+		id = arms_factory
+		value = 1000
 	}
 }

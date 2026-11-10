@@ -27,68 +27,58 @@ SIA_historical = {
 	}
 
 	ai_national_focuses = {
-		
-		#As soon as possible
-		SIA_the_greater_thai_empire
+		SIA_royal_thai_navy
+		SIA_focus_on_commercial_civilian_ships
+		SIA_the_khana_ratsadon
+		SIA_for_the_preservation_of_siamese_independence
+		SIA_embed_technocrats_in_civilian_institutions
+		SIA_drum_up_irredentism
+		SIA_war_fervor
+		SIA_the_peoples_day
+		SIA_industrialization_drive
+		SIA_asian_financial_compact
+		SIA_renegotiate_teak_control
+		SIA_the_bank_of_siam
+		SIA_baht_stabilization_act
+		SIA_siamese_development_cooperative
+		SIA_send_bureaucrats_abroad
+		SIA_boon_rawd_brewery
+		SIA_siam_cement_group
+		SIA_national_savings_bond
+		SIA_deficit_spending
+		SIA_railway_and_port_extensions
+		SIA_chemical_imports
+		SIA_kasetsart_university
+		SIA_mechanization_of_agriculture
+		SIA_irrigation
+		SIA_farmers_into_the_city
+		SIA_textile_mills
+		SIA_foreign_currency_exchange
+		SIA_public_credit
+		SIA_the_army_of_siam
+		SIA_prepare_for_a_long_war
+		SIA_shuffle_pridi_to_the_minister_of_interior
+		SIA_civil_nationalism
+		SIA_dominate_public_symbols
+		SIA_thammasat_university
+		SIA_phibuns_premiership
+		SIA_expand_domestic_arms_workshops
+		SIA_look_to_european_fascism
+		SIA_the_songsuradet_rebellion
+		SIA_suspend_ordinary_legal_procedures
+		SIA_pan_thaiism
+		SIA_recover_indochina
 		SIA_new_territories_administration
+		SIA_crack_down_of_foreign_merchants
+		SIA_royal_palace_bureau_directive_no_1523
+		SIA_end_factionalism
+		SIA_prepare_northern_infrastructure_for_war
+		SIA_yield_the_air_war
+		SIA_specialized_warfare
+		SIA_night_time_training
+		SIA_camouflage
+		SIA_steel_arteries
 
-		##1936
-		SIA_the_khana_ratsadon 									#7
-		SIA_for_the_preservation_of_siamese_independence		#35
-		SIA_shuffle_pridi_to_the_minister_of_interior			#35
-		SIA_thammasat_university								#70
-		SIA_military_academies_indoctrination					#35
-		SIA_hold_military_parades								#70
-		SIA_sideline_disloyal_officers							#35
-
-		SIA_the_army_of_siam									#35
-		SIA_intermediate_war_preparation						#35
-																#357
-
-		#1937
-		SIA_industrialization_drive								#35
-		SIA_revision_of_unequal_treaties						#35
-		SIA_thai_rice_company									#35
-		SIA_diversity_foreign_reserves							#70
-		SIA_contingency_funds									#70
-		SIA_all_weather_roads									#35
-		SIA_reduction_of_agricultural_yield_taxes				#35
-		SIA_sell_privy_purse_lands								#35
-																#707
-
-		#1938
-		SIA_a_fledgling_tobacco_industry						#35
-		SIA_drum_up_irredentism									#35
-		SIA_siam_cement_group									#35
-		SIA_boon_rawd_brewery									#35
-		SIA_revise_the_taxation_system							#70
-		SIA_increase_rice_exports								#35
-		SIA_direct_funds_from_the_military_towards_development	#35
-		SIA_prepare_northern_infrastructure_for_war				#35
-		SIA_phibuns_premiership									#70
-																#1092
-		#1939
-		SIA_look_to_european_fascism							#35
-		SIA_the_songsuradet_rebellion							#70
-		SIA_expand_domestic_arms_workshops						#70
-		SIA_siamese_youth_movement								#35
-		SIA_territorial_defense_student							#35
-		SIA_pan_thaiism											#35
-		SIA_domestic_arms_industry								#70
-		SIA_crack_down_of_foreign_merchants						#35
-
-		#1940
-
-
-		SIA_royal_thai_ordnance_factory							#70
-		SIA_increase_rice_exports								#70
-		SIA_prepare_for_the_next_blockade						#70
-		SIA_war_material_substitutions 							#70
-		SIA_recover_indochina									#70									
-
-		SIA_census_the_hill_tribes								#35
-
-		
 
 
 
@@ -102,12 +92,13 @@ SIA_historical = {
 	}
 
 	ideas = {
-		
+		idea_SIA_bank_of_siam = 5
 	}
 
 	traits = {
-		captain_of_industry = 5
-		war_industrialist = 5
+		silent_workhorse = 10
+		captain_of_industry = 7
+		war_industrialist = 3
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -120,7 +111,8 @@ SIA_historical = {
 	}
 
 	focus_factors = {
-		
+		SIA_retake_lost_british_states = 0
+		SIA_demand_the_return_of_lost_territory = 0
 	}
 
 }

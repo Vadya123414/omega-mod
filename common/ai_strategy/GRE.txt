@@ -28,12 +28,12 @@ gre_dont_spend_pp = {
 		abort_when_not_enabled = no
 
 	ai_strategy = {
-		type = pp_spend_amount
+		type = pp_spend_priority
 		id = army_advisor
 		value = -1000
 	}
 		ai_strategy = {
-		type = pp_spend_amount
+		type = pp_spend_priority
 		id = political_advisor
 		value = -1000
 	}
