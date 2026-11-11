@@ -536,11 +536,12 @@ ENG_supermarine_organization = {
 	icon = GFX_idea_supermarine
 	
 	allowed = {	
-		tag = HON
-		tag = IRE
-		tag = CUB
-		tag = ENG
-		has_dlc = "Arms Against Tyranny"
+		OR = {
+			tag = HON
+			tag = IRE
+			tag = CUB
+			tag = ENG
+		}
 	}
 
 	equipment_type = {
