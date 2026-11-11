@@ -193,9 +193,9 @@ infantry_generic = {
 				infantry = 12
 			}
 		}
-		replace_at_match = 0.8
+		replace_at_match = 0.9
 		replace_with = infantry_late
-		target_min_match = 0.4
+		target_min_match = 0.9
 	}
 	infantry_late = {
 	
