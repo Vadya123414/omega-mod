@@ -1,14 +1,3 @@
-boost_div_number = { 
-	allowed = {always = yes}
-	enable = {
-		always = yes
-	}
-	abort = { always = no }
-	ai_strategy = {
-		type = ai_wanted_divisions_factor
-		value = 100000
-	}
-}
 boost_div_upgrades = { 
 	enable = {
 		always = yes
@@ -63,7 +52,17 @@ default_unit_production = {
 		ai_strategy = {
 		type = role_ratio
 		id = cavalry
-		value = 100
+		value = -100
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = suppression
+		value = -100
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -100
 	}
 
 	ai_strategy = {
@@ -137,7 +136,7 @@ default_air_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = armor
-		value = -10000
+		value = -100
 	}
 		ai_strategy = {
 		type = role_ratio
@@ -223,7 +222,7 @@ default_paratroopers_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
-		value = -100
+		value = -1000
 	}
 }
 default_mountaineers_unit_production = {

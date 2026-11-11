@@ -34,6 +34,8 @@ SIA_historical = {
 		SIA_embed_technocrats_in_civilian_institutions
 		SIA_drum_up_irredentism
 		SIA_war_fervor
+		SIA_shuffle_pridi_to_the_minister_of_interior
+		SIA_the_true_heirs_of_1932
 		SIA_the_peoples_day
 		SIA_industrialization_drive
 		SIA_asian_financial_compact
@@ -57,7 +59,6 @@ SIA_historical = {
 		SIA_public_credit
 		SIA_the_army_of_siam
 		SIA_prepare_for_a_long_war
-		SIA_shuffle_pridi_to_the_minister_of_interior
 		SIA_civil_nationalism
 		SIA_dominate_public_symbols
 		SIA_thammasat_university
@@ -93,12 +94,15 @@ SIA_historical = {
 
 	ideas = {
 		idea_SIA_bank_of_siam = 5
+		silent_workhorse = 100
+		captain_of_industry = 70
+		war_industrialist = 30
 	}
 
 	traits = {
-		silent_workhorse = 10
-		captain_of_industry = 7
-		war_industrialist = 3
+		silent_workhorse = 100
+		captain_of_industry = 70
+		war_industrialist = 30
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
