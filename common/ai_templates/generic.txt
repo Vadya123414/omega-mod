@@ -77,7 +77,7 @@ garrison_generic = {
 	role = garrison
 	
 	upgrade_prio = {
-		base = 0.5
+		base = 0.1
 	}
 
 	garrison_generic = {
@@ -110,7 +110,7 @@ suppression_generic = {
 		
 	role = suppression
 	upgrade_prio = {
-		base = 1
+		base = 0.1
 	}
 
 	suppression_generic = {
@@ -144,7 +144,7 @@ infantry_generic = {
 	}
 		
 	upgrade_prio = {
-		base = 3
+		base = 50
 	}
 	
 	infantry_early = {
@@ -241,7 +241,7 @@ mountaineers_generic = {
 		JAP
 	}
 	upgrade_prio = {
-		base = 2
+		base = 100
 		modifier = {
 			factor = 0
 			NOT = {
@@ -332,7 +332,7 @@ rangers_generic = {
 	role = rangers
 	
 	upgrade_prio = {
-		base = 2
+		base = 100
 		modifier = {
 			factor = 0
 			NOT = {

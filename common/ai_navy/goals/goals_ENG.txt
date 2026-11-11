@@ -9,17 +9,6 @@ ENG_naval_invasion_support = {
     max_priority = 14
 }
 
-ENG_mine_sweeping = {
-    objective_type = mines_sweeping
-
-    available_for = {
-        ENG
-    }
-
-    min_priority = 2
-    max_priority = 8
-}
-
 ENG_invasion_defense = {
     objective_type = naval_invasion_defense
 
@@ -73,17 +62,6 @@ ENG_naval_dominance = {
 
     min_priority = 1
     max_priority = 20
-}
-
-ENG_mine_laying = {
-    objective_type = mines_planting
-
-    available_for = {
-        ENG
-    }
-
-    min_priority = 2
-    max_priority = 8
 }
 
 ENG_training = {

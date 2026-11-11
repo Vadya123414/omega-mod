@@ -9,17 +9,6 @@ SOV_naval_invasion_support = {
     max_priority = 13
 }
 
-SOV_mine_sweeping = {
-    objective_type = mines_sweeping
-
-    available_for = {
-        SOV
-    }
-
-    min_priority = 3
-    max_priority = 8
-}
-
 SOV_invasion_defense = {
     objective_type = naval_invasion_defense
 
@@ -72,17 +61,6 @@ SOV_naval_dominance = {
     }
 
     min_priority = 1
-    max_priority = 8
-}
-
-SOV_mine_laying = {
-    objective_type = mines_planting
-
-    available_for = {
-        SOV
-    }
-
-    min_priority = 3
     max_priority = 8
 }
 

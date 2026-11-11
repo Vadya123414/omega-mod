@@ -35,7 +35,7 @@ SIA_historical = {
 		SIA_drum_up_irredentism
 		SIA_war_fervor
 		SIA_shuffle_pridi_to_the_minister_of_interior
-		SIA_the_true_heirs_of_1932
+		SIA_direct_funds_from_the_military_towards_development
 		SIA_the_peoples_day
 		SIA_industrialization_drive
 		SIA_asian_financial_compact
@@ -93,7 +93,7 @@ SIA_historical = {
 	}
 
 	ideas = {
-		idea_SIA_bank_of_siam = 5
+		idea_SIA_bank_of_siam = 50
 		silent_workhorse = 100
 		captain_of_industry = 70
 		war_industrialist = 30

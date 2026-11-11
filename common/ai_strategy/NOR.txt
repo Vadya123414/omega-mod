@@ -22,12 +22,12 @@ NOR_in_danger = {
 
 	ai_strategy = {
 		type = naval_avoid_region
-		id = 173 #adriatic
+		id = 173
 		value = 500
 	}
 			ai_strategy = {
 		type = naval_avoid_region
-		id = 174 #adriatic
+		id = 174
 		value = 500
 	}
 }

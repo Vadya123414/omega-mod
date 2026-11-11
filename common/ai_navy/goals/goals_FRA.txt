@@ -9,17 +9,6 @@ FRA_naval_invasion_support = {
     max_priority = 14
 }
 
-FRA_mine_sweeping = {
-    objective_type = mines_sweeping
-
-    available_for = {
-        FRA
-    }
-
-    min_priority = 2
-    max_priority = 8
-}
-
 FRA_invasion_defense = {
     objective_type = naval_invasion_defense
 
@@ -75,16 +64,6 @@ FRA_naval_dominance = {
     max_priority = 13
 }
 
-FRA_mine_laying = {
-    objective_type = mines_planting
-
-    available_for = {
-        FRA
-    }
-
-    min_priority = 2
-    max_priority = 8
-}
 
 FRA_training = {
     objective_type = training

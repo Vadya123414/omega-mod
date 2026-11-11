@@ -90,7 +90,6 @@ on_actions = {
                             effect = { 
                                 every_country = {
                                     limit = {
-                                        has_global_flag = VUP_Hist_version
                                         is_ai = yes
                                         original_tag = POL
                                     }
@@ -130,7 +129,6 @@ on_monthly = {
                                                         AND = {
                                                             is_ai = yes
                                                             original_tag = INS
-                                                            NOT ={has_idea = training_fix_55}
                                                             NOT ={has_idea = training_fix_55}
                                                         }
                                                     }

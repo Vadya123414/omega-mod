@@ -34,27 +34,6 @@ RAJ_take_first_parlament = {
 		value = -10000
 	}
 }
-default_garrison_production = {
-	enable = {
-		and = {
-			any_controlled_state = {
-				is_coastal = yes
-			}
-		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
-		is_major = yes
-		}
-	}
-	abort = {
-		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
-		is_major = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = garrison
-		value = 1
-	}
-}
 default_area_priority = {
 	enable = {
 		NOT = { original_tag = GER }

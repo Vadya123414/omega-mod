@@ -9,16 +9,6 @@ GER_naval_invasion_support = {
     max_priority = 17
 }
 
-GER_mine_sweeping = {
-    objective_type = mines_sweeping
-
-    available_for = {
-        GER
-    }
-
-    min_priority = 3
-    max_priority = 8
-}
 
 GER_invasion_defense = {
     objective_type = naval_invasion_defense
@@ -73,17 +63,6 @@ GER_naval_dominance = {
 
     min_priority = 1
     max_priority = 13
-}
-
-GER_mine_laying = {
-    objective_type = mines_planting
-
-    available_for = {
-        GER
-    }
-
-    min_priority = 2
-    max_priority = 8
 }
 
 GER_training = {

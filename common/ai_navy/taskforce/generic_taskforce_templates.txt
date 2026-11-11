@@ -1,5 +1,16 @@
 StrikeForce_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
 		factor = 5
 	}
@@ -34,6 +45,18 @@ StrikeForce_1 = {
 }
 
 PatrolReconForce_1 = {
+		allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -66,9 +89,20 @@ PatrolReconForce_1 = {
 }
 
 PatrolDominanceForce_CA_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
-		factor = 5
+		factor = 3
 	}	
 	mission = { naval_patrol }
 	min_composition = {
@@ -100,7 +134,18 @@ PatrolDominanceForce_CA_1 = {
 }
 
 PatrolDominanceForce_BC_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
 		factor = 5
 	}	
@@ -134,9 +179,20 @@ PatrolDominanceForce_BC_1 = {
 }
 
 ConvoyRaiding_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
-		factor = 3
+		factor = 4
 	}
 	keep_updated = yes
 	mission = { convoy_raiding }
@@ -154,9 +210,20 @@ ConvoyRaiding_1 = {
 }
 
 ConvoySurfaceRaiding_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
-		factor = 2
+		factor = 4
 	}
 	keep_updated = yes
 	mission = { convoy_raiding }
@@ -189,7 +256,18 @@ ConvoySurfaceRaiding_1 = {
 }
 
 ConvoyEscort_1 = {
-
+	allowed = {
+		NOT = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = SOV
+			original_tag = USA
+			original_tag = ITA
+			original_tag = GER
+			original_tag = FRA
+			original_tag = NOR
+		}		
+	}
 	ai_will_do = {
 		factor = 1
 	}	

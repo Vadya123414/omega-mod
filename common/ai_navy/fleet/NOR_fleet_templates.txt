@@ -1,8 +1,16 @@
-NOR_home_fleet = {
+NOR_raiding_fleet_1 = {
 	required_taskforces = {
-		ENG_PatrolReconForce_1 = 999
+		NOR_ConvoyRaiding_1 = 999
 	}	
 	optional_taskforces = {
-		ENG_PatrolReconForce_1 = 999
+		NOR_ConvoyRaiding_1 = 999
+	}
+}
+NOR_raiding_fleet_2 = {
+	required_taskforces = {
+		NOR_ConvoyRaiding_2 = 999
+	}	
+	optional_taskforces = {
+		NOR_ConvoyRaiding_2 = 999
 	}
 }

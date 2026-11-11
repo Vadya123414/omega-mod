@@ -89,7 +89,55 @@ BOTS = {
             army_experience = 25
         }
     }
+    startxp_chi = {
 
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.1}
+            is_ai = yes
+            has_civil_war = no
+                or = {
+                    original_tag = CHI
+                    original_tag = PRC
+                    original_tag = GXC
+                    original_tag = SHX
+                    original_tag = XSM
+                    original_tag = YUN
+                    original_tag = SIK 
+                    original_tag = MEN
+            }
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            army_experience = 5
+        }
+    }
+        start_air_xp_jap = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            if = {date > 1936.1.1}
+            is_ai = yes
+            has_civil_war = no
+                    original_tag = JAP
+		}
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 1000}
+        cost = 0
+        complete_effect = {
+            air_experience = 45
+        }
+    }
     set_grand_doctrine_36_not_partisan= {
 
     fire_only_once = yes

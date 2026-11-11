@@ -9,17 +9,6 @@ JAP_naval_invasion_support = {
     max_priority = 20
 }
 
-JAP_mine_sweeping = {
-    objective_type = mines_sweeping
-
-    available_for = {
-        JAP
-    }
-
-    min_priority = 3
-    max_priority = 8
-}
-
 JAP_invasion_defense = {
     objective_type = naval_invasion_defense
 
@@ -73,17 +62,6 @@ JAP_naval_dominance = {
 
     min_priority = 1
     max_priority = 13
-}
-
-JAP_mine_laying = {
-    objective_type = mines_planting
-
-    available_for = {
-        JAP
-    }
-
-    min_priority = 1
-    max_priority = 5
 }
 
 JAP_training = {

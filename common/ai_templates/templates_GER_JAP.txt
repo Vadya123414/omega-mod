@@ -5,7 +5,7 @@ infantry_generic = {
 		JAP
 	}
 	upgrade_prio = {
-		base = 3
+		base = 50
 	}
 	
 	infantry_early = {
@@ -93,7 +93,7 @@ available_for = {
 	JAP
 }
 	upgrade_prio = {
-		base = 2
+		base = 100
 		modifier = {
 			factor = 0
 			NOT = {
@@ -138,7 +138,7 @@ available_for = {
 	role = rangers
 	
 	upgrade_prio = {
-		base = 2
+		base = 100
 		modifier = {
 			factor = 0
 			NOT = {

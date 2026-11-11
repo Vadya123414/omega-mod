@@ -1,56 +1,12 @@
-NOR_StrikeForce_1 = {
+NOR_PatrolReconForce_1 = {
 	allowed = {
 		original_tag = NOR
 	}
 	ai_will_do = {
 		factor = 1
 	}
-	keep_updated = yes
-	mission = { naval_strike }
-	min_composition = {
-		carrier = {
-			amount = 1
-		}
-		destroyer = {
-			amount = 1
-		}
-	}
-	
-	optimal_composition = {
-		carrier = {
-			amount = 999
-		}
-		battleship = {
-			amount = 999
-		}
-		battle_cruiser = {
-			amount = 999
-		}
-		heavy_cruiser = {
-			amount = 999
-		}
-		light_cruiser = {
-			amount = 999
-		}
-		destroyer = {
-			amount = 999
-
-		}
-	}
-}
-
-NOR_PatrolReconForce_1 = {
-	allowed = {
-		original_tag = NOR
-	}
-	ai_will_do = {
-		factor = 5
-	}
 	mission = { naval_patrol }
 	min_composition = {
-		light_cruiser = {
-			amount = 1
-		}
 		destroyer = {
 			amount = 1
 		}
@@ -83,7 +39,7 @@ NOR_PatrolDominanceForce_BC_1 = {
 		original_tag = NOR
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 1
 	}	
 	mission = { naval_dominance }
 	min_composition = {
@@ -113,59 +69,18 @@ NOR_PatrolDominanceForce_BC_1 = {
 		}
 	}
 }
-
-NOR_NavalInvasionSupport_1 = {
-	allowed = {
-		original_tag = NOR
-	}
-	ai_will_do = {
-		factor = 5
-	}	
-	mission = { naval_invasion_support }
-	min_composition = {
-		battleship = {
-			amount = 1
-		}
-		destroyer = {
-			amount = 3
-		}
-	}
-
-	optimal_composition = {
-		carrier = {
-			amount = 999
-		}
-		battleship = {
-			amount = 999
-		}
-		battle_cruiser = {
-			amount = 999
-		}
-		heavy_cruiser = {
-			amount = 999
-		}
-		light_cruiser = {
-			amount = 999
-		}
-		destroyer = {
-			amount = 999
-
-		}
-	}
-}
-
 NOR_ConvoyRaiding_1 = {
 	allowed = {
 		original_tag = NOR
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 10
 	}
 	keep_updated = yes
 	mission = { convoy_raiding }
 	min_composition = {
 		submarine = {
-			amount = 5
+			amount = 1
 		}
 	}
 
@@ -175,21 +90,22 @@ NOR_ConvoyRaiding_1 = {
 		}
 	}
 }
-
-NOR_ConvoyEscort_1 = {
+NOR_ConvoyRaiding_2 = {
 	allowed = {
 		original_tag = NOR
 	}
 	ai_will_do = {
-		factor = 5
-	}	
-	mission = { convoy_escort }
+		factor = 10
+	}
+	keep_updated = yes
+	mission = { convoy_raiding }
 	min_composition = {
 		destroyer = {
-			amount = 5
+			amount = 1
+
 		}
 	}
-	
+
 	optimal_composition = {
 		carrier = {
 			amount = 999
@@ -211,5 +127,5 @@ NOR_ConvoyEscort_1 = {
 
 		}
 	}
-	}
+}
 

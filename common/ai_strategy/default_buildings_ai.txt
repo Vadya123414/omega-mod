@@ -28,6 +28,81 @@ sov_strategy_arms_factory_building = {
 	}
 
 }
+GER_infrastructure_0_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		57 = { infrastructure < 5 }
+	}
+	abort = {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 57
+		value = 1000000
+	}
+}
+GER_infrastructure_1_start= {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		55 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 55
+		value = 1000000
+	}
+}
+GER_infrastructure_2_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		66 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 66
+		value = 1000000
+	}
+}
+GER_infrastructure_3_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		978 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 978
+		value = 1000000
+	}
+}
+GER_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				978 = { infrastructure > 4 }
+				date < 1937.8.1
+				original_tag = GER
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1000
+	}
+}
 MINOR_strategy_industrial_complex_building_nonhist = {
 		enable = {
 			AND = {
@@ -42,6 +117,7 @@ MINOR_strategy_industrial_complex_building_nonhist = {
 					not = {original_tag = SOV}
 					not = {original_tag = JAP}
 					not = {original_tag = SIA}
+					not = {original_tag = RAJ}
 					date < 1936.10.1
 				}
 		}
@@ -67,6 +143,7 @@ MINOR_strategy_arms_factory_building_nonhist  = {
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
 						not = {original_tag = SIA}
+						not = {original_tag = RAJ}
 				date > 1936.10.1
 				}
 		}
@@ -93,6 +170,7 @@ MINOR_strategy_industrial_complex_building_hist = {
 					not = {original_tag = SOV}
 					not = {original_tag = JAP}
 					not = {original_tag = SIA}
+					not = {original_tag = RAJ}
 					date < 1937.8.1
 				}
 		}
@@ -119,6 +197,7 @@ MINOR_strategy_arms_factory_building_hist = {
 						not = {original_tag = SOV}
 						not = {original_tag = JAP}
 						not = {original_tag = SIA}
+						not = {original_tag = RAJ}
 				date > 1937.8.1
 				}
 		}
@@ -134,9 +213,7 @@ MAJOR_strategy_industrial_complex_building = {
 			AND = {
 				OR = {
 					original_tag = ITA
-					original_tag = GER
 					original_tag = ENG
-					original_tag = FRA
 				}
 				date < 1937.8.1
 				}
@@ -330,39 +407,11 @@ bots_usa_synthetic_refinery_building = {
 #		value = 1000
 #	}
 #}
-JAP_dockyard_building = {
-		enable = {
-			AND = {
-				original_tag = JAP
-				date > 1938.5.15 
-			}
-		}
-		abort_when_not_enabled = yes
-		ai_strategy = {
-		type = building_target
-		id = dockyard
-		value = 400
-	}
-}
-JAP_arms_factory = {
-		enable = {
-			AND = {
-				original_tag = JAP
-				date > 1939.6.15
-				}
-		}
-		abort_when_not_enabled = yes
-		ai_strategy = {
-		type = building_target
-		id = arms_factory
-		value = 1000
-	}
-}
 JAP_industrial_complex_building = {
 		enable = {
 			AND = {
 				original_tag = JAP
-				date < 1938.5.15
+				date < 1936.6.1
 			}
 				}
 		abort_when_not_enabled = yes
@@ -372,7 +421,48 @@ JAP_industrial_complex_building = {
 		value = 1000
 	}
 }
-
+JAP_arms_factory_1 = {
+		enable = {
+			AND = {
+				original_tag = JAP
+				date > 1936.6.1
+				}
+		}
+		abort = {CHI = {has_capitulated = yes}}
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+}
+JAP_dockyard_building = {
+		enable = {
+			AND = {
+				CHI = {has_capitulated = yes}
+				original_tag = JAP
+			}
+		}
+		abort = {dockyard > 85}
+		ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 400
+	}
+}
+JAP_arms_factory_2 = {
+		enable = {
+			AND = {
+				original_tag = JAP
+				dockyard > 90
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+}
 AST_strategy_industrial_complex_building = {
 		enable = {
 			AND = {
@@ -521,6 +611,64 @@ PHI_strategy_arms_factory_building = {
 		value = 900
 	}
 }
+RAJ_infrastructure_0 = {
+	allowed = {
+		original_tag = RAJ
+		}
+	enable = {
+		date > 1936.1.1
+	}
+	abort= {439 = {if = {limit = {infrastructure > 4}}}}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 439
+		value = 1000000
+	}
+}
+RAJ_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				439 = {if = {limit = {infrastructure < 5}}}
+				date < 1937.8.1
+				original_tag = RAJ
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1000
+	}
+}
+RAJ_strategy_arms_factory_building_1 = {
+		enable = {
+				AND = {
+					date > 1937.8.1
+					original_tag = RAJ
+				}
+		}
+	abort = { date > 1940.1.1}
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
+RAJ_strategy_arms_factory_building_1 = {
+		enable = {
+				AND = {
+				426 = {if = {limit = {infrastructure < 5}}}
+					original_tag = RAJ
+				}
+		}
+	abort_when_not_enabled = no
+		ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 900
+	}
+}
 RAJ_industrial_infrastructure_1 = {
 	allowed = {
 		original_tag = RAJ
@@ -533,7 +681,7 @@ RAJ_industrial_infrastructure_1 = {
 		type = build_building
 		id = industrial_infrastructure
 		target = 429
-		value = 100000
+		value = 1000
 	}
 }	
 RAJ_infrastructure_1 = {
@@ -548,7 +696,7 @@ RAJ_infrastructure_1 = {
 		type = build_building
 		id = infrastructure
 		target = 429
-		value = 1000000
+		value = 10000
 	}
 }
 RAJ_industrial_infrastructure_2 = {
@@ -563,7 +711,7 @@ RAJ_industrial_infrastructure_2 = {
 		type = build_building
 		id = industrial_infrastructure
 		target = 427
-		value = 100000
+		value = 1000
 	}
 }	
 RAJ_infrastructure_2 = {
@@ -578,7 +726,7 @@ RAJ_infrastructure_2 = {
 		type = build_building
 		id = infrastructure
 		target = 427
-		value = 1000000
+		value = 10000
 	}
 }
 RAJ_industrial_infrastructure_3 = {
@@ -593,7 +741,7 @@ RAJ_industrial_infrastructure_3 = {
 		type = build_building
 		id = industrial_infrastructure
 		target = 431
-		value = 100000
+		value = 1000
 	}
 }	
 RAJ_infrastructure_3 = {
@@ -608,7 +756,7 @@ RAJ_infrastructure_3 = {
 		type = build_building
 		id = infrastructure
 		target = 431
-		value = 1000000
+		value = 10000
 	}
 }
 RAJ_industrial_infrastructure_4 = {
@@ -623,7 +771,7 @@ RAJ_industrial_infrastructure_4 = {
 		type = build_building
 		id = industrial_infrastructure
 		target = 426
-		value = 100000
+		value = 1000
 	}
 }	
 RAJ_infrastructure_4 = {
@@ -638,7 +786,7 @@ RAJ_infrastructure_4 = {
 		type = build_building
 		id = infrastructure
 		target = 426
-		value = 1000000
+		value = 1000
 	}
 }
 SIA_infrastructure = {
@@ -661,12 +809,12 @@ SIA_industrial_complex = {
 		original_tag = SIA
 		}
 	enable = {
-		1076 = { infrastructure < 5 }
+		1076 = { infrastructure > 4 }
 		SIA = {NOT = {has_completed_focus = SIA_the_army_of_siam}}
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = industrial_complex
 		value = 1000
 	}
@@ -676,12 +824,11 @@ SIA_arms_factory = {
 		original_tag = SIA
 		}
 	enable = {
-		1076 = { infrastructure > 5 }
 		SIA = {has_completed_focus = SIA_the_army_of_siam}
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = arms_factory
 		value = 1000
 	}
