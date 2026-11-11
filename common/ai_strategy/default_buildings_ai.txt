@@ -666,7 +666,7 @@ SIA_industrial_complex = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_target
+		type = build_building
 		id = industrial_complex
 		value = 1000
 	}
@@ -681,7 +681,7 @@ SIA_arms_factory = {
 	}
 	abort_when_not_enabled = yes 
 	ai_strategy = {
-		type = build_target
+		type = build_building
 		id = arms_factory
 		value = 1000
 	}

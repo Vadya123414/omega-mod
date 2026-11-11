@@ -1186,7 +1186,6 @@ TUR_industrial_projects_category = {
 				free_building_slots = {
 					building = synthetic_refinery
 					size > 1
-					include_locked = yes
 				}
 			}
 			has_tech = synth_oil_experiments

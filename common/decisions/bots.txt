@@ -1095,7 +1095,7 @@ set_spec_doctrine_40 = {
         complete_effect = {
         }
     } 
-            bot_dem_switch_spirit = {
+        bot_dem_switch_spirit = {
 
 		fire_only_once = yes
 
@@ -1114,6 +1114,30 @@ set_spec_doctrine_40 = {
         complete_effect = {
         }
     } 
+        bot_cav_div = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+             is_ai = yes
+            }
+		visible = {
+            is_ai = yes
+		}
+        ai_will_do = {base = 9999}
+        cost = 0
+        complete_effect = {
+            	division_template = {
+					name = "Cav Suppresion"
+					division_names_group = MEX_INF_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+					}
+					priority = 0
+				}
+        }
+    }
 
 	MAN_develop_kirin_aluminium_deposits_ai = { #328
 		

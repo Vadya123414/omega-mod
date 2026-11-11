@@ -1,15 +1,14 @@
 boost_div_number = { 
-	allowed = {always = yes}
 	enable = {
 		always = yes
 	}
 	abort = { always = no }
 	ai_strategy = {
 		type = ai_wanted_divisions_factor
-		value = 100000
+		value = 1000
 	}
 }
-boost_div_upgrades = { 
+boost_upgrades = { 
 	enable = {
 		always = yes
 	}
@@ -22,17 +21,17 @@ boost_div_upgrades = {
 	ai_strategy = {
 		type = land_xp_spend_priority
 		id = equipment_variant
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = air_xp_spend_priority
 		id = equipment_variant
-		value = 1000
+		value = 100
 	}
 		ai_strategy = {
 		type = navy_xp_spend_priority
 		id = equipment_variant
-		value = 1000
+		value = 100
 	}
 }
 default_unit_production = {
@@ -69,9 +68,71 @@ default_unit_production = {
 		id = cavalry
 		value = -100
 	}
+		ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
 
-	ai_strategy = {
+		ai_strategy = {
 		type = role_ratio
+		id = motorized
+		value = -100
+	}
+		ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -100
+	}
+}
+default_unit_production_JAP = {
+	allowed = {original_tag = JAP}
+	enable = {
+		always = yes
+		}
+	abort_when_not_enabled = no
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = convoy
+		value = 1
+	}
+	ai_strategy = { 
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 10
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+		ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+		ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -100
+	}
+		ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+
+		ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -100
+	}
+		ai_strategy = {
+		type = template_prio
 		id = motorized
 		value = -100
 	}
@@ -229,6 +290,11 @@ default_paratroopers_unit_production = {
 		id = paratroopers
 		value = -100
 	}
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -100
+	}
 }
 default_mountaineers_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
@@ -242,6 +308,11 @@ default_mountaineers_unit_production = {
 				original_tag = FRA
 				original_tag = BEL
 				original_tag = HOL
+				original_tag = SWI
+				original_tag = FIN
+				original_tag = LAT
+				original_tag = EST
+				original_tag = LIT
 			}
 		}
 	abort_when_not_enabled = no	
@@ -249,6 +320,11 @@ default_mountaineers_unit_production = {
 		type = role_ratio
 		id = mountaineers
 		value = 1000
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = 1000
+	}
 	}
 }
 default_marines_unit_production = {
@@ -259,6 +335,11 @@ default_marines_unit_production = {
 	abort_when_not_enabled = no	
 	ai_strategy = {
 		type = role_ratio
+		id = marines
+		value = -100
+	}
+	ai_strategy = {
+		type = template_prio
 		id = marines
 		value = -100
 	}
@@ -275,11 +356,21 @@ default_rangers_unit_production = {
 				original_tag = FRA
 				original_tag = BEL
 				original_tag = HOL
+				original_tag = SWI
+				original_tag = FIN
+				original_tag = LAT
+				original_tag = EST
+				original_tag = LIT
 			}
 		}
 	abort_when_not_enabled = no	
 	ai_strategy = {
 		type = role_ratio
+		id = rangers
+		value = 1000
+	}
+		ai_strategy = {
+		type = template_prio
 		id = rangers
 		value = 1000
 	}

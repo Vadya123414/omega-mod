@@ -1641,7 +1641,6 @@ country_event = {
 			base = 0
 		} # Оставить доминионом
 		name = imperial_annex.1.b
-		ai_will_do = { factor = 1 }
 		hidden_effect = {
 			country_event = { id = imperial_annex.2 days = 1 }
 		}

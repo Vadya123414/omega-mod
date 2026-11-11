@@ -129,17 +129,17 @@ at_start_we_need_manpower_hist = {
 	}
 
 	ai_strategy = {
-		type = pp_spend_amount
+		type = pp_spend_priority
 		id = army_advisor
 		value = -1000
 	}
 		ai_strategy = {
-		type = pp_spend_amount
+		type = pp_spend_priority
 		id = political_advisor
 		value = -1000
 	}
 		ai_strategy = {
-		type = pp_spend_amount
+		type = pp_spend_priority
 		id = decision
 		value = -1000
 	}

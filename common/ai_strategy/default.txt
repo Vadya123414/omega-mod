@@ -33,11 +33,6 @@ RAJ_take_first_parlament = {
 		id = political_advisor
 		value = -10000
 	}
-		ai_strategy = {
-		type = pp_spend_priority
-		id = decision
-		value = -10000
-	}
 }
 default_garrison_production = {
 	enable = {
