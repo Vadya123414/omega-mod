@@ -21,22 +21,6 @@ CHI_dont_waste_on_offensive_air_early = {
 	}
 }
 
-CHI_armored_production = {
-	allowed = { original_tag = CHI }
-	enable = {
-		ai_wants_divisions > 0 #Decreasing the amount of tanks the AI wants
-	}
-	abort = {
-		ai_wants_divisions < 1 #Decreasing the amount of tanks the AI wants
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 0
-	}
-}
-
 CHI_dont_upgrade_to_weapons_2_too_early = {
 	allowed = {
 		original_tag = CHI
@@ -52,22 +36,6 @@ CHI_dont_upgrade_to_weapons_2_too_early = {
 		type = production_upgrade_desire_offset
 		id = infantry_equipment_2
 		value = -100
-	}
-}
-
-CHI_highered_armored_production = {
-	allowed = { original_tag = CHI }
-	enable = {
-		num_of_military_factories > 109
-	}
-	abort = {
-		num_of_military_factories < 110
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 0
 	}
 }
 
@@ -932,7 +900,7 @@ PRC_focus_militias_early_game = {
 	ai_strategy = { #All you need is militias in early game
 		type = role_ratio
 		id = militias
-		value = 300
+		value = 3000
 	}
 
 }

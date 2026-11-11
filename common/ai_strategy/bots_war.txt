@@ -36,7 +36,6 @@ boost_div_upgrades = {
 	}
 }
 default_unit_production = {
-	allowed = {always = yes}
 	enable = {
 		always = yes
 		}
@@ -61,9 +60,14 @@ default_unit_production = {
 		value = 100
 	}
 		ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+		ai_strategy = {
 		type = role_ratio
 		id = cavalry
-		value = 100
+		value = -100
 	}
 
 	ai_strategy = {

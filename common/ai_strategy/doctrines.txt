@@ -13,63 +13,9 @@
 # marines
 # mountaineer
 
-##### AI strategies to discriminate against horses #####
-
-DOCTRINE_stop_making_horsies = {
-	enable = {
-		num_of_factories > 20
-		date > 1938.1.1
-	}
-	abort = {
-		always = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = cavalry
-		value = -100 # -100% cav
-	}		
-}
-
-# No cav if we have motor inf
-DOCTRINE_no_cavalry = {
-	enable = {
-		has_tech = motorised_infantry
-	}
-	abort = {
-		always = no
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = cavalry
-		value = -100 
-	}
-}
 
 
 ##### Mobile Warfare branch #####
-
-DOCTRINE_MW_mobile_warfare_ratios = {
-	enable = {
-		has_doctrine = new_mobile_warfare
-	}
-	abort = {
-		always = no
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 10
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = motorized
-		value = 2
-	}
-}
 
 ### AIFC stuff for Mobile Warfare
 # Base value comes from FORCE_CONCENTRATION_UNIT_RATIO_BASE
@@ -123,56 +69,6 @@ DOCTRINE_MW_aifc_modern_blitzkrieg = {
 }
 
 
-##### Superior Firepower branch #####
-
-DOCTRINE_SF_superior_firepower_ratios = {
-	enable = {
-		has_doctrine = superior_firepower
-	}
-	abort = {
-		#has_tech = concentrated_fire_plans
-		always = no
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 10
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = artillery
-		value = 15
-	}
-}
-
-DOCTRINE_SF_concentrated_fire_plans_ratios = {
-	enable = {
-		has_completed_subdoctrine = fire_concentration
-	}
-	abort = {
-		always = no
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -5
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 10
-	}
-	#TODO_JBE: Add an OR/AND scope for appropriate air doctrine for this
-	ai_strategy = {
-		type = role_ratio
-		id = cas
-		value = 5
-	}
-}
 
 ### AIFC stuff for Superior Firepower
 # Base value comes from FORCE_CONCENTRATION_UNIT_RATIO_BASE
@@ -210,30 +106,6 @@ DOCTRINE_SF_aifc_shock_and_awe = {
 	ai_strategy = {
 		type = force_concentration_factor
 		value = 15  # base + 5 + 20 + 15 = 55 %
-	}
-}
-
-
-##### Grand Battleplan branch #####
-
-DOCTRINE_GB_grand_battle_plan_ratios = {
-	enable = {
-		has_doctrine = grand_battleplan
-	}
-	abort = {
-		always = no
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 10
-	}
-	
-	ai_strategy = {
-		type = role_ratio
-		id = anti_tank
-		value = 5
 	}
 }
 
@@ -309,51 +181,6 @@ DOCTRINE_GB_aifc_infiltration_in_depth = {
 	ai_strategy = {
 		type = force_concentration_factor
 		value = 10  # base + 5 + 10 + 10 = 40 %
-	}
-}
-
-
-##### Mass Assault branch #####
-
-DOCTRINE_MA_mass_assault_ratios = {
-	enable = {
-		has_doctrine = deep_battle
-	}
-	abort = {
-		always = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 25
-	}	
-
-	ai_strategy = {
-		type = role_ratio
-		id = anti_tank
-		value = 5
-	}
-}
-
-DOCTRINE_MA_large_front_operations_ratios = {
-	enable = {
-		has_completed_subdoctrine = deep_battle
-	}
-	abort = {
-		always = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 5
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 2
 	}
 }
 
