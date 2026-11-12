@@ -28,81 +28,6 @@ sov_strategy_arms_factory_building = {
 	}
 
 }
-GER_infrastructure_0_start = {
-	allowed = {
-		original_tag = GER
-		}
-	enable = {
-		57 = { infrastructure < 5 }
-	}
-	abort = {978 = { infrastructure > 4 }}
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 57
-		value = 1000000
-	}
-}
-GER_infrastructure_1_start= {
-	allowed = {
-		original_tag = GER
-		}
-	enable = {
-		55 = { infrastructure < 5 }
-	}
-	abort= {978 = { infrastructure > 4 }}
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 55
-		value = 1000000
-	}
-}
-GER_infrastructure_2_start = {
-	allowed = {
-		original_tag = GER
-		}
-	enable = {
-		66 = { infrastructure < 5 }
-	}
-	abort= {978 = { infrastructure > 4 }}
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 66
-		value = 1000000
-	}
-}
-GER_infrastructure_3_start = {
-	allowed = {
-		original_tag = GER
-		}
-	enable = {
-		978 = { infrastructure < 5 }
-	}
-	abort= {978 = { infrastructure > 4 }}
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 978
-		value = 1000000
-	}
-}
-GER_strategy_industrial_complex_building = {
-		enable = {
-			AND = {
-				978 = { infrastructure > 4 }
-				date < 1937.8.1
-				original_tag = GER
-				}
-		}
-		abort_when_not_enabled = yes
-		ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 1000
-	}
-}
 MINOR_strategy_industrial_complex_building_nonhist = {
 		enable = {
 			AND = {
@@ -428,7 +353,7 @@ JAP_arms_factory_1 = {
 				date > 1936.6.1
 				}
 		}
-		abort = {CHI = {has_capitulated = yes}}
+		abort = {has_completed_focus = JAP_reorganized_national_government}
 		ai_strategy = {
 		type = building_target
 		id = arms_factory
@@ -438,11 +363,11 @@ JAP_arms_factory_1 = {
 JAP_dockyard_building = {
 		enable = {
 			AND = {
-				CHI = {has_capitulated = yes}
+				has_completed_focus = JAP_reorganized_national_government
 				original_tag = JAP
 			}
 		}
-		abort = {dockyard > 85}
+		abort = {dockyard > 90}
 		ai_strategy = {
 		type = building_target
 		id = dockyard
@@ -552,21 +477,6 @@ AST_autarky_building_2 = {
 	}
 }	
 AST_infrastructure_1 = {
-	allowed = {
-		original_tag = AST
-		}
-	enable = {
-		has_war = yes
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 285
-		value = 1000000
-	}
-}
-GER_infrastructure_1 = {
 	allowed = {
 		original_tag = AST
 		}

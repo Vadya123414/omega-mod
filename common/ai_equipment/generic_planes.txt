@@ -105,7 +105,7 @@ GER_cas = {
 	priority = {
 		factor = 100
 	}
-		cas_2_improved = {
+		cas_2 = {
 		priority = {
 			factor = 2000
 			modifier = { 
@@ -116,13 +116,13 @@ GER_cas = {
 			match_value = 1500
 			type = small_plane_cas_airframe_2
 			modules = {
-				fixed_main_weapon_slot = heavy_bomb_locks
+				fixed_main_weapon_slot = heavy_bosmall_bomb_baymb_locks
 				fixed_auxiliary_weapon_slot_1 = bomb_locks
 				fixed_auxiliary_weapon_slot_2 = bomb_locks
 				engine_type_slot = engine_3_1x	
-				special_type_slot_1 = fuel_tanks_small	
-				special_type_slot_2 = fuel_tanks_small	
-				special_type_slot_3 = dive_brakes_small
+				special_type_slot_1 = armor_plate_small
+				special_type_slot_2 = self_sealing_fuel_tanks_small
+				special_type_slot_3 = fuel_tanks_small
 			}
 		}
 		allowed_modules = {
@@ -133,9 +133,10 @@ GER_cas = {
 			engine_3_1x
 			fuel_tanks_small
 			heavy_bomb_locks
+			self_sealing_fuel_tanks_small
 		}
 	}
-	cas_2 = { #Ju 87 G
+	cas_2_improved = { #Ju 87 G
 		priority = {
 			factor = 3000
 		}
@@ -162,6 +163,8 @@ GER_cas = {
 			engine_3_1x
 			fuel_tanks_small
 			rocket_rails
+			self_sealing_fuel_tanks_small
+			armor_plate_small
 		}
 	}
 }
@@ -188,10 +191,9 @@ GER_naval_bomber = {
 			type = small_plane_naval_bomber_airframe_1
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting
-				fixed_auxiliary_weapon_slot_1 = empty
 				engine_type_slot = engine_2_1x
-				special_type_slot_1 = lmg_defense_turret
-				special_type_slot_2 = floats	
+				special_type_slot_1 = fuel_tanks_small
+				special_type_slot_2 = fuel_tanks_small	
 			}
 		}
 
@@ -200,6 +202,7 @@ GER_naval_bomber = {
 			engine_2_1x
 			lmg_defense_turret
 			floats
+			fuel_tanks_small
 		}
 	}
 	naval_bomber_2 = { #He 115
@@ -212,10 +215,10 @@ GER_naval_bomber = {
 			type = small_plane_naval_bomber_airframe_2
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting
-				fixed_auxiliary_weapon_slot_1 = bomb_locks
-				engine_type_slot = engine_2_2x
-				special_type_slot_1 = floats
-				special_type_slot_2 = lmg_defense_turret	
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = fuel_tanks_small
+				special_type_slot_2 = fuel_tanks_small	
+				special_type_slot_3 = self_sealing_fuel_tanks_small
 			}
 
 		}
@@ -226,6 +229,9 @@ GER_naval_bomber = {
 			engine_2_2x
 			floats
 			lmg_defense_turret
+			engine_3_1x
+			self_sealing_fuel_tanks_small
+			fuel_tanks_small
 		}
 	}
 
@@ -312,10 +318,9 @@ GER_tactical_bomber = {
 			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay
-				fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = bomb_locks
+				fixed_auxiliary_weapon_slot_2 = bomb_locks
 				engine_type_slot = engine_2_2x
-				special_type_slot_1 = lmg_defense_turret_2x
-				special_type_slot_2 = lmg_defense_turret_2x	
 			}
 			
 		}
@@ -336,11 +341,12 @@ GER_tactical_bomber = {
 			type = medium_plane_airframe_2
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay
-				fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-				fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+				fixed_auxiliary_weapon_slot_1 = bomb_locks
+				fixed_auxiliary_weapon_slot_2 = bomb_locks
+				fixed_auxiliary_weapon_slot_3 = 
 				engine_type_slot = engine_3_2x
 				special_type_slot_1 = lmg_defense_turret_2x
-				special_type_slot_2 = empty	
+				special_type_slot_2 = lmg_defense_turret_2x
 			}
 			
 		}
@@ -422,11 +428,6 @@ GER_heavy_fighter = {
 
 	priority = {
 		factor = 500
-		modifier = {
-			has_war_with = ENG
-			NOT = { has_war_with = SOV }
-			factor = 2
-		}
 	}
 	heavy_fighter_1 = {
 		priority = {
@@ -451,6 +452,7 @@ GER_heavy_fighter = {
 			light_mg_4x
 			aircraft_cannon_1_2x
 			engine_2_2x
+			
 		}
 	}
 
@@ -464,11 +466,12 @@ GER_heavy_fighter = {
 			type = medium_plane_fighter_airframe_2
 			modules = {
 				fixed_main_weapon_slot = heavy_mg_4x
-				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
-				fixed_auxiliary_weapon_slot_2 = empty
+				fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+				fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+				fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
 				engine_type_slot = engine_3_2x
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty	
+				special_type_slot_1 = hmg_defense_turret_2x
+				special_type_slot_2 = hmg_defense_turret	
 			}
 			
 		}
@@ -477,6 +480,9 @@ GER_heavy_fighter = {
 			heavy_mg_4x
 			aircraft_cannon_1_2x
 			engine_3_2x
+			lmg_defense_turret_2x
+			hmg_defense_turret_2x
+			hmg_defense_turret
 		}
 	}
 

@@ -128,7 +128,10 @@ NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10             -- Max ahead of time pe
 	--NDefines.NAI.WANTED_UNITS_WEIGHT_FACTORIES = 1                        -- Вес военных заводов при расчете конечного желаемого количества подразделений
 	--NDefines.NAI.WANTED_UNITS_WEIGHT_MANPOWER = 1                         -- Вес доступности людских ресурсов при расчете конечного желаемого количества подразделений
 	--NDefines.NAI.WANTED_UNITS_MIN_DEFENCE_FACTOR = 1						-- Множитель для подразделений, необходимых для минимальной обороны
-	-- Конец расчета желаемого количества дивизий
+-- Конец расчета желаемого количества дивизий
+	-- <start> construction prioritization
+NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 2                                    -- base prio for infrastructure in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 5                                   -- base prio for supply buildings (supply hubs, ports) in the construction queue
 
 
 NDefines.NAI.WANTED_UNITS_MAX_WANTED_CAP = 999999999999							-- Максимальное желаемое количество дивизий для страны. Может превышаться определенными хардкодными множителями, но не базовой логикой расчета.

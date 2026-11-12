@@ -39,7 +39,7 @@ GER_autarky_building_1 = {
 		type = building_target
 		id = infrastructure
 		target = 105
-		value = 1
+		value = 3
 		
 	}
 }
@@ -55,7 +55,7 @@ GER_autarky_building_2 = {
 		type = building_target
 		id = industrial_infrastructure
 		target = 105
-		value = 1
+		value = 3
 		
 	}
 }	
@@ -121,5 +121,96 @@ GER_infrastructure_3 = {
 		target = 57
 		value = 1
 		
+	}
+}
+GER_infrastructure_1 = {
+	allowed = {
+		original_tag = AST
+		}
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes 
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 285
+		value = 1000000
+	}
+}
+
+GER_infrastructure_0_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		57 = { infrastructure < 5 }
+	}
+	abort = {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 57
+		value = 1000000
+	}
+}
+GER_infrastructure_1_start= {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		55 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 55
+		value = 1000000
+	}
+}
+GER_infrastructure_2_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		66 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 66
+		value = 1000000
+	}
+}
+GER_infrastructure_3_start = {
+	allowed = {
+		original_tag = GER
+		}
+	enable = {
+		978 = { infrastructure < 5 }
+	}
+	abort= {978 = { infrastructure > 4 }}
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 978
+		value = 1000000
+	}
+}
+GER_strategy_industrial_complex_building = {
+		enable = {
+			AND = {
+				978 = { infrastructure > 4 }
+				date < 1937.8.1
+				original_tag = GER
+				}
+		}
+		abort_when_not_enabled = yes
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1000
 	}
 }

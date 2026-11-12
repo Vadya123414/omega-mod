@@ -91,6 +91,7 @@ HOL_historical_plan = {
 
 	ideas = {
 		HOL_jacob_adriaan_de_wilde = 100
+		HOL_adrianus_rudolphus_van_den_bent = 5
 		
 	}
 	focus_factors = {

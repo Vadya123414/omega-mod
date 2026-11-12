@@ -217,6 +217,32 @@ abort_when_not_enabled = no
 		value = -1000
 	}
 }
+save_pp_not_need_more_politic_advisors = {
+	allowed = {original_tag = HOL}
+	enable = {
+		has_idea = HOL_jacob_adriaan_de_wilde
+	}
+
+abort_when_not_enabled = yes
+	ai_strategy = {
+		type = pp_spend_priority
+		id = political_advisor
+		value = -1000
+	}
+}
+save_pp_not_need_more_army_advisors = {
+	allowed = {original_tag = HOL}
+	enable = {
+		has_idea = HOL_adrianus_rudolphus_van_den_bent
+	}
+
+abort_when_not_enabled = yes
+	ai_strategy = {
+		type = pp_spend_priority
+		id = army_advisor
+		value = -1000
+	}
+}
 do_not_waste_pp_if_saving_for_manpower_laws = {
 
 	enable = {

@@ -100,80 +100,6 @@ northern_expansion = {
 	}
 }
 
-chinese_war = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		country_exists = CHI
-	}
-	abort = {
-		NOT = {
-			country_exists = CHI
-		}
-	}
-
-	ai_strategy = {
-		type = antagonize
-		id = CHI
-		value = 200
-	}
-
-	ai_strategy = {
-	    type = front_unit_request
-	    id = CHI
-	    value = 2000
-	}
-	ai_strategy = {
-	    type = front_unit_request
-	    id = HBC
-	    value = 2000
-	}
-
-	ai_strategy = {
-	    type = antagonize
-	   id = XSM
-	    value = -30
-	}
-
-	ai_strategy = {
-	    type = antagonize
-	    id = NXM
-	    value = -30
-	}
-
-	ai_strategy = {
-	    type = antagonize
-	    id = GSM
-	    value = -30
-	}
-	ai_strategy = {
-	    type = antagonize
-	    id = SHX
-	    value = -30
-	}
-	ai_strategy = {
-	    type = antagonize
-	    id = GDC
-	    value = -30
-	}
-		ai_strategy = {
-	    type = antagonize
-	   	id = GXC
-	    value = -30
-	}
-		ai_strategy = {
-	    type = antagonize
-	    id = SIC
-	    value = -30
-	}
-		ai_strategy = {
-	    type = antagonize
-	    id = PRC
-	    value = -30
-	}
-}
-
 chinese_war_dont_push_mas = {
 	allowed = {
 		original_tag = JAP
@@ -199,11 +125,26 @@ chinese_war_dont_push_mas = {
 			}
 		}
 	}
-
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = XSM
 	    value = -30
+	}
+	ai_strategy = {
+		type = front_control
+
+		tag = XSM
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
 	}
 
 	ai_strategy = {
@@ -211,11 +152,34 @@ chinese_war_dont_push_mas = {
 	    tag = NXM
 	    value = -30
 	}
+	ai_strategy = {
+		type = front_control
 
+		tag = NXM
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = GSM
 	    value = -30
+	}
+	ai_strategy = {
+		type = front_control
+
+		tag = GSM
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
 	}
 	ai_strategy = {
 	    type = front_unit_request
@@ -223,19 +187,79 @@ chinese_war_dont_push_mas = {
 	    value = -30
 	}
 	ai_strategy = {
+		type = front_control
+
+		tag = SHX
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+	ai_strategy = {
 	    type = front_unit_request
 	    tag = GDC
 	    value = -30
+	}
+	ai_strategy = {
+		type = front_control
+
+		tag = GDC
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+
+		tag = GXC
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
 	}
 		ai_strategy = {
 	    type = front_unit_request
 	    tag = GXC
 	    value = -30
 	}
+	ai_strategy = {
+		type = front_control
+
+		tag = SIC
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
 		ai_strategy = {
 	    type = front_unit_request
 	    tag = SIC
 	    value = -30
+	}
+	ai_strategy = {
+		type = front_control
+
+		tag = PRC
+
+		ratio = 1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
 	}
 		ai_strategy = {
 	    type = front_unit_request
