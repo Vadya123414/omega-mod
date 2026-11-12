@@ -12094,32 +12094,55 @@ focus_tree = {
 					add_core_of = RNG
 				}
 			}
-			CHI = {
-				every_core_state = {
+			JAP = {
+				every_owned_state = {
 					limit = {
-							is_owned_and_controlled_by = ROOT
-						}
-						
-						NOT = {
-							state = 745 # Kwantung Leased Territory
-							state = 609 # Easty Hebei
-							state = 611 # South Chahar
-							state = 612 # Chahar
-							region = 155 # West Manchuria
-							region = 242 # North Manchuria
-							region = 243 # East Manchuria
-							state = 728 # Gouangzhouwan
-							state = 729 # Macau
-							state = 326 # Hong Kong
-							state = 743 # Qingdao
-							state = 524 # Taiwan
-							state = 1039 # Hebei-Chahar
-							state = 591 # Hainan
-						}
+							is_core_of = CHI
+							NOT = {
+								state = 745 # Kwantung Leased Territory
+								state = 609 # Easty Hebei
+								state = 611 # South Chahar
+								state = 612 # Chahar
+								region = 155 # West Manchuria
+								region = 242 # North Manchuria
+								region = 243 # East Manchuria
+								state = 728 # Gouangzhouwan
+								state = 729 # Macau
+								state = 326 # Hong Kong
+								state = 743 # Qingdao
+								state = 524 # Taiwan
+								state = 1039 # Hebei-Chahar
+								state = 591 # Hainan
+							}
 					}
 					transfer_state_to = RNG
 				}
 			}
+			if = {limit = {CHI = {is_subject_of = JAP}}
+			CHI = {
+				every_core_state = {
+					limit = {
+							NOT = {
+								state = 745 # Kwantung Leased Territory
+								state = 609 # Easty Hebei
+								state = 611 # South Chahar
+								state = 612 # Chahar
+								region = 155 # West Manchuria
+								region = 242 # North Manchuria
+								region = 243 # East Manchuria
+								state = 728 # Gouangzhouwan
+								state = 729 # Macau
+								state = 326 # Hong Kong
+								state = 743 # Qingdao
+								state = 524 # Taiwan
+								state = 1039 # Hebei-Chahar
+								state = 591 # Hainan
+							}
+					}
+					transfer_state_to = RNG
+				}
+			}
+		}
 
 			hidden_effect = {
 				RNG = {
@@ -12132,7 +12155,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = JAP_occupy_macau
 		icon = GFX_focus_JAP_occupy_macau

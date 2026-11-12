@@ -91,6 +91,7 @@ HOL_historical_plan = {
 
 	ideas = {
 		HOL_jacob_adriaan_de_wilde = 100
+		HOL_royal_dutch_shell = 10
 		HOL_adrianus_rudolphus_van_den_bent = 5
 		
 	}

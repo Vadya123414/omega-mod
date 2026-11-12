@@ -802,11 +802,16 @@ technologies = {
 					#original_tag = GER
 					original_tag = AST
 					original_tag = USA
-					original_tag = JAP
 					original_tag = ENG
 					original_tag = ITA
 				}
 			}
+			modifier = {
+					add = 1
+					date >1938.1.1
+					original_tag = JAP
+			}
+			
 		}
 
 		categories = {
@@ -870,7 +875,7 @@ technologies = {
 
 			modifier = {
 			add = 1
-			date >1938.1.1
+			date >1939.1.1
 				or = {
 					#original_tag = GER
 					original_tag = AST
@@ -929,7 +934,7 @@ technologies = {
 
 			modifier = {
 			add = 1
-			date >1938.1.1
+			date >1939.1.1
 				or = {
 					#original_tag = GER
 					original_tag = AST
@@ -1040,7 +1045,7 @@ technologies = {
 
 			modifier = {
 			add = 1
-			date >1938.1.1
+			date >1939.1.1
 				or = {
 					#original_tag = GER
 					original_tag = AST
@@ -1089,7 +1094,7 @@ technologies = {
 
 			modifier = {
 			add = 1
-			date >1938.1.1
+			date >1939.1.1
 				or = {
 					#original_tag = GER
 					original_tag = AST
@@ -1968,6 +1973,22 @@ technologies = {
 			tp_tech
 		}
 		special_project_specialization = { specialization_naval }
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+			add = 1
+			date >1941.1.1
+				or = {
+					#original_tag = GER
+					original_tag = AST
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+			}
+		}
 	}
 
 
@@ -2004,6 +2025,22 @@ technologies = {
 			tp_tech
 		}
 		special_project_specialization = { specialization_naval }	
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+			add = 1
+			date >1941.1.1
+				or = {
+					#original_tag = GER
+					original_tag = AST
+					original_tag = USA
+					original_tag = JAP
+					original_tag = ENG
+					original_tag = ITA
+				}
+			}
+		}
 	}
 
 	#### SUPPORT & REPAIR SHIPS ####

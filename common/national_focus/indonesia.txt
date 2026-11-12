@@ -5054,7 +5054,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = INS_great_depression_tt
-			add_to_variable = { var = INS_great_depression_min_export value = 0.05 tooltip = min_export_tt }
+			add_to_variable = { var = INS_great_depression_min_export value = 0.1 tooltip = min_export_tt }
 			random_owned_controlled_state = {
 				limit = {
 					impassable = no
@@ -6413,7 +6413,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = INS_great_depression_tt
-			add_to_variable = { var = INS_great_depression_min_export value = 0.025 tooltip = min_export_tt }
+			add_to_variable = { var = INS_great_depression_min_export value = 0.075 tooltip = min_export_tt }
 			every_country = {
 				limit = {
 					OR = {
@@ -6653,7 +6653,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		completion_reward = {
 			custom_effect_tooltip = INS_great_depression_tt
-			add_to_variable = { var = INS_great_depression_min_export value = 0.1 tooltip = min_export_tt }
+			add_to_variable = { var = INS_great_depression_min_export value = 0.15 tooltip = min_export_tt }
 			add_to_variable = { var = INS_great_depression_production_speed_buildings_factor value = 0.1 tooltip = production_speed_buildings_factor_tt }
 		}
 	}

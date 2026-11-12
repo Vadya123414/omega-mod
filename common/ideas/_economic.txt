@@ -1116,14 +1116,15 @@ ideas = {
 					OR = {
 					tag = BRA
 					tag = COG
+					tag = SIA
 					}
-					date > 1940.1.1 # at this point we can probably cash in on rubber lack in the world
+					date > 1938.8.1 # at this point we can probably cash in on rubber lack in the world
 				}
 
 				modifier = {
 					factor = 400
 					original_tag = SWE
-					date > 1941.6.1
+					date > 1939.1.1
 				}
 
 				# Oil for hitlers oil throne!

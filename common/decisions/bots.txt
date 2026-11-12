@@ -315,31 +315,83 @@ BOTS = {
             537 = {
 						add_building_construction = {
 							type = infrastructure
+							level = 2
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                       
+				}  
+			531 = {
+						add_building_construction = {
+							type = infrastructure
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
 							level = 1
 						}                       
-				}                
+				}               
         }
     }  
-    bot_JAP_SIA_inf = {
+	    bot_JAP_indochina = {
 
 		fire_only_once = yes
 
 		icon = oppression
 		available = {
-                or = {
-                    is_in_faction_with = SIA
-                    OVERLORD = { tag = SIA }
-                }
+			and = {
+				owns_state = 1066
+				owns_state = 286
+			}
+                
                 original_tag = JAP
                 is_ai = yes
                 #has_global_flag = VUP_Hist_version
             }
 		visible = {
             original_tag = JAP
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            286 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                       
+				}
+             1066 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                        
+				}             
+        }
+    }  
+    bot_SIA_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+				date > 1938.6.1
+                original_tag = SIA
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = SIA
             is_ai = yes
             #has_global_flag = VUP_Hist_version
 		}
@@ -356,6 +408,78 @@ BOTS = {
 							level = 1
 						}                       
 				}              
+        }
+    }
+	    bot_fra_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+				date > 1940.1.1
+                original_tag = FRA
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = FRA
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            635 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                       
+				}              
+        }
+    }
+	    bot_bra_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+			date >1938.6.1
+                original_tag = BRA
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = BRA
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            497 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                       
+				}  
+			495 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							level = 1
+						}                       
+				}             
         }
     }
      bot_AST_inf = {

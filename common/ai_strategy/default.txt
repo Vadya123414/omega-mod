@@ -181,22 +181,17 @@ save_navy_chief_pp_for_later = {
 save_air_chief_pp_for_later = {
 	enable = {
 			NOT = {
-			original_tag = USA
-			original_tag = ENG
-			original_tag = JAP
-			original_tag = GER
+				or = {
+					original_tag = USA
+					original_tag = ENG
+					original_tag = JAP
+					original_tag = GER
+					original_tag = SOV
+				}
 			}
 	}
 	abort = {
-		AND = {
-		OR = {
-			original_tag = USA
-			original_tag = ENG
-			original_tag = JAP
-			original_tag = GER
-		}
 		has_political_power > 200
-		}
 	}
 
 	ai_strategy = {

@@ -1328,8 +1328,12 @@ technologies = {
 				or = {
 					original_tag = USA
 					original_tag = SOV					
-				}
-					
+				}	
+			}
+					modifier = {
+			add = 10
+					original_tag = JAP
+					has_completed_focus = JAP_develop_new_fighters	
 			}
 		}
 	}

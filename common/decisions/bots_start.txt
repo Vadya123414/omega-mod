@@ -127,7 +127,14 @@ BOTS = {
             if = {date > 1936.1.1}
             is_ai = yes
             has_civil_war = no
-                    original_tag = JAP
+            or = {
+                original_tag = JAP
+                original_tag = ENG
+                original_tag = GER
+                original_tag = SOV
+                original_tag = USA
+            }
+                    
 		}
 		visible = {
             is_ai = yes
@@ -969,7 +976,7 @@ set_spec_doctrine_40 = {
 						has_idea = service_by_requirement
 					}
             NOT ={has_idea = SPR_political_violence}
-            has_political_power > 74
+            has_political_power > 150
             has_war = yes
             #is_minor = yes
             has_war_support > 0.81

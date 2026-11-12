@@ -101,6 +101,7 @@ ENG_historical_plan = {
 	}
 
 	ideas = {
+		ENG_cyril_newall = 5
 		home_defence_spirit = 1
 		archibald_wavell = 0
 		trafford_leigh_mallory = 0

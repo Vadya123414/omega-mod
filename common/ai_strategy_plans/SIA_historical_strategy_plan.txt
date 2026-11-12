@@ -50,7 +50,9 @@ SIA_historical = {
 		SIA_deficit_spending
 		SIA_railway_and_port_extensions
 		SIA_chemical_imports
+		SIA_sell_privy_purse_lands
 		SIA_kasetsart_university
+		SIA_acquire_light_tools
 		SIA_mechanization_of_agriculture
 		SIA_irrigation
 		SIA_farmers_into_the_city
@@ -79,6 +81,9 @@ SIA_historical = {
 		SIA_night_time_training
 		SIA_camouflage
 		SIA_steel_arteries
+		SIA_sell_bangkok_dock_co
+		SIA_empower_the_coastguard
+		SIA_river_patrols
 
 
 

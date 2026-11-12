@@ -33,6 +33,7 @@ JAP_historical_plan = {
 		JAP_advance_one_hundred_million_fireballs # 70 
 		JAP_the_war_has_not_necessarily_developed_focus # 35 
 		JAP_the_surrender_broadcast # 70
+		JAP_demand_tonkinese_bases
 		JAP_occupy_indochina
 		JAP_occupy_siam
 
@@ -60,12 +61,13 @@ JAP_historical_plan = {
 		JAP_sea_guide_the_zaibatsus # 35
 		JAP_approach_mitsubishi #70
 		JAP_expand_the_showa_research_association # 70
+		JAP_modern_bombers
 		JAP_approach_sumitomo
 		JAP_develop_new_fighters # 70
 		JAP_form_the_great_japan_industrial_patriotic_association
-		JAP_expand_hiratsuka_navy_arsenal # 35
 		JAP_ministry_of_colonial_affairs # 35
 		JAP_increase_armament_spending # 35
+		JAP_expand_hiratsuka_navy_arsenal # 35
 		JAP_develop_the_chinese_resources
 		JAP_manchuria_five_year_plan
 		JAP_new_order_in_east_asia # 35

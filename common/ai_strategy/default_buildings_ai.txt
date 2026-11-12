@@ -196,36 +196,6 @@ FRA_strategy_arms_factory_building = {
 		value = 900
 	}
 }
-FRA_autarky_building_2 = {
-	allowed = {
-		original_tag = FRA
-		}
-		enable = {
-			date > 1939.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 635
-		value = 10000
-	}
-}	
-FRA_infrastructure_1 = {
-	allowed = {
-		original_tag = FRA
-		}
-	enable = {
-		date > 1939.1.1
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 635
-		value = 10000
-	}
-}
 POL_strategy_industrial_complex_building = {
 		enable = {
 			AND = {
@@ -402,36 +372,6 @@ AST_strategy_industrial_complex_building = {
 		value = 100
 	}
 }
-JAP_autarky_building_2 = {
-	allowed = {
-		original_tag = JAP
-		}
-		enable = {
-			date > 1939.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 537
-		value = 100000
-	}
-}	
-JAP_infrastructure_1 = {
-	allowed = {
-		original_tag = JAP
-		}
-	enable = {
-		has_war = yes
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 537
-		value = 1000000	
-	}
-}
 AST_strategy_arms_factory_building = {
 		enable = {
 				AND = {
@@ -459,36 +399,6 @@ AST_Dockyard_strategy_arms_factory_building = {
 		type = building_target
 		id = dockyard
 		value = 900
-	}
-}
-AST_autarky_building_2 = {
-	allowed = {
-		original_tag = AST
-		}
-		enable = {
-			has_war = yes
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 285
-		value = 100000
-	}
-}	
-AST_infrastructure_1 = {
-	allowed = {
-		original_tag = AST
-		}
-	enable = {
-		has_war = yes
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 285
-		value = 1000000
 	}
 }
 PHI_strategy_industrial_complex_building = {
@@ -577,141 +487,6 @@ RAJ_strategy_arms_factory_building_1 = {
 		type = building_target
 		id = arms_factory
 		value = 900
-	}
-}
-RAJ_industrial_infrastructure_1 = {
-	allowed = {
-		original_tag = RAJ
-		}
-		enable = {
-			date > 1940.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 429
-		value = 1000
-	}
-}	
-RAJ_infrastructure_1 = {
-	allowed = {
-		original_tag = RAJ
-		}
-	enable = {
-		date > 1940.1.1
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 429
-		value = 10000
-	}
-}
-RAJ_industrial_infrastructure_2 = {
-	allowed = {
-		original_tag = RAJ
-		}
-		enable = {
-			date > 1940.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 427
-		value = 1000
-	}
-}	
-RAJ_infrastructure_2 = {
-	allowed = {
-		original_tag = RAJ
-		}
-	enable = {
-		date > 1940.1.1
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 427
-		value = 10000
-	}
-}
-RAJ_industrial_infrastructure_3 = {
-	allowed = {
-		original_tag = RAJ
-		}
-		enable = {
-			date > 1940.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 431
-		value = 1000
-	}
-}	
-RAJ_infrastructure_3 = {
-	allowed = {
-		original_tag = RAJ
-		}
-	enable = {
-		date > 1940.1.1
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 431
-		value = 10000
-	}
-}
-RAJ_industrial_infrastructure_4 = {
-	allowed = {
-		original_tag = RAJ
-		}
-		enable = {
-			date > 1940.1.1
-		}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = industrial_infrastructure
-		target = 426
-		value = 1000
-	}
-}	
-RAJ_infrastructure_4 = {
-	allowed = {
-		original_tag = RAJ
-		}
-	enable = {
-		date > 1940.1.1
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 426
-		value = 1000
-	}
-}
-SIA_infrastructure = {
-	allowed = {
-		original_tag = SIA
-		}
-	enable = {
-		1076 = { infrastructure < 5 }
-	}
-	abort_when_not_enabled = yes 
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 1076
-		value = 1000
 	}
 }
 SIA_industrial_complex = {

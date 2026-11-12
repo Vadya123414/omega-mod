@@ -31,6 +31,8 @@ BUL_historical_plan_weak = {
 		BUL_rebuild_the_army
 		
 		#1936
+		BUL_increase_industry_investments
+		BUL_utmost_optimization
 		BUL_power_to_the_tsar
 		BUL_dissolve_the_military_union #Short focus
 		BUL_acquire_modern_tools #Short focus
@@ -61,7 +63,7 @@ BUL_historical_plan_weak = {
 		BUL_crush_the_communists #Short focus
 		BUL_steel_plant_in_pernik
 		BUL_liberalization_of_trade_policies
-		BUL_increase_industry_investments
+
 		BUL_support_macedonian_organizations #Short focus
 		BUL_join_the_tripartite_pact #Short focus
 		#1941
@@ -81,7 +83,7 @@ BUL_historical_plan_weak = {
 		BUL_mineral_extraction_in_the_rhodopes
 		BUL_darzhavna_aeroplanna_rabotilnitsa
 		BUL_darzhavna_samoletna_fabrika
-		BUL_utmost_optimization
+
 		#1944
 		BUL_prussia_of_the_balkans
 		BUL_uranium_prospecting

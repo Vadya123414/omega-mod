@@ -1429,6 +1429,11 @@ technologies = {
 					coal > 32
 				}
 			}
+			modifier = {
+				add = 5
+					original_tag = MAN
+
+			}
 		}
 	}	
 	
@@ -1519,6 +1524,11 @@ technologies = {
 					coal > 32
 				}
 			}
+						modifier = {
+				add = 5
+					original_tag = MAN
+
+			}
 		}
 	}		
 	
@@ -1605,6 +1615,11 @@ technologies = {
 					coal > 32
 				}
 			}
+						modifier = {
+				add = 5
+					original_tag = MAN
+
+			}
 		}
 	}			
 	
@@ -1682,6 +1697,11 @@ technologies = {
 					chromium > 32
 					coal > 32
 				}
+			}
+						modifier = {
+				add = 5
+					original_tag = MAN
+
 			}
 		}
 	}
