@@ -102,7 +102,11 @@ northern_expansion = {
 
 chinese_war_dont_push_mas = {
 	allowed = {
-		original_tag = JAP
+		or ={
+			original_tag = JAP
+			original_tag = MAN
+			original_tag = MEN
+		}
 	}
 	enable = {
 		has_war_with = CHI
@@ -271,7 +275,11 @@ chinese_war_dont_push_mas = {
 # Make sure Japan tries to take down SND aggressively 
 JAP_push_snd_hard_initially = {
 	allowed = {
-		original_tag = JAP
+		or ={
+			original_tag = JAP
+			original_tag = MAN
+			original_tag = MEN
+		}
 	}
 	enable = {
 		has_war_with = SND
@@ -315,7 +323,11 @@ JAP_push_snd_hard_initially = {
 # Make sure Japan tries to take down HBC aggressively 
 JAP_push_hbc_hard_initially = {
 	allowed = {
-		original_tag = JAP
+		or ={
+			original_tag = JAP
+			original_tag = MAN
+			original_tag = MEN
+		}
 	}
 	enable = {
 		OR = {
@@ -331,12 +343,8 @@ JAP_push_hbc_hard_initially = {
 	abort_when_not_enabled = yes
 
 	abort = {
-		1039 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
-		608 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
+		controls_state = 608
+		controls_state = 1039
 	}
 
 	ai_strategy = {
@@ -371,7 +379,11 @@ JAP_push_hbc_hard_initially = {
 # Make sure Japan tries to take down CHI aggressively 
 JAP_push_CHI_hard_initially = {
 	allowed = {
-		original_tag = JAP
+		or ={
+			original_tag = JAP
+			original_tag = MAN
+			original_tag = MEN
+		}
 	}
 	enable = {
 			has_war_with = CHI
@@ -399,7 +411,6 @@ JAP_push_CHI_hard_initially = {
 		execute_order = yes
 	}
 }
-
 JAP_needs_some_supply_hubs = {
 	allowed = {
 		original_tag = JAP

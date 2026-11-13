@@ -44,7 +44,7 @@ FRA_historical_plan = {
 		FRA_national_champions
 		FRA_dirigisme
 		FRA_go_with_britain
-		FRA_defense_focus
+		FRA_defensive_focus
 		FRA_devalue_the_franc
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france
@@ -96,6 +96,7 @@ FRA_historical_plan = {
 
 	ideas = {
 		FRA_henri_marie_auguste_bineau = 100
+		extensive_conscription = 10
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

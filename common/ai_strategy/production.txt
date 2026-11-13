@@ -134,8 +134,11 @@ default_unit_production_JAP = {
 	}	
 }
 JAP_CHI_air_production = {
+	allowed = {
+		original_tag = JAP
+	}
 	enable = {
-		always = no
+		always = yes
 	}
 	abort = {JAP = {has_completed_focus = JAP_reorganized_national_government}}
 	ai_strategy = {
