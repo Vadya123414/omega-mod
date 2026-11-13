@@ -54,20 +54,6 @@ do_not_waste_pp_if_saving_for_manpower_laws_baltic_hist = {
 		value = -9999
 	}
 }
-SWI_bunker_1 = { 
-	enable = {
-		original_tag = SWI
-        date > 1938.1.1
-		has_global_flag = VUP_hist_upgrade
-	}
-	abort = { always = no }
-	ai_strategy = {
-		type = build_building
-        id = coastal_bunker
-        target = 6345
-		value = 1000
-	}
-}
 at_start_we_need_manpower = {
 	allowed = {
 		or = {

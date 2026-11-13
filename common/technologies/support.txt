@@ -130,40 +130,11 @@ technologies = {
 		xp_boost_cost = 50
 		xp_research_bonus = 0.50
 		ai_will_do = {
-			base = 4
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
+			base = 0
 			modifier = {
 				factor = 2
 				date > "1938.1.1"
 			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 6
-				original_tag = CHI
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-			
 		}
 
 		on_research_complete = {
@@ -267,26 +238,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 4
-
+			base = 0
 			modifier = {
 				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
+				date > "1938.1.1"
 			}
 		}
 	}
@@ -366,26 +321,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 4
-
+			base = 0
 			modifier = {
 				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
+				date > "1938.1.1"
 			}
 		}
 	}
@@ -1042,7 +981,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 0
+			modifier = {
+				factor = 1
+				date > "1938.6.1"
+			}
 		}
 
 		on_research_complete = {
@@ -1102,7 +1045,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 0
+			modifier = {
+				factor = 1
+				date > "1938.6.1"
+			}
 		}
 	}
 
@@ -1156,7 +1103,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 0
+			modifier = {
+				factor = 1
+				date > "1938.6.1"
+			}
 		}
 	}
 	tech_field_hospital4 = {
@@ -1612,10 +1563,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 1
-		modifier = {
-				factor = 0
+			base = 0
+			modifier = {
+				add = 0
 				is_major = no
+			}
+			modifier = {
+				add = 1
+				is_major = yes
+				date > "1938.6.1"
 			}
 		}
 	}

@@ -135,7 +135,7 @@ default_unit_production_JAP = {
 }
 JAP_CHI_air_production = {
 	enable = {
-		original_tag = JAP
+		always = no
 	}
 	abort = {JAP = {has_completed_focus = JAP_reorganized_national_government}}
 	ai_strategy = {
@@ -257,12 +257,12 @@ default_air_production_JAP = {
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 20
+		value = 30
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = tactical_bomber
-		value = 20
+		value = 30
 	}
 	ai_strategy = {
 		type = unit_ratio
@@ -287,12 +287,12 @@ default_air_production_JAP = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_fighter
-		value = 150
+		value = 300
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = 150
+		value = 300
 	}	
 }
 start_air_production_ENG= {
@@ -378,12 +378,12 @@ default_air_production_ENG= {
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = 200
+		value = 400
 	}
 		ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 200
+		value = 400
 	}
 	ai_strategy = {
 		type = unit_ratio
@@ -467,12 +467,12 @@ default_air_production_USA= {
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 10
+		value = 30
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = tactical_bomber
-		value = 10
+		value = 30
 	}
 	ai_strategy = {
 		type = unit_ratio
@@ -497,20 +497,17 @@ default_air_production_USA= {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_fighter
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = 100
+		value = 200
 	}	
 }
 default_air_production = {
 	allowed = {
-			or = {
-				original_tag = GER
 				original_tag = SOV
-			}
 		}
 	enable = {
 		has_tech = improved_small_airframe
@@ -536,6 +533,34 @@ default_air_production = {
 		type = equipment_production_factor
 		id = cas
 		value = 30
+	}
+}
+default_air_production_GER = {
+	allowed = {original_tag = GER}
+	enable = {
+		has_tech = improved_small_airframe
+		has_tech = engines_3
+	}
+	abort_when_not_enabled = no
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 400
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 400
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 60
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 60
 	}
 }
 default_air_production = {
@@ -668,9 +693,8 @@ default_paratroopers_unit_production = {
 	}
 }
 default_mountaineers_unit_production = {
-	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
-	enable = {
-			NOT = {
+	allowed = {			
+		NOT = {
 				or = {
 					original_tag = SOV
 					original_tag = GER
@@ -685,8 +709,11 @@ default_mountaineers_unit_production = {
 					original_tag = LAT
 					original_tag = EST
 					original_tag = LIT
+					}
 				}
 			}
+	enable = {
+				has_tech = tech_mountaineers
 		}
 	abort_when_not_enabled = no	
 	ai_strategy = {
@@ -718,23 +745,26 @@ default_marines_unit_production = {
 	}
 }
 default_rangers_unit_production = {
+	allowed = {		
+			or = {
+					original_tag = SOV
+					original_tag = GER
+					original_tag = FRA
+					original_tag = FIN
+					original_tag = POL
+					original_tag = FRA
+					original_tag = BEL
+					original_tag = HOL
+					original_tag = SWI
+					original_tag = FIN
+					original_tag = LAT
+					original_tag = EST
+					original_tag = LIT
+					}
+				}
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	enable = {
-		or = {
-				original_tag = SOV
-				original_tag = GER
-				original_tag = FRA
-				original_tag = FIN
-				original_tag = POL
-				original_tag = FRA
-				original_tag = BEL
-				original_tag = HOL
-				original_tag = SWI
-				original_tag = FIN
-				original_tag = LAT
-				original_tag = EST
-				original_tag = LIT
-			}
+			has_tech = rangers_tech
 		}
 	abort_when_not_enabled = no	
 	ai_strategy = {

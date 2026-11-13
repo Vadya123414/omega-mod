@@ -1186,11 +1186,7 @@ AST_war_is_coming_cat = {
 		}
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			factor = 10
 		}
 	}
 
@@ -1229,23 +1225,7 @@ AST_cabinet_trust_cat = {
 		}
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				check_variable = {
-					var = AST_cabinet_trust_state
-					value = 3
-					compare = less_than
-				}
-				factor = 0.5
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-			modifier = {
-				has_completed_focus = AST_australia_first
-				factor = 0
-			}
+			factor = 10
 		}
 	}
 
@@ -1384,23 +1364,7 @@ AST_cabinet_trust_cat = {
 		}
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				check_variable = {
-					var = AST_cabinet_trust_state
-					value = 3
-					compare = less_than
-				}
-				factor = 0.5
-			}
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-			modifier = {
-				has_completed_focus = AST_australia_first
-				factor = 0
-			}
+			factor = 10
 		}
 	}
 
@@ -1743,11 +1707,7 @@ AST_cabinet_trust_cat = {
 		}
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			factor = 10
 		}
 	}
 

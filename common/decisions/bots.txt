@@ -159,24 +159,28 @@ BOTS = {
             978 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 				}
              66 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 				}
             55 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 				}
             57 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 				}
@@ -204,40 +208,48 @@ BOTS = {
             429 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
              427 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                        
 				}
             431 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                        
 				}
             426 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
@@ -265,70 +277,84 @@ BOTS = {
             716 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
              328 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                        
 				}
             535 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                        
 				}
             528 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
             537 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
             537 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 2
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}  
 			531 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 1
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}               
@@ -360,20 +386,24 @@ BOTS = {
             286 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}
              1066 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                        
 				}             
@@ -401,10 +431,12 @@ BOTS = {
             724 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}              
@@ -432,10 +464,12 @@ BOTS = {
             635 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 3
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}              
@@ -462,21 +496,25 @@ BOTS = {
         complete_effect = {
             497 = {
 						add_building_construction = {
-							type = infrastructure
+							type = infrastructure~
+							instant_build = no
 							level = 4
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}  
 			495 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 4
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}             
@@ -503,13 +541,133 @@ BOTS = {
             285 = {
 						add_building_construction = {
 							type = infrastructure
+							instant_build = no
 							level = 2
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
+							instant_build = no
 							level = 1
 						}                       
 				}              
         }
-    }  
-}
+    }
+	bot_nor_airfield = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = NOR
+                is_ai = yes
+                has_global_flag = VUP_Hist_version
+				date >1938.1.1
+            }
+		visible = {
+            original_tag = NOR
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            	920 = {
+						add_building_construction = {
+							type = air_base
+							instant_build = no
+							level = 10
+						}                      
+				} 
+				    143 = {
+						add_building_construction = {
+							type = air_base
+							instant_build = no
+							level = 10
+						}                      
+				}              
+        }
+    }
+	bot_nor_bunker = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+				date >1938.1.1
+                original_tag = NOR
+                is_ai = yes
+                has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = NOR
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+					110 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							instant_build = no
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+						}
+					}
+					921 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							instant_build = no
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+						}
+					}
+					922 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							instant_build = no
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+						}
+					}             
+				}
+			}  
+	bot_swi_bunker = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+				date >1938.1.1
+                original_tag = SWI
+                is_ai = yes
+                has_global_flag = VUP_Hist_version
+            }
+		visible = {
+            original_tag = SWI
+            is_ai = yes
+            has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+					138 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 6
+							instant_build = no
+							province = 6345
+						}
+					}            
+				}
+	} 
+}			

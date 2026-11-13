@@ -42,6 +42,11 @@ gre_dont_spend_pp = {
 		id = theorist
 		value = -1000
 	}
+		ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 10
+	}
 }
 GRE_befriend_balkan_countries_YUG = {
 	allowed = {

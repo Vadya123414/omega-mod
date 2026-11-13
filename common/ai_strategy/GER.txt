@@ -1,10 +1,16 @@
 
 GER_war_with_poland = {
 	allowed = {
-		original_tag = GER
+		or = {
+			original_tag = GER
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
+		
 	}
 	enable = {
-		has_completed_focus = GER_reassert_eastern_claims
+		GER = {has_completed_focus = GER_reassert_eastern_claims}
 		country_exists = POL
 	}
 	abort = {
@@ -20,15 +26,20 @@ GER_war_with_poland = {
 
 GER_danzig_of_war_preparation = {
 	allowed = {
-		original_tag = GER
+			or = {
+			original_tag = GER
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
 	}
 	enable = {
 		focus_progress = {
-			focus = GER_danzig_or_war
+			GER = {focus = GER_danzig_or_war}
 			progress > 0.01
 		}
 		NOT = {
-			has_completed_focus = GER_danzig_or_war
+			GER = {has_completed_focus = GER_danzig_or_war}
 			owns_state = 85
 		}
 		country_exists = POL
@@ -55,13 +66,18 @@ GER_danzig_of_war_preparation = {
 # Make sure we deploy our breakthrough units against Poland
 GER_blitzkrieg_poland = {
 	allowed = {
-		original_tag = GER
+			or = {
+			original_tag = GER
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
 	}
 	enable = {
 		#is_historical_focus_on = yes
 		OR = {
 			focus_progress = {
-				focus = GER_danzig_or_war
+				GER = {focus = GER_danzig_or_war}
 				progress > 0.01
 			}
 			has_war_with = POL
@@ -100,7 +116,12 @@ GER_blitzkrieg_poland = {
 # Make sure we deploy our breakthrough units against Soviet
 GER_blitzkrieg_russia_with_force_concentration = {
 	allowed = {
-		original_tag = GER
+			or = {
+			original_tag = GER
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
 	}
 	enable = {
 		#is_historical_focus_on = yes
@@ -165,10 +186,15 @@ GER_dont_die_in_mountains = {
 
 GER_war_with_soviets = {
 	allowed = {
-		original_tag = GER
+			or = {
+			original_tag = GER
+			original_tag = HUN
+			original_tag = ROM
+			original_tag = BUL
+		}
 	}
 	enable = {
-		has_completed_focus = GER_war_with_the_ussr
+		GER = {has_completed_focus = GER_war_with_the_ussr}
 		country_exists = SOV
 	}
 	abort = {

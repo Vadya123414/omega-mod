@@ -1110,7 +1110,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 1
+			add = 8
 				original_tag = GER
 			}
 			modifier = {
@@ -1160,7 +1160,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 1
+			add = 8
 				original_tag = GER
 			}
 			modifier = {
@@ -1211,7 +1211,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 1
+			add = 8
 				original_tag = GER
 			}
 			modifier = {
@@ -1256,7 +1256,7 @@ technologies = {
 			base = 0
 
 			modifier = {
-			add = 1
+			add = 8
 				original_tag = GER
 			}
 			modifier = {
@@ -1349,6 +1349,15 @@ technologies = {
 					coal > 32
 				}
 			}
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = GER
+					original_tag = SOV
+				}
+					
+					date < 1940.6.1
+			}
 		}
 	}
 	
@@ -1428,6 +1437,15 @@ technologies = {
 					chromium > 32
 					coal > 32
 				}
+			}
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = GER
+					original_tag = SOV
+				}
+					
+					date < 1940.6.1
 			}
 			modifier = {
 				add = 5
@@ -1524,7 +1542,16 @@ technologies = {
 					coal > 32
 				}
 			}
-						modifier = {
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = GER
+					original_tag = SOV
+				}
+					
+					date < 1940.6.1
+			}
+			modifier = {
 				add = 5
 					original_tag = MAN
 
@@ -1615,7 +1642,16 @@ technologies = {
 					coal > 32
 				}
 			}
-						modifier = {
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = GER
+					original_tag = SOV
+				}
+					
+					date < 1940.6.1
+			}
+			modifier = {
 				add = 5
 					original_tag = MAN
 
@@ -1698,7 +1734,16 @@ technologies = {
 					coal > 32
 				}
 			}
-						modifier = {
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = GER
+					original_tag = SOV
+				}
+					
+					date < 1940.6.1
+			}
+			modifier = {
 				add = 5
 					original_tag = MAN
 
