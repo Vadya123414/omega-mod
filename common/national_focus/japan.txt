@@ -11966,6 +11966,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+			hidden_effect = {
+				if= {limit = {is_ai = yes}
 			CHI = {
 				set_variable = { var_mil_factories = num_of_military_factories }
 				set_variable = { var_civ_factories = num_of_civilian_factories }
@@ -11981,6 +11983,8 @@ focus_tree = {
 					level = var:CHI.var_mil_factories
 					}
 				}
+			}
+			}
 			# Establishes the Reorganized National Government
 			613 = {
 				add_core_of = RNG
