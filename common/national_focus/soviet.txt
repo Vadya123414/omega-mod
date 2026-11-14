@@ -7602,7 +7602,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_war_with_major = yes
+			or = {
+				date > 1940.9.1
+				has_war_with_major = yes
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
