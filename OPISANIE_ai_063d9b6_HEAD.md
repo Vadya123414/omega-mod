@@ -50,15 +50,15 @@
 - **`baltic_shared.txt`** — `is_subject`-условия переработаны; `any_collection_element`; `any_country_with_original_tag`; добавлены ядра/штаты.
 - **`brazil.txt`** (файл добавлен в диапазоне) — пересоздано дерево (8055 строк): стоимости 5/10/3/4, идеи, ПП, оборудование, исслед. слоты.
 - **`bulgaria.txt`** — стоимости: было `10,5,5,5,5,5,5,10,10,5` → стало `5,2,2,2,2,2,5,5,2`; убраны идеи; `is_subject`; координаты.
-- **`canada.txt`** — стоимости 10→5 (2 фокуса); `add_political_power`; `original_tag`.
+- **`canada.txt`** — стоимости 10→5 (2 фокуса); `add_political_power`; `original_tag`. Затронуты фокусы `CAN_commi` («Канадский коммунизм») и `CAN_nazi` («Канадское национальное государство»).
 - **`china_communist_sea.txt`** — идеи; `any_collection_element`.
 - **`denmark.txt`** — переработаны `is_subject`-условия.
 - **`estonia.txt`** — `any_collection_element`.
 - **`finland.txt`** — `VUP_Hist_version`; `any_collection_element`; `original_tag`.
-- **`france.txt`** — стоимости: было `10,5,10,5,5,5,5,5,5,5,5,5` → стало `5,10,5,10,4,3,3,1,3,3,3`; идеи; ПП; `is_subject`; координаты.
+- **`france.txt`** — стоимости: было `10,5,10,5,5,5,5,5,5,5,5,5` → стало `5,10,5,10,4,3,3,1,3,3,3`; идеи; ПП; `is_subject`; координаты. Перепозиционированы фокусы: `FRA_tree_crown` («Три короны») → `FRA_granic` («Заявить о праве на Бенилюкс»).
 - **`free_france.txt`** — стоимости: было `5,5,5,10,5,5,5,5,5,5,10` → стало `2,10,5,1,5,5,5,10,5,5,10,2,2,2,5`; идеи; оборудование; координаты.
 - **`germany.txt`** — стоимости: было `10,5,5,5,10,5,5,2,5,2,5,5` → стало `6,3,3,3,5,4,4`; идеи; `is_subject`; координаты.
-- **`hungary_wuw.txt`** — `VUP_Hist_version`; `is_subject`; `any_collection_element`.
+- **`hungary_wuw.txt`** — `VUP_Hist_version`; `is_subject`; `any_collection_element`. Фокус `HUN_glory_republic` («Интеграция исторических земель»).
 - **`iceland.txt`** — `is_subject`.
 - **`india_goe.txt`** — `VUP_Hist_version`; новый фокус cost 5; идеи; оборудование; координаты.
 - **`indonesia.txt`** — стоимости: было `5,5,5,5,5,10` → стало `3,3,3,3,3,5`; `VUP_Hist_version`.
@@ -68,24 +68,24 @@
 - **`latvia.txt` / `lithuania.txt` / `mexico.txt` / `nordic_shared.txt`** — мелкие правки (координаты, условия).
 - **`manchukuo_TSR.txt`** — `is_subject`-условия переработаны.
 - **`Mongolia.txt`** — `VUP_Hist_version`; `is_subject`; координаты.
-- **`netherlands.txt`** — стоимости массово: было `5,5,10,10,10,...,10` → стало `3,3,5,5,5,...,5` (30 фокусов подешевели); `is_subject`.
+- **`netherlands.txt`** — стоимости массово: было `5,5,10,10,10,...,10` → стало `3,3,5,5,5,...,5` (30 фокусов подешевели); `is_subject`. Добавлен фокус `HOL_lud` («Отменить расслоение»).
 - **`norway.txt` / `portugal.txt`** — `any_collection_element`; `original_tag`.
-- **`persia.txt` / `philippines.txt`** — `original_tag`; ядра/штаты.
+- **`persia.txt`** / **`philippines.txt`** — `original_tag`; ядра/штаты. В Persia: `PER_annex` («Государственные инвестиции»).
 - **`poland.txt`** — `VUP_Hist_version`; новые фокусы cost 10; координаты.
 - **`romania.txt`** — стоимости: было `10,5,5,3,10,3,3` → стало `5,3,3,2,5,2,2`; ядра/штаты.
 - **`siam.txt`** — новые фокусы cost 5; `is_subject`; координаты.
-- **`south_africa.txt`** — стоимости: было `10×8,5` → стало `5×9,2`; координаты.
-- **`soviet.txt`** — стоимости: было `10,10,10,10,10,10,5,10,10,10,10,3,10,10,5,5,5,1,1,1,3,5,5,3,3,5,3,3,3,5,5,5,5,5,5,5,5,5,5,10` → стало `1,5,5,3,5,5,2,5,5,5,5,2,5,5,4,1`; `swap_ideas`; идеи; ПП; исслед. слот; `any_collection_element`; координаты; ядра/штаты.
+- **`south_africa.txt`** — стоимости: было `10×8,5` → стало `5×9,2`; координаты. Добавлен фокус `SAF_slot` («Развитие африканских территорий»).
+- **`soviet.txt`** — стоимости: было `10,10,10,10,10,10,5,10,10,10,10,3,10,10,5,5,5,1,1,1,3,5,5,3,3,5,3,3,3,5,5,5,5,5,5,5,5,5,5,10` → стало `1,5,5,3,5,5,2,5,5,5,5,2,5,5,4,1`; `swap_ideas`; идеи; ПП; исслед. слот; `any_collection_element`; координаты; ядра/штаты. Убрана идея `SOV_war_economy_lar` («Оборонная промышленность») из наград.
 - **`spain.txt`** — `VUP_Hist_version`; `swap_ideas`; `any_collection_element`; координаты.
 - **`sweden.txt`** — `VUP_Hist_version`; убраны идеи; `any_collection_element`.
 - **`switzerland.txt`** — стоимости 10→5 (2 фокуса).
 - **`turkey.txt`** — стоимости: было `10,10` → стало `5,5,10`; координаты.
 - **`uk.txt`** — `VUP_Hist_version`; стоимости: было `10,10,10,10,10` → стало `5,8,8,8,8`; `swap_ideas`; идеи; ПП; исслед. слот; `is_subject`; координаты; ядра/штаты.
-- **`usa.txt`** — `VUP_Hist_version`; стоимости: 13 фокусов `10→5`; идеи; координаты.
-- **`yugoslavia.txt`** — `VUP_Hist_version`; убраны идеи; координаты; ядра/штаты.
+- **`usa.txt`** — `VUP_Hist_version`; стоимости: 13 фокусов `10→5`; идеи; координаты. Затронуты фокусы `USA_civil_war` («Поддержка правительства в гражданской войне») и `USA_improve_working_place` («Улучшение условий труда»); убран `USA_congress_investment` из события.
+- **`yugoslavia.txt`** — `VUP_Hist_version`; убраны идеи; координаты; ядра/штаты. Затронут фокус `YUG_ustup_italy` («Уступки Италии»).
 
 **Специальные файлы:**
-- **`SNG_shared_branch.txt`** — +2609 строк: добавлена ветка СНГ (50 фокусов, стоимости 2/5/10, идеи, ПП, исслед. слоты, ядра/штаты).
+- **`SNG_shared_branch.txt`** — +2609 строк: добавлена ветка СНГ (50 фокусов, стоимости 2/5/10, идеи, ПП, исслед. слоты, ядра/штаты). Ветка включает `SNG_mountaineers_effort` («Совместная программа подготовки горно-стрелковых войск») и идею `SOV_war_economy_lar` («Оборонная промышленность») в цепочке `RUS_reconstruction` («Реконструкция Родины»).
 - **`belgium.txt`** (файл добавлен в диапазоне) — удалён в `24d3f32`, пересоздан в `2d78f37` (8793 строк): `VUP_Hist_version`, стоимости 0–10/150, `swap_ideas`, идеи, оборудование, `has_full_control_of_state`, ветка «всё скрыто» через `always = no`.
 - **`congo_shared.txt`** (файл добавлен в диапазоне) — удалён в `24d3f32`, пересоздан в `2d78f37` (10382 строк): аналогично Бельгии.
 - **`00_vre_cut_focus_stubs.txt`** (файл добавлен в диапазоне) — заглушки «Vanila Reborn edit» для вырезанных фокусов: `country = { factor = 0 }`, `available = { always = no }`, `ai_will_do = { factor = 0 }` — чтобы `has_completed_focus` на вырезанные id не падал с ошибкой.
@@ -93,42 +93,42 @@
 ### 2.2. Решения (`common/decisions/`)
 
 - **`AST.txt`** — вес AI: `factor = 5` → `10`; убран модификатор `is_historical_focus_on = yes → factor = 0`.
-- **`BEL.txt`** — `fire_only_once = yes` → `days_re_enable = 180`; добавлен `set_country_flag = sent_eu_invitation_flag` (days=365); `any_country = { is_in_faction_with = ROOT }` заменён.
+- **`BEL.txt`** — `fire_only_once = yes` → `days_re_enable = 180`; добавлен `set_country_flag = sent_eu_invitation_flag` (days=365); `any_country = { is_in_faction_with = ROOT }` заменён. Решения: `BEL_invest_in_member_industry_decision` («Инвестировать в [FROM.GetAdjRuLower]ую промышленность»), `BEL_proclaim_the_european_federation` («Провозгласить Европейскую Федерацию»).
 - **`BRA.txt`** — добавлен блок `BRA_industrial_decisions` (инвестиции в сельские штаты и т.д.).
 - **`BUL.txt`** — убраны `remove_core_of`, `start_resistance`, `set_compliance`/`set_resistance` (штат 106).
 - **`DEN.txt`** — `any_country = { has_war_with = ROOT }` → `any_enemy_country`.
-- **`ENG.txt`** — переименовано/переработано решение `ENG_invoke_the_alliance_of_1373` (иконка `generic_prepare_civil_war` → другая; условия `has_war`/`democratic`).
-- **`FRA.txt`** — −1189/+231: добавлен `every_country`-цикл по подданным с `puppet = { target = PREV end_wars = no }`.
-- **`GER.txt`** — убрано решение `GER_cancel_mefos` (иконка `ger_mefo_bills`, `base = 0`, `cost = 0`, `fire_only_once = no`).
+- **`england`-решения** — в `ENG.txt` решение `ENG_invoke_the_alliance_of_1373`; в `_economic.txt` — `ENG_end_ind` («Урбанизация городов объединенного королевства»).
+- **`FRA.txt`** — −1189/+231: добавлен `every_country`-цикл по подданным с `puppet = { target = PREV end_wars = no }`. Затронуты `FRA_anti_tank` («Противотанковая оборона»), `FRA_royal_corpus` («Королевская академия»), `FRA_coalition_path_tooltip` («Будет формироваться восьмая антифранцузская коалиция»).
+- **`GER.txt`** — убрано решение `GER_cancel_mefos` («Отменить векселя «МЕФО»»; иконка `ger_mefo_bills`, `base = 0`, `cost = 0`, `fire_only_once = no`).
 - **`HOL.txt`** (файл добавлен в диапазоне) — новый блок решений с комментариями `###modded only ai wil do`.
 - **`INS.txt`** — добавлены ядра штатов `1061,1062,1064,1023,1024,1059` для INS.
-- **`ITA.txt`** — убрано `colonial_government_in_east_africa` (иконка, `fire_only_once`, `has_completed_focus = ITA_ministry_of_italian_africa`).
+- **`ITA.txt`** — убрано `colonial_government_in_east_africa` (иконка, `fire_only_once`, `has_completed_focus = ITA_ministry_of_italian_africa` («Министерство итальянской Африки»)).
 - **`JAP.txt`** — добавлен `INS = { is_puppet = yes }`; убраны условия по HOL/INS (`has_capitulated`, `NOT has_war_with`).
 - **`RAJ_GOE.txt`** — иконка `GFX_decision_SWI_swiss_democratic_tradition_campaign` → `GFX_decision_generic_political_address`; `is_subject = yes`; убран `add_autonomy_ratio = -0.05`.
 - **`SOV.txt`** — `any_country = { is_major = yes }` → `any_country_with_original_tag_of = { target = {ENG FRA GER ITA USA JAP} }`.
-- **`TUR.txt`** (файл добавлен в диапазоне) — новый блок `political_actions` (6557 строк): `TUR_recall_ataturk_to_active_service` и т.д.
+- **`TUR.txt`** (файл добавлен в диапазоне) — новый блок `political_actions` (6557 строк): `TUR_recall_ataturk_to_active_service` («Вернуть Ататюрка на службу») и т.д.
 - **`USA.txt`** — `any_neighbor_country = { tag = USB }` → `USB = { is_neighbor_of = ROOT }`.
-- **`formable_nation_decisions.txt`** — добавлены `highlight_states` (штаты 47,185,731,184,48...); убран `news_event = wtt_news.59`.
-- **`vup_fra_decisions.txt`** — `political_power > 49` → `has_political_power > 49`; добавлен `check_variable war_goal_time` / `add_to_variable`.
+- **`formable_nation_decisions.txt`** — добавлены `highlight_states` (штаты 47,185,731,184,48...); убран `news_event = wtt_news.59`. Затронут `TS_betrayed_volunteers` («Нам пообещали вернуть отозванные силы!»).
+- **`vup_fra_decisions.txt`** — `political_power > 49` → `has_political_power > 49`; добавлен `check_variable war_goal_time` / `add_to_variable`. Затронуты `FRA_exproet_resurse` («Закрепиться на новых территориях»), `FRA_man_powers` («Колониальный комиссариат»), `FRA_podgotovka2` («Привлечь идейных людей из Бенилюкса»), `FRA_sov_alik` («Договор 1807 года»), `FRA_voina_budgetww` («Увеличить бюджет армии»).
 - **`vup_ger_decisions.txt`** — очищено решение `GER_stupid_AI`; убраны `GER_HUN_SLO` и пр. (условия `has_country_flag = VUP_Hist_version`).
 - **`vup_per_decisions.txt`** — добавлен `add_equipment_to_stockpile = { convoy_1 ×10000 }`; закомментированы `annex_country = { target = BRA/AFG }`.
-- **`categories/00_decision_categories.txt`** — добавлена категория `scripted_gui = MTG_naval_treaties_ui`; видимость: `NOT = { original_tag = MAN AND is_ai = yes }`.
-- **`categories/ger_operation.txt`** — новая категория `GER_operation` (иконка `military_operation`, `scripted_gui = GER_opmap_ui`).
+- **`categories/00_decision_categories.txt`** — добавлена категория `scripted_gui = MTG_naval_treaties_ui` (интерфейс «Лондонское морское соглашение»); видимость: `NOT = { original_tag = MAN AND is_ai = yes }`.
+- **`categories/ger_operation.txt`** — новая категория `GER_operation` («Операции на Западном и Восточном фронте»; иконка `military_operation`, `scripted_gui = GER_opmap_ui`).
 - **`categories/vup_ger_decision_categories.txt`** — `priority` изменён на 67.
 - **`bots.txt`** — исключён (AI-контент: `bot_VUP_Hist_version` и пр.).
 
 ### 2.3. Идеи (`common/ideas/`)
 
-- **`_economic.txt`** — `level = 2` → `7`; убраны `is_minor = yes`; добавлен модификатор `original_tag = JAP` + `has_idea = export_focus` + `has_active_mission = JAP_government_faction_demands_trade_law_change` → `factor = 10`; `factor = 300` → `600`; дата резины `1943.1.1` → `1938.8.1`; `date > 1941.6.1` → `1939.1.1`; добавлены `tag = COG/SIA`.
-- **`france.txt`** — добавлена идея `FRA_ne_stroit_bazi_mor` («Нельзя строить морские базы»): `industrial_capacity_factory = 0.1` при `has_global_flag = VUP_Hist_version`, `production_speed_naval_base_factor = -5`.
+- **`_economic.txt`** — `level = 2` → `7`; убраны `is_minor = yes`; добавлен модификатор `original_tag = JAP` + `has_idea = export_focus` + `has_active_mission = JAP_government_faction_demands_trade_law_change` («$JAP_government_faction$ требует изменить торговое право») → `factor = 10`; `factor = 300` → `600`; дата резины `1943.1.1` → `1938.8.1`; `date > 1941.6.1` → `1939.1.1`; добавлены `tag = COG/SIA`.
+- **`france.txt`** — добавлена идея `FRA_ne_stroit_bazi_mor` («Нельзя строить морские базы»): `industrial_capacity_factory = 0.1` при `has_global_flag = VUP_Hist_version` («Исторический режим»), `production_speed_naval_base_factor = -5`.
 - **`japan.txt`** — `naval_strike_attack/targetting/agility_factor`: `0.12` → `0.15`.
 - **`omega_ideas.txt`** — добавлены идеи `debaf_pexa_ideas` («Уязвимость пехоты», `army_infantry_defence_factor = -0.15`), `no_farm_gen` («Не фармим гена») и пр.
 - **`usa.txt`** — `specialization_nuclear_speed_factor = 0.05` → `0.1`.
-- **`zzz_generic.txt`** — добавлены `on_add`/`on_remove` → `MTG_naval_treaty_sync_ui_membership_effect`.
+- **`zzz_generic.txt`** — добавлены `on_add`/`on_remove` → `MTG_naval_treaty_sync_ui_membership_effect` (синхронизация UI «Участник Лондонского морского соглашения»).
 - **`army_spirits.txt`** (файл добавлен в диапазоне) — +1310 строк: армейские духи (`academy_spirit`, `bold_attack_spirit`, `has_military_academy` и пр.).
 - **`bots.txt`** — исключён (AI-контент: `is_ai = yes`).
 - **`GER.txt`** — добавлены `available = { always = no }` (скрытые идеи-заглушки).
-- **`_manpower.txt`** — `base = 0` + модификатор `add = 100` при `has_completed_focus = SIA_national_savings_bond`.
+- **`_manpower.txt`** — `base = 0` + модификатор `add = 100` при `has_completed_focus = SIA_national_savings_bond` («Национальные сберегательные облигации»).
 
 ### 2.4. Технологии (`common/technologies/`)
 
@@ -174,10 +174,10 @@
 - **`countries/GER - Germany.txt`** — `set_research_slots = 5`; `set_global_flag = VUP_Hist_version`; `photo_reconnaisance = 1` вынесен на уровень выше.
 - **`countries/HON - Honduras.txt`** — закомментированы `air_superiority`, `mass_assault`, `pocket_defence`, `defence_in_depth`.
 - **`countries/IRE - Ireland.txt`** — убраны `air_superiority`, `grand_battle_plan`, `trench_warfare`, `fleet_in_being`, `battlefleet_concentration`.
-- **`countries/ITA - Italy.txt`** — закомментирован блок `1936.1.1.13 add_ideas = { no_farm_gen }`.
+- **`countries/ITA - Italy.txt`** — закомментирован блок `1936.1.1.13 add_ideas = { no_farm_gen }` («Не фармим гена»).
 - **`countries/JAP - Japan.txt`** — добавлены идеи `JAP_1936_fake_state_shintoism_idea`, `JAP_1936_fake_industrial_idea`; убраны другие.
-- **`countries/ROM - Romania.txt`** — добавлен `complete_national_focus = ROM_crack_down_on_extremism`.
-- **`countries/SOV - Soviet union.txt`** — +202 строк: флаги персонажей (`SOV_bronislav_kaminski`, `SOV_konstantin_voskoboinik` → `set_character_flag`).
+- **`countries/ROM - Romania.txt`** — добавлен `complete_national_focus = ROM_crack_down_on_extremism` («Преследовать экстремистов»).
+- **`countries/SOV - Soviet union.txt`** — +202 строк: флаги персонажей (`SOV_bronislav_kaminski` — «Бронислав Каминский», `SOV_konstantin_voskoboinik` — «Константин Воскобойник» → `set_character_flag`).
 - **`countries/USA - USA.txt`** — убран блок `1939.1.1` (`add_political_power = 1199`, `add_command_power = 100`, министры).
 - **`general/generic_advisors.txt`** — существовал до; в диапазоне правки (см. `bb84b0f`, `a7a0e71`).
 - **`states/`** — Австралия: удалены штаты 1074, 870, 871, 873 (в диапазоне — только M/D у оставшихся); Эстония: `3174 1 Voru` → `3174 3 Parnu`; `9221 1` → `9221 3 #Tartu`; Великобритания: закомментированы `dockyard` (119-Northern Ireland, 132-North-west England, 133-Strathclyde, 136-Aberdeenshire); Афганистан 267: `air_base = 1`; Бомбей 429: `victory_points` переструктурированы (+12269 Janjira); Arunachal Pradesh 434: VP `1116 1` → `2`, +`10810 1 Nyingchi`; East Africa 544: `manpower 1226000` → `1604000`; Jiansu 598 / China 6 606 / China 7 607: добавлен `add_dynamic_modifier = yellow_river_blown` (days=300); China 1 601: переписаны ресурсы; Manica e Sofala 896: `manpower 188600` → `831900`; Zambezia-Mocambique 897: `1386000` → `1812000`; Slovakia 70 / Czechoslovakia 9: переструктурированы лендмарки (`landmark_prague_castle`, `landmark_bojnice_castle`); Madras States 982: `aluminium = 4`.
@@ -185,11 +185,11 @@
 
 ### 2.8. Персонажи и черты (`common/characters/`, `common/country_leader/`, `common/unit_leader/`)
 
-- **`characters/FRA.txt`** — `has_completed_focus = FRA_aggressive_focus` → `has_country_flag = FRA_aggressive_focus` (так же `FRA_defensive_focus`).
+- **`characters/FRA.txt`** — `has_completed_focus = FRA_aggressive_focus` («Ставка на нападение») → `has_country_flag = FRA_aggressive_focus` («Ставка на нападение») (так же `FRA_defensive_focus` — «Ставка на оборону»).
 - **`characters/GER.txt`** — добавлен портрет `GFX_portrait_ger_wilhelm_iii_small`; трейты `winter_specialist` → `old_guard`; `skill = 4` / `attack_skill = 5` / `defense_skill = 3` убраны/переписаны.
-- **`characters/JAP.txt`** — `has_active_mission = JAP_army_faction_demands_military_factories` → `JAP_army_faction_demands_political_appointment` (×3).
+- **`characters/JAP.txt`** — `has_active_mission = JAP_army_faction_demands_military_factories` («$JAP_army_faction$ требует больше военных заводов») → `JAP_army_faction_demands_political_appointment` («$JAP_army_faction$ требует назначить главнокомандующего армией») (×3).
 - **`country_leader/00_traits.txt`** — `sprite = 10` → `13` (частично), добавлены `sprite = 10`.
-- **`unit_leader/00_traits.txt`** — `type = { land }` → `{ land navy }`; добавлен `CHI_watched_officer` (personality_trait, `new_commander_weight`).
+- **`unit_leader/00_traits.txt`** — `type = { land }` → `{ land navy }`; добавлен `CHI_watched_officer` («Офицер «на карандаше»»; personality_trait, `new_commander_weight`).
 - **`unit_leader/NSB_traits.txt`** — добавлен `communist_sympathizer` (`type = all`, `trait_type = personality_trait`, `gain_xp = { always = no }`).
 
 ### 2.9. Прочее (`common/` и `map/`)
@@ -204,7 +204,7 @@
 - **`units/equipment/tank_chassis.txt`** — добавлены `scaled_by_reliability = { max_strength = 0.5 }`, `module_add_stats_multiplier = { soft_attack = -0.05 hard_attack = -0.05 }`.
 - **`units/infantry.txt`** — `support_equipment = 10` → `5`; `max_strength = 25` → `27.5`; `soft_attack = 0.1` закомментирован.
 - **`countries/cosmetic.txt`** — добавлен `samanid_empire_tag` (цвет `rgb { 0 165 114 }`).
-- **`scripted_effects/00_scripted_effects.txt`** — добавлен `MTG_naval_treaty_mark_over_allowance_effect` (бейдж-флаг панели сигнатариев).
+- **`scripted_effects/00_scripted_effects.txt`** — добавлен `MTG_naval_treaty_mark_over_allowance_effect` (бейдж-флаг панели сигнатариев «Лондонское морское соглашение», срабатывает при превышении лимита `MTG_over_treaty_allowance`).
 - **`scripted_triggers/omega_diplomacy_triggers.txt`** — «Оправдание на ИИ с 1937» → «с июня 1938» (`date > 1937.1.1` → `1938.6.1`); добавлены условия `VUP_Hist_version`, `is_ai = no`; переработаны географические проверки (Азия/Южная Америка/Австралия).
 - **`dynamic_modifiers/FRA_import_dynamic_modifiers.txt`** — убран `production_speed_naval_base_factor = -1`; добавлен `sov_fabriki` («Индустриализация», `local_building_slots_factor = 0.40`).
 - **`map/adjacencies.csv`** — убраны 3 «impassable»-связи Гибралтара (`13228;4135`, `10094;4135`, `7153;4135`).

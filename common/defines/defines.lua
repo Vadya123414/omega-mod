@@ -216,7 +216,7 @@ NDefines.NAI.REGION_THREAT_LEVEL_TO_AVOID_REGION = 25 * 1000						-- Урове�
 NDefines.NAI.REGION_THREAT_LEVEL_TO_BLOCK_REGION = 25 * 1000						-- Уровень угрозы в регионе (формируемый параметром REGION_THREAT_PER_SUNK_CONVOY), при достижении которого ИИ решит пометить регион как зону, которой следует избегать.
 
 NDefines.NAI.NAVAL_COMBAT_AIR_IMPORTANCE = 500.0									-- Значение боевой авиации в морских сражениях
-NDefines.NAI.NAVAL_IMPORTANCE_SCALE = 0.65,											--Масштаб общей значимости военно-морских сил (все показатели, относящиеся к ВМС, умножаются на это значение)
+NDefines.NAI.NAVAL_IMPORTANCE_SCALE = 0.65											--Масштаб общей значимости военно-морских сил (все показатели, относящиеся к ВМС, умножаются на это значение)
 NDefines.NAI.NAVAL_STRIKE_PLANES_PER_SHIP = 40										-- Количество бомбардировщиков, запрашиваемых для атаки на один вражеский корабль
 NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 20										-- Количество самолетов, запрашиваемых для действий против вражеской армии
 NDefines.NAI.NAVAL_SHIP_IN_PORT_AIR_IMPORTANCE = 20.0                             	-- Важность корабля в порту для авиационных операций

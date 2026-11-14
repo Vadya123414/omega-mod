@@ -16491,7 +16491,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_limit_military_power}
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -17201,7 +17201,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_mountain_village_operation_units }
 		prerequisite = { focus = JAP_raise_support_within_the_proletarian_class }
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -17376,7 +17376,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -17539,7 +17539,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = JAP_revoke_the_peace_preservation_law } 
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -17598,7 +17598,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_a_red_sun_rises_for_a_new_era } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -17654,7 +17654,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_a_red_sun_rises_for_a_new_era } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -17729,7 +17729,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_the_lecture_group_ascendant focus = JAP_the_labor_farmer_faction_ascendant } 
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -19243,7 +19243,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_the_labor_farmer_faction_ascendant } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -19295,7 +19295,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_the_lecture_group_ascendant } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22089,7 +22089,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_revoke_the_peace_preservation_law } 
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -23655,7 +23655,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = JAP_democratic_war_with_china
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -23781,7 +23781,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_organize_a_general_election } 
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -23825,7 +23825,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_create_greater_east_asian_treaty_organization } 
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -23893,7 +23893,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_create_greater_east_asian_treaty_organization } 
 
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
