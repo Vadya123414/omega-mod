@@ -15,9 +15,9 @@ NDefines.NAir.FIGHTERS_DIVISION_FACTOR = 200 -- По умолчанию 30. Чт
 NDefines.NAir.MISSILES_DIVISION_FACTOR = 200 -- По умолчанию 60. Чтобы меньше летало 3D-моделек самолётов, то есть чтобы не лагало в лейте, когда авиации до жопы
 NDefines.NAir.TRANSPORT_DIVISION_FACTOR = 200 -- По умолчанию 30. Чтобы меньше летало 3D-моделек самолётов, то есть чтобы не лагало в лейте, когда авиации до жопы
 NDefines.NNavy.NAVAL_ACCIDENTS_DAYS_TO_LIVE = 30 -- По умолчанию 120. Снижение лога аварий
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 30 -- По умолчанию 7. Думают дольше, например апнуть ли шаблон
+--NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 30 -- По умолчанию 7. Думают дольше, например апнуть ли шаблон
 NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 14 -- По умолчанию 7. Думают дольше, например апнуть ли шаблон
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7 -- По умолчанию 7. ИИ реже рассчитывает дизайн шаблонов.
+--NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7 -- По умолчанию 7. ИИ реже рассчитывает дизайн шаблонов.
 NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 96 -- По умолчанию 24. Оценка дипломатии и торговли для ИИ ограничена частотой раз в 4 дня. ИИ реже отправляет дипломатические запросы.
 NDefines.NAI.REMOVE_OBSOLETE_TEMPLATE_DAYS = 90 -- По умолчанию 180. ИИ быстрее очищает пустые неиспользуемые шаблоны, чтобы сэкономить оперативную память.
 NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 90 -- По умолчанию 30. ИИ реже проверяет наличие улучшений доктрины.
@@ -49,7 +49,7 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время 
 --NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для активных способностей
 --NDefines.NMilitary.PREFERRED_PRISON_VP = 5;	-- При захвате генерала пытаться найти провинцию как минимум с таким количеством победных очков (VP), чтобы посадить его в тюрьму. Фактическое VP тюрьмы может быть ниже, если у захватившей страны нет провинций с таким количеством VP
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 196 --24 лимит спец войск
---NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальёны
+--NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0	--прирост за батальоны
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 
@@ -88,7 +88,17 @@ NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
 
----AI 
+--    ##        ########  
+--   ####          ##     
+--  ##  ##         ##     
+-- ##    ##        ##     
+--##      ##       ##     
+--##########       ##     
+--##      ##       ##     
+--##      ##       ##     
+--##      ##       ##     
+--##      ##    ########  
+
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
@@ -99,14 +109,14 @@ NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.9               -- ИИ не н�
 NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.85               -- ИИ прекратит тренировку, если уровень оснащения упадет ниже этого значения
 NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.75                -- ИИ не начнет тренировку, если уровень снабжения упадет ниже этого значения
 NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.65                   -- ИИ прекратит тренировку, если уровень снабжения упадет ниже этого значения
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.95          -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99          -- ИИ прекратит тренировку, если как минимум такая доля дивизий в армии полностью обучена
 NDefines.NAI.STOP_TRAINING_ACTIVE_COMBAT_RATIO = 0.05            -- ИИ останавливает все тренировки, когда более чем такая доля его дивизий находится в активном бою (вместо этого идет пополнение)
 
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.4			-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время войны
-NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.2   		-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время мира
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_WARTIME = 0.1			-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время войны
+NDefines.NAI.DEPLOYED_UNIT_MANPOWER_RATIO_TO_BUFFER_PEACETIME = 0.1   		-- сколько в % относительно развёрнутого менпавера бот будет оставлять в резерве во время мира
 
 NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 16 -- Для каждой армии: интервал в часах между обновлением списка провинций, которые могут стать точками окружения
-NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.95 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99 	-- ИИ не будет тренировать оперативное соединение, если доля полностью обученных кораблей выше этого значения
 NDefines.NAI.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 999 --Максимальное кол-во заданий обучений для ИИ
 NDefines.NAI.AI_TASKFORCE_REQUIRED_RESERVE_RATIO = 0.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 0 -- К скольким цивилкам ботики будут стремиться в 36 году, кратно увеличивает вес цивилок
@@ -132,6 +142,85 @@ NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10             -- Max ahead of time pe
 	-- <start> construction prioritization
 NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 2                                    -- base prio for infrastructure in the construction queue
 NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 5                                   -- base prio for supply buildings (supply hubs, ports) in the construction queue
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 0.50                                       -- base prio for railways in the construction queue
+
+
+NDefines.NAI.AREA_DEFENSE_SETTING_VP = false
+NDefines.NAI.AREA_DEFENSE_SETTING_PORTS = true
+NDefines.NAI.AREA_DEFENSE_SETTING_AIRBASES = false
+NDefines.NAI.AREA_DEFENSE_SETTING_FORTS = true
+NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES = true
+NDefines.NAI.AREA_DEFENSE_SETTING_RAILWAYS = false
+
+
+NDefines.NAI.ARMY_LEADER_ASSIGN_OVERALL_SKILL_FACTOR = 1000               			-- This times general's overall skill is added to score
+NDefines.NAI.ARMY_LEADER_ASSIGN_ATTACK_SKILL_FACTOR = 250               			-- This times general's attack skill is added to score
+NDefines.NAI.ARMY_LEADER_ASSIGN_DEFENSE_SKILL_FACTOR = 250              			-- This times general's defense skill is added to score
+NDefines.NAI.ARMY_LEADER_ASSIGN_NR_TRAITS = 100                          		 	-- This times general's nr of active traits is added to score
+NDefines.NAI.ARMY_LEADER_MIN_DIVISIONS_FOR_HQ = 12									-- В армии должно быть как минимум столько дивизий, чтобы ИИ развернул для неё штабное подразделение
+NDefines.NAI.MAX_DEPLOYED_ARMY_HQS = 20												-- ИИ не будет разворачивать более указанного количества армейских штабов одновременно
+
+NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 5	
+
+----------- ЛЕНД-ЛИЗ
+
+NDefines.NAI.DIPLOMACY_LEND_LEASE_MONTHS_TO_CANCEL = 6								-- ИИ не будет отменять соглашение о ленд-лизе до истечения этого срока
+NDefines.NAI.LENDLEASE_FRACTION_OF_PRODUCTION = 0.5									-- Базовая доля текущего производства, которую ИИ готов передать по ленд-лизу
+NDefines.NAI.LENDLEASE_FRACTION_OF_STOCKPILE = 0.75									-- Базовая доля имеющихся запасов, которую ИИ готов передать по ленд-лизу
+
+NDefines.NAI.MINIMUM_CONVOY_TO_ASK_LEND_LEASE = 200									-- ИИ согласится на запрос ленд-лиза конвоев только в том случае, если его запасы ниже этого значения (особый случай, так как запасы конвоев не могут быть отрицательными).
+NDefines.NAI.MINIMUM_FUEL_DAYS_TO_ASK_LEND_LEASE = 60								-- ИИ согласится на запрос ленд-лиза топлива только в том случае, если у игрока запасов топлива меньше, чем произведение этого числа на его максимальное суточное потребление.
+NDefines.NAI.MINIMUM_FUEL_DAYS_TO_ACCEPT_LEND_LEASE = 60					 		-- ИИ согласится предоставить топливо по ленд-лизу только в том случае, если его собственные запасы топлива превышают произведение этого числа на его максимальное суточное потребление. Примечание: для правительства в изгнании (GiE), обращающегося к принимающей его стране, это число делится на 2.
+
+----------- ВТОРЖЕНИЯ
+
+NDefines.NAI.MAX_DISTANCE_NAVAL_INVASION = 200.0									-- ИИ крайне неохотно планирует морские вторжения, если расстояние превышает этот предел. NDefines.NAI.MAX_UNIT_RATIO_FOR_INVASIONS = 0.35									-- страны не будут задействовать в морских вторжениях более указанной доли от общего числа своих войск
+NDefines.NAI.MAX_INVASION_FRONT_SCORE = 2400										-- максимальное значение оценки для фронтов морского вторжения
+NDefines.NAI.MIN_FRONT_SCORE_FOR_AFTER_INVASION_AREAS = 1800						-- минимальное значение оценки для фронтов, созданных в недавно захваченных в ходе вторжения регионах
+NDefines.NAI.INVASION_COASTAL_PROVS_PER_ORDER = 28									-- ИИ планирует одно дополнительное вторжение на каждые N прибрежных провинций (количество приказов = общая протяженность побережья / это значение)
+NDefines.NAI.NAVAL_INVADED_AREA_PRIO_DURATION = 270									-- после успешного вторжения ИИ будет отдавать приоритет этому вражескому региону в течение указанного количества дней
+NDefines.NAI.NAVAL_INVADED_AREA_PRIO_MULT = 2.0										-- фронты, возникшие в результате недавних вторжений, получают повышенный приоритет
+NDefines.NAI.MIN_NUM_CONQUERED_PROVINCES_TO_DEPRIO_NAVAL_INVADED_FRONTS = 60		-- если после морского вторжения захвачено указанное количество провинций, фронт теряет свой приоритетный статус и начинает функционировать как обычный фронт
+NDefines.NAI.MAX_INVASION_SIZE = 32													-- максимальный размер группировки для вторжения
+NDefines.NAI.MAX_UNITS_FACTOR_INVASION_ORDER = 1.4									-- коэффициент для определения максимального числа войск, назначаемых на приказы о морском вторжении
+NDefines.NAI.DESIRED_UNITS_FACTOR_INVASION_ORDER = 1.4								-- коэффициент для определения желаемого числа войск, назначаемых на приказы о морском вторжении
+NDefines.NAI.MIN_UNITS_FACTOR_INVASION_ORDER = 1.2									-- Коэффициент для определения минимального количества соединений, назначаемых для приказов о морском вторжении
+NDefines.NAI.ENEMY_NAVY_STRENGTH_DONT_BOTHER = 5.0									-- Если военно-морские силы противника как минимум в такое-то число раз превосходят ваши собственные, даже не пытайтесь вторгаться.
+
+----------- ФЛОТ
+
+NDefines.NAI.MISSING_CONVOYS_BOOST_FACTOR = 0.0										-- Чем больше конвоев не хватает стране, тем больше ресурсов она выделяет для решения этой проблемы. -- Если флот противника превосходит ваш по силе в указанное число раз, попытки вторжения предпринимать не стоит.
+
+NDefines.NAI.CONVOY_ESCORT_MUL_FROM_NO_CONVOYS = 0 									-- Множитель оценки, если в регионе нет конвоев.
+NDefines.NAI.CONVOY_ESCORT_SCORE_FROM_CONVOYS = 0            				    	-- Оценка за каждый конвой, находящийся в регионе.
+NDefines.NAI.REGION_CONVOY_DANGER_DAILY_DECAY = 5									-- Потопление конвоев создает в регионе угрозу, которую ИИ учитывает при определении приоритетности морских операций.
+NDefines.NAI.NAVAL_MISSION_ESCORT_NEAR_OWNED = 0									-- Дополнительная оценка для миссий по сопровождению вблизи собственных провинций.
+NDefines.NAI.NAVAL_MISSION_ESCORT_NEAR_CONTROLLED = 0								-- Дополнительная оценка для миссий по сопровождению вблизи контролируемых провинций.
+
+NDefines.NAI.MAX_MISSION_PER_TASKFORCE = {  -- max mission region/taskforce ratio
+	0, -- HOLD (consumes fuel HOLD_MISSION_MOVEMENT_COST fuel while moving)
+	1.5, -- PATROL
+	6, -- STRIKE FORCE
+	1.5, -- CONVOY RAIDING
+	1, -- CONVOY ESCORT
+	2, -- MINES PLANTING
+	2, -- MINES SWEEPING
+	0, -- TRAIN
+	0, -- RESERVE_FLEET
+	10, -- NAVAL INVASION SUPPORT
+}
+
+
+--Нужно подобрать подходящие значения; один потопленный конвой создает 25 единиц угрозы.
+NDefines.NAI.REGION_THREAT_LEVEL_TO_AVOID_REGION = 25 * 1000						-- Уровень угрозы в регионе (формируемый параметром REGION_THREAT_PER_SUNK_CONVOY), при достижении которого ИИ решит пометить регион как зону, которой следует избегать.
+NDefines.NAI.REGION_THREAT_LEVEL_TO_BLOCK_REGION = 25 * 1000						-- Уровень угрозы в регионе (формируемый параметром REGION_THREAT_PER_SUNK_CONVOY), при достижении которого ИИ решит пометить регион как зону, которой следует избегать.
+
+NDefines.NAI.NAVAL_COMBAT_AIR_IMPORTANCE = 500.0									-- Значение боевой авиации в морских сражениях
+NDefines.NAI.NAVAL_IMPORTANCE_SCALE = 0.65,											--Масштаб общей значимости военно-морских сил (все показатели, относящиеся к ВМС, умножаются на это значение)
+NDefines.NAI.NAVAL_STRIKE_PLANES_PER_SHIP = 40										-- Количество бомбардировщиков, запрашиваемых для атаки на один вражеский корабль
+NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 20										-- Количество самолетов, запрашиваемых для действий против вражеской армии
+NDefines.NAI.NAVAL_SHIP_IN_PORT_AIR_IMPORTANCE = 20.0                             	-- Важность корабля в порту для авиационных операций
+NDefines.NAI.PORT_STRIKE_PLANES_PER_SHIP = 20										-- Количество бомбардировщиков, запрашиваемых для атаки на один вражеский корабль, находящийся в порту
 
 
 NDefines.NAI.WANTED_UNITS_MAX_WANTED_CAP = 999999999999							-- Максимальное желаемое количество дивизий для страны. Может превышаться определенными хардкодными множителями, но не базовой логикой расчета.
@@ -142,14 +231,16 @@ NDefines.NAI.LOW_PRIO_TEMPLATE_PENALTY_FOR_FRONTS = -2000  -- в ванилле 
 NDefines.NAI.WANTED_LAND_PLANES_PER_BASE_CAPACITY_FACTOR = 10	-- Масштабирует количество самолетов наземного базирования, которое хочет ИИ, на единицу вместимости авиабазы (исключая авианосцы).
 NDefines.NAI.WANTED_LAND_PLANES_PER_DIVISION = 40				-- Сколько самолетов наземного базирования хочет ИИ на каждую желаемую дивизию.
 NDefines.NAI.WANTED_LAND_PLANES_TOTAL_MAX_PER_DIVISION = 180	-- Максимальное общее количество самолетов наземного базирования, которое хочет ИИ.
+NDefines.NAI.NAVAL_COMBAT_TRANSFER_AIR_IMPORTANCE = 500.0		-- Морской бой с участием сухопутных подразделений противника
 
 NDefines.NAI.RAILWAY_GUN_PRODUCTION_BASE_DIVISIONS_RATIO_PERCENT = 5  -- в ванилле 0 | Базовое соотношение желаемых железнодорожных орудий к дивизиям для ИИ (5 означает 5%). Может быть изменено значением ИИ-стратегии railway_guns_divisions_ratio
 NDefines.NAI.RAILWAY_GUN_PRODUCTION_MIN_DIVISONS = 50  -- в ванилле 20 | Минимальное необходимое количество дивизий, чтобы ИИ задумался о производстве железнодорожных орудий
 NDefines.NAI.RAILWAY_GUN_PRODUCTION_MIN_FACTORIES = 40  -- в ванилле 10 | Минимальное необходимое количество военных заводов, чтобы ИИ задумался о производстве железнодорожных орудий
 
+
 NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.25  -- в ванилле 0.8 | Базовое значение того, какую долю от используемого в данный момент снаряжения ИИ будет как минимум стремиться иметь на складе | [BIC]
 NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = 0.1  -- в ванилле 0.3 | Базовое значение того, какую долю от используемого в данный момент снаряжения ИИ будет как минимум стремиться иметь на складе для гарнизонных сил | [BIC]
-NDefines.NAI.PRODUCTION_LINE_SWITCH_SURPLUS_NEEDED_MODIFIER = 0.15  -- в ванилле 0.2 | Модифицируется модификаторами эффективности. | [BIC]
+NDefines.NAI.PRODUCTION_LINE_SWITCH_SURPLUS_NEEDED_MODIFIER = 0  -- в ванилле 0.2 | Модифицируется модификаторами эффективности. | [BIC]
 
 NDefines.NAI.DEFAULT_SUPPLY_TRAIN_NEED_FACTOR = 1.25  -- в ванилле 1.2 | ИИ умножает текущее использование поездов на это значение для определения желаемого количества необходимых поездов. Может быть изменено стратегиями ИИ wanted_supply_train и min_wanted_supply_trains. | [BIC]
 
@@ -161,7 +252,14 @@ NDefines.NAI.POLITICAL_ADVISOR_SCORE_MULTIPLIER = 6.0  -- в ванилле 1.0 
 
 NDefines.NAI.ASSIGN_MOUNTAINEERS_TO_MOUNTAINS = 50.0  -- в ванилле 10.0 | Фактор для назначения горнострелковых дивизий на фронты с горами (пропорционально количеству этого типа местности)
 
+
+
 NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 92  -- в ванилле 52; | Проверять, улучшит ли активация моторизации ситуацию со снабжением, с такой периодичностью. | [FAI]
+NDefines.NAI.FIX_SUPPLY_BOTTLENECK_SATURATION_THRESHOLD = 1.1		-- Постарается устранить узкие места в снабжении, если уровень насыщения узла снабжения превышает это значение.
+NDefines.NAI.DIVISION_SUPPLY_RATIO_TO_MOTORIZE = 0.90  -- в ванилле 0.80 | Если уровень снабжения меньше этого значения, рассмотреть возможность моторизации любого подходящего близлежащего узла снабжения
+
+
+
 
 NDefines.NAI.REDEPLOY_DISTANCE_VS_ORDER_SIZE = 0.6  -- в ванилле 1.0 | Фактор, применяемый к длине пути подразделения по сравнению с длиной приказа для определения, следует ли использовать стратегическую переброску
 NDefines.NAI.UNIT_ASSIGNMENT_TERRAIN_IMPORTANCE = 20.0  -- в ванилле 10.0 | Очки местности для подразделений умножаются на это значение, когда ИИ решает, на какой фронт они должны быть назначены
@@ -177,8 +275,6 @@ NDefines.NAI.MIN_AI_UNITS_PER_TILE_FOR_STANDARD_COHESION = 2.5  -- в ванил
 NDefines.NAI.ASSIGN_FRONT_TERRAIN_ATTACK_FACTOR = 0.1  -- в ванилле 3.0 | Важность скорректированного под местность показателя атаки подразделения при назначении на фронт
 NDefines.NAI.ASSIGN_FRONT_TERRAIN_DEFENSE_FACTOR = 0.1  -- в ванилле 1.0 | Важность скорректированного под местность показателя обороны подразделения при назначении на фронт
 NDefines.NAI.ASSIGN_FRONT_TERRAIN_MOVEMENT_FACTOR = 0.1  -- в ванилле 2.0 | Важность скорректированного под местность показателя скорости перемещения подразделения при назначении на фронт
-
-NDefines.NAI.DIVISION_SUPPLY_RATIO_TO_MOTORIZE = 0.90  -- в ванилле 0.80 | Если уровень снабжения меньше этого значения, рассмотреть возможность моторизации любого подходящего близлежащего узла снабжения
 
 NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 32  -- в ванилле 3 | ИИ просматривает свои приказы и проверяет, есть ли ситуации, которыми можно воспользоваться
 NDefines.NAI.MICRO_POCKET_SIZE = 8  -- в ванилле 4 | Котлы с размером, равным или меньшим этого значения, будут зачищаться ИИ микроконтролем для эффективности.
@@ -242,23 +338,6 @@ NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = { 	1,   4,   7,   10,   13,
 													21,  22,  23,  24,  25} 
 		
 NDefines.NProduction.MILITARY_FACTORY_COHERENCY_BONUS = 15
-
--- <start> приоритеты строительства
-	-- <start> construction prioritization
-	CONSTRUCTION_PRIO_INFRASTRUCTURE = 0.20                                    -- base prio for infrastructure in the construction queue
-	CONSTRUCTION_PRIO_CIV_FACTORY = 0.80                                       -- base prio for civilian factories in the construction queue
-	CONSTRUCTION_PRIO_MIL_FACTORY = 0.70                                       -- base prio for military factories in the construction queue
-	CONSTRUCTION_PRIO_SUPPLY_BUILDING = 1.10                                  -- base prio for supply buildings (supply hubs, ports) in the construction queue
-	CONSTRUCTION_PRIO_RAILWAY = 4.00                                           -- base prio for railways in the construction queue
-	CONSTRUCTION_PRIO_RAILWAY_GUN_REPAIR = 15.00                               -- base prio for railway gun repairs in the construction queue
-	CONSTRUCTION_PRIO_UNSPECIFIED = 0.50                                       -- base prio for unspecified buildings (none of the categories above) in the construction queue
-	CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 1.00                         -- factor prio with this if occupied territory
-	CONSTRUCTION_PRIO_FACTOR_OWNED_NONCORE = 1.50                              -- factor prio with this if owned non-core territory
-	CONSTRUCTION_PRIO_FACTOR_OWNED_CORE = 2.00                                 -- factor prio with this if owned core territory
-	CONSTRUCTION_PRIO_FACTOR_REPAIRING = 0.30                                  -- factor prio with this if building is being repaired
-	-- <end> construction prioritization
--- <end> приоритеты строительства
-
 
 --Улучшение Агентства (КБ)
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 30						-- Количество дней, необходимое для создания разведывательного агентства
