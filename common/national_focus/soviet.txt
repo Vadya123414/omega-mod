@@ -13192,9 +13192,12 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
 
 		available = {
-			OR = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				has_completed_focus = SOV_secure_leningrad
 				date > 1940.5.1
-				NOT = {has_country_flag = VUP_Hist_version}
 			}
 			is_subject = no
 		}
