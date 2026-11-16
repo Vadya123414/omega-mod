@@ -25,6 +25,11 @@ default_unit_production = {
 		always = yes
 		}
 	abort_when_not_enabled = no
+	
+	ai_strategy = {
+        type = force_build_armies
+        value = 1000
+    }
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = convoy
@@ -87,6 +92,10 @@ default_unit_production_JAP = {
 		 always = yes
 		}
 	abort_when_not_enabled = no
+	ai_strategy = {
+        type = force_build_armies
+        value = 1000
+    }
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = convoy
@@ -715,7 +724,7 @@ default_mountaineers_unit_production = {
 	enable = {
 				has_tech = tech_mountaineers
 		}
-	abort_when_not_enabled = no	
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
@@ -766,7 +775,7 @@ default_rangers_unit_production = {
 	enable = {
 			has_tech = rangers_tech
 		}
-	abort_when_not_enabled = no	
+	abort_when_not_enabled = yes	
 	ai_strategy = {
 		type = role_ratio
 		id = rangers
