@@ -81,7 +81,48 @@ BOTS = {
             add_ideas = service_by_requirement
             add_political_power = -150
         }
-    }   
+    }
+	    bot_fra_war = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+            original_tag = FRA
+            has_war = yes
+            }
+		visible = {
+            original_tag = FRA
+            is_ai = yes
+		}
+        ai_will_do = {base = 200}
+        cost = 0
+        complete_effect = {
+	   		if = {
+			limit = {
+				OR = {
+					has_idea = disarmed_nation
+					has_idea = volunteer_only
+				}
+			}
+			add_ideas = limited_conscription
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_conscription
+			}
+			add_ideas = extensive_conscription
+		}
+		else_if = {
+			limit = {
+				has_idea = extensive_conscription
+			}
+			add_ideas = service_by_requirement
+		}
+            add_political_power = -150
+        }
+    }  
+
     bot_chi_hist_front = {
 
 		fire_only_once = yes

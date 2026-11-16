@@ -7602,7 +7602,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_war_with_major = yes
+			or = {
+				date > 1940.9.1
+				has_war_with_major = yes
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -13189,9 +13192,12 @@ ai_will_do = {
 		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
 
 		available = {
-			OR = {
+			if = {
+				limit = {
+					has_country_flag = VUP_Hist_version
+				}
+				has_completed_focus = SOV_secure_leningrad
 				date > 1940.5.1
-				NOT = {has_country_flag = VUP_Hist_version}
 			}
 			is_subject = no
 		}

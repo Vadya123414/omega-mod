@@ -62,199 +62,28 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-                mobilization_speed = 100
+                mobilization_speed = 1
 				industrial_capacity_factory = -0.09
-                production_factory_efficiency_gain_factor = 10
+                production_factory_efficiency_gain_factor = 200
                 intel_network_gain_factor = 0.5
 				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.85
+				training_time_army_factor = -0.74
+				production_speed_naval_base_factor = 100.0
+				repair_speed_naval_base_factor = -100.0
+				dig_in_speed_factor = 1.0
+				convoy_retreat_speed = 1
+				invasion_preparation = -0.75
+				convoy_escort_efficiency = 0.5
 				country_resource_chromium = 1
 				country_resource_steel = 1
 				country_resource_tungsten = 1
 				country_resource_aluminium = 1
 				country_resource_coal = 1
 				country_resource_rubber = 1
-				country_resource_oil = 1			
+				country_resource_oil = 1
 			}
 
 			cancel = {	
-			or = {
-				#has_idea = smart_bots_1
-				#has_idea = smart_bots_2
-				#has_idea = smart_bots_3
-				#has_idea = smart_bots_4
-				#has_idea = smart_bots_5
-				original_tag = INS
-					is_ai = no
-					has_civil_war = yes
-					}
-			}
-		}
-	smart_bots_1 = {
-
-
-			allowed = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.196
-                production_factory_efficiency_gain_factor = 10
-                intel_network_gain_factor = 10
-				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9
-				country_resource_chromium = 1
-				country_resource_steel = 1
-				country_resource_tungsten = 1
-				country_resource_aluminium = 1
-				country_resource_coal = 1
-				country_resource_rubber = 1			
-				
-			}
-
-			cancel = {	
-			or = {
-				has_idea = smart_bots_2
-				has_idea = smart_bots_3
-				has_idea = smart_bots_4
-				has_idea = smart_bots_5
-				original_tag = INS
-					is_ai = no
-					has_civil_war = yes
-					}
-			}
-		}
-	smart_bots_2 = {
-
-
-			allowed = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.2
-                production_factory_efficiency_gain_factor = 10
-                intel_network_gain_factor = 10
-				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9
-				country_resource_chromium = 1
-				country_resource_steel = 1
-				country_resource_tungsten = 1
-				country_resource_aluminium = 1
-				country_resource_coal = 1
-				country_resource_rubber = 1							
-				
-			}
-
-			cancel = {
-			or = {
-				has_idea = smart_bots_3
-				has_idea = smart_bots_4
-				has_idea = smart_bots_5
-				original_tag = INS
-					is_ai = no
-					has_civil_war = yes
-					}
-			}
-		}
-	smart_bots_3 = {
-
-
-			allowed = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.203
-                production_factory_efficiency_gain_factor = 10
-                intel_network_gain_factor = 10
-				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9
-				country_resource_chromium = 1
-				country_resource_steel = 1
-				country_resource_tungsten = 1
-				country_resource_aluminium = 1
-				country_resource_coal = 1
-				country_resource_rubber = 1							
-			}
-
-			cancel = {
-			or = {
-				has_idea = smart_bots_4
-				has_idea = smart_bots_5
-				original_tag = INS
-					is_ai = no
-					has_civil_war = yes
-					}
-			}
-		}
-	smart_bots_4 = {
-
-
-			allowed = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.205
-                production_factory_efficiency_gain_factor = 10
-                intel_network_gain_factor = 10
-				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9
-				country_resource_chromium = 1
-				country_resource_steel = 1
-				country_resource_tungsten = 1
-				country_resource_aluminium = 1
-				country_resource_coal = 1
-				country_resource_rubber = 1							
-			}
-
-			cancel = {
-			or = {
-				has_idea = smart_bots_5
-				original_tag = INS
-					is_ai = no
-					has_civil_war = yes
-					}
-			}
-		}
-	smart_bots_5 = {
-
-
-			allowed = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-                mobilization_speed = 10
-				industrial_capacity_factory = -0.206
-                production_factory_efficiency_gain_factor = 10
-                intel_network_gain_factor = 10
-				ai_desired_divisions_factor = 100
-				training_time_army_factor = -0.9
-				country_resource_chromium = 1
-				country_resource_steel = 1
-				country_resource_tungsten = 1
-				country_resource_aluminium = 1
-				country_resource_coal = 1	
-				country_resource_rubber = 1						
-			}
-
-			cancel = {
 			or = {
 				original_tag = INS
 					is_ai = no
@@ -273,7 +102,9 @@ ideas = {
 
 			modifier = {
 			supply_consumption_factor = -1
-			unit_upkeep_attrition_factor = -1
+			out_of_supply_factor = -1.0
+			truck_attrition_factor = -0.99
+			attrition = -1
 			}
 
 			cancel = {
