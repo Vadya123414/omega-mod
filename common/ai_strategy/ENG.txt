@@ -2015,7 +2015,33 @@ ENG_air_support_north_africa = {
 		value = 2000
 	}
 }
+ENG_air_support_north_africa = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		is_historical_focus_on = yes
+		has_war_with = GER
+		FRA = {controls_state = 25}
+	}
+	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 5 # 
+		value = 3000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 19 
+		value = 5000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 208 # Central Mediterranean Sea
+		value = 1000
+	}
+}
 ENG_dont_kick_russia_out_from_triple_entente_due_to_gobbling_up_breakaway_states = {
 	allowed = {
 		original_tag = ENG

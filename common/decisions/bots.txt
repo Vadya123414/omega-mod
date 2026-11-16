@@ -70,38 +70,15 @@ BOTS = {
             has_global_flag = VUP_Hist_version
             original_tag = FIN
             has_war = yes
-            has_war_support > 0.81
             }
 		visible = {
-                original_tag = FIN
+            original_tag = FIN
             is_ai = yes
 		}
         ai_will_do = {base = 200}
         cost = 0
         complete_effect = {
             add_ideas = service_by_requirement
-            add_political_power = -150
-        }
-    } 
-    bot_fin_war = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-            has_global_flag = VUP_Hist_version
-            original_tag = FRA
-            has_war = yes
-            has_war_support > 0.81
-            }
-		visible = {
-            original_tag = FRA
-            is_ai = yes
-		}
-        ai_will_do = {base = 200}
-        cost = 0
-        complete_effect = {
-            add_ideas = extensive_conscription
             add_political_power = -150
         }
     }   
@@ -160,14 +137,14 @@ BOTS = {
 						add_building_construction = {
 							type = infrastructure
 							instant_build = no
-							level = 1
+							level = 2
 						}
 				}
              66 = {
 						add_building_construction = {
 							type = infrastructure
 							instant_build = no
-							level = 1
+							level = 2
 						}
 				}
             55 = {
@@ -178,6 +155,13 @@ BOTS = {
 						}
 				}
             57 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 1
+						}
+				}
+			42 = {
 						add_building_construction = {
 							type = infrastructure
 							instant_build = no
@@ -432,7 +416,7 @@ BOTS = {
 						add_building_construction = {
 							type = infrastructure
 							instant_build = no
-							level = 3
+							level = 4
 						}
 						add_building_construction = {
 							type = industrial_infrastructure
@@ -496,7 +480,7 @@ BOTS = {
         complete_effect = {
             497 = {
 						add_building_construction = {
-							type = infrastructure~
+							type = infrastructure
 							instant_build = no
 							level = 4
 						}
@@ -560,13 +544,13 @@ BOTS = {
 		available = {
                 original_tag = NOR
                 is_ai = yes
-                has_global_flag = VUP_Hist_version
+                #has_global_flag = VUP_Hist_version
 				date >1938.1.1
             }
 		visible = {
             original_tag = NOR
             is_ai = yes
-            has_global_flag = VUP_Hist_version
+            #has_global_flag = VUP_Hist_version
 		}
         ai_will_do = {base = 100000}
         cost = 0
@@ -596,12 +580,12 @@ BOTS = {
 				date >1938.1.1
                 original_tag = NOR
                 is_ai = yes
-                has_global_flag = VUP_Hist_version
+                #has_global_flag = VUP_Hist_version
             }
 		visible = {
             original_tag = NOR
             is_ai = yes
-            has_global_flag = VUP_Hist_version
+            #has_global_flag = VUP_Hist_version
 		}
         ai_will_do = {base = 100000}
         cost = 0
@@ -650,12 +634,10 @@ BOTS = {
 				date >1938.1.1
                 original_tag = SWI
                 is_ai = yes
-                has_global_flag = VUP_Hist_version
             }
 		visible = {
             original_tag = SWI
             is_ai = yes
-            has_global_flag = VUP_Hist_version
 		}
         ai_will_do = {base = 100000}
         cost = 0

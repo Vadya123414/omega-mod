@@ -4,22 +4,10 @@
 		}
 	enable = {
 		original_tag = FIN
-		controls_state = 146 
 		has_defensive_war_with = SOV
 	}
 	abort = { has_capitulated = yes }
-	ai_strategy = {
-		type = put_unit_buffers
-		states = {
-			146 
-			150 
-			929
-			722
-		}
-		ratio = 0.8
-		subtract_invasions_from_need = yes
-		subtract_fronts_from_need = yes
-	}
+
 			ai_strategy = {
 	 	type = front_unit_request
 		state = 148
@@ -30,6 +18,57 @@
 		state = 722
 		value = -1000
 	}
+	ai_strategy = {
+		type = front_control
+		tag = SOV
+		ratio = 0.7
+		state = 146
+		priority = 10000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+		ai_strategy = {
+		type = front_control
+		tag = SOV
+		ratio = 0
+		state = 213
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+		ai_strategy = {
+		type = front_control
+		tag = SOV
+		ratio = 0
+		state = 215
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+			ai_strategy = {
+		type = front_control
+		tag = SOV
+		ratio = 0
+		state = 216
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = SOV
+		ratio = 0
+		state = 195
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+
 }
 FIN_alone_in_the_north = {
 	enable = {

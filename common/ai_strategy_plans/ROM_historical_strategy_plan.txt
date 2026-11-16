@@ -78,6 +78,7 @@ ROM_historical_weak = {
 
 	ideas = {
 		extensive_conscription = 60
+		limited_conscription = 60
 		army_infantry_2 = 20
 	}
 
