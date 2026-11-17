@@ -1,4 +1,71 @@
 BOTS = {
+	    bots_fast_division = {
+
+               #fire_only_once = yes
+        days_remove = 15
+
+               icon = oppression
+               available = {
+        #date > 1939.1.1
+        has_manpower > 300000
+        is_ai = yes
+        has_equipment = { infantry_equipment > 10000 }
+        #has_equipment = { support_equipment > 275 }
+        #has_equipment = { artillery_equipment > 60 }
+        #has_equipment = { anti_air_equipment > 120 }
+            }
+               visible = {
+            is_ai = yes
+               }
+        ai_will_do = {base = 10}
+        cost = 0
+        complete_effect = {
+			#add_manpower = -84000
+               division_template = {
+                                       name = "fast drop"
+                                       is_locked = yes
+                                       regiments = {
+                                               infantry = { x = 0 y = 0 }
+                                               infantry = { x = 1 y = 0 }
+                                               infantry = { x = 2 y = 0 }
+                                               infantry = { x = 3 y = 0 }
+                                               infantry = { x = 4 y = 0 }
+
+                                               infantry = { x = 0 y = 1 }
+                                               infantry = { x = 1 y = 1 }
+                                               infantry = { x = 2 y = 1 }
+                                               infantry = { x = 3 y = 1 }
+                                               infantry = { x = 4 y = 1 }
+
+                        infantry = { x = 0 y = 2 }
+                                               infantry = { x = 1 y = 2 }
+                                               infantry = { x = 2 y = 2 }
+                                               infantry = { x = 3 y = 2 }
+                                               infantry = { x = 4 y = 2 }
+                                       }
+                        support = {
+                            engineer = { x = 0 y = 0 }
+                            artillery = { x = 0 y = 1 }
+                        }
+                        regimental_support = {
+                            fire_support = { x = 0 y = 0 }
+                            fire_support = { x = 1 y = 0 }
+                            fire_support = { x = 2 y = 0 }
+                            fire_support = { x = 3 y = 0 }
+                            fire_support = { x = 4 y = 0 }
+                        }
+                           }
+
+                               capital_scope = {
+                                       create_unit = {
+                                               division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 1 start_equipment_factor = 0.01 start_manpower_factor = 1"
+                        owner = ROOT
+                                               allow_spawning_on_enemy_provs = no
+                                               count = 5 
+                                       }
+                               }
+        }
+    } 
         bot_VUP_Hist_version = {
 
 		fire_only_once = yes
@@ -79,7 +146,7 @@ BOTS = {
         cost = 0
         complete_effect = {
             add_ideas = service_by_requirement
-            add_political_power = -150
+            add_political_power = 150
         }
     }
 	    bot_fra_war = {
@@ -119,7 +186,7 @@ BOTS = {
 			}
 			add_ideas = service_by_requirement
 		}
-            add_political_power = -150
+            add_political_power = 150
         }
     }  
 
