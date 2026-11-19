@@ -1,53 +1,55 @@
 on_actions = {
 	on_startup = {
 		effect = {
-            if = {limit = { has_global_flag = VUP_Hist_version}
+            if = {
+                limit = { 
+                    has_global_flag = VUP_Hist_version
+                }
                 132 = {
-                            remove_building = {
-                                        type = dockyard
-                                        level = 3
-                                    }
+                    remove_building = {
+                        type = dockyard
+                        level = 3
                     }
-                    131 = {
-                            remove_building = {
-                                        type = dockyard
-                                        level = 3
-                                    }
+                }
+                131 = {
+                    remove_building = {
+                        type = dockyard
+                        level = 3
                     }
-                    133 = {
-                            remove_building = {
-                                        type = dockyard
-                                        level = 3
-                                    }
+                }
+                133 = {
+                    remove_building = {
+                        type = dockyard
+                        level = 3
                     }
-                    121 = {
-                            remove_building = {
-                                        type = dockyard
-                                        level = 1
-                                    }
+                }
+                121 = {
+                    remove_building = {
+                        type = dockyard
+                        level = 1
                     }
-                    136 = {
-                            remove_building = {
-                                        type = dockyard
-                                        level = 2
-                                    }
+                }
+                136 = {
+                    remove_building = {
+                        type = dockyard
+                        level = 2
                     }
                 }
             }
-            effect = {
-                every_country = {
-                if = {limit = { 
-                    AND = {
+        }
+        effect = {
+            every_country = {
+                if = {
+                    limit = {
                         has_county_flag = VUP_Hist_version
-                    or = {
-                            original_tag = ENG
-                            original_tag = USA
-                            original_tag = JAP
-                            original_tag = ITA
-                                 }
-                            }
+                        OR = {
+                            tag = ENG
+                            tag = USA
+                            tag = JAP
+                            tag = ITA
                         }
-                    add_idea = MTG_naval_treaty_hist
+                    }
+                    add_ideas = MTG_naval_treaty_hist
                 }
             }
         }
