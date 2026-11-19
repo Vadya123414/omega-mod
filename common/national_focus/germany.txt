@@ -4985,6 +4985,7 @@ focus_tree = {
 			# On historical, this focus is completed mid-late 1939
 			if = {
 				limit = {
+					is_ai = no
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -5131,6 +5132,7 @@ focus_tree = {
 
 			if = {
 				limit = {
+					is_ai = no
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -5275,6 +5277,7 @@ focus_tree = {
 
 			if = {
 				limit = {
+					is_ai = no
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -5529,6 +5532,7 @@ focus_tree = {
 			#This one is not really needed, first 'FW 190'
 			if = {
 				limit = {
+					is_ai = no
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt

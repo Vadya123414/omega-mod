@@ -1766,7 +1766,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			if = {
 				limit = {
@@ -1916,7 +1918,9 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 10
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			any_state_of = {
 				target = constant:state_groups.bul_black_sea_states
@@ -2611,7 +2615,9 @@ focus_tree = {
 		y = 0
 		cost = 5
 		mutually_exclusive = { focus = BUL_power_to_the_tsar }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 		}
@@ -5468,7 +5474,9 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		bypass = {
 			OR = {
 				NOT = { country_exists = ENG }
@@ -6355,7 +6363,13 @@ focus_tree = {
 		available = {
 
 		}
-		
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_popularity = {
@@ -6386,7 +6400,13 @@ focus_tree = {
 		y = 1
 		cost = 5
 		mutually_exclusive = { focus = BUL_support_macedonian_organizations }
-
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 
 		}
@@ -6437,7 +6457,9 @@ focus_tree = {
 		x = 2
 		y = 0
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		mutually_exclusive = { focus = BUL_condemn_macedonian_organizations }
 
 		available = {
@@ -6521,7 +6543,13 @@ focus_tree = {
 		cost = 5
 
 		mutually_exclusive = { focus = BUL_cooperate_with_the_zveno }
-
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			NOT = {	has_country_flag = BUL_zveno_destroyed_flag } #Zveno is not destroyed
 			hidden_trigger = {
@@ -6550,9 +6578,14 @@ focus_tree = {
 		x = 6
 		y = 0
 		cost = 5
-
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		mutually_exclusive = { focus = BUL_dissolve_the_military_union }
-
 		available = {
 			NOT = {	has_country_flag = BUL_zveno_destroyed_flag } #Zveno is not destroyed
 			hidden_trigger = {
@@ -6585,7 +6618,13 @@ focus_tree = {
 		cost = 5
 
 		mutually_exclusive = { focus = BUL_appoint_right_wing_ministers }
-
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			
 		}
@@ -6614,7 +6653,13 @@ focus_tree = {
 		x = -4
 		y = 1
 		cost = 5
-
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		mutually_exclusive = { focus = BUL_ban_far_right_organizations }
 
 		available = {
@@ -6652,7 +6697,6 @@ focus_tree = {
 		cost = 5
 
 		mutually_exclusive = { focus = BUL_restrained_paramilitary_organizations }
-
 		available = {
 
 		}
@@ -6962,7 +7006,13 @@ focus_tree = {
 		available = {
 			neutrality > 0.7
 		}
-		
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			swap_ideas = {
@@ -6997,7 +7047,13 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-		
+		offset = {
+			x = -2
+			y = -1
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			48 = {
@@ -7084,7 +7140,9 @@ focus_tree = {
 		id = BUL_plot_against_boris
 
 		prerequisite = { focus = BUL_liberalization_of_trade_policies }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		dynamic = yes
 
 		icon = GFX_focus_BUL_plot_against_boris
@@ -7819,7 +7877,9 @@ focus_tree = {
 		x = 4
 		y = 2
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		mutually_exclusive = { focus = BUL_the_tsars_regime }
 
 		available = {
@@ -8361,7 +8421,13 @@ focus_tree = {
 		x = 2
 		y = 2
 		cost = 5
-
+		offset = {
+			x = -1
+			y = -1
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		bypass = {
 			OR = {
 				NOT = { country_exists = GER }
@@ -8640,7 +8706,13 @@ focus_tree = {
 		y = 4
 		cost = 2
 		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
-
+		offset = {
+			x = 0
+			y = -2
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		bypass = {
 			OR = {
 				is_subject = yes
@@ -8851,7 +8923,13 @@ focus_tree = {
 		x = -4
 		y = 2
 		cost = 10
-
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			any_controlled_state = {
 				has_state_flag = BUL_historical_bulgarian_claim_flag

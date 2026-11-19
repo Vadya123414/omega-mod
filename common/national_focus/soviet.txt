@@ -8281,7 +8281,10 @@ focus_tree = {
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
-
+		allow_branch = {
+			NOT = { has_completed_focus = SOV_the_hands_do }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			SOV_soviet_civil_war_not_started = yes 
@@ -9362,6 +9365,10 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_the_centre }
 				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
+		}
+				allow_branch = {
+				NOT = { has_completed_focus = SOV_the_hands_do }
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		mutually_exclusive = { focus = SOV_the_left_opposition focus = SOV_the_centre}
 		x = 15
@@ -15380,6 +15387,9 @@ ai_will_do = {
 				}
 				has_completed_focus = SOV_the_hands_do #Stalinist branch hides
 			}
+		}
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		allow_branch = { 
 			has_dlc = "No Step Back" 

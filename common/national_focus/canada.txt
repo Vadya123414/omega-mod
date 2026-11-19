@@ -2874,7 +2874,9 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = CAN_strengthen_the_commonwealth_ties
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		cost = 5
 
 		ai_will_do = {

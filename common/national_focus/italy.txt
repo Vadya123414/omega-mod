@@ -6984,6 +6984,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = ITA_defy_the_duce
 			}
 		}
@@ -7019,6 +7020,7 @@ focus_tree = {
 				OR = {
 					NOT = { has_dlc = "By Blood Alone" }
 					AND = {
+						NOT = {has_country_flag = VUP_Hist_version}
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
 							option = HIDE
@@ -7031,7 +7033,13 @@ focus_tree = {
 				}
 			}
 		}
-
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+						has_country_flag = VUP_Hist_version
+					}
+		}
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 5
 
@@ -7097,7 +7105,9 @@ focus_tree = {
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {
@@ -7336,7 +7346,9 @@ focus_tree = {
 		prerequisite = { focus = ITA_triumph_in_africa_bba focus = ITA_conspiracies_in_the_shadows }
 
 		mutually_exclusive = { focus = ITA_culto_del_duce focus = ITA_defy_the_duce }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {
@@ -9367,7 +9379,9 @@ focus_tree = {
 		icon = GFX_focus_ITA_depose_mussolini
 		prerequisite = { focus = ITA_convene_the_grand_council }
 		relative_position_id = ITA_convene_the_grand_council
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {
@@ -11358,7 +11372,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_prepare_for_the_coming_wars
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			has_dlc = "No Step Back"
@@ -12454,6 +12470,7 @@ focus_tree = {
 				OR = {
 					NOT = { has_dlc = "By Blood Alone" }
 					AND = {
+						NOT = {has_country_flag = VUP_Hist_version}
 						has_dlc = "By Blood Alone"
 						has_game_rule = {
 							rule = obsolete_focus_branches_visibility
@@ -12465,6 +12482,17 @@ focus_tree = {
 						}
 					}
 				}
+			}
+		}
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 		#relative_position_id = ITA_setting_course #Better to use the other one for hiding branches
@@ -13670,6 +13698,7 @@ focus_tree = {
 							rule = obsolete_focus_branches_visibility
 							option = HIDE
 						}
+						NOT = {has_country_flag = VUP_Hist_version}
 						has_completed_focus = ITA_culto_del_duce
 					}
 				}
@@ -13684,6 +13713,18 @@ focus_tree = {
 					option = HIDE
 				}
 				has_completed_focus = ITA_convene_the_grand_council
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
+		offset = {
+			x = -34
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
 			}
 		}
 		relative_position_id = ITA_triumph_in_africa_bba
@@ -13879,7 +13920,17 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
-
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		bypass = {
 			44 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
 		}
@@ -14135,7 +14186,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
 		cost = 5
-		
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
@@ -14673,7 +14727,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
 		cost = 5
-
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		bypass = {
 			is_in_faction = yes
 			is_in_faction_with = GER
@@ -14928,7 +14992,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
 		cost = 10
-
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		bypass = {
 			is_faction_leader = yes
 			NOT = { is_in_faction_with = GER }
@@ -15169,7 +15236,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_italian_irredentism
 		cost = 10
-
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		bypass = {
 			is_subject = no
 			OR = {
@@ -15237,7 +15307,10 @@ focus_tree = {
 			focus = ITA_war_with_france
 			focus = ITA_request_control_of_french_territories 
 		}
-
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		x = -1
 		y = 1
 		relative_position_id = ITA_war_with_france
@@ -15421,7 +15494,10 @@ focus_tree = {
 		bypass = {
 			NOT = { country_exists = GRE }
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+		}
 		available = {
 			country_exists = GRE
 			NOT = {
@@ -15473,7 +15549,10 @@ focus_tree = {
 				owns_state = 342
 			}
 		}
-		
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+		}
 		will_lead_to_war_with = TUR
 
 		search_filters = {}
@@ -15517,7 +15596,10 @@ focus_tree = {
 				has_war_with = TUR
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+		}
 		search_filters = {}
 
 		completion_reward = {
@@ -15693,7 +15775,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_corpo_di_truppe_volontarie
 		cost = 5
-
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		bypass = {
 			if = {
 				limit = {
@@ -15788,6 +15873,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_corpo_di_truppe_volontarie
 		cost = 5
+		allow_branch = {
+			NOT = { has_completed_focus = ITA_defy_the_duce }
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			if = {
@@ -17545,7 +17634,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {
@@ -17616,7 +17707,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_unite_the_opposition
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {
@@ -17734,7 +17827,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_organize_strikes_in_the_north
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 			if = {

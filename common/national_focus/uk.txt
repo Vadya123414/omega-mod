@@ -2526,7 +2526,9 @@ default = no
 		prerequisite = { focus = uk_mediterranean_focus }
 
 		mutually_exclusive = { focus = uk_rock_focus }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			any_country_with_original_tag = {
@@ -2750,6 +2752,9 @@ default = no
 		prerequisite = { focus = uk_protect_suez }
 		prerequisite = { focus = uk_malta_focus }
 		icon = GFX_goal_generic_improve_relations
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_government = democratic
@@ -2895,7 +2900,9 @@ default = no
 		prerequisite = { focus = uk_protect_suez }
 
 		mutually_exclusive = { focus = uk_greece_focus }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			TUR = {
@@ -2980,7 +2987,9 @@ default = no
 		prerequisite = { focus = uk_protect_suez } 
 
 		mutually_exclusive = { focus = uk_turkey_focus }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			GRE = {
@@ -3125,7 +3134,9 @@ default = no
 				}
 			}
 		}
-
+		allow_branch = {
+			
+		}
 		available = { 
 			has_completed_focus = ENG_concessions_to_the_trade_unions
 			is_subject = no
@@ -4728,7 +4739,9 @@ default = no
 
 	focus = {
 		id = ENG_war_with_japan
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_offensive_war = no
@@ -7290,7 +7303,17 @@ default = no
 				}
 			}
 		}
-
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		x = 14
 		y = 0
 		relative_position_id = ENG_revisit_colonial_policy
@@ -7412,7 +7435,9 @@ default = no
 				}
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 		}
@@ -8257,6 +8282,17 @@ default = no
 
 	focus = {
 		id = uk_iraq_focus
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -8492,7 +8528,17 @@ default = no
 				has_war = yes
 			}
 		}
-
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = yes
@@ -8587,8 +8633,18 @@ default = no
 		}
 	}
 
+
 	focus = {
 		id = ENG_war_with_germany
+				allow_branch = {
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_global_defense
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_war = no
@@ -8624,6 +8680,15 @@ default = no
 
 	focus = {
 		id = uk_scandinavian_focus
+				allow_branch = {
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_global_defense
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
@@ -8887,6 +8952,15 @@ default = no
 
 	focus = {
 		id = ENG_benelux_intervention
+			allow_branch = {
+				NOT = {
+					OR = {
+						has_completed_focus = ENG_global_defense
+						has_completed_focus = ENG_a_change_in_course
+					}
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
@@ -9013,7 +9087,9 @@ default = no
 	focus = {
 		id = ENG_a_change_in_course 
 		mutually_exclusive = { focus = ENG_steady_as_she_goes }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "Man the Guns"
 			if = {
@@ -9249,7 +9325,9 @@ default = no
 		id = ENG_the_kings_party
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "Man the Guns"
 			if = {
@@ -9551,7 +9629,9 @@ default = no
 		id = ENG_organize_the_blackshirts
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_concessions_to_the_trade_unions }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "Man the Guns"
 			if = {
@@ -10900,7 +10980,9 @@ default = no
 		id = ENG_concessions_to_the_trade_unions
 		prerequisite = { focus = ENG_a_change_in_course }
 		mutually_exclusive = { focus = ENG_the_kings_party focus = ENG_organize_the_blackshirts }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "Man the Guns"
 			if = {

@@ -46,7 +46,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -268,7 +270,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -512,7 +516,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -653,7 +659,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -800,7 +808,9 @@ focus_tree = {
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
 
 		cost = 3
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			has_dlc = "La Resistance"
 			IF = {
@@ -949,7 +959,9 @@ focus_tree = {
 				NOT = { has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			has_government = neutrality
 			NOT = {
@@ -1009,7 +1021,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_the_old_habsburg_king
 		prerequisite = { focus = wuw_HUN_reinstate_the_pragmatic_sanction }
 		mutually_exclusive = { focus = wuw_HUN_invite_otto_to_the_throne }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
 
@@ -1018,7 +1030,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		offset = {
 			x = -3
 			y = 0
@@ -5489,7 +5503,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -5581,7 +5597,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -5804,7 +5822,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -6639,7 +6659,9 @@ focus_tree = {
 		relative_position_id = wuw_HUN_a_unifying_heritage
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		offset = {
 			x = 3
 			y = 0
@@ -7793,7 +7815,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = wuw_HUN_continue_the_regency
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -12186,7 +12210,9 @@ focus_tree = {
 				SOV = { has_capitulated = yes }
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -12297,7 +12323,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
@@ -12402,7 +12430,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			IF = {
 				limit = {
