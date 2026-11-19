@@ -161,7 +161,7 @@ on_actions = {
 				42 = {
 					add_resource = {
 						type = steel
-						amount = -25
+						amount = 25
 					}
 				}
 			}

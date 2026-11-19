@@ -974,6 +974,9 @@ focus_tree = {
 		}
 		available = {
 		}
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -2090,7 +2093,9 @@ focus_tree = {
 				NOT = { has_completed_focus = SIA_phibuns_premiership }
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 
 		offset = {
             x = 7
@@ -4017,7 +4022,9 @@ focus_tree = {
 		#allow_branch = {
 		#}
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		completion_reward = {
 
 			custom_effect_tooltip = SIA_asian_democratic_compact_modify
@@ -4043,6 +4050,9 @@ focus_tree = {
 		}
 		#allow_branch = {
 		#}
+						allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -4070,7 +4080,9 @@ focus_tree = {
 		#allow_branch = {
 		#}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		completion_reward = {
 			custom_effect_tooltip = SIA_asian_democratic_compact_modify
 			custom_effect_tooltip = SIA_united_against_aggression_tt
@@ -4096,7 +4108,9 @@ focus_tree = {
 		#allow_branch = {
 		#}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		completion_reward = {
 			custom_effect_tooltip = SIA_asian_democratic_compact_modify
 			custom_effect_tooltip = SIA_the_hammers_that_strike_tt
@@ -4122,7 +4136,9 @@ focus_tree = {
 		#allow_branch = {
 		#}
 		search_filters = { FOCUS_FILTER_RESEARCH }
-
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		completion_reward = {
 			every_other_country = {
 				limit = {

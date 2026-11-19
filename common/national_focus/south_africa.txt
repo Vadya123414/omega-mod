@@ -68,7 +68,17 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			OR = {
 				threat > 0.2
@@ -326,7 +336,17 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			OR = {
 				is_subject_of = ENG
@@ -640,7 +660,9 @@
 		y = 0
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -822,7 +844,17 @@
 		available = {
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
-		
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		bypass = {
 
 		}

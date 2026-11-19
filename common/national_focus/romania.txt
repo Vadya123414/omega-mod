@@ -812,7 +812,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_in_faction = no
@@ -1207,7 +1209,9 @@ focus_tree = {
 		relative_position_id = ROM_preserve_greater_romania
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -2156,7 +2160,9 @@ focus_tree = {
 		y = 0
 
 		cost = 10
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -2656,7 +2662,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			OR = {
@@ -2938,7 +2946,9 @@ focus_tree = {
 		relative_position_id = ROM_flexible_foreign_policy
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -3636,7 +3646,9 @@ focus_tree = {
 				has_war_with = ENG
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no

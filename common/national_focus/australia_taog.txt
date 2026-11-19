@@ -93,7 +93,17 @@ focus_tree = {
 		y = 0
 	
 		cost = 5
-
+		offset = {
+			x = 20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -2458,7 +2468,17 @@ focus_tree = {
 		y = 3
 	
 		cost = 5
-
+		offset = {
+			x = 20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		offset = {
 			x = -49
 			y = 0
@@ -3483,8 +3503,8 @@ focus_tree = {
 		y = 0
 	
 		cost = 5
-
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4823,7 +4843,9 @@ focus_tree = {
 		y = 1
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -5875,7 +5897,9 @@ focus_tree = {
 		y = 2
 	
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		allow_branch = {
 			if = {
 				limit = {
@@ -7019,6 +7043,7 @@ focus_tree = {
 		cost = 5
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			if = {
 				limit = {
 					has_game_rule = {

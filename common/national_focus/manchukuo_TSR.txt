@@ -2211,7 +2211,9 @@ focus_tree = {
 
 		bypass = {
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -6355,7 +6357,9 @@ focus = {
 			tag = PRC			
 		}
 	}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 	available = {
 		is_subject = no
 	}

@@ -7433,7 +7433,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+			NOT = {
+					has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_support_the_kodoha_faction
+					has_completed_focus = JAP_strengthen_civilian_government
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					has_completed_focus = JAP_okadas_military_purge_speech
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_country_flag = JAP_harakiri_debate_has_taken_place_flag
@@ -10947,7 +10956,9 @@ focus_tree = {
 		prerequisite = { focus = JAP_the_war_has_not_necessarily_developed_focus }
 
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -11452,7 +11463,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+				NOT = {
+					has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_support_the_kodoha_faction
+					has_completed_focus = JAP_strengthen_civilian_government
+					has_completed_focus = JAP_okadas_military_purge_speech
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_subject = MEN
@@ -12433,7 +12452,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+				NOT = {
+					has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_support_the_kodoha_faction
+					has_completed_focus = JAP_strengthen_civilian_government
+					has_completed_focus = JAP_okadas_military_purge_speech
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			TIB = {
 				exists = yes

@@ -1684,8 +1684,9 @@
 		y = 1
 		
 		relative_position_id = FRA_form_the_popular_front
-		
+
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "La Resistance"
 			if = {
 				limit = {
@@ -3556,10 +3557,13 @@
 		mutually_exclusive = { focus = FRA_encourage_immigration }
 		relative_position_id = FRA_expand_the_citizenship
 		cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 1
 		}
+
 
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -4054,7 +4058,13 @@
 		mutually_exclusive = { focus = FRA_go_with_britain }
 		relative_position_id = FRA_buy_time
 		cost = 10
-
+		allow_branch = {
+			NOT = {
+					has_completed_focus = FRA_invite_communist_ministers
+					has_completed_focus = FRA_utilize_the_leagues
+				}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -4445,6 +4455,7 @@
 		}
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4843,6 +4854,7 @@
 		}
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "La Resistance"
 			if = {
 				limit = {
@@ -4919,6 +4931,7 @@
 		relative_position_id = FRA_utilize_the_leagues
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "La Resistance"
 			if = {
 				limit = {
@@ -6896,6 +6909,7 @@
 		relative_position_id = FRA_utilize_the_leagues
 
 		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 			has_dlc = "La Resistance"
 			if = {
 				limit = {
@@ -8875,11 +8889,19 @@
 		x = 72
 		y = 0
 
+
 		offset = {
 			x = -16
 			y = 0
 			trigger = {
 				NOT = { has_dlc = "La Resistance" }
+			}
+		}
+		offset = {
+			x = -30
+			y = 0
+			trigger = {
+				has_global_flag = VUP_Hist_version
 			}
 		}
 		offset = {
@@ -8891,6 +8913,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_form_the_popular_front
 			}
 		}
@@ -8903,6 +8926,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_revive_the_national_bloc
 			}
 		}
@@ -8915,6 +8939,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_form_the_popular_front
 			}
 		}
@@ -8927,6 +8952,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_invite_communist_ministers
 			}
 		}
@@ -8939,6 +8965,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_revive_the_national_bloc
 			}
 		}
@@ -8951,6 +8978,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_utilize_the_leagues
 			}
 		}
@@ -8963,6 +8991,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_form_the_popular_front
 				has_completed_focus = FRA_review_foreign_policy
 			}
@@ -8976,6 +9005,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_revive_the_national_bloc
 				has_completed_focus = FRA_review_foreign_policy
 			}
@@ -8989,6 +9019,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_national_regeneration
 			}
 		}
@@ -9001,6 +9032,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = FRA_the_council_of_rambouillet
 			}
 		}

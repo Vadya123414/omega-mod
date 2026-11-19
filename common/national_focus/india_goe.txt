@@ -202,7 +202,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
             NOT = {has_country_flag = VUP_Hist_version}
         }
@@ -329,7 +331,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
             AFG = {
                 NOT = {
@@ -414,7 +418,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
 
         }
@@ -7220,7 +7226,9 @@ focus_tree = {
         relative_position_id = RAJ_great_depression_price_controls 
 
         cost = 5
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         ai_will_do = {
             factor = 1
         }
@@ -7760,7 +7768,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
 
         }
@@ -7834,7 +7844,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
 
         }
@@ -9108,7 +9120,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         available = {
 
         }
@@ -9325,7 +9339,6 @@ focus_tree = {
            # add_ideas = idea_RAJ_guided_by_britain     
         }
     }
-
     focus = {
         id = RAJ_red_in_the_shadows
         icon = GFX_focus_RAJ_red_in_the_shadows
@@ -9343,7 +9356,9 @@ focus_tree = {
         available = {
 
         }
-        
+        		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
         bypass = {
 
         }

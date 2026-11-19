@@ -212,7 +212,10 @@ focus_tree = {
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
 		cost = 5
-
+		allow_branch = {
+				NOT = {has_completed_focus = USA_reestablish_the_gold_standard}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -461,7 +464,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		allow_branch = {
+			NOT = {has_completed_focus = USA_reestablish_the_gold_standard}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			congress_high_support_trigger = yes
@@ -919,7 +925,10 @@ focus_tree = {
 		#ai_will_do = {
 		#	factor = 1
 		#}
-
+		allow_branch = {
+				NOT = {has_completed_focus = USA_reestablish_the_gold_standard}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			USA = {has_government = communism}
 			JAP = {has_government = communism}
@@ -993,7 +1002,10 @@ focus_tree = {
 				factor = 0
 			}
 		}
-
+		allow_branch = {
+				NOT = {has_completed_focus = USA_reestablish_the_gold_standard}
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			not = {
@@ -1689,7 +1701,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			congress_high_support_trigger = yes 
@@ -3228,7 +3242,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			has_government = democratic
@@ -3448,6 +3464,9 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+				allow_branch = {
+			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		allow_branch = {
 			has_dlc = "Man the Guns"
