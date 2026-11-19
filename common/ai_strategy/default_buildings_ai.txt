@@ -431,36 +431,6 @@ PHI_strategy_arms_factory_building = {
 		value = 900
 	}
 }
-RAJ_infrastructure_0 = {
-	allowed = {
-		original_tag = RAJ
-		}
-	enable = {
-		date > 1936.1.1
-	}
-	abort= {439 = {if = {limit = {infrastructure > 4}}}}
-	ai_strategy = {
-		type = build_building
-		id = infrastructure
-		target = 439
-		value = 1000000
-	}
-}
-RAJ_strategy_industrial_complex_building = {
-		enable = {
-			AND = {
-				439 = {if = {limit = {infrastructure < 5}}}
-				date < 1937.8.1
-				original_tag = RAJ
-				}
-		}
-		abort_when_not_enabled = yes
-		ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 1000
-	}
-}
 RAJ_strategy_arms_factory_building_1 = {
 		enable = {
 				AND = {

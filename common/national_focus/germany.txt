@@ -8226,7 +8226,6 @@ focus_tree = {
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 		}
 		allow_branch = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -8394,7 +8393,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 		}
 
 		search_filters = {}
@@ -10735,7 +10733,6 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			is_neighbor_of = ITA
 			NOT = { is_in_faction_with = ITA }
@@ -12354,7 +12351,6 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			NOT = { has_guaranteed = SWI }
 			NOT = { has_non_aggression_pact_with = SWI }
@@ -12541,7 +12537,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			NOT = { has_war_with = FIN }
 			NOT = { is_ally_with = FIN }
@@ -13291,7 +13286,6 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			controls_state = 4
 			controls_state = 152
@@ -14532,9 +14526,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		available = {
-			OR = {
-				date > 1941.5.1
-				NOT = {has_country_flag = VUP_Hist_version}
+			if = {limit = {has_country_flag = VUP_Hist_version}
+			date > 1941.5.1
 			}
 			is_subject = no
 		}
@@ -15015,7 +15008,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			has_government = fascism
 			has_war = no
@@ -15149,7 +15141,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			AND = {
 				country_exists = CHI
@@ -15286,7 +15277,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
 			AND = {
 				country_exists = JAP
