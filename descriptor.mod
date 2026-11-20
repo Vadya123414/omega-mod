@@ -12,4 +12,3 @@ tags={
 name="Vanilla Upgrade 2.0 rabota"
 supported_version="1.19.2.0"
 remote_file_id="Vanilla Upgrade 2.0 rabota"
-replace_path="history/states"

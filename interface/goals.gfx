@@ -1031,6 +1031,509 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_rom_parties_end.dds"
 	}
 
+	## TTBE
+
+	SpriteType = {
+		name = "GFX_focus_ROM_experiment_with_coandas_engines"
+		texturefile = "gfx/interface/goals/focus_ROM_experiment_with_coandas_engines.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_appease_the_church"
+		texturefile = "gfx/interface/goals/focus_ROM_appease_the_church.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_our_own_five_year_plans"
+		texturefile = "gfx/interface/goals/focus_ROM_our_own_five_year_plans.dds"
+	}		
+	SpriteType = {
+		name = "GFX_focus_ROM_found_the_ministry_of_air_and_navy"
+		texturefile = "gfx/interface/goals/focus_ROM_found_the_ministry_of_air_and_navy.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_invest_in_galati_shipyards"
+		texturefile = "gfx/interface/goals/focus_ROM_invest_in_galati_shipyards.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_marine_development_fund"
+		texturefile = "gfx/interface/goals/focus_ROM_marine_development_fund.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_a_legionary_balkan_state"
+		texturefile = "gfx/interface/goals/focus_ROM_a_legionary_balkan_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_improve_rural_literacy"
+		texturefile = "gfx/interface/goals/focus_ROM_improve_rural_literacy.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_a_flawed_democracy"
+		texturefile = "gfx/interface/goals/focus_ROM_a_flawed_democracy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_breadbasket_of_europe"
+		texturefile = "gfx/interface/goals/focus_ROM_breadbasket_of_europe.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_the_palace_coup"
+		texturefile = "gfx/interface/goals/focus_ROM_the_palace_coup.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_puppeteer_the_church"
+		texturefile = "gfx/interface/goals/focus_ROM_puppeteer_the_church.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_finalize_tax_reforms"
+		texturefile = "gfx/interface/goals/focus_ROM_finalize_tax_reforms.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_bulwark_of_monarchism"
+		texturefile = "gfx/interface/goals/focus_ROM_bulwark_of_monarchism.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_arsenal_of_the_crown"
+		texturefile = "gfx/interface/goals/focus_ROM_arsenal_of_the_crown.dds"
+	}		
+	SpriteType = { 
+		name = "GFX_focus_ROM_the_new_kingdom"
+		texturefile = "gfx/interface/goals/focus_ROM_the_new_kingdom.dds"
+	}	
+	SpriteType = {  
+		name = "GFX_focus_ROM_in_defense_of_greater_romania"
+		texturefile = "gfx/interface/goals/focus_ROM_in_defense_of_greater_romania.dds"
+	}		   
+	SpriteType = {  
+		name = "GFX_focus_ROM_alleviate_the_rural_communities"
+		texturefile = "gfx/interface/goals/focus_ROM_alleviate_the_rural_communities.dds"
+	}		   
+	SpriteType = {  
+		name = "GFX_focus_ROM_tariff_enforcement"
+		texturefile = "gfx/interface/goals/focus_ROM_tariff_enforcement.dds"
+	}		   
+	SpriteType = {  
+		name = "GFX_focus_ROM_strengthen_the_sentinels"
+		texturefile = "gfx/interface/goals/focus_ROM_strengthen_the_sentinels.dds"
+	}		   
+	SpriteType = {  
+		name = "GFX_focus_ROM_undermine_the_monarchy"
+		texturefile = "gfx/interface/goals/focus_ROM_undermine_the_monarchy.dds"
+	}		   
+	SpriteType = {   
+		name = "GFX_focus_ROM_demand_closure_of_the_strait"
+		texturefile = "gfx/interface/goals/focus_ROM_demand_closure_of_the_strait.dds"
+	}		      
+	SpriteType = {  
+		name = "GFX_focus_ROM_protest_royal_meddling"
+		texturefile = "gfx/interface/goals/focus_ROM_protest_royal_meddling.dds"
+	}		   
+	SpriteType = {  
+		name = "GFX_focus_ROM_combat_the_iron_guard"
+		texturefile = "gfx/interface/goals/focus_ROM_combat_the_iron_guard.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_seize_ford"
+		texturefile = "gfx/interface/goals/focus_ROM_seize_ford.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ROM_invest_in_forestry_sector"
+		texturefile = "gfx/interface/goals/focus_ROM_invest_in_forestry_sector.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_kickstart_the_ten_year_modernization_plan"
+		texturefile = "gfx/interface/goals/focus_ROM_kickstart_the_ten_year_modernization_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_appease_the_farmers"
+		texturefile = "gfx/interface/goals/focus_ROM_appease_the_farmers.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_a_legionary_balkan_state"
+		texturefile = "gfx/interface/goals/focus_ROM_a_legionary_balkan_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_invest_in_excavation_equipment"
+		texturefile = "gfx/interface/goals/focus_ROM_invest_in_excavation_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_limit_carols_reckless_spending"
+		texturefile = "gfx/interface/goals/focus_ROM_limit_carols_reckless_spending.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_focus_on_engineering"
+		texturefile = "gfx/interface/goals/focus_ROM_focus_on_engineering.dds"
+	}	
+	SpriteType = {
+		name = "GFX_focus_ROM_domestic_tank_designs"
+		texturefile = "gfx/interface/goals/focus_ROM_domestic_tank_designs.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_the_german_four_year_plan"
+		texturefile = "gfx/interface/goals/focus_ROM_the_german_four_year_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_mobilize_the_royal_guard"
+		texturefile = "gfx/interface/goals/focus_ROM_mobilize_the_royal_guard.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ROM_modernization_of_construction_tools"
+		texturefile = "gfx/interface/goals/focus_ROM_modernization_of_construction_tools.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_divert_to_the_army"
+		texturefile = "gfx/interface/goals/focus_ROM_divert_to_the_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_codreanu_ascendant"
+		texturefile = "gfx/interface/goals/focus_ROM_codreanu_ascendant.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ROM_sideline_codreanu"
+		texturefile = "gfx/interface/goals/focus_ROM_sideline_codreanu.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_romanian_bulgarian_ssr_proposal"
+		texturefile = "gfx/interface/goals/focus_ROM_romanian_bulgarian_ssr_proposal.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_reform_the_scouts_of_romania"
+		texturefile = "gfx/interface/goals/focus_ROM_reform_the_scouts_of_romania.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_purge_the_carlists"
+		texturefile = "gfx/interface/goals/focus_ROM_purge_the_carlists.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_secure_power_in_the_state"
+		texturefile = "gfx/interface/goals/focus_ROM_secure_power_in_the_state.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_increase_iron_guard_recruitment"
+		texturefile = "gfx/interface/goals/focus_ROM_increase_iron_guard_recruitment.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_propagate_anti_monarchial_ideas"
+		texturefile = "gfx/interface/goals/focus_ROM_propagate_anti_monarchial_ideas.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_demand_a_referendum"
+		texturefile = "gfx/interface/goals/focus_ROM_demand_a_referendum.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_a_red_flag_over_bucharest"
+		texturefile = "gfx/interface/goals/focus_ROM_a_red_flag_over_bucharest.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_increased_oil_extraction_efforts"
+		texturefile = "gfx/interface/goals/focus_ROM_increased_oil_extraction_efforts.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_develop_synthetic_rubber"
+		texturefile = "gfx/interface/goals/focus_ROM_develop_synthetic_rubber.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_focus_on_traditional_crops"
+		texturefile = "gfx/interface/goals/focus_ROM_focus_on_traditional_crops.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_agricultural_powerhouse_of_balkans"
+		texturefile = "gfx/interface/goals/focus_ROM_agricultural_powerhouse_of_balkans.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_encourage_foreign_investments"
+		texturefile = "gfx/interface/goals/focus_ROM_encourage_foreign_investments.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_vein_of_the_nation"
+		texturefile = "gfx/interface/goals/focus_ROM_the_vein_of_the_nation.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_open_the_iasi_industrial_zone"
+		texturefile = "gfx/interface/goals/focus_ROM_open_the_iasi_industrial_zone.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_rural_towns"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_rural_towns.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_cornerstone_of_the_balkans"
+		texturefile = "gfx/interface/goals/focus_ROM_the_cornerstone_of_the_balkans.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_saviour_of_the_orthodox"
+		texturefile = "gfx/interface/goals/focus_ROM_saviour_of_the_orthodox.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_clerical_authority"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_clerical_authority.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_a_nation_of_faith"
+		texturefile = "gfx/interface/goals/focus_ROM_a_nation_of_faith.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_romanian_machinery"
+		texturefile = "gfx/interface/goals/focus_ROM_romanian_machinery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_romanian_axis_membership"
+		texturefile = "gfx/interface/goals/focus_ROM_romanian_axis_membership.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_nationalization_of_the_oil_fields"
+		texturefile = "gfx/interface/goals/focus_ROM_nationalization_of_the_oil_fields.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_pinnacle_of_balkan_armed_forces"
+		texturefile = "gfx/interface/goals/focus_ROM_pinnacle_of_balkan_armed_forces.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_queen_of_the_battlefield"
+		texturefile = "gfx/interface/goals/focus_ROM_the_queen_of_the_battlefield.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_modernize_the_land_forces"
+		texturefile = "gfx/interface/goals/focus_ROM_modernize_the_land_forces.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_crisanan_granaries"
+		texturefile = "gfx/interface/goals/focus_ROM_crisanan_granaries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_dobrudjan_agricultural_sector"
+		texturefile = "gfx/interface/goals/focus_ROM_dobrudjan_agricultural_sector.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_build_the_carol_line"
+		texturefile = "gfx/interface/goals/focus_ROM_build_the_carol_line.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_construct_the_traian_line"
+		texturefile = "gfx/interface/goals/focus_ROM_construct_the_traian_line.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_funding_for_the_academies"
+		texturefile = "gfx/interface/goals/focus_ROM_funding_for_the_academies.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_look_to_the_past"
+		texturefile = "gfx/interface/goals/focus_ROM_look_to_the_past.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_learn_from_the_past"
+		texturefile = "gfx/interface/goals/focus_ROM_learn_from_the_past.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_mechanize_the_army"
+		texturefile = "gfx/interface/goals/focus_ROM_mechanize_the_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_combined_arms_experiment"
+		texturefile = "gfx/interface/goals/focus_ROM_the_combined_arms_experiment.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_mobile_warfare_trials"
+		texturefile = "gfx/interface/goals/focus_ROM_mobile_warfare_trials.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_the_vanatore_de_munte"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_the_vanatore_de_munte.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_repurpose_car_repair_workshops"
+		texturefile = "gfx/interface/goals/focus_ROM_repurpose_car_repair_workshops.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_icar_into_military_production"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_icar_into_military_production.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_new_iar_production_facilities"
+		texturefile = "gfx/interface/goals/focus_ROM_new_iar_production_facilities.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_iar_80_and_iar_81"
+		texturefile = "gfx/interface/goals/focus_ROM_the_iar_80_and_iar_81.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_national_effort"
+		texturefile = "gfx/interface/goals/focus_ROM_national_effort.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_cugir_factories"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_cugir_factories.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_resita_industrial_area"
+		texturefile = "gfx/interface/goals/focus_ROM_resita_industrial_area.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_to_the_bitter_end"
+		texturefile = "gfx/interface/goals/focus_ROM_to_the_bitter_end.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_iron_road"
+		texturefile = "gfx/interface/goals/focus_ROM_the_iron_road.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_capital_of_the_balkans"
+		texturefile = "gfx/interface/goals/focus_ROM_the_capital_of_the_balkans.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_the_transylvanian_redoubt"
+		texturefile = "gfx/interface/goals/focus_ROM_the_transylvanian_redoubt.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_a_game_of_politics"
+		texturefile = "gfx/interface/goals/focus_ROM_a_game_of_politics.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_once_again_across_the_tisza"
+		texturefile = "gfx/interface/goals/focus_ROM_once_again_across_the_tisza.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_form_an_unofficial_coalition"
+		texturefile = "gfx/interface/goals/focus_ROM_form_an_unofficial_coalition.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_reform_the_liberal_party"
+		texturefile = "gfx/interface/goals/focus_ROM_reform_the_liberal_party.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_unify_the_agrarian_parties"
+		texturefile = "gfx/interface/goals/focus_ROM_unify_the_agrarian_parties.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_strengthen_oil_exploitation_cooperation"
+		texturefile = "gfx/interface/goals/focus_ROM_strengthen_oil_exploitation_cooperation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_strike_at_the_radicals"
+		texturefile = "gfx/interface/goals/focus_ROM_strike_at_the_radicals.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_aggressive_diplomacy"
+		texturefile = "gfx/interface/goals/focus_ROM_aggressive_diplomacy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_dissolve_the_paramilitaries"
+		texturefile = "gfx/interface/goals/focus_ROM_dissolve_the_paramilitaries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_pass_a_new_constitution"
+		texturefile = "gfx/interface/goals/focus_ROM_pass_a_new_constitution.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_purge_the_prison_faction"
+		texturefile = "gfx/interface/goals/focus_ROM_purge_the_prison_faction.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_liberate_the_prison_faction"
+		texturefile = "gfx/interface/goals/focus_ROM_liberate_the_prison_faction.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_secure_our_gains"
+		texturefile = "gfx/interface/goals/focus_ROM_secure_our_gains.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_reclaim_the_kingdom_dacia"
+		texturefile = "gfx/interface/goals/focus_ROM_reclaim_the_kingdom_dacia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_the_bucharest_security_convention"
+		texturefile = "gfx/interface/goals/focus_ROM_the_bucharest_security_convention.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ROM_reorganize_the_communist_party"
+		texturefile = "gfx/interface/goals/focus_ROM_reorganize_the_communist_party.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_demand_legalization"
+		texturefile = "gfx/interface/goals/focus_ROM_demand_legalization.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_reaffirm_the_little_entente"
+		texturefile = "gfx/interface/goals/focus_ROM_reaffirm_the_little_entente.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_constitutional_reform"
+		texturefile = "gfx/interface/goals/focus_ROM_constitutional_reform.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_expand_womens_suffrage"
+		texturefile = "gfx/interface/goals/focus_ROM_expand_womens_suffrage.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_increase_exports"
+		texturefile = "gfx/interface/goals/focus_ROM_increase_exports.dds"
+	}
+
 	### Hungary
 	
 	SpriteType = { 
