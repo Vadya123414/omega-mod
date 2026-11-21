@@ -20,7 +20,7 @@ BOTS = {
         ai_will_do = {base = 10}
         cost = 0
         complete_effect = {
-			#add_manpower = -84000
+			add_manpower = -84000
                division_template = {
                                        name = "fast drop"
                                        is_locked = yes
@@ -58,7 +58,7 @@ BOTS = {
 
                                capital_scope = {
                                        create_unit = {
-                                               division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 1 start_equipment_factor = 0.01 start_manpower_factor = 1"
+                                               division = "name = \"fast drop\" division_template = \"fast drop\" start_experience_factor = 0.6 start_equipment_factor = 0.01 start_manpower_factor = 1"
                         owner = ROOT
                                                allow_spawning_on_enemy_provs = no
                                                count = 5 

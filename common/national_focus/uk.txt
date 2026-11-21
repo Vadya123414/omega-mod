@@ -7334,6 +7334,7 @@ default = no
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = uk_empire_focus
 			}
 		}
@@ -7345,6 +7346,7 @@ default = no
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = ENG_revisit_colonial_policy
 			}
 		}
@@ -7356,6 +7358,7 @@ default = no
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = ENG_global_defense
 			}
 		}
@@ -7367,6 +7370,7 @@ default = no
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = ENG_home_defence
 			}
 		}
