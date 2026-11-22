@@ -6,102 +6,120 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
-    if = {
-        limit = {
-            has_country_flag = VUP_Hist_version
-        }
-        NOT = {has_country_flag = VUP_Hist_version}
-    }
-    
-    if = {
-        limit = {
-            is_ai = no
-        }
-        OR = {
-        # Оправдание на ИИ с июня 1938
-        AND = {
-            FROM = {
-                is_ai = yes
-            }
-            date > 1938.6.1
-        }
-        # Оправдание на игрока с 1939
-        AND = {
-            FROM = { is_ai = no }
-            date > 1939.1.1
-        }
-        hidden_trigger = {
-            AND = {
-                # Цель находится в Азии, Южной Америке или Австралии
-                FROM = {
-                    OR = {
-                        capital_scope = { is_on_continent = asia }
-                        capital_scope = { is_on_continent = australia }
-                        capital_scope = { is_on_continent = south_america }
-                    }
-                }
-                # Нападающий с одного из этих же континентов
-                ROOT = {
-                    OR = {
-                        capital_scope = { is_on_continent = asia }
-                        capital_scope = { is_on_continent = australia }
-                        capital_scope = { is_on_continent = south_america }
-                    }
-                }
-            }
-        }
-    }
-    }
-    
-    custom_trigger_tooltip = {
-		tooltip = vuina_diploma
+	if = {
+		limit = {
+			has_country_flag = VUP_Hist_version
+		}
+		always = no
+	}
+	else = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			OR = {
+				# Оправдание на ИИ с июня 1938
+				AND = {
+					FROM = {
+						is_ai = yes
+					}
+					date > 1938.6.1
+				}
+				# Оправдание на игрока с 1939
+				AND = {
+					FROM = { is_ai = no }
+					date > 1939.1.1
+				}
+				hidden_trigger = {
+					AND = {
+						# Цель находится в Азии, Южной Америке или Австралии
+						FROM = {
+							OR = {
+								capital_scope = { is_on_continent = asia }
+								capital_scope = { is_on_continent = australia }
+								capital_scope = { is_on_continent = south_america }
+							}
+						}
+						# Нападающий с одного из этих же континентов
+						ROOT = {
+							OR = {
+								capital_scope = { is_on_continent = asia }
+								capital_scope = { is_on_continent = australia }
+								capital_scope = { is_on_continent = south_america }
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = vuina_diploma
+		}
 	}
 
+	
 }
 
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
-    if = {
-        limit = {
-            is_ai = no
-        }
-        OR = {
-            AND = {
-                FROM = { is_ai = yes }
-                date > 1938.1.1
-            }
-            AND = {
-                FROM = { is_ai = no }
-                date > 1938.6.1
-            }
-            hidden_trigger = {
-                AND = {
-                    # Цель находится в Азии, Южной Америке или Австралии
-                    FROM = {
-                        OR = {
-                            capital_scope = { is_on_continent = asia }
-                            capital_scope = { is_on_continent = australia }
-                            capital_scope = { is_on_continent = south_america }
-                        }
-                    }
-                    # Нападающий с одного из этих же континентов
-                    ROOT = {
-                        OR = {
-                            capital_scope = { is_on_continent = asia }
-                            capital_scope = { is_on_continent = australia }
-                            capital_scope = { is_on_continent = south_america }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    custom_trigger_tooltip = {
-		tooltip = vuina_diploma
+	if = {
+		limit = {
+			has_country_flag = VUP_Hist_version
+			FROM = { tag = YUG }
+		}
+		GER = {
+			has_completed_focus = GER_yug_capcap
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			OR = {
+				AND = {
+					FROM = { is_ai = yes }
+					date > 1938.1.1
+				}
+				AND = {
+					FROM = { is_ai = no }
+					date > 1938.6.1
+				}
+				hidden_trigger = {
+					AND = {
+						FROM = {
+							OR = {
+								capital_scope = { is_on_continent = asia }
+								capital_scope = { is_on_continent = australia }
+								capital_scope = { is_on_continent = south_america }
+							}
+						}
+						ROOT = {
+							OR = {
+								capital_scope = { is_on_continent = asia }
+								capital_scope = { is_on_continent = australia }
+								capital_scope = { is_on_continent = south_america }
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = vuina_diploma
+		}
 	}
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
-    date > 1938.7.1
+	if = {
+		limit = {
+			has_country_flag = VUP_Hist_version
+		}
+		always = no
+	}
+	else = {
+		date > 1938.7.1
+	}
 }
 
 DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
@@ -240,23 +258,48 @@ EAEU_is_eaeu_member = {
 }
 
 DIPLOMACY_REVOKE_OFFER_MILACC_ENABLE_TRIGGER = {
-	NOT = {has_country_flag = VUP_Hist_version}
+	if = {
+        limit = {
+            has_country_flag = VUP_Hist_version
+        }
+        always = no
+    }
 }
 
 DIPLOMACY_REVOKE_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
-	NOT = {has_country_flag = VUP_Hist_version}
+	if = {
+        limit = {
+            has_country_flag = VUP_Hist_version
+        }
+        always = no
+    }
 }
 
 DIPLOMACY_REVOKE_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
-	NOT = {has_country_flag = VUP_Hist_version}
+	if = {
+        limit = {
+            has_country_flag = VUP_Hist_version
+        }
+        always = no
+    }
 }
 
 DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
-	NOT = {has_country_flag = VUP_Hist_version}
+	if = {
+        limit = {
+            has_country_flag = VUP_Hist_version
+        }
+        always = no
+    }
 }
 
 DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
-	NOT = {has_country_flag = VUP_Hist_version}
+	if = {
+        limit = {
+            has_country_flag = VUP_Hist_version
+        }
+        always = no
+    }
 }
 
 DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {

@@ -1333,6 +1333,22 @@ focus = {
 				
 				add_core_of  = MON
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_possible_country = {
+			limit = {
+				has_character = MEN_jodbajab
+			}
+			set_nationality = {
+			    target_country = ROOT
+			    character = MEN_jodbajab
+			}
+		}
+
+		set_country_flag = MON_jodbajab_arrived_in_the_country_flag
+			
+			
 		}
 	}
 	
@@ -1356,12 +1372,59 @@ focus = {
 		y = 1
 		
 		completion_reward = {
-			JAP = { 
-					set_autonomy = {
-						target = MON
-						autonomy_state = autonomy_wtt_imperial_associate 
-					}
+		IF = {
+			limit = {
+				has_country_flag = MON_jonjurjab_arrived_in_the_country_flag
+			}
+			add_country_leader_role = {
+				character = MAN_jonjurjab
+				promote_leader = yes
+				country_leader = {
+					ideology = japan_militarism_ideology
+					expire = "1952.1.1.1"
+					traits = { spirit_of_genghis } 
 				}
+			}
+			add_country_leader_role = {
+				character = MAN_jonjurjab
+				promote_leader = yes
+				country_leader = {
+					ideology = emperor_fascism
+					expire = "1952.1.1.1"
+					traits = { spirit_of_genghis } 
+				}
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				has_country_flag = MON_jodbajab_arrived_in_the_country_flag
+			}
+			add_country_leader_role = {
+				character = MEN_jodbajab
+				promote_leader = yes
+				country_leader = {
+					ideology = japan_militarism_ideology
+					expire = "1952.1.1.1"
+					traits = { spirit_of_genghis } 
+				}
+			}
+			add_country_leader_role = {
+				character = MEN_jodbajab
+				promote_leader = yes
+				country_leader = {
+					ideology = emperor_fascism
+					expire = "1952.1.1.1"
+					traits = { spirit_of_genghis } 
+				}
+			}
+		}
+		
+			JAP = { 
+				set_autonomy = {
+					target = MON
+					autonomy_state = autonomy_wtt_imperial_associate 
+				}
+			}
 			add_political_power = 200
 			set_cosmetic_tag = MON_JAP_sup
 			add_stability = -0.1
