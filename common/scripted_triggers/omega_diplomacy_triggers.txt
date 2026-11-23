@@ -4,7 +4,11 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
         is_ai = yes
     }
 }
-
+DIPLOMACY_ACTION_SEND_EXP_FORCE_ENABLE_TRIGGER = {
+    ROOT = {
+        always = no
+    }
+}
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
     if = {
         limit = {

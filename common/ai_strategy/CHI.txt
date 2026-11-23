@@ -38,20 +38,6 @@ CHI_dont_upgrade_to_weapons_2_too_early = {
 		value = -100
 	}
 }
-
-CHI_prio_military_even_at_peace = {
-	allowed = { original_tag = CHI }
-	enable = {
-		always = yes
-	}
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 50
-	}
-	
-}
 	
 CHI_dont_mess_with_the_soviets = {
 
