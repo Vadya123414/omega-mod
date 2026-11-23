@@ -2,16 +2,6 @@
     country = {
         MTG_naval_treaty_hist = {
 
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-
 			picture = MTG_naval_treaty_adherent
 			
 			modifier = {
@@ -19,11 +9,11 @@
 			}
             cancel = {
                 NOT = {
-                    or = {
-                    has_idea = MTG_naval_treaty_adherent
-                    has_idea =  MTG_naval_treaty_adherent_reduced
-                    has_idea =  MTG_naval_treaty_cheating
-                    has_idea =  MTG_naval_treaty_cheating_reduced
+                    OR = {
+                        has_idea = MTG_naval_treaty_adherent
+                        has_idea = MTG_naval_treaty_adherent_reduced
+                        has_idea = MTG_naval_treaty_cheating
+                        has_idea = MTG_naval_treaty_cheating_reduced
                     }
                 }
             }

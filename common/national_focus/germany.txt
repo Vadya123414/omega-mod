@@ -747,7 +747,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_agricultural_reforms
-		cost = 10
+		cost = 5
 		available = {
 			OR ={
 				59 = { #Hannover
@@ -803,7 +803,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_invest_in_vereinigte_stahlwerke
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -970,7 +970,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_mass_production
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -8014,7 +8014,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
 
-		cost = 10
+		cost = 5
 
 		bypass = {
 			42 = { is_demilitarized_zone = no } #RHINELAND
@@ -11359,6 +11359,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = VUP_Hist_version
 				}
+				date > 1939.6.20
 				has_completed_focus = GER_molotov_ribbentrop_pact
 				has_completed_focus = GER_fate_of_czechoslovakia
 			}

@@ -5855,7 +5855,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		visible = {
-
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 		}
 
 		cost = ITA_send_ultimatum_to_country_cost
@@ -6489,6 +6491,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		target_trigger = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 			FROM = {
 				is_subject = no
 				NOT = {
@@ -6686,6 +6691,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		visible = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 			ITA = {
 				OR = {
 					has_government = neutrality
@@ -6753,6 +6761,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		visible = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 			ITA = {
 				OR = {
 					has_government = neutrality
@@ -6818,6 +6829,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		visible = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 			GRE = {
 				exists = yes
 				NOT = { is_in_faction_with = ROOT }
@@ -6895,6 +6909,9 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		visible = {
+			NOT = {
+				has_country_flag = VUP_Hist_version
+			}
 			TUR = {
 				exists = yes
 				NOT = { is_in_faction_with = ROOT }

@@ -272,10 +272,6 @@ GER_henschel_organization = {
 				has_dlc = "Graveyard of Empires"
 				has_dlc = "Arms Against Tyranny"
 			}
-			AND = {
-				original_tag = HUN
-				has_dlc = "Gotterdammerung"
-			}
 		}
 	}
 	
@@ -291,10 +287,6 @@ GER_henschel_organization = {
 	}
 
 	available = {
-		IF = {
-			limit = { FROM = { original_tag = HUN } }
-			FROM = { has_completed_focus = wuw_HUN_seek_german_contracts }
-		}
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
 			limit = {
@@ -438,12 +430,6 @@ GER_henschel_organization = {
 
 		any_parent = { generic_mio_trait_interleaved_track_wheels generic_mio_trait_overlapped_track_wheels }
 
-		visible = {
-			OR = {
-			FROM = { original_tag = GER }
-			FROM = { original_tag = HUN }
-			}
-		}
 
 		equipment_bonus = {
 			reliability = 0.03
@@ -470,10 +456,7 @@ GER_henschel_organization = {
 		any_parent = { generic_mio_trait_turret_sights }
 
 		visible = {
-			OR = {
 			FROM = { original_tag = GER }
-			FROM = { original_tag = HUN }
-			}
 		}
 
 		equipment_bonus = {
@@ -498,12 +481,6 @@ GER_henschel_organization = {
 
 		any_parent = { generic_mio_trait_adaptable_chassis }
 
-		visible = {
-			OR = {
-			FROM = { original_tag = GER }
-			FROM = { original_tag = HUN }
-			}
-		}
 
 		equipment_bonus = {
 			defense = 0.05
@@ -2363,9 +2340,6 @@ GER_heinkel_organization = {
 				original_tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
-			AND = {
-				tag = HUN
-			}
 			NOR_AAT = yes
 		}
 	}
@@ -3308,6 +3282,9 @@ GER_opel_organization = {
 			AND = {
 				original_tag = ROM
 				has_dlc = "Death or Dishonor"
+				NOT = {
+					has_dlc = "To The Bitter End"
+				}
 			}
 			AND = {
 				original_tag = BUL

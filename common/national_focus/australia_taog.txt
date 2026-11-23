@@ -9263,7 +9263,18 @@ focus = {
 				NOT = { has_completed_focus = AST_against_war_and_fascism }
 			}
 		}
-
+		offset = {
+			x = 9
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = AST_war_is_coming
+			}
+		}
 		available = {
 		}
 
@@ -10264,7 +10275,17 @@ focus = {
 				has_completed_focus = AST_australia_first
 			}
 		}
-
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = AST_war_is_coming
+			}
+		}
 		offset = {
 			x = -75
 			y = 0
@@ -10674,6 +10695,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_australia_first
 			}
 		}
@@ -10686,10 +10708,22 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_war_is_coming
 			}
 		}
-
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+				has_completed_focus = AST_war_is_coming
+			}
+		}
 		offset = {
 			x = -58
 			y = 0
@@ -10698,6 +10732,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_against_war_and_fascism
 			}
 		}
@@ -11759,6 +11794,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_australia_first
 			}
 		}
@@ -11771,6 +11807,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_war_is_coming
 			}
 		}
@@ -11783,6 +11820,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_against_war_and_fascism
 			}
 		}
@@ -12433,6 +12471,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_australia_first
 			}
 		}
@@ -12445,6 +12484,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_war_is_coming
 			}
 		}
@@ -12457,6 +12497,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				not = {has_country_flag = VUP_Hist_version}
 				has_completed_focus = AST_against_war_and_fascism
 			}
 		}
