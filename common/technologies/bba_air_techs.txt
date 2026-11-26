@@ -417,18 +417,18 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-			add = 1
+			add = 5
 				or = {
 					original_tag = GER
 					original_tag = ENG
 				}
 			}
 		modifier = {
-			add = 1
+			add = 5
 					original_tag = SOV	
 			}
 		modifier = {
-			add = 1
+			add = 5
 					original_tag = JAP
 			}
 		}
@@ -1689,18 +1689,18 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-			add = 30000
+			add = 5
 				or = {
 					original_tag = GER
 					original_tag = ENG
 				}
 			}
 			modifier = {
-				add = 10
+				add = 5
 						original_tag = SOV	
 				}
 			modifier = {
-				add = 10
+				add = 5
 						original_tag = USA
 				}
 		}

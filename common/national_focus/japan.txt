@@ -3727,7 +3727,17 @@ focus_tree = {
 				}
 			}
 		}
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		offset = {
 			x = -7
 			y = 0
@@ -3859,7 +3869,17 @@ focus_tree = {
 				}
 			}
 		}
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		available = {
 			has_country_flag = JAP_aizawas_trial_over_flag
 		}
@@ -12021,7 +12041,7 @@ focus_tree = {
 
 			set_autonomy = {
 				target = RNG
-				autonomous_state = autonomy_wtt_imperial_protectorate
+				autonomous_state = autonomy_wtt_imperial_protectorate_rng
 				end_wars = no
 				end_civil_wars = no
 			}
@@ -12143,7 +12163,7 @@ focus_tree = {
 			}
 			if = {limit = {CHI = {is_subject_of = JAP}}
 			CHI = {
-				every_core_state = {
+				every_owned_state = {
 					limit = {
 							NOT = {
 								state = 745 # Kwantung Leased Territory
@@ -16518,7 +16538,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_limit_military_power}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -17228,7 +17248,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_mountain_village_operation_units }
 		prerequisite = { focus = JAP_raise_support_within_the_proletarian_class }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -17403,7 +17423,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -17432,7 +17452,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.2
-					add_offsite_building = { type = arms_factory level = 10 }
+					add_offsite_building = { type = arms_factory level = 6 }
 			IF = {
 				limit = {
 					has_idea = JAP_military_strike_idea
@@ -17551,6 +17571,17 @@ focus_tree = {
 				}
 			}
 		}
+				allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		offset = {
 			x = 14
 			y = 0
@@ -17566,7 +17597,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = JAP_revoke_the_peace_preservation_law } 
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -17588,7 +17619,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 10 }
+			add_offsite_building = { type = arms_factory level = 6 }
 			add_stability = 0.15
 			add_political_power = 75
 
@@ -17625,7 +17656,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_a_red_sun_rises_for_a_new_era } 
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -17681,7 +17712,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_a_red_sun_rises_for_a_new_era } 
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -22098,7 +22129,17 @@ focus_tree = {
 				}
 			}
 		}
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		offset = {
 			x = -9
 			y = 0
@@ -22116,7 +22157,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_revoke_the_peace_preservation_law } 
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -22138,7 +22179,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 10 }
+			add_offsite_building = { type = arms_factory level = 6 }
 			add_political_power = 50
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -23682,7 +23723,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = JAP_democratic_war_with_china
 
-		cost = 1
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -23808,7 +23849,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_organize_a_general_election } 
 
-		cost = 1
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -26228,17 +26269,10 @@ focus_tree = {
 		available = {
 			any_core_state = {
 				is_owned_by = ROOT
-				has_state_category = city
 			}		
 		}
 
 		bypass = {
-			NOT = {
-				any_core_state = {
-					is_owned_by = ROOT
-					has_state_category = city
-				}	
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -26252,8 +26286,9 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = PREV
-					has_state_category = city
+					has_state_category = metropolis
 				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
 				add_dynamic_modifier = { modifier = JAP_regional_development }
 			}
@@ -26336,23 +26371,10 @@ focus_tree = {
 		available = {
 			any_core_state = {
 				is_owned_by = ROOT
-				OR = {
-					has_state_category = large_town
-					has_state_category = town
-				}
 			}		
 		}
 
 		bypass = {
-			NOT = {
-				any_core_state = {
-					is_owned_by = ROOT
-					OR = {
-						has_state_category = large_town
-						has_state_category = town
-					}
-				}	
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -26365,10 +26387,7 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					OR = {
-						has_state_category = large_town
-						has_state_category = town
-					}
+					has_state_category = metropolis
 				}
 				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
@@ -26464,17 +26483,10 @@ focus_tree = {
 		available = {
 			any_core_state = {
 				is_owned_by = ROOT
-				has_state_category = rural
 			}		
 		}
 
 		bypass = {
-			NOT = {
-				any_core_state = {
-					is_owned_by = ROOT
-					has_state_category = rural
-				}	
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -26488,8 +26500,8 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = PREV
-					has_state_category = rural
 				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
 				add_dynamic_modifier = { modifier = JAP_regional_development }
 			}

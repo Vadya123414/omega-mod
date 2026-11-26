@@ -78,7 +78,8 @@ BRA_historical_plan = {
 	}
 
 	focus_factors = {
-		
+		BRA_ban_political_parties = 0
+		BRA_uruguay_ultimatum = 0
 	}
 
 	research = {

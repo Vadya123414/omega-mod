@@ -72,13 +72,13 @@ BOTS = {
 
 		icon = oppression
 		available = {
-        always = no
-        is_ai = yes
-        has_global_flag = VUP_Hist_version
+				always = no
+				is_ai = yes
+				has_global_flag = VUP_Hist_version
+				has_country_flag = VUP_Hist_version
             }
 		visible = {
             is_ai = yes
-            has_global_flag = VUP_Hist_version
 		}
         ai_will_do = {base = 0}
         cost = 9999
@@ -91,9 +91,9 @@ BOTS = {
 
 		icon = oppression
 		available = {
-        always = no
-        is_ai = yes
-        has_global_flag = VUP_Hist_version
+			always = no
+			is_ai = yes
+			has_global_flag = VUP_Hist_version
             }
 		visible = {
             is_ai = yes
@@ -760,4 +760,245 @@ BOTS = {
 					}            
 				}
 	} 
+	bot_SPR_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+			SPR = { has_civil_war = no }
+                original_tag = SPR
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date >1938.1.1
+            }
+		visible = {
+            original_tag = SPR
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            290 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}              
+        }
+    }
+	bot_SWE_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = SWE
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date >1938.1.1
+            }
+		visible = {
+            original_tag = SWE
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            666 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+			 918 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+				141 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}              
+        }
+    }
+	bot_CHL_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = SWE
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date > 1938.1.1
+            }
+		visible = {
+            original_tag = SWE
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+			add_ideas = free_trade
+			add_political_power = -150
+            950 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+			 279 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}             
+        }
+    }
+	bot_CHL_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = CHL
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date > 1938.1.1
+            }
+		visible = {
+            original_tag = CHL
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            945 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+			 300 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                      
+				}             
+        }
+    }
+	bot_TUR_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = TUR
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date > 1938.1.1
+            }
+		visible = {
+            original_tag = TUR
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            49 = {
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+			 347 = {
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}             
+        }
+    }
+	bot_SPR_economy = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+				date >1938.1.1
+                original_tag = SPR
+                is_ai = yes
+				has_idea = closed_economy
+            }
+		visible = {
+            original_tag = SPR
+            is_ai = yes
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+			add_ideas = export_focus
+			add_political_power = -150
+				}
+		}
+	
 }			

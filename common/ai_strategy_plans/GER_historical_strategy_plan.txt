@@ -171,9 +171,7 @@ German_historical_strong = {
 	}
 
 	ai_strategy = {
-		type = template_prio
-		id = medium_armor
-		value = 111
+
 	}
 
 	focus_factors = {

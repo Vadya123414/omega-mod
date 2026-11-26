@@ -94,12 +94,15 @@ SWE_historical_plan = {
 	}
 
 	ideas = {
+		limited_conscription = 100
+		extensive_conscription = 200
 		SWE_thorwald_bergquist = 10.0
 		SWE_per_edvin_skold = 7.0
 		SWE_king_gustaf_v = 5.0
 		SWE_ivar_holmquist = 5.0
 		SWE_ernst_linder = 3.0
 		SWE_archibald_douglas = 3.0
+		SWE_vattenfall = 2.5
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

@@ -69,9 +69,7 @@ on_actions = {
 				if = {
 					limit = {
 						is_ai = no
-						NOT = {
 							has_country_flag = VUP_Hist_version
-						}
 					}
 					country_event = { id = obuchenie.rom }
 				}

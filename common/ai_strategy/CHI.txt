@@ -21,24 +21,6 @@ CHI_dont_waste_on_offensive_air_early = {
 	}
 }
 
-CHI_dont_upgrade_to_weapons_2_too_early = {
-	allowed = {
-		original_tag = CHI
-	}
-	enable = {
-		is_historical_focus_on = yes
-		has_equipment = { infantry_equipment < 0 }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = { # It's going to be disastrous for us to switch this up in early 37. Let's wait until we have more gun
-		type = production_upgrade_desire_offset
-		id = infantry_equipment_2
-		value = -100
-	}
-}
-	
 CHI_dont_mess_with_the_soviets = {
 
 	allowed = { original_tag = CHI }

@@ -55,10 +55,8 @@ SIA_historical = {
 		SIA_acquire_light_tools
 		SIA_mechanization_of_agriculture
 		SIA_irrigation
-		SIA_farmers_into_the_city
-		SIA_textile_mills
-		SIA_foreign_currency_exchange
-		SIA_public_credit
+		#SIA_farmers_into_the_city
+		#SIA_textile_mills
 		SIA_the_army_of_siam
 		SIA_prepare_for_a_long_war
 		SIA_civil_nationalism

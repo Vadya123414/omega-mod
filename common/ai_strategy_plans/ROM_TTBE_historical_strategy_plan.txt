@@ -30,8 +30,93 @@ ROM_to_the_bitter_end = {
 	ai_national_focuses = {
 		#Do ASAP
 		ROM_the_turn_of_the_tide
+		ROM_national_effort
+		ROM_a_game_of_politics
+		ROM_joining_the_allies
 
+		ROM_a_red_flag_over_bucharest
+		ROM_the_romanian_red_army
+		ROM_reconstruction_and_revival
+		ROM_romanian_bulgarian_ssr_proposal
 
-		ROM_kickstart
+		ROM_kickstart_the_ten_year_modernization_plan
+		ROM_finalize_tax_reforms
+		ROM_tariff_enforcement
+		ROM_balkan_industrialist
+		ROM_grant_industrial_subsidies
+		ROM_open_the_iasi_industrial_zone
+		ROM_resita_industrial_area
+		ROM_diversify_malaxa
+		ROM_invest_in_the_resita_group
+		ROM_seize_ford_romania
+		ROM_the_new_kingdom
+		ROM_rile_up_the_farmers
+		ROM_alleviate_the_rural_communities
+		ROM_the_general_election
+		ROM_public_work_programmes
+		ROM_reign_in_press_freedom
+		ROM_institute_a_royal_dictatorship
+		ROM_constitutional_reform
+		ROM_anti_extremist_laws
+		ROM_strengthen_the_sentinels
+		ROM_combat_the_iron_guard
+		ROM_strengthen_german_relations
+		ROM_purge_the_carlists
+		ROM_secure_power_in_the_state
+		ROM_romanian_axis_membership
+		ROM_reform_the_scouts_of_romania
+		ROM_international_cooperation~
+		ROM_encourage_local_development
+		ROM_modernization_of_construction_tools
+		ROM_romanian_machinery
+		ROM_german_military_mission
+		ROM_joint_axis_oil_exploitation
+		ROM_increased_oil_extraction_efforts
+		ROM_to_reclaim_our_land
+		ROM_envelop_the_black_sea
+		ROM_funds_for_the_war
+		ROM_create_a_provissional_cossak_state
+		ROM_restore_the_orthodox_faith_in_the_caucasus
+		ROM_secure_our_gains
+		ROM_the_capital_of_the_balkans
+		ROM_unite_the_caucasus
+		ROM_the_vein_of_the_nation
+		ROM_carpathian_coal_mines
+		ROM_encourage_foreign_investments
+		ROM_expand_hunedoara_steel_plant
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		ROM_dimitrie_gusti = 100
+		ROM_victor_slavescu = 90
+		ROM_ion_antonescu = 60
+		ROM_max_auschnitt = 55
+		free_trade = 35
+		limited_conscription = 5
+		extensive_conscription = 5
+		ROM_gheorghe_avramescu = 0.5
+		ROM_creditul_carbonifer = 15
+		ROM_nicolae_sova = 10
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
 	}
 }

@@ -143,7 +143,7 @@ NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 10             -- Max ahead of time pe
 NDefines.NAI.CONSTRUCTION_PRIO_INFRASTRUCTURE = 2                                    -- base prio for infrastructure in the construction queue
 NDefines.NAI.CONSTRUCTION_PRIO_SUPPLY_BUILDING = 5                                   -- base prio for supply buildings (supply hubs, ports) in the construction queue
 NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 0.50                                       -- base prio for railways in the construction queue
-
+NDefines.NAI.CONSTRUCTION_PRIO_IDUSTRIAL_INFRASTRUCTURE = 1.5
 
 NDefines.NAI.AREA_DEFENSE_SETTING_VP = false
 NDefines.NAI.AREA_DEFENSE_SETTING_PORTS = true

@@ -1,5 +1,5 @@
 autonomy_state = {
-	id = autonomy_wtt_imperial_protectorate
+	id = autonomy_wtt_imperial_protectorate_rng
 	
 	default = yes
 	is_puppet = yes

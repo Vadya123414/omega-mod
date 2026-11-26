@@ -28,7 +28,7 @@ gaid_non_hist = {
 				country_event = { id = obuchenie.can }
 			}
 			else_if = {
-				limit = { tag = ROM }
+				limit = {AND = {has_global_flag = VUP_Hist_version tag = ROM }}
 				country_event = { id = obuchenie.rom }
 			}
 			else_if = {

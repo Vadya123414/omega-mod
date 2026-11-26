@@ -53,27 +53,10 @@ on_actions = {
                                                     limit = { 
                                                         AND = {
                                                             is_ai = yes
-                                                            
                                                                 original_tag = INS
-
-                                                            
                                                         }
                                                     }
                                                     add_ideas = training_fix_55
-                                                }
-                                 }
-                            effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                        AND = {
-                                                            is_ai = yes
-                                                            or = {
-                                                                original_tag = EST
-                                                                original_tag = HUN
-                                                            }
-                                                        }
-                                                    }
-                                                    add_ideas = training_fix_25
                                                 }
                                  }
                              effect = { 
@@ -133,21 +116,6 @@ on_monthly = {
                                                         }
                                                     }
                                                     add_ideas = training_fix_55
-                                                }
-                                 }
-                        effect = { 
-                                every_country = {
-                                                    limit = { 
-                                                        AND = {
-                                                            is_ai = yes
-                                                            NOT ={has_idea = training_fix_25}
-                                                            or = {
-                                                                original_tag = EST
-                                                                original_tag = HUN
-                                                            }
-                                                        }
-                                                    }
-                                                    add_ideas = training_fix_25
                                                 }
                                  }
                 effect = { 

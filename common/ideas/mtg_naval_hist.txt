@@ -10,6 +10,7 @@
             cancel = {
                 NOT = {
                     OR = {
+                        has_global_flag = VUP_Hist_version
                         has_idea = MTG_naval_treaty_adherent
                         has_idea = MTG_naval_treaty_adherent_reduced
                         has_idea = MTG_naval_treaty_cheating

@@ -123,9 +123,17 @@ TUR_the_constitutional_arrows_category = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				is_historical_focus_on = yes
+				political_power < 180
 				factor = 0
 			}
+			modifier = {
+				has_stability > 95
+				factor = 0
+			}
+						#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -981,10 +989,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1053,10 +1061,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1125,10 +1133,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1197,10 +1205,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1272,10 +1280,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1360,10 +1368,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1452,10 +1460,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1534,10 +1542,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1606,10 +1614,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {
@@ -1664,10 +1672,10 @@ TUR_industrial_projects_category = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			#modifier = {
+			#	is_historical_focus_on = yes
+			#	factor = 0
+			#}
 		}
 
 		complete_effect = {

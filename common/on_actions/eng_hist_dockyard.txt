@@ -41,12 +41,14 @@ on_actions = {
             every_country = {
                 if = {
                     limit = {
-                        has_county_flag = VUP_Hist_version
-                        OR = {
-                            tag = ENG
-                            tag = USA
-                            tag = JAP
-                            tag = ITA
+                        AND = {
+                            has_global_flag = VUP_Hist_version
+                            OR = {
+                                tag = ENG
+                                tag = USA
+                                tag = JAP
+                                tag = ITA
+                            }
                         }
                     }
                     add_ideas = MTG_naval_treaty_hist

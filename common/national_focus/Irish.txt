@@ -75,6 +75,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		offset = {
+			x = 2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		relative_position_id = IRE_Vibori
 		available = {
 		
@@ -128,6 +138,16 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
+		offset = {
+			x = 2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		relative_position_id = IRE_deal_with_england
 		available = {
 		
@@ -162,6 +182,17 @@ focus = {
 		ai_will_do = {
 			factor = 5
 		}
+				allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		relative_position_id = IRE_Vibori
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -193,6 +224,17 @@ focus = {
 		mutually_exclusive = { focus = IRE_Continue_ENG }
 		ai_will_do = {
 			factor = 5
+		}
+				allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
 		}
 		relative_position_id = IRE_Vibori
 		available = {
@@ -244,7 +286,17 @@ focus = {
 		}
 		relative_position_id = IRE_FREE_Nation
 		available = {
-		
+				allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		}
 		available_if_capitulated = yes
 		
@@ -943,6 +995,17 @@ focus = {
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		relative_position_id = IRE_rise_politic
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
@@ -1422,7 +1485,16 @@ focus = {
 		icon =  GFX_focus_secret_rearmament
 		prerequisite = { }
 		cost = 10
-		
+		offset = {
+			x = -6
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		ai_will_do = {
 			factor = 5
 		}

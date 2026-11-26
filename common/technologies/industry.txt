@@ -1358,6 +1358,17 @@ technologies = {
 					
 					date < 1940.6.1
 			}
+			modifier = {
+				factor = 0
+				or = {
+					original_tag = SWE
+					original_tag = SPR
+					original_tag = BRA
+					original_tag = CHL
+				}
+					
+					date < 1938.1.1
+			}
 		}
 	}
 	

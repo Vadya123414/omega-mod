@@ -549,6 +549,17 @@ focus = {
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		available = {
 			NOT = {has_country_flag = VUP_Hist_version}
 			is_subject = no
@@ -674,6 +685,17 @@ focus = {
 		ai_will_do = {
 			factor = 5
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		available = {
 			is_ai = no
 		    SIK = { has_government = communism}
@@ -718,6 +740,17 @@ focus = {
 		icon =  GFX_focus_spr_crush_the_revolution
 		prerequisite = { focus = MON_rise_politic }
 		cost = 10
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+			}
+		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -1526,7 +1559,16 @@ focus = {
 		available = {
 			
 		}
-		
+		offset = {
+			x = -9
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		
 		available_if_capitulated = yes
 		
@@ -1758,7 +1800,16 @@ focus = {
 		available = {
 			
 		}
-		
+		offset = {
+			x = -9
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_country_flag = VUP_Hist_version
+			}
+		}
 		
 		available_if_capitulated = yes
 		

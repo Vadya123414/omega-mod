@@ -3187,6 +3187,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				NOT = {
 					has_completed_focus = ROM_protest_royal_meddling
 					has_completed_focus = ROM_the_general_election
@@ -4025,6 +4026,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
+				NOT = {has_country_flag = VUP_Hist_version}
 				NOT = {
 					has_completed_focus = ROM_the_general_election
 					has_completed_focus = ROM_undermine_the_monarchy
@@ -6890,7 +6892,21 @@ focus_tree = {
 		x = -3
 		y = 2
 		cost = 5
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+				NOT = {
+					has_completed_focus = ROM_protest_royal_meddling
+					has_completed_focus = ROM_undermine_the_monarchy
+				}
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -8580,6 +8596,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
+		offset = {
+			x = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		prerequisite = {
 			focus = ROM_strengthen_the_sentinels
 		}
@@ -8600,7 +8626,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-
+		offset = {
+			x = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		completion_reward = {
 			hidden_effect = {
 				if = {
@@ -8681,10 +8716,20 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = {has_global_flag = VUP_Hist_version}
 				has_completed_focus = ROM_undermine_the_monarchy
 			}
 		}
-		
+		offset = {
+			x = -4
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		cost = 10
 		
 		mutually_exclusive = {
@@ -9299,7 +9344,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-
+		offset = {
+			x = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			OR = {
 				GER = {
@@ -9337,10 +9391,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		if = {limit = {has_global_flag = VUP_Hist_version}
 			add_resource=  {
 				type = oil
 				amount = 8
-				state = 46	
+				state = 46
+							}
+		}
+		else = {
+			add_resource=  {
+				type = oil
+				amount = 24
+				state = 46
+							}
 			}
 			if = {
 				limit = {
@@ -9496,11 +9559,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			46 = {
-				add_resource = {
-					type = oil
-					amount = 8 
-				}
+		if = {limit = {has_global_flag = VUP_Hist_version}
+			add_resource=  {
+				type = oil
+				amount = 8
+				state = 46
+							}
+		}
+		else = {
+			add_resource=  {
+				type = oil
+				amount = 24
+				state = 46
+							}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 46 }
@@ -9715,7 +9786,16 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
-
+		offset = {
+			x = -2
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		completion_reward = {
 			effect_tooltip = {
 				custom_effect_tooltip = ROM_upon_declaring_war
@@ -9809,7 +9889,16 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
-
+		offset = {
+			x = 4
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			GER = {
 				is_in_faction_with = ROOT
@@ -9850,6 +9939,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
+			if = {limit = {has_global_flag = VUP_Hist_version}
 			has_war_with = SOV
 			OR = {
 				GER = {
@@ -9860,8 +9950,6 @@ focus_tree = {
 					exists = no
 				} 
 			}
-			#OR = {
-				#surrender_progress > 0.2
 				AND = {
 					surrender_progress > 0.1
 					NOT = {
@@ -9871,20 +9959,34 @@ focus_tree = {
 						}
 					}
 				}
-				#AND = {
-				#	casualties_inflicted_by = {
-				#		opponent = SOV
-				#		thousands > 350
-				#	}
-				#	war_length_with = {
-				#		tag = SOV
-				#		months > 12
-				#	}
-				#	SOV = {
-				#		surrender_progress < 0.15
-				#	}
-				#}
-			#}
+			}
+			else = {
+			OR = {
+				surrender_progress > 0.2
+				AND = {
+					surrender_progress > 0.1
+					NOT = {
+						ROOT = {
+							has_full_control_of_state = 78
+							has_full_control_of_state = 766
+						}
+					}
+				}
+				AND = {
+					casualties_inflicted_by = {
+						opponent = SOV
+						thousands > 350
+					}
+					war_length_with = {
+						tag = SOV
+						months > 12
+					}
+					SOV = {
+						surrender_progress < 0.15
+					}
+				}
+			}
+			}
 		}
 
 		will_lead_to_war_with = GER
@@ -9942,7 +10044,21 @@ focus_tree = {
 		x = 4
 		y = 1
 		cost = 5
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+				NOT = {
+					has_completed_focus = ROM_protest_royal_meddling
+					has_completed_focus = ROM_undermine_the_monarchy
+				}
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -10653,7 +10769,16 @@ focus_tree = {
 				exists = no
 			}
 		}
-
+		offset = {
+			x = 3
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		completion_reward = {
 			add_political_power = 100
 			add_timed_idea = {
@@ -10676,7 +10801,21 @@ focus_tree = {
 		available = {
 			always = no
 		}
-
+		#allow_branch = {
+		#	if = {
+		#		limit = {
+		#			has_game_rule = {
+		#				rule = obsolete_focus_branches_visibility
+		#				option = HIDE
+		#			}
+		#		}
+		#		NOT = {has_country_flag = VUP_Hist_version}
+		#		NOT = {
+		#			has_completed_focus = ROM_protest_royal_meddling
+		#			has_completed_focus = ROM_undermine_the_monarchy
+		#		}
+		#	}
+		#}
 		completion_reward = {
 			set_politics = {
 				ruling_party = communism
@@ -10860,7 +10999,16 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 10
-
+		offset = {
+			x = -1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -10885,7 +11033,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-
+		offset = {
+			x = 1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_global_flag = VUP_Hist_version
+			}
+		}
 		available = {
 			has_war = no
 		}
@@ -11079,7 +11236,21 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {has_country_flag = VUP_Hist_version}
+				NOT = {
+					has_completed_focus = ROM_protest_royal_meddling
+					has_completed_focus = ROM_undermine_the_monarchy
+				}
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -11991,6 +12162,7 @@ focus = {
 				uses = 1
 				category = cat_production
 			}
+			if = {limit = {has_global_flag = VUP_Hist_version}
 			custom_effect_tooltip = ROM_balkan_industry_dynamic_modifier_tt		
 			add_to_variable = {
 				ROM_balkan_industry_production_factory_efficiency_gain_factor = 0.05
@@ -11999,7 +12171,18 @@ focus = {
 			add_to_variable = {
 				ROM_balkan_industry_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
-			}						
+				}	
+			}
+			else = {
+				add_to_variable = {
+				ROM_balkan_industry_production_factory_efficiency_gain_factor = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}	
+			add_to_variable = {
+				ROM_balkan_industry_production_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+				}
+			}					
 		}
 	}
 	focus = {
@@ -12496,10 +12679,18 @@ focus = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = ROM_balkan_industry_dynamic_modifier_tt			
+			custom_effect_tooltip = ROM_balkan_industry_dynamic_modifier_tt	
+			if = {limit = {has_global_flag = VUP_Hist_version}	
 			add_to_variable = {
 				ROM_balkan_industry_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			}
+			else = {
+			add_to_variable = {
+				ROM_balkan_industry_production_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 			}
 			add_to_variable = {
 				ROM_balkan_industry_energy_gain_factor = 0.05
