@@ -76,6 +76,10 @@ BOTS = {
 				is_ai = yes
 				has_global_flag = VUP_Hist_version
 				has_country_flag = VUP_Hist_version
+				always = no
+				is_ai = yes
+				has_global_flag = VUP_Hist_version
+				has_country_flag = VUP_Hist_version
             }
 		visible = {
             is_ai = yes
@@ -760,40 +764,6 @@ BOTS = {
 					}            
 				}
 	} 
-	bot_SPR_inf = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-			SPR = { has_civil_war = no }
-                original_tag = SPR
-                is_ai = yes
-                #has_global_flag = VUP_Hist_version
-				date >1938.1.1
-            }
-		visible = {
-            original_tag = SPR
-            is_ai = yes
-            #has_global_flag = VUP_Hist_version
-		}
-        ai_will_do = {base = 100000}
-        cost = 0
-        complete_effect = {
-            290 = {
-						add_building_construction = {
-							type = infrastructure
-							instant_build = no
-							level = 3
-						}
-						add_building_construction = {
-							type = industrial_infrastructure
-							instant_build = no
-							level = 1
-						}                       
-				}              
-        }
-    }
 	bot_SWE_inf = {
 
 		fire_only_once = yes
@@ -851,7 +821,7 @@ BOTS = {
 				}              
         }
     }
-	bot_CHL_inf = {
+	bot_SWE_inf = {
 
 		fire_only_once = yes
 
@@ -898,6 +868,75 @@ BOTS = {
 				}             
         }
     }
+	bot_TUR_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+                original_tag = TUR
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date > 1938.1.1
+            }
+		visible = {
+            original_tag = TUR
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            49 = {
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}
+			 347 = {
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}             
+        }
+    }
+	bot_SPR_inf = {
+
+		fire_only_once = yes
+
+		icon = oppression
+		available = {
+			SPR = { has_civil_war = no }
+                original_tag = SPR
+                is_ai = yes
+                #has_global_flag = VUP_Hist_version
+				date >1938.1.1
+            }
+		visible = {
+            original_tag = SPR
+            is_ai = yes
+            #has_global_flag = VUP_Hist_version
+		}
+        ai_will_do = {base = 100000}
+        cost = 0
+        complete_effect = {
+            290 = {
+						add_building_construction = {
+							type = infrastructure
+							instant_build = no
+							level = 3
+						}
+						add_building_construction = {
+							type = industrial_infrastructure
+							instant_build = no
+							level = 1
+						}                       
+				}              
+        }
+    }
 	bot_CHL_inf = {
 
 		fire_only_once = yes
@@ -940,41 +979,6 @@ BOTS = {
 							instant_build = no
 							level = 1
 						}                      
-				}             
-        }
-    }
-	bot_TUR_inf = {
-
-		fire_only_once = yes
-
-		icon = oppression
-		available = {
-                original_tag = TUR
-                is_ai = yes
-                #has_global_flag = VUP_Hist_version
-				date > 1938.1.1
-            }
-		visible = {
-            original_tag = TUR
-            is_ai = yes
-            #has_global_flag = VUP_Hist_version
-		}
-        ai_will_do = {base = 100000}
-        cost = 0
-        complete_effect = {
-            49 = {
-						add_building_construction = {
-							type = industrial_infrastructure
-							instant_build = no
-							level = 1
-						}                       
-				}
-			 347 = {
-						add_building_construction = {
-							type = industrial_infrastructure
-							instant_build = no
-							level = 1
-						}                       
 				}             
         }
     }

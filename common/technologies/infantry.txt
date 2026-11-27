@@ -479,9 +479,9 @@ technologies = {
 
 	paratroopers = {
 
-		enable_subunits = {
-			paratrooper
-		}
+		#enable_subunits = {
+		#	paratrooper
+		#}
 		enable_subunits = {
 			limit = { has_dlc = "Thunder at Our Gates"}
 			hq_paratrooper

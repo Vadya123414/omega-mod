@@ -42,7 +42,7 @@ NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		--
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0;								-- Масштаб, применяемый к лимиту планирования при отсутствии штаба (нет лидера, лидер не развернут или не тот же корневой приказ)
 NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 };		-- То же, что и PLANNING_CAP_COMMS_SCALING, но для скорости планирования
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0;								-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для скорости планирования
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время развёртки
+--NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2; -- Левел во время развёртки
 --NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };		-- То же, что и PLANNING_CAP_COMMS_SCALING, но для модификаторов лидера
 --NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0;									-- То же, что и PLANNING_CAP_NO_HQ_SCALING, но для модификаторов лидера
 --NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.06, 1.04, 1.02, 1.01, 1.0 };			-- То же, что и PLANNING_CAP_COMMS_SCALING, но для активных способностей
@@ -53,12 +53,11 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 196 --24 лимит спец войс
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 100000.0 --Модификатор скорости доставки подкрепления для армии (время в пути)
 
 
---NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
---NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
---NDefines.NMilitary.UNIT_EXP_LEVELS = {0.1, 0.122, 0.1494, 0.1816, 0.2179, 0.2576, 0.3, 0.3526, 0.4191, 0.4936, 0.57, 0.6422, 0.7043, 0.75, 0.7849, 0.8175, 0.8465, 0.8708, 0.8891, 0.9}		-- опыт для лвл
---NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
---NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03
-
+NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
+NDefines.NMilitary.UNIT_EXP_LEVELS = {0.1, 0.122, 0.1494, 0.1816, 0.2179, 0.2576, 0.3, 0.3526, 0.4191, 0.4936, 0.57, 0.6422, 0.7043, 0.75, 0.7849, 0.8175, 0.8465, 0.8708, 0.8891, 0.9}		-- опыт для лвл
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.049
 
 --Флот
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0; -- Орга когда двигаешь флот
@@ -353,6 +352,11 @@ NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 1 -- Глобальная скоро�
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Скорость развёртки самолётов
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.1  --урон по грузовикам (ванила 0,2)
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.2 -- урон по грузовикам (ванила 0,5)
+
+NDefines.NAir.MIN_PLANE_COUNT_PARADROP = 500
+NDefines.NAir.BASE_UNIT_WEIGHT_IN_TRANSPORT_PLANES = 500
+
+
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Количество политических очков (pp) для найма ученого в зависимости от доступных ученых
 		25,			-- Стоимость в pp, если нет доступных ученых

@@ -10283,6 +10283,7 @@ focus = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				has_global_flag = VUP_Hist_version
 				has_completed_focus = AST_war_is_coming
 			}
 		}
